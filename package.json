@@ -1,8 +1,11 @@
 {
   "name": "@quirks/source",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx run-many --target=build --projects=chain-registry --parallel=6",
+    "test": "nx run-many --target=test --projects=chain-registry --parallel=6"
+  },
   "private": true,
   "devDependencies": {
     "@nx/eslint": "17.0.1",
