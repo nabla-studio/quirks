@@ -4,6 +4,9 @@
   "sourceRoot": "packages/chain-registry/src",
   "projectType": "library",
   "targets": {
+    "ts-gen": {
+      "command": "node tools/scripts/schema.mjs"
+    },
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],

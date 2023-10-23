@@ -1,1 +1,1 @@
-export * from './lib/chain-registry';
+export * from './types';
