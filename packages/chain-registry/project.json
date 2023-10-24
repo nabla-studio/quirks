@@ -7,6 +7,9 @@
     "ts-gen": {
       "command": "node tools/scripts/schema.mjs"
     },
+    "data-gen": {
+      "command": "ts-node packages/chain-registry/scripts/generate.mts -b packages/chain-registry/tsconfig.scripts.json && eslint --fix packages/chain-registry/src && prettier packages/chain-registry/src --write"
+    },
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],

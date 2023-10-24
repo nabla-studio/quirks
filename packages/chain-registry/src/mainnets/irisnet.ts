@@ -1,0 +1,290 @@
+import type { Chain, AssetLists } from '../types';
+
+export const irisnet: Chain = {
+  $schema: '../chain.schema.json',
+  chain_name: 'irisnet',
+  status: 'live',
+  network_type: 'mainnet',
+  pretty_name: 'IRISnet',
+  chain_id: 'irishub-1',
+  bech32_prefix: 'iaa',
+  daemon_name: 'iris',
+  node_home: '$HOME/.iris',
+  key_algos: ['secp256k1'],
+  slip44: 118,
+  fees: {
+    fee_tokens: [
+      {
+        denom: 'uiris',
+        low_gas_price: 0.2,
+        average_gas_price: 0.3,
+        high_gas_price: 0.4,
+      },
+    ],
+  },
+  staking: {
+    staking_tokens: [
+      {
+        denom: 'uiris',
+      },
+    ],
+  },
+  codebase: {
+    git_repo: 'https://github.com/irisnet/irishub',
+    recommended_version: 'v2.0.3',
+    compatible_versions: ['v2.0.3'],
+    genesis: {
+      genesis_url:
+        'https://raw.githubusercontent.com/irisnet/mainnet/master/config/genesis.json',
+    },
+    versions: [
+      {
+        name: 'v1.3.0',
+        next_version_name: 'v1.4.1',
+        recommended_version: 'v1.3.0',
+        compatible_versions: ['v1.3.0'],
+      },
+      {
+        name: 'v1.4.1',
+        next_version_name: 'v2.0.0',
+        recommended_version: 'v1.4.1',
+        compatible_versions: ['v1.4.1'],
+      },
+      {
+        name: 'v2.0.0',
+        next_version_name: 'v2.1.0',
+        recommended_version: 'v2.0.3',
+        compatible_versions: ['v2.0.3'],
+      },
+    ],
+  },
+  logo_URIs: {
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.png',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.svg',
+  },
+  peers: {
+    seeds: [
+      {
+        id: '6a6de770deaa4b8c061dffd82e9c7f4d40c2165d',
+        address: 'seed-1.mainnet.irisnet.org:26656',
+      },
+      {
+        id: 'a17d7923293203c64ba75723db4d5f28e642f469',
+        address: 'seed-2.mainnet.irisnet.org:26656',
+      },
+      {
+        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
+        address: 'irisnet-seed-de.allnodes.me:26656',
+        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+      },
+      {
+        id: 'e726816f42831689eab9378d5d577f1d06d25716',
+        address: 'irisnet-seed-us.allnodes.me:26656',
+        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+      },
+      {
+        id: '445b38a181d147c243185d94567412e5c5f1a22c',
+        address: 'seed-irisnet-01.stakeflow.io:1906',
+        provider: 'Stakeflow',
+      },
+      {
+        id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+        address: 'iris.rpc.kjnodes.com:16659',
+        provider: 'kjnodes',
+      },
+    ],
+    persistent_peers: [
+      {
+        id: '83b3f989f3ce089afdf733f8aa06e792d7e00c08',
+        address: '3.34.6.30:26656',
+        provider: 'cosmostation',
+      },
+      {
+        id: '445b38a181d147c243185d94567412e5c5f1a22c',
+        address: 'peer-irisnet-01.stakeflow.io:1906',
+        provider: 'Stakeflow',
+      },
+    ],
+  },
+  apis: {
+    rpc: [
+      {
+        address: 'https://rpc-iris.keplr.app',
+        provider: 'chainapsis',
+      },
+      {
+        address: 'https://rpc-irisnet-ia.cosmosia.notional.ventures/',
+        provider: 'Notional',
+      },
+      {
+        address: 'https://rpc-irisnet-01.stakeflow.io',
+        provider: 'Stakeflow',
+      },
+      {
+        address: 'https://irisnet-rpc.w3coins.io',
+        provider: 'w3coins',
+      },
+      {
+        address: 'https://iris-rpc.publicnode.com',
+        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://iris-rpc.highstakes.ch:26657/',
+        provider: 'High Stakes 🇨🇭',
+      },
+      {
+        address: 'https://iris.rpc.kjnodes.com',
+        provider: 'kjnodes',
+      },
+      {
+        address: 'https://rpc-irisnet.nodeist.net',
+        provider: 'Nodeist',
+      },
+    ],
+    rest: [
+      {
+        address: 'https://lcd-iris.keplr.app',
+        provider: 'chainapsis',
+      },
+      {
+        address: 'https://api-irisnet-ia.cosmosia.notional.ventures/',
+        provider: 'Notional',
+      },
+      {
+        address: 'https://api-irisnet-01.stakeflow.io',
+        provider: 'Stakeflow',
+      },
+      {
+        address: 'https://irisnet-api.w3coins.io',
+        provider: 'w3coins',
+      },
+      {
+        address: 'https://iris-rest.publicnode.com',
+        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://iris-api.highstakes.ch:1317/',
+        provider: 'High Stakes 🇨🇭',
+      },
+      {
+        address: 'https://iris.api.kjnodes.com',
+        provider: 'kjnodes',
+      },
+      {
+        address: 'https://api-irisnet.nodeist.net',
+        provider: 'Nodeist',
+      },
+    ],
+    grpc: [
+      {
+        address: 'grpc-irisnet-ia.cosmosia.notional.ventures:443',
+        provider: 'Notional',
+      },
+      {
+        address: 'grpc-irisnet-01.stakeflow.io:1902',
+        provider: 'Stakeflow',
+      },
+      {
+        address: 'irisnet-grpc.w3coins.io:22690',
+        provider: 'w3coins',
+      },
+      {
+        address: 'iris-grpc.publicnode.com:443',
+        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'iris.grpc.kjnodes.com:443',
+        provider: 'kjnodes',
+      },
+      {
+        address: 'https://grpc-irisnet.nodeist.net',
+        provider: 'Nodeist',
+      },
+    ],
+    'evm-http-jsonrpc': [
+      {
+        address: 'https://iris-evm.publicnode.com',
+        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+      },
+    ],
+  },
+  explorers: [
+    {
+      kind: 'EZ Staking',
+      url: 'https://app.ezstaking.io/irisnet',
+      tx_page: 'https://app.ezstaking.io/irisnet/txs/${txHash}',
+      account_page:
+        'https://app.ezstaking.io/irisnet/account/${accountAddress}',
+    },
+    {
+      kind: 'mintscan',
+      url: 'https://www.mintscan.io/iris',
+      tx_page: 'https://www.mintscan.io/iris/transactions/${txHash}',
+      account_page: 'https://www.mintscan.io/iris/accounts/${accountAddress}',
+    },
+    {
+      kind: 'ping.pub',
+      url: 'https://ping.pub/iris-network',
+      tx_page: 'https://ping.pub/iris-network/tx/${txHash}',
+    },
+    {
+      kind: 'atomscan',
+      url: 'https://atomscan.com/iris-network',
+      tx_page: 'https://atomscan.com/iris-network/transactions/${txHash}',
+      account_page:
+        'https://atomscan.com/iris-network/accounts/${accountAddress}',
+    },
+    {
+      kind: 'Stakeflow',
+      url: 'https://stakeflow.io/irisnet',
+      account_page: 'https://stakeflow.io/irisnet/accounts/${accountAddress}',
+    },
+    {
+      kind: 'Nodeist Explorer',
+      url: 'https://exp.nodeist.net/iris',
+      tx_page: 'https://exp.nodeist.net/iris/tx/${txHash}',
+    },
+  ],
+  images: [
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.svg',
+    },
+  ],
+};
+
+export const irisnetAssetList: AssetLists = {
+  $schema: '../assetlist.schema.json',
+  chain_name: 'irisnet',
+  assets: [
+    {
+      description:
+        'The IRIS token is the native governance token for the IrisNet chain.',
+      denom_units: [
+        {
+          denom: 'uiris',
+          exponent: 0,
+        },
+        {
+          denom: 'iris',
+          exponent: 6,
+        },
+      ],
+      base: 'uiris',
+      name: 'IRISnet',
+      display: 'iris',
+      symbol: 'IRIS',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.svg',
+      },
+      coingecko_id: 'iris-network',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.svg',
+        },
+      ],
+    },
+  ],
+};
