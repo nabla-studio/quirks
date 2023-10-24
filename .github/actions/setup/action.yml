@@ -10,6 +10,10 @@ inputs:
     description: Node.js version
     required: false
     default: '18'
+  pnpm_version:
+    description: pnpm version
+    required: false
+    default: '8.1.0'
 
 runs:
   using: composite
@@ -34,6 +38,25 @@ runs:
         # It actually creates a .npmrc in a temporary folder
         # and sets the NPM_CONFIG_USERCONFIG environment variable.
         registry-url: https://registry.npmjs.org
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+        run_install: false
+
+    - name: Get pnpm store directory
+      shell: bash
+      run: |
+        echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+    - uses: actions/cache@v3
+      name: Setup pnpm cache
+      with:
+        path: ${{ env.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
 
     - name: pnpm install
       shell: bash
