@@ -49,9 +49,9 @@ async function processChains(chains: Path[], outputPath: string) {
       originalChainName.replace(startNumberRegex, '') + chainNameSuffix;
 
     const data = await readFile(`${chain.path}/${chain.name}`, 'utf-8');
-    const filename = `${outputPath}/${originalChainName}.ts`;
+    const filename = `${outputPath}/${chainName}.ts`;
 
-    if (!chainDataMap.has(originalChainName)) {
+    if (!chainDataMap.has(chainName)) {
       await writeFile(
         filename,
         `import type { Chain, AssetLists } from '../types'\n\n`
@@ -69,7 +69,7 @@ async function processChains(chains: Path[], outputPath: string) {
       `export const ${camelCase(chainName)}${suffix} = ${data}\n\n`
     );
 
-    chainDataMap.set(originalChainName, filename);
+    chainDataMap.set(chainName, filename);
   }
 
   await writeFile(
