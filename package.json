@@ -4,10 +4,14 @@
   "license": "MIT",
   "scripts": {
     "build": "nx run-many --target=build --projects=chain-registry --parallel=6",
-    "test": "nx run-many --target=test --projects=chain-registry --parallel=6"
+    "test": "nx run-many --target=test --projects=chain-registry --parallel=6",
+    "prepare": "husky install"
   },
   "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@jscutlery/semver": "^4.0.0",
     "@nx/eslint": "17.0.1",
     "@nx/eslint-plugin": "17.0.1",
     "@nx/jest": "17.0.1",
@@ -37,10 +41,12 @@
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "glob": "^10.3.10",
+    "husky": "^8.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^22.1.0",
     "json-schema-to-typescript": "^13.1.1",
+    "ngx-deploy-npm": "^7.0.1",
     "nx": "17.0.1",
     "prettier": "^3.0.3",
     "ts-jest": "^29.1.1",

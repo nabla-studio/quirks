@@ -1,0 +1,20 @@
+name: Test
+
+description: Test
+
+runs:
+  using: composite
+
+  steps:
+    - name: Commitlint
+      shell: bash
+      run: pnpm exec commitlint --from=last-release
+    - name: Lint
+      shell: bash
+      run: pnpm exec nx affected:lint --base=last-release
+    - name: Build
+      shell: bash
+      run: pnpm exec nx affected:build --base=last-release
+    - name: Test
+      shell: bash
+      run: pnpm exec nx affected:test --base=last-release

@@ -1,6 +1,6 @@
 {
   "name": "@nabla-studio/chain-registry",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {},
   "main": "./index.js",
   "module": "./index.mjs",

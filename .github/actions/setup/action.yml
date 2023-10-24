@@ -1,0 +1,40 @@
+name: Setup
+
+description: Setup Node.js, cache and install dependencies
+
+inputs:
+  git_bot_token:
+    description: Git Bot token used to push to protected branches because github token can't
+    required: false
+  node_version:
+    description: Node.js version
+    required: false
+    default: '18'
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout all commits
+      uses: actions/checkout@v4
+      with:
+        token: ${{ inputs.git_bot_token || github.token }}
+        fetch-depth: 0
+
+    - name: Setup git user to "🤖 nabla Bot"
+      shell: bash
+      run: git config user.email "-" && git config user.name "🤖 nabla Bot"
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node_version }}
+        # This doesn't just set the registry url, but also sets
+        # the right configuration in .npmrc that reads NPM token
+        # from NPM_AUTH_TOKEN environment variable.
+        # It actually creates a .npmrc in a temporary folder
+        # and sets the NPM_CONFIG_USERCONFIG environment variable.
+        registry-url: https://registry.npmjs.org
+
+    - name: pnpm install
+      shell: bash
+      run: pnpm install --frozen-lockfile
