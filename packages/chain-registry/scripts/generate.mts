@@ -1,8 +1,8 @@
-import { mkdir, appendFile, readFile, writeFile, rm } from 'fs/promises';
-import { Path, glob } from 'glob';
+import { mkdir, readFile, writeFile, rm } from 'fs/promises';
+import { glob } from 'glob';
 import { URL } from 'url';
-import camelCase from 'camelcase';
-import { existsSync } from 'fs';
+import type { IbcData } from '../src';
+import { processChains } from './utils.mjs';
 
 const __dirname = new URL('../', import.meta.url).pathname;
 const chainRegistryPath = `${__dirname}chain-registry/`;
@@ -33,67 +33,87 @@ async function getFiles(path: string, ignore: string[] = []) {
   return files;
 }
 
-async function processChains(chains: Path[], outputPath: string) {
-  const chainDataMap = new Map();
-
-  for (const chain of chains) {
-    if (!chain.parent) {
-      continue;
-    }
-
-    const originalChainName = chain.parent.name;
-    const startNumberRegex = /^\d+/;
-    const matches = startNumberRegex.exec(originalChainName);
-    const chainNameSuffix = matches != null ? matches[0] : '';
-    const chainName =
-      originalChainName.replace(startNumberRegex, '') + chainNameSuffix;
-
-    const data = await readFile(`${chain.path}/${chain.name}`, 'utf-8');
-    const filename = `${outputPath}/${chainName}.ts`;
-
-    if (!chainDataMap.has(chainName)) {
-      await writeFile(
-        filename,
-        `import type { Chain, AssetLists } from '../types'\n\n`
-      );
-    }
-
-    let suffix = ': Chain';
-
-    if (chain.isNamed('assetlist.json') || chain.isNamed('assetslist.json')) {
-      suffix = 'AssetList: AssetLists';
-    }
-
-    await appendFile(
-      filename,
-      `export const ${camelCase(chainName)}${suffix} = ${data}\n\n`
-    );
-
-    chainDataMap.set(chainName, filename);
-  }
-
-  await writeFile(
-    `${outputPath}/index.ts`,
-    Array.from(chainDataMap.keys())
-      .map((chain) => `export * from './${chain}'`)
-      .join('\n')
-  );
-}
+const [memoKeys, mainnetIBCData, mainnetChains, testnetChains, testnetIBCData] =
+  await Promise.all([
+    getFiles(`${chainRegistryPath}_memo_keys/**/*.json`),
+    getFiles(`${chainRegistryPath}_IBC/**/*.json`),
+    getFiles(`${chainRegistryPath}**/*.json`, pathsToIgnore),
+    getFiles(`${chainRegistryPath}testnets/**/*.json`, testnetPathsToIgnore),
+    getFiles(`${chainRegistryPath}testnets/_IBC/**/*.json`),
+  ]);
 
 await rm(mainnetsPath, { recursive: true, force: true });
 await mkdir(mainnetsPath);
-const mainnetChains = await getFiles(
-  `${chainRegistryPath}**/*.json`,
-  pathsToIgnore
+
+const mainnetChainFiles = await processChains(mainnetChains, mainnetsPath);
+
+const ibcInfos: IbcData[] = [];
+
+for (const ibcInfo of mainnetIBCData) {
+  const data = await readFile(`${ibcInfo.path}/${ibcInfo.name}`, 'utf-8');
+
+  ibcInfos.push(JSON.parse(data));
+}
+
+await writeFile(
+  `${mainnetsPath}/ibc.ts`,
+  `import type { IbcData } from '../types'
+
+  export const mainnetIbc: IbcData[] = ${JSON.stringify(ibcInfos)};
+`
 );
 
-await processChains(mainnetChains, mainnetsPath);
+mainnetChainFiles.add('ibc');
+
+const memoKeysPath = memoKeys[0];
+const memoKeysData = await readFile(
+  `${memoKeysPath.path}/${memoKeysPath.name}`,
+  'utf-8'
+);
+
+await writeFile(
+  `${mainnetsPath}/memo-keys.ts`,
+  `import type { MemoKeys } from '../types'
+
+  export const memoKeys: MemoKeys = ${memoKeysData};
+`
+);
+
+mainnetChainFiles.add('memo-keys');
+
+await writeFile(
+  `${mainnetsPath}/index.ts`,
+  Array.from(mainnetChainFiles.keys())
+    .map((chain) => `export * from './${chain}'`)
+    .join('\n')
+);
 
 await rm(testnetsPath, { recursive: true, force: true });
 await mkdir(testnetsPath);
-const testnetChains = await getFiles(
-  `${chainRegistryPath}testnets/**/*.json`,
-  testnetPathsToIgnore
+
+const testnetChainFiles = await processChains(testnetChains, testnetsPath);
+
+const testnetIbcInfos: IbcData[] = [];
+
+for (const ibcInfo of testnetIBCData) {
+  const data = await readFile(`${ibcInfo.path}/${ibcInfo.name}`, 'utf-8');
+
+  testnetIbcInfos.push(JSON.parse(data));
+}
+
+await writeFile(
+  `${testnetsPath}/ibc.ts`,
+  `import type { IbcData } from '../types'
+
+  export const testnetIbc: IbcData[] = ${JSON.stringify(testnetIbcInfos)};
+`
 );
 
-await processChains(testnetChains, testnetsPath);
+testnetChainFiles.add('ibc');
+
+await writeFile(
+  `${testnetsPath}/index.ts`,
+  Array.from(testnetChainFiles.keys())
+    .map((chain) => `export * from './${chain}'`)
+    .join('\n')
+);
