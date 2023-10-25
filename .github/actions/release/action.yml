@@ -22,11 +22,3 @@ runs:
       # which is set up by `setup-node` action.
       shell: bash
       run: npx nx affected -t version --parallel=1
-
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ inputs.github_token }}
-        branch: ${{ github.ref }}
-        force: true
-        tags: true
