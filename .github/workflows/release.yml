@@ -1,12 +1,5 @@
 name: Release
 
-permissions:
- actions: write
- deployments: write
- packages: write
- pull-requests: write
- issues: write
-
 on:
   push:
     branches:
