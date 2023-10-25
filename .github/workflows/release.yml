@@ -1,7 +1,16 @@
 name: Release
 
+permissions:
+ actions: write
+ deployments: write
+ packages: write
+ pull-requests: write
+ issues: write
+
 on:
-  - workflow_dispatch
+  push:
+    branches:
+    - main
 
 jobs:
   test:
