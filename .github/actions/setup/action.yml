@@ -24,6 +24,9 @@ runs:
         token: ${{ inputs.git_bot_token || github.token }}
         fetch-depth: 0
 
+    - name: Derive appropriate SHAs for base and head for `nx affected` commands
+      uses: nrwl/nx-set-shas@v4
+
     - name: Setup git user to "🤖 nabla Bot"
       shell: bash
       run: git config user.email "-" && git config user.name "🤖 nabla Bot"
