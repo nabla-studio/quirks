@@ -1,6 +1,6 @@
 # chain-registry
 
-This library was generated with [Nx](https://nx.dev).
+This library exports all cosmos chain configuration, both testnet and mainnet
 
 ## Building
 
