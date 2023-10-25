@@ -41,6 +41,8 @@
         "preset": "conventional",
         "tagPrefix": "{projectName}@",
         "trackDeps": true,
+        "push": true,
+        "noVerify": true,
         "postTargets": ["chain-registry:github", "chain-registry:npm"]
       },
       "dependsOn": ["^build"]
