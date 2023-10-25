@@ -9,3 +9,7 @@ Run `nx build chain-registry` to build the library.
 ## Running unit tests
 
 Run `nx test chain-registry` to execute the unit tests via [Jest](https://jestjs.io).
+
+## Release
+
+Run `nx release chain-registry` to release the library.
