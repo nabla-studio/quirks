@@ -8,18 +8,12 @@ import type {
   OfflineAminoSigner,
   StdSignDoc,
 } from '@cosmjs/amino';
-import type { SuggestChain, SuggestToken } from './types';
-
-export interface WalletOptions {
-  name: string;
-}
-
-export interface SignOptions {
-  readonly preferNoSetFee?: boolean;
-  readonly preferNoSetMemo?: boolean;
-
-  readonly disableBalanceCheck?: boolean;
-}
+import type {
+  SignOptions,
+  SuggestChain,
+  SuggestToken,
+  WalletOptions,
+} from './types';
 
 export abstract class Wallet {
   options: WalletOptions;
