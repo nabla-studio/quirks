@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx run-many --target=build --projects=chain-registry,core --parallel=6",
-    "test": "nx run-many --target=test --projects=chain-registry,core --parallel=6",
+    "build": "nx run-many --target=build --exclude nextjs --parallel=6",
+    "test": "nx run-many --target=test --exclude nextjs --parallel=6",
     "prepare": "husky install"
   },
   "private": true,
