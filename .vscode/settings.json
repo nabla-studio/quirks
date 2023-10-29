@@ -10,6 +10,7 @@
     "chain-registry",
     "examples-nextjs",
     "core",
-    "wallets"
+    "wallets",
+    "react"
   ]
 }
