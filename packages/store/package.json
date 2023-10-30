@@ -1,6 +1,18 @@
 {
   "name": "@quirks/store",
+  "repository": "nabla-studio/quirks",
+  "keywords": [
+    "blockchain",
+    "cosmos",
+    "cosmos-sdk",
+    "registry",
+    "osmosis",
+    "juno",
+    "desmos",
+    "evmos"
+  ],
   "version": "0.0.0",
+  "sideEffects": false,
   "dependencies": {},
   "main": "./index.js",
   "module": "./index.mjs",
