@@ -1,6 +1,6 @@
 # wallets
 
-This library was generated with [Nx](https://nx.dev).
+This library contains all the providers for the various cosmos wallets.
 
 ## Building
 
