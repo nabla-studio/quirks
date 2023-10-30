@@ -71,10 +71,10 @@ export abstract class Wallet {
   /**
    * Asks the user to add a tokens to the wallet
    */
-  abstract suggestTokens: (tokens: SuggestToken[]) => Promise<void>;
+  abstract suggestTokens(tokens: SuggestToken[]): Promise<void>;
 
   /**
    * Asks the user to add a chains to the wallet
    */
-  abstract suggestChains: (chains: SuggestChain[]) => Promise<void>;
+  abstract suggestChains(chains: SuggestChain[]): Promise<void>;
 }
