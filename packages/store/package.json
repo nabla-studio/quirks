@@ -13,7 +13,12 @@
   ],
   "version": "0.0.0",
   "sideEffects": false,
-  "dependencies": {},
+  "dependencies": {
+    "@nabla-studio/chain-registry": "*"
+  },
+  "peerDependencies": {
+    "zustand": "^4.4.4"
+  },
   "main": "./index.js",
   "module": "./index.mjs",
   "typings": "./index.d.ts"
