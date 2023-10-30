@@ -11,6 +11,7 @@
     "examples-nextjs",
     "core",
     "wallets",
-    "react"
+    "react",
+    "store"
   ]
 }
