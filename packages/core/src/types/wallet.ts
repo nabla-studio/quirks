@@ -6,9 +6,28 @@ export const WalletConnectionTypes = {
 export type WalletConnectionType =
   (typeof WalletConnectionTypes)[keyof typeof WalletConnectionTypes];
 
+export type WalletLogo =
+  | {
+      png?: string;
+      svg?: string;
+    }
+  | { [key: string]: string };
+
 export interface WalletOptions {
+  /**
+   * Unique name ID
+   */
   name: string;
+  /**
+   * Display name
+   */
+  prettyName: string;
   connectionType: WalletConnectionType;
+  /**
+   * Logo url
+   */
+  logoUrls?: WalletLogo;
+  description?: string;
 }
 
 export interface SignOptions {
