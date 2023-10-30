@@ -34,7 +34,13 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: [],
+      external: [
+        'cosmjs-types',
+        '@keplr-wallet/types',
+        '@cosmjs/proto-signing',
+        '@cosmjs/amino',
+        'semver',
+      ],
     },
   },
 
