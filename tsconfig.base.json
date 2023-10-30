@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nabla-studio/chain-registry": ["packages/chain-registry/src/index.ts"]
+      "@nabla-studio/chain-registry": ["packages/chain-registry/src/index.ts"],
+      "@quirks/core": ["packages/core/src/index.ts"],
+      "@quirks/react": ["packages/react/src/index.ts"],
+      "@quirks/wallets": ["packages/wallets/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

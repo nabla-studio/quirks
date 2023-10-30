@@ -1,0 +1,27 @@
+{
+  "name": "@quirks/core",
+  "repository": "nabla-studio/quirks",
+  "keywords": [
+    "blockchain",
+    "cosmos",
+    "cosmos-sdk",
+    "registry",
+    "osmosis",
+    "juno",
+    "desmos",
+    "evmos"
+  ],
+  "version": "0.0.0",
+  "sideEffects": false,
+  "dependencies": {
+    "@nabla-studio/chain-registry": "*"
+  },
+  "peerDependencies": {
+    "@cosmjs/proto-signing": "^0.31.3",
+    "cosmjs-types": "^0.9.0",
+    "@cosmjs/amino": "^0.31.3"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts"
+}

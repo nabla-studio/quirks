@@ -49,5 +49,9 @@
         "linter": "eslint"
       }
     }
+  },
+  "workspaceLayout": {
+    "appsDir": "examples",
+    "libsDir": "packages"
   }
 }

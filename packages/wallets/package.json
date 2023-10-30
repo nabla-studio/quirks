@@ -1,0 +1,30 @@
+{
+  "name": "@quirks/wallets",
+  "repository": "nabla-studio/quirks",
+  "keywords": [
+    "blockchain",
+    "cosmos",
+    "cosmos-sdk",
+    "registry",
+    "osmosis",
+    "juno",
+    "desmos",
+    "evmos"
+  ],
+  "version": "0.0.0",
+  "sideEffects": false,
+  "dependencies": {
+    "@quirks/core": "*",
+    "@nabla-studio/chain-registry": "*"
+  },
+  "peerDependencies": {
+    "@cosmjs/amino": "^0.31.3",
+    "@cosmjs/proto-signing": "^0.31.3",
+    "cosmjs-types": "^0.9.0",
+    "@keplr-wallet/types": "^0.12.38",
+    "semver": "^7.5.4"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts"
+}
