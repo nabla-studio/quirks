@@ -16,7 +16,7 @@ import type {
 import { Wallet } from '@quirks/core';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { Keplr } from '@keplr-wallet/types';
-import { chainRegistryChainToKeplr } from '@chain-registry/keplr';
+import { chainRegistryChainToKeplr } from './utils';
 
 export class KeplrWalletExtension extends Wallet {
   client: Keplr;

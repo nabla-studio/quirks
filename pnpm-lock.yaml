@@ -8,15 +8,15 @@ overrides:
   tough-cookie@<=4.1.3: ^4.1.3
 
 dependencies:
-  '@chain-registry/keplr':
-    specifier: ^1.25.1
-    version: 1.25.1
   '@cosmjs/amino':
     specifier: ^0.31.3
     version: 0.31.3
   '@cosmjs/proto-signing':
     specifier: ^0.31.3
     version: 0.31.3
+  '@keplr-wallet/cosmos':
+    specifier: ^0.12.38
+    version: 0.12.38
   cosmjs-types:
     specifier: ^0.9.0
     version: 0.9.0
@@ -29,6 +29,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  semver:
+    specifier: ^7.5.4
+    version: 7.5.4
 
 devDependencies:
   '@commitlint/cli':
@@ -91,6 +94,9 @@ devDependencies:
   '@types/react-dom':
     specifier: 18.2.14
     version: 18.2.14
+  '@types/semver':
+    specifier: ^7.5.4
+    version: 7.5.4
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.9.0
     version: 6.9.0(@typescript-eslint/parser@6.9.0)(eslint@8.52.0)(typescript@5.2.2)
@@ -1461,6 +1467,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
+    dev: true
 
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -1508,22 +1515,6 @@ packages:
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
-
-  /@chain-registry/keplr@1.25.1:
-    resolution: {integrity: sha512-cr8K+L7ujxlgvSSfvsn7yktBXb11ATxvPa/4/jIZqNW+LR9EO3FpDUUwVaZ4MLakrRdB7d1BuAfcpzXq+lKC4g==}
-    dependencies:
-      '@babel/runtime': 7.23.2
-      '@chain-registry/types': 0.17.0
-      '@keplr-wallet/cosmos': 0.12.28
-      '@keplr-wallet/crypto': 0.12.28
-      semver: 7.5.4
-    dev: false
-
-  /@chain-registry/types@0.17.0:
-    resolution: {integrity: sha512-lavACU4oDxioUy8lZOFZN0Vrr2qR+Dg2yEh/mkrPfOldcioavREXJou0elDyyXwq4pGLC5YQ+IISCtQ4Du0bdw==}
-    dependencies:
-      '@babel/runtime': 7.23.2
-    dev: false
 
   /@commitlint/cli@17.8.1(@swc/core@1.3.95):
     resolution: {integrity: sha512-ay+WbzQesE0Rv4EQKfNbSMiJJ12KdKTDzIt0tcK4k11FdsWmtwP0Kp1NWMOUswfIWo6Eb7p7Ln721Nx9FLNBjg==}
@@ -2352,34 +2343,34 @@ packages:
     resolution: {integrity: sha512-4JQNk+3mVzK3xh2rqd6RB4J46qUR19azEHBneZyTZM+c456qOrbbM/5xcR8huNCCcbVt7+UmizG6GuUvPvKUYg==}
     dev: true
 
-  /@keplr-wallet/common@0.12.28:
-    resolution: {integrity: sha512-ESQorPZw8PRiUXhsrxED+E1FEWkAdc6Kwi3Az7ce204gMBQDI2j0XJtTd4uCUp+C24Em9fk0samdHzdoB4caIg==}
+  /@keplr-wallet/common@0.12.38:
+    resolution: {integrity: sha512-FrtwH1IGGLDPbk5vycill25MZ9kqqejobl/j/WdhlIOf4IOcOPSIHIu9Ky8TYoAmbAbUcA2ZpnRzYVL2lnd3HQ==}
     dependencies:
-      '@keplr-wallet/crypto': 0.12.28
-      '@keplr-wallet/types': 0.12.28
+      '@keplr-wallet/crypto': 0.12.38
+      '@keplr-wallet/types': 0.12.38
       buffer: 6.0.3
       delay: 4.4.1
       mobx: 6.10.2
     dev: false
 
-  /@keplr-wallet/cosmos@0.12.28:
-    resolution: {integrity: sha512-IuqmSBgKgIeWBA0XGQKKs28IXFeFMCrfadCbtiZccNc7qnNr5Y/Cyyk01BPC8Dd1ZyEyAByoICgrxvtGN0GGvA==}
+  /@keplr-wallet/cosmos@0.12.38:
+    resolution: {integrity: sha512-YXH2kaWRWuJpTHpjcoQhcw50Zd6nGrTYvES496HBf7oN8CgU+4xgclC6V3O0L4J/61pY7q4aXnbJ3nnRkvwFNw==}
     dependencies:
       '@ethersproject/address': 5.7.0
-      '@keplr-wallet/common': 0.12.28
-      '@keplr-wallet/crypto': 0.12.28
-      '@keplr-wallet/proto-types': 0.12.28
-      '@keplr-wallet/simple-fetch': 0.12.28
-      '@keplr-wallet/types': 0.12.28
-      '@keplr-wallet/unit': 0.12.28
+      '@keplr-wallet/common': 0.12.38
+      '@keplr-wallet/crypto': 0.12.38
+      '@keplr-wallet/proto-types': 0.12.38
+      '@keplr-wallet/simple-fetch': 0.12.38
+      '@keplr-wallet/types': 0.12.38
+      '@keplr-wallet/unit': 0.12.38
       bech32: 1.1.4
       buffer: 6.0.3
       long: 4.0.0
       protobufjs: 6.11.4
     dev: false
 
-  /@keplr-wallet/crypto@0.12.28:
-    resolution: {integrity: sha512-le1je+78/4213qshSMgQTYqhCCvzsL9+YfhjXg1kd/ali69MLWK8L8Z09ducHPS6C+LqQXXTNJQpbH2uiFSd5w==}
+  /@keplr-wallet/crypto@0.12.38:
+    resolution: {integrity: sha512-VdqO7g3tg06KB7jZvnBgcQ1l16hsSgTIv+t8/GIPtG6CMhhM5hurS82D2fszB6shNsYzQPwDAoHpRTyCCxdJxA==}
     dependencies:
       '@ethersproject/keccak256': 5.7.0
       bip32: 2.0.6
@@ -2391,33 +2382,26 @@ packages:
       sha.js: 2.4.11
     dev: false
 
-  /@keplr-wallet/proto-types@0.12.28:
-    resolution: {integrity: sha512-ukti/eCTltPUP64jxtk5TjtwJogyfKPqlBIT3KGUCGzBLIPeYMsffL5w5aoHsMjINzOITjYqzXyEF8LTIK/fmw==}
+  /@keplr-wallet/proto-types@0.12.38:
+    resolution: {integrity: sha512-bEnQjRnoQzTT1ahTq/qTMJMU4YHe7XWhEBElLXu6jeUC0Cm1L2nmeYo6+sr4EGb2t2hn1A1xV6PFmcA4XnuTNg==}
     dependencies:
       long: 4.0.0
       protobufjs: 6.11.4
     dev: false
 
-  /@keplr-wallet/simple-fetch@0.12.28:
-    resolution: {integrity: sha512-T2CiKS2B5n0ZA7CWw0CA6qIAH0XYI1siE50MP+i+V0ZniCGBeL+BMcDw64vFJUcEH+1L5X4sDAzV37fQxGwllA==}
-    dev: false
-
-  /@keplr-wallet/types@0.12.28:
-    resolution: {integrity: sha512-EcM9d46hYDm3AO4lf4GUbTSLRySONtTmhKb7p88q56OQOgJN3MMjRacEo2p9jX9gpPe7gRIjMUalhAfUiFpZoQ==}
-    dependencies:
-      long: 4.0.0
+  /@keplr-wallet/simple-fetch@0.12.38:
+    resolution: {integrity: sha512-xjQoFxwW13p6Xgx53OUwJeLbgPORQXPfHnqgRbapuZQ8Xaom2KDmtDGKgJf2St1AvVIDnYzfYdEPS+8lN/S0Dg==}
     dev: false
 
   /@keplr-wallet/types@0.12.38:
     resolution: {integrity: sha512-moHm+q+ixGV8bpH/0JWI4imCIewnn7nnQaNxa4SgDjBhB46ropJQVNrb2xKl5FMqnTTbRb9Ejfv34H9CjIQj+w==}
     dependencies:
       long: 4.0.0
-    dev: true
 
-  /@keplr-wallet/unit@0.12.28:
-    resolution: {integrity: sha512-kpXigHDBJGOmhtPkv9hqsQid9zkFo7OQPeKgO2n8GUlOINIXW6kWG5LXYTi/Yg9Uiw1CQF69gFMuZCJ8IzVHlA==}
+  /@keplr-wallet/unit@0.12.38:
+    resolution: {integrity: sha512-i/WDYpfYSPN7SnSNzKhOV+g0kEGdEwH1qCU2EnOMgWwPH9fR5XkALyfmhyNXoHgJpS2vniW1RAQzS19Dcq9QmA==}
     dependencies:
-      '@keplr-wallet/types': 0.12.28
+      '@keplr-wallet/types': 0.12.38
       big-integer: 1.6.51
       utility-types: 3.10.0
     dev: false
@@ -4129,7 +4113,7 @@ packages:
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.2.2)
       eslint: 8.52.0
       eslint-scope: 5.1.1
-      semver: 7.5.3
+      semver: 7.5.4
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -8980,7 +8964,7 @@ packages:
       acorn: 8.10.0
       eslint-visitor-keys: 3.4.3
       espree: 9.6.1
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /jsonc-parser@3.2.0:
@@ -9787,7 +9771,7 @@ packages:
     dependencies:
       hosted-git-info: 7.0.1
       proc-log: 3.0.0
-      semver: 7.5.3
+      semver: 7.5.4
       validate-npm-package-name: 5.0.0
     dev: true
 
@@ -10605,6 +10589,7 @@ packages:
 
   /regenerator-runtime@0.14.0:
     resolution: {integrity: sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==}
+    dev: true
 
   /regenerator-transform@0.15.2:
     resolution: {integrity: sha512-hfMp2BoF0qOk3uc5V20ALGDS2ddjQaLrdl7xrGXvAIow7qeWRM2VA2HuCHkUKk9slq3VwEwLNK3DFBqDfPGYtg==}
