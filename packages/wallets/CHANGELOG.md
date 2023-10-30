@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/nabla-studio/quirks/compare/wallets@0.1.0...wallets@0.1.1) (2023-10-30)
+
+### Dependency Updates
+
+* `core` updated to version `0.1.0`
 ## 0.1.0 (2023-10-30)
 
 ### Dependency Updates
