@@ -1,6 +1,12 @@
-import { type PersistOptions, createJSONStorage } from 'zustand/middleware';
-import { type ConfigState } from './slices';
+import {
+  type PersistOptions,
+  createJSONStorage,
+  subscribeWithSelector,
+  persist as persistMiddleware,
+} from 'zustand/middleware';
+import { type ConfigState, createConfigSlice } from './slices';
 import { createSSRStorage } from './utils';
+import { createStore } from 'zustand/vanilla';
 
 export type AppState = ConfigState;
 
@@ -22,5 +28,18 @@ export const createConfig = (config: Config) => {
     },
   } = config;
 
-  return persist;
+  const store = createStore(
+    subscribeWithSelector(
+      persistMiddleware(
+        (...props) => ({
+          ...createConfigSlice(...props),
+        }),
+        persist,
+      ),
+    ),
+  );
+
+  return {
+    store,
+  };
 };
