@@ -1,1 +1,1 @@
-export * from './lib/wallets';
+export * from './keplr';
