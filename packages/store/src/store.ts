@@ -4,7 +4,7 @@ import {
   subscribeWithSelector,
   persist,
 } from 'zustand/middleware';
-import { createConfigSlice } from './slices';
+import { createConfigSlice, createConnectSlice } from './slices';
 import { createSSRStorage } from './utils';
 import { createStore } from 'zustand/vanilla';
 import type { Wallet } from '@quirks/core';
@@ -25,10 +25,18 @@ export interface Config {
   autoConnect?: boolean;
 }
 
+const excludedKeys: (keyof AppState)[] = ['wallet', 'wallets'];
+
 export const defaultPersistOptions: PersistOptions<AppState> = {
   version: 1,
   name: 'quirks',
   storage: createJSONStorage(() => createSSRStorage('localStorage')),
+  partialize: (state) =>
+    Object.fromEntries(
+      Object.entries(state).filter(
+        ([key]) => !excludedKeys.includes(key as keyof AppState),
+      ),
+    ) as AppState,
 };
 
 export const createConfig = (config: Config) => {
@@ -39,18 +47,15 @@ export const createConfig = (config: Config) => {
     persistOptions = defaultPersistOptions,
   } = config;
 
-  const configState = {
-    wallets,
-    chains,
-    assetsLists,
-  };
-
   const store = createStore(
     subscribeWithSelector(
       persist(
         (...props) => ({
           ...createConfigSlice(...props),
-          ...configState,
+          wallets,
+          chains,
+          assetsLists,
+          ...createConnectSlice(...props),
         }),
         persistOptions,
       ),
