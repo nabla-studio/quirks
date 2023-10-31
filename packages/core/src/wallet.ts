@@ -15,12 +15,15 @@ import type {
   WalletOptions,
 } from './types';
 
-export abstract class Wallet {
+export abstract class Wallet<T = unknown> {
   options: WalletOptions;
+  client?: T;
 
   constructor(options: WalletOptions) {
     this.options = options;
   }
+
+  abstract init(): Promise<T | undefined>;
 
   /**
    * This method will ask the user whether to allow access if they haven't visited this website.
