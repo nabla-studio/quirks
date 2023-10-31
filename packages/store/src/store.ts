@@ -4,7 +4,11 @@ import {
   subscribeWithSelector,
   persist,
 } from 'zustand/middleware';
-import { createConfigSlice, createConnectSlice } from './slices';
+import {
+  createConfigSlice,
+  createConnectSlice,
+  createAccountSlice,
+} from './slices';
 import { createSSRStorage } from './utils';
 import { createStore } from 'zustand/vanilla';
 import type { Wallet } from '@quirks/core';
@@ -25,7 +29,12 @@ export interface Config {
   autoConnect?: boolean;
 }
 
-const excludedKeys: (keyof AppState)[] = ['wallet', 'wallets'];
+const excludedKeys: (keyof AppState)[] = [
+  'wallet',
+  'wallets',
+  'chains',
+  'assetsLists',
+];
 
 export const defaultPersistOptions: PersistOptions<AppState> = {
   version: 1,
@@ -56,6 +65,7 @@ export const createConfig = (config: Config) => {
           chains,
           assetsLists,
           ...createConnectSlice(...props),
+          ...createAccountSlice(...props),
         }),
         persistOptions,
       ),
