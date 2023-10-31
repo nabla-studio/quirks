@@ -18,6 +18,8 @@ import type {
 export abstract class Wallet<T = unknown> {
   options: WalletOptions;
   client?: T;
+  injected?: boolean;
+  injectionError?: Error;
 
   constructor(options: WalletOptions) {
     this.options = options;

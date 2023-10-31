@@ -1,3 +1,4 @@
 export * from './wallet';
+export * from './ext-wallet';
 export * from './types';
-export * from './errors';
+export * from './utils';

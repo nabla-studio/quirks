@@ -24,6 +24,10 @@ export interface WalletOptions {
   prettyName: string;
   connectionType: WalletConnectionType;
   /**
+   * Window extension key
+   */
+  windowKey?: string;
+  /**
    * Logo url
    */
   logoUrls?: WalletLogo;
