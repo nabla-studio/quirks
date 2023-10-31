@@ -1,9 +1,9 @@
 'use client';
 
-import { useQuirks } from './provider';
+import { useConfig } from '@quirks/react';
 
 export const Button = () => {
-  const store = useQuirks();
+  const store = useConfig();
 
-  return <div>{store.wallets.length}</div>;
+  return <div onClick={() => store.setChains([])}>{store.chains.length}</div>;
 };

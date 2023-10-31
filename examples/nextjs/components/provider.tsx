@@ -1,30 +1,21 @@
 'use client';
 
 import { osmosis, osmosisAssetList } from '@nabla-studio/chain-registry';
-import { createConfig } from '@quirks/store';
+import { QuirksConfig, QuirksNextProvider } from '@quirks/react';
+import { Config } from '@quirks/store';
 import { KeplrWalletExtension } from '@quirks/wallets';
-import { PropsWithChildren, useEffect, useState } from 'react';
-import { useStore } from 'zustand';
+import { PropsWithChildren } from 'react';
 
-const { store } = createConfig({
+const config: Config = {
   wallets: [new KeplrWalletExtension()],
   chains: [osmosis],
   assetsLists: [osmosisAssetList],
-});
-
-export const useQuirks = () => useStore(store);
+};
 
 export const Provider = ({ children }: PropsWithChildren<unknown>) => {
-  const [hydrated, setHydrated] = useState(false);
-
-  useEffect(() => {
-    store.persist.rehydrate();
-    setHydrated(true);
-  }, []);
-
-  if (!hydrated) {
-    return null;
-  }
-
-  return <>{children}</>;
+  return (
+    <QuirksConfig config={config}>
+      <QuirksNextProvider>{children}</QuirksNextProvider>
+    </QuirksConfig>
+  );
 };
