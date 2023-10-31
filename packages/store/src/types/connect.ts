@@ -11,8 +11,10 @@ export type ConnectionState =
   (typeof ConnectionStates)[keyof typeof ConnectionStates];
 
 export interface ConnectState {
+  walletName?: string;
   wallet?: Wallet;
   status: ConnectionState;
   setWallet: (wallet?: Wallet) => void;
   connect: (walletName: string) => void;
+  disconnect: () => void;
 }
