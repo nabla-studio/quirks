@@ -58,7 +58,5 @@ export const createConfig = (config: Config) => {
     ),
   );
 
-  return {
-    store,
-  };
+  return store;
 };
