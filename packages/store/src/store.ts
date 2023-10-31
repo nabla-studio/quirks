@@ -2,7 +2,7 @@ import {
   type PersistOptions,
   createJSONStorage,
   subscribeWithSelector,
-  persist as persistMiddleware,
+  persist,
 } from 'zustand/middleware';
 import { type ConfigState, createConfigSlice } from './slices';
 import { createSSRStorage } from './utils';
@@ -19,19 +19,25 @@ export interface Config {
   /**
    * State manager persister
    */
-  persist?: PersistOptions<AppState>;
+  persistOptions?: PersistOptions<AppState>;
+  /**
+   * Reinit connection on mount
+   */
+  autoConnect?: boolean;
 }
+
+export const defaultPersistOptions: PersistOptions<AppState> = {
+  version: 1,
+  name: 'quirks',
+  storage: createJSONStorage(() => createSSRStorage('localStorage')),
+};
 
 export const createConfig = (config: Config) => {
   const {
     wallets,
     chains,
     assetsLists,
-    persist = {
-      version: 1,
-      name: 'quirks',
-      storage: createJSONStorage(() => createSSRStorage('localStorage')),
-    },
+    persistOptions = defaultPersistOptions,
   } = config;
 
   const configState = {
@@ -40,15 +46,14 @@ export const createConfig = (config: Config) => {
     assetsLists,
   };
 
-  console.log(configState);
-
   const store = createStore(
     subscribeWithSelector(
-      persistMiddleware(
+      persist(
         (...props) => ({
           ...createConfigSlice(...props),
+          ...configState,
         }),
-        persist,
+        persistOptions,
       ),
     ),
   );
