@@ -1,22 +1,9 @@
-import { AssetLists, Chain } from '@nabla-studio/chain-registry';
-import { Wallet } from '@quirks/core';
-import { StateCreator } from 'zustand/vanilla';
+import type { ConfigState, AppState } from '../types';
+import type { StateCreator } from 'zustand/vanilla';
 
-export interface ConfigState {
-  wallets: Wallet[];
-  chains: Chain[];
-  assetsLists: AssetLists[];
-  setChains: (chains: Chain[]) => void;
-  setAssetsLists: (assetsLists: AssetLists[]) => void;
-  setWallets: (wallets: Wallet[]) => void;
-}
-
-export const createConfigSlice: StateCreator<
-  ConfigState,
-  [],
-  [],
-  ConfigState
-> = (set) => ({
+export const createConfigSlice: StateCreator<AppState, [], [], ConfigState> = (
+  set,
+) => ({
   wallets: [],
   chains: [],
   assetsLists: [],

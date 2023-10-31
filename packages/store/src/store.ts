@@ -4,13 +4,12 @@ import {
   subscribeWithSelector,
   persist,
 } from 'zustand/middleware';
-import { type ConfigState, createConfigSlice } from './slices';
+import { createConfigSlice } from './slices';
 import { createSSRStorage } from './utils';
 import { createStore } from 'zustand/vanilla';
-import { Wallet } from '@quirks/core';
-import { AssetLists, Chain } from '@nabla-studio/chain-registry';
-
-export type AppState = ConfigState;
+import type { Wallet } from '@quirks/core';
+import type { AssetLists, Chain } from '@nabla-studio/chain-registry';
+import type { AppState } from './types';
 
 export interface Config {
   wallets: Wallet[];
