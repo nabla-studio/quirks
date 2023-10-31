@@ -1,9 +1,23 @@
 'use client';
 
-import { useConfig } from '@quirks/react';
+import { useConnect } from '@quirks/react';
 
 export const Button = () => {
-  const store = useConfig();
+  const { connect, disconnect, disconnected } = useConnect();
 
-  return <div onClick={() => store.setChains([])}>{store.chains.length}</div>;
+  return (
+    <>
+      <button
+        onClick={() => {
+          if (disconnected) {
+            connect('keplr-ext');
+          } else {
+            disconnect();
+          }
+        }}
+      >
+        {disconnected ? 'Connect' : 'Disconnect'}
+      </button>
+    </>
+  );
 };
