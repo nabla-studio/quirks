@@ -7,40 +7,41 @@ import type {
   OfflineDirectSigner,
   DirectSignResponse,
 } from '@cosmjs/proto-signing';
-import type {
-  SignOptions,
-  SuggestChain,
-  SuggestToken,
-  WalletOptions,
-} from '@quirks/core';
-import { Wallet } from '@quirks/core';
+import type { SignOptions, SuggestChain, SuggestToken } from '@quirks/core';
+import { ExtensionWallet, assertIsDefined } from '@quirks/core';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { Keplr } from '@keplr-wallet/types';
+import Long from 'long';
 import { chainRegistryChainToKeplr } from './utils';
 
-export class KeplrWalletExtension extends Wallet {
-  client: Keplr;
-
-  constructor(options: WalletOptions) {
-    super(options);
-
-    if (window.keplr === undefined) {
-      throw new Error(`${options.name} is not injected into the window`);
-    }
-
-    this.client = window.keplr;
+export class KeplrWalletExtension extends ExtensionWallet<Keplr> {
+  constructor() {
+    super({
+      name: 'keplr-ext',
+      prettyName: 'Keplr',
+      connectionType: 'extension',
+      windowKey: 'keplr',
+    });
   }
 
   override enable(chainIds: string[]): Promise<void> {
+    assertIsDefined(this.client);
+
     return this.client.enable(chainIds);
   }
+
   override disable(chainIds?: string[] | undefined): Promise<void> {
+    assertIsDefined(this.client);
+
     return this.client.disable(chainIds);
   }
+
   override async getOfflineSigner(
     chainId: string,
     options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner & OfflineDirectSigner> {
+    assertIsDefined(this.client);
+
     return await this.client.getOfflineSigner(chainId, options);
   }
 
@@ -48,6 +49,8 @@ export class KeplrWalletExtension extends Wallet {
     chainId: string,
     options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner> {
+    assertIsDefined(this.client);
+
     return await this.client.getOfflineSignerOnlyAmino(chainId, options);
   }
 
@@ -55,6 +58,8 @@ export class KeplrWalletExtension extends Wallet {
     chainId: string,
     options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner | OfflineDirectSigner> {
+    assertIsDefined(this.client);
+
     return this.client.getOfflineSignerAuto(chainId, options);
   }
 
@@ -64,6 +69,8 @@ export class KeplrWalletExtension extends Wallet {
     signDoc: StdSignDoc,
     signOptions?: SignOptions | undefined,
   ): Promise<AminoSignResponse> {
+    assertIsDefined(this.client);
+
     return this.client.signAmino(chainId, signer, signDoc, signOptions);
   }
 
@@ -73,10 +80,22 @@ export class KeplrWalletExtension extends Wallet {
     signDoc: SignDoc,
     signOptions?: SignOptions | undefined,
   ): Promise<DirectSignResponse> {
-    return this.client.signDirect(chainId, signer, signDoc, signOptions);
+    assertIsDefined(this.client);
+
+    return this.client.signDirect(
+      chainId,
+      signer,
+      {
+        ...signDoc,
+        accountNumber: Long.fromString(signDoc.accountNumber.toString(10)),
+      },
+      signOptions,
+    );
   }
 
   override async suggestTokens(suggestions: SuggestToken[]): Promise<void> {
+    assertIsDefined(this.client);
+
     for (const suggestion of suggestions) {
       for (const token of suggestion.tokens) {
         await this.client.suggestToken(
@@ -89,6 +108,8 @@ export class KeplrWalletExtension extends Wallet {
   }
 
   override async suggestChains(suggestions: SuggestChain[]): Promise<void> {
+    assertIsDefined(this.client);
+
     for (const suggestion of suggestions) {
       const suggestChain = chainRegistryChainToKeplr(
         suggestion.chain,
