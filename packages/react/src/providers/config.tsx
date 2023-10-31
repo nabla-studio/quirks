@@ -1,11 +1,10 @@
-import { createConfig, type Config } from '@quirks/store';
+import { createConfig, type Config, createSelectors } from '@quirks/store';
 import {
   type PropsWithChildren,
   createContext,
   useContext,
   useRef,
 } from 'react';
-import { useStore } from 'zustand';
 
 export type QuirksConfigState = ReturnType<typeof createConfig>;
 
@@ -38,7 +37,7 @@ export const QuirksConfig = (props: PropsWithChildren<QuirksConfigProps>) => {
   );
 };
 
-export const useConfig = () => {
+export const useQuirks = () => {
   const store = useContext(QuirksConfigContext);
 
   if (!store) {
@@ -47,5 +46,5 @@ export const useConfig = () => {
     );
   }
 
-  return useStore(store);
+  return createSelectors(store);
 };
