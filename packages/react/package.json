@@ -13,8 +13,19 @@
   ],
   "version": "0.1.0",
   "sideEffects": false,
-  "dependencies": {},
+  "dependencies": {
+    "@quirks/store": "*"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "zustand": "^4.4.4"
+  },
   "main": "./index.js",
-  "module": "./index.mjs",
-  "typings": "./index.d.ts"
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  }
 }
