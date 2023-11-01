@@ -14,7 +14,8 @@
   "version": "0.0.0",
   "sideEffects": false,
   "dependencies": {
-    "@nabla-studio/chain-registry": "*"
+    "@nabla-studio/chain-registry": "*",
+    "@quirks/core": "*"
   },
   "peerDependencies": {
     "zustand": "^4.4.4"
