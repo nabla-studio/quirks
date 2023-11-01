@@ -25,7 +25,8 @@ export const createConnectSlice: StateCreator<
       await wallet.enable(get().chains.map((el) => el.chain_id));
 
       set(() => ({ status: ConnectionStates.CONNECTED }));
-    } catch {
+    } catch (error) {
+      console.error(error);
       set(() => ({
         walletName: undefined,
         wallet: undefined,
@@ -39,7 +40,7 @@ export const createConnectSlice: StateCreator<
       'You must first connect a wallet to disconnect it',
     );
 
-    get().wallet?.disable();
+    get().wallet?.disable(get().chains.map((el) => el.chain_id));
 
     set(() => ({ wallet: undefined, status: ConnectionStates.DISCONNECTED }));
   },
