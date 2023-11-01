@@ -20,4 +20,12 @@ export const keplrExtensionOptions: WalletOptions = {
       link: 'https://www.keplr.app/download',
     },
   ],
+  logoUrls: {
+    light: {
+      svg: 'https://assets-global.website-files.com/63eb7ddf41cf5b1c8fdfbc74/63fc1c71300f0c3e3aad38f1_Keplr_logo_ver.1.3_2%20White.svg',
+    },
+    dark: {
+      svg: 'https://assets-global.website-files.com/63eb7ddf41cf5b1c8fdfbc74/63fc1c71f8657194dc1f6f00_Keplr_logo_ver.1.3_2%20Dark.svg',
+    },
+  },
 };
