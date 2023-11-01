@@ -4,6 +4,7 @@ import {
   type AppState,
   type ConnectState,
   AddressWithChain,
+  ReconnectionStates,
 } from '../types';
 import type { StateCreator } from 'zustand/vanilla';
 
@@ -15,9 +16,22 @@ export const createConnectSlice: StateCreator<
 > = (set, get) => ({
   walletName: undefined,
   wallet: undefined,
-  status: 'DISCONNECTED',
+  status: ConnectionStates.DISCONNECTED,
+  reconnectionStatus: ReconnectionStates.IDLE,
   setWallet: async (wallet) => {
     set(() => ({ wallet }));
+
+    if (wallet) {
+      get().wallet?.removeListeners();
+      get().wallet?.events.on('keystorechange', () => {
+        /* get().getWalletData(); */
+      });
+
+      get().getWalletData();
+    }
+  },
+  getWalletData: async () => {
+    const wallet = get().wallet;
 
     if (wallet) {
       try {
@@ -71,6 +85,29 @@ export const createConnectSlice: StateCreator<
       }));
     }
   },
+  reconnect: async (walletName) => {
+    try {
+      const wallet = get().wallets.find((el) => el.options.name === walletName);
+
+      if (!wallet) {
+        throw createInvalidWalletName(walletName);
+      }
+
+      set(() => ({ reconnectionStatus: ReconnectionStates.WAITING }));
+
+      await wallet.enable(get().chains.map((el) => el.chain_id));
+
+      set(() => ({ reconnectionStatus: ReconnectionStates.RECONNECTED }));
+
+      get().setWallet(wallet);
+    } catch (error) {
+      console.error(error);
+
+      set(() => ({
+        reconnectionStatus: ReconnectionStates.REJECTED,
+      }));
+    }
+  },
   disconnect: () => {
     assertIsDefined(
       get().wallet,
@@ -78,6 +115,8 @@ export const createConnectSlice: StateCreator<
     );
 
     get().wallet?.disable(get().chains.map((el) => el.chain_id));
+
+    get().wallet?.removeListeners();
 
     set(() => ({
       walletName: undefined,
