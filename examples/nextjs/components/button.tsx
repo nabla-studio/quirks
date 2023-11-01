@@ -10,7 +10,7 @@ export const Button = () => {
       <button
         onClick={() => {
           if (disconnected) {
-            connect('keplr-ext');
+            connect('leap-extension');
           } else {
             disconnect();
           }
