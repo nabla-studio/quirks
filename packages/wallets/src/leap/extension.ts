@@ -8,6 +8,7 @@ import type {
   DirectSignResponse,
 } from '@cosmjs/proto-signing';
 import type {
+  Key,
   SignOptions,
   SuggestChain,
   SuggestToken,
@@ -36,6 +37,30 @@ export class LeapWalletExtension extends ExtensionWallet<Leap> {
     for (const chainId of chainIds) {
       await this.client.disconnect(chainId);
     }
+  }
+
+  override async getAccount(chainId: string) {
+    assertIsDefined(this.client);
+
+    return await this.client.getKey(chainId);
+  }
+
+  override async getAccounts(chainIds: string[]) {
+    assertIsDefined(this.client);
+
+    const keys = await Promise.allSettled(
+      chainIds.map((chainId) => this.getAccount(chainId)),
+    );
+
+    return keys
+      .map((key) => {
+        if (key.status === 'fulfilled') {
+          return key.value;
+        }
+
+        return undefined;
+      })
+      .filter((key) => key !== undefined) as Key[];
   }
 
   override async getOfflineSigner(
