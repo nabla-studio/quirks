@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/nabla-studio/quirks/compare/react@0.1.0...react@0.2.0) (2023-11-01)
+
+### Dependency Updates
+
+* `store` updated to version `0.1.0`
+
+### Features
+
+* **react:** :sparkles: add account hook ([98e36c0](https://github.com/nabla-studio/quirks/commit/98e36c021a28cce3c23a79031bd183ca7cec950d))
+* **react:** :sparkles: add disconnect ([a24d60c](https://github.com/nabla-studio/quirks/commit/a24d60c39c9003d2d76e59d7583e7ee167aa0878))
+* **react:** :sparkles: add providers ([ef94a65](https://github.com/nabla-studio/quirks/commit/ef94a657f9f0122892165688f39e01212f278410))
+* **react:** :sparkles: add useConfig hook ([b13653c](https://github.com/nabla-studio/quirks/commit/b13653c93cb15d3a410a15b9053277bd5f5fd743))
+* **react:** :sparkles: add useConnect hook ([0d7a277](https://github.com/nabla-studio/quirks/commit/0d7a27787cefc8a2348f55a48240aa8cd7b00ad2))
+
 ## 0.1.0 (2023-10-30)
 
 
