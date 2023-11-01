@@ -2,6 +2,24 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/nabla-studio/quirks/compare/core@0.1.1...core@0.2.0) (2023-11-01)
+
+
+### Features
+
+* **core:** :sparkles: add download infos ([359fd79](https://github.com/nabla-studio/quirks/commit/359fd7985b1374b71d04c9f9d44fc6b3324e938c))
+* **core:** :sparkles: add error utils ([6d24e6a](https://github.com/nabla-studio/quirks/commit/6d24e6a1addfcb10bab704d12205409ee69b12ca))
+* **core:** :sparkles: add events cleanup ([a82a496](https://github.com/nabla-studio/quirks/commit/a82a4963362fe281c65fb3d8bd9dbdf99b6bff48))
+* **core:** :sparkles: add ext wallet class ([6681cce](https://github.com/nabla-studio/quirks/commit/6681cce76e70955768a280f39fe5c55c853e8b13))
+* **core:** :sparkles: add getAccount/s methods ([f63b546](https://github.com/nabla-studio/quirks/commit/f63b54688fe1cd1f5333b723f598cf3a41d2e9d9))
+* **core:** :sparkles: add invalid wallet name error ([128056d](https://github.com/nabla-studio/quirks/commit/128056dd3c691a3ae3edc85060ed97c48cb255db))
+* **core:** :sparkles: add light/dark logos ([64accb5](https://github.com/nabla-studio/quirks/commit/64accb552b8853805ebefc843a4a0ae15b153d0c))
+* **core:** :sparkles: add msg to assert ([f6853bc](https://github.com/nabla-studio/quirks/commit/f6853bc93962f51c9b4e9e117d420d299c1556a2))
+* **core:** :sparkles: add required chainids for disable ([ded8d53](https://github.com/nabla-studio/quirks/commit/ded8d53cafd9f2d6a121c3d1c8377973386684e0))
+* **core:** :sparkles: add wallet event emitter ([fdd730a](https://github.com/nabla-studio/quirks/commit/fdd730aab6a7e4967f15200c641dd9355c403ee4))
+* **core:** :sparkles: add wallet generic client ([98aedbe](https://github.com/nabla-studio/quirks/commit/98aedbec84cd516fe48f6bc4b523562532bfe5fd))
+* **core:** :sparkles: add WalletOptions ([ba38b0e](https://github.com/nabla-studio/quirks/commit/ba38b0ee6bae24cba2471f54af587da07d915f78))
+
 ## [0.1.1](https://github.com/nabla-studio/quirks/compare/core@0.1.0...core@0.1.1) (2023-10-30)
 
 ## 0.1.0 (2023-10-30)
