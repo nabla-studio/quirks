@@ -6,12 +6,17 @@ export const WalletConnectionTypes = {
 export type WalletConnectionType =
   (typeof WalletConnectionTypes)[keyof typeof WalletConnectionTypes];
 
-export type WalletLogo =
+export type Logo =
   | {
       png?: string;
       svg?: string;
     }
   | { [key: string]: string };
+
+export interface WalletLogo {
+  dark?: Logo;
+  light?: Logo;
+}
 
 export interface DownloadInfo {
   browser?: string;
