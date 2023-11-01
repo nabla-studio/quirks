@@ -18,6 +18,9 @@ import type {
 export abstract class Wallet<T = unknown> {
   options: WalletOptions;
   client?: T;
+  /**
+   * if true, the wallet was found in the window and can be used
+   */
   injected?: boolean;
   injectionError?: Error;
 
