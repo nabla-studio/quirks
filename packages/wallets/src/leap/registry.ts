@@ -11,7 +11,13 @@ export const leapExtensionOptions: WalletOptions = {
     },
   ],
   logoUrls: {
-    svg: 'https://assets.leapwallet.io/logos/leap-cosmos-logo.svg',
-    png: 'https://assets.leapwallet.io/logos/leap-cosmos-logo.png',
+    light: {
+      svg: 'https://assets.leapwallet.io/logos/leap-cosmos-logo.svg',
+      png: 'https://assets.leapwallet.io/logos/leap-cosmos-logo.png',
+    },
+    dark: {
+      svg: 'https://assets.leapwallet.io/logos/leap-cosmos-logo.svg',
+      png: 'https://assets.leapwallet.io/logos/leap-cosmos-logo.png',
+    },
   },
 };
