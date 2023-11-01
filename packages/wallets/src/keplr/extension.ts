@@ -30,7 +30,7 @@ export class KeplrWalletExtension extends ExtensionWallet<Keplr> {
     return this.client.enable(chainIds);
   }
 
-  override disable(chainIds?: string[] | undefined): Promise<void> {
+  override disable(chainIds: string[]): Promise<void> {
     assertIsDefined(this.client);
 
     return this.client.disable(chainIds);
