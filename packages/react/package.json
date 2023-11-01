@@ -20,11 +20,6 @@
     "react": "18.2.0"
   },
   "main": "./index.js",
-  "types": "./index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
-    }
-  }
+  "module": "./index.mjs",
+  "typings": "./index.d.ts"
 }
