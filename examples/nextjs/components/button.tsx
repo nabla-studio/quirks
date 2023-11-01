@@ -1,23 +1,29 @@
 'use client';
 
-import { useConnect } from '@quirks/react';
+import { useConfig, useConnect } from '@quirks/react';
 
 export const Button = () => {
-  const { connect, disconnect, disconnected } = useConnect();
+  const { wallets } = useConfig();
+  const { connect, disconnect, connected } = useConnect();
 
-  return (
-    <>
-      <button
-        onClick={() => {
-          if (disconnected) {
-            connect('leap-extension');
-          } else {
-            disconnect();
-          }
+  if (connected) {
+    return <button onClick={disconnect}>Disconnect</button>;
+  }
+
+  return wallets.map((wallet) => (
+    <button
+      key={wallet.options.name}
+      onClick={() => {
+        connect(wallet.options.name);
+      }}
+    >
+      <img
+        src={wallet.options.logoUrls?.light?.svg}
+        alt={wallet.options.prettyName}
+        style={{
+          maxWidth: 128,
         }}
-      >
-        {disconnected ? 'Connect' : 'Disconnect'}
-      </button>
-    </>
-  );
+      />
+    </button>
+  ));
 };
