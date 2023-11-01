@@ -84,9 +84,7 @@ export const createConfig = (config: Config) => {
           .getState()
           .wallets.find((el) => el.options.name === walletName);
 
-        store.setState({
-          wallet,
-        });
+        store.getState().setWallet(wallet);
       }
     },
     {
