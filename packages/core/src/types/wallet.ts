@@ -13,6 +13,13 @@ export type WalletLogo =
     }
   | { [key: string]: string };
 
+export interface DownloadInfo {
+  browser?: string;
+  device?: string;
+  icon?: string;
+  link: string;
+}
+
 export interface WalletOptions {
   /**
    * Unique name ID
@@ -32,6 +39,7 @@ export interface WalletOptions {
    */
   logoUrls?: WalletLogo;
   description?: string;
+  downloads?: DownloadInfo[];
 }
 
 export interface SignOptions {
