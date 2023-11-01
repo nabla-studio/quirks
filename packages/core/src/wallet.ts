@@ -32,6 +32,12 @@ export abstract class Wallet<T = unknown> {
     this.options = options;
   }
 
+  removeListeners() {
+    this.events.removeAllListeners();
+  }
+
+  abstract addListeners(): void;
+
   abstract init(): Promise<T | undefined>;
 
   abstract getAccount(chainId: string): Promise<Key>;
