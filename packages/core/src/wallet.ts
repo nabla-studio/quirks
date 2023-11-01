@@ -13,6 +13,7 @@ import type {
   SuggestChain,
   SuggestToken,
   WalletOptions,
+  Key,
 } from './types';
 
 export abstract class Wallet<T = unknown> {
@@ -29,6 +30,10 @@ export abstract class Wallet<T = unknown> {
   }
 
   abstract init(): Promise<T | undefined>;
+
+  abstract getAccount(chainId: string): Promise<Key>;
+
+  abstract getAccounts(chainIds: string[]): Promise<Key[]>;
 
   /**
    * This method will ask the user whether to allow access if they haven't visited this website.
