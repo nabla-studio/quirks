@@ -8,6 +8,7 @@ import type {
   DirectSignResponse,
 } from '@cosmjs/proto-signing';
 import type {
+  Key,
   SignOptions,
   SuggestChain,
   SuggestToken,
@@ -34,6 +35,28 @@ export class KeplrWalletExtension extends ExtensionWallet<Keplr> {
     assertIsDefined(this.client);
 
     return this.client.disable(chainIds);
+  }
+
+  override async getAccount(chainId: string) {
+    assertIsDefined(this.client);
+
+    return await this.client.getKey(chainId);
+  }
+
+  override async getAccounts(chainIds: string[]) {
+    assertIsDefined(this.client);
+
+    const keys = await this.client.getKeysSettled(chainIds);
+
+    return keys
+      .map((key) => {
+        if (key.status === 'fulfilled') {
+          return key.value;
+        }
+
+        return undefined;
+      })
+      .filter((key) => key !== undefined) as Key[];
   }
 
   override async getOfflineSigner(
