@@ -19,7 +19,8 @@
   "peerDependencies": {
     "@cosmjs/proto-signing": "^0.31.3",
     "cosmjs-types": "^0.9.0",
-    "@cosmjs/amino": "^0.31.3"
+    "@cosmjs/amino": "^0.31.3",
+    "eventemitter3": "^5.0.1"
   },
   "main": "./index.js",
   "module": "./index.mjs",

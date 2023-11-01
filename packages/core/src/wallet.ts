@@ -14,7 +14,9 @@ import type {
   SuggestToken,
   WalletOptions,
   Key,
+  WalletEventTypes,
 } from './types';
+import EventEmitter from 'eventemitter3';
 
 export abstract class Wallet<T = unknown> {
   options: WalletOptions;
@@ -24,6 +26,7 @@ export abstract class Wallet<T = unknown> {
    */
   injected?: boolean;
   injectionError?: Error;
+  events = new EventEmitter<WalletEventTypes>();
 
   constructor(options: WalletOptions) {
     this.options = options;

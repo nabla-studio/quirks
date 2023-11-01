@@ -9,12 +9,32 @@ export abstract class ExtensionWallet<T> extends Wallet<T> {
     this.init();
   }
 
+  removeListeners() {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener(this.options.events.keystorechange, () =>
+        this.events.emit('keystorechange'),
+      );
+    }
+  }
+
+  addListeners() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener(this.options.events.keystorechange, () => {
+        this.events.emit('keystorechange');
+      });
+    }
+  }
+
   override async init(): Promise<T | undefined> {
     assertIsDefined(this.options.windowKey);
 
     try {
       this.client = await getClientFromExtension(this.options.windowKey);
       this.injected = true;
+
+      if (this.client) {
+        this.addListeners();
+      }
 
       return this.client;
     } catch (err) {

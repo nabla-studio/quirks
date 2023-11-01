@@ -25,6 +25,10 @@ export interface DownloadInfo {
   link: string;
 }
 
+export interface WalletEvents {
+  keystorechange: string;
+}
+
 export interface WalletOptions {
   /**
    * Unique name ID
@@ -45,6 +49,7 @@ export interface WalletOptions {
   logoUrls?: WalletLogo;
   description?: string;
   downloads?: DownloadInfo[];
+  events: WalletEvents;
 }
 
 export interface SignOptions {
@@ -52,4 +57,8 @@ export interface SignOptions {
   readonly preferNoSetMemo?: boolean;
 
   readonly disableBalanceCheck?: boolean;
+}
+
+export interface WalletEventTypes {
+  keystorechange: () => void;
 }
