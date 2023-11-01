@@ -1,10 +1,10 @@
 'use client';
 
-import { useConnect, useQuirks } from '@quirks/react';
+import { useChains, useConnect } from '@quirks/react';
 
 export const Test = () => {
   const { status, connected } = useConnect();
-  const store = useQuirks();
+  const { accounts } = useChains();
 
   return (
     <div>
@@ -12,7 +12,7 @@ export const Test = () => {
       {connected ? (
         <div>
           Addresses:
-          {store.getState().accounts.map((account) => (
+          {accounts.map((account) => (
             <div key={account.chainId}>
               <div>Chain ID: {account.chainId}</div>
 
