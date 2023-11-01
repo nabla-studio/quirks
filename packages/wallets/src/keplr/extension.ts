@@ -7,7 +7,12 @@ import type {
   OfflineDirectSigner,
   DirectSignResponse,
 } from '@cosmjs/proto-signing';
-import type { SignOptions, SuggestChain, SuggestToken } from '@quirks/core';
+import type {
+  SignOptions,
+  SuggestChain,
+  SuggestToken,
+  WalletOptions,
+} from '@quirks/core';
 import { ExtensionWallet, assertIsDefined } from '@quirks/core';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { Keplr } from '@keplr-wallet/types';
@@ -15,13 +20,8 @@ import Long from 'long';
 import { chainRegistryChainToKeplr } from './utils';
 
 export class KeplrWalletExtension extends ExtensionWallet<Keplr> {
-  constructor() {
-    super({
-      name: 'keplr-ext',
-      prettyName: 'Keplr',
-      connectionType: 'extension',
-      windowKey: 'keplr',
-    });
+  constructor(options: WalletOptions) {
+    super(options);
   }
 
   override enable(chainIds: string[]): Promise<void> {
