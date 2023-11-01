@@ -28,4 +28,7 @@ export const keplrExtensionOptions: WalletOptions = {
       svg: 'https://assets-global.website-files.com/63eb7ddf41cf5b1c8fdfbc74/63fc1c71f8657194dc1f6f00_Keplr_logo_ver.1.3_2%20Dark.svg',
     },
   },
+  events: {
+    keystorechange: 'keplr_keystorechange',
+  },
 };
