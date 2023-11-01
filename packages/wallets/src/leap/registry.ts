@@ -20,4 +20,7 @@ export const leapExtensionOptions: WalletOptions = {
       png: 'https://assets.leapwallet.io/logos/leap-cosmos-logo.png',
     },
   },
+  events: {
+    keystorechange: 'leap_keystorechange',
+  },
 };
