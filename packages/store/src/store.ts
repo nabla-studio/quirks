@@ -39,13 +39,19 @@ const excludedKeys: (keyof AppState)[] = [
 export const defaultPersistOptions: PersistOptions<AppState> = {
   version: 1,
   name: 'quirks',
-  storage: createJSONStorage(() => createSSRStorage('localStorage')),
+  storage: createJSONStorage(() => window.localStorage),
   partialize: (state) =>
     Object.fromEntries(
       Object.entries(state).filter(
         ([key]) => !excludedKeys.includes(key as keyof AppState),
       ),
     ) as AppState,
+};
+
+export const ssrPersistOptions: PersistOptions<AppState> = {
+  ...defaultPersistOptions,
+  storage: createJSONStorage(() => createSSRStorage('localStorage')),
+  skipHydration: true,
 };
 
 export const createConfig = (config: Config) => {
