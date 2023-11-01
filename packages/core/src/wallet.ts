@@ -42,7 +42,7 @@ export abstract class Wallet<T = unknown> {
    *
    * @param chainIds array of chain ids defined inside the chain registry
    */
-  abstract disable(chainIds?: string[]): Promise<void>;
+  abstract disable(chainIds: string[]): Promise<void>;
 
   abstract getOfflineSigner(
     chainId: string,
