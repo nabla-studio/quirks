@@ -6,9 +6,14 @@ export const createAccountSlice: StateCreator<
   [],
   [],
   AccountState
-> = (set) => ({
+> = (_, get) => ({
   accountName: undefined,
-  address: undefined,
-  chainId: undefined,
-  getAccount: (chainId) => set({ chainId }),
+  accounts: [],
+  getAddress: (chainId) =>
+    get().accounts.find((account) => account.chainId === chainId)
+      ?.bech32Address,
+  getAddresses: (chainIds) =>
+    get()
+      .accounts.filter((account) => chainIds.includes(account.chainId))
+      .map((account) => account.bech32Address),
 });
