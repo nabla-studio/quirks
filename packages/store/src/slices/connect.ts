@@ -17,9 +17,9 @@ export const createConnectSlice: StateCreator<
   wallet: undefined,
   status: 'DISCONNECTED',
   setWallet: async (wallet) => {
-    if (wallet) {
-      set(() => ({ wallet, walletName: wallet.options.name }));
+    set(() => ({ wallet }));
 
+    if (wallet) {
       try {
         const accounts: AddressWithChain[] = [];
         let accountName = '';
@@ -45,8 +45,6 @@ export const createConnectSlice: StateCreator<
       } catch (error) {
         console.error(error);
       }
-    } else {
-      set(() => ({ wallet: undefined, walletName: undefined }));
     }
   },
   connect: async (walletName) => {
@@ -57,17 +55,18 @@ export const createConnectSlice: StateCreator<
         throw createInvalidWalletName(walletName);
       }
 
-      get().setWallet(wallet);
-
-      set(() => ({ status: ConnectionStates.WAITING }));
+      set(() => ({ walletName, status: ConnectionStates.WAITING }));
 
       await wallet.enable(get().chains.map((el) => el.chain_id));
 
       set(() => ({ status: ConnectionStates.CONNECTED }));
+
+      get().setWallet(wallet);
     } catch (error) {
       console.error(error);
-      get().setWallet(undefined);
+
       set(() => ({
+        walletName: undefined,
         status: ConnectionStates.REJECTED,
       }));
     }
@@ -80,8 +79,9 @@ export const createConnectSlice: StateCreator<
 
     get().wallet?.disable(get().chains.map((el) => el.chain_id));
 
-    get().setWallet(undefined);
-
-    set(() => ({ status: ConnectionStates.DISCONNECTED }));
+    set(() => ({
+      walletName: undefined,
+      status: ConnectionStates.DISCONNECTED,
+    }));
   },
 });

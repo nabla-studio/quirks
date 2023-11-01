@@ -53,6 +53,7 @@ export const createConfig = (config: Config) => {
     wallets,
     chains,
     assetsLists,
+    autoConnect = true,
     persistOptions = defaultPersistOptions,
   } = config;
 
@@ -76,21 +77,11 @@ export const createConfig = (config: Config) => {
    * We should inject wallet when walletName, is necessary because 'Wallet' is a class,
    * when it is serialized it loses methods, so we could not call wallet functionality.
    */
-  store.subscribe(
-    (state) => state.walletName,
-    (walletName) => {
-      if (walletName) {
-        const wallet = store
-          .getState()
-          .wallets.find((el) => el.options.name === walletName);
-
-        store.getState().setWallet(wallet);
-      }
-    },
-    {
-      fireImmediately: true,
-    },
-  );
+  store.persist.onFinishHydration((state) => {
+    if (state.walletName && !state.wallet && autoConnect) {
+      store.getState().connect(state.walletName);
+    }
+  });
 
   return store;
 };
