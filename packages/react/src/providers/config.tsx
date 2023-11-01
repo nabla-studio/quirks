@@ -42,7 +42,7 @@ export const useQuirks = () => {
 
   if (!store) {
     throw new Error(
-      ['`useConfig` must be used within `QuirksConfig`.'].join('\n'),
+      ['`useQuirks` must be used within `QuirksConfig`.'].join('\n'),
     );
   }
 
