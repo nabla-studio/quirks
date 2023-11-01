@@ -24,7 +24,7 @@ export const createConnectSlice: StateCreator<
     if (wallet) {
       get().wallet?.removeListeners();
       get().wallet?.events.on('keystorechange', () => {
-        /* get().getWalletData(); */
+        get().getWalletData();
       });
 
       get().getWalletData();
