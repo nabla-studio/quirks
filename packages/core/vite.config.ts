@@ -34,7 +34,12 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['cosmjs-types', '@cosmjs/proto-signing', '@cosmjs/amino'],
+      external: [
+        'cosmjs-types',
+        '@cosmjs/proto-signing',
+        '@cosmjs/amino',
+        'eventemitter3',
+      ],
     },
   },
 

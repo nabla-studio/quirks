@@ -40,6 +40,7 @@ export default defineConfig({
         '@cosmjs/proto-signing',
         '@cosmjs/amino',
         'semver',
+        'long',
       ],
     },
   },

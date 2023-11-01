@@ -13,14 +13,36 @@ import type {
   SuggestChain,
   SuggestToken,
   WalletOptions,
+  Key,
+  WalletEventTypes,
 } from './types';
+import EventEmitter from 'eventemitter3';
 
-export abstract class Wallet {
+export abstract class Wallet<T = unknown> {
   options: WalletOptions;
+  client?: T;
+  /**
+   * if true, the wallet was found in the window and can be used
+   */
+  injected?: boolean;
+  injectionError?: Error;
+  events = new EventEmitter<WalletEventTypes>();
 
   constructor(options: WalletOptions) {
     this.options = options;
   }
+
+  removeListeners() {
+    this.events.removeAllListeners();
+  }
+
+  abstract addListeners(): void;
+
+  abstract init(): Promise<T | undefined>;
+
+  abstract getAccount(chainId: string): Promise<Key>;
+
+  abstract getAccounts(chainIds: string[]): Promise<Key[]>;
 
   /**
    * This method will ask the user whether to allow access if they haven't visited this website.
@@ -37,7 +59,7 @@ export abstract class Wallet {
    *
    * @param chainIds array of chain ids defined inside the chain registry
    */
-  abstract disable(chainIds?: string[]): Promise<void>;
+  abstract disable(chainIds: string[]): Promise<void>;
 
   abstract getOfflineSigner(
     chainId: string,
