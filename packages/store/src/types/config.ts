@@ -5,6 +5,7 @@ export interface ConfigState {
   wallets: Wallet[];
   chains: Chain[];
   assetsLists: AssetLists[];
+  getChain: (chainName: string) => Chain | undefined;
   setChains: (chains: Chain[]) => void;
   setAssetsLists: (assetsLists: AssetLists[]) => void;
   setWallets: (wallets: Wallet[]) => void;
