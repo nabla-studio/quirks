@@ -2,22 +2,27 @@ import { assertIsDefined, createInvalidWalletName } from '@quirks/core';
 import {
   ConnectionStates,
   type AppState,
-  type ConnectState,
+  type ConnectSlice,
   AddressWithChain,
   ReconnectionStates,
+  type ConnectState,
 } from '../types';
 import type { StateCreator } from 'zustand/vanilla';
+
+export const connectInitialState: ConnectState = {
+  walletName: undefined,
+  wallet: undefined,
+  status: ConnectionStates.DISCONNECTED,
+  reconnectionStatus: ReconnectionStates.IDLE,
+};
 
 export const createConnectSlice: StateCreator<
   AppState,
   [],
   [],
-  ConnectState
+  ConnectSlice
 > = (set, get) => ({
-  walletName: undefined,
-  wallet: undefined,
-  status: ConnectionStates.DISCONNECTED,
-  reconnectionStatus: ReconnectionStates.IDLE,
+  ...connectInitialState,
   setWallet: async (wallet) => {
     set(() => ({ wallet }));
 
@@ -118,9 +123,6 @@ export const createConnectSlice: StateCreator<
 
     get().wallet?.removeListeners();
 
-    set(() => ({
-      walletName: undefined,
-      status: ConnectionStates.DISCONNECTED,
-    }));
+    get().reset();
   },
 });

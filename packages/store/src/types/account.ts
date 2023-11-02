@@ -8,6 +8,11 @@ export interface AddressWithChain extends Key {
 export interface AccountState {
   accountName?: string;
   accounts: AddressWithChain[];
+}
+
+export interface AccountActions {
   getAddress: (chainId: string) => string | undefined;
   getAddresses: (chainIds: string[]) => string[];
 }
+
+export type AccountSlice = AccountState & AccountActions;

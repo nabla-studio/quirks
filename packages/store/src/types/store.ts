@@ -1,5 +1,9 @@
-import { AccountState } from './account';
-import { ConfigState } from './config';
-import { ConnectState } from './connect';
+import { AccountSlice } from './account';
+import { ConfigSlice } from './config';
+import { ConnectSlice } from './connect';
 
-export type AppState = ConfigState & ConnectState & AccountState;
+export interface AppActions {
+  reset: () => void;
+}
+
+export type AppState = ConfigSlice & ConnectSlice & AccountSlice & AppActions;

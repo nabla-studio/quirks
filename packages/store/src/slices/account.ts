@@ -1,14 +1,18 @@
-import type { AppState, AccountState } from '../types';
+import type { AppState, AccountSlice, AccountState } from '../types';
 import type { StateCreator } from 'zustand/vanilla';
+
+export const accountInitialState: AccountState = {
+  accountName: undefined,
+  accounts: [],
+};
 
 export const createAccountSlice: StateCreator<
   AppState,
   [],
   [],
-  AccountState
+  AccountSlice
 > = (_, get) => ({
-  accountName: undefined,
-  accounts: [],
+  ...accountInitialState,
   getAddress: (chainId) =>
     get().accounts.find((account) => account.chainId === chainId)
       ?.bech32Address,

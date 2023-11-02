@@ -5,8 +5,11 @@ import {
   persist,
 } from 'zustand/middleware';
 import {
+  configInitialState,
   createConfigSlice,
+  connectInitialState,
   createConnectSlice,
+  accountInitialState,
   createAccountSlice,
 } from './slices';
 import { createSSRStorage } from './utils';
@@ -73,6 +76,16 @@ export const createConfig = (config: Config) => {
           assetsLists,
           ...createConnectSlice(...props),
           ...createAccountSlice(...props),
+          reset: () => {
+            props[0]({
+              ...configInitialState,
+              ...connectInitialState,
+              ...accountInitialState,
+              wallets,
+              chains,
+              assetsLists,
+            });
+          },
         }),
         persistOptions,
       ),
