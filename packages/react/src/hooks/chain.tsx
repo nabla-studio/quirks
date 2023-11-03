@@ -14,15 +14,15 @@ export const useChains = () => {
 };
 
 export const useChain = (chainName: string) => {
-  const { getChain, getAddress, accountName } = useChains();
+  const store = useQuirks();
 
-  const chain = getChain(chainName);
+  const chain = store.use.getChain()(chainName);
 
   assertIsDefined(chain, `there is no chain named "${chainName}"`);
 
   return {
     chain,
-    address: getAddress(chain.chain_id),
-    accountName,
+    address: store.use.getAddress()(chain.chain_id),
+    accountName: store.use.accountName ? store.use.accountName() : undefined,
   };
 };
