@@ -14,7 +14,8 @@
   "version": "0.2.0",
   "sideEffects": false,
   "dependencies": {
-    "@quirks/store": "*"
+    "@quirks/store": "*",
+    "@quirks/core": "*"
   },
   "peerDependencies": {
     "react": "18.2.0"
