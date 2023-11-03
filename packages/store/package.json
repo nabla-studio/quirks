@@ -18,7 +18,10 @@
     "@quirks/core": "*"
   },
   "peerDependencies": {
-    "zustand": "^4.4.4"
+    "zustand": "^4.4.4",
+    "@cosmjs/amino": "^0.31.3",
+    "@cosmjs/proto-signing": "^0.31.3",
+    "cosmjs-types": "^0.9.0"
   },
   "main": "./index.js",
   "module": "./index.mjs",
