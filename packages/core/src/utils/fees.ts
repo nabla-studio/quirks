@@ -1,14 +1,10 @@
 import type { EncodeObject } from '@cosmjs/proto-signing';
-import {
-  calculateFee,
-  type GasPrice,
-  SigningStargateClient,
-} from '@cosmjs/stargate';
-import { SigningCosmWasmClient } from '@cosmjs/cosmwasm-stargate';
-import { assertIsDefined } from '../utils';
+import { calculateFee, type GasPrice } from '@cosmjs/stargate';
+import { assertIsDefined } from './asserts';
+import type { SigningSimulatorClient } from '../types';
 
 export const estimateFee = async (
-  client: SigningStargateClient | SigningCosmWasmClient,
+  client: SigningSimulatorClient,
   sender: string,
   messages: EncodeObject[],
   gasPrice?: string | GasPrice,

@@ -39,7 +39,6 @@ export default defineConfig({
         '@cosmjs/proto-signing',
         '@cosmjs/amino',
         '@cosmjs/stargate',
-        '@cosmjs/cosmwasm-stargate',
         'eventemitter3',
       ],
     },
