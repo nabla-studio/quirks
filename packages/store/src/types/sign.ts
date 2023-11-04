@@ -9,9 +9,11 @@ import type {
 } from '@cosmjs/proto-signing';
 import type { SignOptions } from '@quirks/core';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
+import type { SignerOptions } from './options';
 
 export interface SignState {
   signOptions: SignOptions;
+  signerOptions?: SignerOptions;
 }
 
 export interface SignActions {

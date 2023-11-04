@@ -8,6 +8,7 @@ export const signInitialState: SignState = {
     preferNoSetMemo: true,
     disableBalanceCheck: true,
   },
+  signerOptions: undefined,
 };
 
 export const createSignSlice: StateCreator<AppState, [], [], SignSlice> = (

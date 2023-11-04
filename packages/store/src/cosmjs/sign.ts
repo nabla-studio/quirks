@@ -1,9 +1,20 @@
 import type { StdFee } from '@cosmjs/amino';
 import type { EncodeObject } from '@cosmjs/proto-signing';
 import { store } from '../store';
-import { assertIsDefined, estimateFee, getEndpoint } from '@quirks/core';
-import { SigningStargateClient } from '@cosmjs/stargate';
-import { SigningCosmWasmClient } from '@cosmjs/cosmwasm-stargate';
+import {
+  assertIsDefined,
+  estimateFee,
+  getEndpoint,
+  getGasPrice,
+} from '@quirks/core';
+import {
+  SigningStargateClient,
+  SigningStargateClientOptions,
+} from '@cosmjs/stargate';
+import {
+  SigningCosmWasmClient,
+  SigningCosmWasmClientOptions,
+} from '@cosmjs/cosmwasm-stargate';
 import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 
 /**
@@ -58,14 +69,26 @@ export const sign = async (
     store.getState().signOptions,
   );
 
+  let clientOptions: SigningStargateClientOptions | undefined = undefined;
+
+  const signingStargate = store.getState().signerOptions?.signingStargate;
+
+  if (signingStargate) {
+    clientOptions = signingStargate(chain);
+  }
+
   const client = await SigningStargateClient.connectWithSigner(
     endpoint.rpc.address,
     offlineSigner,
+    clientOptions,
   );
 
   if (fee === 'auto') {
-    // TODO: Add dynamic gasPrice
-    fee = await estimateFee(client, sender, messages, '1uosmo', memo);
+    const gasPrice = clientOptions?.gasPrice
+      ? clientOptions.gasPrice
+      : getGasPrice(chain);
+
+    fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
 
   return client.sign(sender, messages, fee, memo ?? '');
@@ -103,14 +126,26 @@ export const signCW = async (
     store.getState().signOptions,
   );
 
+  let clientOptions: SigningCosmWasmClientOptions | undefined = undefined;
+
+  const signingCosmwasm = store.getState().signerOptions?.signingCosmwasm;
+
+  if (signingCosmwasm) {
+    clientOptions = signingCosmwasm(chain);
+  }
+
   const client = await SigningCosmWasmClient.connectWithSigner(
     endpoint.rpc.address,
     offlineSigner,
+    clientOptions,
   );
 
   if (fee === 'auto') {
-    // TODO: Add dynamic gasPrice
-    fee = await estimateFee(client, sender, messages, '1uosmo', memo);
+    const gasPrice = clientOptions?.gasPrice
+      ? clientOptions.gasPrice
+      : getGasPrice(chain);
+
+    fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
 
   return client.sign(sender, messages, fee, memo ?? '');

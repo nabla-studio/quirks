@@ -16,37 +16,7 @@ import {
 } from './slices';
 import { createSSRStorage, noopStorage } from './utils';
 import { createStore } from 'zustand/vanilla';
-import type { SignOptions, Wallet } from '@quirks/core';
-import type { AssetLists, Chain } from '@nabla-studio/chain-registry';
-import type { AppState } from './types';
-
-export interface Config {
-  wallets: Wallet[];
-  chains: Chain[];
-  assetsLists: AssetLists[];
-  /**
-   * State manager persister
-   */
-  persistOptions?: PersistOptions<AppState>;
-  /**
-   * Reinit connection on mount
-   *
-   * @default true
-   */
-  autoConnect?: boolean;
-  /**
-   * Specify custom sign option
-   *
-   * @default
-   *
-   * {
-   *  preferNoSetFee: false,
-   *  preferNoSetMemo: true,
-   *  disableBalanceCheck: true,
-   * }
-   */
-  signOptions?: SignOptions;
-}
+import type { AppState, Config } from './types';
 
 const excludedKeys: (keyof AppState)[] = [
   'wallet',
@@ -107,6 +77,7 @@ export const createConfig = (config: Config) => {
     autoConnect = true,
     persistOptions = defaultPersistOptions,
     signOptions,
+    signerOptions,
   } = config;
 
   const signOverrideOptions = signOptions
@@ -116,6 +87,7 @@ export const createConfig = (config: Config) => {
   const signOverrideInitialState = {
     ...signInitialState,
     signOptions: signOverrideOptions,
+    signerOptions,
   };
 
   store = createStore(
@@ -129,7 +101,7 @@ export const createConfig = (config: Config) => {
           ...createConnectSlice(...props),
           ...createAccountSlice(...props),
           ...createSignSlice(...props),
-          signOverrideOptions,
+          ...signOverrideInitialState,
           reset: () => {
             props[0]({
               ...configInitialState,
