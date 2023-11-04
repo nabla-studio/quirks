@@ -13,16 +13,19 @@ dependencies:
     version: 0.31.3
   '@cosmjs/cosmwasm-stargate':
     specifier: ^0.31.3
-    version: 0.31.3
+    version: 0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3)
   '@cosmjs/proto-signing':
     specifier: ^0.31.3
     version: 0.31.3
   '@cosmjs/stargate':
     specifier: ^0.31.3
-    version: 0.31.3
+    version: 0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3)
   '@keplr-wallet/cosmos':
     specifier: ^0.12.38
     version: 0.12.38
+  bufferutil:
+    specifier: ^4.0.8
+    version: 4.0.8
   cosmjs-types:
     specifier: ^0.9.0
     version: 0.9.0
@@ -44,6 +47,9 @@ dependencies:
   semver:
     specifier: ^7.5.4
     version: 7.5.4
+  utf-8-validate:
+    specifier: ^6.0.3
+    version: 6.0.3
   zustand:
     specifier: ^4.4.4
     version: 4.4.4(@types/react@18.2.31)(react@18.2.0)
@@ -171,10 +177,10 @@ devDependencies:
     version: 29.7.0(@types/node@20.8.8)(ts-node@10.9.1)
   jest-environment-jsdom:
     specifier: ^29.7.0
-    version: 29.7.0
+    version: 29.7.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
   jsdom:
     specifier: ^22.1.0
-    version: 22.1.0
+    version: 22.1.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
   json-schema-to-typescript:
     specifier: ^13.1.1
     version: 13.1.1
@@ -1744,7 +1750,7 @@ packages:
       '@cosmjs/utils': 0.31.3
     dev: false
 
-  /@cosmjs/cosmwasm-stargate@0.31.3:
+  /@cosmjs/cosmwasm-stargate@0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-Uv9TmCn3650gdFeZm7SEfUZF3uX3lfJfFhXOk6I2ZLr/FrKximnlb+vwAfZaZnWYvlA7qrKtHIjeRNHvT23zcw==}
     dependencies:
       '@cosmjs/amino': 0.31.3
@@ -1752,8 +1758,8 @@ packages:
       '@cosmjs/encoding': 0.31.3
       '@cosmjs/math': 0.31.3
       '@cosmjs/proto-signing': 0.31.3
-      '@cosmjs/stargate': 0.31.3
-      '@cosmjs/tendermint-rpc': 0.31.3
+      '@cosmjs/stargate': 0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+      '@cosmjs/tendermint-rpc': 0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@cosmjs/utils': 0.31.3
       cosmjs-types: 0.8.0
       long: 4.0.0
@@ -1809,19 +1815,19 @@ packages:
       long: 4.0.0
     dev: false
 
-  /@cosmjs/socket@0.31.3:
+  /@cosmjs/socket@0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-aqrDGGi7os/hsz5p++avI4L0ZushJ+ItnzbqA7C6hamFSCJwgOkXaOUs+K9hXZdX4rhY7rXO4PH9IH8q09JkTw==}
     dependencies:
       '@cosmjs/stream': 0.31.3
       isomorphic-ws: 4.0.1(ws@7.5.9)
-      ws: 7.5.9
+      ws: 7.5.9(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       xstream: 11.14.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
     dev: false
 
-  /@cosmjs/stargate@0.31.3:
+  /@cosmjs/stargate@0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-53NxnzmB9FfXpG4KjOUAYAvWLYKdEmZKsutcat/u2BrDXNZ7BN8jim/ENcpwXfs9/Og0K24lEIdvA4gsq3JDQw==}
     dependencies:
       '@confio/ics23': 0.6.8
@@ -1830,7 +1836,7 @@ packages:
       '@cosmjs/math': 0.31.3
       '@cosmjs/proto-signing': 0.31.3
       '@cosmjs/stream': 0.31.3
-      '@cosmjs/tendermint-rpc': 0.31.3
+      '@cosmjs/tendermint-rpc': 0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@cosmjs/utils': 0.31.3
       cosmjs-types: 0.8.0
       long: 4.0.0
@@ -1848,14 +1854,14 @@ packages:
       xstream: 11.14.0
     dev: false
 
-  /@cosmjs/tendermint-rpc@0.31.3:
+  /@cosmjs/tendermint-rpc@0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-s3TiWkPCW4QceTQjpYqn4xttUJH36mTPqplMl+qyocdqk5+X5mergzExU/pHZRWQ4pbby8bnR7kMvG4OC1aZ8g==}
     dependencies:
       '@cosmjs/crypto': 0.31.3
       '@cosmjs/encoding': 0.31.3
       '@cosmjs/json-rpc': 0.31.3
       '@cosmjs/math': 0.31.3
-      '@cosmjs/socket': 0.31.3
+      '@cosmjs/socket': 0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@cosmjs/stream': 0.31.3
       '@cosmjs/utils': 0.31.3
       axios: 0.21.4
@@ -5482,6 +5488,13 @@ packages:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
+  /bufferutil@4.0.8:
+    resolution: {integrity: sha512-4T53u4PdgsXqKaIctwF8ifXlRTTmEPJ8iEPWFdGZvcf7sbwYo6FKFEX9eNNAnzFZ7EzJAQ3CJeOtCRA4rDp7Pw==}
+    engines: {node: '>=6.14.2'}
+    requiresBuild: true
+    dependencies:
+      node-gyp-build: 4.6.1
+
   /builtins@5.0.1:
     resolution: {integrity: sha512-qwVpFEHNfhYJIzNRBvd2C1kyo6jz3ZSMPyyuR47OPdiKWlbYnZNyDWuyR175qDnAJLiCo5fBBqPb3RiXgWlkOQ==}
     dependencies:
@@ -8391,7 +8404,7 @@ packages:
     peerDependencies:
       ws: '*'
     dependencies:
-      ws: 7.5.9
+      ws: 7.5.9(bufferutil@4.0.8)(utf-8-validate@6.0.3)
     dev: false
 
   /isstream@0.1.2:
@@ -8622,7 +8635,7 @@ packages:
       pretty-format: 29.7.0
     dev: true
 
-  /jest-environment-jsdom@29.7.0:
+  /jest-environment-jsdom@29.7.0(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-k9iQbsf9OyOfdzWH8HDmrRT0gSIcX+FLNW7IQq94tFX0gynPwqDTW0Ho6iMVNjGz/nb+l/vW3dWM2bbLLpkbXA==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
@@ -8638,7 +8651,7 @@ packages:
       '@types/node': 20.8.8
       jest-mock: 29.7.0
       jest-util: 29.7.0
-      jsdom: 20.0.3
+      jsdom: 20.0.3(bufferutil@4.0.8)(utf-8-validate@6.0.3)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -8960,7 +8973,7 @@ packages:
     resolution: {integrity: sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==}
     dev: true
 
-  /jsdom@20.0.3:
+  /jsdom@20.0.3(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-SYhBvTh89tTfCD/CRdSOm13mOBa42iTaTyfyEWBdKcGdPxPtLFBXuHR8XHb33YNYaP+lLbmSvBTsnoesCNJEsQ==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -8993,7 +9006,7 @@ packages:
       whatwg-encoding: 2.0.0
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
-      ws: 8.14.2
+      ws: 8.14.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -9001,7 +9014,7 @@ packages:
       - utf-8-validate
     dev: true
 
-  /jsdom@22.1.0:
+  /jsdom@22.1.0(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-/9AVW7xNbsBv6GfWho4TTNjEo9fe6Zhf9O7s0Fhhr3u+awPwAJMKwAMXnkk5vBxflqLW9hTHX/0cs+P3gW+cQw==}
     engines: {node: '>=16'}
     peerDependencies:
@@ -9031,7 +9044,7 @@ packages:
       whatwg-encoding: 2.0.0
       whatwg-mimetype: 3.0.0
       whatwg-url: 12.0.1
-      ws: 8.14.2
+      ws: 8.14.2(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -9889,7 +9902,6 @@ packages:
   /node-gyp-build@4.6.1:
     resolution: {integrity: sha512-24vnklJmyRS8ViBNI8KbtK/r/DmXQMRiOMXTNz2nrTnAYUwjmEEbnnpB/+kt+yWRv73bPsSPRFddrcIbAxSiMQ==}
     hasBin: true
-    dev: true
 
   /node-int64@0.4.0:
     resolution: {integrity: sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==}
@@ -12197,6 +12209,13 @@ packages:
       react: 18.2.0
     dev: false
 
+  /utf-8-validate@6.0.3:
+    resolution: {integrity: sha512-uIuGf9TWQ/y+0Lp+KGZCMuJWc3N9BHA+l/UmHd/oUHwJJDeysyTRxNQVkbzsIWfGFbRe3OcgML/i0mvVRPOyDA==}
+    engines: {node: '>=6.14.2'}
+    requiresBuild: true
+    dependencies:
+      node-gyp-build: 4.6.1
+
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -12477,7 +12496,7 @@ packages:
       cac: 6.7.14
       chai: 4.3.10
       debug: 4.3.4
-      jsdom: 22.1.0
+      jsdom: 22.1.0(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       local-pkg: 0.4.3
       magic-string: 0.30.5
       pathe: 1.1.1
@@ -12760,7 +12779,7 @@ packages:
       signal-exit: 3.0.7
     dev: true
 
-  /ws@7.5.9:
+  /ws@7.5.9(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-F+P9Jil7UiSKSkppIiD94dN07AwvFixvLIj1Og1Rl9GGMuNipJnV9JzjD6XuqmAeiswGvUmNLjr5cFuXwNS77Q==}
     engines: {node: '>=8.3.0'}
     peerDependencies:
@@ -12771,9 +12790,12 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+    dependencies:
+      bufferutil: 4.0.8
+      utf-8-validate: 6.0.3
     dev: false
 
-  /ws@8.14.2:
+  /ws@8.14.2(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-wEBG1ftX4jcglPxgFCMJmZ2PLtSbJ2Peg6TmpJFTbe9GZYOQCDPdMYu/Tm0/bGZkw8paZnJY45J4K2PZrLYq8g==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
@@ -12784,6 +12806,9 @@ packages:
         optional: true
       utf-8-validate:
         optional: true
+    dependencies:
+      bufferutil: 4.0.8
+      utf-8-validate: 6.0.3
     dev: true
 
   /xml-name-validator@4.0.0:
