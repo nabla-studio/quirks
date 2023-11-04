@@ -14,6 +14,18 @@ import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
  * for example if I want to create a promise that signs a message and then I want to give this promise to a library like tanstack-query
  */
 
+export const getAddress = (chainName: string) => {
+  const chain = store
+    .getState()
+    .chains.find((el) => el.chain_name === chainName);
+  assertIsDefined(chain);
+
+  const sender = store.getState().getAddress(chain.chain_id);
+  assertIsDefined(sender);
+
+  return sender;
+};
+
 /**
  * Sign a TX using CosmJS Stargate Client
  *
@@ -39,8 +51,7 @@ export const sign = async (
 
   const endpoint = getEndpoint(chainName, store.getState().chains);
 
-  const sender = store.getState().getAddress(chain.chain_id);
-  assertIsDefined(sender);
+  const sender = getAddress(chainName);
 
   const offlineSigner = await state.wallet.getOfflineSignerAuto(
     chain.chain_id,
@@ -85,8 +96,7 @@ export const signCW = async (
 
   const endpoint = getEndpoint(chainName, store.getState().chains);
 
-  const sender = store.getState().getAddress(chain.chain_id);
-  assertIsDefined(sender);
+  const sender = getAddress(chainName);
 
   const offlineSigner = await state.wallet.getOfflineSignerAuto(
     chain.chain_id,
