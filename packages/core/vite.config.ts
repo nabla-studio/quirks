@@ -40,6 +40,7 @@ export default defineConfig({
         '@cosmjs/amino',
         '@cosmjs/stargate',
         'eventemitter3',
+        '@nabla-studio/chain-registry',
       ],
     },
   },
