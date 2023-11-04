@@ -41,6 +41,8 @@ export default defineConfig({
         '@cosmjs/amino',
         'semver',
         'long',
+        '@quirks/core',
+        '@nabla-studio/chain-registry',
       ],
     },
   },
