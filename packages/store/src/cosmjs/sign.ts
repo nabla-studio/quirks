@@ -1,7 +1,7 @@
 import type { StdFee } from '@cosmjs/amino';
 import type { EncodeObject } from '@cosmjs/proto-signing';
 import { store } from '../store';
-import { assertIsDefined, estimateFee } from '@quirks/core';
+import { assertIsDefined, estimateFee, getEndpoint } from '@quirks/core';
 import { SigningStargateClient } from '@cosmjs/stargate';
 import { SigningCosmWasmClient } from '@cosmjs/cosmwasm-stargate';
 import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
@@ -37,6 +37,8 @@ export const sign = async (
     .chains.find((el) => el.chain_name === chainName);
   assertIsDefined(chain);
 
+  const endpoint = getEndpoint(chainName, store.getState().chains);
+
   const sender = store.getState().getAddress(chain.chain_id);
   assertIsDefined(sender);
 
@@ -46,14 +48,13 @@ export const sign = async (
   );
 
   const client = await SigningStargateClient.connectWithSigner(
-    // TODO: Add dynamic RPC
-    '',
+    endpoint.rpc.address,
     offlineSigner,
   );
 
   if (fee === 'auto') {
     // TODO: Add dynamic gasPrice
-    fee = await estimateFee(client, sender, messages, '', memo);
+    fee = await estimateFee(client, sender, messages, '1uosmo', memo);
   }
 
   return client.sign(sender, messages, fee, memo ?? '');
@@ -82,6 +83,8 @@ export const signCW = async (
     .chains.find((el) => el.chain_name === chainName);
   assertIsDefined(chain);
 
+  const endpoint = getEndpoint(chainName, store.getState().chains);
+
   const sender = store.getState().getAddress(chain.chain_id);
   assertIsDefined(sender);
 
@@ -91,14 +94,13 @@ export const signCW = async (
   );
 
   const client = await SigningCosmWasmClient.connectWithSigner(
-    // TODO: Add dynamic RPC
-    '',
+    endpoint.rpc.address,
     offlineSigner,
   );
 
   if (fee === 'auto') {
     // TODO: Add dynamic gasPrice
-    fee = await estimateFee(client, sender, messages, '', memo);
+    fee = await estimateFee(client, sender, messages, '1uosmo', memo);
   }
 
   return client.sign(sender, messages, fee, memo ?? '');
