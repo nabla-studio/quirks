@@ -2,6 +2,30 @@
 
 import { useChains, useConnect } from '@quirks/react';
 
+const send = async () => {
+  const cosmos = (await import('osmojs')).cosmos;
+  const sign = (await import('@quirks/store')).sign;
+  const getAddress = (await import('@quirks/store')).getAddress;
+  const { send } = cosmos.bank.v1beta1.MessageComposer.withTypeUrl;
+
+  const address = getAddress('osmosis');
+
+  const msg = send({
+    amount: [
+      {
+        denom: 'uosmo',
+        amount: '1',
+      },
+    ],
+    toAddress: address,
+    fromAddress: address,
+  });
+
+  console.log(msg);
+
+  await sign('osmosis', [msg]);
+};
+
 export const Test = () => {
   const { status, connected } = useConnect();
   const { accounts } = useChains();
@@ -12,6 +36,7 @@ export const Test = () => {
       {connected ? (
         <div>
           Addresses:
+          <button onClick={send}>SIGN</button>
           {accounts.map((account) => (
             <div key={account.chainId}>
               <div>Chain ID: {account.chainId}</div>
