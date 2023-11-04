@@ -18,7 +18,6 @@
   },
   "peerDependencies": {
     "@cosmjs/stargate": "^0.31.3",
-    "@cosmjs/cosmwasm-stargate": "^0.31.3",
     "@cosmjs/proto-signing": "^0.31.3",
     "cosmjs-types": "^0.9.0",
     "@cosmjs/amino": "^0.31.3",
