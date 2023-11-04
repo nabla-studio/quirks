@@ -9,7 +9,7 @@ export const estimateFee = async (
   messages: EncodeObject[],
   gasPrice?: string | GasPrice,
   memo?: string,
-  multiplier = 1.3,
+  multiplier = 1.4,
 ) => {
   assertIsDefined(
     gasPrice,
