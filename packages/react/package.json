@@ -18,7 +18,9 @@
     "@quirks/core": "*"
   },
   "peerDependencies": {
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "cosmjs-types": "^0.9.0",
+    "@cosmjs/amino": "^0.31.3"
   },
   "main": "./index.js",
   "module": "./index.mjs",
