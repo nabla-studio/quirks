@@ -14,7 +14,7 @@ import {
   signInitialState,
   createSignSlice,
 } from './slices';
-import { createSSRStorage } from './utils';
+import { createSSRStorage, noopStorage } from './utils';
 import { createStore } from 'zustand/vanilla';
 import type { SignOptions, Wallet } from '@quirks/core';
 import type { AssetLists, Chain } from '@nabla-studio/chain-registry';
@@ -73,6 +73,32 @@ export const ssrPersistOptions: PersistOptions<AppState> = {
   skipHydration: true,
 };
 
+const emptyPersistOptions: PersistOptions<AppState> = {
+  ...defaultPersistOptions,
+  storage: createJSONStorage(() => noopStorage),
+};
+
+export let store = createStore(
+  subscribeWithSelector(
+    persist(
+      (...props) => ({
+        ...createConfigSlice(...props),
+        ...createConnectSlice(...props),
+        ...createAccountSlice(...props),
+        ...createSignSlice(...props),
+        reset: () => {
+          props[0]({
+            ...configInitialState,
+            ...connectInitialState,
+            ...accountInitialState,
+          });
+        },
+      }),
+      emptyPersistOptions,
+    ),
+  ),
+);
+
 export const createConfig = (config: Config) => {
   const {
     wallets,
@@ -92,7 +118,7 @@ export const createConfig = (config: Config) => {
     signOptions: signOverrideOptions,
   };
 
-  const store = createStore(
+  store = createStore(
     subscribeWithSelector(
       persist(
         (...props) => ({
