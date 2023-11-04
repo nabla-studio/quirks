@@ -21,7 +21,7 @@ import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
  * @param messages
  * @param fee
  * @param memo
- * @returns TxRa
+ * @returns TxRaw
  */
 export const sign = async (
   chainName: string,
@@ -66,7 +66,7 @@ export const sign = async (
  * @param messages
  * @param fee
  * @param memo
- * @returns TxRa
+ * @returns TxRaw
  */
 export const signCW = async (
   chainName: string,
