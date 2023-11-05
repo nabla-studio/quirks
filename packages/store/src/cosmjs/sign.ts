@@ -10,12 +10,13 @@ import {
 import {
   SigningStargateClient,
   SigningStargateClientOptions,
+  StargateClient,
 } from '@cosmjs/stargate';
 import {
   SigningCosmWasmClient,
   SigningCosmWasmClientOptions,
 } from '@cosmjs/cosmwasm-stargate';
-import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
+import { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 
 /**
  * Why is this part outside the store?
@@ -25,6 +26,12 @@ import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
  * for example if I want to create a promise that signs a message and then I want to give this promise to a library like tanstack-query
  */
 
+/**
+ * Get current account address by chainName
+ *
+ * @param chainName
+ * @returns string
+ */
 export const getAddress = (chainName: string) => {
   const chain = store
     .getState()
@@ -35,6 +42,86 @@ export const getAddress = (chainName: string) => {
   assertIsDefined(sender);
 
   return sender;
+};
+
+/**
+ * Allows you to broadcast a txraw
+ *
+ * @param chainName
+ * @param txRaw
+ * @param timeoutMs
+ * @param pollIntervalMs
+ * @returns Promise<DeliverTxResponse>
+ */
+export const broadcast = async (
+  chainName: string,
+  txRaw: TxRaw,
+  timeoutMs = 60_000,
+  pollIntervalMs = 3_000,
+) => {
+  const state = store.getState();
+
+  const chain = store
+    .getState()
+    .chains.find((el) => el.chain_name === chainName);
+  assertIsDefined(chain);
+
+  const endpoint = getEndpoint(chainName, state.chains);
+
+  let clientOptions: SigningStargateClientOptions | undefined = undefined;
+
+  const stargate = store.getState().signerOptions?.stargate;
+
+  if (stargate) {
+    clientOptions = stargate(chain);
+  }
+
+  const client = await StargateClient.connect(
+    endpoint.rpc.address,
+    clientOptions,
+  );
+
+  const txBytes = TxRaw.encode(txRaw).finish();
+
+  return client.broadcastTx(txBytes, timeoutMs, pollIntervalMs);
+};
+
+/**
+ * allows you to broadcast a txraw, but in synchronous mode,
+ * it does not stay polled but directly returns the hash of the transaction.
+ *
+ * @param chainName
+ * @param txRaw
+ * @param timeoutMs
+ * @param pollIntervalMs
+ * @returns string
+ */
+export const broadcastSync = async (chainName: string, txRaw: TxRaw) => {
+  const state = store.getState();
+
+  const chain = store
+    .getState()
+    .chains.find((el) => el.chain_name === chainName);
+  assertIsDefined(chain);
+
+  const endpoint = getEndpoint(chainName, state.chains);
+
+  let clientOptions: SigningStargateClientOptions | undefined = undefined;
+
+  const stargate = store.getState().signerOptions?.stargate;
+
+  if (stargate) {
+    clientOptions = stargate(chain);
+  }
+
+  const client = await StargateClient.connect(
+    endpoint.rpc.address,
+    clientOptions,
+  );
+
+  const txBytes = TxRaw.encode(txRaw).finish();
+
+  return client.broadcastTxSync(txBytes);
 };
 
 /**
