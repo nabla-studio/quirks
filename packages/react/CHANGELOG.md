@@ -2,6 +2,23 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/nabla-studio/quirks/compare/react@0.2.0...react@0.3.0) (2023-11-05)
+
+### Dependency Updates
+
+* `store` updated to version `0.2.0`
+* `core` updated to version `0.2.0`
+
+### Features
+
+* **react:** :sparkles: add sign utils inside useChain ([20cf874](https://github.com/nabla-studio/quirks/commit/20cf8748415b8dfb16a21365dad20caf452f5ea1))
+* **react:** :sparkles: add useChain hook ([75d4046](https://github.com/nabla-studio/quirks/commit/75d4046928bc04ded29f2cc2add4964cdc827d33))
+
+
+### Bug Fixes
+
+* **react:** :wrench: fix types export ([3db310b](https://github.com/nabla-studio/quirks/commit/3db310b620cb534cee848cb4cdba92884bfdaa4b))
+
 ## [0.2.0](https://github.com/nabla-studio/quirks/compare/react@0.1.0...react@0.2.0) (2023-11-01)
 
 ### Dependency Updates
