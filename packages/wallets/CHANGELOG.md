@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/nabla-studio/quirks/compare/wallets@0.2.0...wallets@0.3.0) (2023-11-05)
+
+### Dependency Updates
+
+* `core` updated to version `0.2.0`
+
+### Features
+
+* **wallets:** :sparkles: implement arbitrary keplr ([f94d830](https://github.com/nabla-studio/quirks/commit/f94d830301a4ee6a52b4786e6a53359120de1231))
+* **wallets:** :sparkles: implement arbitrary leap ([ecc805f](https://github.com/nabla-studio/quirks/commit/ecc805f0dec32a179fc166e594db526be8b228f3))
+
 ## [0.2.0](https://github.com/nabla-studio/quirks/compare/wallets@0.1.1...wallets@0.2.0) (2023-11-01)
 
 ### Dependency Updates
