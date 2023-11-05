@@ -44,6 +44,14 @@ export const getAddress = (chainName: string) => {
   return sender;
 };
 
+export const getChain = (chainName: string) => {
+  const chain = store
+    .getState()
+    .chains.find((el) => el.chain_name === chainName);
+
+  return chain;
+};
+
 /**
  * Allows you to broadcast a txraw
  *
