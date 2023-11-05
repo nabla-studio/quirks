@@ -36,6 +36,7 @@ export default defineConfig({
       // External packages that should not be bundled into your library.
       external: [
         'cosmjs-types',
+        'cosmjs-types/cosmos/tx/v1beta1/tx',
         '@keplr-wallet/types',
         '@cosmjs/proto-signing',
         '@cosmjs/amino',
