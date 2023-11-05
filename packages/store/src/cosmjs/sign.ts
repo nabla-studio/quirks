@@ -33,12 +33,12 @@ import { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
  * @returns string
  */
 export const getAddress = (chainName: string) => {
-  const chain = store
-    .getState()
-    .chains.find((el) => el.chain_name === chainName);
+  const state = store.getState();
+
+  const chain = state.chains.find((el) => el.chain_name === chainName);
   assertIsDefined(chain);
 
-  const sender = store.getState().getAddress(chain.chain_id);
+  const sender = state.getAddress(chain.chain_id);
   assertIsDefined(sender);
 
   return sender;
@@ -70,7 +70,7 @@ export const broadcast = async (
 
   let clientOptions: SigningStargateClientOptions | undefined = undefined;
 
-  const stargate = store.getState().signerOptions?.stargate;
+  const stargate = state.signerOptions?.stargate;
 
   if (stargate) {
     clientOptions = stargate(chain);
@@ -99,16 +99,14 @@ export const broadcast = async (
 export const broadcastSync = async (chainName: string, txRaw: TxRaw) => {
   const state = store.getState();
 
-  const chain = store
-    .getState()
-    .chains.find((el) => el.chain_name === chainName);
+  const chain = state.chains.find((el) => el.chain_name === chainName);
   assertIsDefined(chain);
 
   const endpoint = getEndpoint(chainName, state.chains);
 
   let clientOptions: SigningStargateClientOptions | undefined = undefined;
 
-  const stargate = store.getState().signerOptions?.stargate;
+  const stargate = state.signerOptions?.stargate;
 
   if (stargate) {
     clientOptions = stargate(chain);
@@ -142,23 +140,21 @@ export const sign = async (
   const state = store.getState();
   assertIsDefined(state.wallet);
 
-  const chain = store
-    .getState()
-    .chains.find((el) => el.chain_name === chainName);
+  const chain = state.chains.find((el) => el.chain_name === chainName);
   assertIsDefined(chain);
 
-  const endpoint = getEndpoint(chainName, store.getState().chains);
+  const endpoint = getEndpoint(chainName, state.chains);
 
   const sender = getAddress(chainName);
 
   const offlineSigner = await state.wallet.getOfflineSignerAuto(
     chain.chain_id,
-    store.getState().signOptions,
+    state.signOptions,
   );
 
   let clientOptions: SigningStargateClientOptions | undefined = undefined;
 
-  const signingStargate = store.getState().signerOptions?.signingStargate;
+  const signingStargate = state.signerOptions?.signingStargate;
 
   if (signingStargate) {
     clientOptions = signingStargate(chain);
@@ -204,18 +200,18 @@ export const signCW = async (
     .chains.find((el) => el.chain_name === chainName);
   assertIsDefined(chain);
 
-  const endpoint = getEndpoint(chainName, store.getState().chains);
+  const endpoint = getEndpoint(chainName, state.chains);
 
   const sender = getAddress(chainName);
 
   const offlineSigner = await state.wallet.getOfflineSignerAuto(
     chain.chain_id,
-    store.getState().signOptions,
+    state.signOptions,
   );
 
   let clientOptions: SigningCosmWasmClientOptions | undefined = undefined;
 
-  const signingCosmwasm = store.getState().signerOptions?.signingCosmwasm;
+  const signingCosmwasm = state.signerOptions?.signingCosmwasm;
 
   if (signingCosmwasm) {
     clientOptions = signingCosmwasm(chain);
