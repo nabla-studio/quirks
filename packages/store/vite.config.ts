@@ -44,6 +44,7 @@ export default defineConfig({
         '@cosmjs/cosmwasm-stargate',
         '@cosmjs/stargate',
         'cosmjs-types',
+        'cosmjs-types/cosmos/tx/v1beta1/tx',
         '@quirks/core',
         '@nabla-studio/chain-registry',
       ],
