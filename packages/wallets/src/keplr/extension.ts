@@ -2,6 +2,7 @@ import type {
   OfflineAminoSigner,
   StdSignDoc,
   AminoSignResponse,
+  StdSignature,
 } from '@cosmjs/amino';
 import type {
   OfflineDirectSigner,
@@ -114,6 +115,27 @@ export class KeplrWalletExtension extends ExtensionWallet<Keplr> {
       },
       signOptions,
     );
+  }
+
+  override signArbitrary(
+    chainId: string,
+    signer: string,
+    data: string | Uint8Array,
+  ): Promise<StdSignature> {
+    assertIsDefined(this.client);
+
+    return this.client.signArbitrary(chainId, signer, data);
+  }
+
+  override verifyArbitrary(
+    chainId: string,
+    signer: string,
+    data: string | Uint8Array,
+    signature: StdSignature,
+  ): Promise<boolean> {
+    assertIsDefined(this.client);
+
+    return this.client.verifyArbitrary(chainId, signer, data, signature);
   }
 
   override async suggestTokens(suggestions: SuggestToken[]): Promise<void> {

@@ -14,17 +14,15 @@
   "version": "0.2.0",
   "sideEffects": false,
   "dependencies": {
-    "@quirks/store": "*"
+    "@quirks/store": "*",
+    "@quirks/core": "*"
   },
   "peerDependencies": {
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "cosmjs-types": "^0.9.0",
+    "@cosmjs/amino": "^0.31.3"
   },
   "main": "./index.js",
-  "types": "./index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./index.mjs",
-      "require": "./index.js"
-    }
-  }
+  "module": "./index.mjs",
+  "typings": "./index.d.ts"
 }

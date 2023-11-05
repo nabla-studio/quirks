@@ -25,9 +25,14 @@ export interface ConnectState {
   wallet?: Wallet;
   status: ConnectionState;
   reconnectionStatus: ReconnectionState;
+}
+
+export interface ConnectActions {
   setWallet: (wallet?: Wallet) => void;
   getWalletData: () => void;
   connect: (walletName: string) => void;
   reconnect: (walletName: string) => void;
   disconnect: () => void;
 }
+
+export type ConnectSlice = ConnectState & ConnectActions;

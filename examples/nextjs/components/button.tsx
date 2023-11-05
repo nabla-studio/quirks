@@ -1,6 +1,8 @@
 'use client';
 
+import { bitsong, bitsongAssetList } from '@nabla-studio/chain-registry';
 import { useConfig, useConnect } from '@quirks/react';
+import { suggestChains } from '@quirks/store';
 
 export const Button = () => {
   const { wallets } = useConfig();
@@ -13,16 +15,18 @@ export const Button = () => {
   return wallets.map((wallet) => (
     <div key={wallet.options.name}>
       <button
-        onClick={() => {
-          connect(wallet.options.name);
+        onClick={async () => {
+          await suggestChains(wallet.options.name, [
+            { chain: bitsong, assetList: bitsongAssetList, name: 'bitsong' },
+          ]);
+          await connect(wallet.options.name);
         }}
       >
         <img
           src={wallet.options.logoUrls?.light?.svg}
           alt={wallet.options.prettyName}
-          style={{
-            maxWidth: 128,
-          }}
+          height="48px"
+          width="48px"
         />
       </button>
 

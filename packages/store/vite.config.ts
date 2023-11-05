@@ -34,7 +34,20 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['zustand', 'zustand/middleware', 'zustand/vanilla'],
+      external: [
+        'zustand',
+        'zustand/middleware',
+        'zustand/vanilla',
+        '@cosmjs/amino',
+        '@cosmjs/proto-signing',
+        '@cosmjs/stargate',
+        '@cosmjs/cosmwasm-stargate',
+        '@cosmjs/stargate',
+        'cosmjs-types',
+        'cosmjs-types/cosmos/tx/v1beta1/tx',
+        '@quirks/core',
+        '@nabla-studio/chain-registry',
+      ],
     },
   },
 

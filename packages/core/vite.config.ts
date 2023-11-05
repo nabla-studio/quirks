@@ -36,9 +36,12 @@ export default defineConfig({
       // External packages that should not be bundled into your library.
       external: [
         'cosmjs-types',
+        'cosmjs-types/cosmos/tx/v1beta1/tx',
         '@cosmjs/proto-signing',
         '@cosmjs/amino',
+        '@cosmjs/stargate',
         'eventemitter3',
+        '@nabla-studio/chain-registry',
       ],
     },
   },

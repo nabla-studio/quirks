@@ -5,29 +5,18 @@ import {
   persist,
 } from 'zustand/middleware';
 import {
+  configInitialState,
   createConfigSlice,
+  connectInitialState,
   createConnectSlice,
+  accountInitialState,
   createAccountSlice,
+  signInitialState,
+  createSignSlice,
 } from './slices';
-import { createSSRStorage } from './utils';
+import { createSSRStorage, noopStorage } from './utils';
 import { createStore } from 'zustand/vanilla';
-import type { Wallet } from '@quirks/core';
-import type { AssetLists, Chain } from '@nabla-studio/chain-registry';
-import type { AppState } from './types';
-
-export interface Config {
-  wallets: Wallet[];
-  chains: Chain[];
-  assetsLists: AssetLists[];
-  /**
-   * State manager persister
-   */
-  persistOptions?: PersistOptions<AppState>;
-  /**
-   * Reinit connection on mount
-   */
-  autoConnect?: boolean;
-}
+import type { AppState, Config } from './types';
 
 const excludedKeys: (keyof AppState)[] = [
   'wallet',
@@ -54,6 +43,32 @@ export const ssrPersistOptions: PersistOptions<AppState> = {
   skipHydration: true,
 };
 
+const emptyPersistOptions: PersistOptions<AppState> = {
+  ...defaultPersistOptions,
+  storage: createJSONStorage(() => noopStorage),
+};
+
+export let store = createStore(
+  subscribeWithSelector(
+    persist(
+      (...props) => ({
+        ...createConfigSlice(...props),
+        ...createConnectSlice(...props),
+        ...createAccountSlice(...props),
+        ...createSignSlice(...props),
+        reset: () => {
+          props[0]({
+            ...configInitialState,
+            ...connectInitialState,
+            ...accountInitialState,
+          });
+        },
+      }),
+      emptyPersistOptions,
+    ),
+  ),
+);
+
 export const createConfig = (config: Config) => {
   const {
     wallets,
@@ -61,9 +76,21 @@ export const createConfig = (config: Config) => {
     assetsLists,
     autoConnect = true,
     persistOptions = defaultPersistOptions,
+    signOptions,
+    signerOptions,
   } = config;
 
-  const store = createStore(
+  const signOverrideOptions = signOptions
+    ? signOptions
+    : signInitialState.signOptions;
+
+  const signOverrideInitialState = {
+    ...signInitialState,
+    signOptions: signOverrideOptions,
+    signerOptions,
+  };
+
+  store = createStore(
     subscribeWithSelector(
       persist(
         (...props) => ({
@@ -73,6 +100,19 @@ export const createConfig = (config: Config) => {
           assetsLists,
           ...createConnectSlice(...props),
           ...createAccountSlice(...props),
+          ...createSignSlice(...props),
+          ...signOverrideInitialState,
+          reset: () => {
+            props[0]({
+              ...configInitialState,
+              ...connectInitialState,
+              ...accountInitialState,
+              ...signOverrideInitialState,
+              wallets,
+              chains,
+              assetsLists,
+            });
+          },
         }),
         persistOptions,
       ),

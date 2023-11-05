@@ -7,6 +7,7 @@ import type {
   AminoSignResponse,
   OfflineAminoSigner,
   StdSignDoc,
+  StdSignature,
 } from '@cosmjs/amino';
 import type {
   SignOptions,
@@ -89,6 +90,19 @@ export abstract class Wallet<T = unknown> {
     signDoc: SignDoc,
     signOptions?: SignOptions,
   ): Promise<DirectSignResponse>;
+
+  abstract signArbitrary(
+    chainId: string,
+    signer: string,
+    data: string | Uint8Array,
+  ): Promise<StdSignature>;
+
+  abstract verifyArbitrary(
+    chainId: string,
+    signer: string,
+    data: string | Uint8Array,
+    signature: StdSignature,
+  ): Promise<boolean>;
 
   /**
    * Asks the user to add a tokens to the wallet
