@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/nabla-studio/quirks/compare/core@0.2.0...core@0.3.0) (2023-11-05)
+
+
+### Features
+
+* **core:** :sparkles: add estimateFee utility ([c23cdf6](https://github.com/nabla-studio/quirks/commit/c23cdf6775f492a7797176216eb72eb7a4991c96))
+* **core:** :sparkles: add getEndpoint util ([79b4cf8](https://github.com/nabla-studio/quirks/commit/79b4cf82f58df75cb4ce1820fb50e6dd244d399a))
+* **core:** :sparkles: add getGasPrice utility ([41c48d3](https://github.com/nabla-studio/quirks/commit/41c48d35df1466091d7e4881d0589022afc45c4b))
+* **core:** :sparkles: add sign and verify arbitrary ([da0cd77](https://github.com/nabla-studio/quirks/commit/da0cd779e86ff5bdefabdc1099e8a5dfded674f3))
+* **core:** :sparkles: increase fee multiplier ([b1a4b77](https://github.com/nabla-studio/quirks/commit/b1a4b773441103e60bf75b400567606c381fd854))
+
 ## [0.2.0](https://github.com/nabla-studio/quirks/compare/core@0.1.1...core@0.2.0) (2023-11-01)
 
 
