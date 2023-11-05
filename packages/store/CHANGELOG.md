@@ -2,6 +2,25 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/nabla-studio/quirks/compare/store@0.1.0...store@0.2.0) (2023-11-05)
+
+### Dependency Updates
+
+* `core` updated to version `0.1.0`
+
+### Features
+
+* **store:** :sparkles: add broadcast utils ([2a6f6c3](https://github.com/nabla-studio/quirks/commit/2a6f6c392d6c342935b559133bebabbaa6da5e6a))
+* **store:** :sparkles: add chain and tokens suggestions ([90ce803](https://github.com/nabla-studio/quirks/commit/90ce803ab520f0c403de585b4d847ff16cbf2dba))
+* **store:** :sparkles: add cosmjs sign utils ([13ba146](https://github.com/nabla-studio/quirks/commit/13ba1461252297090eae73964d579c285f1234df))
+* **store:** :sparkles: add dynamic endpoint ([4e47969](https://github.com/nabla-studio/quirks/commit/4e47969b9ce9d1bda8863611b8f465215fc24eae))
+* **store:** :sparkles: add gasPrice options ([c2ed561](https://github.com/nabla-studio/quirks/commit/c2ed561d9a2bc87c7b095510778c10a0c86c8c36))
+* **store:** :sparkles: add getAddress util ([94f47ca](https://github.com/nabla-studio/quirks/commit/94f47ca6bd69028c793643bc16ecf2347b371fb9))
+* **store:** :sparkles: add getChain util ([a9bb8eb](https://github.com/nabla-studio/quirks/commit/a9bb8ebfa547d980b3ab1ad9e73d0d7c54977f45))
+* **store:** :sparkles: add getChain util ([0aa9734](https://github.com/nabla-studio/quirks/commit/0aa97349f82f576eb1b2eb8469e434c9e8c9c343))
+* **store:** :sparkles: add sign slice ([2ff2f6d](https://github.com/nabla-studio/quirks/commit/2ff2f6dd1f25c2b2c6bee24eec42239862b8b3f5))
+* **store:** :sparkles: add store reset on disconnect ([2886bc8](https://github.com/nabla-studio/quirks/commit/2886bc85e891042e42786aac80372f4ff6ce7987))
+
 ## 0.1.0 (2023-11-01)
 
 ### Dependency Updates
