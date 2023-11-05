@@ -46,6 +46,7 @@ export default defineConfig({
         '@quirks/store',
         '@quirks/core',
         'cosmjs-types',
+        'cosmjs-types/cosmos/tx/v1beta1/tx',
         '@cosmjs/amino',
       ],
     },
