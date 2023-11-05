@@ -23,7 +23,13 @@ const send = async () => {
 
   console.log(msg);
 
-  await sign('osmosis', [msg]);
+  const txRaw = await sign('osmosis', [msg]);
+
+  const broadcast = (await import('@quirks/store')).broadcast;
+
+  const res = await broadcast('osmosis', txRaw);
+
+  console.log(res);
 };
 
 export const Test = () => {
