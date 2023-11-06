@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.1](https://github.com/nabla-studio/quirks/compare/core@0.4.0...core@0.4.1) (2023-11-06)
+
+
+### Bug Fixes
+
+* **core:** :bug: fix getGasPrice undefined ([a2ca06e](https://github.com/nabla-studio/quirks/commit/a2ca06e28a6da9aca58b60ce72c0aa32f9bd3bbd))
+
 ## [0.4.0](https://github.com/nabla-studio/quirks/compare/core@0.3.0...core@0.4.0) (2023-11-06)
 
 
