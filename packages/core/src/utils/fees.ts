@@ -23,7 +23,7 @@ export const getGasPrice = async (chain: Chain, feeDenom?: string) => {
         (token) => token.denom === feeDenom,
       );
     } else {
-      chain.fees.fee_tokens[0];
+      feeToken = chain.fees.fee_tokens[0];
     }
 
     const averageGasPrice = feeToken?.average_gas_price;
@@ -32,7 +32,7 @@ export const getGasPrice = async (chain: Chain, feeDenom?: string) => {
     if (averageGasPrice && denom && !denom.startsWith('ibc/')) {
       gasPrice = GasPrice.fromString(`${averageGasPrice}${denom}`);
     } else {
-      GasPrice.fromString(`1${denom}`);
+      gasPrice = GasPrice.fromString(`1${denom}`);
     }
   }
 
