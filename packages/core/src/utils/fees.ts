@@ -1,6 +1,6 @@
 import type { EncodeObject } from '@cosmjs/proto-signing';
-import { calculateFee, GasPrice } from '@cosmjs/stargate';
 import { assertIsDefined } from './asserts';
+import type { GasPrice } from '@cosmjs/stargate';
 import type { SigningSimulatorClient } from '../types';
 import type { Chain } from '@nabla-studio/chain-registry';
 
@@ -11,7 +11,8 @@ import type { Chain } from '@nabla-studio/chain-registry';
  * @param feeDenom ex. uosmo
  * @returns
  */
-export const getGasPrice = (chain: Chain, feeDenom?: string) => {
+export const getGasPrice = async (chain: Chain, feeDenom?: string) => {
+  const GasPrice = (await import('@cosmjs/stargate')).GasPrice;
   let gasPrice: GasPrice | undefined = undefined;
 
   if (chain.fees && chain.fees.fee_tokens.length > 0) {
@@ -31,7 +32,7 @@ export const getGasPrice = (chain: Chain, feeDenom?: string) => {
     if (averageGasPrice && denom && !denom.startsWith('ibc/')) {
       gasPrice = GasPrice.fromString(`${averageGasPrice}${denom}`);
     } else {
-      gasPrice = GasPrice.fromString(`1${denom}`);
+      GasPrice.fromString(`1${denom}`);
     }
   }
 
@@ -52,6 +53,8 @@ export const estimateFee = async (
   );
 
   const gasEstimation = await client.simulate(sender, messages, memo);
+
+  const calculateFee = (await import('@cosmjs/stargate')).calculateFee;
 
   return calculateFee(Math.round(gasEstimation * multiplier), gasPrice);
 };
