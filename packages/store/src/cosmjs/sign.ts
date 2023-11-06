@@ -7,15 +7,8 @@ import {
   getEndpoint,
   getGasPrice,
 } from '@quirks/core';
-import {
-  SigningStargateClient,
-  SigningStargateClientOptions,
-  StargateClient,
-} from '@cosmjs/stargate';
-import {
-  SigningCosmWasmClient,
-  SigningCosmWasmClientOptions,
-} from '@cosmjs/cosmwasm-stargate';
+import type { SigningStargateClientOptions } from '@cosmjs/stargate';
+import type { SigningCosmWasmClientOptions } from '@cosmjs/cosmwasm-stargate';
 import { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 
 /**
@@ -84,6 +77,8 @@ export const broadcast = async (
     clientOptions = stargate(chain);
   }
 
+  const StargateClient = (await import('@cosmjs/stargate')).StargateClient;
+
   const client = await StargateClient.connect(
     endpoint.rpc.address,
     clientOptions,
@@ -119,6 +114,8 @@ export const broadcastSync = async (chainName: string, txRaw: TxRaw) => {
   if (stargate) {
     clientOptions = stargate(chain);
   }
+
+  const StargateClient = (await import('@cosmjs/stargate')).StargateClient;
 
   const client = await StargateClient.connect(
     endpoint.rpc.address,
@@ -168,6 +165,9 @@ export const sign = async (
     clientOptions = signingStargate(chain);
   }
 
+  const SigningStargateClient = (await import('@cosmjs/stargate'))
+    .SigningStargateClient;
+
   const client = await SigningStargateClient.connectWithSigner(
     endpoint.rpc.address,
     offlineSigner,
@@ -177,7 +177,7 @@ export const sign = async (
   if (fee === 'auto') {
     const gasPrice = clientOptions?.gasPrice
       ? clientOptions.gasPrice
-      : getGasPrice(chain);
+      : await getGasPrice(chain);
 
     fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
@@ -225,6 +225,9 @@ export const signCW = async (
     clientOptions = signingCosmwasm(chain);
   }
 
+  const SigningCosmWasmClient = (await import('@cosmjs/cosmwasm-stargate'))
+    .SigningCosmWasmClient;
+
   const client = await SigningCosmWasmClient.connectWithSigner(
     endpoint.rpc.address,
     offlineSigner,
@@ -234,7 +237,7 @@ export const signCW = async (
   if (fee === 'auto') {
     const gasPrice = clientOptions?.gasPrice
       ? clientOptions.gasPrice
-      : getGasPrice(chain);
+      : await getGasPrice(chain);
 
     fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
