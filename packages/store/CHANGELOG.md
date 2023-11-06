@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/nabla-studio/quirks/compare/store@0.3.0...store@0.4.0) (2023-11-06)
+
+### Dependency Updates
+
+* `core` updated to version `0.3.0`
+
+### Features
+
+* **store:** :sparkles: add async signer opt ([873cb1c](https://github.com/nabla-studio/quirks/commit/873cb1c988b525717c4843356ac9af12a3c1c306))
+* **store:** :sparkles: add txraw dynamic ([fbbf2df](https://github.com/nabla-studio/quirks/commit/fbbf2df8c8b4574d1d4e87cdb0ea6348b7693e69))
+* **store:** :sparkles: implement async opt ([eda101e](https://github.com/nabla-studio/quirks/commit/eda101e14c3477519b88761dafd00e4b06244abb))
+
 ## [0.3.0](https://github.com/nabla-studio/quirks/compare/store@0.2.0...store@0.3.0) (2023-11-06)
 
 ### Dependency Updates
