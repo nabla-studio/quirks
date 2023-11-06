@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/nabla-studio/quirks/compare/store@0.2.0...store@0.3.0) (2023-11-06)
+
+### Dependency Updates
+
+* `core` updated to version `0.2.0`
+
+### Features
+
+* **store:** :sparkles: add dynamic import ([1a6b3ed](https://github.com/nabla-studio/quirks/commit/1a6b3ed1863b9030c60631d70d7dadd410bb9870))
+
 ## [0.2.0](https://github.com/nabla-studio/quirks/compare/store@0.1.0...store@0.2.0) (2023-11-05)
 
 ### Dependency Updates
