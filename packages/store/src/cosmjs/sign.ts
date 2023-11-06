@@ -9,7 +9,7 @@ import {
 } from '@quirks/core';
 import type { SigningStargateClientOptions } from '@cosmjs/stargate';
 import type { SigningCosmWasmClientOptions } from '@cosmjs/cosmwasm-stargate';
-import { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
+import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 
 /**
  * Why is this part outside the store?
@@ -84,6 +84,8 @@ export const broadcast = async (
     clientOptions,
   );
 
+  const TxRaw = (await import('cosmjs-types/cosmos/tx/v1beta1/tx')).TxRaw;
+
   const txBytes = TxRaw.encode(txRaw).finish();
 
   return client.broadcastTx(txBytes, timeoutMs, pollIntervalMs);
@@ -121,6 +123,8 @@ export const broadcastSync = async (chainName: string, txRaw: TxRaw) => {
     endpoint.rpc.address,
     clientOptions,
   );
+
+  const TxRaw = (await import('cosmjs-types/cosmos/tx/v1beta1/tx')).TxRaw;
 
   const txBytes = TxRaw.encode(txRaw).finish();
 
