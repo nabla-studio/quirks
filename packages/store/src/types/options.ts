@@ -9,9 +9,13 @@ import type { PersistOptions } from 'zustand/middleware';
 import type { AppState } from './store';
 
 export interface SignerOptions {
-  stargate?: (chain: Chain) => StargateClientOptions | undefined;
-  signingStargate?: (chain: Chain) => SigningStargateClientOptions | undefined;
-  signingCosmwasm?: (chain: Chain) => SigningCosmWasmClientOptions | undefined;
+  stargate?: (chain: Chain) => Promise<StargateClientOptions | undefined>;
+  signingStargate?: (
+    chain: Chain,
+  ) => Promise<SigningStargateClientOptions | undefined>;
+  signingCosmwasm?: (
+    chain: Chain,
+  ) => Promise<SigningCosmWasmClientOptions | undefined>;
 }
 
 export interface Config {
