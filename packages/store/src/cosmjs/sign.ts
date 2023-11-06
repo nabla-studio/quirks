@@ -9,7 +9,7 @@ import {
 } from '@quirks/core';
 import type { SigningStargateClientOptions } from '@cosmjs/stargate';
 import type { SigningCosmWasmClientOptions } from '@cosmjs/cosmwasm-stargate';
-import { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
+import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 
 /**
  * Why is this part outside the store?
@@ -74,7 +74,7 @@ export const broadcast = async (
   const stargate = state.signerOptions?.stargate;
 
   if (stargate) {
-    clientOptions = stargate(chain);
+    clientOptions = await stargate(chain);
   }
 
   const StargateClient = (await import('@cosmjs/stargate')).StargateClient;
@@ -83,6 +83,8 @@ export const broadcast = async (
     endpoint.rpc.address,
     clientOptions,
   );
+
+  const TxRaw = (await import('cosmjs-types/cosmos/tx/v1beta1/tx')).TxRaw;
 
   const txBytes = TxRaw.encode(txRaw).finish();
 
@@ -112,7 +114,7 @@ export const broadcastSync = async (chainName: string, txRaw: TxRaw) => {
   const stargate = state.signerOptions?.stargate;
 
   if (stargate) {
-    clientOptions = stargate(chain);
+    clientOptions = await stargate(chain);
   }
 
   const StargateClient = (await import('@cosmjs/stargate')).StargateClient;
@@ -121,6 +123,8 @@ export const broadcastSync = async (chainName: string, txRaw: TxRaw) => {
     endpoint.rpc.address,
     clientOptions,
   );
+
+  const TxRaw = (await import('cosmjs-types/cosmos/tx/v1beta1/tx')).TxRaw;
 
   const txBytes = TxRaw.encode(txRaw).finish();
 
@@ -162,7 +166,7 @@ export const sign = async (
   const signingStargate = state.signerOptions?.signingStargate;
 
   if (signingStargate) {
-    clientOptions = signingStargate(chain);
+    clientOptions = await signingStargate(chain);
   }
 
   const SigningStargateClient = (await import('@cosmjs/stargate'))
@@ -175,9 +179,11 @@ export const sign = async (
   );
 
   if (fee === 'auto') {
-    const gasPrice = clientOptions?.gasPrice
-      ? clientOptions.gasPrice
-      : await getGasPrice(chain);
+    let gasPrice = clientOptions?.gasPrice;
+
+    if (!gasPrice) {
+      gasPrice = await getGasPrice(chain);
+    }
 
     fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
@@ -222,7 +228,7 @@ export const signCW = async (
   const signingCosmwasm = state.signerOptions?.signingCosmwasm;
 
   if (signingCosmwasm) {
-    clientOptions = signingCosmwasm(chain);
+    clientOptions = await signingCosmwasm(chain);
   }
 
   const SigningCosmWasmClient = (await import('@cosmjs/cosmwasm-stargate'))
@@ -235,9 +241,11 @@ export const signCW = async (
   );
 
   if (fee === 'auto') {
-    const gasPrice = clientOptions?.gasPrice
-      ? clientOptions.gasPrice
-      : await getGasPrice(chain);
+    let gasPrice = clientOptions?.gasPrice;
+
+    if (!gasPrice) {
+      gasPrice = await getGasPrice(chain);
+    }
 
     fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
