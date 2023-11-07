@@ -13,6 +13,18 @@
       "rules": {
         "vue/multi-word-component-names": "off"
       }
+    },
+    {
+      "files": ["*.json"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "@nx/dependency-checks": [
+          "error",
+          {
+            "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts,vue}"]
+          }
+        ]
+      }
     }
   ]
 }
