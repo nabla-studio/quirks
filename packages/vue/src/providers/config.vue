@@ -11,6 +11,8 @@ if (!props.config) {
 
 const store = createConfig(props.config);
 
+store.persist.rehydrate();
+
 provide(ConfigStateSymbol, readonly(store));
 </script>
 
