@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "nx run-many --target=build --exclude nextjs,nuxtjs --parallel=6",
-    "test": "nx run-many --target=test --exclude nextjs,nuxtjs --parallel=6",
-    "lint": "nx run-many --target=lint --exclude nextjs,nuxtjs --parallel=6",
+    "build": "nx run-many --target=build --exclude nextjs,nuxtjs,vue3 --parallel=6",
+    "test": "nx run-many --target=test --exclude nextjs,nuxtjs,vue3 --parallel=6",
+    "lint": "nx run-many --target=lint --exclude nextjs,nuxtjs,vue3 --parallel=6",
     "prepare": "husky install"
   },
   "private": true,
@@ -23,7 +23,7 @@
     "@nx/js": "17.0.3",
     "@nx/next": "^17.0.1",
     "@nx/react": "17.0.1",
-    "@nx/vite": "^17.0.1",
+    "@nx/vite": "17.0.3",
     "@nx/vue": "^17.0.3",
     "@nx/workspace": "17.0.1",
     "@swc-node/register": "~1.6.8",
@@ -98,6 +98,7 @@
     "semver": "^7.5.4",
     "utf-8-validate": "^6.0.3",
     "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
     "zustand": "^4.4.4",
     "zustand-vue": "1.0.0-beta.20"
   }
