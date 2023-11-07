@@ -1,5 +1,5 @@
 import { ConfigStateSymbol, type QuirksConfigState } from '../providers';
-import { inject, type ToRefs } from 'vue';
+import { inject } from 'vue';
 import create from 'zustand-vue';
 
 export const useQuirks = () => {
