@@ -1,7 +1,7 @@
-import { SignSlice } from './sign';
-import { AccountSlice } from './account';
-import { ConfigSlice } from './config';
-import { ConnectSlice } from './connect';
+import type { SignSlice } from './sign';
+import type { AccountSlice } from './account';
+import type { ConfigSlice } from './config';
+import type { ConnectSlice } from './connect';
 
 export interface AppActions {
   reset: () => void;
