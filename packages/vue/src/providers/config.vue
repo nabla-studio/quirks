@@ -1,10 +1,6 @@
 <script setup lang="ts">
-import { provide, reactive, readonly, toRefs } from 'vue';
-import {
-  ConfigStateSymbol,
-  type QuirksConfigProps,
-  type QuirksConfigState,
-} from './config';
+import { provide, readonly } from 'vue';
+import { ConfigStateSymbol, type QuirksConfigProps } from './config';
 import { createConfig } from '@quirks/store';
 
 const props = defineProps<QuirksConfigProps>();
@@ -13,13 +9,11 @@ if (!props.config) {
   throw new Error(['`config` must be setup within `QuirksConfig`.'].join('\n'));
 }
 
-const state = reactive<QuirksConfigState>({
-  store: createConfig(props.config),
-});
+const store = createConfig(props.config);
 
-provide(ConfigStateSymbol, toRefs(readonly(state)));
+provide(ConfigStateSymbol, readonly(store));
 </script>
 
 <template>
-  {{ $slots.default }}
+  <slot></slot>
 </template>
