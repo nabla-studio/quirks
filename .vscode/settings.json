@@ -12,6 +12,7 @@
     "core",
     "wallets",
     "react",
-    "store"
+    "store",
+    "vue"
   ]
 }
