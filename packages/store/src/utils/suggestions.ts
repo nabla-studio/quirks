@@ -1,4 +1,8 @@
-import { SuggestChain, SuggestToken, assertIsDefined } from '@quirks/core';
+import {
+  type SuggestChain,
+  type SuggestToken,
+  assertIsDefined,
+} from '@quirks/core';
 import { store } from '../store';
 
 export const suggestChains = (walletName: string, chains: SuggestChain[]) => {

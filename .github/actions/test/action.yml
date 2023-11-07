@@ -8,10 +8,10 @@ runs:
   steps:
     - name: Lint
       shell: bash
-      run: pnpm exec nx affected:lint --exclude nextjs
+      run: pnpm exec nx affected:lint --exclude nextjs,nuxtjs
     - name: Build
       shell: bash
-      run: pnpm exec nx affected:build --exclude nextjs
+      run: pnpm exec nx affected:build --exclude nextjs,nuxtjs
     - name: Test
       shell: bash
-      run: pnpm exec nx affected:test --exclude nextjs
+      run: pnpm exec nx affected:test --exclude nextjs,nuxtjs

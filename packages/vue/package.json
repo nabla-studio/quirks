@@ -1,0 +1,19 @@
+{
+  "name": "@quirks/vue",
+  "repository": "nabla-studio/quirks",
+  "keywords": [
+    "blockchain",
+    "cosmos",
+    "cosmos-sdk",
+    "registry",
+    "osmosis",
+    "juno",
+    "desmos",
+    "evmos"
+  ],
+  "version": "0.0.0",
+  "sideEffects": false,
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts"
+}

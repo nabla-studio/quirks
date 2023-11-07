@@ -48,3 +48,10 @@ Thumbs.db
 
 # Next.js
 .next
+
+# Nuxt dev/build outputs
+.output
+.nuxt
+.nitro
+.cache
+dist
