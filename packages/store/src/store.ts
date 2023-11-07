@@ -35,6 +35,7 @@ export const defaultPersistOptions: PersistOptions<AppState> = {
         ([key]) => !excludedKeys.includes(key as keyof AppState),
       ),
     ) as AppState,
+  skipHydration: true,
 };
 
 export const ssrPersistOptions: PersistOptions<AppState> = {
