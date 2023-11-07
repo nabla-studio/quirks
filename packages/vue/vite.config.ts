@@ -36,7 +36,16 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: [],
+      external: [
+        'zustand',
+        'zustand/vanilla',
+        'zustand/middleware',
+        '@quirks/store',
+        '@quirks/core',
+        'cosmjs-types',
+        'cosmjs-types/cosmos/tx/v1beta1/tx',
+        '@cosmjs/amino',
+      ],
     },
   },
 
