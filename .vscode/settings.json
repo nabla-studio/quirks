@@ -9,11 +9,11 @@
   "conventionalCommits.scopes": [
     "chain-registry",
     "examples-nextjs",
+    "examples-nuxtjs",
     "core",
     "wallets",
     "react",
     "store",
-    "vue",
-    "example-nuxtjs"
+    "vue"
   ]
 }
