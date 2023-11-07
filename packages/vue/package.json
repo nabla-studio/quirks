@@ -13,6 +13,15 @@
   ],
   "version": "0.1.0",
   "sideEffects": false,
+  "dependencies": {
+    "@quirks/store": "*",
+    "@quirks/core": "*"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.4",
+    "cosmjs-types": "^0.9.0",
+    "@cosmjs/amino": "^0.31.3"
+  },
   "main": "./index.js",
   "module": "./index.mjs",
   "typings": "./index.d.ts"
