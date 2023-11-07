@@ -2,15 +2,29 @@ import { ConnectionStates } from '@quirks/store';
 import { useQuirks } from './quirks';
 
 export const useConnect = () => {
-  const store = useQuirks();
+  const connect = useQuirks()((state) => state.connect);
+  const disconnect = useQuirks()((state) => state.disconnect);
+  const status = useQuirks()((state) => state.status);
+  const connected = useQuirks()(
+    (state) => state.status === ConnectionStates.CONNECTED,
+  );
+  const waiting = useQuirks()(
+    (state) => state.status === ConnectionStates.CONNECTED,
+  );
+  const disconnected = useQuirks()(
+    (state) => state.status === ConnectionStates.DISCONNECTED,
+  );
+  const rejected = useQuirks()(
+    (state) => state.status === ConnectionStates.REJECTED,
+  );
 
   return {
-    connect: store.use.connect(),
-    disconnect: store.use.disconnect(),
-    status: store.use.status(),
-    connected: store.use.status() === ConnectionStates.CONNECTED,
-    waiting: store.use.status() === ConnectionStates.WAITING,
-    disconnected: store.use.status() === ConnectionStates.DISCONNECTED,
-    rejected: store.use.status() === ConnectionStates.REJECTED,
+    connect,
+    disconnect,
+    status,
+    connected,
+    waiting,
+    disconnected,
+    rejected,
   };
 };
