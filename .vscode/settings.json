@@ -13,6 +13,7 @@
     "wallets",
     "react",
     "store",
-    "vue"
+    "vue",
+    "example-nuxtjs"
   ]
 }
