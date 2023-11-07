@@ -98,6 +98,7 @@
     "semver": "^7.5.4",
     "utf-8-validate": "^6.0.3",
     "vue": "^3.3.4",
-    "zustand": "^4.4.4"
+    "zustand": "^4.4.4",
+    "zustand-vue": "1.0.0-beta.20"
   }
 }
