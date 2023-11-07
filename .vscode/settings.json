@@ -14,6 +14,7 @@
     "wallets",
     "react",
     "store",
-    "vue"
+    "vue",
+    "examples-vue3"
   ]
 }
