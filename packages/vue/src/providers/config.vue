@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { provide, reactive, readonly, toRefs } from 'vue';
-import { ConfigStateSymbol, QuirksConfigProps } from './config';
+import {
+  ConfigStateSymbol,
+  type QuirksConfigProps,
+  type QuirksConfigState,
+} from './config';
 import { createConfig } from '@quirks/store';
 
 const props = defineProps<QuirksConfigProps>();
@@ -9,7 +13,7 @@ if (!props.config) {
   throw new Error(['`config` must be setup within `QuirksConfig`.'].join('\n'));
 }
 
-const state = reactive({
+const state = reactive<QuirksConfigState>({
   store: createConfig(props.config),
 });
 
