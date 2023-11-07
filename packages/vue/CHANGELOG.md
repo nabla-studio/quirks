@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/nabla-studio/quirks/compare/vue@0.1.0...vue@0.1.1) (2023-11-07)
+
+
+### Bug Fixes
+
+* **vue:** :bug: fix deps build ([59c6f69](https://github.com/nabla-studio/quirks/commit/59c6f699fd7bde637ddcf830d82aa2acc12e9871))
+
 ## 0.1.0 (2023-11-07)
 
 ### Dependency Updates
