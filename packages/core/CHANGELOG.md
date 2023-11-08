@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.5.0](https://github.com/nabla-studio/quirks/compare/core@0.4.1...core@0.5.0) (2023-11-08)
+
+### Dependency Updates
+
+* `chain-registry` updated to version `0.4.1`
+
+### Features
+
+* **core:** :sparkles: add type import ([b88f445](https://github.com/nabla-studio/quirks/commit/b88f4456e47750e35053c1371d8050ddf849cc23))
+
 ## [0.4.1](https://github.com/nabla-studio/quirks/compare/core@0.4.0...core@0.4.1) (2023-11-06)
 
 
