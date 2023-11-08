@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.5.0](https://github.com/nabla-studio/quirks/compare/store@0.4.1...store@0.5.0) (2023-11-08)
+
+### Dependency Updates
+
+* `chain-registry` updated to version `0.4.1`
+* `core` updated to version `0.4.1`
+
+### Features
+
+* **store:** :sparkles: add type import ([707e683](https://github.com/nabla-studio/quirks/commit/707e68330c1f9acc3b2f6979ce1fe65d72a20f79))
+
+
+### Bug Fixes
+
+* **store:** :bug: fix hydration ([3bad4b1](https://github.com/nabla-studio/quirks/commit/3bad4b11a4411ba5a48018213972685e58fd039f))
+
 ## [0.4.1](https://github.com/nabla-studio/quirks/compare/store@0.4.0...store@0.4.1) (2023-11-07)
 
 ## [0.4.0](https://github.com/nabla-studio/quirks/compare/store@0.3.0...store@0.4.0) (2023-11-06)

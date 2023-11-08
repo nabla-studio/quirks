@@ -11,7 +11,7 @@
     "desmos",
     "evmos"
   ],
-  "version": "0.4.1",
+  "version": "0.5.0",
   "sideEffects": false,
   "dependencies": {
     "@nabla-studio/chain-registry": "*",
