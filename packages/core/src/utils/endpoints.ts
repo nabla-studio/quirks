@@ -1,4 +1,4 @@
-import { Chain } from '@nabla-studio/chain-registry';
+import type { Chain } from '@nabla-studio/chain-registry';
 import { assertIsDefined } from './asserts';
 
 export const getEndpoint = (chainName: string, chains: Chain[]) => {
