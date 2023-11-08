@@ -44,6 +44,7 @@ export default defineConfig({
         'long',
         '@quirks/core',
         '@nabla-studio/chain-registry',
+        '@cosmostation/extension-client',
       ],
     },
   },
