@@ -124,7 +124,7 @@ export const createConfig = (config: Config) => {
    * We should inject wallet when walletName, is necessary because 'Wallet' is a class,
    * when it is serialized it loses methods, so we could not call wallet functionality.
    */
-  const unsub = store.persist.onFinishHydration((state) => {
+  const unsub = store.persist?.onFinishHydration((state) => {
     if (state.walletName && !state.wallet && autoConnect) {
       store.getState().reconnect(state.walletName);
 
