@@ -22,11 +22,6 @@ export const quirksPlugin: Plugin = {
 
     const mount = {
       mounted() {
-        // Esegui il codice quando il componente è montato
-        console.log(
-          "L'app è stata montata.",
-          store.value.persist.hasHydrated(),
-        );
         if (!store.value.persist.hasHydrated()) {
           setTimeout(() => store.value.persist.rehydrate(), 0);
         }
