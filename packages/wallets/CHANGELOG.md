@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/nabla-studio/quirks/compare/wallets@0.3.3...wallets@0.4.0) (2023-11-08)
+
+
+### Features
+
+* **wallets:** :sparkles: add cosmostation wallet ([252b90d](https://github.com/nabla-studio/quirks/commit/252b90dc8ea27e21941058c93f9e8189e2a67f45))
+
 ## [0.3.3](https://github.com/nabla-studio/quirks/compare/wallets@0.3.2...wallets@0.3.3) (2023-11-08)
 
 ### Dependency Updates
