@@ -2,6 +2,32 @@
 
 ![IBC tx track FSM](https://github.com/nabla-studio/quirks/blob/main/docs/one-for-all.webp)
 
+Quirks is a library to easily connect your dapp with existing wallets in the Cosmos blockchain ecosystem.
+
+## 🪄 Features
+
+- 🔀 Cross Framework
+- ⚙️ React and NextJS support
+- ⚙️ Vue and NuxtJS support
+- 📉 Small bundles, with vendor chunk splitting
+- 💳 Different wallet supports (Keplr and Leap)
+- 💪 Fully typed and tree-shakeable
+- 🌍 Global state even outside the frameworks
+
+And many more to come:
+
+- [ ] React Native Support
+- [ ] Wallet Connect Support
+- [ ] Web3 Modal Support
+- [ ] UI Kit (Cross Framework)
+- [ ] Improve Docs
+
+## 📚 Examples
+
+- [NuxtJS](https://github.com/nabla-studio/quirks-nuxt-example)
+- [NextJS](https://github.com/nabla-studio/quirks/tree/main/examples/nextjs)
+- [Vue 3](https://github.com/nabla-studio/quirks/tree/main/examples/vue3)
+
 ## 🔧 Installation
 
 Node.js is required to run the project.
