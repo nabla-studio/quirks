@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useConnect, useConfig, useChains } from '@quirks/vue';
-import { suggestChains } from '@quirks/store';
 import { bitsong, bitsongAssetList } from '@nabla-studio/chain-registry';
 
 const { wallets } = useConfig();
@@ -15,9 +13,7 @@ const open = async (chainName: string) => {
 };
 
 const send = async () => {
-  const cosmos = (await import('osmojs')).cosmos;
-  const sign = (await import('@quirks/store')).sign;
-  const getAddress = (await import('@quirks/store')).getAddress;
+  const cosmos = (await import('stargazejs')).cosmos;
   const { send } = cosmos.bank.v1beta1.MessageComposer.withTypeUrl;
 
   const address = getAddress('osmosis');

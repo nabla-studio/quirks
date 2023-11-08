@@ -9,9 +9,6 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "dependencies": {
-    "osmojs": "^16.5.1"
-  },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.8.1",
@@ -33,5 +30,13 @@
         ]
       }
     }
+  },
+  "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@nabla-studio/chain-registry": "^0.2.1",
+    "@quirks/store": "^0.4.1",
+    "@quirks/wallets": "^0.3.2",
+    "stargazejs": "^0.14.1"
   }
 }
