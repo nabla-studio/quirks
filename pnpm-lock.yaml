@@ -20,6 +20,9 @@ dependencies:
   '@cosmjs/stargate':
     specifier: ^0.31.3
     version: 0.31.3(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+  '@cosmostation/extension-client':
+    specifier: ^0.1.15
+    version: 0.1.15
   '@keplr-wallet/cosmos':
     specifier: ^0.12.38
     version: 0.12.38
@@ -2109,6 +2112,10 @@ packages:
       axios: 0.27.2
     transitivePeerDependencies:
       - debug
+    dev: false
+
+  /@cosmostation/extension-client@0.1.15:
+    resolution: {integrity: sha512-HlXYJjFrNpjiV/GUKhri1UL8/bhlOIFFLpRF78YDSqq16x0+plIqx5CAvEusFcKTDpVfpeD5sfUHiKvP7euNFg==}
     dev: false
 
   /@cspotcode/source-map-support@0.8.1:
