@@ -3,7 +3,7 @@ import {
   ConnectionStates,
   type AppState,
   type ConnectSlice,
-  AddressWithChain,
+  type AddressWithChain,
   ReconnectionStates,
   type ConnectState,
 } from '../types';
