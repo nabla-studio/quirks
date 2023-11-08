@@ -15,6 +15,7 @@
     "react",
     "store",
     "vue",
-    "examples-vue3"
+    "examples-vue3",
+    "nuxt"
   ]
 }
