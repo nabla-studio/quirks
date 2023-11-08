@@ -1,5 +1,5 @@
-import { Config, createConfig } from '@quirks/store';
-import { markRaw, shallowRef, triggerRef, Plugin } from 'vue';
+import { type Config, createConfig } from '@quirks/store';
+import { markRaw, shallowRef, triggerRef, type Plugin } from 'vue';
 
 export const USE_QUIRKS_KEY = 'USE_QUIRKS' as const;
 
