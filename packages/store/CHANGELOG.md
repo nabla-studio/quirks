@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.0](https://github.com/nabla-studio/quirks/compare/store@0.5.0...store@0.6.0) (2023-11-08)
+
+
+### Features
+
+* **store:** :sparkles: add signArbitrary ([9f9b853](https://github.com/nabla-studio/quirks/commit/9f9b853c73a0e4281cc0667134cc7c56153fa28a))
+
+
+### Bug Fixes
+
+* **store:** :bug: fix connection logic ([2244161](https://github.com/nabla-studio/quirks/commit/224416115c772b979d4b40044b488adf57ef8212))
+
 ## [0.5.0](https://github.com/nabla-studio/quirks/compare/store@0.4.1...store@0.5.0) (2023-11-08)
 
 ### Dependency Updates
