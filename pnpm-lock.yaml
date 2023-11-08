@@ -26,6 +26,9 @@ dependencies:
   '@nuxt/kit':
     specifier: ^3.8.1
     version: 3.8.1
+  '@nuxt/schema':
+    specifier: ^3.8.1
+    version: 3.8.1
   bufferutil:
     specifier: ^4.0.8
     version: 4.0.8
