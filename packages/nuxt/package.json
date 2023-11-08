@@ -1,0 +1,28 @@
+{
+  "name": "@quirks/nuxt",
+  "repository": "nabla-studio/quirks",
+  "keywords": [
+    "blockchain",
+    "cosmos",
+    "cosmos-sdk",
+    "registry",
+    "osmosis",
+    "juno",
+    "desmos",
+    "evmos"
+  ],
+  "version": "0.0.0",
+  "sideEffects": false,
+  "dependencies": {
+    "@quirks/vue": "*",
+    "@quirks/store": "*"
+  },
+  "peerDependencies": {
+    "nuxt": "^3.8.1",
+    "@nuxt/kit": "^3.8.1",
+    "@nuxt/schema": "^3.8.1"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "typings": "./index.d.ts"
+}

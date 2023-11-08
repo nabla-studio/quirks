@@ -1,6 +1,8 @@
 import { defineNuxtConfig } from 'nuxt/config';
 import { join } from 'path';
 import { workspaceRoot } from '@nx/devkit';
+import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
+import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill';
 
 function getMonorepoTsConfigPaths(tsConfigPath: string) {
   const tsPaths = require(tsConfigPath)?.compilerOptions?.paths as Record<
@@ -29,4 +31,32 @@ export default defineNuxtConfig({
    **/
   alias: getMonorepoTsConfigPaths('../../tsconfig.base.json'),
   devtools: { enabled: true },
+  modules: ['../../packages/nuxt/src/index'],
+  vite: {
+    resolve: {
+      alias: {
+        process: 'process/browser',
+        util: 'util',
+      },
+    },
+    optimizeDeps: {
+      esbuildOptions: {
+        target: 'esnext',
+        define: {
+          global: 'globalThis',
+        },
+        plugins: [
+          NodeGlobalsPolyfillPlugin({
+            process: true,
+            buffer: true,
+            crypto: true,
+          }),
+          NodeModulesPolyfillPlugin(),
+        ],
+        supported: {
+          bigint: true,
+        },
+      },
+    },
+  },
 });

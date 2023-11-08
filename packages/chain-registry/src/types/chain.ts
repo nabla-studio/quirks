@@ -1,4 +1,4 @@
-import { Pointer } from './assetlist';
+import type { Pointer } from './assetlist';
 
 /**
  * Cosmos Chain.json is a metadata file that contains information about a cosmos sdk based chain.

@@ -17,6 +17,7 @@
     "paths": {
       "@nabla-studio/chain-registry": ["packages/chain-registry/src/index.ts"],
       "@quirks/core": ["packages/core/src/index.ts"],
+      "@quirks/nuxt": ["packages/nuxt/src/index.ts"],
       "@quirks/react": ["packages/react/src/index.ts"],
       "@quirks/store": ["packages/store/src/index.ts"],
       "@quirks/vue": ["packages/vue/src/index.ts"],
