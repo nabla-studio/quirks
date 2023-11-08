@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/nabla-studio/quirks/compare/vue@0.1.1...vue@0.2.0) (2023-11-08)
+
+### Dependency Updates
+
+* `store` updated to version `0.1.1`
+* `core` updated to version `0.1.1`
+
+### Features
+
+* **vue:** :sparkles: add plugin instead of provider ([5a79748](https://github.com/nabla-studio/quirks/commit/5a7974838b3aad1e97be550af05a31975de2dd93))
+* **vue:** :sparkles: add type import ([ceb47a2](https://github.com/nabla-studio/quirks/commit/ceb47a22187730398b7b5a9fa1a08ae5ac322414))
+
 ## [0.1.1](https://github.com/nabla-studio/quirks/compare/vue@0.1.0...vue@0.1.1) (2023-11-07)
 
 
