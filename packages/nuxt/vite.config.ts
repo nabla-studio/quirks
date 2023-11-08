@@ -36,7 +36,14 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: ['vue', '@quirks/vue', '@nuxt/kit'],
+      external: [
+        'nuxt',
+        'nuxt/app',
+        '@quirks/vue',
+        '@quirks/store',
+        '@nuxt/kit',
+        '@nuxt/schema',
+      ],
     },
   },
 

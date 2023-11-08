@@ -14,10 +14,13 @@
   "version": "0.0.0",
   "sideEffects": false,
   "dependencies": {
-    "@quirks/vue": "*"
+    "@quirks/vue": "*",
+    "@quirks/store": "*"
   },
   "peerDependencies": {
-    "@nuxt/kit": "^3.8.1"
+    "nuxt": "^3.8.1",
+    "@nuxt/kit": "^3.8.1",
+    "@nuxt/schema": "^3.8.1"
   },
   "main": "./index.js",
   "module": "./index.mjs",
