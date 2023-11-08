@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.1](https://github.com/nabla-studio/quirks/compare/vue@0.2.0...vue@0.2.1) (2023-11-08)
+
+### Dependency Updates
+
+* `store` updated to version `0.2.0`
 ## [0.2.0](https://github.com/nabla-studio/quirks/compare/vue@0.1.1...vue@0.2.0) (2023-11-08)
 
 ### Dependency Updates
