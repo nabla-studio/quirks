@@ -252,3 +252,15 @@ export const signCW = async (
 
   return client.sign(sender, messages, fee, memo ?? '');
 };
+
+export const signArbitrary = (
+  chainId: string,
+  signer: string,
+  data: string | Uint8Array,
+) => {
+  const state = store.getState();
+
+  assertIsDefined(state.wallet);
+
+  return state.wallet.signArbitrary(chainId, signer, data);
+};

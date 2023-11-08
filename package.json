@@ -86,6 +86,7 @@
     "@cosmjs/cosmwasm-stargate": "^0.31.3",
     "@cosmjs/proto-signing": "^0.31.3",
     "@cosmjs/stargate": "^0.31.3",
+    "@cosmostation/extension-client": "^0.1.15",
     "@keplr-wallet/cosmos": "^0.12.38",
     "@nuxt/kit": "^3.8.1",
     "@nuxt/schema": "^3.8.1",

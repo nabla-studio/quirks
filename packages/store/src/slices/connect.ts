@@ -32,7 +32,7 @@ export const createConnectSlice: StateCreator<
         get().getWalletData();
       });
 
-      get().getWalletData();
+      await get().getWalletData();
     }
   },
   getWalletData: async () => {
@@ -78,9 +78,8 @@ export const createConnectSlice: StateCreator<
 
       await wallet.enable(get().chains.map((el) => el.chain_id));
 
+      await get().setWallet(wallet);
       set(() => ({ status: ConnectionStates.CONNECTED }));
-
-      get().setWallet(wallet);
     } catch (error) {
       console.error(error);
 
@@ -102,9 +101,8 @@ export const createConnectSlice: StateCreator<
 
       await wallet.enable(get().chains.map((el) => el.chain_id));
 
+      await get().setWallet(wallet);
       set(() => ({ reconnectionStatus: ReconnectionStates.RECONNECTED }));
-
-      get().setWallet(wallet);
     } catch (error) {
       console.error(error);
 

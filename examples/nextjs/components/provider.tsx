@@ -8,11 +8,15 @@ import {
 } from '@nabla-studio/chain-registry';
 import { QuirksConfig, QuirksNextProvider } from '@quirks/react';
 import { type Config, ssrPersistOptions } from '@quirks/store';
-import { keplrExtension, leapExtension } from '@quirks/wallets';
+import {
+  keplrExtension,
+  leapExtension,
+  cosmostationExtension,
+} from '@quirks/wallets';
 import { PropsWithChildren } from 'react';
 
 const config: Config = {
-  wallets: [keplrExtension, leapExtension],
+  wallets: [keplrExtension, leapExtension, cosmostationExtension],
   chains: [osmosis, bitsong],
   assetsLists: [osmosisAssetList, bitsongAssetList],
   persistOptions: ssrPersistOptions,
