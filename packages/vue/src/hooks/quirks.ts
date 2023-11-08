@@ -8,7 +8,7 @@ export function useQuirks() {
 
   if (!store?.value)
     throw new Error(
-      ['`useConfig` must be used within `UseQuirksPlugin`'].join('\n'),
+      ['`useConfig` must be used within `quirksPlugin`'].join('\n'),
     );
 
   return create(store.value);
