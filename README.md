@@ -10,7 +10,7 @@ Quirks is a library to easily connect your dapp with existing wallets in the Cos
 - ⚙️ React and NextJS support
 - ⚙️ Vue and NuxtJS support
 - 📉 Small bundles, with vendor chunk splitting
-- 💳 Different wallet supports (Keplr and Leap, just for now)
+- 💳 Different wallet supports (Keplr, Leap and Cosmostation, just for now)
 - 💪 Fully typed and tree-shakeable
 - 🌍 Global state even outside the frameworks
 
