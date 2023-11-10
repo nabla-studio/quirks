@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.0](https://github.com/nabla-studio/quirks/compare/store@0.6.0...store@0.7.0) (2023-11-10)
+
+
+### Features
+
+* **store:** :sparkles: add autosuggestions option ([cba29c5](https://github.com/nabla-studio/quirks/commit/cba29c57c1cf0e178c4e325be64d7ea29601a890))
+
 ## [0.6.0](https://github.com/nabla-studio/quirks/compare/store@0.5.0...store@0.6.0) (2023-11-08)
 
 
