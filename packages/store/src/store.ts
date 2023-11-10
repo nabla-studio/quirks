@@ -76,6 +76,7 @@ export const createConfig = (config: Config) => {
     chains,
     assetsLists,
     autoConnect = true,
+    autoSuggestions = true,
     persistOptions = defaultPersistOptions,
     signOptions,
     signerOptions,
@@ -91,6 +92,14 @@ export const createConfig = (config: Config) => {
     signerOptions,
   };
 
+  const connectOverrideInitialState = {
+    ...connectInitialState,
+    options: {
+      ...connectInitialState.options,
+      autoSuggestions,
+    },
+  };
+
   store = createStore(
     subscribeWithSelector(
       persist(
@@ -101,12 +110,13 @@ export const createConfig = (config: Config) => {
           assetsLists,
           ...createConnectSlice(...props),
           ...createAccountSlice(...props),
+          ...connectOverrideInitialState,
           ...createSignSlice(...props),
           ...signOverrideInitialState,
           reset: () => {
             props[0]({
               ...configInitialState,
-              ...connectInitialState,
+              ...connectOverrideInitialState,
               ...accountInitialState,
               ...signOverrideInitialState,
               wallets,

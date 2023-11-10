@@ -1,8 +1,6 @@
 'use client';
 
-import { bitsong, bitsongAssetList } from '@nabla-studio/chain-registry';
 import { useConfig, useConnect } from '@quirks/react';
-import { suggestChains } from '@quirks/store';
 
 export const Button = () => {
   const { wallets } = useConfig();
@@ -16,9 +14,6 @@ export const Button = () => {
     <div key={wallet.options.name}>
       <button
         onClick={async () => {
-          await suggestChains(wallet.options.name, [
-            { chain: bitsong, assetList: bitsongAssetList, name: 'bitsong' },
-          ]);
           await connect(wallet.options.name);
         }}
       >

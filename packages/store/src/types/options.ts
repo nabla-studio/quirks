@@ -33,6 +33,12 @@ export interface Config {
    */
   autoConnect?: boolean;
   /**
+   * Automatically suggest chains using the provided ones.
+   *
+   * @default true
+   */
+  autoSuggestions?: boolean;
+  /**
    * Specify custom sign option
    *
    * @default
