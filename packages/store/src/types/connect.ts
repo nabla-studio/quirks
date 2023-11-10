@@ -20,11 +20,16 @@ export const ReconnectionStates = {
 export type ReconnectionState =
   (typeof ReconnectionStates)[keyof typeof ReconnectionStates];
 
+export interface ConnectOptions {
+  autoSuggestions: boolean;
+}
+
 export interface ConnectState {
   walletName?: string;
   wallet?: Wallet;
   status: ConnectionState;
   reconnectionStatus: ReconnectionState;
+  options: ConnectOptions;
 }
 
 export interface ConnectActions {
@@ -33,6 +38,7 @@ export interface ConnectActions {
   connect: (walletName: string) => void;
   reconnect: (walletName: string) => void;
   disconnect: () => void;
+  suggestChains: (walletName: string) => Promise<void>;
 }
 
 export type ConnectSlice = ConnectState & ConnectActions;

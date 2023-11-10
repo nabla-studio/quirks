@@ -1,4 +1,8 @@
-import { assertIsDefined, createInvalidWalletName } from '@quirks/core';
+import {
+  type SuggestChain,
+  assertIsDefined,
+  createInvalidWalletName,
+} from '@quirks/core';
 import {
   ConnectionStates,
   type AppState,
@@ -8,12 +12,16 @@ import {
   type ConnectState,
 } from '../types';
 import type { StateCreator } from 'zustand/vanilla';
+import { suggestChains } from '../utils';
 
 export const connectInitialState: ConnectState = {
   walletName: undefined,
   wallet: undefined,
   status: ConnectionStates.DISCONNECTED,
   reconnectionStatus: ReconnectionStates.IDLE,
+  options: {
+    autoSuggestions: true,
+  },
 };
 
 export const createConnectSlice: StateCreator<
@@ -66,6 +74,23 @@ export const createConnectSlice: StateCreator<
       }
     }
   },
+  suggestChains: async (walletName) => {
+    const wallet = get().wallets.find((el) => el.options.name === walletName);
+
+    if (wallet) {
+      const chains: SuggestChain[] = get().chains.map((chain) => ({
+        chain,
+        name: chain.chain_name,
+        assetList: get().assetsLists.find(
+          (list) => list.chain_name === chain.chain_name,
+        ),
+      }));
+
+      console.log(chains);
+
+      return suggestChains(wallet.options.name, chains);
+    }
+  },
   connect: async (walletName) => {
     try {
       const wallet = get().wallets.find((el) => el.options.name === walletName);
@@ -75,6 +100,10 @@ export const createConnectSlice: StateCreator<
       }
 
       set(() => ({ walletName, status: ConnectionStates.WAITING }));
+
+      if (get().options.autoSuggestions) {
+        await get().suggestChains(walletName);
+      }
 
       await wallet.enable(get().chains.map((el) => el.chain_id));
 
@@ -98,6 +127,10 @@ export const createConnectSlice: StateCreator<
       }
 
       set(() => ({ reconnectionStatus: ReconnectionStates.WAITING }));
+
+      if (get().options.autoSuggestions) {
+        await get().suggestChains(walletName);
+      }
 
       await wallet.enable(get().chains.map((el) => el.chain_id));
 
