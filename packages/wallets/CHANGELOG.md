@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.5.0](https://github.com/nabla-studio/quirks/compare/wallets@0.4.0...wallets@0.5.0) (2023-11-13)
+
+### Dependency Updates
+
+* `core` updated to version `0.4.0`
+
+### Features
+
+* **wallets:** :sparkles: add xdefi ext ([915ef6c](https://github.com/nabla-studio/quirks/commit/915ef6c2a7c85b7fad03652483f722d0cd5f3d8e))
+
 ## [0.4.0](https://github.com/nabla-studio/quirks/compare/wallets@0.3.3...wallets@0.4.0) (2023-11-08)
 
 
