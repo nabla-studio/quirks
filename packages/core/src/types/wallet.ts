@@ -42,7 +42,7 @@ export interface WalletOptions {
   /**
    * Window extension key
    */
-  windowKey?: string;
+  windowKey?: string | string[];
   /**
    * Logo url
    */
