@@ -1,11 +1,10 @@
 'use client';
 
+import { sign, getAddress, broadcast } from '@quirks/store';
 import { useChains, useConnect } from '@quirks/react';
 
 const send = async () => {
   const cosmos = (await import('osmojs')).cosmos;
-  const sign = (await import('@quirks/store')).sign;
-  const getAddress = (await import('@quirks/store')).getAddress;
   const { send } = cosmos.bank.v1beta1.MessageComposer.withTypeUrl;
 
   const address = getAddress('osmosis');
@@ -24,8 +23,6 @@ const send = async () => {
   console.log(msg);
 
   const txRaw = await sign('osmosis', [msg]);
-
-  const broadcast = (await import('@quirks/store')).broadcast;
 
   const res = await broadcast('osmosis', txRaw);
 
