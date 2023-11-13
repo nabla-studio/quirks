@@ -13,6 +13,7 @@
   ],
   "version": "0.1.3",
   "sideEffects": false,
+  "type": "module",
   "dependencies": {
     "@quirks/vue": "*",
     "@quirks/store": "*"
