@@ -33,6 +33,9 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
+      output: {
+        preserveModules: true,
+      },
       // External packages that should not be bundled into your library.
       external: [
         'cosmjs-types',
