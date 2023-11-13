@@ -13,6 +13,7 @@
   ],
   "version": "0.7.1",
   "sideEffects": false,
+  "type": "module",
   "dependencies": {
     "@nabla-studio/chain-registry": "*",
     "@quirks/core": "*"
