@@ -13,6 +13,7 @@
   ],
   "version": "0.2.3",
   "sideEffects": false,
+  "type": "module",
   "dependencies": {
     "@quirks/store": "*",
     "@quirks/core": "*"
