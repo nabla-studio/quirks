@@ -86,8 +86,6 @@ export const createConnectSlice: StateCreator<
         ),
       }));
 
-      console.log(chains);
-
       return suggestChains(wallet.options.name, chains);
     }
   },
