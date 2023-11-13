@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.0](https://github.com/nabla-studio/quirks/compare/core@0.5.0...core@0.6.0) (2023-11-13)
+
+
+### Features
+
+* **core:** :sparkles: add nested window key ([c005dee](https://github.com/nabla-studio/quirks/commit/c005dee4c813496f5c8ba85ee9d326411de7a250))
+
 ## [0.5.0](https://github.com/nabla-studio/quirks/compare/core@0.4.1...core@0.5.0) (2023-11-08)
 
 ### Dependency Updates
