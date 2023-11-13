@@ -1,19 +1,38 @@
 import { createClientNotExistError } from './errors';
 
+const objectTraverse = <T extends { [key: string]: never }>(
+  obj: T,
+  keys: string[],
+) => {
+  let cursor = obj;
+
+  for (const key of keys) {
+    cursor = cursor[key];
+  }
+
+  return cursor;
+};
+
 export const getClientFromExtension = async <T>(
-  key: string,
+  key: string | string[],
 ): Promise<T | undefined> => {
   if (typeof window === 'undefined') {
     return undefined;
   }
 
-  const wallet = (window as never)[key] as T;
+  const keys = Array.isArray(key) ? key : key.split('.');
+  const wallet = objectTraverse(window as never, keys) as T;
+  const latestKey = [...keys].pop();
+
+  if (!latestKey) {
+    throw Error(`Invalid key: ${JSON.stringify(key)}`);
+  }
 
   if (wallet) {
     return wallet;
   }
 
-  const clientNotExistError = createClientNotExistError(key);
+  const clientNotExistError = createClientNotExistError(latestKey);
 
   if (document.readyState === 'complete') {
     if (wallet) {
@@ -29,7 +48,7 @@ export const getClientFromExtension = async <T>(
         event.target &&
         (event.target as Document).readyState === 'complete'
       ) {
-        const wallet = (window as never)[key] as T;
+        const wallet = objectTraverse(window as never, keys) as T;
 
         if (wallet) {
           resolve(wallet);
