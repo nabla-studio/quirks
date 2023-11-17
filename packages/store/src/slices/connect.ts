@@ -124,6 +124,8 @@ export const createConnectSlice: StateCreator<
         throw createInvalidWalletName(walletName);
       }
 
+      await wallet.init();
+
       set(() => ({ reconnectionStatus: ReconnectionStates.WAITING }));
 
       if (get().options.autoSuggestions) {
