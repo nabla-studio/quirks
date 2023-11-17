@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.2](https://github.com/nabla-studio/quirks/compare/core@0.6.1...core@0.6.2) (2023-11-17)
+
+
+### Bug Fixes
+
+* **core:** :bug: fix undefined traverse ([6864375](https://github.com/nabla-studio/quirks/commit/6864375834702f2bdd2ecc4e6b3243016cea6577))
+
 ## [0.6.1](https://github.com/nabla-studio/quirks/compare/core@0.6.0...core@0.6.1) (2023-11-13)
 
 ### Dependency Updates
