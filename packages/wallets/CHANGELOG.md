@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.0](https://github.com/nabla-studio/quirks/compare/wallets@0.5.1...wallets@0.6.0) (2023-11-17)
+
+### Dependency Updates
+
+* `core` updated to version `0.5.1`
+
+### Features
+
+* **wallets:** :sparkles: add station wallet ([90af6ce](https://github.com/nabla-studio/quirks/commit/90af6cecc52e624a6b1aa6f2ca3c678ea81ba90d))
+
 ## [0.5.1](https://github.com/nabla-studio/quirks/compare/wallets@0.5.0...wallets@0.5.1) (2023-11-13)
 
 ### Dependency Updates
