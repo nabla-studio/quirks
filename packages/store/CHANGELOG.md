@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.3](https://github.com/nabla-studio/quirks/compare/store@0.7.2...store@0.7.3) (2023-11-17)
+
+### Dependency Updates
+
+* `core` updated to version `0.7.2`
+
+### Bug Fixes
+
+* **store:** :bug: fix wallet reconnect ([dd1dec3](https://github.com/nabla-studio/quirks/commit/dd1dec3049c1760489edf9fb5fd21671f7920bbb))
+
 ## [0.7.2](https://github.com/nabla-studio/quirks/compare/store@0.7.1...store@0.7.2) (2023-11-13)
 
 ### Dependency Updates
