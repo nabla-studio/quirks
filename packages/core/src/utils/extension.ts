@@ -4,13 +4,17 @@ const objectTraverse = <T extends { [key: string]: never }>(
   obj: T,
   keys: string[],
 ) => {
-  let cursor = obj;
+  try {
+    let cursor = obj;
 
-  for (const key of keys) {
-    cursor = cursor[key];
+    for (const key of keys) {
+      cursor = cursor[key];
+    }
+
+    return cursor;
+  } catch {
+    return undefined;
   }
-
-  return cursor;
 };
 
 export const getClientFromExtension = async <T>(
@@ -22,9 +26,9 @@ export const getClientFromExtension = async <T>(
 
   const keys = Array.isArray(key) ? key : key.split('.');
   const wallet = objectTraverse(window as never, keys) as T;
-  const latestKey = [...keys].pop();
+  const firstKey = [...keys].shift();
 
-  if (!latestKey) {
+  if (!firstKey) {
     throw Error(`Invalid key: ${JSON.stringify(key)}`);
   }
 
@@ -32,7 +36,7 @@ export const getClientFromExtension = async <T>(
     return wallet;
   }
 
-  const clientNotExistError = createClientNotExistError(latestKey);
+  const clientNotExistError = createClientNotExistError(firstKey);
 
   if (document.readyState === 'complete') {
     if (wallet) {
