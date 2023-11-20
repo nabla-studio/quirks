@@ -17,6 +17,7 @@ Quirks is a library to easily connect your dapp with existing wallets in the Cos
 And many more to come:
 
 - [ ] Adding more wallets
+- [ ] Web [Broadcast API](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) Support, for tabs, windows and iframe sync
 - [ ] React Native Support
 - [ ] Wallet Connect Support
 - [ ] Web3 Modal Support
