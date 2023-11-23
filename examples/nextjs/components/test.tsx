@@ -29,12 +29,13 @@ const send = async () => {
   console.log(res);
 };
 
-export const Test = () => {
+export const Test = ({ iframe = false }: { iframe?: boolean }) => {
   const { status, connected } = useConnect();
   const { accounts } = useChains();
 
   return (
     <div>
+      {iframe && <iframe src="http://localhost:4200/frame"></iframe>}
       STATUS: {status}
       {connected ? (
         <div>
