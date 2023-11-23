@@ -10,14 +10,14 @@ import {
   createSignSlice,
 } from './slices';
 import { createStore } from 'zustand/vanilla';
-import type { AppState, Config } from './types';
+import type { Config } from './types';
 import { defaultPersistOptions, emptyPersistOptions } from './configs';
 import { shared, defaultSharedOptions } from './middlewares';
 
 export let store = createStore(
   subscribeWithSelector(
     persist(
-      shared<AppState>((...props) => ({
+      shared((...props) => ({
         ...createConfigSlice(...props),
         ...createConnectSlice(...props),
         ...createAccountSlice(...props),

@@ -1,3 +1,4 @@
+import type { AppState } from '../types';
 import type { StateCreator } from 'zustand/vanilla';
 
 export interface SharedOptions {
@@ -6,7 +7,7 @@ export interface SharedOptions {
   enabled?: boolean;
 }
 
-export type SharedType = <T>(
+export type SharedType = <T extends AppState>(
   f: StateCreator<T, [], []>,
   options?: SharedOptions,
 ) => StateCreator<T, [], []>;
@@ -35,9 +36,9 @@ export const shared: SharedType =
     const channel = new BroadcastChannel(options.name);
 
     const set_: typeof set = (...args) => {
-      const prevState = get() as { [k: string]: unknown };
+      const prevState = get() as never as { [k: string]: unknown };
       set(...args);
-      const currentState = get() as { [k: string]: unknown };
+      const currentState = get() as never as { [k: string]: unknown };
       const stateUpdates: { [k: string]: unknown } = {};
 
       /** sync only updated state to avoid un-necessary re-renders */
@@ -64,5 +65,22 @@ export const shared: SharedType =
         set(e.data);
       };
     }
+
+    store.subscribe((state) => {
+      if (
+        state.walletName &&
+        !state.wallet &&
+        state.status === 'CONNECTED' &&
+        (state.reconnectionStatus === 'IDLE' ||
+          state.reconnectionStatus === 'RECONNECTED')
+      ) {
+        const wallet = get().wallets.find(
+          (el) => el.options.name === state.walletName,
+        );
+
+        get().setWallet(wallet);
+      }
+    });
+
     return f(set_, get, store);
   };
