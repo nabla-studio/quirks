@@ -1,9 +1,4 @@
-import {
-  type PersistOptions,
-  createJSONStorage,
-  subscribeWithSelector,
-  persist,
-} from 'zustand/middleware';
+import { subscribeWithSelector, persist } from 'zustand/middleware';
 import {
   configInitialState,
   createConfigSlice,
@@ -14,40 +9,9 @@ import {
   signInitialState,
   createSignSlice,
 } from './slices';
-import { createSSRStorage, noopStorage } from './utils';
 import { createStore } from 'zustand/vanilla';
-import type { AppState, Config } from './types';
-
-const excludedKeys: (keyof AppState)[] = [
-  'wallet',
-  'wallets',
-  'chains',
-  'assetsLists',
-];
-
-export const defaultPersistOptions: PersistOptions<AppState> = {
-  version: 1,
-  name: 'quirks',
-  storage: createJSONStorage(() => window.localStorage),
-  partialize: (state) =>
-    Object.fromEntries(
-      Object.entries(state).filter(
-        ([key]) => !excludedKeys.includes(key as keyof AppState),
-      ),
-    ) as AppState,
-  skipHydration: true,
-};
-
-export const ssrPersistOptions: PersistOptions<AppState> = {
-  ...defaultPersistOptions,
-  storage: createJSONStorage(() => createSSRStorage('localStorage')),
-  skipHydration: true,
-};
-
-const emptyPersistOptions: PersistOptions<AppState> = {
-  ...defaultPersistOptions,
-  storage: createJSONStorage(() => noopStorage),
-};
+import type { Config } from './types';
+import { defaultPersistOptions, emptyPersistOptions } from './configs';
 
 export let store = createStore(
   subscribeWithSelector(
