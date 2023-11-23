@@ -1,0 +1,44 @@
+---
+name: "\U0001F680 Enhancement Proposal Report"
+description: "If I think something could be improved \U00002692"
+title: '[Enhancement]: '
+labels: ['enhancement', 'improvement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this enhancement report!
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Ensure to have completed the submission checklist
+      options:
+        - label: You read the guidelines for contributing.
+          required: true
+        - label: You checked that the enhancement has not yet been reported (also through closed issues).
+          required: true
+  - type: textarea
+    id: enhancement-description
+    attributes:
+      label: Describe the current behavior
+      description: Describe the current behavior and explain which behavior you expected to see instead and why, by explaining as many steps as you can to correctly understand the whole story.
+      placeholder: Tell us what you see and what you what you would like to see.
+    validations:
+      required: true
+  - type: textarea
+    id: usage-description
+    attributes:
+      label: Explain the motivation
+      description: Explain why this enhancement would be useful to most Quirks users.
+      placeholder: Tell us why we should work on this enhancement.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Provide a list of references
+      description: List, if there exist, some other mobile Wallet or similar services where this enhancement exists.
+      placeholder: Tell us who else provides this enhancement.
+    validations:
+      required: false

@@ -21,6 +21,9 @@ const config: Config = {
   chains: [osmosis /* bitsong */],
   assetsLists: [osmosisAssetList /* bitsongAssetList */],
   persistOptions: ssrPersistOptions,
+  sharedOptions: {
+    enabled: true,
+  },
 };
 
 export const Provider = ({ children }: PropsWithChildren<unknown>) => {

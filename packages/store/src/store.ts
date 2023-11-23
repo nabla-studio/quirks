@@ -1,9 +1,4 @@
-import {
-  type PersistOptions,
-  createJSONStorage,
-  subscribeWithSelector,
-  persist,
-} from 'zustand/middleware';
+import { subscribeWithSelector, persist } from 'zustand/middleware';
 import {
   configInitialState,
   createConfigSlice,
@@ -14,45 +9,15 @@ import {
   signInitialState,
   createSignSlice,
 } from './slices';
-import { createSSRStorage, noopStorage } from './utils';
 import { createStore } from 'zustand/vanilla';
 import type { AppState, Config } from './types';
-
-const excludedKeys: (keyof AppState)[] = [
-  'wallet',
-  'wallets',
-  'chains',
-  'assetsLists',
-];
-
-export const defaultPersistOptions: PersistOptions<AppState> = {
-  version: 1,
-  name: 'quirks',
-  storage: createJSONStorage(() => window.localStorage),
-  partialize: (state) =>
-    Object.fromEntries(
-      Object.entries(state).filter(
-        ([key]) => !excludedKeys.includes(key as keyof AppState),
-      ),
-    ) as AppState,
-  skipHydration: true,
-};
-
-export const ssrPersistOptions: PersistOptions<AppState> = {
-  ...defaultPersistOptions,
-  storage: createJSONStorage(() => createSSRStorage('localStorage')),
-  skipHydration: true,
-};
-
-const emptyPersistOptions: PersistOptions<AppState> = {
-  ...defaultPersistOptions,
-  storage: createJSONStorage(() => noopStorage),
-};
+import { defaultPersistOptions, emptyPersistOptions } from './configs';
+import { shared, defaultSharedOptions } from './middlewares';
 
 export let store = createStore(
   subscribeWithSelector(
     persist(
-      (...props) => ({
+      shared<AppState>((...props) => ({
         ...createConfigSlice(...props),
         ...createConnectSlice(...props),
         ...createAccountSlice(...props),
@@ -64,7 +29,7 @@ export let store = createStore(
             ...accountInitialState,
           });
         },
-      }),
+      })),
       emptyPersistOptions,
     ),
   ),
@@ -78,6 +43,7 @@ export const createConfig = (config: Config) => {
     autoConnect = true,
     autoSuggestions = true,
     persistOptions = defaultPersistOptions,
+    sharedOptions = defaultSharedOptions,
     signOptions,
     signerOptions,
   } = config;
@@ -103,28 +69,34 @@ export const createConfig = (config: Config) => {
   store = createStore(
     subscribeWithSelector(
       persist(
-        (...props) => ({
-          ...createConfigSlice(...props),
-          wallets,
-          chains,
-          assetsLists,
-          ...createConnectSlice(...props),
-          ...createAccountSlice(...props),
-          ...connectOverrideInitialState,
-          ...createSignSlice(...props),
-          ...signOverrideInitialState,
-          reset: () => {
-            props[0]({
-              ...configInitialState,
-              ...connectOverrideInitialState,
-              ...accountInitialState,
-              ...signOverrideInitialState,
-              wallets,
-              chains,
-              assetsLists,
-            });
+        shared(
+          (...props) => ({
+            ...createConfigSlice(...props),
+            wallets,
+            chains,
+            assetsLists,
+            ...createConnectSlice(...props),
+            ...createAccountSlice(...props),
+            ...connectOverrideInitialState,
+            ...createSignSlice(...props),
+            ...signOverrideInitialState,
+            reset: () => {
+              props[0]({
+                ...configInitialState,
+                ...connectOverrideInitialState,
+                ...accountInitialState,
+                ...signOverrideInitialState,
+                wallets,
+                chains,
+                assetsLists,
+              });
+            },
+          }),
+          {
+            ...defaultSharedOptions,
+            ...sharedOptions,
           },
-        }),
+        ),
         persistOptions,
       ),
     ),

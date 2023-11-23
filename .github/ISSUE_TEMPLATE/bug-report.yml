@@ -1,0 +1,38 @@
+---
+name: "\U0001F41B Bug Report"
+description: "If something isn't working as expected \U0001F914"
+title: '[Bug]: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Ensure to have completed the submission checklist
+      options:
+        - label: You read the guidelines for contributing.
+          required: true
+        - label: You are able to reproduce the problem in the latest version of Quirks.
+          required: true
+        - label: You checked that the problem has not yet been reported (also through closed issues).
+          required: true
+  - type: textarea
+    id: step-description
+    attributes:
+      label: Describe the exact steps to reproduce the problem in as many details as possible
+      description: When listing steps, don’t just say what you did, but explain how you did it.
+      placeholder: Tell us what you did to obtain the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the issue behavior
+      description: Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
+      placeholder: Tell us what you see.
+    validations:
+      required: true
