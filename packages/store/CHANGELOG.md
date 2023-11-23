@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.0](https://github.com/nabla-studio/quirks/compare/store@0.7.3...store@0.8.0) (2023-11-23)
+
+
+### Features
+
+* **store:** :sparkles: add shared middleware ([58c75df](https://github.com/nabla-studio/quirks/commit/58c75df7d769b69a76a59ba065fe6ce25547ea19))
+* **store:** :sparkles: add shared middleware ([b60b0fc](https://github.com/nabla-studio/quirks/commit/b60b0fcb880c7f72b1faefb3907b02097284510c))
+
 ## [0.7.3](https://github.com/nabla-studio/quirks/compare/store@0.7.2...store@0.7.3) (2023-11-17)
 
 ### Dependency Updates
