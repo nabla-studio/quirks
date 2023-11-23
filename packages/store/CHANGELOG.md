@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.1](https://github.com/nabla-studio/quirks/compare/store@0.8.0...store@0.8.1) (2023-11-23)
+
+
+### Bug Fixes
+
+* **store:** :bug: fix tab sync ([ee96821](https://github.com/nabla-studio/quirks/commit/ee968219a4e72b10edf02d531d1475982e9c4b37))
+
 ## [0.8.0](https://github.com/nabla-studio/quirks/compare/store@0.7.3...store@0.8.0) (2023-11-23)
 
 
