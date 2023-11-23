@@ -10,13 +10,14 @@ import {
   createSignSlice,
 } from './slices';
 import { createStore } from 'zustand/vanilla';
-import type { Config } from './types';
+import type { AppState, Config } from './types';
 import { defaultPersistOptions, emptyPersistOptions } from './configs';
+import { shared, defaultSharedOptions } from './middlewares';
 
 export let store = createStore(
   subscribeWithSelector(
     persist(
-      (...props) => ({
+      shared<AppState>((...props) => ({
         ...createConfigSlice(...props),
         ...createConnectSlice(...props),
         ...createAccountSlice(...props),
@@ -28,7 +29,7 @@ export let store = createStore(
             ...accountInitialState,
           });
         },
-      }),
+      })),
       emptyPersistOptions,
     ),
   ),
@@ -42,6 +43,7 @@ export const createConfig = (config: Config) => {
     autoConnect = true,
     autoSuggestions = true,
     persistOptions = defaultPersistOptions,
+    sharedOptions = defaultSharedOptions,
     signOptions,
     signerOptions,
   } = config;
@@ -67,28 +69,34 @@ export const createConfig = (config: Config) => {
   store = createStore(
     subscribeWithSelector(
       persist(
-        (...props) => ({
-          ...createConfigSlice(...props),
-          wallets,
-          chains,
-          assetsLists,
-          ...createConnectSlice(...props),
-          ...createAccountSlice(...props),
-          ...connectOverrideInitialState,
-          ...createSignSlice(...props),
-          ...signOverrideInitialState,
-          reset: () => {
-            props[0]({
-              ...configInitialState,
-              ...connectOverrideInitialState,
-              ...accountInitialState,
-              ...signOverrideInitialState,
-              wallets,
-              chains,
-              assetsLists,
-            });
+        shared(
+          (...props) => ({
+            ...createConfigSlice(...props),
+            wallets,
+            chains,
+            assetsLists,
+            ...createConnectSlice(...props),
+            ...createAccountSlice(...props),
+            ...connectOverrideInitialState,
+            ...createSignSlice(...props),
+            ...signOverrideInitialState,
+            reset: () => {
+              props[0]({
+                ...configInitialState,
+                ...connectOverrideInitialState,
+                ...accountInitialState,
+                ...signOverrideInitialState,
+                wallets,
+                chains,
+                assetsLists,
+              });
+            },
+          }),
+          {
+            ...defaultSharedOptions,
+            ...sharedOptions,
           },
-        }),
+        ),
         persistOptions,
       ),
     ),

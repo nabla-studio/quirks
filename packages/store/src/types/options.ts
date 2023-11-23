@@ -30,7 +30,7 @@ export interface Config {
   /**
    * Shared (Broadcast API) options
    */
-  sharedOptions?: SharedOptions;
+  sharedOptions?: Omit<Partial<SharedOptions>, 'excluded'>;
   /**
    * Reinit connection on mount
    *
