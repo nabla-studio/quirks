@@ -37,6 +37,46 @@ export abstract class Wallet<T = unknown> {
     this.events.removeAllListeners();
   }
 
+  get logoDark() {
+    const urls = this.options.logoUrls;
+
+    if (urls && urls.dark) {
+      const keys = Object.keys(urls.dark);
+
+      if (urls.dark.svg) {
+        return urls.dark.svg;
+      }
+
+      if (keys.length > 0) {
+        const [key] = keys;
+
+        return (urls.dark as { [key: string]: string })[key];
+      }
+    }
+
+    return undefined;
+  }
+
+  get logoLight() {
+    const urls = this.options.logoUrls;
+
+    if (urls && urls.light) {
+      const keys = Object.keys(urls.light);
+
+      if (urls.light.svg) {
+        return urls.light.svg;
+      }
+
+      if (keys.length > 0) {
+        const [key] = keys;
+
+        return (urls.light as { [key: string]: string })[key];
+      }
+    }
+
+    return undefined;
+  }
+
   abstract addListeners(): void;
 
   abstract init(): Promise<T | undefined>;
