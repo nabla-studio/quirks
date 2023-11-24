@@ -22,10 +22,10 @@ export const keplrExtensionOptions: WalletOptions = {
   ],
   logoUrls: {
     light: {
-      svg: 'https://drive.google.com/u/1/uc?id=1m79yCFaupIAYAjQfFMW-3G_Jk71r3ww5&export=download',
+      svg: 'https://explorer-api.walletconnect.com/v3/logo/lg/527324b0-3849-462b-9a1a-72b53bdfea00?projectId=2f05ae7f1116030fde2d36508f472bfb',
     },
     dark: {
-      svg: 'https://drive.google.com/u/1/uc?id=1m79yCFaupIAYAjQfFMW-3G_Jk71r3ww5&export=download',
+      svg: 'https://explorer-api.walletconnect.com/v3/logo/lg/527324b0-3849-462b-9a1a-72b53bdfea00?projectId=2f05ae7f1116030fde2d36508f472bfb',
     },
   },
   events: {
