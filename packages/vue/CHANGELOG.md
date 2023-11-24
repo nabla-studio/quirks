@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.8](https://github.com/nabla-studio/quirks/compare/vue@0.2.7...vue@0.2.8) (2023-11-24)
+
+### Dependency Updates
+
+* `store` updated to version `0.2.7`
+* `core` updated to version `0.2.7`
+
+### Bug Fixes
+
+* **vue:** :bug: fix types generation ([d560fdb](https://github.com/nabla-studio/quirks/commit/d560fdbe05cb09b4bf9e21742f8d43bcb768f3c0))
+
 ## [0.2.7](https://github.com/nabla-studio/quirks/compare/vue@0.2.6...vue@0.2.7) (2023-11-23)
 
 ### Dependency Updates
