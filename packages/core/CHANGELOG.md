@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.0](https://github.com/nabla-studio/quirks/compare/core@0.6.2...core@0.7.0) (2023-11-24)
+
+### Dependency Updates
+
+* `chain-registry` updated to version `0.6.2`
+
+### Features
+
+* **core:** :sparkles: add logo shorthands ([924d3ae](https://github.com/nabla-studio/quirks/commit/924d3aeeaa06d252f03a4d90f7ea37664277ac87))
+
+
+### Bug Fixes
+
+* **core:** :bug: fix types generation ([0fd8dfe](https://github.com/nabla-studio/quirks/commit/0fd8dfe07948a18ff3e4425be5c8a6a94d044b80))
+
 ## [0.6.2](https://github.com/nabla-studio/quirks/compare/core@0.6.1...core@0.6.2) (2023-11-17)
 
 
