@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.2](https://github.com/nabla-studio/quirks/compare/chain-registry@0.3.1...chain-registry@0.3.2) (2023-11-24)
+
+
+### Bug Fixes
+
+* **chain-registry:** :bug: fix types generation ([ee6e28c](https://github.com/nabla-studio/quirks/commit/ee6e28c69365c3d799ccd0a43cc525ec18f87ac7))
+
 ## [0.3.1](https://github.com/nabla-studio/quirks/compare/chain-registry@0.3.0...chain-registry@0.3.1) (2023-11-13)
 
 ## [0.3.0](https://github.com/nabla-studio/quirks/compare/chain-registry@0.2.1...chain-registry@0.3.0) (2023-11-08)
