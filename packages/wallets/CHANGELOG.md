@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.1](https://github.com/nabla-studio/quirks/compare/wallets@0.6.0...wallets@0.6.1) (2023-11-24)
+
+### Dependency Updates
+
+* `core` updated to version `0.6.0`
+* `chain-registry` updated to version `0.6.0`
+
+### Bug Fixes
+
+* **wallets:** :bug: fix types generation ([d5c0b19](https://github.com/nabla-studio/quirks/commit/d5c0b197a314e8903e8e548e3965f3553361956d))
+* **wallets:** :bug: fix xdefi logo url ([5a7ce5f](https://github.com/nabla-studio/quirks/commit/5a7ce5f401e20cfb54131ed03a1f325c3895d95c))
+
 ## [0.6.0](https://github.com/nabla-studio/quirks/compare/wallets@0.5.1...wallets@0.6.0) (2023-11-17)
 
 ### Dependency Updates
