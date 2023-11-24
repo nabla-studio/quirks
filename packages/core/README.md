@@ -1,6 +1,6 @@
 # core
 
-This library contains all the quirk core definitions.
+This library contains all the quirk core definitions for wallet types and utils.
 
 ## Building
 
