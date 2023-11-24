@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.2](https://github.com/nabla-studio/quirks/compare/store@0.8.1...store@0.8.2) (2023-11-24)
+
+### Dependency Updates
+
+* `chain-registry` updated to version `0.8.1`
+* `core` updated to version `0.8.1`
+
+### Bug Fixes
+
+* **react:** :bug: fix types generation ([f27c383](https://github.com/nabla-studio/quirks/commit/f27c3839409568768c049567d4e5a99eb772ea89))
+* **store:** :bug: fix types generation ([ea45ac4](https://github.com/nabla-studio/quirks/commit/ea45ac49796fa06012f048ac2081332edefdb965))
+
 ## [0.8.1](https://github.com/nabla-studio/quirks/compare/store@0.8.0...store@0.8.1) (2023-11-23)
 
 
