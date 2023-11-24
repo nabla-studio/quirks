@@ -1,5 +1,5 @@
 import { QuirksConfigContext } from './config';
-import { PropsWithChildren, useContext, useEffect, useState } from 'react';
+import { type PropsWithChildren, useContext, useEffect, useState } from 'react';
 
 export const QuirksNextProvider = (props: PropsWithChildren<unknown>) => {
   const { children } = props;
