@@ -12,10 +12,10 @@ export const xdefiExtensionOptions: WalletOptions = {
   ],
   logoUrls: {
     light: {
-      jpg: 'https://lh3.googleusercontent.com/6TkuRn_tZ2v5Bw4MZ2nTwJLEWU-76bAQFJhXunA7cbroI0izn7Mwi46Wvu3q5WfNUbQiPucQTCSTrb0FD_BCXuo3=w128-h128-e365-rj-sc0x00ffffff',
+      jpg: 'https://explorer-api.walletconnect.com/v3/logo/lg/efec6318-7f96-4b30-9287-6c287660cd00?projectId=2f05ae7f1116030fde2d36508f472bfb',
     },
     dark: {
-      jpg: 'https://lh3.googleusercontent.com/6TkuRn_tZ2v5Bw4MZ2nTwJLEWU-76bAQFJhXunA7cbroI0izn7Mwi46Wvu3q5WfNUbQiPucQTCSTrb0FD_BCXuo3=w128-h128-e365-rj-sc0x00ffffff',
+      jpg: 'https://explorer-api.walletconnect.com/v3/logo/lg/efec6318-7f96-4b30-9287-6c287660cd00?projectId=2f05ae7f1116030fde2d36508f472bfb',
     },
   },
   events: {
