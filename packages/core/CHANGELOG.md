@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.1](https://github.com/nabla-studio/quirks/compare/core@0.7.0...core@0.7.1) (2023-11-24)
+
 ## [0.7.0](https://github.com/nabla-studio/quirks/compare/core@0.6.2...core@0.7.0) (2023-11-24)
 
 ### Dependency Updates
