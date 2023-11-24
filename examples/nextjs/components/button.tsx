@@ -18,7 +18,7 @@ export const Button = () => {
         }}
       >
         <img
-          src={wallet.options.logoUrls?.light?.svg}
+          src={wallet.logoLight}
           alt={wallet.options.prettyName}
           height="48px"
           width="48px"
