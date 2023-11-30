@@ -46,6 +46,8 @@ export default defineConfig({
         '@cosmjs/stargate',
         'eventemitter3',
         '@nabla-studio/chain-registry',
+        '@walletconnect/universal-provider',
+        'base64-js',
       ],
     },
   },
