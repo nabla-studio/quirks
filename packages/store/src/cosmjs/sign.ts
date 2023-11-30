@@ -147,7 +147,7 @@ export const sign = async (
   memo?: string,
 ): Promise<TxRaw> => {
   const state = store.getState();
-  assertIsDefined(state.wallet);
+  assertIsDefined(state.wallet, 'wallet is undefined');
 
   const chain = state.chains.find((el) => el.chain_name === chainName);
   assertIsDefined(chain);

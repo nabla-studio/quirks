@@ -3,19 +3,20 @@ import type {
   StdSignDoc,
   AminoSignResponse,
   StdSignature,
+  AccountData,
+  Algo,
 } from '@cosmjs/amino';
 import type {
   OfflineDirectSigner,
   DirectSignResponse,
 } from '@cosmjs/proto-signing';
-import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import {
   WcEventTypes,
   type Key,
-  type SignOptions,
   type WalletOptions,
   WcProviderEventType,
   type WalletEventNames,
+  type WalletConnectAccountData,
 } from './types';
 import { Wallet } from './wallet';
 import type {
@@ -24,6 +25,8 @@ import type {
   UniversalProvider,
 } from '@walletconnect/universal-provider';
 import { assertIsDefined } from './utils';
+import { fromByteArray, toByteArray } from 'base64-js';
+import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 
 export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
   providerOpts!: UniversalProviderOpts;
@@ -113,10 +116,13 @@ export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
    * This method connect the client with wallet connect server and retrieve
    * the topic (uri), to start a wc connection.
    */
-  async generateTopic() {
-    assertIsDefined(this.client);
+  async generateURI(connectParams?: ConnectParams) {
+    assertIsDefined(this.client, 'client is undefined');
 
-    return this.client.connect(this.connectParams);
+    return this.client.connect({
+      ...this.connectParams,
+      ...connectParams,
+    });
   }
 
   override async enable(): Promise<void> {
@@ -124,7 +130,7 @@ export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
   }
 
   override async disable(): Promise<void> {
-    assertIsDefined(this.client);
+    assertIsDefined(this.client, 'client is undefined');
 
     if (this.client.session) {
       await this.client.disconnect();
@@ -162,7 +168,7 @@ export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
   }
 
   override async getAccounts(chainIds: string[]): Promise<Key[]> {
-    assertIsDefined(this.client);
+    assertIsDefined(this.client, 'client is undefined');
     const accounts: Key[] = [];
 
     for (const chainId of chainIds) {
@@ -174,43 +180,105 @@ export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
     return accounts;
   }
 
-  override getOfflineSigner(
+  async getSignerAccounts(): Promise<AccountData[]> {
+    assertIsDefined(this.client, 'client is undefined');
+
+    const accounts = await this.client.request<WalletConnectAccountData[]>({
+      method: 'cosmos_getAccounts',
+    });
+
+    const signerAccounts: AccountData[] = accounts.map((account) => ({
+      address: account.address,
+      algo: account.algo as Algo,
+      pubkey: toByteArray(account.pubkey),
+    }));
+
+    return signerAccounts;
+  }
+
+  override async getOfflineSigner(
     chainId: string,
-    options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner & OfflineDirectSigner> {
-    throw new Error('Method not implemented.');
+    assertIsDefined(this.client, 'client is undefined');
+
+    return {
+      getAccounts: async () => this.getSignerAccounts(),
+      signAmino: (signer: string, signDoc: StdSignDoc) =>
+        this.signAmino(chainId, signer, signDoc),
+      signDirect: (signer: string, signDoc: SignDoc) =>
+        this.signDirect(chainId, signer, signDoc),
+    };
   }
 
-  override getOfflineSignerOnlyAmino(
+  override async getOfflineSignerOnlyAmino(
     chainId: string,
-    options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner> {
-    throw new Error('Method not implemented.');
+    assertIsDefined(this.client, 'client is undefined');
+
+    return {
+      getAccounts: async () => this.getSignerAccounts(),
+      signAmino: (signer: string, signDoc: StdSignDoc) =>
+        this.signAmino(chainId, signer, signDoc),
+    };
   }
 
-  override getOfflineSignerAuto(
+  override async getOfflineSignerAuto(
     chainId: string,
-    options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner | OfflineDirectSigner> {
-    throw new Error('Method not implemented.');
+    assertIsDefined(this.client, 'client is undefined');
+
+    return {
+      getAccounts: async () => this.getSignerAccounts(),
+      signAmino: (signer: string, signDoc: StdSignDoc) =>
+        this.signAmino(chainId, signer, signDoc),
+      signDirect: (signer: string, signDoc: SignDoc) =>
+        this.signDirect(chainId, signer, signDoc),
+    };
   }
 
-  override signAmino(
+  override async signAmino(
     chainId: string,
     signer: string,
     signDoc: StdSignDoc,
-    signOptions?: SignOptions | undefined,
   ): Promise<AminoSignResponse> {
-    throw new Error('Method not implemented.');
+    assertIsDefined(this.client, 'client is undefined');
+
+    return this.client.request(
+      {
+        method: 'cosmos_signAmino',
+        params: {
+          signerAddress: signer,
+          signDoc,
+        },
+      },
+      `cosmos:${chainId}`,
+    );
   }
 
   override signDirect(
     chainId: string,
     signer: string,
     signDoc: SignDoc,
-    signOptions?: SignOptions | undefined,
   ): Promise<DirectSignResponse> {
-    throw new Error('Method not implemented.');
+    assertIsDefined(this.client, 'client is undefined');
+
+    const signDocValue = {
+      signerAddress: signer,
+      signDoc: {
+        chainId: signDoc.chainId,
+        bodyBytes: fromByteArray(signDoc.bodyBytes),
+        authInfoBytes: fromByteArray(signDoc.authInfoBytes),
+        accountNumber: signDoc.accountNumber.toString(),
+      },
+    };
+
+    return this.client.request(
+      {
+        method: 'cosmos_signDirect',
+        params: signDocValue,
+      },
+      `cosmos:${chainId}`,
+    );
   }
 
   override signArbitrary(): Promise<StdSignature> {

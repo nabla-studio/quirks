@@ -108,3 +108,9 @@ export type WalletEventTypes = typeof ExtensionWalletEventTypes &
   typeof WcProviderEventType;
 
 export type WalletEventNames = keyof WalletEventTypes;
+
+export interface WalletConnectAccountData {
+  address: string;
+  algo: string;
+  pubkey: string;
+}
