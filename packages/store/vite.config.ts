@@ -51,6 +51,7 @@ export default defineConfig({
         'cosmjs-types/cosmos/tx/v1beta1/tx',
         '@quirks/core',
         '@nabla-studio/chain-registry',
+        '@walletconnect/universal-provider',
       ],
     },
   },
