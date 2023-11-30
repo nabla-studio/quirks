@@ -38,9 +38,18 @@ export const createConnectSlice: StateCreator<
 
     if (wallet) {
       get().wallet?.removeListeners();
+
       get().wallet?.events.on('keystorechange', () => {
         get().getWalletData();
       });
+
+      get().wallet?.events.on('session_delete', () => {
+        get().disconnect();
+      })
+
+      get().wallet?.events.on('session_expire', () => {
+        get().disconnect();
+      })
 
       await get().getWalletData();
     }
