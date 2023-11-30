@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.0](https://github.com/nabla-studio/quirks/compare/wallets@0.6.4...wallets@0.7.0) (2023-11-30)
+
+### Dependency Updates
+
+* `core` updated to version `0.6.4`
+
+### Features
+
+* **wallets:** :arrow_down: downgrade cosmjs-types ([b138ed6](https://github.com/nabla-studio/quirks/commit/b138ed6b5f3f7e6c5f52f5dbb80d6aeff0f685ff))
+* **wallets:** :sparkles: add wallet connect ([120e163](https://github.com/nabla-studio/quirks/commit/120e16311113ca6d5884e63848d323ac41722f54))
+
 ## [0.6.4](https://github.com/nabla-studio/quirks/compare/wallets@0.6.3...wallets@0.6.4) (2023-11-24)
 
 
