@@ -21,7 +21,7 @@
   "peerDependencies": {
     "@cosmjs/amino": "^0.31.3",
     "@cosmjs/proto-signing": "^0.31.3",
-    "cosmjs-types": "^0.9.0",
+    "cosmjs-types": "^0.8.0",
     "@keplr-wallet/types": "^0.12.38",
     "semver": "^7.5.4",
     "long": "^5.2.3",
