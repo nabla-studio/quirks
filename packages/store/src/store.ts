@@ -8,6 +8,8 @@ import {
   createAccountSlice,
   signInitialState,
   createSignSlice,
+  walletConnectInitialState,
+  createWalletConnectSlice,
 } from './slices';
 import { createStore } from 'zustand/vanilla';
 import type { Config } from './types';
@@ -22,11 +24,13 @@ export let store = createStore(
         ...createConnectSlice(...props),
         ...createAccountSlice(...props),
         ...createSignSlice(...props),
+        ...createWalletConnectSlice(...props),
         reset: () => {
           props[0]({
             ...configInitialState,
             ...connectInitialState,
             ...accountInitialState,
+            ...walletConnectInitialState,
           });
         },
       })),
@@ -44,6 +48,7 @@ export const createConfig = (config: Config) => {
     autoSuggestions = true,
     persistOptions = defaultPersistOptions,
     sharedOptions = defaultSharedOptions,
+    walletConnectOptions,
     signOptions,
     signerOptions,
   } = config;
@@ -66,6 +71,36 @@ export const createConfig = (config: Config) => {
     },
   };
 
+  const overridedNamespaces = walletConnectInitialState.namespaces;
+
+  const cosmosChainIds = chains.map((chain) => `cosmos:${chain.chain_id}`);
+
+  if (walletConnectOptions?.namespaces) {
+    overridedNamespaces.cosmos = {
+      ...walletConnectOptions.namespaces.cosmos,
+      chains: cosmosChainIds,
+      events: [
+        ...overridedNamespaces.cosmos.events,
+        ...walletConnectOptions.namespaces.cosmos.events,
+      ],
+      methods: [
+        ...overridedNamespaces.cosmos.methods,
+        ...walletConnectOptions.namespaces.cosmos.methods,
+      ],
+    };
+  } else {
+    overridedNamespaces.cosmos = {
+      ...overridedNamespaces.cosmos,
+      chains: cosmosChainIds,
+    };
+  }
+
+  const walletConnectOverrideInitialState = {
+    ...walletConnectInitialState,
+    providerOpts: walletConnectOptions?.providerOpts,
+    namespaces: overridedNamespaces,
+  };
+
   store = createStore(
     subscribeWithSelector(
       persist(
@@ -80,12 +115,15 @@ export const createConfig = (config: Config) => {
             ...connectOverrideInitialState,
             ...createSignSlice(...props),
             ...signOverrideInitialState,
+            ...createWalletConnectSlice(...props),
+            ...walletConnectOverrideInitialState,
             reset: () => {
               props[0]({
                 ...configInitialState,
                 ...connectOverrideInitialState,
                 ...accountInitialState,
                 ...signOverrideInitialState,
+                ...walletConnectInitialState,
                 wallets,
                 chains,
                 assetsLists,

@@ -83,7 +83,7 @@ export const shared: SharedType =
           wallet?.options.connectionType ===
           WalletConnectionTypes.WALLET_CONNECT
         ) {
-          await wallet.init();
+          await wallet.init(get().providerOpts);
         }
 
         get().setWallet(wallet);

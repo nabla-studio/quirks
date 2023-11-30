@@ -8,6 +8,10 @@ import type { SigningCosmWasmClientOptions } from '@cosmjs/cosmwasm-stargate';
 import type { PersistOptions } from 'zustand/middleware';
 import type { AppState } from './store';
 import type { SharedOptions } from '../middlewares';
+import type {
+  Namespace,
+  UniversalProviderOpts,
+} from '@walletconnect/universal-provider';
 
 export interface SignerOptions {
   stargate?: (chain: Chain) => Promise<StargateClientOptions | undefined>;
@@ -56,4 +60,8 @@ export interface Config {
    */
   signOptions?: SignOptions;
   signerOptions?: SignerOptions;
+  walletConnectOptions?: {
+    providerOpts: UniversalProviderOpts;
+    namespaces?: { cosmos: Omit<Namespace, 'chains'> };
+  };
 }

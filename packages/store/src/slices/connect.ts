@@ -104,13 +104,21 @@ export const createConnectSlice: StateCreator<
       if (
         wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
       ) {
-        await wallet.init();
-
-        wallet.events.on('display_uri', (uri) => {
-          console.log('DISPLAYYYY', uri);
+        set({
+          pairingURI: undefined,
         });
 
-        await (wallet as WCWallet).generateURI();
+        await wallet.init(get().providerOpts);
+
+        wallet.events.on('display_uri', (uri) => {
+          set({
+            pairingURI: uri,
+          });
+        });
+
+        await (wallet as WCWallet).generateURI({
+          namespaces: get().namespaces,
+        });
       }
 
       if (get().options.autoSuggestions) {
@@ -138,7 +146,12 @@ export const createConnectSlice: StateCreator<
         throw createInvalidWalletName(walletName);
       }
 
-      await wallet.init();
+      const metadata =
+        wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
+          ? get().providerOpts
+          : undefined;
+
+      await wallet.init(metadata);
 
       set(() => ({ reconnectionStatus: ReconnectionStates.WAITING }));
 
