@@ -2,6 +2,8 @@ import {
   type SuggestChain,
   assertIsDefined,
   createInvalidWalletName,
+  WalletConnectionTypes,
+  type WCWallet,
 } from '@quirks/core';
 import {
   ConnectionStates,
@@ -98,6 +100,18 @@ export const createConnectSlice: StateCreator<
       }
 
       set(() => ({ walletName, status: ConnectionStates.WAITING }));
+
+      if (
+        wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
+      ) {
+        await wallet.init();
+
+        wallet.events.on('display_uri', (uri) => {
+          console.log('DISPLAYYYY', uri);
+        });
+
+        await (wallet as WCWallet).generateURI();
+      }
 
       if (get().options.autoSuggestions) {
         await get().suggestChains(walletName);

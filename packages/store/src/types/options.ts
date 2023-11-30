@@ -28,7 +28,7 @@ export interface Config {
    */
   persistOptions?: PersistOptions<AppState>;
   /**
-   * Shared (Broadcast API) options
+   * Experimental Shared (Broadcast API) options
    */
   sharedOptions?: Omit<Partial<SharedOptions>, 'excluded'>;
   /**
