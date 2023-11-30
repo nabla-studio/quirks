@@ -38,12 +38,15 @@ dependencies:
   '@walletconnect/universal-provider':
     specifier: ^2.10.5
     version: 2.10.5(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+  base64-js:
+    specifier: ^1.5.1
+    version: 1.5.1
   bufferutil:
     specifier: ^4.0.8
     version: 4.0.8
   cosmjs-types:
-    specifier: ^0.9.0
-    version: 0.9.0
+    specifier: ^0.8.0
+    version: 0.8.0
   eventemitter3:
     specifier: ^5.0.1
     version: 5.0.1
@@ -1936,7 +1939,7 @@ packages:
   /@cosmjs/proto-signing@0.29.3:
     resolution: {integrity: sha512-Ai3l9THjMOrLJ4Ebn1Dgptwg6W5ZIRJqtnJjijHhGwTVC1WT0WdYU3aMZ7+PwubcA/cA1rH4ZTK7jrfYbra63g==}
     dependencies:
-      '@cosmjs/amino': 0.29.3
+      '@cosmjs/amino': 0.29.5
       '@cosmjs/crypto': 0.29.5
       '@cosmjs/encoding': 0.29.5
       '@cosmjs/math': 0.29.5
@@ -1997,10 +2000,10 @@ packages:
     resolution: {integrity: sha512-455TgXStCi6E8KDjnhDAM8wt6aLSjobH4Dixvd7Up1DfCH6UB9NkC/G0fMJANNcNXMaM4wSX14niTXwD1d31BA==}
     dependencies:
       '@confio/ics23': 0.6.8
-      '@cosmjs/amino': 0.29.3
+      '@cosmjs/amino': 0.29.5
       '@cosmjs/encoding': 0.29.5
       '@cosmjs/math': 0.29.5
-      '@cosmjs/proto-signing': 0.29.3
+      '@cosmjs/proto-signing': 0.29.5
       '@cosmjs/stream': 0.29.5
       '@cosmjs/tendermint-rpc': 0.29.5(bufferutil@4.0.8)(utf-8-validate@6.0.3)
       '@cosmjs/utils': 0.29.5
@@ -8606,10 +8609,6 @@ packages:
     dependencies:
       long: 4.0.0
       protobufjs: 6.11.4
-    dev: false
-
-  /cosmjs-types@0.9.0:
-    resolution: {integrity: sha512-MN/yUe6mkJwHnCFfsNPeCfXVhyxHYW6c/xDUzrSbBycYzw++XvWDMJArXp2pLdgD6FQ8DW79vkPjeNKVrXaHeQ==}
     dev: false
 
   /crc-32@1.2.2:
