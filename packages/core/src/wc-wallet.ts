@@ -271,6 +271,9 @@ export class WCWallet extends Wallet<
     };
   }
 
+  /**
+   * Maybe we can implement it later using signDirect 
+   */
   override signArbitrary(): Promise<StdSignature> {
     throw new Error('Method not implemented.');
   }
