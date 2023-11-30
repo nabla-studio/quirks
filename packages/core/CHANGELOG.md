@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.0](https://github.com/nabla-studio/quirks/compare/core@0.7.1...core@0.8.0) (2023-11-30)
+
+
+### Features
+
+* **core:** :sparkles: add basic wc wallet ([caf9d7e](https://github.com/nabla-studio/quirks/commit/caf9d7e64e035ea9cec8ddbe2b8bef68863e3faf))
+* **core:** :sparkles: add wc sign direct support ([afe07b5](https://github.com/nabla-studio/quirks/commit/afe07b5406ad6486edd11c1a7aa84c0f05f31fb6))
+* **core:** :sparkles: add wc signing ([60ff093](https://github.com/nabla-studio/quirks/commit/60ff093ca1db6e355e6efd5b651061e007147666))
+
 ## [0.7.1](https://github.com/nabla-studio/quirks/compare/core@0.7.0...core@0.7.1) (2023-11-24)
 
 ## [0.7.0](https://github.com/nabla-studio/quirks/compare/core@0.6.2...core@0.7.0) (2023-11-24)
