@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.9.0](https://github.com/nabla-studio/quirks/compare/store@0.8.3...store@0.9.0) (2023-11-30)
+
+### Dependency Updates
+
+* `core` updated to version `0.8.3`
+
+### Features
+
+* **core:** :sparkles: add wc signing ([60ff093](https://github.com/nabla-studio/quirks/commit/60ff093ca1db6e355e6efd5b651061e007147666))
+* **store:** :sparkles: add getOfflineSigner utility ([52ae413](https://github.com/nabla-studio/quirks/commit/52ae413eec9f31aaf4dc41d3968b2ecd30d6fee0))
+* **store:** :sparkles: add wallet connect disconnection ([b8b304d](https://github.com/nabla-studio/quirks/commit/b8b304df70773cabf9f744d97a7c480c1738d01b))
+* **store:** :sparkles: add wallet connect slice ([d158717](https://github.com/nabla-studio/quirks/commit/d15871744f91eb84524eebbfcf856fe3ffc9b0ac))
+* **store:** :sparkles: add wc basic connection ([77a7110](https://github.com/nabla-studio/quirks/commit/77a7110283d55a0795826e1593b443b5322dcd87))
+
 ## [0.8.3](https://github.com/nabla-studio/quirks/compare/store@0.8.2...store@0.8.3) (2023-11-24)
 
 ### Dependency Updates
