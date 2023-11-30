@@ -24,7 +24,9 @@ export const useChain = (chainName: string) => {
 
   return {
     chain,
-    address: store.use.getAddress()(chain.chain_id),
+    address: store.use
+      .accounts()
+      .find((account) => account.chainId === chain.chain_id)?.bech32Address,
     accountName: store.use.accountName ? store.use.accountName() : undefined,
     getOfflineSigner: () => store.use.getOfflineSigner()(chain.chain_id),
     getOfflineSignerOnlyAmino: () =>

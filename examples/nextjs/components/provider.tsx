@@ -8,6 +8,7 @@ import {
   keplrExtension,
   leapExtension,
   cosmostationExtension,
+  universalWalletConnect,
 } from '@quirks/wallets';
 import { PropsWithChildren } from 'react';
 
@@ -17,12 +18,22 @@ const config: Config = {
     leapExtension,
     cosmostationExtension,
     xdefiExtension,
+    universalWalletConnect,
   ],
   chains: [osmosis /* bitsong */],
   assetsLists: [osmosisAssetList /* bitsongAssetList */],
   persistOptions: ssrPersistOptions,
-  sharedOptions: {
-    enabled: true,
+  walletConnectOptions: {
+    providerOpts: {
+      logger: 'info',
+      projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+      metadata: {
+        name: 'React App',
+        description: 'React App for WalletConnect',
+        url: 'https://walletconnect.com/',
+        icons: ['https://avatars.githubusercontent.com/u/37784886'],
+      },
+    },
   },
 };
 

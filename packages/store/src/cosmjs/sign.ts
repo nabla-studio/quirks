@@ -10,6 +10,7 @@ import {
 import type { SigningStargateClientOptions } from '@cosmjs/stargate';
 import type { SigningCosmWasmClientOptions } from '@cosmjs/cosmwasm-stargate';
 import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
+import type { SignerType } from '../types';
 
 /**
  * Why is this part outside the store?
@@ -131,6 +132,29 @@ export const broadcastSync = async (chainName: string, txRaw: TxRaw) => {
   return client.broadcastTxSync(txBytes);
 };
 
+export const getOfflineSigner = (chainId: string, signerType: SignerType = 'auto') => {
+  const state = store.getState();
+  assertIsDefined(state.wallet, 'wallet is undefined');
+
+  switch (signerType) {
+    case 'auto':
+      return state.wallet.getOfflineSignerAuto(
+        chainId,
+        state.signOptions,
+      );
+    case 'amino':
+      return state.wallet.getOfflineSignerOnlyAmino(
+        chainId,
+        state.signOptions,
+      );
+    case 'direct':
+      return state.wallet.getOfflineSigner(
+        chainId,
+        state.signOptions,
+      );
+  }
+}
+
 /**
  * Sign a TX using CosmJS Stargate Client
  *
@@ -144,10 +168,11 @@ export const sign = async (
   chainName: string,
   messages: EncodeObject[],
   fee: StdFee | 'auto' = 'auto',
+  signerType: SignerType = 'auto',
   memo?: string,
 ): Promise<TxRaw> => {
   const state = store.getState();
-  assertIsDefined(state.wallet);
+  assertIsDefined(state.wallet, 'wallet is undefined');
 
   const chain = state.chains.find((el) => el.chain_name === chainName);
   assertIsDefined(chain);
@@ -156,10 +181,7 @@ export const sign = async (
 
   const sender = getAddress(chainName);
 
-  const offlineSigner = await state.wallet.getOfflineSignerAuto(
-    chain.chain_id,
-    state.signOptions,
-  );
+  const offlineSigner = await getOfflineSigner(chain.chain_id, signerType);
 
   let clientOptions: SigningStargateClientOptions | undefined = undefined;
 
@@ -204,6 +226,7 @@ export const signCW = async (
   chainName: string,
   messages: EncodeObject[],
   fee: StdFee | 'auto' = 'auto',
+  signerType: SignerType = 'auto',
   memo?: string,
 ): Promise<TxRaw> => {
   const state = store.getState();
@@ -218,10 +241,7 @@ export const signCW = async (
 
   const sender = getAddress(chainName);
 
-  const offlineSigner = await state.wallet.getOfflineSignerAuto(
-    chain.chain_id,
-    state.signOptions,
-  );
+  const offlineSigner = await getOfflineSigner(chain.chain_id, signerType);
 
   let clientOptions: SigningCosmWasmClientOptions | undefined = undefined;
 

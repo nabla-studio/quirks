@@ -19,7 +19,7 @@ And many more to come:
 - [x] Adding more wallets
 - [x] Web [Broadcast API](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) Support, for tabs, windows and iframe sync
 - [ ] React Native Support
-- [ ] Wallet Connect Support
+- [x] Wallet Connect Support
 - [ ] Web3 Modal Support
 - [ ] UI Kit (Cross Framework)
 - [ ] Improve Docs

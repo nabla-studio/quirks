@@ -1,3 +1,4 @@
+import { WalletConnectionTypes } from '@quirks/core';
 import type { AppState } from '../types';
 import type { StateCreator } from 'zustand/vanilla';
 
@@ -66,7 +67,7 @@ export const shared: SharedType =
       };
     }
 
-    store.subscribe((state) => {
+    store.subscribe(async (state) => {
       if (
         state.walletName &&
         !state.wallet &&
@@ -77,6 +78,13 @@ export const shared: SharedType =
         const wallet = get().wallets.find(
           (el) => el.options.name === state.walletName,
         );
+
+        if (
+          wallet?.options.connectionType ===
+          WalletConnectionTypes.WALLET_CONNECT
+        ) {
+          await wallet.init(get().providerOpts);
+        }
 
         get().setWallet(wallet);
       }

@@ -19,7 +19,11 @@ import type {
 } from './types';
 import EventEmitter from 'eventemitter3';
 
-export abstract class Wallet<T = unknown> {
+/**
+ * Where T is the client type of the wallet
+ * Where K is the metadata type for init function
+ */
+export abstract class Wallet<T = unknown, K = unknown> {
   options: WalletOptions;
   client?: T;
   /**
@@ -79,7 +83,7 @@ export abstract class Wallet<T = unknown> {
 
   abstract addListeners(): void;
 
-  abstract init(): Promise<T | undefined>;
+  abstract init(metadata: K): Promise<T | undefined>;
 
   abstract getAccount(chainId: string): Promise<Key>;
 

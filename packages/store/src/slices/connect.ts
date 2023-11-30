@@ -2,6 +2,8 @@ import {
   type SuggestChain,
   assertIsDefined,
   createInvalidWalletName,
+  WalletConnectionTypes,
+  type WCWallet,
 } from '@quirks/core';
 import {
   ConnectionStates,
@@ -36,9 +38,18 @@ export const createConnectSlice: StateCreator<
 
     if (wallet) {
       get().wallet?.removeListeners();
+
       get().wallet?.events.on('keystorechange', () => {
         get().getWalletData();
       });
+
+      get().wallet?.events.on('session_delete', () => {
+        get().disconnect();
+      })
+
+      get().wallet?.events.on('session_expire', () => {
+        get().disconnect();
+      })
 
       await get().getWalletData();
     }
@@ -99,6 +110,26 @@ export const createConnectSlice: StateCreator<
 
       set(() => ({ walletName, status: ConnectionStates.WAITING }));
 
+      if (
+        wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
+      ) {
+        set({
+          pairingURI: undefined,
+        });
+
+        await wallet.init(get().providerOpts);
+
+        wallet.events.on('display_uri', (uri) => {
+          set({
+            pairingURI: uri,
+          });
+        });
+
+        await (wallet as WCWallet).generateURI({
+          namespaces: get().namespaces,
+        });
+      }
+
       if (get().options.autoSuggestions) {
         await get().suggestChains(walletName);
       }
@@ -124,7 +155,12 @@ export const createConnectSlice: StateCreator<
         throw createInvalidWalletName(walletName);
       }
 
-      await wallet.init();
+      const metadata =
+        wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
+          ? get().providerOpts
+          : undefined;
+
+      await wallet.init(metadata);
 
       set(() => ({ reconnectionStatus: ReconnectionStates.WAITING }));
 
