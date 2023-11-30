@@ -17,6 +17,8 @@ import {
   WcProviderEventType,
   type WalletEventNames,
   type WalletConnectAccountData,
+  type WalletConnectSignDirectRequest,
+  type WalletConnectSignDirectResponse,
 } from './types';
 import { Wallet } from './wallet';
 import type {
@@ -27,46 +29,25 @@ import type {
 import { assertIsDefined } from './utils';
 import { fromByteArray, toByteArray } from 'base64-js';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
+import Long from 'long';
 
-export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
-  providerOpts!: UniversalProviderOpts;
-  connectParams!: ConnectParams;
-
-  constructor(
-    options: WalletOptions,
-    providerOpts?: UniversalProviderOpts,
-    connectParams?: ConnectParams,
-  ) {
+export class WCWallet extends Wallet<
+  InstanceType<typeof UniversalProvider>,
+  UniversalProviderOpts
+> {
+  constructor(options: WalletOptions) {
     super(options);
 
     this.injected = true;
-    this.setOptions(providerOpts, connectParams);
   }
 
-  /**
-   * Enable options change on fly even after class init,
-   * so we can use this inside an external controller
-   */
-  setOptions(
-    providerOpts?: UniversalProviderOpts,
-    connectParams?: ConnectParams,
-  ) {
-    if (providerOpts) {
-      this.providerOpts = providerOpts;
-    }
-
-    if (connectParams) {
-      this.connectParams = connectParams;
-    }
-  }
-
-  override async init() {
+  override async init(metadata: UniversalProviderOpts) {
     const UniversalProvider = (
       await import('@walletconnect/universal-provider')
     ).UniversalProvider;
 
     try {
-      this.client = await UniversalProvider.init(this.providerOpts);
+      this.client = await UniversalProvider.init(metadata);
 
       if (this.client) {
         this.addListeners();
@@ -116,11 +97,10 @@ export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
    * This method connect the client with wallet connect server and retrieve
    * the topic (uri), to start a wc connection.
    */
-  async generateURI(connectParams?: ConnectParams) {
+  async generateURI(connectParams: ConnectParams) {
     assertIsDefined(this.client, 'client is undefined');
 
     return this.client.connect({
-      ...this.connectParams,
       ...connectParams,
     });
   }
@@ -243,7 +223,7 @@ export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
   ): Promise<AminoSignResponse> {
     assertIsDefined(this.client, 'client is undefined');
 
-    return this.client.request(
+    return this.client.request<AminoSignResponse>(
       {
         method: 'cosmos_signAmino',
         params: {
@@ -255,14 +235,14 @@ export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
     );
   }
 
-  override signDirect(
+  override async signDirect(
     chainId: string,
     signer: string,
     signDoc: SignDoc,
   ): Promise<DirectSignResponse> {
     assertIsDefined(this.client, 'client is undefined');
 
-    const signDocValue = {
+    const signDocValue: WalletConnectSignDirectRequest = {
       signerAddress: signer,
       signDoc: {
         chainId: signDoc.chainId,
@@ -272,13 +252,23 @@ export class WCWallet extends Wallet<InstanceType<typeof UniversalProvider>> {
       },
     };
 
-    return this.client.request(
+    const result = await this.client.request<WalletConnectSignDirectResponse>(
       {
         method: 'cosmos_signDirect',
         params: signDocValue,
       },
       `cosmos:${chainId}`,
     );
+
+    return {
+      ...result,
+      signed: {
+        chainId: result.signed.chainId,
+        accountNumber: Long.fromString(result.signed.accountNumber, false),
+        authInfoBytes: toByteArray(result.signed.authInfoBytes),
+        bodyBytes: toByteArray(result.signed.bodyBytes),
+      },
+    };
   }
 
   override signArbitrary(): Promise<StdSignature> {

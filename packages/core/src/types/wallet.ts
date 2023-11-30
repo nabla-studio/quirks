@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import type { StdSignature } from '@cosmjs/amino';
 import type { SignClientTypes } from '@walletconnect/types';
 
 export const WalletConnectionTypes = {
@@ -113,4 +114,28 @@ export interface WalletConnectAccountData {
   address: string;
   algo: string;
   pubkey: string;
+}
+
+export interface WalletConnectDirectSignDoc {
+  chainId: string;
+  accountNumber: string;
+  authInfoBytes: string;
+  bodyBytes: string;
+}
+
+export interface WalletConnectDirectSignDoc {
+  chainId: string;
+  accountNumber: string;
+  authInfoBytes: string;
+  bodyBytes: string;
+}
+
+export interface WalletConnectSignDirectRequest {
+  signerAddress: string;
+  signDoc: WalletConnectDirectSignDoc;
+}
+
+export interface WalletConnectSignDirectResponse {
+  signature: StdSignature;
+  signed: WalletConnectDirectSignDoc;
 }
