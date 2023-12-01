@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/nabla-studio/quirks/compare/vue@0.2.9...vue@0.3.0) (2023-12-01)
+
+### Dependency Updates
+
+* `store` updated to version `0.2.9`
+* `core` updated to version `0.2.9`
+
+### Features
+
+* **vue:** :sparkles: add wallet connect hook ([4bf5eb4](https://github.com/nabla-studio/quirks/commit/4bf5eb48d1a705f385c67e844d29d0eaf74efbdf))
+
 ## [0.2.9](https://github.com/nabla-studio/quirks/compare/vue@0.2.8...vue@0.2.9) (2023-11-24)
 
 ### Dependency Updates
