@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/nabla-studio/quirks/compare/react@0.3.14...react@0.4.0) (2023-12-01)
+
+### Dependency Updates
+
+* `store` updated to version `0.3.14`
+* `core` updated to version `0.3.14`
+
+### Features
+
+* **react:** :sparkles: add wallet connect hook ([4b6473f](https://github.com/nabla-studio/quirks/commit/4b6473f08d9ccbc4c52744d71f523d6d12867ca5))
+
+
+### Bug Fixes
+
+* **react:** :bug: fix address change ([ca2cbd0](https://github.com/nabla-studio/quirks/commit/ca2cbd0d566a97ccde31372feb48c9f2fe7d5cdf))
+
 ## [0.3.14](https://github.com/nabla-studio/quirks/compare/react@0.3.13...react@0.3.14) (2023-11-24)
 
 ### Dependency Updates
