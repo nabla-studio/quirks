@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.5.0](https://github.com/nabla-studio/quirks/compare/react@0.4.0...react@0.5.0) (2023-12-08)
+
+### Dependency Updates
+
+* `store` updated to version `0.4.0`
+* `core` updated to version `0.4.0`
+
+### Features
+
+* **react:** :sparkles: add setupStatus check ([20a4157](https://github.com/nabla-studio/quirks/commit/20a4157fb83bfb976567e47ba91c6d051c584937))
+* **react:** :sparkles: add useWalletEvents hooks ([5cf249c](https://github.com/nabla-studio/quirks/commit/5cf249c88d14edc44e4fb54808080367c28a6ed4))
+
 ## [0.4.0](https://github.com/nabla-studio/quirks/compare/react@0.3.14...react@0.4.0) (2023-12-01)
 
 ### Dependency Updates
