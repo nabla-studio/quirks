@@ -6,6 +6,7 @@ export const excludedKeys: (keyof AppState)[] = [
   'wallets',
   'chains',
   'assetsLists',
+  'setupStatus',
 ];
 
 export const defaultPersistOptions: PersistOptions<AppState> = {
