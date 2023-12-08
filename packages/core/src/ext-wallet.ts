@@ -7,24 +7,32 @@ export abstract class ExtensionWallet<T> extends Wallet<T> {
     super(options);
 
     this.init();
+    this.keystoreChange = this.keystoreChange.bind(this);
+  }
+
+  keystoreChange() {
+    this.events.emit('keystorechange');
   }
 
   override removeListeners(): void {
     super.removeListeners();
 
     if (typeof window !== 'undefined') {
-      window.removeEventListener(this.options.events.keystorechange, () =>
-        this.events.emit('keystorechange'),
+      window.removeEventListener(
+        this.options.events.keystorechange,
+        this.keystoreChange,
       );
     }
   }
 
   override addListeners() {
     this.removeListeners();
+
     if (typeof window !== 'undefined') {
-      window.addEventListener(this.options.events.keystorechange, () => {
-        this.events.emit('keystorechange');
-      });
+      window.addEventListener(
+        this.options.events.keystorechange,
+        this.keystoreChange,
+      );
     }
   }
 
