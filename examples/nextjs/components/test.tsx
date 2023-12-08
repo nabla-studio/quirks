@@ -1,7 +1,7 @@
 'use client';
 
 import { sign, getAddress, broadcast } from '@quirks/store';
-import { useChains, useConnect } from '@quirks/react';
+import { useChains, useConnect, useWalletEvents } from '@quirks/react';
 
 const send = async () => {
   const cosmos = (await import('osmojs')).cosmos;
@@ -32,6 +32,10 @@ const send = async () => {
 export const Test = ({ iframe = false }: { iframe?: boolean }) => {
   const { status, connected } = useConnect();
   const { accounts } = useChains();
+
+  useWalletEvents('keystorechange', () => {
+    console.log('Changed');
+  });
 
   return (
     <div>
