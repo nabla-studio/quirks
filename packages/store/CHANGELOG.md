@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.9.1](https://github.com/nabla-studio/quirks/compare/store@0.9.0...store@0.9.1) (2023-12-08)
+
+### Dependency Updates
+
+* `core` updated to version `0.9.0`
+
+### Bug Fixes
+
+* **store:** :bug: fix duplicated emit ([89dfce8](https://github.com/nabla-studio/quirks/commit/89dfce8bc0b88eeb1e49c443bfd85be720e5a22c))
+
 ## [0.9.0](https://github.com/nabla-studio/quirks/compare/store@0.8.3...store@0.9.0) (2023-11-30)
 
 ### Dependency Updates
