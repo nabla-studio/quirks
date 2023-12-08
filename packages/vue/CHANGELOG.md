@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/nabla-studio/quirks/compare/vue@0.3.0...vue@0.4.0) (2023-12-08)
+
+### Dependency Updates
+
+* `store` updated to version `0.3.0`
+* `core` updated to version `0.3.0`
+
+### Features
+
+* **vue:** :sparkles: add useWalletEvents hook ([7d2dab0](https://github.com/nabla-studio/quirks/commit/7d2dab0a61a7cd6084977c0ec748e5ebd251af70))
+
+
+### Bug Fixes
+
+* **vue:** :bug: fix useChain return values ([d6b5701](https://github.com/nabla-studio/quirks/commit/d6b57011d5ed3bdb822f55d0a04e3808a21af374))
+
 ## [0.3.0](https://github.com/nabla-studio/quirks/compare/vue@0.2.9...vue@0.3.0) (2023-12-01)
 
 ### Dependency Updates
