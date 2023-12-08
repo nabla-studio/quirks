@@ -21,7 +21,7 @@ export const useChains = () => {
 
 export const useChain = (chainName: string) => {
   const getChain = useQuirks()((state) => state.getChain);
-  const getAddress = useQuirks()((state) => state.getChain);
+  const getAddress = useQuirks()((state) => state.getAddress);
   const accountName = useQuirks()((state) => state.accountName);
   const getOfflineSigner = useQuirks()((state) => state.getOfflineSigner);
   const getOfflineSignerOnlyAmino = useQuirks()(
