@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useConnect, useConfig, useChains } from '@quirks/vue';
+import { useConnect, useConfig, useChains, useWalletEvents } from '@quirks/vue';
 import { bitsong, bitsongAssetList } from '@nabla-studio/chain-registry';
 
 const { wallets } = useConfig();
@@ -43,6 +43,10 @@ const send = async () => {
 
   console.log(res);
 };
+
+useWalletEvents('keystorechange', () => {
+  console.log('Changed');
+});
 </script>
 
 <template>
