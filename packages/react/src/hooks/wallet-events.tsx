@@ -2,6 +2,7 @@ import type { WalletEventTypes, WalletEventNames } from '@quirks/core';
 import type { EventEmitter } from 'eventemitter3';
 import { useEffect } from 'react';
 import { useQuirks } from '../providers';
+import { SetupStates } from '@quirks/store';
 
 /**
  * It allow you to subscribe to quirks wallets events.
@@ -17,9 +18,10 @@ export const useWalletEvents = <
 ) => {
   const store = useQuirks();
   const wallet = store.use.wallet ? store.use.wallet() : undefined;
+  const setupStatus = store.use.setupStatus();
 
   useEffect(() => {
-    if (wallet) {
+    if (wallet && setupStatus === SetupStates.INITIALIZED) {
       wallet.events.addListener(event, fn);
     }
 
@@ -28,5 +30,5 @@ export const useWalletEvents = <
         wallet.events.removeListener(event, fn);
       }
     };
-  }, [event, fn, wallet]);
+  }, [event, fn, setupStatus, wallet]);
 };
