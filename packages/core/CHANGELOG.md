@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.1](https://github.com/nabla-studio/quirks/compare/core@0.8.0...core@0.8.1) (2023-12-08)
+
+
+### Bug Fixes
+
+* **core:** :bug: fix ext wallet keystoreChange bind ([31b4e19](https://github.com/nabla-studio/quirks/commit/31b4e198effd9da78252a591642d1921df320f64))
+
 ## [0.8.0](https://github.com/nabla-studio/quirks/compare/core@0.7.1...core@0.8.0) (2023-11-30)
 
 
