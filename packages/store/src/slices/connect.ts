@@ -12,6 +12,7 @@ import {
   type AddressWithChain,
   ReconnectionStates,
   type ConnectState,
+  SetupStates,
 } from '../types';
 import type { StateCreator } from 'zustand/vanilla';
 import { suggestChains } from '../utils';
@@ -21,6 +22,7 @@ export const connectInitialState: ConnectState = {
   wallet: undefined,
   status: ConnectionStates.DISCONNECTED,
   reconnectionStatus: ReconnectionStates.IDLE,
+  setupStatus: SetupStates.DEINITIALIZED,
   options: {
     autoSuggestions: true,
   },
@@ -34,10 +36,10 @@ export const createConnectSlice: StateCreator<
 > = (set, get) => ({
   ...connectInitialState,
   setWallet: async (wallet) => {
-    set(() => ({ wallet }));
+    set(() => ({ wallet, setupStatus: SetupStates.DEINITIALIZED }));
 
     if (wallet) {
-      get().wallet?.removeListeners();
+      get().wallet?.addListeners();
 
       get().wallet?.events.on('keystorechange', () => {
         get().getWalletData();
@@ -45,11 +47,13 @@ export const createConnectSlice: StateCreator<
 
       get().wallet?.events.on('session_delete', () => {
         get().disconnect();
-      })
+      });
 
       get().wallet?.events.on('session_expire', () => {
         get().disconnect();
-      })
+      });
+
+      set(() => ({ setupStatus: SetupStates.INITIALIZED }));
 
       await get().getWalletData();
     }

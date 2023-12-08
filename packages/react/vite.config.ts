@@ -52,6 +52,7 @@ export default defineConfig({
         'cosmjs-types',
         'cosmjs-types/cosmos/tx/v1beta1/tx',
         '@cosmjs/amino',
+        'eventemitter3',
       ],
     },
   },

@@ -20,6 +20,13 @@ export const ReconnectionStates = {
 export type ReconnectionState =
   (typeof ReconnectionStates)[keyof typeof ReconnectionStates];
 
+export const SetupStates = {
+  DEINITIALIZED: 'DEINITIALIZED',
+  INITIALIZED: 'INITIALIZED',
+} as const;
+
+export type SetupState = (typeof SetupStates)[keyof typeof SetupStates];
+
 export interface ConnectOptions {
   autoSuggestions: boolean;
 }
@@ -28,6 +35,7 @@ export interface ConnectState {
   walletName?: string;
   wallet?: Wallet;
   status: ConnectionState;
+  setupStatus: SetupState;
   reconnectionStatus: ReconnectionState;
   options: ConnectOptions;
 }
