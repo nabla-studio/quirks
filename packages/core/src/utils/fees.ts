@@ -12,7 +12,8 @@ import type { Chain } from '@nabla-studio/chain-registry';
  * @returns
  */
 export const getGasPrice = async (chain: Chain, feeDenom?: string) => {
-  const GasPrice = (await import('@cosmjs/stargate')).GasPrice;
+  const stargate = await import('@cosmjs/stargate');
+  const GasPrice = stargate.GasPrice ?? stargate.default.GasPrice;
   let gasPrice: GasPrice | undefined = undefined;
 
   if (chain.fees && chain.fees.fee_tokens.length > 0) {
@@ -54,7 +55,8 @@ export const estimateFee = async (
 
   const gasEstimation = await client.simulate(sender, messages, memo);
 
-  const calculateFee = (await import('@cosmjs/stargate')).calculateFee;
+  const stargate = await import('@cosmjs/stargate');
+  const calculateFee = stargate.calculateFee ?? stargate.default.calculateFee;
 
   return calculateFee(Math.round(gasEstimation * multiplier), gasPrice);
 };
