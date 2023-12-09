@@ -27,6 +27,6 @@
     "zustand-vue": "1.0.0-beta.20"
   },
   "main": "./index.js",
-  "module": "./index.mjs",
+  "module": "./index.js",
   "typings": "./index.d.ts"
 }
