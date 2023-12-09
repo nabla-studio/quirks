@@ -31,7 +31,30 @@ export default defineNuxtModule<QuirksNuxtOptions>({
   setup(options, nuxt) {
     // add packages to transpile target for alias resolution
     nuxt.options.build = nuxt.options.build || {};
+
     nuxt.options.build.transpile = nuxt.options.build.transpile || [];
+    nuxt.options.build.transpile.push(packageName);
+    /**
+     * add transpile to avoid esm bugs
+     */
+    nuxt.options.build.transpile.push(packageVueName);
+
+    const optimizeDeps = {
+      ...nuxt.options.vite.optimizeDeps,
+      esbuildOptions: {
+        ...nuxt.options.vite.optimizeDeps?.esbuildOptions,
+        define: {
+          ...nuxt.options.vite.optimizeDeps?.esbuildOptions?.define,
+          global: 'globalThis',
+        },
+      },
+      include: [
+        ...(nuxt.options.vite.optimizeDeps?.include ?? []),
+        packageVueName,
+      ],
+    };
+
+    nuxt.options.vite.optimizeDeps = optimizeDeps;
 
     const exclude = nuxt.options.quirks?.excludeImports || [];
 
