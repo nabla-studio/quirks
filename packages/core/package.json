@@ -29,6 +29,6 @@
     "long": "^5.2.3"
   },
   "main": "./index.js",
-  "module": "./index.mjs",
+  "module": "./index.js",
   "typings": "./index.d.ts"
 }

@@ -24,6 +24,6 @@
     "@nuxt/schema": "^3.8.1"
   },
   "main": "./index.js",
-  "module": "./index.mjs",
+  "module": "./index.js",
   "typings": "./index.d.ts"
 }

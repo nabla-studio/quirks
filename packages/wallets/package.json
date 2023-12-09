@@ -28,6 +28,6 @@
     "@cosmostation/extension-client": "^0.1.15"
   },
   "main": "./index.js",
-  "module": "./index.mjs",
+  "module": "./index.js",
   "typings": "./index.d.ts"
 }
