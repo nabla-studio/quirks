@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.14](https://github.com/nabla-studio/quirks/compare/nuxt@0.1.13...nuxt@0.1.14) (2023-12-09)
+
+
+### Bug Fixes
+
+* **nuxt:** :bug: fix transpile and opt deps ([a4a9fcb](https://github.com/nabla-studio/quirks/commit/a4a9fcb353abba2ed4f79ae16fc3a09934fd3507))
+
 ## [0.1.13](https://github.com/nabla-studio/quirks/compare/nuxt@0.1.12...nuxt@0.1.13) (2023-12-09)
 
 
