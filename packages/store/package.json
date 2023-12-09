@@ -28,6 +28,6 @@
     "cosmjs-types": "^0.8.0"
   },
   "main": "./index.js",
-  "module": "./index.mjs",
+  "module": "./index.js",
   "typings": "./index.d.ts"
 }
