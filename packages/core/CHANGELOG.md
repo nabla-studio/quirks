@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.3](https://github.com/nabla-studio/quirks/compare/core@0.8.2...core@0.8.3) (2023-12-09)
+
+
+### Bug Fixes
+
+* **core:** :bug: fix dynamic import fallback ([0923a9e](https://github.com/nabla-studio/quirks/commit/0923a9e4785b4e1e4e136495872c5e8e69f9aa20))
+
 ## [0.8.2](https://github.com/nabla-studio/quirks/compare/core@0.8.1...core@0.8.2) (2023-12-09)
 
 ### Dependency Updates
