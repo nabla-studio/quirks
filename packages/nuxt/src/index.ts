@@ -32,7 +32,6 @@ export default defineNuxtModule<QuirksNuxtOptions>({
     // add packages to transpile target for alias resolution
     nuxt.options.build = nuxt.options.build || {};
     nuxt.options.build.transpile = nuxt.options.build.transpile || [];
-    nuxt.options.build.transpile.push(packageName);
 
     const exclude = nuxt.options.quirks?.excludeImports || [];
 
