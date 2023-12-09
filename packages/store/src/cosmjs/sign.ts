@@ -72,20 +72,23 @@ export const broadcast = async (
 
   let clientOptions: SigningStargateClientOptions | undefined = undefined;
 
-  const stargate = state.signerOptions?.stargate;
+  const stargateOptions = state.signerOptions?.stargate;
 
-  if (stargate) {
-    clientOptions = await stargate(chain);
+  if (stargateOptions) {
+    clientOptions = await stargateOptions(chain);
   }
 
-  const StargateClient = (await import('@cosmjs/stargate')).StargateClient;
+  const stargate = await import('@cosmjs/stargate');
+  const StargateClient =
+    stargate.StargateClient ?? stargate.default.StargateClient;
 
   const client = await StargateClient.connect(
     endpoint.rpc.address,
     clientOptions,
   );
 
-  const TxRaw = (await import('cosmjs-types/cosmos/tx/v1beta1/tx')).TxRaw;
+  const cosmjsTX = await import('cosmjs-types/cosmos/tx/v1beta1/tx');
+  const TxRaw = cosmjsTX.TxRaw ?? cosmjsTX.default.TxRaw;
 
   const txBytes = TxRaw.encode(txRaw).finish();
 
@@ -112,48 +115,45 @@ export const broadcastSync = async (chainName: string, txRaw: TxRaw) => {
 
   let clientOptions: SigningStargateClientOptions | undefined = undefined;
 
-  const stargate = state.signerOptions?.stargate;
+  const stargateOptions = state.signerOptions?.stargate;
 
-  if (stargate) {
-    clientOptions = await stargate(chain);
+  if (stargateOptions) {
+    clientOptions = await stargateOptions(chain);
   }
 
-  const StargateClient = (await import('@cosmjs/stargate')).StargateClient;
+  const stargate = await import('@cosmjs/stargate');
+  const StargateClient =
+    stargate.StargateClient ?? stargate.default.StargateClient;
 
   const client = await StargateClient.connect(
     endpoint.rpc.address,
     clientOptions,
   );
 
-  const TxRaw = (await import('cosmjs-types/cosmos/tx/v1beta1/tx')).TxRaw;
+  const cosmjsTX = await import('cosmjs-types/cosmos/tx/v1beta1/tx');
+  const TxRaw = cosmjsTX.TxRaw ?? cosmjsTX.default.TxRaw;
 
   const txBytes = TxRaw.encode(txRaw).finish();
 
   return client.broadcastTxSync(txBytes);
 };
 
-export const getOfflineSigner = (chainId: string, signerType: SignerType = 'auto') => {
+export const getOfflineSigner = (
+  chainId: string,
+  signerType: SignerType = 'auto',
+) => {
   const state = store.getState();
   assertIsDefined(state.wallet, 'wallet is undefined');
 
   switch (signerType) {
     case 'auto':
-      return state.wallet.getOfflineSignerAuto(
-        chainId,
-        state.signOptions,
-      );
+      return state.wallet.getOfflineSignerAuto(chainId, state.signOptions);
     case 'amino':
-      return state.wallet.getOfflineSignerOnlyAmino(
-        chainId,
-        state.signOptions,
-      );
+      return state.wallet.getOfflineSignerOnlyAmino(chainId, state.signOptions);
     case 'direct':
-      return state.wallet.getOfflineSigner(
-        chainId,
-        state.signOptions,
-      );
+      return state.wallet.getOfflineSigner(chainId, state.signOptions);
   }
-}
+};
 
 /**
  * Sign a TX using CosmJS Stargate Client
@@ -191,8 +191,9 @@ export const sign = async (
     clientOptions = await signingStargate(chain);
   }
 
-  const SigningStargateClient = (await import('@cosmjs/stargate'))
-    .SigningStargateClient;
+  const stargate = await import('@cosmjs/stargate');
+  const SigningStargateClient =
+    stargate.SigningStargateClient ?? stargate.default.SigningStargateClient;
 
   const client = await SigningStargateClient.connectWithSigner(
     endpoint.rpc.address,
@@ -251,8 +252,9 @@ export const signCW = async (
     clientOptions = await signingCosmwasm(chain);
   }
 
-  const SigningCosmWasmClient = (await import('@cosmjs/cosmwasm-stargate'))
-    .SigningCosmWasmClient;
+  const stargate = await import('@cosmjs/cosmwasm-stargate');
+  const SigningCosmWasmClient =
+    stargate.SigningCosmWasmClient ?? stargate.default.SigningCosmWasmClient;
 
   const client = await SigningCosmWasmClient.connectWithSigner(
     endpoint.rpc.address,
