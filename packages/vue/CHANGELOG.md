@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.3](https://github.com/nabla-studio/quirks/compare/vue@0.4.2...vue@0.4.3) (2023-12-10)
+
+### Dependency Updates
+
+* `store` updated to version `0.4.2`
+* `core` updated to version `0.4.2`
+
+### Bug Fixes
+
+* **vue:** :bug: fix useChain computed values ([40aa3f6](https://github.com/nabla-studio/quirks/commit/40aa3f61546f19f619ea5274258f36095efa20fc))
+
 ## [0.4.2](https://github.com/nabla-studio/quirks/compare/vue@0.4.1...vue@0.4.2) (2023-12-09)
 
 ### Dependency Updates
