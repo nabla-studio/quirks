@@ -50,6 +50,7 @@ export default defineConfig({
         '@walletconnect/types',
         'base64-js',
         'long',
+        'pino-pretty',
       ],
     },
   },
