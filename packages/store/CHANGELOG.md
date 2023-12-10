@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.9.4](https://github.com/nabla-studio/quirks/compare/store@0.9.3...store@0.9.4) (2023-12-10)
+
+### Dependency Updates
+
+* `core` updated to version `0.9.3`
+
+### Bug Fixes
+
+* **store:** :bug: fix reconnect reject ([165a20c](https://github.com/nabla-studio/quirks/commit/165a20c3de7e0f36e625c247b204a635fd79c71b))
+
 ## [0.9.3](https://github.com/nabla-studio/quirks/compare/store@0.9.2...store@0.9.3) (2023-12-09)
 
 ### Dependency Updates
