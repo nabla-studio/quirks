@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.4](https://github.com/nabla-studio/quirks/compare/core@0.8.3...core@0.8.4) (2023-12-10)
+
+
+### Bug Fixes
+
+* **core:** :wrench: fix wc peer deps ([9474c1a](https://github.com/nabla-studio/quirks/commit/9474c1af8be937559d654234627da0bd492d6602))
+
 ## [0.8.3](https://github.com/nabla-studio/quirks/compare/core@0.8.2...core@0.8.3) (2023-12-09)
 
 
