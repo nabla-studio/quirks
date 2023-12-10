@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.16](https://github.com/nabla-studio/quirks/compare/nuxt@0.1.15...nuxt@0.1.16) (2023-12-10)
+
+### Dependency Updates
+
+* `vue` updated to version `0.1.15`
+* `store` updated to version `0.1.15`
 ## [0.1.15](https://github.com/nabla-studio/quirks/compare/nuxt@0.1.14...nuxt@0.1.15) (2023-12-09)
 
 ### Dependency Updates
