@@ -21,6 +21,7 @@
         "@nx/dependency-checks": [
           "error",
           {
+            "ignoredDependencies": ["pino-pretty"],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts}"]
           }
         ]

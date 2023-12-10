@@ -182,6 +182,12 @@ export const createConnectSlice: StateCreator<
       set(() => ({
         reconnectionStatus: ReconnectionStates.REJECTED,
       }));
+
+      get().wallet?.disable(get().chains.map((el) => el.chain_id));
+
+      get().wallet?.removeListeners();
+
+      get().reset();
     }
   },
   disconnect: () => {

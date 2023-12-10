@@ -1,7 +1,7 @@
-import { assertIsDefined } from '@quirks/core';
 import { useQuirks } from './quirks';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { StdSignDoc } from '@cosmjs/amino';
+import { computed } from 'vue';
 
 export const useChains = () => {
   const accounts = useQuirks()((state) => state.accounts);
@@ -20,8 +20,8 @@ export const useChains = () => {
 };
 
 export const useChain = (chainName: string) => {
-  const getChain = useQuirks()((state) => state.getChain);
-  const getAddress = useQuirks()((state) => state.getAddress);
+  const chains = useQuirks()((state) => state.chains);
+  const accounts = useQuirks()((state) => state.accounts);
   const accountName = useQuirks()((state) => state.accountName);
   const getOfflineSigner = useQuirks()((state) => state.getOfflineSigner);
   const getOfflineSignerOnlyAmino = useQuirks()(
@@ -33,18 +33,28 @@ export const useChain = (chainName: string) => {
   const signAmino = useQuirks()((state) => state.signAmino);
   const signDirect = useQuirks()((state) => state.signDirect);
 
-  const chain = getChain(chainName);
+  const chain = computed(() =>
+    chains.value.find((c) => c.chain_name === chainName),
+  );
 
-  assertIsDefined(chain, `there is no chain named "${chainName}"`);
+  const account = computed(() =>
+    accounts.value.find((account) => account.chainId === chain.value!.chain_id),
+  );
+
+  const address = computed(() => account.value?.bech32Address);
 
   return {
     chain,
-    address: getAddress(chain.chain_id),
+    account,
+    address,
     accountName,
-    getOfflineSigner: () => getOfflineSigner(chain.chain_id),
-    getOfflineSignerOnlyAmino: () => getOfflineSignerOnlyAmino(chain.chain_id),
-    getOfflineSignerAuto: () => getOfflineSignerAuto(chain.chain_id),
-    signAmino: (signDoc: StdSignDoc) => signAmino(chain.chain_id, signDoc),
-    signDirect: (signDoc: SignDoc) => signDirect(chain.chain_id, signDoc),
+    getOfflineSigner: () => getOfflineSigner(chain.value!.chain_id),
+    getOfflineSignerOnlyAmino: () =>
+      getOfflineSignerOnlyAmino(chain.value!.chain_id),
+    getOfflineSignerAuto: () => getOfflineSignerAuto(chain.value!.chain_id),
+    signAmino: (signDoc: StdSignDoc) =>
+      signAmino(chain.value!.chain_id, signDoc),
+    signDirect: (signDoc: SignDoc) =>
+      signDirect(chain.value!.chain_id, signDoc),
   };
 };
