@@ -1,9 +1,16 @@
 <script setup lang="ts">
-import { useConnect, useConfig, useChains, useWalletEvents } from '@quirks/vue';
+import {
+  useConnect,
+  useConfig,
+  useChains,
+  useChain,
+  useWalletEvents,
+} from '@quirks/vue';
 import { bitsong, bitsongAssetList } from '@nabla-studio/chain-registry';
 
 const { wallets } = useConfig();
 const { accounts } = useChains();
+const { address } = useChain('bitsong');
 const { connect, disconnect, connected, status } = useConnect();
 
 const open = async (chainName: string) => {
@@ -87,7 +94,7 @@ useWalletEvents('keystorechange', () => {
     </div>
 
     <div>
-      STATUS: {{ status }}
+      STATUS: {{ status }} ADDRESS BITSONG: {{ address }}
       <div v-if="connected">
         Addresses:
         <button @click="send">SIGN</button>
