@@ -2,6 +2,7 @@ import type { WalletEventTypes, WalletEventNames } from '@quirks/core';
 import type { EventEmitter } from 'eventemitter3';
 import { useQuirks } from './quirks';
 import { SetupStates } from '@quirks/store';
+import { onMounted } from 'vue';
 
 /**
  * It allow you to subscribe to quirks wallets events.
@@ -19,17 +20,22 @@ export const useWalletEvents = <
 ) => {
   const store = useQuirks();
 
+  const addListener = () => {
+    const wallet = store.getState().wallet;
+    const setupStatus = store.getState().setupStatus;
+
+    if (wallet && setupStatus === SetupStates.INITIALIZED) {
+      wallet.events.removeListener(event, fn);
+      wallet.events.addListener(event, fn);
+    }
+  };
+
   const flush = store.subscribe(
     (state) => state.setupStatus,
-    (setupStatus) => {
-      const wallet = store.getState().wallet;
-
-      if (wallet && setupStatus === SetupStates.INITIALIZED) {
-        wallet.events.removeListener(event, fn);
-        wallet.events.addListener(event, fn);
-      }
-    },
+    () => addListener(),
   );
+
+  onMounted(() => addListener());
 
   return {
     flush,
