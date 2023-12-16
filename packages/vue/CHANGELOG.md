@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.4](https://github.com/nabla-studio/quirks/compare/vue@0.4.3...vue@0.4.4) (2023-12-16)
+
+### Dependency Updates
+
+* `store` updated to version `0.4.3`
+* `core` updated to version `0.4.3`
+
+### Bug Fixes
+
+* **nuxt:** :bug: fix useWalletEvents auto flush ([af62234](https://github.com/nabla-studio/quirks/commit/af622340ec263790828b35503fbcd2c42cec9d2c))
+
 ## [0.4.3](https://github.com/nabla-studio/quirks/compare/vue@0.4.2...vue@0.4.3) (2023-12-10)
 
 ### Dependency Updates
