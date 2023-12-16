@@ -16,6 +16,9 @@ export const bandchain: Chain = {
     fee_tokens: [
       {
         denom: 'uband',
+        low_gas_price: 0.0025,
+        average_gas_price: 0.003,
+        high_gas_price: 0.005,
       },
     ],
   },
@@ -56,6 +59,8 @@ export const bandchain: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bandchain/images/band.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bandchain/images/band.svg',
   },
+  description:
+    'Band Protocol is a cross-chain data oracle platform that aggregates and connects real-world data and APIs to smart contracts.',
   peers: {
     seeds: [
       {
@@ -81,6 +86,11 @@ export const bandchain: Chain = {
         address: 'band.rpc.kjnodes.com:16959',
         provider: 'kjnodes',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -97,6 +107,11 @@ export const bandchain: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
+        id: '0bfd5d7355ebf38e35af619ae0cab70aa21675a5',
+        address: 'band-m.peer.stavr.tech:11026',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: '4ded49b3a718828eb64cf35da1ed791ecb201bc1',
         address: 'peer-band-01.stakeflow.io:25017',
         provider: 'Stakeflow',
@@ -105,6 +120,11 @@ export const bandchain: Chain = {
         id: 'd3fe7586b604196461db92c2c7cf72eb354af1fc',
         address: 'rpc.band.indonode.net:12656',
         provider: 'Indonode',
+      },
+      {
+        id: 'c6f9e1309055eedbcd58d018b54247f13e9f878b',
+        address: '88.99.208.54:44656',
+        provider: 'StakeTown',
       },
     ],
   },
@@ -127,6 +147,10 @@ export const bandchain: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
+        address: 'http://band.rpc.m.stavr.tech:11067',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://rpc-band-01.stakeflow.io',
         provider: 'Stakeflow',
       },
@@ -143,16 +167,8 @@ export const bandchain: Chain = {
         provider: 'High Stakes 🇨🇭',
       },
       {
-        address: 'https://rpc.band.indonode.net',
-        provider: 'Indonode',
-      },
-      {
-        address: 'https://rpc-band.nodeist.net',
-        provider: 'Nodeist',
-      },
-      {
-        address: 'https://band.rpc.kjnodes.com',
-        provider: 'kjnodes',
+        address: 'https://band-rpc.stake-town.com',
+        provider: 'StakeTown',
       },
     ],
     rest: [
@@ -173,6 +189,10 @@ export const bandchain: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
+        address: 'https://band.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://bandchain-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -189,16 +209,8 @@ export const bandchain: Chain = {
         provider: 'High Stakes 🇨🇭',
       },
       {
-        address: 'https://api.band.indonode.net',
-        provider: 'Indonode',
-      },
-      {
-        address: 'https://api-band.nodeist.net',
-        provider: 'Nodeist',
-      },
-      {
-        address: 'https://band.api.kjnodes.com',
-        provider: 'kjnodes',
+        address: 'https://band-api.stake-town.com',
+        provider: 'StakeTown',
       },
     ],
     grpc: [
@@ -223,12 +235,20 @@ export const bandchain: Chain = {
         provider: 'w3coins',
       },
       {
+        address: 'http://band.grpc.m.stavr.tech:7803',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://grpc-band.nodeist.net',
         provider: 'Nodeist',
       },
       {
-        address: 'band.grpc.kjnodes.com:443t',
+        address: 'band.grpc.kjnodes.com:443',
         provider: 'kjnodes',
+      },
+      {
+        address: 'band-grpc.stake-town.com:443',
+        provider: 'StakeTown',
       },
     ],
   },
@@ -248,6 +268,11 @@ export const bandchain: Chain = {
       kind: 'ping.pub',
       url: 'https://ping.pub/band-protocol',
       tx_page: 'https://ping.pub/band-protocol/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Band-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Band-Mainnet/tx/${txHash}',
     },
     {
       kind: 'Nodeist Explorer',

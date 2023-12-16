@@ -89,8 +89,8 @@ export const ethosAssetList: AssetLists = {
       display: 'RYT',
       symbol: 'RYT',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/ethos/images/ethos.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/ethos/images/ethos.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/ethos/images/ethos.svg',
       },
       images: [
         {

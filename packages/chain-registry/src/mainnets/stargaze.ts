@@ -69,6 +69,8 @@ export const stargaze: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.svg',
   },
+  description:
+    'The premier community-focused blockchain for NFTs. Stargaze empowers creators, developers, collectors, and traders to participate on the platform. The Stargaze chain consists of various NFT-related apps such as a Launchpad, and a Marketplace with offers and auctions.',
   peers: {
     seeds: [
       {
@@ -100,14 +102,9 @@ export const stargaze: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'stargaze-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'stargaze-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '604f4baaa30cd3f50d080bf45806d222c7fadc94',
@@ -210,8 +207,12 @@ export const stargaze: Chain = {
         provider: 'StakerHouse',
       },
       {
-        address: 'https://stargaze-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://stargaze-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://stargaze-rpc.reece.sh:443',
+        provider: 'Reecepbcups',
       },
     ],
     rest: [
@@ -281,7 +282,11 @@ export const stargaze: Chain = {
       },
       {
         address: 'https://stargaze-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://stargaze-api.reece.sh:443',
+        provider: 'Reecepbcups',
       },
     ],
     grpc: [
@@ -315,7 +320,7 @@ export const stargaze: Chain = {
       },
       {
         address: 'stargaze-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'stargaze-grpc.stakerhouse.com:443',
@@ -385,8 +390,8 @@ export const stargazeAssetList: AssetLists = {
       display: 'stars',
       symbol: 'STARS',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.svg',
       },
       coingecko_id: 'stargaze',
       images: [
@@ -413,8 +418,8 @@ export const stargazeAssetList: AssetLists = {
       display: 'strdst',
       symbol: 'STRDST',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/dust.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/dust.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/dust.svg',
       },
       coingecko_id: '',
       images: [
@@ -441,8 +446,8 @@ export const stargazeAssetList: AssetLists = {
       display: 'GAZE',
       symbol: 'GAZE',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/gaze.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/gaze.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/gaze.svg',
       },
       coingecko_id: '',
       images: [
@@ -469,8 +474,8 @@ export const stargazeAssetList: AssetLists = {
       display: 'BRNCH',
       symbol: 'BRNCH',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/brnch.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/brnch.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/brnch.svg',
       },
       coingecko_id: '',
       images: [
@@ -497,8 +502,8 @@ export const stargazeAssetList: AssetLists = {
       display: 'OHH',
       symbol: 'OHH',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/ohh.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/ohh.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/ohh.svg',
       },
       coingecko_id: '',
       images: [

@@ -191,8 +191,8 @@ export const xplaAssetList: AssetLists = {
       display: 'xpla',
       symbol: 'XPLA',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/xpla/images/xpla.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/xpla/images/xpla.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/xpla/images/xpla.svg',
       },
       coingecko_id: 'xpla',
       images: [

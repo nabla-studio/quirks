@@ -11,6 +11,7 @@ export const medasdigital: Chain = {
   bech32_prefix: 'medas',
   daemon_name: 'medasdigitald',
   node_home: '$HOME/.medasdigital',
+  slip44: 118,
   key_algos: ['secp256k1'],
   fees: {
     fee_tokens: [

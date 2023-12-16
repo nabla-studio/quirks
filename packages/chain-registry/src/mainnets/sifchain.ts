@@ -11,6 +11,7 @@ export const sifchain: Chain = {
   bech32_prefix: 'sif',
   daemon_name: 'sifnoded',
   node_home: '$HOME/.sifnoded',
+  slip44: 118,
   fees: {
     fee_tokens: [
       {
@@ -69,14 +70,9 @@ export const sifchain: Chain = {
         provider: 'Polkachu',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'sifchain-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'sifchain-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -106,9 +102,6 @@ export const sifchain: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc.sifchain.finance:443',
-      },
-      {
         address: 'https://sifchain-rpc.polkachu.com',
         provider: 'Polkachu',
       },
@@ -121,18 +114,11 @@ export const sifchain: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://sif-rpc.kleomedes.network',
-        provider: 'Kleomedes',
-      },
-      {
-        address: 'https://sifchain-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://sifchain-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
-      {
-        address: 'https://api.sifchain.finance:443',
-      },
       {
         address: 'https://api-sifchain-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
@@ -142,16 +128,12 @@ export const sifchain: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://sif-api.kleomedes.network',
-        provider: 'Kleomedes',
-      },
-      {
         address: 'https://sifchain-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://sifchain-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -169,7 +151,7 @@ export const sifchain: Chain = {
       },
       {
         address: 'sifchain-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -228,8 +210,8 @@ export const sifchainAssetList: AssetLists = {
       display: 'ROWAN',
       symbol: 'ROWAN',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sifchain/images/rowan.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sifchain/images/rowan.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sifchain/images/rowan.svg',
       },
       coingecko_id: 'sifchain',
       images: [

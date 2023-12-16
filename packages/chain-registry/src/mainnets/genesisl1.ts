@@ -87,6 +87,13 @@ export const genesisl1: Chain = {
       tx_page: 'https://exp.utsa.tech/genesis/tx/${txHash}',
     },
     {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Genesisl1',
+      tx_page: 'https://explorer.stavr.tech/Genesisl1/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Genesisl1/accounts/${accountAddress}',
+    },
+    {
       kind: 'atomscan',
       url: 'https://atomscan.com/genesisl1',
       tx_page: 'https://atomscan.com/genesisl1/transactions/${txHash}',
@@ -123,8 +130,8 @@ export const genesisl1AssetList: AssetLists = {
       display: 'l1',
       symbol: 'L1',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/genesisl1/images/l1.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/genesisl1/images/l1.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/genesisl1/images/l1.svg',
       },
       images: [
         {

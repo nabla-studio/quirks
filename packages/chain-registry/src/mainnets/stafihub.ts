@@ -126,10 +126,6 @@ export const stafihub: Chain = {
         address: 'https://rpc.stafihub.nodestake.top:443',
         provider: 'NodeStake',
       },
-      {
-        address: 'https://stafihub.nodejumper.io',
-        provider: 'NODEJUMPER',
-      },
     ],
     rest: [
       {
@@ -143,10 +139,6 @@ export const stafihub: Chain = {
       {
         address: 'https://api.stafihub.nodestake.top',
         provider: 'NodeStake',
-      },
-      {
-        address: 'https://stafihub.nodejumper.io:1317',
-        provider: 'NODEJUMPER',
       },
     ],
     grpc: [
@@ -219,12 +211,12 @@ export const stafihubAssetList: AssetLists = {
       display: 'fis',
       symbol: 'FIS',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/stafihub.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/fis.svg',
       },
       coingecko_id: 'stafi',
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/stafihub.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/fis.svg',
         },
       ],
     },
@@ -244,6 +236,16 @@ export const stafihubAssetList: AssetLists = {
       name: 'rATOM',
       display: 'ratom',
       symbol: 'rATOM',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+          },
+          provider: 'StaFiHub',
+        },
+      ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/ratom.svg',
       },
@@ -270,6 +272,16 @@ export const stafihubAssetList: AssetLists = {
       name: 'rIRIS',
       display: 'riris',
       symbol: 'rIRIS',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'irisnet',
+            base_denom: 'uiris',
+          },
+          provider: 'StaFiHub',
+        },
+      ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/riris.svg',
       },
@@ -296,6 +308,16 @@ export const stafihubAssetList: AssetLists = {
       name: 'rHUAHUA',
       display: 'rhuahua',
       symbol: 'rHUAHUA',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'chihuahua',
+            base_denom: 'uhuahua',
+          },
+          provider: 'StaFiHub',
+        },
+      ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/rhuahua.svg',
       },
@@ -322,6 +344,16 @@ export const stafihubAssetList: AssetLists = {
       name: 'rSWTH',
       display: 'rswth',
       symbol: 'rSWTH',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'carbon',
+            base_denom: 'uswth',
+          },
+          provider: 'StaFiHub',
+        },
+      ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stafihub/images/rswth.svg',
       },

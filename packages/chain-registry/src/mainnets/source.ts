@@ -17,10 +17,10 @@ export const source: Chain = {
     fee_tokens: [
       {
         denom: 'usource',
-        fixed_min_gas_price: 0.001,
-        low_gas_price: 0.001,
-        average_gas_price: 0.0025,
-        high_gas_price: 0.004,
+        fixed_min_gas_price: 0.05,
+        low_gas_price: 0.05,
+        average_gas_price: 0.075,
+        high_gas_price: 0.1,
       },
     ],
   },
@@ -69,6 +69,11 @@ export const source: Chain = {
         provider: 'ITRocket',
       },
       {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'source-mainnet-seed.autostake.com:27446',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         id: '738be29546d9504b3845d781b9dc35bc6f996c5f',
         address: 'rpc.source.nodestake.top:666',
         provider: 'NodeStake',
@@ -85,6 +90,16 @@ export const source: Chain = {
         provider: 'ITRocket',
       },
       {
+        id: '79adf04741f4a019684efc73e42467cb7d6d3a69',
+        address: '148.251.19.41:25656',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'source-mainnet-peer.autostake.com:27446',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         id: ' 3c729ffe80393abd430a7c723fab2e8aa60ffa46',
         address: 'source.peers.stavr.tech:20056',
         provider: '🔥STAVR🔥',
@@ -99,6 +114,11 @@ export const source: Chain = {
         address: '88.99.208.54:28656',
         provider: 'StakeTown',
       },
+      {
+        id: '7e153e83fbe2f5618fffbdfd803f70ee78ad797d',
+        address: 'rpc.source.indonode.net:12656',
+        provider: 'Indonode',
+      },
     ],
   },
   apis: {
@@ -110,6 +130,10 @@ export const source: Chain = {
       {
         address: 'https://source.rpc.moonbridge.team/',
         provider: 'MoonBridge',
+      },
+      {
+        address: 'https://carbon-mainnet-rpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://source.rpc.m.stavr.tech',
@@ -128,12 +152,20 @@ export const source: Chain = {
         provider: 'Sr20de',
       },
       {
-        address: 'https://source-rpc.stake-town.com:443',
+        address: 'https://source-rpc.stake-town.com',
         provider: 'StakeTown',
       },
       {
         address: 'https://rpc.source.tcnetwork.io',
         provider: 'TC Network',
+      },
+      {
+        address: 'https://rpc.source.indonode.net',
+        provider: 'Indonode',
+      },
+      {
+        address: 'https://source.rpc.skynodejs.net/',
+        provider: 'skynodejs',
       },
     ],
     rest: [
@@ -144,6 +176,10 @@ export const source: Chain = {
       {
         address: 'https://api-source.nodeist.net',
         provider: 'Nodeist',
+      },
+      {
+        address: 'https://carbon-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://source.api.m.stavr.tech',
@@ -162,18 +198,26 @@ export const source: Chain = {
         provider: 'Sr20de',
       },
       {
-        address: 'https://source-api.stake-town.com:443',
+        address: 'https://source-api.stake-town.com',
         provider: 'StakeTown',
       },
       {
         address: 'https://rest.source.tcnetwork.io',
         provider: 'TC Network',
       },
+      {
+        address: 'https://api.source.indonode.net',
+        provider: 'Indonode',
+      },
     ],
     grpc: [
       {
         address: 'source-mainnet-grpc.itrocket.net:32090',
         provider: 'ITRocket',
+      },
+      {
+        address: 'carbon-mainnet-grpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'http://source.grpc.m.stavr.tech:9590',
@@ -194,6 +238,10 @@ export const source: Chain = {
       {
         address: 'source-grpc.stake-town.com:443',
         provider: 'StakeTown',
+      },
+      {
+        address: 'https://source.grpc.skynodejs.net',
+        provider: 'skynodejs',
       },
     ],
   },
@@ -237,6 +285,11 @@ export const source: Chain = {
       url: 'https://explorer.tcnetwork.io/source',
       tx_page: 'https://explorer.tcnetwork.io/source/transaction/${txHash}',
     },
+    {
+      kind: 'Indonode',
+      url: 'https://explorer.indonode.net/source',
+      tx_page: 'https://explorer.indonode.net/source/tx/${txHash}',
+    },
   ],
   images: [
     {
@@ -244,6 +297,10 @@ export const source: Chain = {
       svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/source/images/source.svg',
     },
   ],
+  logo_URIs: {
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/source/images/source.png',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/source/images/source.svg',
+  },
 };
 
 export const sourceAssetList: AssetLists = {
@@ -270,7 +327,7 @@ export const sourceAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/source/images/source.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/source/images/source.svg',
       },
-      coingecko_id: 'source-protocol',
+      coingecko_id: 'source',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/source/images/source.png',

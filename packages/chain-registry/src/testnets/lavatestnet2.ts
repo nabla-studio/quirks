@@ -140,19 +140,18 @@ export const lavatestnet2: Chain = {
   },
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.png',
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.png',
       theme: {
         primary_color_hex: '#D7001F',
       },
     },
     {
-      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.svg',
     },
   ],
   logo_URIs: {
-    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.png',
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.svg',
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.png',
   },
   peers: {
     seeds: [
@@ -225,12 +224,12 @@ export const lavatestnet2AssetList: AssetLists = {
       display: 'lava',
       symbol: 'LAVA',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.svg',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.svg',
       },
       keywords: ['rpc', 'api'],
       images: [
         {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.svg',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.svg',
         },
       ],
     },

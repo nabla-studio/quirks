@@ -91,8 +91,8 @@ export const coolcattestnetAssetList: AssetLists = {
       display: 'ccat',
       symbol: 'CCAT',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/coolcattestnet/images/coolcat.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/coolcattestnet/images/coolcat.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/coolcattestnet/images/coolcat.svg',
       },
       keywords: ['nft', 'staking', 'games'],
       images: [

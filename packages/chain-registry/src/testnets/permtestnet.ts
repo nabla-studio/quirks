@@ -132,6 +132,12 @@ export const permtestnetAssetList: AssetLists = {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/permtestnet/images/Perm.svg',
       },
       coingecko_id: '',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/permtestnet/images/Perm.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/permtestnet/images/Perm.svg',
+        },
+      ],
     },
   ],
 };

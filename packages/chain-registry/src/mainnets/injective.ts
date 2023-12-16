@@ -17,7 +17,7 @@ export const injective: Chain = {
     fee_tokens: [
       {
         denom: 'inj',
-        fixed_min_gas_price: 500000000,
+        fixed_min_gas_price: 160000000,
         low_gas_price: 500000000,
         average_gas_price: 700000000,
         high_gas_price: 900000000,
@@ -87,6 +87,8 @@ export const injective: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/inj.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/inj.svg',
   },
+  description:
+    'Injective’s mission is to create a truly free and inclusive financial system through decentralization.',
   peers: {
     seeds: [
       {
@@ -145,14 +147,9 @@ export const injective: Chain = {
         provider: 'Golden Ratio Staking',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'injective-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'injective-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '62ae24dfc6841ff1ab513522255c94914861df7c',
@@ -231,10 +228,6 @@ export const injective: Chain = {
         provider: 'Notional',
       },
       {
-        address: 'https://rpc-injective.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://injective-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake.com',
       },
@@ -247,24 +240,16 @@ export const injective: Chain = {
         provider: 'WhisperNode🤐',
       },
       {
-        address: 'https://rpc-injective.architectnodes.com',
-        provider: 'Architect Nodes',
-      },
-      {
         address: 'https://rpc-injective-01.stakeflow.io',
         provider: 'Stakeflow',
       },
       {
-        address: 'https://injective-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://injective-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://injective-rpc.w3coins.io',
         provider: 'w3coins',
-      },
-      {
-        address: 'https://injective-rpc.tienthuattoan.ventures',
-        provider: 'TienThuatToan',
       },
       {
         address: 'https://injective-rpc.highstakes.ch:26657/',
@@ -293,20 +278,8 @@ export const injective: Chain = {
         provider: 'POSTHUMAN ꝏ DVS',
       },
       {
-        address: 'https://api-injective.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
-        address: 'https://injective-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake.com',
-      },
-      {
         address: 'https://lcd-injective.whispernode.com:443',
         provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rest-injective.architectnodes.com',
-        provider: 'Architect Nodes',
       },
       {
         address: 'https://api-injective-01.stakeflow.io',
@@ -318,15 +291,11 @@ export const injective: Chain = {
       },
       {
         address: 'https://injective-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://injective-api.w3coins.io',
         provider: 'w3coins',
-      },
-      {
-        address: 'https://injective-api.tienthuattoan.ventures',
-        provider: 'TienThuatToan',
       },
       {
         address: 'https://injective-api.highstakes.ch:1317/',
@@ -368,15 +337,11 @@ export const injective: Chain = {
       },
       {
         address: 'injective-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'injective-grpc.w3coins.io:14390',
         provider: 'w3coins',
-      },
-      {
-        address: 'injective-grpc.tienthuattoan.ventures:9900',
-        provider: 'TienThuatToan',
       },
     ],
   },
@@ -479,7 +444,7 @@ export const injectiveAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-143',
-            path: 'transfer/channel-143',
+            path: 'transfer/channel-143/erc20/tether/usdt',
           },
         },
       ],
@@ -489,8 +454,12 @@ export const injectiveAssetList: AssetLists = {
             chain_name: 'kava',
             base_denom: 'erc20/tether/usdt',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
     },
     {
       description: 'ERIS liquid staked INJ',

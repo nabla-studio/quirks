@@ -129,23 +129,24 @@ export const axelartestnetAssetList: AssetLists = {
           provider: 'Axelar',
         },
       ],
-      logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
-      },
-      coingecko_id: 'usd-coin',
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+          image_sync: {
+            chain_name: 'ethereumtestnet',
+            base_denom: '0x254d06f33bDc5b8ee05b2ea472107E300226659A',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
+      },
     },
     {
       description: 'Wrapped Ether on Axelar',
       denom_units: [
         {
-          denom: 'weth-wei',
+          denom: 'eth-wei',
           exponent: 0,
         },
         {
@@ -153,10 +154,10 @@ export const axelartestnetAssetList: AssetLists = {
           exponent: 18,
         },
       ],
-      base: 'weth-wei',
+      base: 'eth-wei',
       name: 'Wrapped Ether',
       display: 'weth',
-      symbol: 'WETH',
+      symbol: 'axlWETH',
       traces: [
         {
           type: 'bridge',
@@ -167,15 +168,18 @@ export const axelartestnetAssetList: AssetLists = {
           provider: 'Axelar',
         },
       ],
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/weth.png',
-      },
-      coingecko_id: 'weth',
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/weth.png',
+          image_sync: {
+            chain_name: 'ethereumtestnet',
+            base_denom: '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/weth.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/weth.svg',
+      },
     },
     {
       description: 'Wrapped Moonbeam on Axelar',
@@ -192,7 +196,7 @@ export const axelartestnetAssetList: AssetLists = {
       base: 'wglmr-wei',
       name: 'Wrapped Moonbeam',
       display: 'wglmr',
-      symbol: 'WGLMR',
+      symbol: 'WDEV',
       traces: [
         {
           type: 'bridge',
@@ -203,17 +207,18 @@ export const axelartestnetAssetList: AssetLists = {
           provider: 'Axelar',
         },
       ],
-      logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.svg',
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.png',
-      },
-      coingecko_id: 'wrapped-moonbeam',
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.png',
+          image_sync: {
+            chain_name: 'moonbeamtestnet',
+            base_denom: '0x1436aE0dF0A8663F18c0Ec51d7e2E46591730715',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.svg',
+      },
     },
     {
       description: 'Wrapped Matic on Axelar',
@@ -241,17 +246,18 @@ export const axelartestnetAssetList: AssetLists = {
           provider: 'Axelar',
         },
       ],
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/wmatic.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/wmatic.svg',
-      },
-      coingecko_id: 'matic-network',
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/wmatic.png',
+          image_sync: {
+            chain_name: 'polygontestnet',
+            base_denom: '0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/wmatic.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/wmatic.svg',
+      },
     },
     {
       description: 'Wrapped BNB on Axelar',
@@ -279,17 +285,20 @@ export const axelartestnetAssetList: AssetLists = {
           provider: 'Axelar',
         },
       ],
-      logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.svg',
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.png',
-      },
-      coingecko_id: 'wbnb',
       images: [
         {
+          image_sync: {
+            chain_name: 'binancesmartchaintestnet',
+            base_denom: '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.svg',
+      },
     },
     {
       description: 'Wrapped AVAX on Axelar.',
@@ -317,14 +326,18 @@ export const axelartestnetAssetList: AssetLists = {
           provider: 'Axelar',
         },
       ],
-      logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/avalanche/images/wavax.svg',
-      },
       images: [
         {
+          image_sync: {
+            chain_name: 'avalanchetestnet',
+            base_denom: '0xd00ae08403B9bbb9124bB305C09058E32C39A48c',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/avalanche/images/wavax.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/avalanche/images/wavax.svg',
+      },
     },
     {
       description: 'Wrapped FTM on Axelar.',
@@ -352,14 +365,18 @@ export const axelartestnetAssetList: AssetLists = {
           provider: 'Axelar',
         },
       ],
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/fantom/images/ftm.png',
-      },
       images: [
         {
+          image_sync: {
+            chain_name: 'fantomtestnet',
+            base_denom: '0x812666209b90344Ec8e528375298ab9045c2Bd08',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/fantom/images/ftm.png',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/fantom/images/ftm.png',
+      },
     },
   ],
 };

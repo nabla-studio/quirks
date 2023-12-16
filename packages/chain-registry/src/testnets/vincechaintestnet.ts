@@ -1,9 +1,9 @@
 import type { Chain, AssetLists } from '../types';
 
 export const vincechaintestnet: Chain = {
-  $schema: '../chain.schema.json',
-  chain_name: 'vincechain',
-  status: 'live',
+  $schema: '../../chain.schema.json',
+  chain_name: 'vincechaintestnet',
+  status: 'killed',
   network_type: 'testnet',
   pretty_name: 'VinceChain Testnet',
   chain_id: 'vince_1903-1',
@@ -61,7 +61,7 @@ export const vincechaintestnet: Chain = {
     ],
   },
   logo_URIs: {
-    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/vincechain/images/logo.png',
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/vincechaintestnet/images/vince.png',
   },
   peers: {
     seeds: [
@@ -103,13 +103,13 @@ export const vincechaintestnet: Chain = {
   ],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/vincechain/images/logo.png',
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/vincechaintestnet/images/vince.png',
     },
   ],
 };
 
 export const vincechaintestnetAssetList: AssetLists = {
-  $schema: '../assetlist.schema.json',
+  $schema: '../../assetlist.schema.json',
   chain_name: 'vincechaintestnet',
   assets: [
     {
@@ -130,12 +130,12 @@ export const vincechaintestnetAssetList: AssetLists = {
       display: 'vce',
       symbol: 'VCE',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/vincechain/images/vince.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/vincechaintestnet/images/vince.png',
       },
       coingecko_id: '',
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/vincechain/images/vince.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/vincechaintestnet/images/vince.png',
         },
       ],
     },

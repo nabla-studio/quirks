@@ -94,12 +94,6 @@ export const tgrade: Chain = {
       tx_page: 'https://tgrade.aneka.io/txs/${txHash}',
       account_page: 'https://tgrade.aneka.io/accounts/${accountAddress}',
     },
-    {
-      kind: 'mintscan',
-      url: 'https://www.mintscan.io/tgrade',
-      tx_page: 'https://www.mintscan.io/tgrade/transactions/${txHash}',
-      account_page: 'https://www.mintscan.io/tgrade/accounts/${accountAddress}',
-    },
   ],
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/tgrade/images/tgrade-logo-gradient_h.png',

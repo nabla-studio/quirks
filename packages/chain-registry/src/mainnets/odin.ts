@@ -157,7 +157,7 @@ export const odinAssetList: AssetLists = {
   chain_name: 'odin',
   assets: [
     {
-      description: 'Staking and goverance token for ODIN Protocol',
+      description: 'Staking and governance token for ODIN Protocol',
       denom_units: [
         {
           denom: 'loki',
@@ -173,8 +173,8 @@ export const odinAssetList: AssetLists = {
       display: 'odin',
       symbol: 'ODIN',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/odin.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/odin.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/odin.svg',
       },
       coingecko_id: 'odin-protocol',
       images: [
@@ -201,8 +201,8 @@ export const odinAssetList: AssetLists = {
       display: 'geo',
       symbol: 'GEO',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/geo.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/geo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/geo.svg',
       },
       images: [
         {
@@ -228,8 +228,8 @@ export const odinAssetList: AssetLists = {
       display: 'O9W',
       symbol: 'O9W',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/o9w.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/o9w.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/o9w.svg',
       },
       images: [
         {

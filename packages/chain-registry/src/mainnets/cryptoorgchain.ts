@@ -5,9 +5,10 @@ export const cryptoorgchain: Chain = {
   chain_name: 'cryptoorgchain',
   status: 'live',
   network_type: 'mainnet',
-  pretty_name: 'Crypto.org Chain',
+  pretty_name: 'Cronos POS Chain',
   chain_id: 'crypto-org-chain-mainnet-1',
   bech32_prefix: 'cro',
+  website: 'https://cronos-pos.org/',
   daemon_name: 'chain-maind',
   node_home: '$HOME/.chain-maind',
   slip44: 394,
@@ -70,35 +71,31 @@ export const cryptoorgchain: Chain = {
     ],
   },
   logo_URIs: {
-    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cronos.png',
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cro.svg',
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cryptoorgchain/images/cronos.png',
   },
+  description:
+    'Cronos PoS Chain is a public, open-source and permissionless blockchain - a fully decentralized network with high speed and low fees, designed to be a public good that helps drive mass adoption of blockchain technology through use cases like Payments, DeFi and NFTs.',
   peers: {
     seeds: [
       {
         id: '87c3adb7d8f649c51eebe0d3335d8f9e28c362f2',
         address: 'seed-0.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: 'e1d7ff02b78044795371beb1cd5fb803f9389256',
         address: 'seed-1.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: '2c55809558a4e491e9995962e10c026eb9014655',
         address: 'seed-2.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'cryptoorgchain-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'cryptoorgchain-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0',
@@ -110,17 +107,17 @@ export const cryptoorgchain: Chain = {
       {
         id: '87c3adb7d8f649c51eebe0d3335d8f9e28c362f2',
         address: 'seed-0.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: 'e1d7ff02b78044795371beb1cd5fb803f9389256',
         address: 'seed-1.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: '2c55809558a4e491e9995962e10c026eb9014655',
         address: 'seed-2.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
     ],
   },
@@ -128,7 +125,7 @@ export const cryptoorgchain: Chain = {
     rpc: [
       {
         address: 'https://rpc.mainnet.crypto.org/',
-        provider: 'crypto.org',
+        provider: 'cronos.org',
       },
       {
         address: 'https://rpc-cryptoorgchain-ia.cosmosia.notional.ventures/',
@@ -151,14 +148,14 @@ export const cryptoorgchain: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'https://cro-chain-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://cro-chain-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
       {
         address: 'https://rest.mainnet.crypto.org/',
-        provider: 'crypto.org',
+        provider: 'cronos.org',
       },
       {
         address: 'https://api-cryptoorgchain-ia.cosmosia.notional.ventures/',
@@ -182,13 +179,13 @@ export const cryptoorgchain: Chain = {
       },
       {
         address: 'https://cro-chain-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
       {
         address: 'grpc.mainnet.crypto.org:443',
-        provider: 'crypto.org',
+        provider: 'cronos.org',
       },
       {
         address: 'grpc-cryptoorgchain-ia.cosmosia.notional.ventures:443',
@@ -208,7 +205,7 @@ export const cryptoorgchain: Chain = {
       },
       {
         address: 'cro-chain-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -221,9 +218,9 @@ export const cryptoorgchain: Chain = {
         'https://www.mintscan.io/crypto-org/accounts/${accountAddress}',
     },
     {
-      kind: 'crypto.org',
-      url: 'https://crypto.org/explorer',
-      tx_page: 'https://crypto.org/explorer/tx/${txHash}',
+      kind: 'cronos.org',
+      url: 'https://cronos-pos.org/explorer',
+      tx_page: 'https://cronos-pos.org/explorer/tx/${txHash}',
     },
     {
       kind: 'ping.pub',
@@ -237,6 +234,12 @@ export const cryptoorgchain: Chain = {
     },
   ],
   images: [
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cryptoorgchain/images/cronos.png',
+    },
+    {
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cryptoorgchain/images/Cronos_POS_Chain_Colour.svg',
+    },
     {
       png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cronos.png',
       svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cro.svg',
@@ -267,13 +270,14 @@ export const cryptoorgchainAssetList: AssetLists = {
       symbol: 'CRO',
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cro.svg',
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cronos.png',
       },
       coingecko_id: 'crypto-com-chain',
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cronos.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cro.svg',
+        },
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cronos.png',
         },
       ],
     },

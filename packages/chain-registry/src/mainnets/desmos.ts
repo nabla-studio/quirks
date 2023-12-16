@@ -33,11 +33,11 @@ export const desmos: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/desmos-labs/desmos',
-    recommended_version: 'v6.1.1',
-    compatible_versions: ['v6.1.0', 'v6.1.1'],
+    recommended_version: 'v6.2.0',
+    compatible_versions: ['v6.2.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/desmos-labs/desmos/releases/download/v6.1.1/desmos-6.1.1-linux-amd64',
+        'https://github.com/desmos-labs/desmos/releases/download/v6.2.0/desmos-6.2.0-linux-amd64',
     },
     genesis: {
       genesis_url:
@@ -79,7 +79,7 @@ export const desmos: Chain = {
         next_version_name: 'v6',
       },
       {
-        name: 'v6.0.0',
+        name: 'v6',
         recommended_version: 'v6.1.1',
         compatible_versions: ['v6.1.0', 'v6.1.1'],
         proposal: 32,
@@ -87,6 +87,18 @@ export const desmos: Chain = {
         binaries: {
           'linux/amd64':
             'https://github.com/desmos-labs/desmos/releases/download/v6.1.1/desmos-6.1.1-linux-amd64',
+        },
+        next_version_name: 'v6.2.0',
+      },
+      {
+        name: 'v6.2.0',
+        recommended_version: 'v6.2.0',
+        compatible_versions: ['v6.2.0'],
+        proposal: 36,
+        height: 11312575,
+        binaries: {
+          'linux/amd64':
+            'https://github.com/desmos-labs/desmos/releases/download/v6.2.0/desmos-6.2.0-linux-amd64',
         },
         next_version_name: '',
       },
@@ -150,6 +162,11 @@ export const desmos: Chain = {
         address: '65.21.91.99:36656',
         provider: 'Staketab',
       },
+      {
+        id: '311cfd5691f11ec0cb0f0b8e5303016d86fb4789',
+        address: '148.251.19.41:26656',
+        provider: '[NODERS]TEAM',
+      },
     ],
   },
   apis: {
@@ -165,18 +182,6 @@ export const desmos: Chain = {
       {
         address: 'https://desmos-rpc.ibs.team/',
         provider: 'Inter Blockchain Services',
-      },
-      {
-        address: 'https://desmos.nodejumper.io',
-        provider: 'NODEJUMPER',
-      },
-      {
-        address: 'https://rpc-desmos.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rpc-desmos.explorer.co.id',
-        provider: 'Nodine.ID',
       },
       {
         address: 'https://desmos-rpc.staketab.org:443',
@@ -205,14 +210,6 @@ export const desmos: Chain = {
         provider: 'Inter Blockchain Services',
       },
       {
-        address: 'https://desmos.nodejumper.io:1317',
-        provider: 'NODEJUMPER',
-      },
-      {
-        address: 'https://api-desmos.explorer.co.id',
-        provider: 'Nodine.ID',
-      },
-      {
         address: 'https://desmos-rest.staketab.org',
         provider: 'Staketab',
       },
@@ -231,16 +228,24 @@ export const desmos: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://desmos.nodejumper.io:9090',
-        provider: 'Nodejumper 🚀',
-      },
-      {
         address: 'https://grpc-desmos.explorer.co.id',
         provider: 'Nodine.ID',
       },
       {
         address: 'services.staketab.com:9043',
         provider: 'Staketab',
+      },
+      {
+        address: 'desmos.grpc.nodersteam.com:9121',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://grpc-desmos.sr20de.xyz',
+        provider: 'Sr20de',
+      },
+      {
+        address: 'desmos-grpc.panthea.eu:16730',
+        provider: 'Panthea EU',
       },
     ],
   },

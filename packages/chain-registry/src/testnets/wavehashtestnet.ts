@@ -119,6 +119,11 @@ export const wavehashtestnetAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/wavehashtestnet/images/WaveHash.png',
       },
       coingecko_id: '',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/wavehashtestnet/images/WaveHash.png',
+        },
+      ],
     },
   ],
 };

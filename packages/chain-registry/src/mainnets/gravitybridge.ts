@@ -45,11 +45,11 @@ export const gravitybridge: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Gravity-Bridge/Gravity-Bridge',
-    recommended_version: 'v1.10.0',
-    compatible_versions: ['v1.10.0'],
+    recommended_version: 'v1.11.1',
+    compatible_versions: ['v1.11.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.10.0/gravity-linux-amd64',
+        'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.11.1/gravity-linux-amd64',
     },
     genesis: {
       genesis_url:
@@ -87,13 +87,26 @@ export const gravitybridge: Chain = {
       {
         name: 'antares',
         height: 7440250,
-        recommended_version: 'v1.10.0',
+        recommended_version: 'v1.10.2',
         proposal: 183,
-        compatible_versions: ['v1.10.0'],
+        compatible_versions: ['v1.10.0', 'v1.10.2'],
         binaries: {
           'linux/amd64':
-            'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.10.0/gravity-linux-amd64',
+            'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.10.2/gravity-linux-amd64',
         },
+        next_version_name: 'apollo',
+      },
+      {
+        name: 'apollo',
+        height: 9244100,
+        recommended_version: 'v1.11.1',
+        proposal: 212,
+        compatible_versions: ['v1.11.1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Gravity-Bridge/Gravity-Bridge/releases/download/v1.11.1/gravity-linux-amd64',
+        },
+        next_version_name: '',
       },
     ],
   },
@@ -101,6 +114,8 @@ export const gravitybridge: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/grav.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/grav.svg',
   },
+  description:
+    'An open, decentralized bridge that unlocks the power of interoperability & liquidity between blockchain ecosystems.',
   peers: {
     seeds: [
       {
@@ -356,8 +371,8 @@ export const gravitybridgeAssetList: AssetLists = {
       symbol: 'GRAV',
       coingecko_id: 'graviton',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/grav.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/grav.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/grav.svg',
       },
       images: [
         {
@@ -407,6 +422,10 @@ export const gravitybridgeAssetList: AssetLists = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/pstake.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/pstake.svg',
         },
@@ -626,6 +645,86 @@ export const gravitybridgeAssetList: AssetLists = {
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/dai.svg',
+        },
+      ],
+    },
+    {
+      description: 'Gravity Bridge sDAI',
+      denom_units: [
+        {
+          denom: 'gravity0x83F20F44975D03b1b09e64809B757c47f942BEeA',
+          exponent: 0,
+        },
+        {
+          denom: 'gsdai',
+          exponent: 18,
+        },
+      ],
+      base: 'gravity0x83F20F44975D03b1b09e64809B757c47f942BEeA',
+      name: 'Savings Dai',
+      display: 'gsdai',
+      symbol: 'sDAI',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sdai.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sdai.svg',
+      },
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x83F20F44975D03b1b09e64809B757c47f942BEeA',
+          },
+          provider: 'Gravity Bridge',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            base_denom: 'ethereum',
+            chain_name: '0x83F20F44975D03b1b09e64809B757c47f942BEeA',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sdai.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sdai.svg',
+        },
+      ],
+    },
+    {
+      description: 'Gravity Bridge OCC',
+      denom_units: [
+        {
+          denom: 'gravity0x2F109021aFe75B949429fe30523Ee7C0D5B27207',
+          exponent: 0,
+        },
+        {
+          denom: 'gocc',
+          exponent: 18,
+        },
+      ],
+      base: 'gravity0x2F109021aFe75B949429fe30523Ee7C0D5B27207',
+      name: 'OccamFi',
+      display: 'gocc',
+      symbol: 'OCC',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/occamfi.png',
+      },
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x2F109021aFe75B949429fe30523Ee7C0D5B27207',
+          },
+          provider: 'Gravity Bridge',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x2F109021aFe75B949429fe30523Ee7C0D5B27207',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/occamfi.png',
         },
       ],
     },

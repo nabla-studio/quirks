@@ -16,24 +16,24 @@ export const neutrontestnet: Chain = {
     fee_tokens: [
       {
         denom: 'untrn',
-        low_gas_price: 0,
-        average_gas_price: 0.025,
-        high_gas_price: 0.05,
+        low_gas_price: 0.02,
+        average_gas_price: 0.02,
+        high_gas_price: 0.02,
       },
     ],
   },
   codebase: {
     git_repo: 'https://github.com/neutron-org/neutron',
-    recommended_version: 'v1.0.4',
-    compatible_versions: ['v1.0.4'],
-    cosmos_sdk_version: '0.45',
+    recommended_version: 'v2.0.0',
+    compatible_versions: ['v2.0.0'],
+    cosmos_sdk_version: '0.47',
     consensus: {
       type: 'cometbft',
-      version: '0.34.27',
+      version: '0.37.2',
     },
-    cosmwasm_version: '0.31',
+    cosmwasm_version: '0.45',
     cosmwasm_enabled: true,
-    ibc_go_version: '4.3.1',
+    ibc_go_version: '7.3.1',
     genesis: {
       genesis_url:
         'https://github.com/cosmos/testnets/raw/master/replicated-security/pion-1/pion-1-genesis.json',
@@ -41,6 +41,7 @@ export const neutrontestnet: Chain = {
     versions: [
       {
         name: 'v0.4.3',
+        next_version_name: 'v1.0.4',
         recommended_version: 'v0.4.3',
         compatible_versions: ['v0.4.3'],
         cosmos_sdk_version: '0.45',
@@ -54,6 +55,7 @@ export const neutrontestnet: Chain = {
       },
       {
         name: 'v1.0.4',
+        next_version_name: 'v2.0.0',
         recommended_version: 'v1.0.4',
         compatible_versions: ['v1.0.4'],
         cosmos_sdk_version: '0.45',
@@ -64,6 +66,20 @@ export const neutrontestnet: Chain = {
         cosmwasm_version: '0.31',
         cosmwasm_enabled: true,
         ibc_go_version: '4.3.1',
+      },
+      {
+        name: 'v2.0.0',
+        next_version_name: '',
+        recommended_version: 'v2.0.0',
+        compatible_versions: ['v2.0.0'],
+        cosmos_sdk_version: '0.47',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        cosmwasm_version: '0.45',
+        cosmwasm_enabled: true,
+        ibc_go_version: '7.3.1',
       },
     ],
   },

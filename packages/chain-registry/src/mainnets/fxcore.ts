@@ -196,19 +196,11 @@ export const fxcore: Chain = {
         address: 'https://fx-json.functionx.io',
         provider: 'Function X',
       },
-      {
-        address: 'https://fx-json.portfolio-x.xyz:26657',
-        provider: 'Portfolio X',
-      },
     ],
     rest: [
       {
         address: 'https://fx-rest.functionx.io',
         provider: 'Function X',
-      },
-      {
-        address: 'https://fx-rest.portfolio-x.xyz:1317',
-        provider: 'Portfolio X',
       },
     ],
     grpc: [
@@ -235,6 +227,13 @@ export const fxcore: Chain = {
       tx_page: 'https://starscan.io/fxcore/tx/${txHash}',
       account_page: 'https://starscan.io/fxcore/address/${accountAddress}',
     },
+    {
+      kind: 'TC Network',
+      url: 'https://explorer.tcnetwork.io/fx',
+      tx_page: 'https://explorer.tcnetwork.io/fx/transaction/${txHash}',
+      account_page:
+        'https://explorer.tcnetwork.io/fx/account/${accountAddress}',
+    },
   ],
 };
 
@@ -259,14 +258,44 @@ export const fxcoreAssetList: AssetLists = {
       display: 'WFX',
       symbol: 'FX',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/fxcore/images/fx.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/fxcore/images/fx.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/fxcore/images/fx.svg',
       },
       coingecko_id: 'fx-coin',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/fxcore/images/fx.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/fxcore/images/fx.svg',
+        },
+      ],
+    },
+    {
+      description: 'The cross chain token of the Function X',
+      denom_units: [
+        {
+          denom: 'eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38',
+          exponent: 0,
+          aliases: [],
+        },
+        {
+          denom: 'PUNDIX',
+          exponent: 18,
+          aliases: [],
+        },
+      ],
+      base: 'eth0x0FD10b9899882a6f2fcb5c371E17e70FdEe00C38',
+      display: 'PUNDIX',
+      name: 'Pundi X Token',
+      symbol: 'PUNDIX',
+      coingecko_id: 'pundi-x-2',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pundix/images/pundi-x-token-logo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pundix/images/pundi-x-token-logo.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pundix/images/pundi-x-token-logo.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pundix/images/pundi-x-token-logo.svg',
         },
       ],
     },

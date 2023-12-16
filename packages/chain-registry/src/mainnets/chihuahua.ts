@@ -134,14 +134,9 @@ export const chihuahua: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'chihuahua-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'chihuahua-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '3c5b1a13f810507b9ef1240372b3cbc9bd90da26',
@@ -190,10 +185,6 @@ export const chihuahua: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://rpc-chihuahua.goldenratiostaking.net',
-        provider: 'Golden Ratio Staking',
-      },
-      {
         address: 'https://rpc.huahua.bh.rocks',
         provider: 'BlockHunters 🎯',
       },
@@ -206,20 +197,12 @@ export const chihuahua: Chain = {
         provider: 'PUPMØS',
       },
       {
-        address: 'https://rpc-chihuahua.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rpc-chihuahua.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://chihuahua-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://chihuahua-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://chihuahua-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
@@ -240,16 +223,8 @@ export const chihuahua: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://api-chihuahua.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://chihuahua-api.lavenderfive.com',
         provider: 'Lavender.Five Nodes 🐝',
-      },
-      {
-        address: 'https://api.huahua.bh.rocks',
-        provider: 'BlockHunters 🎯',
       },
       {
         address: 'https://chihuahua-api.kleomedes.network',
@@ -260,20 +235,12 @@ export const chihuahua: Chain = {
         provider: 'PUPMØS',
       },
       {
-        address: 'https://lcd-chihuahua.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rest-chihuahua.goldenratiostaking.net',
-        provider: 'Golden Ratio Staking',
-      },
-      {
         address: 'https://chihuahua-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://chihuahua-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -299,7 +266,7 @@ export const chihuahua: Chain = {
       },
       {
         address: 'chihuahua-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -362,6 +329,35 @@ export const chihuahuaAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/huahua.svg',
         },
       ],
+    },
+    {
+      description: 'Puppy',
+      denom_units: [
+        {
+          denom:
+            'cw20:chihuahua1yl8z39ugle8s02fpwkhh293509q5xcpalmdzc4amvchz8nkexrmsy95gef',
+          exponent: 0,
+        },
+        {
+          denom: 'puppy',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'cw20',
+      address:
+        'chihuahua1yl8z39ugle8s02fpwkhh293509q5xcpalmdzc4amvchz8nkexrmsy95gef',
+      base: 'cw20:chihuahua1yl8z39ugle8s02fpwkhh293509q5xcpalmdzc4amvchz8nkexrmsy95gef',
+      name: 'Puppy',
+      display: 'puppy',
+      symbol: 'PUPPY',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/puppyhuahua_logo.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/puppyhuahua_logo.png',
+      },
     },
   ],
 };

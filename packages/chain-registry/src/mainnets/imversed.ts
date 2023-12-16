@@ -74,18 +74,8 @@ export const imversed: Chain = {
     ],
   },
   apis: {
-    rpc: [
-      {
-        address: 'https://rpc.imversed.network:443',
-        provider: 'imversed',
-      },
-    ],
-    rest: [
-      {
-        address: 'https://rest.imversed.network:443',
-        provider: 'imversed',
-      },
-    ],
+    rpc: [],
+    rest: [],
     grpc: [
       {
         address: 'grpc.imversed.network:443',
@@ -136,8 +126,8 @@ export const imversedAssetList: AssetLists = {
       display: 'imv',
       symbol: 'IMV',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/imversed/images/imversed.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/imversed/images/imversed.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/imversed/images/imversed.svg',
       },
       coingecko_id: 'imv',
       images: [

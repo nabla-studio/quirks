@@ -37,24 +37,28 @@ export const archway: Chain = {
   codebase: {
     git_repo: 'https://github.com/archway-network/archway',
     recommended_version: 'v4.0.2',
-    compatible_versions: ['v4.0.2'],
+    compatible_versions: ['v4.0.1', 'v4.0.2'],
     binaries: {
       'linux/amd64':
         'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_linux_amd64',
       'linux/arm64':
         'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_linux_arm64',
+      'darwin/amd64':
+        'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_darwin_amd64',
+      'darwin/arm64':
+        'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_darwin_arm64',
     },
     cosmos_sdk_version: 'v0.45.16',
     consensus: {
       type: 'tendermint',
       version: 'v0.34.27',
     },
-    cosmwasm_version: 'v0.32.0',
+    cosmwasm_version: 'v0.33.0',
     cosmwasm_enabled: true,
     ibc_go_version: 'v4.3.1',
     genesis: {
       genesis_url:
-        'https://github.com/archway-network/networks/raw/main/archway-1/genesis/genesis.json.gz',
+        'https://github.com/archway-network/networks/raw/main/archway/genesis/genesis.json.gz',
     },
     versions: [
       {
@@ -71,7 +75,7 @@ export const archway: Chain = {
         cosmwasm_version: 'v0.32.0',
         cosmwasm_enabled: true,
         ibc_go_version: 'v4.3.1',
-        cosmwasm_path: '$HOME/.example/data/wasm',
+        cosmwasm_path: '$HOME/.archway/data/wasm',
         binaries: {
           'linux/amd64':
             'https://github.com/archway-network/archway/releases/download/v1.0.1/archwayd_linux_amd64',
@@ -95,7 +99,7 @@ export const archway: Chain = {
         cosmwasm_version: 'v0.32.0',
         cosmwasm_enabled: true,
         ibc_go_version: 'v4.3.1',
-        cosmwasm_path: '$HOME/.example/data/wasm',
+        cosmwasm_path: '$HOME/.archway/data/wasm',
         binaries: {
           'linux/amd64':
             'https://github.com/archway-network/archway/releases/download/v2.0.0/archwayd_linux_amd64',
@@ -107,9 +111,18 @@ export const archway: Chain = {
       {
         name: 'v4.0.2',
         recommended_version: 'v4.0.2',
-        compatible_versions: ['v4.0.2'],
+        compatible_versions: ['v4.0.1', 'v4.0.2'],
         proposal: 21,
         height: 1215711,
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.27',
+        },
+        cosmos_sdk_version: 'v0.45.16',
+        cosmwasm_version: 'v0.33.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v4.3.1',
+        cosmwasm_path: '$HOME/.archway/data/wasm',
         binaries: {
           'linux/amd64':
             'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_linux_amd64',
@@ -124,6 +137,8 @@ export const archway: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/archway.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/archway.svg',
   },
+  description:
+    'An incentivized L1 blockchain that allows developers to capture the value their dapps create, enabling sustainable economic models.',
   peers: {
     seeds: [
       {
@@ -166,6 +181,26 @@ export const archway: Chain = {
         address: 'archway.lgns.net:26656',
         provider: 'Luganodes',
       },
+      {
+        id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+        address: 'archway.rpc.kjnodes.com:15659',
+        provider: 'kjnodes',
+      },
+      {
+        id: 'bd9332cd0a99f5830ea457a32a56b32790f68716',
+        address: '135.181.58.28:27456',
+        provider: 'Validatrium',
+      },
+      {
+        id: '6b0ffcce9b59b91ceb8eea5d4599e27707e3604a',
+        address: 'seeds.stakeup.tech:10214',
+        provider: 'StakeUp',
+      },
+      {
+        id: '17d6cb2601b67ad916d5433a404bfc000b0b6ef1',
+        address: 'rpc.archway.nodestake.top:666',
+        provider: 'NodeStake',
+      },
     ],
     persistent_peers: [
       {
@@ -183,17 +218,26 @@ export const archway: Chain = {
         address: '88.99.208.54:31656',
         provider: 'StakeTown',
       },
+      {
+        id: '34999776ce08cb4298a9849609c4b43c78e8be37',
+        address: '65.108.238.203:25656',
+        provider: '[NODERS]TEAM',
+      },
     ],
   },
   apis: {
     rpc: [
       {
+        address: 'https://rpc.mainnet.archway.io',
+        provider: 'Archway Foundation',
+      },
+      {
         address: 'https://rpc-archway.cosmos-spaces.cloud',
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'https://rpc.mainnet.archway.io',
-        provider: 'Archway Foundation',
+        address: 'https://archway-mainnet-archive.allthatnode.com:26657',
+        provider: 'All That Node',
       },
       {
         address: 'https://m-archway.rpc.utsa.tech',
@@ -228,16 +272,8 @@ export const archway: Chain = {
         provider: 'WhisperNode🤐',
       },
       {
-        address: 'https://rpc.archway.stake-take.com',
-        provider: 'Stake-Take',
-      },
-      {
         address: 'https://archway-rpc.w3coins.io',
         provider: 'w3coins',
-      },
-      {
-        address: 'https://archway-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://m-archway.rpc.utsa.tech',
@@ -260,8 +296,40 @@ export const archway: Chain = {
         provider: 'Luganodes',
       },
       {
-        address: 'https://archway-rpc.stake-town.com:443',
+        address: 'https://archway-rpc.stake-town.com',
         provider: 'StakeTown',
+      },
+      {
+        address: 'https://archway-rpc.0base.dev',
+        provider: '0base.vc',
+      },
+      {
+        address: 'https://archway-mainnet.rpc.l0vd.com',
+        provider: 'L0vd.com',
+      },
+      {
+        address: 'https://archway-rpc.openbitlab.com',
+        provider: 'openbitlab',
+      },
+      {
+        address: 'https://rpc-archway.mzonder.com',
+        provider: 'MZONDER',
+      },
+      {
+        address: 'https://rpc-archway.mainnet.validatrium.club',
+        provider: 'Validatrium',
+      },
+      {
+        address: 'https://rpc.archway.stakeup.tech',
+        provider: 'StakeUp',
+      },
+      {
+        address: 'https://archway.api.trivium.network:26657',
+        provider: 'TriviumX | Architech',
+      },
+      {
+        address: 'https://archway-rpc.tienthuattoan.ventures',
+        provider: 'TienThuatToan',
       },
     ],
     rest: [
@@ -298,10 +366,6 @@ export const archway: Chain = {
         provider: 'cryptech',
       },
       {
-        address: 'https://archway-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://api.archway.nodestake.top',
         provider: 'NodeStake',
       },
@@ -312,14 +376,6 @@ export const archway: Chain = {
       {
         address: 'https://lcd-archway.whispernode.com:443',
         provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://api.archway.stake-take.com',
-        provider: 'Stake-Take',
-      },
-      {
-        address: 'https://m-archway.api.utsa.tech',
-        provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
       },
       {
         address: 'https://archway-api.lavenderfive.com:443',
@@ -338,15 +394,43 @@ export const archway: Chain = {
         provider: 'Luganodes',
       },
       {
-        address: 'https://archway-api.stake-town.com:443',
+        address: 'https://archway-api.stake-town.com',
         provider: 'StakeTown',
+      },
+      {
+        address: 'https://archway-rest.0base.dev',
+        provider: '0base.vc',
+      },
+      {
+        address: 'https://archway-mainnet.api.l0vd.com',
+        provider: 'L0vd.com',
+      },
+      {
+        address: 'https://archway-api.openbitlab.com',
+        provider: 'openbitlab',
+      },
+      {
+        address: 'https://api-archway.mainnet.validatrium.club',
+        provider: 'Validatrium',
+      },
+      {
+        address: 'https://api.archway.stakeup.tech',
+        provider: 'StakeUp',
+      },
+      {
+        address: 'https://archway.api.trivium.network:1317',
+        provider: 'TriviumX | Architech',
+      },
+      {
+        address: 'https://archway-mainnet-archive.allthatnode.com:1317',
+        provider: 'All That Node',
+      },
+      {
+        address: 'https://archway-api.tienthuattoan.ventures',
+        provider: 'TienThuatToan',
       },
     ],
     grpc: [
-      {
-        address: 'grpc-archway.cosmos-spaces.cloud:2490',
-        provider: 'Cosmos Spaces',
-      },
       {
         address: 'grpc.mainnet.archway.io:443',
         provider: 'Archway Foundation',
@@ -354,10 +438,6 @@ export const archway: Chain = {
       {
         address: 'grpc-1.archway.nodes.guru:10690',
         provider: 'Nodes.Guru',
-      },
-      {
-        address: 'archway-grpc.w3coins.io:11590',
-        provider: 'w3coins',
       },
       {
         address: 'archway.grpc.kjnodes.com:15690',
@@ -376,12 +456,12 @@ export const archway: Chain = {
         provider: 'AM Solutions',
       },
       {
-        address: 'archway-mainnet-grpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        address: 'archway-grpc.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://archway-grpc.lavenderfive.com:443',
-        provider: 'Lavender.Five Nodes 🐝',
+        address: 'archway.grpc.nodersteam.com:9090',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'grpc-archway.mms.team:443',
@@ -398,6 +478,42 @@ export const archway: Chain = {
       {
         address: 'archway-grpc.stake-town.com:443',
         provider: 'StakeTown',
+      },
+      {
+        address: 'archway-grpc.huginn.tech:4090',
+        provider: 'Huginn',
+      },
+      {
+        address: 'archway-mainnet.grpc.l0vd.com:80',
+        provider: 'L0vd.com',
+      },
+      {
+        address: 'archway-grpc.openbitlab.com:443',
+        provider: 'openbitlab',
+      },
+      {
+        address: 'grpc-archway.mainnet.validatrium.club:27490',
+        provider: 'Validatrium',
+      },
+      {
+        address: 'grpc.archway.stakeup.tech:443',
+        provider: 'StakeUp',
+      },
+      {
+        address: 'grpc-archway.cosmos-spaces.cloud:4820',
+        provider: 'Cosmos Spaces',
+      },
+      {
+        address: 'grpc-archway-mainnet.testnet-pride.com:9096',
+        provider: 'TestnetPride',
+      },
+      {
+        address: 'archway.api.trivium.network:9090',
+        provider: 'TriviumX | Architech',
+      },
+      {
+        address: 'archway-grpc.tienthuattoan.ventures:9290',
+        provider: 'TienThuatToan',
       },
     ],
   },
@@ -444,6 +560,12 @@ export const archway: Chain = {
       kind: 'ping.pub',
       url: 'https://ping.pub/archway',
       tx_page: 'https://ping.pub/archway/tx/${txHash}',
+    },
+    {
+      kind: 'Big Dipper',
+      url: 'https://bigdipper.live/archway',
+      tx_page: 'https://bigdipper.live/archway/transactions/${txHash}',
+      account_page: 'https://bigdipper.live/archway/accounts/${accountAddress}',
     },
   ],
   images: [

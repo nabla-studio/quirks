@@ -62,10 +62,6 @@ export const dyson: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://dys-tm.dyson.lol:443',
-        provider: 'lol',
-      },
-      {
         address: 'https://dys-tm.dysonprotocol.com:443',
         provider: 'dysonprotocol',
       },
@@ -76,16 +72,8 @@ export const dyson: Chain = {
     ],
     rest: [
       {
-        address: 'https://dys-api.dyson.lol:443',
-        provider: 'lol',
-      },
-      {
         address: 'https://dys-api.dysonprotocol.com:443',
         provider: 'dysonprotocol',
-      },
-      {
-        address: 'https://dyson-api.genznodes.dev:443',
-        provider: 'genznodes',
       },
       {
         address: 'https://dyson-api.cogwheel.zone:443',
@@ -191,8 +179,14 @@ export const dysonAssetList: AssetLists = {
             chain_name: 'osmosis',
             base_denom: 'uosmo',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
+      },
     },
     {
       denom_units: [
@@ -235,8 +229,12 @@ export const dysonAssetList: AssetLists = {
             base_denom:
               'ibc/D1542AA8762DB13087D8364F3EA6509FD6F009A34F00426AF9E4F9FA85CBBF1F',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/wbtc.png',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/wbtc.png',
+      },
     },
     {
       denom_units: [
@@ -279,8 +277,14 @@ export const dysonAssetList: AssetLists = {
             base_denom:
               'ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+      },
     },
   ],
 };

@@ -114,7 +114,6 @@ export const coreum: Chain = {
   ],
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coreum/images/coreum.png',
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coreum/images/coreum.svg',
   },
   peers: {
     seeds: [
@@ -134,14 +133,9 @@ export const coreum: Chain = {
         provider: 'NodeX Validator',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'coreum-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'coreum-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -168,16 +162,12 @@ export const coreum: Chain = {
         provider: 'ecostake',
       },
       {
-        address: 'https://rpc.coreum.nodexcapital.com',
-        provider: 'NodeX Validator',
-      },
-      {
         address: 'https://coreum.rpc.silknodes.io',
         provider: 'Silk Nodes',
       },
       {
-        address: 'https://coreum-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://coreum-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -203,17 +193,13 @@ export const coreum: Chain = {
       },
       {
         address: 'coreum-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
       {
         address: 'https://rest-coreum.ecostake.com',
         provider: 'ecostake',
-      },
-      {
-        address: 'https://rest.coreum.nodexcapital.com',
-        provider: 'NodeX Validator',
       },
       {
         address: 'https://coreum.api.silknodes.io',
@@ -225,7 +211,7 @@ export const coreum: Chain = {
       },
       {
         address: 'https://coreum-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -257,6 +243,13 @@ export const coreum: Chain = {
       account_page:
         'https://explorer.silknodes.io/coreum/account/${accountAddress}',
     },
+    {
+      kind: 'TC Network',
+      url: 'https://explorer.tcnetwork.io/coreum',
+      tx_page: 'https://explorer.tcnetwork.io/coreum/transaction/${txHash}',
+      account_page:
+        'https://explorer.tcnetwork.io/coreum/account/${accountAddress}',
+    },
   ],
   keywords: ['dex', 'staking', 'wasm', 'assets', 'nft'],
 };
@@ -280,7 +273,7 @@ export const coreumAssetList: AssetLists = {
       base: 'ucore',
       name: 'Coreum',
       display: 'core',
-      symbol: 'CORE',
+      symbol: 'COREUM',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coreum/images/coreum.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coreum/images/coreum.svg',

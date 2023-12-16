@@ -82,6 +82,11 @@ export const canto: Chain = {
         address: 'seeds.nethernode.xyz:15556',
         provider: 'carbonZERO🌲',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -115,16 +120,8 @@ export const canto: Chain = {
         provider: 'Althea',
       },
       {
-        address: 'https://canto-rpc.lgns.net:443',
-        provider: 'Luganodes',
-      },
-      {
         address: 'https://rpc-canto.cosmos-spaces.cloud',
         provider: 'Cosmos Spaces',
-      },
-      {
-        address: 'https://rpc-canto.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
       },
       {
         address: 'https://canto-mainnet-rpc.autostake.com:443',
@@ -145,16 +142,8 @@ export const canto: Chain = {
         provider: 'silent',
       },
       {
-        address: 'https://canto-rest.lgns.net:443',
-        provider: 'Luganodes',
-      },
-      {
         address: 'https://api-canto.cosmos-spaces.cloud',
         provider: 'Cosmos Spaces',
-      },
-      {
-        address: 'https://rest-canto.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
       },
       {
         address: 'https://canto-mainnet-lcd.autostake.com:443',
@@ -272,8 +261,8 @@ export const cantoAssetList: AssetLists = {
       display: 'canto',
       symbol: 'CANTO',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/canto/images/canto.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/canto/images/canto.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/canto/images/canto.svg',
       },
       coingecko_id: 'canto',
       images: [
@@ -311,7 +300,7 @@ export const cantoAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-13',
-            path: 'transfer/channel-13',
+            path: 'transfer/channel-13/erc20/tether/usdt',
           },
         },
       ],
@@ -321,8 +310,12 @@ export const cantoAssetList: AssetLists = {
             chain_name: 'kava',
             base_denom: 'erc20/tether/usdt',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
     },
   ],
 };

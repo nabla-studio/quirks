@@ -116,6 +116,29 @@ export const chain4Energy: Chain = {
           'darwin/amd64':
             'https://github.com/chain4energy/c4e-chain/releases/download/v1.2.1/c4ed_v1.2.1_darwin_amd64.tar.gz',
         },
+        next_version_name: 'v1.3.0',
+      },
+      {
+        name: 'v1.3.0',
+        tag: 'v1.3.0',
+        proposal: 7,
+        height: 6283905,
+        recommended_version: 'v1.3.0',
+        compatible_versions: ['v1.3.0'],
+        cosmos_sdk_version: 'v0.46.13',
+        ibc_go_version: 'v5.2.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/chain4energy/c4e-chain/releases/download/v1.3.0/c4ed_v1.3.0_darwin_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/chain4energy/c4e-chain/releases/download/v1.3.0/c4ed_v1.3.0_linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/chain4energy/c4e-chain/releases/download/v1.3.0/c4ed_v1.3.0_darwin_amd64.tar.gz',
+        },
         next_version_name: '',
       },
     ],
@@ -179,11 +202,6 @@ export const chain4Energy: Chain = {
         id: '6b0ffcce9b59b91ceb8eea5d4599e27707e3604a',
         address: 'seeds.stakeup.tech:10210',
         provider: 'StakeUp',
-      },
-      {
-        id: '03d0aa331240ede8090c1e4ab3e6756563a91204',
-        address: '193.26.159.34:52656',
-        provider: 'genznodes',
       },
       {
         id: '6cb7ff21d19f139f4ca5e6e2a336e59d2857aba1',
@@ -290,10 +308,6 @@ export const chain4Energy: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://m-c4e.rpc.utsa.tech',
-        provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
-      },
-      {
         address: 'https://chain4energy-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -308,10 +322,6 @@ export const chain4Energy: Chain = {
       {
         address: 'https://c4e.rpc.bccnodes.com',
         provider: 'BccNodes',
-      },
-      {
-        address: 'https://rpc-c4e.nodine.id',
-        provider: 'Nodine.ID',
       },
       {
         address: 'https://rpc-m.c4e.hexnodes.co',
@@ -362,10 +372,6 @@ export const chain4Energy: Chain = {
         provider: 'AlxVoy ⚡ ANODE.TEAM',
       },
       {
-        address: 'http://144.76.201.43:26857',
-        provider: 'Validator.run',
-      },
-      {
         address: 'https://c4e-rpc.validatrium.club',
         provider: 'Validatrium',
       },
@@ -401,6 +407,18 @@ export const chain4Energy: Chain = {
         address: 'https://c4e-rpc.kalia.network:443',
         provider: 'Kalia Network',
       },
+      {
+        address: 'https://c4e.rpc.skynodejs.net',
+        provider: 'skynodejs',
+      },
+      {
+        address: 'http://38.242.220.64:16657',
+        provider: 'mahof',
+      },
+      {
+        address: 'http://209.182.239.169:46657',
+        provider: 'SECARD',
+      },
     ],
     rest: [
       {
@@ -412,20 +430,12 @@ export const chain4Energy: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://m-c4e.api.utsa.tech',
-        provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
-      },
-      {
         address: 'https://chain4energy-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://c4e.api.m.stavr.tech',
         provider: '🔥STAVR🔥',
-      },
-      {
-        address: 'https://c4e.api.bccnodes.com',
-        provider: 'BccNodes',
       },
       {
         address: 'https://api-m.c4e.hexnodes.co',
@@ -496,12 +506,20 @@ export const chain4Energy: Chain = {
         provider: 'Antrix Validators',
       },
       {
-        address: 'https://c4e.doubletop.tech/api',
-        provider: 'DOUBLETOP',
-      },
-      {
         address: 'https://c4e-api.kalia.network:443',
         provider: 'Kalia Network',
+      },
+      {
+        address: 'https://c4e.api.skynodejs.net',
+        provider: 'skynodejs',
+      },
+      {
+        address: 'http://38.242.220.64:11317',
+        provider: 'mahof',
+      },
+      {
+        address: 'http://209.182.239.169:1417',
+        provider: 'SECARD',
       },
     ],
     grpc: [
@@ -576,6 +594,18 @@ export const chain4Energy: Chain = {
       {
         address: 'c4e-grpc.kalia.network:3090',
         provider: 'Kalia Network',
+      },
+      {
+        address: 'https://c4e.grpc.skynodejs.net',
+        provider: 'skynodejs',
+      },
+      {
+        address: 'http://38.242.220.64:19090',
+        provider: 'mahof',
+      },
+      {
+        address: 'http://209.182.239.169:9190',
+        provider: 'SECARD',
       },
     ],
   },

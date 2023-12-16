@@ -64,6 +64,11 @@ export const hypersigntestnet: Chain = {
     ],
     persistent_peers: [
       {
+        id: '70db7f0ae54e329474ecd0649d04884bc6f6abe9',
+        address: 'hid.peer.stavr.tech:11056',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: 'd7c9b9a3c3a6c5f4ccdfb37a8358755b277271c1',
         address: '3.110.226.164:26656',
         provider: 'hypersign',
@@ -77,6 +82,10 @@ export const hypersigntestnet: Chain = {
         provider: 'hypersign',
       },
       {
+        address: 'http://hid.rpc.t.stavr.tech:11057',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://hypersign-testnet-rpc.stakerhouse.com',
         provider: 'StakerHouse',
       },
@@ -85,6 +94,10 @@ export const hypersigntestnet: Chain = {
       {
         address: 'https://api.jagrat.hypersign.id',
         provider: 'hypersign',
+      },
+      {
+        address: 'https://hid.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://hypersign-testnet-rest.stakerhouse.com',
@@ -97,6 +110,10 @@ export const hypersigntestnet: Chain = {
         provider: 'hypersign',
       },
       {
+        address: 'http://hid.grpc.t.stavr.tech:8022',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'hypersign-testnet-grpc.stakerhouse.com:443',
         provider: 'StakerHouse',
       },
@@ -107,6 +124,11 @@ export const hypersigntestnet: Chain = {
       kind: 'Ping Pub',
       url: 'https://explorer.hypersign.id/hypersign-testnet',
       tx_page: 'https://explorer.hypersign.id/hypersign-testnet/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/HyperSign',
+      tx_page: 'https://explorer.stavr.tech/HyperSign/tx/${txHash}',
     },
     {
       kind: 'cosmotracker',

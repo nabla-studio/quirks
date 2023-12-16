@@ -33,8 +33,28 @@ export const lumnetwork: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/lum-network/chain',
-    recommended_version: 'v1.6.1',
-    compatible_versions: ['v1.6.1'],
+    recommended_version: 'v1.6.3',
+    compatible_versions: ['v1.6.3'],
+    cosmos_sdk_version: 'v0.47.5',
+    ibc_go_version: 'v7.2.0',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.37.2',
+    },
+    binaries: {
+      'linux/amd64':
+        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_ubuntu-latest_amd64.zip',
+      'linux/arm64':
+        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_ubuntu-latest_arm64.zip',
+      'darwin/amd64':
+        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_macos-latest_amd64.zip',
+      'darwin/arm64':
+        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_macos-latest_arm64.zip',
+      'windows/amd64':
+        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_windows-latest_amd64.zip',
+      'windows/arm64':
+        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_windows-latest_arm64.zip',
+    },
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/lum-network/mainnet/master/genesis.json',
@@ -100,6 +120,42 @@ export const lumnetwork: Chain = {
         height: 9520750,
         recommended_version: 'v1.6.1',
         compatible_versions: ['v1.6.1'],
+        next_version_name: 'v1.6.2',
+      },
+      {
+        name: 'v1.6.2',
+        proposal: 90,
+        height: 10027000,
+        recommended_version: 'v1.6.2-1',
+        compatible_versions: ['v1.6.2-1'],
+        next_version_name: 'v1.6.3',
+      },
+      {
+        name: 'v1.6.3',
+        proposal: 92,
+        height: 10444000,
+        recommended_version: 'v1.6.3',
+        compatible_versions: ['v1.6.3'],
+        cosmos_sdk_version: 'v0.47.5',
+        ibc_go_version: 'v7.2.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_ubuntu-latest_amd64.zip',
+          'linux/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_ubuntu-latest_arm64.zip',
+          'darwin/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_macos-latest_amd64.zip',
+          'darwin/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_macos-latest_arm64.zip',
+          'windows/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_windows-latest_amd64.zip',
+          'windows/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_windows-latest_arm64.zip',
+        },
         next_version_name: '',
       },
     ],
@@ -134,6 +190,11 @@ export const lumnetwork: Chain = {
         id: 'df949a46ae6529ae1e09b034b49716468d5cc7e9',
         address: 'seeds.stakerhouse.com:10756',
         provider: 'StakerHouse',
+      },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -171,16 +232,8 @@ export const lumnetwork: Chain = {
         provider: 'Lum Foundation',
       },
       {
-        address: 'https://lum-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://lumnetwork-rpc.lavenderfive.com/',
         provider: 'Lavender.Five Nodes 🐝',
-      },
-      {
-        address: 'https://rpc.lum.bh.rocks',
-        provider: 'BlockHunters 🎯',
       },
       {
         address: 'https://lum-rpc.ibs.team',
@@ -201,20 +254,12 @@ export const lumnetwork: Chain = {
         provider: 'Lum Foundation',
       },
       {
-        address: 'https://lum-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://lumnetwork-api.lavenderfive.com/',
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
         address: 'https://api-lum.starsquid.io',
         provider: 'Starsquid',
-      },
-      {
-        address: 'https://api.lum.bh.rocks',
-        provider: 'BlockHunters 🎯',
       },
       {
         address: 'https://lum-api.ibs.team',
@@ -241,6 +286,10 @@ export const lumnetwork: Chain = {
       {
         address: 'lum-grpc.stakerhouse.com:443',
         provider: 'StakerHouse',
+      },
+      {
+        address: 'lum-grpc.panthea.eu:16770',
+        provider: 'Panthea EU',
       },
     ],
   },

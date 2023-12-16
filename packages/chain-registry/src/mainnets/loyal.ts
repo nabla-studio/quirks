@@ -84,10 +84,6 @@ export const loyal: Chain = {
         address: 'https://loyal-rpc.polkachu.com',
         provider: 'Polkachu',
       },
-      {
-        address: 'https://rpc.loyal.nodestake.top',
-        provider: 'NodeStake',
-      },
     ],
     rest: [
       {
@@ -96,10 +92,6 @@ export const loyal: Chain = {
       {
         address: 'https://loyal-api.polkachu.com',
         provider: 'Polkachu',
-      },
-      {
-        address: 'https://api.loyal.nodestake.top',
-        provider: 'NodeStake',
       },
     ],
     grpc: [

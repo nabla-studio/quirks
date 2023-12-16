@@ -55,6 +55,8 @@ export const agoric: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/Agoric-logo-color.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/Agoric-logo-color.svg',
   },
+  description:
+    'The Agoric platform makes it safe and seamless to build decentralized apps using your existing JavaScript knowledge.',
   peers: {
     seeds: [
       {
@@ -130,16 +132,8 @@ export const agoric: Chain = {
         provider: '0base.vc',
       },
       {
-        address: 'https://agoric.mellifera.network:26657',
-        provider: 'MELLIFERA',
-      },
-      {
         address: 'https://agoric-rpc.stakeangle.com',
         provider: 'StakeAngle',
-      },
-      {
-        address: 'agoric-rpc.nodeasy.com:31531',
-        provider: 'Nodeasy',
       },
       {
         address: 'https://agoric-rpc.w3coins.io',
@@ -181,10 +175,6 @@ export const agoric: Chain = {
       {
         address: 'https://agoric-rest.0base.dev',
         provider: '0base.vc',
-      },
-      {
-        address: 'https://agoric.mellifera.network:1317',
-        provider: 'MELLIFERA',
       },
       {
         address: 'https://agoric-api.w3coins.io',
@@ -293,8 +283,8 @@ export const agoricAssetList: AssetLists = {
       display: 'bld',
       symbol: 'BLD',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/bld.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/bld.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/bld.svg',
       },
       coingecko_id: 'agoric',
       images: [
@@ -322,8 +312,8 @@ export const agoricAssetList: AssetLists = {
       display: 'ist',
       symbol: 'IST',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/ist.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/ist.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/ist.svg',
       },
       images: [
         {

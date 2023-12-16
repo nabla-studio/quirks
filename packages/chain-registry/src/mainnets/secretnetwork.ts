@@ -158,6 +158,8 @@ export const secretnetwork: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.svg',
   },
+  description:
+    'Secret Network is the first blockchain with customizable privacy. You get to choose what you share, with whom, and how. This protects users, and empowers developers to build a better Web3.',
   peers: {
     seeds: [
       {
@@ -220,14 +222,6 @@ export const secretnetwork: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://rpc-secret.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://secret-rpc.bharvest.io',
-        provider: 'B-Harvest',
-      },
-      {
         address: 'https://1rpc.io/scrt-rpc',
         provider: '1RPC - Automata Network',
       },
@@ -246,16 +240,8 @@ export const secretnetwork: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://lcd-secret.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
         address: 'http://secretnetwork-mainnet-lcd.autostake.com:1317',
         provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://secret-api.bharvest.io',
-        provider: 'B-Harvest',
       },
       {
         address: 'https://1rpc.io/scrt-lcd',

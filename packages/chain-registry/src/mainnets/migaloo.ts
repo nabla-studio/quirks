@@ -32,13 +32,13 @@ export const migaloo: Chain = {
     ],
   },
   logo_URIs: {
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/migaloo-light.svg',
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/migaloo-light.png',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/migaloo-light.svg',
   },
   codebase: {
     git_repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain',
-    recommended_version: 'v3.0.1-hotfix',
-    compatible_versions: ['v3.0.1-hotfix'],
+    recommended_version: 'v3.0.2',
+    compatible_versions: ['v3.0.2'],
     cosmos_sdk_version: '0.46.15',
     ibc_go_version: '6.2.0',
     consensus: {
@@ -88,6 +88,22 @@ export const migaloo: Chain = {
         height: 3574316,
         recommended_version: 'v3.0.1-hotfix',
         compatible_versions: ['v3.0.1-hotfix'],
+        cosmos_sdk_version: '0.46.15',
+        ibc_go_version: '6.2.0',
+        consensus: {
+          type: 'cometbft',
+          version: '0.34.29',
+        },
+        cosmwasm_version: 'v0.30.1-0.20230320091624-f5072b9b04a6',
+        cosmwasm_enabled: true,
+        next_version_name: 'v3.0.2',
+      },
+      {
+        name: 'v3.0.2',
+        proposal: 19,
+        height: 4128108,
+        recommended_version: 'v3.0.2',
+        compatible_versions: ['v3.0.2'],
         cosmos_sdk_version: '0.46.15',
         ibc_go_version: '6.2.0',
         consensus: {
@@ -149,24 +165,16 @@ export const migaloo: Chain = {
   apis: {
     rpc: [
       {
+        address: 'https://migaloo-rpc.polkachu.com:443',
+        provider: 'Polkachu',
+      },
+      {
         address: 'https://migaloo-rpc.lavenderfive.com',
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://whitewhale-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://rpc-whitewhale.carbonzero.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
         address: 'https://rpc-migaloo.cosmos-spaces.cloud',
         provider: 'Cosmos Spaces',
-      },
-      {
-        address: 'https://rpc-whitewhale.whispernode.com:443',
-        provider: 'WhisperNode🤐',
       },
       {
         address: 'https://migaloo-rpc.kleomedes.network:443',
@@ -187,20 +195,12 @@ export const migaloo: Chain = {
     ],
     rest: [
       {
+        address: 'https://migaloo-api.polkachu.com:443',
+        provider: 'Polkachu',
+      },
+      {
         address: 'https://migaloo-api.lavenderfive.com',
         provider: 'Lavender.Five Nodes 🐝',
-      },
-      {
-        address: 'https://whitewhale-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://rest-whitewhale.carbonzero.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
-        address: 'https://lcd-whitewhale.whispernode.com:443',
-        provider: 'WhisperNode🤐',
       },
       {
         address: 'https://api-migaloo.cosmos-spaces.cloud',
@@ -225,6 +225,10 @@ export const migaloo: Chain = {
     ],
     grpc: [
       {
+        address: 'migaloo-grpc.polkachu.com:20790',
+        provider: 'Polkachu',
+      },
+      {
         address: 'migaloo-grpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
       },
@@ -233,12 +237,8 @@ export const migaloo: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'grpc-migaloo.cosmos-spaces.cloud:2290',
+        address: 'grpc-migaloo.cosmos-spaces.cloud:4810',
         provider: 'Cosmos Spaces',
-      },
-      {
-        address: 'migaloo-grpc.polkachu.com:20790',
-        provider: 'Polkachu',
       },
       {
         address: 'https://grpc.whitewhale.nodestake.top',
@@ -255,6 +255,12 @@ export const migaloo: Chain = {
     ],
   },
   explorers: [
+    {
+      kind: 'Migaloo Explorers Guru',
+      url: 'https://migaloo.explorers.guru',
+      tx_page: 'https://migaloo.explorers.guru/transaction/${txHash}',
+      account_page: 'https://migaloo.explorers.guru/account/${accountAddress}',
+    },
     {
       kind: 'ping.pub',
       url: 'https://ping.pub/migaloo',
@@ -303,8 +309,8 @@ export const migalooAssetList: AssetLists = {
       display: 'whale',
       symbol: 'WHALE',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.svg',
       },
       coingecko_id: 'white-whale',
       images: [
@@ -358,8 +364,8 @@ export const migalooAssetList: AssetLists = {
       display: 'boneWHALE',
       symbol: 'bWHALE',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/bWHALE.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/bWHALE.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/bWHALE.svg',
       },
       images: [
         {
@@ -456,8 +462,8 @@ export const migalooAssetList: AssetLists = {
       display: 'RAC',
       symbol: 'RAC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/rac.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/rac.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/rac.svg',
       },
       images: [
         {
@@ -520,7 +526,7 @@ export const migalooAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-48',
-            path: 'transfer/channel-48',
+            path: 'transfer/channel-48/erc20/tether/usdt',
           },
         },
       ],
@@ -530,6 +536,40 @@ export const migalooAssetList: AssetLists = {
             chain_name: 'kava',
             base_denom: 'erc20/tether/usdt',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
+    },
+    {
+      description: 'Auto componded USDC despoited into Ginkou on Migaloo chain',
+      denom_units: [
+        {
+          denom:
+            'cw20:migaloo10nucfm2zqgzqmy7y7ls398t58pjt9cwjsvpy88y2nvamtl34rgmqt5em2v',
+          exponent: 0,
+        },
+        {
+          denom: 'mUSDC',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'cw20',
+      address:
+        'migaloo10nucfm2zqgzqmy7y7ls398t58pjt9cwjsvpy88y2nvamtl34rgmqt5em2v',
+      base: 'cw20:migaloo10nucfm2zqgzqmy7y7ls398t58pjt9cwjsvpy88y2nvamtl34rgmqt5em2v',
+      name: 'mUSDC',
+      display: 'mUSDC',
+      symbol: 'mUSDC',
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/mUSDC.svg',
+      },
+      coingecko_id: '',
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/mUSDC.svg',
         },
       ],
     },

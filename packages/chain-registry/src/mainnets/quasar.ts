@@ -97,6 +97,8 @@ export const quasar: Chain = {
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/quasar/images/quasar.png',
   },
+  description:
+    'Quasar is the first decentralized asset management (D.A.M.) platform enabled by IBC. A secure, permissionless, composable, and diversified interchain DeFi experience is finally here.',
   peers: {
     seeds: [
       {
@@ -110,14 +112,9 @@ export const quasar: Chain = {
         provider: 'Polkachu',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'quasar-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'quasar-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
@@ -133,6 +130,11 @@ export const quasar: Chain = {
         id: 'd3c60cb339736ab2d504904492fe4e7d9efe5d42',
         address: 'seeds.whispernode.com:18256',
         provider: 'WhisperNode🤐',
+      },
+      {
+        id: '86fd17151eec60145e6c1a635e8365aff70a77d7',
+        address: 'seed-quasar.ibs.team:55656',
+        provider: 'Inter Blockchain Services',
       },
     ],
     persistent_peers: [
@@ -182,8 +184,16 @@ export const quasar: Chain = {
         provider: 'Validavia',
       },
       {
-        address: 'https://quasar-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://quasar-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://quasar-rpc.stake-town.com',
+        provider: 'StakeTown',
+      },
+      {
+        address: 'https://quasar-rpc.ibs.team',
+        provider: 'Inter Blockchain Services',
       },
     ],
     rest: [
@@ -221,7 +231,15 @@ export const quasar: Chain = {
       },
       {
         address: 'https://quasar-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://quasar-api.stake-town.com',
+        provider: 'StakeTown',
+      },
+      {
+        address: 'https://quasar-api.ibs.team',
+        provider: 'Inter Blockchain Services',
       },
     ],
     grpc: [
@@ -247,7 +265,11 @@ export const quasar: Chain = {
       },
       {
         address: 'quasar-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'quasar-grpc.stake-town.com:443',
+        provider: 'StakeTown',
       },
     ],
   },
@@ -346,8 +368,14 @@ export const quasarAssetList: AssetLists = {
             chain_name: 'osmosis',
             base_denom: 'uosmo',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
+      },
     },
     {
       description: 'ATOM from Osmosis',
@@ -391,8 +419,14 @@ export const quasarAssetList: AssetLists = {
             base_denom:
               'ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+      },
     },
     {
       description: 'USDC.axl from Osmosis',
@@ -436,8 +470,14 @@ export const quasarAssetList: AssetLists = {
             base_denom:
               'ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+      },
     },
   ],
 };

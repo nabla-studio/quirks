@@ -120,6 +120,11 @@ export const uptick: Chain = {
         provider: '🔥STAVR🔥',
       },
       {
+        id: '37604dc6535a2f1b91e38c35f77b5be4a93c35b2',
+        address: '45.77.168.172:26656',
+        provider: '[NODERS]TEAM',
+      },
+      {
         id: '038aca614e49ec4e5e3a06c875976a94c478cb09',
         address: '65.108.195.29:21656',
         provider: 'Staketab',
@@ -144,6 +149,10 @@ export const uptick: Chain = {
       {
         address: 'https://rpc.uptick.nodestake.top',
         provider: 'NodeStake',
+      },
+      {
+        address: 'http://uptick.rpc.nodersteam.com:21657',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://uptick.rpc.kjnodes.com',
@@ -174,12 +183,12 @@ export const uptick: Chain = {
         provider: 'StakerHouse',
       },
       {
-        address: 'https://rpc-uptick.mms.team',
-        provider: 'MMS',
-      },
-      {
         address: 'https://rpc-uptick.cakralabs.site',
         provider: 'Cakra Labs',
+      },
+      {
+        address: 'https://rpc-uptick.sr20de.xyz',
+        provider: 'Sr20de',
       },
     ],
     rest: [
@@ -188,8 +197,8 @@ export const uptick: Chain = {
         provider: 'Brochain',
       },
       {
-        address: 'https://uptick.api.bccnodes.com:443',
-        provider: 'BccNodes',
+        address: 'http://uptick.api.nodersteam.com:21017',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://api.uptick.nodestake.top',
@@ -224,12 +233,12 @@ export const uptick: Chain = {
         provider: 'StakerHouse',
       },
       {
-        address: 'https://api-uptick.mms.team',
-        provider: 'MMS',
-      },
-      {
         address: 'https://rest-uptick.cakralabs.site',
         provider: 'Cakra Labs',
+      },
+      {
+        address: 'https://api-uptick.sr20de.xyz',
+        provider: 'Sr20de',
       },
     ],
     grpc: [
@@ -240,6 +249,10 @@ export const uptick: Chain = {
       {
         address: 'uptick.rpc.bccnodes.com:9690',
         provider: 'BccNodes',
+      },
+      {
+        address: 'uptick.grpc.nodersteam.com:9211',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'uptick.grpc.kjnodes.com:11590',
@@ -269,6 +282,10 @@ export const uptick: Chain = {
         address: 'grpc-uptick.mms.team:443',
         provider: 'MMS',
       },
+      {
+        address: 'https://grpc-uptick.sr20de.xyz',
+        provider: 'Sr20de',
+      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -278,6 +295,10 @@ export const uptick: Chain = {
       {
         address: 'https://uptick.jsonrpc.liveraven.net',
         provider: 'LiveRaveN',
+      },
+      {
+        address: 'https://evm-uptick.sr20de.xyz',
+        provider: 'Sr20de',
       },
     ],
   },
@@ -316,6 +337,11 @@ export const uptick: Chain = {
       kind: 'Upscan',
       url: 'https://upscan.xyz/',
       tx_page: 'https://upscan.xyz/uptick_117-1/tx/${txHash}',
+    },
+    {
+      kind: 'Sr20de',
+      url: 'https://explorer.sr20de.xyz/uptick',
+      tx_page: 'https://explorer.sr20de.xyz/uptick/tx/${txHash}',
     },
   ],
   images: [

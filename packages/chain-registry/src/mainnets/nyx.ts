@@ -32,10 +32,10 @@ export const nyx: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/nymtech/nyxd/',
-    recommended_version: 'v0.32.0',
-    compatible_versions: ['v0.32.0'],
+    recommended_version: 'v0.43.0',
+    compatible_versions: ['v0.43.0'],
     binaries: {
-      'linux/amd64': 'https://github.com/nymtech/nyxd/releases/tag/v0.32.0',
+      'linux/amd64': 'https://github.com/nymtech/nyxd/releases/tag/v0.43.0',
     },
     genesis: {
       genesis_url: 'https://nymtech.net/genesis/genesis.json',
@@ -65,6 +65,19 @@ export const nyx: Chain = {
         cosmwasm_enabled: true,
         binaries: {
           'linux/amd64': 'https://github.com/nymtech/nyxd/releases/tag/v0.32.0',
+        },
+        next_version_name: 'v0.43.0',
+      },
+      {
+        name: 'v0.43.0',
+        tag: 'v0.43.0',
+        height: 9912345,
+        proposal: 10,
+        recommended_version: 'v0.43.0',
+        compatible_versions: ['v0.43.0'],
+        cosmwasm_enabled: true,
+        binaries: {
+          'linux/amd64': 'https://github.com/nymtech/nyxd/releases/tag/v0.43.0',
         },
       },
     ],
@@ -146,16 +159,8 @@ export const nyx: Chain = {
         provider: 'nodes guru',
       },
       {
-        address: 'https://nym.vladiatorlabs.io/',
-        provider: 'vladiatorlabs',
-      },
-      {
         address: 'https://rpc.nym.forbole.com/',
         provider: 'forbole',
-      },
-      {
-        address: 'https://rpc-nyx.testnet.run/',
-        provider: 'testnet-run',
       },
       {
         address: 'https://nym-mainnet-rpc.commodum.io/',
@@ -171,11 +176,23 @@ export const nyx: Chain = {
         address: 'https://nym-api.polkachu.com/',
         provider: 'Polkachu',
       },
+      {
+        address: 'https://api.nyx.nodes.guru/',
+        provider: 'nodes guru',
+      },
+      {
+        address: 'https://api.nymtech.net',
+        provider: 'Nym',
+      },
     ],
     grpc: [
       {
         address: 'nym-grpc.polkachu.com:15390',
         provider: 'Polkachu',
+      },
+      {
+        address: 'grpc.nymtech.net:443',
+        provider: 'Nym',
       },
     ],
   },

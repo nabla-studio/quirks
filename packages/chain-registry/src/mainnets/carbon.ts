@@ -9,7 +9,7 @@ export const carbon: Chain = {
   chain_id: 'carbon-1',
   bech32_prefix: 'swth',
   daemon_name: 'carbond',
-  website: 'https://www.switcheo.com/',
+  website: 'https://www.carbon.network/',
   node_home: '$HOME/.carbon',
   key_algos: ['secp256k1'],
   slip44: 118,
@@ -17,7 +17,7 @@ export const carbon: Chain = {
     fee_tokens: [
       {
         denom: 'swth',
-        fixed_min_gas_price: 100000000,
+        fixed_min_gas_price: 1,
         low_gas_price: 1,
         average_gas_price: 1,
         high_gas_price: 1,
@@ -290,13 +290,13 @@ export const carbon: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Switcheo/carbon-bootstrap',
-    recommended_version: 'v2.34.1',
-    compatible_versions: ['v2.34.1'],
+    recommended_version: 'v2.36.0',
+    compatible_versions: ['v2.36.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.34.1/carbond2.34.1-mainnet.linux-amd64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.0/carbond2.36.0-mainnet.linux-amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.34.1/carbond2.34.1-mainnet.linux-arm64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.0/carbond2.36.0-mainnet.linux-arm64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -459,6 +459,34 @@ export const carbon: Chain = {
           'linux/arm64':
             'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.34.1/carbond2.34.1-mainnet.linux-arm64.tar.gz',
         },
+        next_version_name: 'v2.35.0',
+      },
+      {
+        name: 'v2.35.0',
+        proposal: 321,
+        height: 49398331,
+        recommended_version: 'v2.35.0',
+        compatible_versions: ['v2.35.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.35.0/carbond2.35.0-mainnet.linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.35.0/carbond2.35.0-mainnet.linux-arm64.tar.gz',
+        },
+        next_version_name: 'v2.36.0',
+      },
+      {
+        name: 'v2.36.0',
+        proposal: 323,
+        height: 49677971,
+        recommended_version: 'v2.36.0',
+        compatible_versions: ['v2.36.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.0/carbond2.36.0-mainnet.linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.0/carbond2.36.0-mainnet.linux-arm64.tar.gz',
+        },
         next_version_name: '',
       },
     ],
@@ -480,6 +508,11 @@ export const carbon: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'carbon-mainnet-seed.autostake.com:27426',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         id: '75efe81807f1a69d1ed5d881203e49f65afd765b',
         address: '34.126.188.181:26656',
         provider: 'switcheo-labs',
@@ -489,8 +522,19 @@ export const carbon: Chain = {
         address: '34.87.36.140:26656',
         provider: 'switcheo-labs',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
-    persistent_peers: [],
+    persistent_peers: [
+      {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'carbon-mainnet-peer.autostake.com:27426',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+    ],
   },
   apis: {
     rpc: [
@@ -501,6 +545,10 @@ export const carbon: Chain = {
       {
         address: 'https://carbon-rpc.lavenderfive.com',
         provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'https://carbon-mainnet-rpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://rpc.carbon.blockhunters.org',
@@ -517,6 +565,10 @@ export const carbon: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
+        address: 'https://carbon-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         address: 'https://rest.carbon.blockhunters.org',
         provider: 'BlockHunters',
       },
@@ -525,6 +577,10 @@ export const carbon: Chain = {
       {
         address: 'https://carbon-grpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'carbon-mainnet-grpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
     ],
   },

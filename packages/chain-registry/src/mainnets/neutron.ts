@@ -8,6 +8,7 @@ export const neutron: Chain = {
   pretty_name: 'Neutron',
   chain_id: 'neutron-1',
   bech32_prefix: 'neutron',
+  website: 'https://neutron.org/',
   daemon_name: 'neutrond',
   node_home: '$HOME/.neutrond',
   key_algos: ['secp256k1'],
@@ -16,9 +17,23 @@ export const neutron: Chain = {
     fee_tokens: [
       {
         denom: 'untrn',
-        low_gas_price: 0.5,
-        average_gas_price: 0.5,
-        high_gas_price: 0.5,
+        low_gas_price: 0.56,
+        average_gas_price: 0.56,
+        high_gas_price: 0.84,
+      },
+      {
+        denom:
+          'ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9',
+        low_gas_price: 0.02,
+        average_gas_price: 0.02,
+        high_gas_price: 0.03,
+      },
+      {
+        denom:
+          'ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349',
+        low_gas_price: 0.2,
+        average_gas_price: 0.2,
+        high_gas_price: 0.3,
       },
     ],
   },
@@ -65,6 +80,8 @@ export const neutron: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron-black-logo.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron-black-logo.svg',
   },
+  description:
+    'The most secure CosmWasm platform in Cosmos, Neutron lets smart-contracts leverage bleeding-edge Interchain technology with minimal overhead.',
   peers: {
     seeds: [
       {
@@ -88,14 +105,9 @@ export const neutron: Chain = {
         provider: 'WhisperNode🤐',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'neutron-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'neutron-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -129,16 +141,12 @@ export const neutron: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'http://posthuman-neutron-rpc.ingress.europlots.com',
-        provider: 'POSTHUMAN ꝏ DVS',
-      },
-      {
         address: 'http://rpc.neutron.nodestake.top',
         provider: 'NodeStake',
       },
       {
-        address: 'https://neutron-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://neutron-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://community.nuxian-node.ch:6797/neutron/trpc',
@@ -176,7 +184,7 @@ export const neutron: Chain = {
       },
       {
         address: 'https://neutron-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://community.nuxian-node.ch:6797/neutron/crpc',
@@ -214,7 +222,7 @@ export const neutron: Chain = {
       },
       {
         address: 'neutron-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -264,6 +272,338 @@ export const neutronAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ntrn.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ntrn.svg',
+        },
+      ],
+    },
+    {
+      description: 'IBC uatom through cosmoshub-4 transfer/channel-1',
+      denom_units: [
+        {
+          denom:
+            'ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9',
+          exponent: 0,
+          aliases: ['uatom'],
+        },
+        {
+          denom: 'atom',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9',
+      name: 'IBC atom',
+      display: 'atom',
+      symbol: 'ATOM',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+            channel_id: 'channel-569',
+          },
+          chain: {
+            channel_id: 'channel-1',
+            path: 'transfer/channel-1/uatom',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+      },
+    },
+    {
+      description: 'IBC Axelar uusdc through axelar-dojo-1 transfer/channel-2',
+      denom_units: [
+        {
+          denom:
+            'ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349',
+          exponent: 0,
+          aliases: ['uusdc'],
+        },
+        {
+          denom: 'usdc',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349',
+      name: 'IBC usdc',
+      display: 'usdc',
+      symbol: 'USDC',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'axelar',
+            base_denom: 'uusdc',
+            channel_id: 'channel-78',
+          },
+          chain: {
+            channel_id: 'channel-2',
+            path: 'transfer/channel-2/uusdc',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'axelar',
+            base_denom: 'uusdc',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+      },
+    },
+    {
+      description: 'Tia on Neutron',
+      denom_units: [
+        {
+          denom:
+            'ibc/773B4D0A3CD667B2275D5A4A7A2F0909C0BA0F4059C0B9181E680DDF4965DCC7',
+          exponent: 0,
+          aliases: ['utia'],
+        },
+        {
+          denom: 'tia',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/773B4D0A3CD667B2275D5A4A7A2F0909C0BA0F4059C0B9181E680DDF4965DCC7',
+      name: 'Celestia TIA',
+      display: 'tia',
+      symbol: 'TIA',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'celestia',
+            base_denom: 'utia',
+            channel_id: 'channel-8',
+          },
+          chain: {
+            channel_id: 'channel-35',
+            path: 'transfer/channel-35',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'celestia',
+            base_denom: 'utia',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg',
+      },
+    },
+    {
+      description: 'Astropepe meme coin',
+      denom_units: [
+        {
+          denom:
+            'factory/neutron14henrqx9y328fjrdvz6l6d92r0t7g5hk86q5nd/uastropepe',
+          exponent: 0,
+        },
+        {
+          denom: 'ASTROPEPE',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron14henrqx9y328fjrdvz6l6d92r0t7g5hk86q5nd/uastropepe',
+      name: 'AstroPepe',
+      display: 'ASTROPEPE',
+      symbol: 'ASTROPEPE',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astropepe.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astropepe.png',
+        },
+      ],
+    },
+    {
+      description: 'wstETH on Neutron',
+      denom_units: [
+        {
+          denom:
+            'factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH',
+          exponent: 0,
+        },
+        {
+          denom: 'wstETH',
+          exponent: 18,
+        },
+      ],
+      base: 'factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH',
+      name: 'wstETH',
+      display: 'wstETH',
+      symbol: 'wstETH',
+      traces: [
+        {
+          type: 'additional-mintage',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0',
+          },
+          provider: 'Lido',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg',
+      },
+    },
+    {
+      description: 'NBTC on Neutron',
+      denom_units: [
+        {
+          denom:
+            'ibc/DDC3C60EE82BF544F1A0C6A983FF500EF1C14DE20071A5E1E7C0FB470E36E920',
+          exponent: 0,
+          aliases: ['usat'],
+        },
+        {
+          denom: 'sat',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/DDC3C60EE82BF544F1A0C6A983FF500EF1C14DE20071A5E1E7C0FB470E36E920',
+      name: 'Nomic NBTC',
+      display: 'sat',
+      symbol: 'SAT',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'nomic',
+            base_denom: 'usat',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-42',
+            path: 'transfer/channel-42/usat',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'nomic',
+            base_denom: 'usat',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.svg',
+      },
+    },
+    {
+      description: 'DYDX on Neutron',
+      denom_units: [
+        {
+          denom:
+            'ibc/2CB87BCE0937B1D1DFCEE79BE4501AAF3C265E923509AEAC410AD85D27F35130',
+          exponent: 0,
+          aliases: ['adydx'],
+        },
+        {
+          denom: 'dydx',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/2CB87BCE0937B1D1DFCEE79BE4501AAF3C265E923509AEAC410AD85D27F35130',
+      name: 'DYDX',
+      display: 'dydx',
+      symbol: 'DYDX',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'dydx',
+            base_denom: 'adydx',
+            channel_id: 'channel-11',
+          },
+          chain: {
+            channel_id: 'channel-48',
+            path: 'transfer/channel-48/adydx',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'dydx',
+            base_denom: 'adydx',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg',
+      },
+    },
+    {
+      description: 'The cutest NEWT token on Neutron chain.',
+      denom_units: [
+        {
+          denom: 'factory/neutron1p8d89wvxyjcnawmgw72klknr3lg9gwwl6ypxda/newt',
+          exponent: 0,
+          aliases: ['unewt'],
+        },
+        {
+          denom: 'newt',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron1p8d89wvxyjcnawmgw72klknr3lg9gwwl6ypxda/newt',
+      name: 'Newt',
+      display: 'newt',
+      symbol: 'NEWT',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/newt.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/newt.png',
         },
       ],
     },

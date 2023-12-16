@@ -122,17 +122,30 @@ export const impacthubtestnetAssetList: AssetLists = {
       name: 'IXO',
       display: 'ixo',
       symbol: 'IXO',
-      logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthubtestnet/images/ixo.svg',
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthubtestnet/images/ixo.png',
-      },
-      coingecko_id: 'ixo',
-      images: [
+      traces: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthubtestnet/images/ixo.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthubtestnet/images/ixo.svg',
+          type: 'test-mintage',
+          counterparty: {
+            chain_name: 'impacthub',
+            base_denom: 'uixo',
+          },
+          provider: 'impacthub',
         },
       ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'impacthub',
+            base_denom: 'uixo',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthub/images/ixo.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthub/images/ixo.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthub/images/ixo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthub/images/ixo.svg',
+      },
     },
   ],
 };

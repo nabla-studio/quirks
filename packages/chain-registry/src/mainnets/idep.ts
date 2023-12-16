@@ -138,8 +138,8 @@ export const idepAssetList: AssetLists = {
       display: 'IDEP',
       symbol: 'IDEP',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/idep/images/idep.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/idep/images/idep.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/idep/images/idep.svg',
       },
       images: [
         {

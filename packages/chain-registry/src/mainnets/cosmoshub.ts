@@ -17,7 +17,7 @@ export const cosmoshub: Chain = {
     fee_tokens: [
       {
         denom: 'uatom',
-        fixed_min_gas_price: 0,
+        fixed_min_gas_price: 0.005,
         low_gas_price: 0.01,
         average_gas_price: 0.025,
         high_gas_price: 0.03,
@@ -33,21 +33,21 @@ export const cosmoshub: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/cosmos/gaia',
-    recommended_version: 'v13.0.0',
-    compatible_versions: ['v13.0.0'],
+    recommended_version: 'v14.1.0',
+    compatible_versions: ['v14.1.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-linux-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-amd64?checksum=sha256:baed43bd3f523fd587cff4d8f78f395a3bcb6d20d9a671bef69b8fbe101338f6',
       'linux/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-linux-arm64',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-arm64?checksum=sha256:a57822b2a199ca461f8a8baf4e98a46803f8fa5d4ceb130b539ebd0c03c035a8',
       'darwin/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-darwin-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-amd64?checksum=sha256:4edec8b191bbb0bdcd0f89d1fadfc1cfdb720ac943b7c03d584760725547c047',
       'darwin/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-darwin-arm64',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-arm64?checksum=sha256:5177c7ca2b0e66daedc506c6fcdab0d8c436dae846de32081556b8edd57027e8',
       'windows/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-windows-amd64.exe',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-amd64.exe?checksum=sha256:d912548fc1c87ca26defce1a60f089910fa55b38d27063870750efeab176db9d',
       'windows/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-windows-arm64.exe',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-arm64.exe?checksum=sha256:b17cc1f1a9a5050b72f99d497fdda6d1d4615b6a42971f556d2777ba838fe7b0',
     },
     genesis: {
       genesis_url:
@@ -167,11 +167,11 @@ export const cosmoshub: Chain = {
       },
       {
         name: 'v13',
-        tag: 'v13.0.0',
+        tag: 'v13.0.2',
         proposal: 825,
         height: 17380000,
-        recommended_version: 'v13.0.0',
-        compatible_versions: ['v13.0.0'],
+        recommended_version: 'v13.0.2',
+        compatible_versions: ['v13.0.1', 'v13.0.2'],
         cosmos_sdk_version: 'v0.45.16-ics-lsm',
         ibc_go_version: 'v4.4.2',
         consensus: {
@@ -180,19 +180,48 @@ export const cosmoshub: Chain = {
         },
         binaries: {
           'linux/amd64':
-            'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-linux-amd64?checksum=sha256:ef34857554888de598edfa411d43d4dc0a820bad285cf044f5d8f91769d5599e',
+            'https://github.com/cosmos/gaia/releases/download/v13.0.2/gaiad-v13.0.2-linux-amd64?checksum=sha256:729a55b29857fedfe1271f26e1fdf2cb12d2c6515c2ad0d9bbe432a81ae43df8',
           'linux/arm64':
-            'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-linux-arm64?checksum=sha256:114b085fb1bcd5a0de1aaf2d120ad0c102498ed3729cd31318f0baf865f5262a',
+            'https://github.com/cosmos/gaia/releases/download/v13.0.2/gaiad-v13.0.2-linux-arm64?checksum=sha256:9bfbe0d5212fa3cdabe34b75b42e1420f50fe8aff64ec9247dcbc5942969e333',
           'darwin/amd64':
-            'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-darwin-amd64?checksum=sha256:58b9ca70f47376590aa4b4a9d75c69428c07bf6d0ad1481e669022bd470ec2c4',
+            'https://github.com/cosmos/gaia/releases/download/v13.0.2/gaiad-v13.0.2-darwin-amd64?checksum=sha256:910b515369b0cfa8eecc54f2f930fd5de2634b7106825b62f4c4c563fe2a6a07',
           'darwin/arm64':
-            'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-darwin-arm64?checksum=sha256:c104c29c5af8e6da8308774f6fed4be3b09544a085c960359ca6ae0ec0045e5f',
+            'https://github.com/cosmos/gaia/releases/download/v13.0.2/gaiad-v13.0.2-darwin-arm64?checksum=sha256:5a148b56bec7d9ef23d21778725eedb9bc70eaa6a61155b22947216812a17369',
           'windows/amd64':
-            'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-windows-amd64.exe?checksum=sha256:87814b1072465cac7aa48c601bd11ea7563f900eaee15d38a17414cb642fc03d',
+            'https://github.com/cosmos/gaia/releases/download/v13.0.2/gaiad-v13.0.2-windows-amd64.exe?checksum=sha256:bc339c368b07306a73a16af8f005bc14439b393790f61d0568358495eb83e71c',
           'windows/arm64':
-            'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-windows-arm64.exe?checksum=sha256:c31c4700c073a76d18cfd85cf840a8b140ad1a95ff6788559d05ad3b4fba723c',
+            'https://github.com/cosmos/gaia/releases/download/v13.0.2/gaiad-v13.0.2-windows-arm64.exe?checksum=sha256:8728e0f56d52479c80ba4b1c8f68a8fc3085220fad241ba1180867b2c3bc97fa',
         },
-        next_version_name: 'v13',
+        next_version_name: 'v14',
+      },
+      {
+        name: 'v14',
+        tag: 'v14.1.0',
+        proposal: 854,
+        height: 18262000,
+        recommended_version: 'v14.1.0',
+        compatible_versions: ['v14.1.0'],
+        cosmos_sdk_version: 'v0.45.16-ics-lsm',
+        ibc_go_version: 'v4.4.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-amd64?checksum=sha256:baed43bd3f523fd587cff4d8f78f395a3bcb6d20d9a671bef69b8fbe101338f6',
+          'linux/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-arm64?checksum=sha256:a57822b2a199ca461f8a8baf4e98a46803f8fa5d4ceb130b539ebd0c03c035a8',
+          'darwin/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-amd64?checksum=sha256:4edec8b191bbb0bdcd0f89d1fadfc1cfdb720ac943b7c03d584760725547c047',
+          'darwin/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-arm64?checksum=sha256:5177c7ca2b0e66daedc506c6fcdab0d8c436dae846de32081556b8edd57027e8',
+          'windows/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-amd64.exe?checksum=sha256:d912548fc1c87ca26defce1a60f089910fa55b38d27063870750efeab176db9d',
+          'windows/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-arm64.exe?checksum=sha256:b17cc1f1a9a5050b72f99d497fdda6d1d4615b6a42971f556d2777ba838fe7b0',
+        },
+        next_version_name: 'v15',
       },
     ],
   },
@@ -200,6 +229,8 @@ export const cosmoshub: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
   },
+  description:
+    "In a nutshell, Cosmos Hub bills itself as a project that solves some of the hardest problems facing the blockchain industry. It aims to offer an antidote to slow, expensive, unscalable and environmentally harmful proof-of-work protocols, like those used by Bitcoin, by offering an ecosystem of connected blockchains.\n\nThe project’s other goals include making blockchain technology less complex and difficult for developers thanks to a modular framework that demystifies decentralized apps. Last but not least, an Inter-blockchain Communication protocol makes it easier for blockchain networks to communicate with each other — preventing fragmentation in the industry.\n\nCosmos Hub's origins can be dated back to 2014, when Tendermint, a core contributor to the network, was founded. In 2016, a white paper for Cosmos was published — and a token sale was held the following year. ATOM tokens are earned through a hybrid proof-of-stake algorithm, and they help to keep the Cosmos Hub, the project’s flagship blockchain, secure. This cryptocurrency also has a role in the network’s governance.",
   peers: {
     seeds: [
       {
@@ -228,14 +259,9 @@ export const cosmoshub: Chain = {
         provider: 'WhisperNode🤐',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'cosmoshub-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'cosmoshub-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
@@ -345,10 +371,6 @@ export const cosmoshub: Chain = {
         provider: 'Notional',
       },
       {
-        address: 'https://rpc.cosmos.interbloc.org',
-        provider: 'Interbloc',
-      },
-      {
         address: 'https://rpc-cosmoshub.architectnodes.com',
         provider: 'Architect Nodes',
       },
@@ -377,10 +399,6 @@ export const cosmoshub: Chain = {
         provider: 'FreshSTAKING',
       },
       {
-        address: 'https://cosmoshub.rpc.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'https://cosmos-rpc.easy2stake.com/',
         provider: 'Easy 2 Stake',
       },
@@ -393,8 +411,8 @@ export const cosmoshub: Chain = {
         provider: 'Silk Nodes',
       },
       {
-        address: 'https://cosmos-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://cosmos-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://cosmoshub.rpc.kjnodes.com',
@@ -413,6 +431,10 @@ export const cosmoshub: Chain = {
         provider: 'w3coins',
       },
       {
+        address: 'https://cosmos-rpc.enigma-validator.com',
+        provider: 'Enigma',
+      },
+      {
         address: 'https://rpc-cosmoshub.mms.team',
         provider: 'MMS',
       },
@@ -429,20 +451,8 @@ export const cosmoshub: Chain = {
         provider: 'High Stakes 🇨🇭',
       },
       {
-        address: 'https://cosmoshub-mainnet.rpc.l0vd.com:443',
-        provider: 'L0vd.com ❤️',
-      },
-      {
-        address: 'https://cosmoshub-4-archive.rpc.l0vd.com:443',
-        provider: 'L0vd.com Archive ❤️',
-      },
-      {
-        address: 'https://rpc-cosmos.in3s.com:443',
-        provider: 'in3s.com',
-      },
-      {
-        address: 'https://rpc-cosmos.nodeist.net',
-        provider: 'Nodeist',
+        address: 'https://cosmoshub-rpc.cosmosrescue.dev',
+        provider: 'cosmosrescue',
       },
     ],
     rest: [
@@ -479,10 +489,6 @@ export const cosmoshub: Chain = {
         provider: 'Staketab',
       },
       {
-        address: 'https://api.cosmos.interbloc.org',
-        provider: 'Interbloc',
-      },
-      {
         address: 'https://lcd.cosmos.dragonstake.io',
         provider: 'DragonStake',
       },
@@ -497,10 +503,6 @@ export const cosmoshub: Chain = {
       {
         address: 'https://rest-cosmoshub.ecostake.com',
         provider: 'ecostake',
-      },
-      {
-        address: 'https://cosmoshub.rest.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
       },
       {
         address: 'https://lcd-cosmoshub.whispernode.com:443',
@@ -520,7 +522,7 @@ export const cosmoshub: Chain = {
       },
       {
         address: 'https://cosmos-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://cosmoshub.api.kjnodes.com',
@@ -555,12 +557,12 @@ export const cosmoshub: Chain = {
         provider: 'L0vd.com ❤️',
       },
       {
-        address: 'https://cosmoshub-4-archive.api.l0vd.com',
-        provider: 'L0vd.com Archive ❤️',
+        address: 'https://cosmos-lcd.enigma-validator.com',
+        provider: 'Enigma',
       },
       {
-        address: 'https://api-cosmos.nodeist.net',
-        provider: 'Nodeist',
+        address: 'https://cosmoshub-api.cosmosrescue.dev',
+        provider: 'cosmosrescue',
       },
     ],
     grpc: [
@@ -593,19 +595,15 @@ export const cosmoshub: Chain = {
         provider: 'Stakin',
       },
       {
-        address: 'cosmoshub.grpc.interchain.ivaldilabs.xyz:443',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'https://grpc.cosmos.nodestake.top',
         provider: 'NodeStake',
       },
       {
         address: 'cosmos-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'grpc-cosmoshub.cosmos-spaces.cloud:1290',
+        address: 'grpc-cosmoshub.cosmos-spaces.cloud:3910',
         provider: 'Cosmos Spaces',
       },
       {
@@ -693,6 +691,12 @@ export const cosmoshub: Chain = {
       url: 'https://exp.nodeist.net/cosmos',
       tx_page: 'https://exp.nodeist.net/cosmos/tx/${txHash}',
     },
+    {
+      kind: 'Inbloc',
+      url: 'https://inbloc.org',
+      tx_page: 'https://inbloc.org/transactions/${txHash}',
+      account_page: 'https://inbloc.org/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -772,8 +776,12 @@ export const cosmoshubAssetList: AssetLists = {
             chain_name: 'kava',
             base_denom: 'erc20/tether/usdt',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
     },
     {
       description: 'FX on Cosmos Hub',
@@ -810,8 +818,14 @@ export const cosmoshubAssetList: AssetLists = {
             chain_name: 'fxcore',
             base_denom: 'FX',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/fxcore/images/fx.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/fxcore/images/fx.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/fxcore/images/fx.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/fxcore/images/fx.svg',
+      },
     },
   ],
 };

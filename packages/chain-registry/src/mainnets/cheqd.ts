@@ -169,8 +169,8 @@ export const cheqd: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://rpc-cheqd.carbonzero.zone:443',
-        provider: 'carbonZERO🌲',
+        address: 'https://rpc-cheqd.blockval.io',
+        provider: 'Blockval',
       },
     ],
     rest: [
@@ -199,8 +199,8 @@ export const cheqd: Chain = {
         provider: 'WhisperNode🤐',
       },
       {
-        address: 'https://rest-cheqd.carbonzero.zone:443',
-        provider: 'carbonZERO🌲',
+        address: 'https://api-cheqd.blockval.io',
+        provider: 'Blockval',
       },
     ],
     grpc: [
@@ -225,8 +225,8 @@ export const cheqd: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'grpc-cheqd.carbonzero.zone:443',
-        provider: 'carbonZERO🌲',
+        address: 'grpc-cheqd.blockval.io:9290',
+        provider: 'Blockval',
       },
     ],
   },

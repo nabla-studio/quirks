@@ -97,6 +97,10 @@ export const empowertestnet: Chain = {
         provider: 'Cumulo',
       },
       {
+        address: 'https://empw.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://api-t.empower.nodestake.top:443',
         provider: 'NodeStake',
       },
@@ -154,6 +158,11 @@ export const empowertestnet: Chain = {
       kind: 'ping.pub',
       url: 'https://exp.nodeist.net/Empower',
       tx_page: 'https://exp.nodeist.net/Empower/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Empower',
+      tx_page: 'https://explorer.stavr.tech/Empower/tx/${txHash}',
     },
     {
       kind: 'ping.pub',

@@ -33,13 +33,13 @@ export const jackal: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/JackalLabs/canine-chain',
-    recommended_version: 'v3.0.0',
-    compatible_versions: ['v3.0.0'],
+    recommended_version: 'v3.0.2',
+    compatible_versions: ['v3.0.0', 'v3.0.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.0/canined-Linux',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.2/canined-Linux',
       'darwin/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.0/canined-macOS',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.2/canined-macOS',
     },
     genesis: {
       genesis_url:
@@ -93,18 +93,18 @@ export const jackal: Chain = {
         next_version_name: 'v3',
       },
       {
-        name: '3',
-        tag: 'V3.0.0',
+        name: 'v3',
+        tag: 'V3.0.2',
         proposal: 9,
         height: 4074200,
-        recommended_version: 'v3.0.0',
-        compatible_versions: ['v3.0.0'],
+        recommended_version: 'v3.0.2',
+        compatible_versions: ['v3.0.0', 'v3.0.2'],
         cosmwasm_enabled: true,
         binaries: {
           'linux/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.0/canined-Linux',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.2/canined-Linux',
           'darwin/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.0/canined-macOS',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.2/canined-macOS',
         },
         next_version_name: '',
       },
@@ -163,6 +163,11 @@ export const jackal: Chain = {
         provider: '🔥STAVR🔥',
       },
       {
+        id: '713d202326eedaed41d467b26051aba62727febd',
+        address: '5.9.69.241:26656',
+        provider: '[NODERS]TEAM',
+      },
+      {
         id: '2af06d39d68345d41cd16182e3472d96c5a0150b',
         address: '136.244.29.116:27656',
       },
@@ -185,10 +190,6 @@ export const jackal: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://rpc-jackal.d-stake.xyz',
-        provider: 'D-stake',
-      },
-      {
         address: 'http://jkl.rpc.m.stavr.tech:11127',
         provider: '🔥STAVR🔥',
       },
@@ -209,28 +210,8 @@ export const jackal: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://jackal-rpc.agoranodes.com',
-        provider: 'AgoraNodes',
-      },
-      {
         address: 'https://m-jackal.rpc.utsa.tech',
         provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
-      },
-      {
-        address: 'https://jackal-rpc.kleomedes.network',
-        provider: 'Kleomedes',
-      },
-      {
-        address: 'https://rpc-jackal.huginn.tech',
-        provider: 'Huginn',
-      },
-      {
-        address: 'https://jackal.nodejumper.io',
-        provider: 'NODEJUMPER',
-      },
-      {
-        address: 'https://rpc-jkl.kjinc.io',
-        provider: 'KJINC.io',
       },
       {
         address: 'https://rpc-jackal.whispernode.com:443',
@@ -241,8 +222,8 @@ export const jackal: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://rpc-jackal.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
+        address: 'http://jackal.rpc.nodersteam.com:31657',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://jackal.rpc.kjnodes.com',
@@ -252,6 +233,10 @@ export const jackal: Chain = {
         address: 'https://jackal.rpc.silknodes.io',
         provider: 'Silk Nodes',
       },
+      {
+        address: 'https://jackal.rpc.skynodejs.net',
+        provider: 'skynodejs',
+      },
     ],
     rest: [
       {
@@ -259,16 +244,8 @@ export const jackal: Chain = {
         provider: 'Jackal Labs',
       },
       {
-        address: 'https://jackal.api.bccnodes.com',
-        provider: 'BccNodes',
-      },
-      {
         address: 'https://jackal-api.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
-      },
-      {
-        address: 'https://api-jackal.d-stake.xyz',
-        provider: 'D-stake',
       },
       {
         address: 'https://jkl.api.m.stavr.tech',
@@ -279,6 +256,10 @@ export const jackal: Chain = {
         provider: 'NodeStake',
       },
       {
+        address: 'http://jackal.api.nodersteam.com:2917',
+        provider: '[NODERS]TEAM',
+      },
+      {
         address: 'https://api-jackal.nodeist.net',
         provider: 'Nodeist',
       },
@@ -287,24 +268,8 @@ export const jackal: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://jackal-rest.agoranodes.com',
-        provider: 'AgoraNodes',
-      },
-      {
         address: 'https://m-jackal.api.utsa.tech',
         provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
-      },
-      {
-        address: 'https://jackal-api.kleomedes.network',
-        provider: 'Kleomedes',
-      },
-      {
-        address: 'https://jackal.nodejumper.io:1317',
-        provider: 'NODEJUMPER',
-      },
-      {
-        address: 'https://api-jkl.kjinc.io',
-        provider: 'KJINC.io',
       },
       {
         address: 'https://jackal-mainnet-lcd.autostake.com:443',
@@ -323,8 +288,8 @@ export const jackal: Chain = {
         provider: 'Silk Nodes',
       },
       {
-        address: 'https://rest-jackal.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
+        address: 'https://jackal.api.skynodejs.net',
+        provider: 'skynodejs',
       },
     ],
     grpc: [
@@ -335,6 +300,10 @@ export const jackal: Chain = {
       {
         address: 'jackal.grpc.bccnodes.com:9490',
         provider: 'BccNodes',
+      },
+      {
+        address: 'jackal.grpc.nodersteam.com:9990',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'jackal-grpc.lavenderfive.com:443',
@@ -357,12 +326,12 @@ export const jackal: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'jackal.nodejumper.io:9090',
-        provider: 'NODEJUMPER',
-      },
-      {
         address: 'jackal.grpc.kjnodes.com:13790',
         provider: 'kjnodes',
+      },
+      {
+        address: 'https://jackal.grpc.skynodejs.net',
+        provider: 'skynodejs',
       },
     ],
   },

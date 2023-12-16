@@ -11,6 +11,7 @@ export const cerberus: Chain = {
   bech32_prefix: 'cerberus',
   daemon_name: 'cerberusd',
   node_home: '$HOME/.cerberus',
+  slip44: 118,
   codebase: {
     git_repo: 'https://github.com/cerberus-zone/cerberus',
     recommended_version: 'v3.1.0',
@@ -32,6 +33,9 @@ export const cerberus: Chain = {
       {
         denom: 'ucrbrus',
         fixed_min_gas_price: 0,
+        low_gas_price: 0.01,
+        average_gas_price: 0.025,
+        high_gas_price: 0.04,
       },
     ],
   },
@@ -63,26 +67,8 @@ export const cerberus: Chain = {
     ],
   },
   apis: {
-    rpc: [
-      {
-        address: 'https://cerberus-rpc.polkachu.com',
-        provider: 'Polkachu',
-      },
-      {
-        address: 'https://cerberus-rpc.kleomedes.network',
-        provider: 'Kleomedes',
-      },
-    ],
-    rest: [
-      {
-        address: 'https://cerberus-api.polkachu.com',
-        provider: 'Polkachu',
-      },
-      {
-        address: 'https://cerberus-api.kleomedes.network',
-        provider: 'Kleomedes',
-      },
-    ],
+    rpc: [],
+    rest: [],
     grpc: [
       {
         address: 'grpc-cerberus-ia.cosmosia.notional.ventures:443',
@@ -145,8 +131,8 @@ export const cerberusAssetList: AssetLists = {
       display: 'crbrus',
       symbol: 'CRBRUS',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cerberus/images/crbrus.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cerberus/images/crbrus.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cerberus/images/crbrus.svg',
       },
       coingecko_id: 'cerberus-2',
       images: [

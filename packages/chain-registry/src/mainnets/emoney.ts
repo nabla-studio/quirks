@@ -126,16 +126,8 @@ export const emoney: Chain = {
         provider: 'Notional',
       },
       {
-        address: 'https://e-money-rpc.ibs.team',
-        provider: 'Inter Blockchain Services',
-      },
-      {
         address: 'https://rpc.emoney.bh.rocks',
         provider: 'BlockHunters 🎯',
-      },
-      {
-        address: 'https://emoney-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
       },
     ],
     rest: [
@@ -148,16 +140,8 @@ export const emoney: Chain = {
         provider: 'Notional',
       },
       {
-        address: 'https://e-money-api.ibs.team',
-        provider: 'Inter Blockchain Services',
-      },
-      {
         address: 'https://api.emoney.bh.rocks',
         provider: 'BlockHunters 🎯',
-      },
-      {
-        address: 'https://emoney-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
       },
     ],
     grpc: [
@@ -232,8 +216,8 @@ export const emoneyAssetList: AssetLists = {
       display: 'ngm',
       symbol: 'NGM',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/ngm.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/ngm.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/ngm.svg',
       },
       coingecko_id: 'e-money',
       images: [
@@ -261,8 +245,8 @@ export const emoneyAssetList: AssetLists = {
       display: 'eur',
       symbol: 'EEUR',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/eeur.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/eeur.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/eeur.svg',
       },
       coingecko_id: 'e-money-eur',
       images: [
@@ -290,8 +274,8 @@ export const emoneyAssetList: AssetLists = {
       display: 'chf',
       symbol: 'ECHF',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/echf.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/echf.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/echf.svg',
       },
       coingecko_id: '',
       images: [
@@ -319,8 +303,8 @@ export const emoneyAssetList: AssetLists = {
       display: 'nok',
       symbol: 'ENOK',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/enok.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/enok.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/enok.svg',
       },
       coingecko_id: '',
       images: [
@@ -348,8 +332,8 @@ export const emoneyAssetList: AssetLists = {
       display: 'dkk',
       symbol: 'EDKK',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/edkk.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/edkk.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/edkk.svg',
       },
       coingecko_id: '',
       images: [
@@ -377,8 +361,8 @@ export const emoneyAssetList: AssetLists = {
       display: 'sek',
       symbol: 'ESEK',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/esek.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/esek.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/emoney/images/esek.svg',
       },
       coingecko_id: '',
       images: [

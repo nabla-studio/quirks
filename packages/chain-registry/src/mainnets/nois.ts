@@ -81,7 +81,6 @@ export const nois: Chain = {
   ],
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nois/images/nois.png',
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nois/images/nois.svg',
   },
   peers: {
     seeds: [
@@ -116,6 +115,11 @@ export const nois: Chain = {
         provider: 'itrocket',
       },
       {
+        id: '1de5c83c5a5eb223c814401f0506b44b742741da',
+        address: 'nois.peer.stavr.tech:40136',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
         address: 'nois.rpc.kjnodes.com:15159',
         provider: 'kjnodes',
@@ -141,10 +145,6 @@ export const nois: Chain = {
         provider: 'MadeInBlock',
       },
       {
-        address: 'https://rpc.noismain.mcbnode.online',
-        provider: 'mcbnode',
-      },
-      {
         address: 'https://m-nois.rpc.utsa.tech',
         provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
       },
@@ -167,10 +167,6 @@ export const nois: Chain = {
       {
         address: 'https://rpc-nois.d-stake.xyz',
         provider: 'D-Stake',
-      },
-      {
-        address: 'https://rpc.nois.hexnodes.co',
-        provider: 'HexNodes',
       },
       {
         address: 'https://rpc-nois.sr20de.xyz',
@@ -265,14 +261,6 @@ export const nois: Chain = {
     ],
     rest: [
       {
-        address: 'https://api.noismain.mcbnode.online',
-        provider: 'mcbnode',
-      },
-      {
-        address: 'https://nois.api.bccnodes.com',
-        provider: 'BccNodes',
-      },
-      {
         address: 'https://m-nois.api.utsa.tech',
         provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
       },
@@ -305,20 +293,8 @@ export const nois: Chain = {
         provider: 'D-Stake',
       },
       {
-        address: 'https://lcd.nois.hexnodes.co',
-        provider: 'HexNodes',
-      },
-      {
         address: 'https://api-nois.sr20de.xyz',
         provider: 'SR20DE',
-      },
-      {
-        address: 'https://nois.api.m.stavr.tech',
-        provider: '🔥STAVR🔥',
-      },
-      {
-        address: 'https://nois-testnet-lcd.autostake.com',
-        provider: 'AutoStake',
       },
       {
         address: 'https://nois-api.polkachu.com',

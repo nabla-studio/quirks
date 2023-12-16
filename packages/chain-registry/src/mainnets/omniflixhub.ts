@@ -5,7 +5,7 @@ export const omniflixhub: Chain = {
   chain_name: 'omniflixhub',
   status: 'live',
   network_type: 'mainnet',
-  website: 'https://omniflix.co/home',
+  website: 'https://omniflix.network/',
   pretty_name: 'OmniFlix',
   chain_id: 'omniflixhub-1',
   daemon_name: 'omniflixhubd',
@@ -14,8 +14,8 @@ export const omniflixhub: Chain = {
   slip44: 118,
   codebase: {
     git_repo: 'https://github.com/OmniFlix/omniflixhub',
-    recommended_version: 'v0.12.0',
-    compatible_versions: ['v0.12.0'],
+    recommended_version: 'v0.12.1',
+    compatible_versions: ['v0.12.1'],
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/OmniFlix/mainnet/main/omniflixhub-1/genesis.json',
@@ -47,8 +47,8 @@ export const omniflixhub: Chain = {
         name: 'v0.12.x',
         proposal: 15,
         height: 8054200,
-        recommended_version: 'v0.12.0',
-        compatible_versions: ['v0.12.0'],
+        recommended_version: 'v0.12.1',
+        compatible_versions: ['v0.12.1'],
         next_version_name: '',
       },
     ],
@@ -75,6 +75,8 @@ export const omniflixhub: Chain = {
       },
     ],
   },
+  description:
+    'Decentralized media and network layer for Creators & Sovereign Communities powered by NFTs and related distribution protocols.',
   peers: {
     seeds: [
       {
@@ -96,6 +98,11 @@ export const omniflixhub: Chain = {
         id: '9aa8a73ea9364aa3cf7806d4dd25b6aed88d8152',
         address: 'omniflix.seed.mzonder.com:10656',
         provider: 'MZONDER',
+      },
+      {
+        id: '6b0ffcce9b59b91ceb8eea5d4599e27707e3604a',
+        address: 'seeds.stakeup.tech:10215',
+        provider: 'StakeUp',
       },
     ],
     persistent_peers: [
@@ -138,16 +145,8 @@ export const omniflixhub: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://rpc-omniflix.huginn.tech:443',
-        provider: 'Huginn',
-      },
-      {
         address: 'https://rpc.omniflix.silentvalidator.com/',
         provider: 'silent',
-      },
-      {
-        address: 'https://omniflix.nodejumper.io',
-        provider: 'NODEJUMPER',
       },
       {
         address: 'https://omniflixhub-mainnet-rpc.autostake.com:443',
@@ -173,6 +172,10 @@ export const omniflixhub: Chain = {
         address: 'https://rpc-omniflix.mzonder.com:443',
         provider: 'MZONDER',
       },
+      {
+        address: 'https://rpc.omniflix.stakeup.tech:443',
+        provider: 'StakeUp',
+      },
     ],
     rest: [
       {
@@ -196,10 +199,6 @@ export const omniflixhub: Chain = {
         provider: 'silent',
       },
       {
-        address: 'https://omniflix.nodejumper.io:1317',
-        provider: 'NODEJUMPER',
-      },
-      {
         address: 'https://omniflix.kingnodes.com',
         provider: 'kingnodes',
       },
@@ -220,12 +219,12 @@ export const omniflixhub: Chain = {
         provider: 'Daksha Validator',
       },
       {
-        address: 'https://api-omniflix.mzonder.com:443',
-        provider: 'MZONDER',
+        address: 'http://omniflix.api.staking-explorer.com',
+        provider: 'Daily $FLIX DROP 💰',
       },
       {
-        address: 'http://omniflix.api.staking-explorer.com',
-        provider: '50% cashback 💰🔙 staking-explorer.com',
+        address: 'https://api.omniflix.stakeup.tech',
+        provider: 'StakeUp',
       },
     ],
     grpc: [
@@ -250,10 +249,6 @@ export const omniflixhub: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'omniflix.nodejumper.io:9090',
-        provider: 'NODEJUMPER',
-      },
-      {
         address: 'omniflixhub-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -268,6 +263,10 @@ export const omniflixhub: Chain = {
       {
         address: 'grpc-omniflix.mzonder.com:443',
         provider: 'MZONDER',
+      },
+      {
+        address: 'grpc.omniflix.stakeup.tech:443',
+        provider: 'StakeUp',
       },
     ],
   },

@@ -81,14 +81,9 @@ export const teritori: Chain = {
         provider: 'kjnodes',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'teritori-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'teritori-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
@@ -171,10 +166,6 @@ export const teritori: Chain = {
         provider: 'Brochain',
       },
       {
-        address: 'https://teritori.nodejumper.io',
-        provider: 'NODEJUMPER',
-      },
-      {
         address: 'https://teritori-rpc.ibs.team',
         provider: 'Inter Blockchain Services',
       },
@@ -207,14 +198,6 @@ export const teritori: Chain = {
         provider: 'PUPMØS',
       },
       {
-        address: 'https://rpc-teritori.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rpc-teritori.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
         address: 'https://teritori-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -223,8 +206,8 @@ export const teritori: Chain = {
         provider: 'ecostake',
       },
       {
-        address: 'https://teritori-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://teritori-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
@@ -247,10 +230,6 @@ export const teritori: Chain = {
       {
         address: 'https://api.teritori.silentvalidator.com/',
         provider: 'silent',
-      },
-      {
-        address: 'https://teritori.nodejumper.io:1317',
-        provider: 'NODEJUMPER',
       },
       {
         address: 'https://teritori-api.ibs.team',
@@ -285,14 +264,6 @@ export const teritori: Chain = {
         provider: 'PUPMØS',
       },
       {
-        address: 'https://lcd-teritori.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rest-teritori.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
         address: 'https://teritori-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -302,7 +273,7 @@ export const teritori: Chain = {
       },
       {
         address: 'https://teritori-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -313,10 +284,6 @@ export const teritori: Chain = {
       {
         address: 'grpc.teritori.nodestake.top:443',
         provider: 'NodeStake',
-      },
-      {
-        address: 'teritori.nodejumper.io:9090',
-        provider: 'NODEJUMPER',
       },
       {
         address: 'teritori.grpc.m.stavr.tech:6705',
@@ -348,7 +315,7 @@ export const teritori: Chain = {
       },
       {
         address: 'teritori-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

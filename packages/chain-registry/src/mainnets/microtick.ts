@@ -9,10 +9,14 @@ export const microtick: Chain = {
   chain_id: 'microtick-1',
   bech32_prefix: 'micro',
   daemon_name: 'mtm',
+  slip44: 118,
   fees: {
     fee_tokens: [
       {
         denom: 'utick',
+        low_gas_price: 0.01,
+        average_gas_price: 0.025,
+        high_gas_price: 0.04,
       },
     ],
   },

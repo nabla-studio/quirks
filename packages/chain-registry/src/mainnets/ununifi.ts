@@ -36,11 +36,11 @@ export const ununifi: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/UnUniFi/chain',
-    recommended_version: 'v3.2.2-query',
-    compatible_versions: ['v3.2.2', 'v3.2.2-query'],
+    recommended_version: 'v4.0.1',
+    compatible_versions: ['v4.0.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/UnUniFi/chain/releases/download/v3.2.2-query/ununifid',
+        'https://github.com/UnUniFi/chain/releases/download/v4.0.1/ununifid',
     },
     cosmos_sdk_version: 'v0.47.3-custom-bank-1',
     consensus: {
@@ -200,13 +200,55 @@ export const ununifi: Chain = {
         cosmwasm_enabled: true,
         ibc_go_version: 'v7.0.1',
         ics_enabled: ['ics20-1'],
+        next_version_name: 'v4',
+      },
+      {
+        name: 'v4',
+        recommended_version: 'v4.0.0',
+        compatible_versions: ['v4.0.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/UnUniFi/chain/releases/download/v4.0.0/ununifid',
+        },
+        proposal: 24,
+        height: 8197583,
+        cosmos_sdk_version: 'v0.47.3-custom-bank-1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.1',
+        },
+        cosmwasm_version: 'v0.40.1',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.0.1',
+        ics_enabled: ['ics20-1'],
+        next_version_name: 'v4_0_1',
+      },
+      {
+        name: 'v4_0_1',
+        recommended_version: 'v4.0.1',
+        compatible_versions: ['v4.0.1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/UnUniFi/chain/releases/download/v4.0.1/ununifid',
+        },
+        proposal: 25,
+        height: 8299656,
+        cosmos_sdk_version: 'v0.47.3-custom-bank-1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.1',
+        },
+        cosmwasm_version: 'v0.40.1',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.0.1',
+        ics_enabled: ['ics20-1'],
         next_version_name: '',
       },
     ],
   },
   logo_URIs: {
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/ununifi/images/ununifi.svg',
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/ununifi/images/ununifi.png',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/ununifi/images/ununifi.svg',
   },
   peers: {
     seeds: [],
@@ -260,28 +302,8 @@ export const ununifi: Chain = {
         provider: 'CauchyE',
       },
       {
-        address: 'http://b.lcd.ununifi.cauchye.net:26657',
-        provider: 'CauchyE',
-      },
-      {
-        address: 'http://ununifi.mainnet.lcd-01.kabab.io:26657',
-        provider: 'Neukind',
-      },
-      {
-        address: 'http://ununifi.mainnet.lcd-02.kabab.io:26657',
-        provider: 'Neukind',
-      },
-      {
-        address: 'https://ununifi-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://rpc.ununifi.nodestake.top',
         provider: 'NodeStake',
-      },
-      {
-        address: 'https://rpc-ununifi.nodeist.net',
-        provider: 'Nodeist',
       },
       {
         address: 'https://ununifi-rpc.lavenderfive.com:443',
@@ -298,24 +320,8 @@ export const ununifi: Chain = {
         provider: 'CauchyE',
       },
       {
-        address: 'https://ununifi.mainnet.lcd-01.kabab.io:1318',
-        provider: 'Neukind',
-      },
-      {
-        address: 'https://ununifi-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://ununifi.mainnet.lcd-02.kabab.io:1318',
-        provider: 'Neukind',
-      },
-      {
         address: 'https://api.ununifi.nodestake.top',
         provider: 'NodeStake',
-      },
-      {
-        address: 'https://api-ununifi.nodeist.net',
-        provider: 'Nodeist',
       },
       {
         address: 'https://ununifi-api.lavenderfive.com:443',
@@ -396,8 +402,8 @@ export const ununifiAssetList: AssetLists = {
       display: 'guu',
       symbol: 'GUU',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/ununifi/images/ununifi.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/ununifi/images/ununifi.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/ununifi/images/ununifi.svg',
       },
       keywords: ['staking', 'wasm', 'assets', 'nft'],
       images: [

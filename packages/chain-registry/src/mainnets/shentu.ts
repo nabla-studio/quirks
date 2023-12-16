@@ -143,14 +143,9 @@ export const shentu: Chain = {
         provider: 'Panthea EU',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'shentu-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'shentu-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'f97807210f9547b8a5016fb18000b46072ca5e30',
@@ -183,7 +178,7 @@ export const shentu: Chain = {
         provider: 'Shentu',
       },
       {
-        address: 'https://certik-rpc.polkachu.com',
+        address: 'https://shentu-rpc.polkachu.com',
         provider: 'Polkachu',
       },
       {
@@ -199,8 +194,8 @@ export const shentu: Chain = {
         provider: 'TienThuatToan',
       },
       {
-        address: 'https://shentu-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://shentu-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://shentu-rpc.highstakes.ch:26657/',
@@ -217,7 +212,7 @@ export const shentu: Chain = {
         provider: 'Shentu',
       },
       {
-        address: 'https://certik-api.polkachu.com',
+        address: 'https://shentu-api.polkachu.com',
         provider: 'Polkachu',
       },
       {
@@ -234,7 +229,7 @@ export const shentu: Chain = {
       },
       {
         address: 'https://shentu-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://shentu-api.highstakes.ch:1317/',
@@ -247,7 +242,7 @@ export const shentu: Chain = {
     ],
     grpc: [
       {
-        address: 'certik-grpc.polkachu.com:14090',
+        address: 'shentu-grpc.polkachu.com:14090',
         provider: 'Polkachu',
       },
       {
@@ -264,7 +259,11 @@ export const shentu: Chain = {
       },
       {
         address: 'shentu-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'shentu-grpc.panthea.eu:16700',
+        provider: 'Panthea EU',
       },
     ],
   },
@@ -339,8 +338,8 @@ export const shentuAssetList: AssetLists = {
       display: 'ctk',
       symbol: 'CTK',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/shentu/images/ctk.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/shentu/images/ctk.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/shentu/images/ctk.svg',
       },
       coingecko_id: 'certik',
       images: [

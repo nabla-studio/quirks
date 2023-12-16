@@ -82,6 +82,10 @@ export const quicksilvertestnet: Chain = {
         address: '65.108.2.27:26656',
       },
       {
+        id: '17574de80eeda21ae1ed94e162ad55b58914c6fa',
+        address: 'quickt.peers.stavr.tech:20026',
+      },
+      {
         id: 'e6bf55bc9f08958b7518bea455423375db78d1ef',
         address: '65.108.13.176:26657',
       },
@@ -90,11 +94,19 @@ export const quicksilvertestnet: Chain = {
   apis: {
     rpc: [
       {
+        address: 'http://quick.rpc.t.stavr.tech:20027',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://quicksilver-testnet-rpc.polkachu.com/',
         provider: 'polkachu',
       },
     ],
     rest: [
+      {
+        address: 'https://quick.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
       {
         address: 'https://quicksilver-testnet-api.polkachu.com/',
         provider: 'polkachu',
@@ -102,12 +114,23 @@ export const quicksilvertestnet: Chain = {
     ],
     grpc: [
       {
+        address: 'http://quick.grpc.t.stavr.tech:9112',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'quicksilver-testnet-grpc.polkachu.com:11190',
         provider: 'polkachu',
       },
     ],
   },
   explorers: [
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Quicksilver',
+      tx_page: 'https://explorer.stavr.tech/Quicksilver/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Quicksilver/account/${accountAddress}',
+    },
     {
       url: 'https://testnet.quicksilver.explorers.guru',
       tx_page:

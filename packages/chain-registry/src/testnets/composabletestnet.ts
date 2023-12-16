@@ -78,6 +78,10 @@ export const composabletestnet: Chain = {
         provider: 'Indonode',
       },
       {
+        address: 'https://composable.api.t4.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://api-composable-testnet.sr20de.xyz',
         provider: 'Sr20de',
       },
@@ -97,6 +101,11 @@ export const composabletestnet: Chain = {
     {
       url: 'https://explorer.nodexcapital.com/composable-3',
       tx_page: 'https://explorer.nodexcapital.com/composable-3/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Composable-Testnet4',
+      tx_page: 'https://explorer.stavr.tech/Composable-Testnet4/tx/${txHash}',
     },
     {
       url: 'https://explorer.indonode.net/composable-testnet-3',
@@ -132,8 +141,8 @@ export const composabletestnetAssetList: AssetLists = {
       display: 'pica',
       symbol: 'PICA',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/composable.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/composable.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/composable.svg',
       },
       images: [
         {

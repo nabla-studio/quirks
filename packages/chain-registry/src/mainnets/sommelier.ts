@@ -17,6 +17,9 @@ export const sommelier: Chain = {
     fee_tokens: [
       {
         denom: 'usomm',
+        low_gas_price: 0.01,
+        average_gas_price: 0.025,
+        high_gas_price: 0.04,
       },
     ],
   },
@@ -88,6 +91,8 @@ export const sommelier: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sommelier/images/somm.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sommelier/images/somm.svg',
   },
+  description:
+    'Automated vaults find best-in-class yields while mitigating risk.',
   peers: {
     seeds: [
       {
@@ -146,10 +151,6 @@ export const sommelier: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'https://rpc.sommelier.nodexcapital.com',
-        provider: '⚡NodeX Validator⚡',
-      },
-      {
         address: 'https://somm-rpc.kleomedes.network',
         provider: 'Kleomedes',
       },
@@ -178,10 +179,6 @@ export const sommelier: Chain = {
       {
         address: 'https://sommelier-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://rest.sommelier.nodexcapital.com',
-        provider: '⚡NodeX Validator⚡',
       },
       {
         address: 'https://somm-api.kleomedes.network',
@@ -278,7 +275,7 @@ export const sommelierAssetList: AssetLists = {
         },
       ],
       base: 'usomm',
-      name: 'Somm',
+      name: 'Sommelier',
       display: 'somm',
       symbol: 'SOMM',
       logo_URIs: {

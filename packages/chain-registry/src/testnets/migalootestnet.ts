@@ -32,8 +32,8 @@ export const migalootestnet: Chain = {
     ],
   },
   logo_URIs: {
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/migaloo-light.svg',
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/migaloo-light.png',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/migaloo-light.svg',
   },
   codebase: {
     git_repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain',
@@ -120,8 +120,8 @@ export const migalootestnetAssetList: AssetLists = {
       display: 'whale',
       symbol: 'WHALE',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/white-whale.svg',
       },
       images: [
         {

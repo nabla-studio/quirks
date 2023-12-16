@@ -418,6 +418,11 @@ export const umee: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
+        id: '345970b5bdac916d95d8c64243d901766aff5475',
+        address: '95.217.204.48:26656',
+        provider: '[NODERS]TEAM',
+      },
+      {
         id: '1b728581c6d308078e2b969a0c6243852f77d28d',
         address: 'umee.peers.m.stavr.tech:10456',
         provider: '🔥STAVR🔥',
@@ -446,6 +451,11 @@ export const umee: Chain = {
         id: '635debe6c5cbcb6861b6c8b32c47d8ee84d99c16',
         address: '88.99.208.54:29656',
         provider: 'StakeTown',
+      },
+      {
+        id: '09b99a210b93a4e66571d7fd745f2d52dfbf59f2',
+        address: 'umee.peer.stakevillage.net:11056',
+        provider: 'Stake Village',
       },
     ],
   },
@@ -492,10 +502,6 @@ export const umee: Chain = {
         provider: 'Staketab',
       },
       {
-        address: 'https://rpc.umee.stake-take.com',
-        provider: 'Stake-Take',
-      },
-      {
         address: 'https://umee-rpc.theamsolutions.info',
         provider: 'AM Solutions',
       },
@@ -516,15 +522,19 @@ export const umee: Chain = {
         provider: 'MZONDER',
       },
       {
-        address: 'https://umee-rpc.stake-town.com:443',
+        address: 'https://umee-rpc.stake-town.com',
         provider: 'StakeTown',
+      },
+      {
+        address: 'https://umee-rpc.highstakes.ch:26657/',
+        provider: 'High Stakes 🇨🇭',
+      },
+      {
+        address: 'https://umee.rpc.stakevillage.net:443',
+        provider: 'Stake Village',
       },
     ],
     rest: [
-      {
-        address: 'https://api.mainnet.network.umee.cc',
-        provider: 'umee Foundation',
-      },
       {
         address: 'https://api-umee-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
@@ -562,10 +572,6 @@ export const umee: Chain = {
         provider: 'Staketab',
       },
       {
-        address: 'https://api.umee.stake-take.com',
-        provider: 'Stake-Take',
-      },
-      {
         address: 'https://umee-api.theamsolutions.info',
         provider: 'AM Solutions',
       },
@@ -586,8 +592,16 @@ export const umee: Chain = {
         provider: 'MZONDER',
       },
       {
-        address: 'https://umee-api.stake-town.com:443',
+        address: 'https://umee-api.stake-town.com',
         provider: 'StakeTown',
+      },
+      {
+        address: 'https://umee-api.highstakes.ch:1317/',
+        provider: 'High Stakes 🇨🇭',
+      },
+      {
+        address: 'https://umee.api.stakevillage.net',
+        provider: 'Stake Village',
       },
     ],
     grpc: [
@@ -651,6 +665,10 @@ export const umee: Chain = {
         address: 'umee-grpc.stake-town.com:443',
         provider: 'StakeTown',
       },
+      {
+        address: 'umee.grpc.stakevillage.net:11090',
+        provider: 'Stake Village',
+      },
     ],
   },
   explorers: [
@@ -693,6 +711,13 @@ export const umee: Chain = {
       account_page:
         'https://explorer.stake-take.com/umee/account/${accountAddress}',
     },
+    {
+      kind: 'Stake Village',
+      url: 'https://exp.stakevillage.net/umee',
+      tx_page: 'https://exp.stakevillage.net/umee/tx/${txHash}',
+      account_page:
+        'https://exp.stakevillage.net/umee/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -723,8 +748,8 @@ export const umeeAssetList: AssetLists = {
       display: 'umee',
       symbol: 'UMEE',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/umee/images/umee.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/umee/images/umee.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/umee/images/umee.svg',
       },
       coingecko_id: 'umee',
       images: [

@@ -76,6 +76,8 @@ export const axelar: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axelar-chain-logo.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axelar-chain-logo.svg',
   },
+  description:
+    'Axelar delivers secure cross-chain communication for Web3. Our infrastructure enables dApp users to interact with any asset or application, on any chain, with one click.',
   peers: {
     seeds: [
       {
@@ -113,6 +115,11 @@ export const axelar: Chain = {
         id: '27b6d74c8408e033e2e5a9e966a0d15782e33596',
         address: 'seeds.nethernode.xyz:15156',
         provider: 'carbonZERO🌲',
+      },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -156,10 +163,6 @@ export const axelar: Chain = {
       {
         address: 'https://axelar-rpc.quickapi.com:443',
         provider: 'chainlayer',
-      },
-      {
-        address: 'https://axelar-rpc.chainode.tech:443',
-        provider: 'Chainode',
       },
       {
         address: 'https://rpc-axelar.cosmos-spaces.cloud',
@@ -226,10 +229,6 @@ export const axelar: Chain = {
         provider: 'Staketab',
       },
       {
-        address: 'https://rpc-axelar.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
         address: 'https://axelar-rpc.w3coins.io',
         provider: 'w3coins',
       },
@@ -242,10 +241,6 @@ export const axelar: Chain = {
       {
         address: 'https://axelar-lcd.quickapi.com:443',
         provider: 'chainlayer',
-      },
-      {
-        address: 'https://axelar-rest.chainode.tech:443',
-        provider: 'Chainode',
       },
       {
         address: 'https://api-axelar.cosmos-spaces.cloud',
@@ -302,10 +297,6 @@ export const axelar: Chain = {
       {
         address: 'https://axelar-rest.staketab.org',
         provider: 'Staketab',
-      },
-      {
-        address: 'https://rest-axelar.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
       },
       {
         address: 'https://axelar-api.w3coins.io',
@@ -455,8 +446,8 @@ export const axelarAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
       },
       coingecko_id: 'axlusdc',
       images: [
@@ -528,8 +519,8 @@ export const axelarAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/dai.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/dai.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/dai.svg',
       },
       images: [
         {
@@ -565,8 +556,8 @@ export const axelarAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdt.svg',
       },
       images: [
         {
@@ -1024,8 +1015,8 @@ export const axelarAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.svg',
       },
       images: [
         {
@@ -1061,8 +1052,8 @@ export const axelarAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/moonbeam/images/glmr.svg',
       },
       images: [
         {
@@ -1135,8 +1126,8 @@ export const axelarAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/wbnb.svg',
       },
       images: [
         {
@@ -1277,8 +1268,8 @@ export const axelarAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
       },
       images: [
         {
@@ -1314,8 +1305,8 @@ export const axelarAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
       },
       images: [
         {
@@ -1351,8 +1342,8 @@ export const axelarAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/filecoin/images/wfil.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/filecoin/images/wfil.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/filecoin/images/wfil.svg',
       },
       images: [
         {
@@ -1430,8 +1421,14 @@ export const axelarAssetList: AssetLists = {
             chain_name: 'ethereum',
             base_denom: '0x6982508145454Ce325dDbE47a25d4ec3d2311933',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/pepe.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/pepe.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/pepe.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/pepe.svg',
+      },
     },
     {
       denom_units: [
@@ -1465,8 +1462,12 @@ export const axelarAssetList: AssetLists = {
             chain_name: 'ethereum',
             base_denom: '0xbe9895146f7af43049ca1c1ae358b0541ea49704',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/cbeth.png',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/cbeth.png',
+      },
     },
     {
       denom_units: [
@@ -1500,8 +1501,12 @@ export const axelarAssetList: AssetLists = {
             chain_name: 'ethereum',
             base_denom: '0xae78736cd615f374d3085123a210448e74fc6393',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/reth.png',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/reth.png',
+      },
     },
     {
       denom_units: [
@@ -1535,8 +1540,12 @@ export const axelarAssetList: AssetLists = {
             chain_name: 'ethereum',
             base_denom: '0xac3e018457b222d93114458476f3e3416abbe38f',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sfrxeth.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sfrxeth.svg',
+      },
     },
     {
       denom_units: [
@@ -1570,8 +1579,12 @@ export const axelarAssetList: AssetLists = {
             chain_name: 'ethereum',
             base_denom: '0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg',
+      },
     },
     {
       denom_units: [
@@ -1605,8 +1618,14 @@ export const axelarAssetList: AssetLists = {
             chain_name: 'ethereum',
             base_denom: '0xb5b29320d2Dde5BA5BAFA1EbcD270052070483ec',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/yieldeth.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/yieldeth.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/yieldeth.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/yieldeth.svg',
+      },
     },
   ],
 };

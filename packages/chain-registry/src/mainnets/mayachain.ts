@@ -101,11 +101,13 @@ export const mayachainAssetList: AssetLists = {
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mayachain/images/cacao.svg',
-          theme: {},
         },
       ],
       coingecko_id: 'cacao',
       keywords: ['dex'],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mayachain/images/cacao.svg',
+      },
     },
     {
       description: 'The native revenue sharing token of Maya Protocol',
@@ -128,6 +130,9 @@ export const mayachainAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mayachain/images/maya.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mayachain/images/maya.svg',
+      },
     },
   ],
 };

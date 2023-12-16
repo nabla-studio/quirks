@@ -34,26 +34,26 @@ export const evmos: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/evmos/evmos',
-    recommended_version: 'v14.0.0',
-    compatible_versions: ['v14.0.0'],
+    recommended_version: 'v15.0.0',
+    compatible_versions: ['v15.0.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/evmos/evmos/releases/download/v14.0.0/evmos_14.0.0_Linux_amd64.tar.gz',
+        'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/evmos/evmos/releases/download/v14.0.0/evmos_14.0.0_Linux_arm64.tar.gz',
+        'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/evmos/evmos/releases/download/v14.0.0/evmos_14.0.0_Darwin_amd64.tar.gz',
+        'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Darwin_amd64.tar.gz',
       'darwin/arm64':
-        'https://github.com/evmos/evmos/releases/download/v14.0.0/evmos_14.0.0_Darwin_arm64.tar.gz',
+        'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/evmos/evmos/releases/download/v14.0.0/evmos_14.0.0_Windows_amd64.zip',
+        'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Windows_amd64.zip',
     },
-    cosmos_sdk_version: 'v0.47.4-evmos.2',
+    cosmos_sdk_version: 'v0.47.5-evmos',
     consensus: {
       type: 'cometbft',
-      version: '0.37.2',
+      version: 'v0.37.3-0.20230920093934-46df7b597e3c',
     },
-    ibc_go_version: '7.3.0',
+    ibc_go_version: '7.3.1',
     genesis: {
       genesis_url: 'https://archive.evmos.org/mainnet/genesis.json',
     },
@@ -143,6 +143,33 @@ export const evmos: Chain = {
           'windows/amd64':
             'https://github.com/evmos/evmos/releases/download/v14.0.0/evmos_14.0.0_Windows_amd64.zip',
         },
+        next_version_name: 'v15.0.0',
+      },
+      {
+        name: 'v15.0.0',
+        tag: 'v15.0.0',
+        proposal: 240,
+        height: 16946771,
+        recommended_version: 'v15.0.0',
+        compatible_versions: ['v15.0.0'],
+        cosmos_sdk_version: 'v0.47.5-evmos',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.3-0.20230920093934-46df7b597e3c',
+        },
+        ibc_go_version: 'v7.3.1',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Linux_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Darwin_amd64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Darwin_arm64.tar.gz',
+          'windows/amd64':
+            'https://github.com/evmos/evmos/releases/download/v15.0.0/evmos_15.0.0_Windows_amd64.zip',
+        },
         next_version_name: '',
       },
     ],
@@ -151,6 +178,8 @@ export const evmos: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
   },
+  description:
+    'Developers use Evmos as the Ethereum Canary Chain to deploy applications of the future. Get all the functionalities of Ethereum with the power of IBC and Interchain composability.',
   peers: {
     seeds: [
       {
@@ -199,14 +228,9 @@ export const evmos: Chain = {
         provider: 'Pro-nodes75',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'evmos-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'evmos-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'e4f7c3181d0028209c664bfd4c259f2c4d947491',
@@ -261,9 +285,14 @@ export const evmos: Chain = {
         provider: 'MMS',
       },
       {
-        id: 'c8e2800e5743a1575fd8a0fcbb7a74c6f67a23a9',
-        address: '88.99.208.54:40656',
+        id: '25695d17ec014c39054ac0026db3228053a6a2db',
+        address: '65.108.195.213:40656',
         provider: 'StakeTown',
+      },
+      {
+        id: 'cdf9f4c1f76006e783634ec3cdb48c1fed3c4a00',
+        address: 'evmos-mainnet.peer.stakevillage.net:16956',
+        provider: 'Stake Village',
       },
     ],
   },
@@ -272,10 +301,6 @@ export const evmos: Chain = {
       {
         address: 'https://rpc-evmos.ecostake.com',
         provider: 'ecostake',
-      },
-      {
-        address: 'https://rpc-evmos.whispernode.com:443',
-        provider: 'WhisperNode🤐',
       },
       {
         address: 'https://evmos-rpc.lavenderfive.com:443',
@@ -290,24 +315,12 @@ export const evmos: Chain = {
         provider: 'Notional',
       },
       {
-        address: 'https://rpc.evmos.interbloc.org',
-        provider: 'Interbloc',
-      },
-      {
-        address: 'https://rpc-evmos.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://rpc.evmos.testnet.run',
         provider: 'TestNetRun',
       },
       {
         address: 'https://rpc.evmos.nodestake.top',
         provider: 'NodeStake',
-      },
-      {
-        address: 'https://rpc.evmos.bh.rocks',
-        provider: 'BlockHunters',
       },
       {
         address: 'https://rpc.evmos.chaintools.tech/',
@@ -338,24 +351,8 @@ export const evmos: Chain = {
         provider: 'Validatrium',
       },
       {
-        address: 'https://evmos-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://evmos-rpc.stakeandrelax.net',
-        provider: 'Stake&Relax Validator 🦥',
-      },
-      {
-        address: 'https://evmos.rpc.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
-      },
-      {
-        address: 'https://evmos.api.onfinality.io/public',
-        provider: 'OnFinality',
-      },
-      {
-        address: 'https://evmos-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://evmos-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://rpc-evmos-01.stakeflow.io',
@@ -374,11 +371,7 @@ export const evmos: Chain = {
         provider: 'w3coins',
       },
       {
-        address: 'https://rpc-evmos.mms.team',
-        provider: 'MMS',
-      },
-      {
-        address: 'https://evmos-rpc.stake-town.com:443',
+        address: 'https://evmos-rpc.stake-town.com',
         provider: 'StakeTown',
       },
       {
@@ -389,12 +382,12 @@ export const evmos: Chain = {
         address: 'https://evmos-rpc.antrixy.org/',
         provider: 'Antrix Validators',
       },
+      {
+        address: 'https://evmos-mainnet.rpc.stakevillage.net:443',
+        provider: 'Stake Village',
+      },
     ],
     rest: [
-      {
-        address: 'https://lcd-evmos.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
       {
         address: 'https://rest.bd.evmos.org:1317',
         provider: 'Blockdaemon',
@@ -406,18 +399,6 @@ export const evmos: Chain = {
       {
         address: 'https://api-evmos-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
-      },
-      {
-        address: 'https://api.evmos.interbloc.org',
-        provider: 'Interbloc',
-      },
-      {
-        address: 'https://lcd.evmos.bh.rocks',
-        provider: 'BlockHunters',
-      },
-      {
-        address: 'https://api-evmos.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
       },
       {
         address: 'https://api.evmos.nodestake.top',
@@ -448,24 +429,12 @@ export const evmos: Chain = {
         provider: 'Validatrium',
       },
       {
-        address: 'https://evmos-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://evmos-api.stakeandrelax.net',
-        provider: 'Stake&Relax Validator 🦥',
-      },
-      {
         address: 'https://rest-evmos.ecostake.com',
         provider: 'ecostake',
       },
       {
-        address: 'https://evmos.rest.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'https://evmos-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://api-evmos-01.stakeflow.io',
@@ -484,11 +453,7 @@ export const evmos: Chain = {
         provider: 'w3coins',
       },
       {
-        address: 'https://api-evmos.mms.team',
-        provider: 'MMS',
-      },
-      {
-        address: 'https://evmos-api.stake-town.com:443',
+        address: 'https://evmos-api.stake-town.com',
         provider: 'StakeTown',
       },
       {
@@ -498,6 +463,10 @@ export const evmos: Chain = {
       {
         address: 'https://evmos-rest.antrixy.org/',
         provider: 'Antrix Validators',
+      },
+      {
+        address: 'https://evmos-mainnet.api.stakevillage.net',
+        provider: 'Stake Village',
       },
     ],
     grpc: [
@@ -538,12 +507,8 @@ export const evmos: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'evmos.grpc.interchain.ivaldilabs.xyz:443',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'evmos-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'grpc-evmos-01.stakeflow.io:1702',
@@ -572,6 +537,10 @@ export const evmos: Chain = {
       {
         address: 'https://evmos-grpc.antrixy.org/',
         provider: 'Antrix Validators',
+      },
+      {
+        address: 'evmos-mainnet.grpc.stakevillage.net:16990',
+        provider: 'Stake Village',
       },
     ],
     'evm-http-jsonrpc': [
@@ -624,12 +593,20 @@ export const evmos: Chain = {
         provider: 'MMS',
       },
       {
-        address: 'https://evmos-jsonrpc.stake-town.com:443',
+        address: 'https://evmos-jsonrpc.stake-town.com',
         provider: 'StakeTown',
       },
       {
         address: 'https://evmos.jsonrpc.liveraven.net',
         provider: 'LiveRaveN',
+      },
+      {
+        address: 'https://evmos.json.antrixy.org',
+        provider: 'Antrix Validators',
+      },
+      {
+        address: 'https://evmos-mainnet.jsonrpc.stakevillage.net',
+        provider: 'Stake Village',
       },
     ],
   },
@@ -683,6 +660,13 @@ export const evmos: Chain = {
       url: 'https://stakeflow.io/evmos',
       account_page: 'https://stakeflow.io/evmos/accounts/${accountAddress}',
     },
+    {
+      kind: 'Stake Village',
+      url: 'https://exp.stakevillage.net/evmos',
+      tx_page: 'https://exp.stakevillage.net/evmos/tx/${txHash}',
+      account_page:
+        'https://exp.stakevillage.net/evmos/accounts/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -714,8 +698,8 @@ export const evmosAssetList: AssetLists = {
       display: 'evmos',
       symbol: 'EVMOS',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
       },
       coingecko_id: 'evmos',
       images: [
@@ -753,7 +737,7 @@ export const evmosAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-83',
-            path: 'transfer/channel-83',
+            path: 'transfer/channel-83/erc20/tether/usdt',
           },
         },
       ],
@@ -763,8 +747,12 @@ export const evmosAssetList: AssetLists = {
             chain_name: 'kava',
             base_denom: 'erc20/tether/usdt',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
     },
     {
       description: 'The token of Neokingdom DAO.',
@@ -783,8 +771,8 @@ export const evmosAssetList: AssetLists = {
       display: 'neok',
       symbol: 'NEOK',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/neok.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/neok.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/neok.svg',
       },
       images: [
         {

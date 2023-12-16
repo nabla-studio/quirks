@@ -68,6 +68,8 @@ export const mars: Chain = {
       },
     ],
   },
+  description:
+    'Lend, borrow and earn with an autonomous credit protocol in the Cosmos universe. Open to all, closed to none.',
   peers: {
     seeds: [
       {
@@ -86,14 +88,9 @@ export const mars: Chain = {
         provider: 'Polkachu',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'mars-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'mars-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
@@ -134,16 +131,8 @@ export const mars: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://rpc-mars.goldenratiostaking.net',
-        provider: 'Golden Ratio Staking',
-      },
-      {
         address: 'https://mars-rpc.polkachu.com',
         provider: 'Polkachu',
-      },
-      {
-        address: 'https://rpc-mars.whispernode.com:443',
-        provider: 'WhisperNode🤐',
       },
       {
         address: 'https://rpc.expedition-mars.com',
@@ -154,24 +143,12 @@ export const mars: Chain = {
         provider: 'genznodes',
       },
       {
-        address: 'https://rpc-mars.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
         address: 'https://mars-rpc.stakeandrelax.net',
         provider: 'Stake&Relax Validator 🦥',
       },
       {
-        address: 'https://mars.rpc.kjnodes.com',
-        provider: 'kjnodes',
-      },
-      {
-        address: 'https://rpc.mars.nodestake.top',
-        provider: 'NodeStake',
-      },
-      {
-        address: 'https://mars-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://mars-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
@@ -192,10 +169,6 @@ export const mars: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://lcd-mars.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
         address: 'https://lcd.expedition-mars.com:443',
         provider: 'Expedition Mars',
       },
@@ -204,24 +177,12 @@ export const mars: Chain = {
         provider: 'genznodes',
       },
       {
-        address: 'https://rest-mars.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
         address: 'https://mars-api.stakeandrelax.net',
         provider: 'Stake&Relax Validator 🦥',
       },
       {
-        address: 'https://mars.api.kjnodes.com',
-        provider: 'kjnodes',
-      },
-      {
-        address: 'https://api.mars.nodestake.top',
-        provider: 'NodeStake',
-      },
-      {
         address: 'https://mars-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -255,7 +216,7 @@ export const mars: Chain = {
       },
       {
         address: 'mars-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

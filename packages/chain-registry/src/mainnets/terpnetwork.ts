@@ -12,19 +12,21 @@ export const terpnetwork: Chain = {
   node_home: '$HOME/.terp',
   codebase: {
     git_repo: 'https://github.com/terpnetwork/terp-core.git',
-    recommended_version: 'barberry',
+    recommended_version: 'v3-pigeonfall',
     consensus: {
       type: 'cometbft',
-      version: '0.37.1',
+      version: '0.37.2',
     },
-    compatible_versions: ['v1.0.0', 'v1.0.0-stable', 'barberry'],
+    compatible_versions: ['v3-pigeonfall'],
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/terpnetwork/mainnet/main/morocco-1/genesis.json',
     },
     binaries: {
       'linux/amd64':
-        'https://github.com/terpnetwork/terp-core/releases/download/barberry/terpd_linux_amd64',
+        'https://github.com/terpnetwork/terp-core/releases/download/v3-pigeonfall/terpd-v3-pigeonfall-amd64',
+      'linux/arm64':
+        'https://github.com/terpnetwork/terp-core/releases/download/v3-pigeonfall/terpd-v3-pigeonfall-arm64',
     },
     versions: [
       {
@@ -35,10 +37,79 @@ export const terpnetwork: Chain = {
           type: 'cometbft',
           version: '0.37.0',
         },
-        binaries: {
-          'linux/amd64':
-            'https://github.com/terpnetwork/terp-core/archive/refs/tags/v1.0.0-stable.tar.gz',
+      },
+      {
+        name: 'huckleberry',
+        recommended_version: 'huckleberry',
+        compatible_versions: ['huckleberry'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.0',
         },
+      },
+      {
+        name: 'barberry',
+        recommended_version: 'barberry',
+        compatible_versions: ['barberry'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.1',
+        },
+      },
+      {
+        name: 'v2.0.0',
+        recommended_version: 'v2.0.0',
+        compatible_versions: ['v2.0.0'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
+      {
+        name: 'v3.0.0',
+        recommended_version: 'v3.0.0',
+        compatible_versions: ['v3.0.0'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
+      {
+        name: 'v2-pigeonfall',
+        recommended_version: 'v2-pigeonfall',
+        compatible_versions: ['v2-pigeonfall'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
+      {
+        name: 'v3-pigeonfall',
+        recommended_version: 'v3-pigeonfall',
+        compatible_versions: ['v3-pigeonfall'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
+    ],
+  },
+  fees: {
+    fee_tokens: [
+      {
+        denom: 'uterp',
+        fixed_min_gas_price: 0.005,
+      },
+      {
+        denom: 'uthiol',
+        fixed_min_gas_price: 0.5,
+      },
+    ],
+  },
+  staking: {
+    staking_tokens: [
+      {
+        denom: 'uterp',
       },
     ],
   },
@@ -104,10 +175,23 @@ export const terpnetwork: Chain = {
   explorers: [
     {
       kind: 'ping.pub',
+      url: 'https://ping.pub/terp',
+      tx_page: 'https://ping.pub/terp/tx/${txHash}',
+      account_page: 'https://ping.pub/terp/account/{$accountAddress}',
+    },
+    {
+      kind: 'ping.pub',
       url: 'https://explorer.nodestake.top',
       tx_page: 'https://explorer.nodestake.top/terp/tx/${txHash}',
       account_page:
         'https://explorer.nodestake.top/terp/account/{$accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Terp-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Terp-Mainnet/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Terp-Mainnet/account/{$accountAddress}',
     },
     {
       kind: 'ZenChainLabs',

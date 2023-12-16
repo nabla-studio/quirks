@@ -50,6 +50,8 @@ export const kava: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kava/images/kava.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kava/images/kava.svg',
   },
+  description:
+    'Kava is a decentralized blockchain that combines the speed and interoperability of Cosmos with the developer power of Ethereum.',
   peers: {
     seeds: [
       {
@@ -68,14 +70,9 @@ export const kava: Chain = {
         provider: 'Stakeflow',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'kava-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'kava-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -122,8 +119,8 @@ export const kava: Chain = {
         provider: 'Stakeflow',
       },
       {
-        address: 'https://kava-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://kava-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
@@ -153,7 +150,7 @@ export const kava: Chain = {
       },
       {
         address: 'https://kava-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -179,7 +176,7 @@ export const kava: Chain = {
       },
       {
         address: 'kava-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     'evm-http-jsonrpc': [
@@ -189,7 +186,7 @@ export const kava: Chain = {
       },
       {
         address: 'https://kava-evm.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://kava.api.onfinality.io/public',
@@ -250,8 +247,8 @@ export const kavaAssetList: AssetLists = {
       display: 'kava',
       symbol: 'KAVA',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kava/images/kava.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kava/images/kava.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kava/images/kava.svg',
       },
       coingecko_id: 'kava',
       images: [
@@ -274,7 +271,7 @@ export const kavaAssetList: AssetLists = {
         },
       ],
       base: 'hard',
-      name: 'Hard',
+      name: 'Kava Hard',
       display: 'HARD',
       symbol: 'HARD',
       logo_URIs: {
@@ -302,7 +299,7 @@ export const kavaAssetList: AssetLists = {
         },
       ],
       base: 'swp',
-      name: 'Swap',
+      name: 'Kava Swap',
       display: 'SWP',
       symbol: 'SWP',
       logo_URIs: {
@@ -330,12 +327,12 @@ export const kavaAssetList: AssetLists = {
         },
       ],
       base: 'usdx',
-      name: 'USDX',
+      name: 'Kava USDX',
       display: 'USDX',
       symbol: 'USDX',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kava/images/usdx.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kava/images/usdx.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kava/images/usdx.svg',
       },
       coingecko_id: 'usdx',
       images: [
@@ -360,6 +357,7 @@ export const kavaAssetList: AssetLists = {
       name: 'Tether USD',
       display: 'usdt',
       symbol: 'USDT',
+      coingecko_id: 'tether',
       traces: [
         {
           type: 'additional-mintage',
@@ -376,8 +374,12 @@ export const kavaAssetList: AssetLists = {
             chain_name: 'ethereum',
             base_denom: '0xdac17f958d2ee523a2206206994597c13d831ec7',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
     },
   ],
 };

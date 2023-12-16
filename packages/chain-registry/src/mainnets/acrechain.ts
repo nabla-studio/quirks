@@ -126,24 +126,12 @@ export const acrechain: Chain = {
         provider: 'nodestake',
       },
       {
-        address: 'https://rpc-acre.d-stake.xyz',
-        provider: 'D-stake',
-      },
-      {
         address: 'https://rpc-acre.synergynodes.com',
         provider: 'Synergy Nodes',
       },
       {
-        address: 'https://acre-rpc.agoranodes.com',
-        provider: 'AgoraNodes',
-      },
-      {
         address: 'https://acrechain-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://acre-rpc.genznodes.dev',
-        provider: 'genznodes',
       },
       {
         address: 'https://rpc.acre.tcnetwork.io',
@@ -160,24 +148,12 @@ export const acrechain: Chain = {
     ],
     rest: [
       {
-        address: 'https://api-acre.d-stake.xyz',
-        provider: 'D-stake',
-      },
-      {
         address: 'https://lcd-acre.synergynodes.com',
         provider: 'Synergy Nodes',
       },
       {
         address: 'https://acrechain-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://acre-rest.agoranodes.com',
-        provider: 'AgoraNodes',
-      },
-      {
-        address: 'https://acre-api.genznodes.dev',
-        provider: 'genznodes',
       },
       {
         address: 'https://rest.acre.tcnetwork.io',
@@ -307,8 +283,8 @@ export const acrechainAssetList: AssetLists = {
       display: 'acre',
       symbol: 'ACRE',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/acrechain/images/acre.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/acrechain/images/acre.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/acrechain/images/acre.svg',
       },
       coingecko_id: 'arable-protocol',
       images: [
