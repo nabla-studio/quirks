@@ -1,7 +1,6 @@
 import type { WalletEventTypes, WalletEventNames } from '@quirks/core';
 import type { EventEmitter } from 'eventemitter3';
 import { useQuirks } from './quirks';
-import { onUnmounted } from 'vue';
 import { SetupStates } from '@quirks/store';
 
 /**
@@ -9,6 +8,8 @@ import { SetupStates } from '@quirks/store';
  *
  * @param event event name that you want to subscribe.
  * @param fn event callback function that you wanna trigger on event fire.
+ *
+ * @return an object with a flush callback, so you can manage unsubscribe on your own using your custom logic.
  */
 export const useWalletEvents = <
   T extends EventEmitter.EventNames<WalletEventNames>,
@@ -30,13 +31,7 @@ export const useWalletEvents = <
     },
   );
 
-  onUnmounted(() => {
-    const wallet = store.getState().wallet;
-
-    if (wallet) {
-      wallet.events.removeListener(event, fn);
-    }
-
-    flush();
-  });
+  return {
+    flush,
+  };
 };
