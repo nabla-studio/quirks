@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/nabla-studio/quirks/compare/chain-registry@0.3.3...chain-registry@0.4.0) (2023-12-16)
+
+
+### Features
+
+* **chain-registry:** :label: update types ([93e7c4f](https://github.com/nabla-studio/quirks/commit/93e7c4f9f780a2feefce254e75f915e6fb0e211a))
+* **chain-registry:** :sparkles: update chain list ([303c7e8](https://github.com/nabla-studio/quirks/commit/303c7e8ff5350b04c189773a2771295783359827))
+* **chain-registry:** :sparkles: update submodule ([e16a004](https://github.com/nabla-studio/quirks/commit/e16a0047a8affdc66592082f1ad94cd79b0548e5))
+
 ## [0.3.3](https://github.com/nabla-studio/quirks/compare/chain-registry@0.3.2...chain-registry@0.3.3) (2023-12-09)
 
 ## [0.3.2](https://github.com/nabla-studio/quirks/compare/chain-registry@0.3.1...chain-registry@0.3.2) (2023-11-24)
