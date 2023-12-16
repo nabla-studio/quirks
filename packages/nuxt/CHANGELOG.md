@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.17](https://github.com/nabla-studio/quirks/compare/nuxt@0.1.16...nuxt@0.1.17) (2023-12-16)
+
+### Dependency Updates
+
+* `vue` updated to version `0.1.16`
+* `store` updated to version `0.1.16`
+
+### Bug Fixes
+
+* **nuxt:** :bug: add missing function export ([a5c9926](https://github.com/nabla-studio/quirks/commit/a5c9926135f614f14f5e898776ae06853bfe1d93))
+
 ## [0.1.16](https://github.com/nabla-studio/quirks/compare/nuxt@0.1.15...nuxt@0.1.16) (2023-12-10)
 
 ### Dependency Updates
