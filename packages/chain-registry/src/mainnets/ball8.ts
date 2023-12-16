@@ -99,18 +99,6 @@ export const ball8: Chain = {
         address: 'https://8ball-rpc.genznodes.dev/',
         provider: 'genznodes',
       },
-      {
-        address: 'https://rpc-8ball.comunitynode.my.id',
-        provider: 'ComunityNode',
-      },
-      {
-        address: 'https://rpc-8ball.nodine.id',
-        provider: 'Nodine.ID',
-      },
-      {
-        address: 'https://rpc.8ball.nodexcapital.com',
-        provider: 'NodeX Validator',
-      },
     ],
     rest: [
       {
@@ -126,16 +114,8 @@ export const ball8: Chain = {
         provider: 'genznodes',
       },
       {
-        address: 'https://api-8ball.comunitynode.my.id',
-        provider: 'ComunityNode',
-      },
-      {
         address: 'https://api-8ball.nodine.id/',
         provider: 'Nodine.ID',
-      },
-      {
-        address: 'https://rest.8ball.nodexcapital.com',
-        provider: 'NodeX Validator',
       },
     ],
     grpc: [

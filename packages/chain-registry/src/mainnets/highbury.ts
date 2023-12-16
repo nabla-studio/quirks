@@ -123,8 +123,8 @@ export const highburyAssetList: AssetLists = {
       display: 'fury',
       symbol: 'FURY',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/highbury/images/fury.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/highbury/images/fury.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/highbury/images/fury.svg',
       },
       coingecko_id: 'fanfury',
       images: [

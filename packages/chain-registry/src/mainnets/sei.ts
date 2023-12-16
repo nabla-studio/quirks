@@ -33,11 +33,15 @@ export const sei: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sei-protocol/sei-chain',
-    recommended_version: 'v3.2.1',
-    compatible_versions: ['v3.2.1'],
-    ibc_go_version: 'v3.2.0',
-    cosmos_sdk_version: 'v0.45.10',
-    cosmwasm_version: 'v0.27.0',
+    recommended_version: 'v3.3.1',
+    compatible_versions: ['v3.3.1'],
+    ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
+    cosmos_sdk_version: 'sei-cosmos v0.2.63',
+    consensus: {
+      type: 'sei-tendermint',
+      version: 'v0.2.28',
+    },
+    cosmwasm_version: 'sei-wasmd v0.0.2',
     cosmwasm_enabled: true,
     cosmwasm_path: '$HOME/.sei/wasm',
     genesis: {
@@ -93,6 +97,21 @@ export const sei: Chain = {
         cosmwasm_version: 'v0.27.0',
         cosmwasm_enabled: true,
         cosmwasm_path: '$HOME/.sei/wasm',
+        next_version_name: 'v3.3.0',
+      },
+      {
+        name: 'v3.3.0',
+        recommended_version: 'v3.3.1',
+        compatible_versions: ['v3.3.1'],
+        ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
+        cosmos_sdk_version: 'sei-cosmos v0.2.63',
+        consensus: {
+          type: 'sei-tendermint',
+          version: 'v0.2.28',
+        },
+        cosmwasm_version: 'sei-wasmd v0.0.2',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.sei/wasm',
         next_version_name: '',
       },
     ],
@@ -101,6 +120,8 @@ export const sei: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/sei.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/sei.svg',
   },
+  description:
+    'Sei is the fastest Layer 1 blockchain, designed to scale with the industry.',
   peers: {
     seeds: [
       {
@@ -122,6 +143,11 @@ export const sei: Chain = {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
         address: 'sei.rpc.kjnodes.com:16859',
         provider: 'kjnodes',
+      },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -157,16 +183,8 @@ export const sei: Chain = {
         provider: 'Brochain',
       },
       {
-        address: 'https://sei-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://rpc-sei.stingray.plus/',
         provider: 'StingRay',
-      },
-      {
-        address: 'https://rpc-sei.rhinostake.com',
-        provider: 'RHINO',
       },
       {
         address: 'https://rpc-sei.whispernode.com:443',
@@ -193,14 +211,6 @@ export const sei: Chain = {
       {
         address: 'https://api-sei.stingray.plus/',
         provider: 'StingRay',
-      },
-      {
-        address: 'https://sei-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://rest-sei.rhinostake.com',
-        provider: 'RHINO',
       },
       {
         address: 'https://lcd-sei.whispernode.com:443',

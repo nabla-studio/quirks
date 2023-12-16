@@ -70,6 +70,11 @@ export const sgetestnet: Chain = {
         address: '65.108.15.170:26656',
         provider: 'ramuchi.tech',
       },
+      {
+        id: 'e2c5f2a902b7e6b8c006008e962ab4ddd70cdd78',
+        address: 'sge.peers-t.stavr.tech:1146',
+        provider: '🔥STAVR🔥',
+      },
     ],
   },
   logo_URIs: {
@@ -94,6 +99,10 @@ export const sgetestnet: Chain = {
         address: 'https://rpc-t.sge.nodestake.top/',
         provider: 'Nodestake.top',
       },
+      {
+        address: 'http://sge.rpc.t.stavr.tech:1147',
+        provider: '🔥STAVR🔥',
+      },
     ],
     rest: [
       {
@@ -108,6 +117,10 @@ export const sgetestnet: Chain = {
         address: 'https://saage-testnet-api.polkachu.com/',
         provider: 'Polkachu',
       },
+      {
+        address: 'https://sge.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
     ],
   },
   explorers: [
@@ -116,6 +129,13 @@ export const sgetestnet: Chain = {
       url: 'https://blockexplorer.testnet.sgenetwork.io/',
       tx_page:
         'https://blockexplorer.testnet.sgenetwork.io/sge-network/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Sge-Testnet',
+      tx_page: 'https://explorer.stavr.tech/Sge-Testnet/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Sge-Testnet/account/${accountAddress}',
     },
   ],
   images: [

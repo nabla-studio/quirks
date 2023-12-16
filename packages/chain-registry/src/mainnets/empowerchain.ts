@@ -92,6 +92,11 @@ export const empowerchain: Chain = {
         provider: 'Indonode',
       },
       {
+        id: '192d6c396fe0f9da1b1b700aab8bdd1ce6a49490',
+        address: 'empw-m.peers.stavr.tech:22056',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: 'a5ce71892959a23ed941cb0167f28959b6694ea3',
         address: 'rpc-empower.vinjan.xyz:24656',
         provider: 'vinjan',
@@ -100,6 +105,11 @@ export const empowerchain: Chain = {
         id: '60b046f36fe485fb40cb8ece99e14244141de3cc',
         address: 'mainnet-empower.konsortech.xyz:27656',
         provider: 'KonsorTech',
+      },
+      {
+        id: 'f7eb23352efa7aba7ba9aa56fe034ede139deab3',
+        address: 'empower.peer.stakevillage.net:16856',
+        provider: 'Stake Village',
       },
     ],
   },
@@ -118,16 +128,16 @@ export const empowerchain: Chain = {
         provider: 'LiveRaveN',
       },
       {
+        address: 'http://empw.rpc.m.stavr.tech:22057',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://rpc-empower.whispernode.com:443',
         provider: 'WhisperNode🤐',
       },
       {
         address: 'https://rpc-empowerchain.mzonder.com:443',
         provider: 'MZONDER',
-      },
-      {
-        address: 'https://rpc.empower.indonode.net:443',
-        provider: 'Indonode',
       },
       {
         address: 'https://empower-rpc.w3coins.io',
@@ -145,6 +155,10 @@ export const empowerchain: Chain = {
         address: 'https://mainnet-empower-rpc.konsortech.xyz',
         provider: 'KonsorTech',
       },
+      {
+        address: 'https://empower.rpc.stakevillage.net:443',
+        provider: 'Stake Village',
+      },
     ],
     rest: [
       {
@@ -160,20 +174,16 @@ export const empowerchain: Chain = {
         provider: 'LiveRaveN',
       },
       {
+        address: 'https://empw.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://empower-api.w3coins.io',
         provider: 'w3coins',
       },
       {
         address: 'https://lcd-empower.whispernode.com:443',
         provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://api-empowerchain.mzonder.com:443',
-        provider: 'MZONDER',
-      },
-      {
-        address: 'https://api.empower.indonode.net:443',
-        provider: 'Indonode',
       },
       {
         address: 'https://api-empower.vinjan.xyz:443',
@@ -186,6 +196,10 @@ export const empowerchain: Chain = {
       {
         address: 'https://mainnet-empower-api.konsortech.xyz',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'https://empower.api.stakevillage.net',
+        provider: 'Stake Village',
       },
     ],
     grpc: [
@@ -206,6 +220,10 @@ export const empowerchain: Chain = {
         provider: 'MZONDER',
       },
       {
+        address: 'http://empw.grpc.m.stavr.tech:9141',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'grpc-empower.vinjan.xyz',
         provider: 'vinjan',
       },
@@ -213,15 +231,33 @@ export const empowerchain: Chain = {
         address: 'https://grpc.empower.nodestake.top:443',
         provider: 'NodeStake',
       },
+      {
+        address: 'empower.grpc.stakevillage.net:16890',
+        provider: 'Stake Village',
+      },
     ],
   },
   explorers: [
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Empower-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Empower-Mainnet/txs/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Empower-Mainnet/account/${accountAddress}',
+    },
     {
       kind: 'NodeStake Explorer',
       url: 'https://explorer.nodestake.top/empower',
       tx_page: 'https://explorer.nodestake.top/empower/tx/${txHash}',
       account_page:
         'https://explorer.nodestake.top/empower/account/{$accountAddress}',
+    },
+    {
+      kind: 'Stake Village',
+      url: 'https://exp.stakevillage.net/empower',
+      tx_page: 'https://exp.stakevillage.net/empower/tx/${txHash}',
+      account_page:
+        'https://exp.stakevillage.net/empower/account/${accountAddress}',
     },
   ],
 };

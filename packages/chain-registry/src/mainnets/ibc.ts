@@ -4,6 +4,28 @@ export const mainnetIbc: IbcData[] = [
   {
     $schema: '../ibc_data.schema.json',
     chain_1: {
+      chain_name: 'terra',
+      client_id: '07-tendermint-235',
+      connection_id: 'connection-142',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-394',
+      connection_id: 'connection-384',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-85', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-314', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
       chain_name: 'stride',
       client_id: '07-tendermint-32',
       connection_id: 'connection-20',
@@ -947,6 +969,28 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'osmosis',
+      client_id: '07-tendermint-3035',
+      connection_id: 'connection-2524',
+    },
+    chain_2: {
+      chain_name: 'source',
+      client_id: '07-tendermint-0',
+      connection_id: 'connection-0',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-8945', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-0', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'osmosis',
       client_id: '07-tendermint-1745',
       connection_id: 'connection-1348',
     },
@@ -1231,6 +1275,28 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'osmosis',
+      client_id: '07-tendermint-6',
+      connection_id: 'connection-7',
+    },
+    chain_2: {
+      chain_name: 'qwoyn',
+      client_id: '07-tendermint-1',
+      connection_id: 'connection-0',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-880', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-0', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'osmosis',
       client_id: '07-tendermint-2400',
       connection_id: 'connection-1889',
     },
@@ -1494,6 +1560,28 @@ export const mainnetIbc: IbcData[] = [
   {
     $schema: '../ibc_data.schema.json',
     chain_1: {
+      chain_name: 'nomic',
+      client_id: '07-tendermint-1',
+      connection_id: 'connection-1',
+    },
+    chain_2: {
+      chain_name: 'osmosis',
+      client_id: '07-tendermint-3010',
+      connection_id: 'connection-2501',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-1', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-6897', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
       chain_name: 'nolus',
       client_id: '07-tendermint-0',
       connection_id: 'connection-0',
@@ -1538,19 +1626,41 @@ export const mainnetIbc: IbcData[] = [
   {
     $schema: '../ibc_data.schema.json',
     chain_1: {
-      chain_name: 'noble',
-      client_id: '07-tendermint-14',
-      connection_id: 'connection-23',
+      chain_name: 'nois',
+      client_id: '07-tendermint-16',
+      connection_id: 'connection-10',
     },
     chain_2: {
-      chain_name: 'terra2',
-      client_id: '07-tendermint-216',
-      connection_id: 'connection-170',
+      chain_name: 'osmosis',
+      client_id: '07-tendermint-3017',
+      connection_id: 'connection-2507',
     },
     channels: [
       {
-        chain_1: { channel_id: 'channel-9', port_id: 'transfer' },
-        chain_2: { channel_id: 'channel-151', port_id: 'transfer' },
+        chain_1: { channel_id: 'channel-37', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-8277', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'noble',
+      client_id: '07-tendermint-56',
+      connection_id: 'connection-54',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-367',
+      connection_id: 'connection-302',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-30', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-253', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -1627,18 +1737,18 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'noble',
-      client_id: '07-tendermint-37',
-      connection_id: 'connection-41',
+      client_id: '07-tendermint-61',
+      connection_id: 'connection-59',
     },
     chain_2: {
       chain_name: 'persistence',
-      client_id: '07-tendermint-154',
-      connection_id: 'connection-192',
+      client_id: '07-tendermint-160',
+      connection_id: 'connection-198',
     },
     channels: [
       {
-        chain_1: { channel_id: 'channel-22', port_id: 'transfer' },
-        chain_2: { channel_id: 'channel-128', port_id: 'transfer' },
+        chain_1: { channel_id: 'channel-36', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-132', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -1670,6 +1780,28 @@ export const mainnetIbc: IbcData[] = [
   {
     $schema: '../ibc_data.schema.json',
     chain_1: {
+      chain_name: 'noble',
+      client_id: '07-tendermint-68',
+      connection_id: 'connection-65',
+    },
+    chain_2: {
+      chain_name: 'omniflixhub',
+      client_id: '07-tendermint-51',
+      connection_id: 'connection-49',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-44', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-38', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
       chain_name: 'neutron',
       client_id: '07-tendermint-12',
       connection_id: 'connection-9',
@@ -1680,6 +1812,13 @@ export const mainnetIbc: IbcData[] = [
       connection_id: 'connection-192',
     },
     channels: [
+      {
+        chain_1: { channel_id: 'channel-25', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-229', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
       {
         chain_1: { channel_id: 'channel-5', port_id: 'transfer' },
         chain_2: {
@@ -1778,8 +1917,30 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'neutron',
-      client_id: '07-tendermint-18',
-      connection_id: 'connection-7',
+      client_id: '07-tendermint-73',
+      connection_id: 'connection-52',
+    },
+    chain_2: {
+      chain_name: 'persistence',
+      client_id: '07-tendermint-161',
+      connection_id: 'connection-199',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-49', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-136', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'neutron',
+      client_id: '07-tendermint-19',
+      connection_id: 'connection-18',
     },
     chain_2: {
       chain_name: 'osmosis',
@@ -1790,6 +1951,50 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-10', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-874', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'neutron',
+      client_id: '07-tendermint-64',
+      connection_id: 'connection-44',
+    },
+    chain_2: {
+      chain_name: 'nomic',
+      client_id: '07-tendermint-3',
+      connection_id: 'connection-3',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-42', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-2', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'neutron',
+      client_id: '07-tendermint-71',
+      connection_id: 'connection-50',
+    },
+    chain_2: {
+      chain_name: 'nolus',
+      client_id: '07-tendermint-13',
+      connection_id: 'connection-11',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-44', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-3839', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -2195,8 +2400,30 @@ export const mainnetIbc: IbcData[] = [
     },
     channels: [
       {
-        chain_1: { channel_id: 'channel-10', port_id: 'transfer' },
-        chain_2: { channel_id: 'channel-5', port_id: 'transfer' },
+        chain_1: { channel_id: 'channel-5', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-10', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'kujira',
+      client_id: '07-tendermint-132',
+      connection_id: 'connection-100',
+    },
+    chain_2: {
+      chain_name: 'teritori',
+      client_id: '07-tendermint-61',
+      connection_id: 'connection-38',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-89', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-30', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -2222,6 +2449,28 @@ export const mainnetIbc: IbcData[] = [
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'kujira',
+      client_id: '07-tendermint-9',
+      connection_id: 'connection-5',
+    },
+    chain_2: {
+      chain_name: 'stargaze',
+      client_id: '07-tendermint-178',
+      connection_id: 'connection-111',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-7', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-49', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true, dex: 'osmosis' },
       },
     ],
   },
@@ -2400,6 +2649,28 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'kujira',
+      client_id: '07-tendermint-156',
+      connection_id: 'connection-120',
+    },
+    chain_2: {
+      chain_name: 'nomic',
+      client_id: '07-tendermint-0',
+      connection_id: 'connection-0',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-116', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-0', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'kujira',
       client_id: '07-tendermint-95',
       connection_id: 'connection-65',
     },
@@ -2543,6 +2814,50 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'kava',
+      client_id: '07-tendermint-124',
+      connection_id: 'connection-160',
+    },
+    chain_2: {
+      chain_name: 'umee',
+      client_id: '07-tendermint-229',
+      connection_id: 'connection-191',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-119', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-98', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'kava',
+      client_id: '07-tendermint-156',
+      connection_id: 'connection-196',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-386',
+      connection_id: 'connection-362',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-138', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-272', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'kava',
       client_id: '07-tendermint-146',
       connection_id: 'connection-181',
     },
@@ -2555,6 +2870,28 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-132', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-18', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'kava',
+      client_id: '07-tendermint-148',
+      connection_id: 'connection-189',
+    },
+    chain_2: {
+      chain_name: 'persistence',
+      client_id: '07-tendermint-156',
+      connection_id: 'connection-195',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-134', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-129', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -2599,6 +2936,28 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-116', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-95', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'juno',
+      client_id: '07-tendermint-185',
+      connection_id: 'connection-128',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-3',
+      connection_id: 'connection-6',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-86', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-2', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -3240,6 +3599,28 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'injective',
+      client_id: '07-tendermint-216',
+      connection_id: 'connection-202',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-369',
+      connection_id: 'connection-311',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-151', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-255', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'injective',
       client_id: '07-tendermint-131',
       connection_id: 'connection-103',
     },
@@ -3420,6 +3801,28 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-102', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-3', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'injective',
+      client_id: '07-tendermint-144',
+      connection_id: 'connection-116',
+    },
+    chain_2: {
+      chain_name: 'kujira',
+      client_id: '07-tendermint-77',
+      connection_id: 'connection-53',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-98', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-54', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -3760,6 +4163,28 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'fxcore',
+      client_id: '07-tendermint-0',
+      connection_id: 'connection-0',
+    },
+    chain_2: {
+      chain_name: 'pundix',
+      client_id: '07-tendermint-0',
+      connection_id: 'connection-0',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-0', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-0', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'fxcore',
       client_id: '07-tendermint-23',
       connection_id: 'connection-22',
     },
@@ -3775,6 +4200,94 @@ export const mainnetIbc: IbcData[] = [
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'furya',
+      client_id: '07-tendermint-2',
+      connection_id: 'connection-1',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-385',
+      connection_id: 'connection-361',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-1', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-271', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'furya',
+      client_id: '07-tendermint-4',
+      connection_id: 'connection-3',
+    },
+    chain_2: {
+      chain_name: 'osmosis',
+      client_id: '07-tendermint-3029',
+      connection_id: 'connection-2515',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-3', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-8690', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'furya',
+      client_id: '07-tendermint-1',
+      connection_id: 'connection-0',
+    },
+    chain_2: {
+      chain_name: 'kujira',
+      client_id: '07-tendermint-160',
+      connection_id: 'connection-123',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-0', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-119', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'furya',
+      client_id: '07-tendermint-3',
+      connection_id: 'connection-2',
+    },
+    chain_2: {
+      chain_name: 'juno',
+      client_id: '07-tendermint-501',
+      connection_id: 'connection-505',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-2', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-417', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
       },
     ],
   },
@@ -4155,6 +4668,160 @@ export const mainnetIbc: IbcData[] = [
   {
     $schema: '../ibc_data.schema.json',
     chain_1: {
+      chain_name: 'dydx',
+      client_id: '07-tendermint-9',
+      connection_id: 'connection-14',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-390',
+      connection_id: 'connection-380',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-9', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-299', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'dydx',
+      client_id: '07-tendermint-1',
+      connection_id: 'connection-1',
+    },
+    chain_2: {
+      chain_name: 'stride',
+      client_id: '07-tendermint-133',
+      connection_id: 'connection-123',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-1', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-160', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'dydx',
+      client_id: '07-tendermint-4',
+      connection_id: 'connection-8',
+    },
+    chain_2: {
+      chain_name: 'persistence',
+      client_id: '07-tendermint-159',
+      connection_id: 'connection-197',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-4', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-131', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'dydx',
+      client_id: '07-tendermint-3',
+      connection_id: 'connection-7',
+    },
+    chain_2: {
+      chain_name: 'osmosis',
+      client_id: '07-tendermint-3009',
+      connection_id: 'connection-2500',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-3', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-6787', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'dydx',
+      client_id: '07-tendermint-0',
+      connection_id: 'connection-0',
+    },
+    chain_2: {
+      chain_name: 'noble',
+      client_id: '07-tendermint-59',
+      connection_id: 'connection-57',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-0', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-33', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'dydx',
+      client_id: '07-tendermint-11',
+      connection_id: 'connection-17',
+    },
+    chain_2: {
+      chain_name: 'neutron',
+      client_id: '07-tendermint-72',
+      connection_id: 'connection-51',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-11', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-48', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'dydx',
+      client_id: '07-tendermint-5',
+      connection_id: 'connection-9',
+    },
+    chain_2: {
+      chain_name: 'kujira',
+      client_id: '07-tendermint-158',
+      connection_id: 'connection-122',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-5', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-118', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
       chain_name: 'doravota',
       client_id: '07-tendermint-0',
       connection_id: 'connection-1',
@@ -4237,6 +4904,28 @@ export const mainnetIbc: IbcData[] = [
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'decentr',
+      client_id: '07-tendermint-26',
+      connection_id: 'connection-10',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-395',
+      connection_id: 'connection-385',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-9', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-315', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
       },
     ],
   },
@@ -4943,6 +5632,50 @@ export const mainnetIbc: IbcData[] = [
         ordering: 'unordered',
         version: 'ics20-1',
         tags: {},
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'cosmoshub',
+      client_id: '07-tendermint-760',
+      connection_id: 'connection-551',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-0',
+      connection_id: 'connection-1',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-339', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-0', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'cosmoshub',
+      client_id: '07-tendermint-962',
+      connection_id: 'connection-1710',
+    },
+    chain_2: {
+      chain_name: 'teritori',
+      client_id: '07-tendermint-32',
+      connection_id: 'connection-0',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-431', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-10', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
       },
     ],
   },
@@ -5912,6 +6645,28 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'composable',
+      client_id: '07-tendermint-110',
+      connection_id: 'connection-43',
+    },
+    chain_2: {
+      chain_name: 'kujira',
+      client_id: '07-tendermint-147',
+      connection_id: 'connection-112',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-27', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-101', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'composable',
       client_id: '07-tendermint-30',
       connection_id: 'connection-15',
     },
@@ -5990,6 +6745,28 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-11', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-64', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'comdex',
+      client_id: '07-tendermint-117',
+      connection_id: 'connection-56',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-70',
+      connection_id: 'connection-59',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-51', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-39', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -6214,6 +6991,17 @@ export const mainnetIbc: IbcData[] = [
         version: 'ics20-1',
         tags: { status: 'live', preferred: true, dex: 'osmosis' },
       },
+      {
+        chain_1: {
+          channel_id: 'channel-73',
+          port_id:
+            'wasm.chihuahua1jwkag4yvhyj9fuddtkygvavya8hmdjuzmgxwg9vp3lw9twv6lrcq9mgl52',
+        },
+        chain_2: { channel_id: 'channel-11348', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
     ],
   },
   {
@@ -6232,6 +7020,39 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-24', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-5', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'chihuahua',
+      client_id: '07-tendermint-191',
+      connection_id: 'connection-127',
+    },
+    chain_2: {
+      chain_name: 'neutron',
+      client_id: '07-tendermint-74',
+      connection_id: 'connection-53',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-76', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-51', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+      {
+        chain_1: {
+          channel_id: 'channel-77',
+          port_id:
+            'wasm.chihuahua1jwkag4yvhyj9fuddtkygvavya8hmdjuzmgxwg9vp3lw9twv6lrcq9mgl52',
+        },
+        chain_2: { channel_id: 'channel-52', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -6276,6 +7097,28 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-11', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-28', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'cheqd',
+      client_id: '07-tendermint-83',
+      connection_id: 'connection-61',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-392',
+      connection_id: 'connection-382',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-34', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-301', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -6345,6 +7188,160 @@ export const mainnetIbc: IbcData[] = [
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'celestia',
+      client_id: '07-tendermint-53',
+      connection_id: 'connection-16',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-391',
+      connection_id: 'connection-381',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-15', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-300', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'celestia',
+      client_id: '07-tendermint-0',
+      connection_id: 'connection-4',
+    },
+    chain_2: {
+      chain_name: 'stride',
+      client_id: '07-tendermint-137',
+      connection_id: 'connection-125',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-4', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-162', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'celestia',
+      client_id: '07-tendermint-52',
+      connection_id: 'connection-15',
+    },
+    chain_2: {
+      chain_name: 'secretnetwork',
+      client_id: '07-tendermint-174',
+      connection_id: 'connection-131',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-14', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-91', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'celestia',
+      client_id: '07-tendermint-10',
+      connection_id: 'connection-2',
+    },
+    chain_2: {
+      chain_name: 'osmosis',
+      client_id: '07-tendermint-3012',
+      connection_id: 'connection-2503',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-2', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-6994', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'celestia',
+      client_id: '07-tendermint-29',
+      connection_id: 'connection-7',
+    },
+    chain_2: {
+      chain_name: 'neutron',
+      client_id: '07-tendermint-48',
+      connection_id: 'connection-36',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-8', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-35', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'celestia',
+      client_id: '07-tendermint-28',
+      connection_id: 'connection-6',
+    },
+    chain_2: {
+      chain_name: 'injective',
+      client_id: '07-tendermint-226',
+      connection_id: 'connection-210',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-7', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-152', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'celestia',
+      client_id: '07-tendermint-35',
+      connection_id: 'connection-10',
+    },
+    chain_2: {
+      chain_name: 'composable',
+      client_id: '07-tendermint-138',
+      connection_id: 'connection-55',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-12', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-38', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
       },
     ],
   },
@@ -6869,6 +7866,50 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'axelar',
+      client_id: '07-tendermint-64',
+      connection_id: 'connection-43',
+    },
+    chain_2: {
+      chain_name: 'umee',
+      client_id: '07-tendermint-63',
+      connection_id: 'connection-44',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-36', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-33', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'axelar',
+      client_id: '07-tendermint-39',
+      connection_id: 'connection-21',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-7',
+      connection_id: 'connection-10',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-11', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-6', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'axelar',
       client_id: '07-tendermint-93',
       connection_id: 'connection-78',
     },
@@ -7128,6 +8169,28 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'axelar',
+      client_id: '07-tendermint-188',
+      connection_id: 'connection-166',
+    },
+    chain_2: {
+      chain_name: 'fxcore',
+      client_id: '07-tendermint-24',
+      connection_id: 'connection-23',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-128', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-20', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'axelar',
       client_id: '07-tendermint-50',
       connection_id: 'connection-31',
     },
@@ -7194,6 +8257,28 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'axelar',
+      client_id: '07-tendermint-3',
+      connection_id: 'connection-2',
+    },
+    chain_2: {
+      chain_name: 'cosmoshub',
+      client_id: '07-tendermint-622',
+      connection_id: 'connection-481',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-2', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-293', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'axelar',
       client_id: '07-tendermint-179',
       connection_id: 'connection-157',
     },
@@ -7206,6 +8291,72 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-120', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-6', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'axelar',
+      client_id: '07-tendermint-187',
+      connection_id: 'connection-165',
+    },
+    chain_2: {
+      chain_name: 'composable',
+      client_id: '07-tendermint-140',
+      connection_id: 'connection-58',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-127', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-46', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics-20',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'axelar',
+      client_id: '07-tendermint-185',
+      connection_id: 'connection-163',
+    },
+    chain_2: {
+      chain_name: 'celestia',
+      client_id: '07-tendermint-9',
+      connection_id: 'connection-1',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-125', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-1', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'aura',
+      client_id: '07-tendermint-47',
+      connection_id: 'connection-33',
+    },
+    chain_2: {
+      chain_name: 'osmosis',
+      client_id: '07-tendermint-3054',
+      connection_id: 'connection-2551',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-10', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-11304', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -7228,6 +8379,43 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-3', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-16', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+      {
+        chain_1: {
+          channel_id: 'channel-8',
+          port_id:
+            'wasm.aura1r3zgdsn3dcze07a4r60rxxx7ppvkxfshn9np0pwtkgarrld0786s72jtjt',
+        },
+        chain_2: {
+          channel_id: 'channel-35',
+          port_id:
+            'wasm.nois1acyc05v6fgcdgj88nmz2t40aex9nlnptqpwp5hf8hwg7rhce9uuqgqz5wp',
+        },
+        ordering: 'unordered',
+        version: 'nois-v7',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'aura',
+      client_id: '07-tendermint-43',
+      connection_id: 'connection-27',
+    },
+    chain_2: {
+      chain_name: 'noble',
+      client_id: '07-tendermint-66',
+      connection_id: 'connection-63',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-9', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-41', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true },
@@ -7414,18 +8602,84 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'archway',
+      client_id: '07-tendermint-6',
+      connection_id: 'connection-5',
+    },
+    chain_2: {
+      chain_name: 'umee',
+      client_id: '07-tendermint-228',
+      connection_id: 'connection-190',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-4', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-97', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'archway',
+      client_id: '07-tendermint-42',
+      connection_id: 'connection-47',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-384',
+      connection_id: 'connection-360',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-50', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-265', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'archway',
       client_id: '07-tendermint-24',
-      connection_id: 'connection-25',
+      connection_id: 'connection-22',
     },
     chain_2: {
       chain_name: 'secretnetwork',
       client_id: '07-tendermint-169',
-      connection_id: 'connection-122',
+      connection_id: 'connection-119',
     },
     channels: [
       {
         chain_1: { channel_id: 'channel-21', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-84', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'archway',
+      client_id: '07-tendermint-36',
+      connection_id: 'connection-39',
+    },
+    chain_2: {
+      chain_name: 'quicksilver',
+      client_id: '07-tendermint-83',
+      connection_id: 'connection-58',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-34', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-116', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live' },
@@ -7448,6 +8702,28 @@ export const mainnetIbc: IbcData[] = [
       {
         chain_1: { channel_id: 'channel-1', port_id: 'transfer' },
         chain_2: { channel_id: 'channel-1429', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'archway',
+      client_id: '07-tendermint-39',
+      connection_id: 'connection-42',
+    },
+    chain_2: {
+      chain_name: 'omniflixhub',
+      client_id: '07-tendermint-49',
+      connection_id: 'connection-43',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-37', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-32', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live' },
@@ -7517,6 +8793,28 @@ export const mainnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'archway',
+      client_id: '07-tendermint-51',
+      connection_id: 'connection-58',
+    },
+    chain_2: {
+      chain_name: 'neutron',
+      client_id: '07-tendermint-62',
+      connection_id: 'connection-43',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-61', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-41', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'archway',
       client_id: '07-tendermint-12',
       connection_id: 'connection-12',
     },
@@ -7558,21 +8856,65 @@ export const mainnetIbc: IbcData[] = [
     ],
   },
   {
-    $schema: '../ibc_data_schema.json',
+    $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'archway',
-      client_id: '07-tendermint-5',
-      connection_id: 'connection-4',
+      client_id: '07-tendermint-17',
+      connection_id: 'connection-18',
     },
     chain_2: {
       chain_name: 'jackal',
-      client_id: '07-tendermint-59',
-      connection_id: 'connection-49',
+      client_id: '07-tendermint-61',
+      connection_id: 'connection-50',
     },
     channels: [
       {
-        chain_1: { channel_id: 'channel-3', port_id: 'transfer' },
-        chain_2: { channel_id: 'channel-40', port_id: 'transfer' },
+        chain_1: { channel_id: 'channel-14', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-41', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'archway',
+      client_id: '07-tendermint-40',
+      connection_id: 'connection-43',
+    },
+    chain_2: {
+      chain_name: 'gravitybridge',
+      client_id: '07-tendermint-424',
+      connection_id: 'connection-406',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-38', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-145', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'archway',
+      client_id: '07-tendermint-38',
+      connection_id: 'connection-41',
+    },
+    chain_2: {
+      chain_name: 'decentr',
+      client_id: '07-tendermint-21',
+      connection_id: 'connection-8',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-36', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-7', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live' },
@@ -7642,6 +8984,28 @@ export const mainnetIbc: IbcData[] = [
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live' },
+      },
+    ],
+  },
+  {
+    $schema: '../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'akash',
+      client_id: '07-tendermint-173',
+      connection_id: 'connection-159',
+    },
+    chain_2: {
+      chain_name: 'terra2',
+      client_id: '07-tendermint-387',
+      connection_id: 'connection-364',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-116', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-273', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
       },
     ],
   },
@@ -8256,7 +9620,7 @@ export const mainnetIbc: IbcData[] = [
         chain_2: { channel_id: 'channel-20', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
-        tags: { status: 'live', preferred: true },
+        tags: { status: 'live' },
       },
     ],
   },

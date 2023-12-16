@@ -37,9 +37,9 @@ export const persistence: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/persistenceOne/persistenceCore',
-    recommended_version: 'v9.2.1',
-    compatible_versions: ['v9.2.1'],
-    cosmos_sdk_version: 'v0.47.3-lsm',
+    recommended_version: 'v10.0.0',
+    compatible_versions: ['v10.0.0'],
+    cosmos_sdk_version: 'v0.47.3-lsm5',
     ibc_go_version: 'v7.2.0-lsm3',
     ics_enabled: ['ics20-1', 'ics27-1'],
     consensus: {
@@ -51,7 +51,7 @@ export const persistence: Chain = {
     cosmwasm_path: '$HOME/.persistenceCore/wasm',
     binaries: {
       'linux/amd64':
-        'https://github.com/persistenceOne/persistenceCore/releases/download/v9.2.1/persistenceCore-v9.2.1-linux-amd64.tar.gz',
+        'https://github.com/persistenceOne/persistenceCore/releases/download/v10.0.0/persistenceCore-v10.0.0-linux-amd64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -103,6 +103,29 @@ export const persistence: Chain = {
           'linux/amd64':
             'https://github.com/persistenceOne/persistenceCore/releases/download/v9.2.1/persistenceCore-v9.2.1-linux-amd64.tar.gz',
         },
+        next_version_name: 'v10',
+      },
+      {
+        name: 'v10',
+        tag: 'v10.0.0',
+        height: 13870350,
+        proposal: 55,
+        recommended_version: 'v10.0.0',
+        compatible_versions: ['v10.0.0'],
+        cosmos_sdk_version: 'v0.47.3-lsm',
+        ibc_go_version: 'v7.2.0-lsm3',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'v0.47.3-lsm5',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.persistenceCore/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/persistenceOne/persistenceCore/releases/download/v10.0.0/persistenceCore-v10.0.0-linux-amd64.tar.gz',
+        },
         next_version_name: '',
       },
     ],
@@ -111,6 +134,8 @@ export const persistence: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/xprt.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/xprt.svg',
   },
+  description:
+    'Persistence is an app chain for Liquid Staking powering an ecosystem of DeFi applications focused on unlocking the liquidity of staked assets.',
   peers: {
     seeds: [
       {
@@ -128,14 +153,9 @@ export const persistence: Chain = {
         provider: 'Polkachu',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'persistence-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'persistence-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'ce9dc9467af943bf35f17f04cfcdf3895914d867',
@@ -222,20 +242,12 @@ export const persistence: Chain = {
         provider: 'POSTHUMAN∞DVS',
       },
       {
-        address: 'http://141.95.33.97:21657/websocket',
-        provider: 'Stakewolle.com | Auto-compound',
-      },
-      {
         address: 'https://rpc-persistence-01.stakeflow.io',
         provider: 'Stakeflow',
       },
       {
-        address: 'https://persistence-rpc.w3coins.io',
-        provider: 'w3coins',
-      },
-      {
-        address: 'https://persistence-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://persistence-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://persistence-rpc.highstakes.ch:26657/',
@@ -250,10 +262,6 @@ export const persistence: Chain = {
       {
         address: 'https://api-persistent-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
-      },
-      {
-        address: 'https://api-persistence.starsquid.io',
-        provider: 'Starsquid',
       },
       {
         address: 'https://persistence-api.polkachu.com',
@@ -296,20 +304,12 @@ export const persistence: Chain = {
         provider: 'POSTHUMAN∞DVS',
       },
       {
-        address: 'http://141.95.33.97:1317',
-        provider: 'Stakewolle.com | Auto-compound',
-      },
-      {
         address: 'https://api-persistence-01.stakeflow.io',
         provider: 'Stakeflow',
       },
       {
-        address: 'https://persistence-api.w3coins.io',
-        provider: 'w3coins',
-      },
-      {
         address: 'https://persistence-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://persistence-api.highstakes.ch:1317/',
@@ -355,7 +355,7 @@ export const persistence: Chain = {
       },
       {
         address: 'persistence-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -524,8 +524,228 @@ export const persistenceAssetList: AssetLists = {
       keywords: ['canon'],
       images: [
         {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xfB5c6815cA3AC72Ce9F5006869AE67f18bF77006',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/pstake.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/pstake.svg',
+        },
+      ],
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/C8A74ABBE2AF892E15680D916A7C22130585CE5704F9B17A10F184A90D53BECA',
+          exponent: 0,
+          aliases: ['uatom'],
+        },
+        {
+          denom: 'atom',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/C8A74ABBE2AF892E15680D916A7C22130585CE5704F9B17A10F184A90D53BECA',
+      name: 'Cosmos Hub Atom',
+      display: 'atom',
+      symbol: 'ATOM',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+            channel_id: 'channel-190',
+          },
+          chain: {
+            channel_id: 'channel-24',
+            path: 'transfer/channel-24/uatom',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+      },
+    },
+    {
+      description: 'Tether USDT on Persistence',
+      denom_units: [
+        {
+          denom:
+            'ibc/C559977F5797BDC1D74C0836A10C379C991D664166CB60D776A83029852431B4',
+          exponent: 0,
+        },
+        {
+          denom: 'usdt',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/C559977F5797BDC1D74C0836A10C379C991D664166CB60D776A83029852431B4',
+      name: 'Tether USDT',
+      display: 'usdt',
+      symbol: 'USDT',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'kava',
+            base_denom: 'erc20/tether/usdt',
+            channel_id: 'channel-134',
+          },
+          chain: {
+            channel_id: 'channel-129',
+            path: 'transfer/channel-129/erc20/tether/usdt',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'kava',
+            base_denom: 'erc20/tether/usdt',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/B3792E4A62DF4A934EF2DF5968556DB56F5776ED25BDE11188A4F58A7DD406F0',
+          exponent: 0,
+          aliases: ['uusdc'],
+        },
+        {
+          denom: 'usdc',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/B3792E4A62DF4A934EF2DF5968556DB56F5776ED25BDE11188A4F58A7DD406F0',
+      name: 'Noble USD Coin',
+      display: 'usdc',
+      symbol: 'USDC',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'noble',
+            base_denom: 'uusdc',
+            channel_id: 'channel-36',
+          },
+          chain: {
+            channel_id: 'channel-132',
+            path: 'transfer/channel-132/uusdc',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'noble',
+            base_denom: 'uusdc',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+      },
+    },
+    {
+      description: 'dydx staking token',
+      denom_units: [
+        {
+          denom:
+            'ibc/23DC3FF0E4CBB53A1915E4C62507CB7796956E84C68CA49707787CB8BDE90A1E',
+          exponent: 0,
+          aliases: ['adydx'],
+        },
+        {
+          denom: 'dydx',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/23DC3FF0E4CBB53A1915E4C62507CB7796956E84C68CA49707787CB8BDE90A1E',
+      name: 'dYdX',
+      display: 'dydx',
+      symbol: 'DYDX',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'dydx',
+            base_denom: 'adydx',
+            channel_id: 'channel-4',
+          },
+          chain: {
+            channel_id: 'channel-131',
+            path: 'transfer/channel-131/adydx',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'dydx',
+            base_denom: 'adydx',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg',
+      },
+    },
+    {
+      description: 'PSTAKE Liquid-Staked OSMO',
+      denom_units: [
+        {
+          denom: 'stk/uosmo',
+          exponent: 0,
+          aliases: [],
+        },
+        {
+          denom: 'stkosmo',
+          exponent: 6,
+          aliases: ['stk/osmo'],
+        },
+      ],
+      base: 'stk/uosmo',
+      name: 'PSTAKE staked OSMO',
+      display: 'stkosmo',
+      symbol: 'stkOSMO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.svg',
         },
       ],
     },

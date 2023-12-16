@@ -7,7 +7,7 @@ export const nobletestnet: Chain = {
   website: 'https://nobleassets.xyz/',
   pretty_name: 'Noble',
   status: 'live',
-  network_type: 'mainnet',
+  network_type: 'testnet',
   bech32_prefix: 'noble',
   daemon_name: 'nobled',
   node_home: '$HOME/.nobled',
@@ -185,7 +185,7 @@ export const nobletestnet: Chain = {
 };
 
 export const nobletestnetAssetList: AssetLists = {
-  $schema: '../assetlist.schema.json',
+  $schema: '../../assetlist.schema.json',
   chain_name: 'nobletestnet',
   assets: [
     {
@@ -258,6 +258,45 @@ export const nobletestnetAssetList: AssetLists = {
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.',
+      denom_units: [
+        {
+          denom: 'uusdlr',
+          exponent: 0,
+          aliases: ['microusdlr'],
+        },
+        {
+          denom: 'usdlr',
+          exponent: 6,
+        },
+      ],
+      base: 'uusdlr',
+      display: 'usdlr',
+      name: 'USDLR by Stable',
+      symbol: 'USDLR',
+      traces: [
+        {
+          type: 'test-mintage',
+          counterparty: {
+            chain_name: 'noble',
+            base_denom: 'uusdlr',
+          },
+          provider: 'Stable',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg',
         },
       ],
     },

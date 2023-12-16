@@ -7,6 +7,7 @@ export const seitestnet: Chain = {
   pretty_name: 'Sei Atlantic',
   status: 'live',
   network_type: 'testnet',
+  website: 'https://www.sei.io/',
   bech32_prefix: 'sei',
   daemon_name: 'seid',
   node_home: '$HOME/.sei',
@@ -36,6 +37,12 @@ export const seitestnet: Chain = {
       },
     ],
   },
+  logo_URIs: {
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/sei.png',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/sei.svg',
+  },
+  description:
+    'Sei is the fastest Layer 1 blockchain, designed to scale with the industry.',
   peers: {
     seeds: [
       {
@@ -69,6 +76,12 @@ export const seitestnet: Chain = {
       kind: 'Brochain',
       url: 'https://testnet-explorer.brocha.in/sei',
       tx_page: 'https://testnet-explorer.brocha.in/sei/tx/${txHash}',
+    },
+  ],
+  images: [
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/sei.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/sei.svg',
     },
   ],
 };

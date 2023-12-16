@@ -30,17 +30,23 @@ export const starname: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/iov-one/starnamed',
-    recommended_version: 'v0.10.18',
-    compatible_versions: ['v0.10.17', 'v0.10.18'],
+    recommended_version: 'v0.11.7',
+    compatible_versions: ['v0.11.7'],
     genesis: {
       genesis_url:
         'https://gist.githubusercontent.com/davepuchyr/6bea7bf369064d118195e9b15ea08a0f/raw/genesis.json',
     },
     versions: [
       {
-        name: 'v0.10.18',
+        name: 'v0.10',
         recommended_version: 'v0.10.18',
         compatible_versions: ['v0.10.17', 'v0.10.18'],
+        next_version_name: 'v0.11',
+      },
+      {
+        name: 'v0.11',
+        recommended_version: 'v0.11.7',
+        compatible_versions: ['v0.11.7'],
       },
     ],
   },
@@ -48,11 +54,17 @@ export const starname: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/starname/images/iov.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/starname/images/iov.svg',
   },
+  description:
+    'Starname is the best way to claim your part of the blockchain. You can use it for decentralized identification, payments, ownership and applications. Starname can be integrated into digital wallets, dapps and exchanges.',
   peers: {
     persistent_peers: [
       {
         id: '9aabe0ac122f3104d8fc098e19c66714c6f1ace9',
         address: '3.37.140.5:26656',
+      },
+      {
+        id: '68d03f2594a4d7ae2aa9d27f208dbea4de77b048',
+        address: '34.65.26.71:26656',
       },
     ],
   },
@@ -63,16 +75,12 @@ export const starname: Chain = {
         provider: 'Starname',
       },
       {
-        address: 'https://rpc-iov.keplr.app',
-        provider: 'chainapsis',
-      },
-      {
         address: 'https://rpc-starname-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
       },
       {
-        address: 'https://starname.nodejumper.io',
-        provider: 'NODEJUMPER',
+        address: 'https://rpc.starname.cosmos.iov.one',
+        provider: 'starname.me',
       },
     ],
     rest: [
@@ -81,16 +89,12 @@ export const starname: Chain = {
         provider: 'Starname',
       },
       {
-        address: 'https://lcd-iov.keplr.app',
-        provider: 'chainapsis',
-      },
-      {
         address: 'https://api-starname-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
       },
       {
-        address: 'https://starname.nodejumper.io:1317',
-        provider: 'NODEJUMPER',
+        address: 'https://api.starname.cosmos.iov.one',
+        provider: 'starname.me',
       },
     ],
     grpc: [
@@ -98,20 +102,9 @@ export const starname: Chain = {
         address: 'grpc-starname-ia.cosmosia.notional.ventures:443',
         provider: 'starname',
       },
-      {
-        address: 'starname.nodejumper.io:9090',
-        provider: 'NODEJUMPER',
-      },
     ],
   },
   explorers: [
-    {
-      kind: 'mintscan',
-      url: 'https://www.mintscan.io/starname',
-      tx_page: 'https://www.mintscan.io/starname/transactions/${txHash}',
-      account_page:
-        'https://www.mintscan.io/starname/accounts/${accountAddress}',
-    },
     {
       kind: 'ping.pub',
       url: 'https://ping.pub/starname',

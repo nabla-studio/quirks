@@ -18,6 +18,9 @@ export const persistencetestnet: Chain = {
       {
         denom: 'uxprt',
         fixed_min_gas_price: 0,
+        low_gas_price: 0.05,
+        average_gas_price: 0.125,
+        high_gas_price: 0.2,
       },
     ],
   },

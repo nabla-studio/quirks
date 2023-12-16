@@ -18,6 +18,9 @@ export const rebus: Chain = {
       {
         denom: 'arebus',
         fixed_min_gas_price: 0,
+        low_gas_price: 0.01,
+        average_gas_price: 0.025,
+        high_gas_price: 0.04,
       },
     ],
   },
@@ -93,14 +96,9 @@ export const rebus: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'rebus-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'rebus-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -113,6 +111,11 @@ export const rebus: Chain = {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'rebus-mainnet-peer.autostake.com:26906',
         provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
+        id: '9c7c067bd73bddfe8da39087cdae37c4fc5ec6e3',
+        address: '5.9.69.107:26656',
+        provider: '[NODERS]TEAM',
       },
     ],
   },
@@ -131,6 +134,10 @@ export const rebus: Chain = {
         provider: 'MantiCore',
       },
       {
+        address: 'http://rebus.statesync.nodersteam.com:18657',
+        provider: '[NODERS]TEAM',
+      },
+      {
         address: 'https://rpc.rebus.nodestake.top/',
         provider: 'NodeStake',
       },
@@ -147,28 +154,12 @@ export const rebus: Chain = {
         provider: 'Rebuschain',
       },
       {
-        address: 'https://rpc-rebus.d-stake.xyz',
-        provider: 'D-stake',
-      },
-      {
         address: 'https://rebus-rpc.brocha.in',
         provider: 'Brochain',
       },
       {
-        address: 'https://rebus.nodejumper.io',
-        provider: 'NODEJUMPER',
-      },
-      {
-        address: 'https://rpc.rebus.bh.rocks',
-        provider: 'BlockHunters 🎯',
-      },
-      {
         address: 'https://rebus-rpc.kleomedes.network',
         provider: 'Kleomedes',
-      },
-      {
-        address: 'https://rpc-rebus.huginn.tech',
-        provider: 'Huginn',
       },
       {
         address: 'https://rebus-mainnet-rpc.autostake.com:443',
@@ -179,12 +170,8 @@ export const rebus: Chain = {
         provider: 'LiveRaveN',
       },
       {
-        address: 'https://rpc.rebus.safeblock.space',
-        provider: 'Safe Block',
-      },
-      {
-        address: 'https://rebus-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://rebus-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
@@ -193,8 +180,8 @@ export const rebus: Chain = {
         provider: 'Rebuschain',
       },
       {
-        address: 'https://rebus.api.bccnodes.com:443',
-        provider: 'BccNodes',
+        address: 'http://rebus.api.nodersteam.com:18017',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://rebus.api.manticore.team:443/',
@@ -217,16 +204,8 @@ export const rebus: Chain = {
         provider: 'Rebuschain',
       },
       {
-        address: 'https://api-rebus.d-stake.xyz',
-        provider: 'D-stake',
-      },
-      {
         address: 'https://rebus-rest.brocha.in',
         provider: 'Brochain',
-      },
-      {
-        address: 'https://rebus.nodejumper.io:1317',
-        provider: 'NODEJUMPER',
       },
       {
         address: 'https://rebus-api.kleomedes.network',
@@ -241,12 +220,8 @@ export const rebus: Chain = {
         provider: 'LiveRaveN',
       },
       {
-        address: 'https://api.rebus.safeblock.space',
-        provider: 'Safe Block',
-      },
-      {
         address: 'https://rebus-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -263,8 +238,8 @@ export const rebus: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'rebus.nodejumper.io:9090',
-        provider: 'NODEJUMPER',
+        address: 'rebus.grpc.nodersteam.com:9181',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'http://rebus.grpc.m.stavr.tech:3211',
@@ -284,7 +259,7 @@ export const rebus: Chain = {
       },
       {
         address: 'rebus-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

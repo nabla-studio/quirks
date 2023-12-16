@@ -16,7 +16,14 @@ export const terpnettestnet: Chain = {
     fee_tokens: [
       {
         denom: 'uthiolx',
-        fixed_min_gas_price: 0.075,
+        fixed_min_gas_price: 0.5,
+        low_gas_price: 0.75,
+        average_gas_price: 1,
+        high_gas_price: 1.25,
+      },
+      {
+        denom: 'uterpx',
+        fixed_min_gas_price: 0.05,
         low_gas_price: 0.075,
         average_gas_price: 0.1,
         high_gas_price: 0.125,
@@ -33,32 +40,39 @@ export const terpnettestnet: Chain = {
 
   codebase: {
     git_repo: 'github.com/terpnetwork/terp-core.git',
-    recommended_version: 'v2.0.0',
+    recommended_version: 'v3-pigeonfall',
     consensus: {
       type: 'cometbft',
       version: 'v0.37.2',
     },
-    compatible_versions: ['v2.0.0'],
+    compatible_versions: ['v3-pigeonfall'],
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/terpnetwork/test-net/master/90u-2/genesis.json',
     },
     binaries: {
       'linux/amd64':
-        'https://github.com/terpnetwork/terp-core/releases/download/v2.0.0/terpd-v2.0.0-linux-amd64',
+        'https://github.com/terpnetwork/terp-core/releases/download/v3-pigeonfall/terpd-v3-pigeonfall-amd64',
+      'linux/arm64':
+        'https://github.com/terpnetwork/terp-core/releases/download/v3-pigeonfall/terpd-v3-pigeonfall-arm64',
     },
     versions: [
       {
-        name: 'v2.0.0',
-        recommended_version: 'v2.0.0',
-        compatible_versions: ['v2.0.0'],
+        name: 'v1.0.0-stable',
+        recommended_version: 'v1.0.0-stable',
+        compatible_versions: ['v1.0.0', 'v1.0.0-stable'],
         consensus: {
           type: 'cometbft',
-          version: 'v0.37.2',
+          version: '0.37.0',
         },
-        binaries: {
-          'linux/amd64':
-            'https://github.com/terpnetwork/terp-core/releases/download/v2.0.0/terpd-v2.0.0-linux-amd64',
+      },
+      {
+        name: 'huckleberry',
+        recommended_version: 'huckleberry',
+        compatible_versions: ['huckleberry'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.0',
         },
       },
       {
@@ -66,12 +80,44 @@ export const terpnettestnet: Chain = {
         recommended_version: 'barberry',
         compatible_versions: ['barberry'],
         consensus: {
-          type: 'tendermint',
-          version: '0.34.24',
+          type: 'cometbft',
+          version: '0.37.1',
         },
-        binaries: {
-          'linux/amd64':
-            'https://github.com/terpnetwork/terp-core/archive/refs/tags/barberry.tar.gz',
+      },
+      {
+        name: 'v2.0.0',
+        recommended_version: 'v2.0.0',
+        compatible_versions: ['v2.0.0'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
+      {
+        name: 'v3.0.0',
+        recommended_version: 'v3.0.0',
+        compatible_versions: ['v3.0.0'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
+      {
+        name: 'v2-pigeonfall',
+        recommended_version: 'v2-pigeonfall',
+        compatible_versions: ['v2-pigeonfall'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
+      {
+        name: 'v3-pigeonfall',
+        recommended_version: 'v3-pigeonfall',
+        compatible_versions: ['v3-pigeonfall'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
         },
       },
     ],

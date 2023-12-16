@@ -126,6 +126,10 @@ export const jackaltestnet: Chain = {
         address: '104.207.138.181:26656',
       },
       {
+        id: 'ada0c72592b244cebfb28ba920f964a9d9b10c6f',
+        address: 'jkltest.peer.stavr.tech:19126',
+      },
+      {
         id: '9d0094606fe8748f1c06b494f7c0cbbd44808ec6',
         address: '131.153.59.6:26656',
       },
@@ -146,11 +150,19 @@ export const jackaltestnet: Chain = {
   apis: {
     rpc: [
       {
+        address: 'http://jkl.rpc.t.stavr.tech:19127',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://testnet-rpc.jackalprotocol.com',
         provider: 'Jackal Labs',
       },
     ],
     rest: [
+      {
+        address: 'https://jkl.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
       {
         address: 'https://testnet-api.jackalprotocol.com',
         provider: 'Jackal Labs',
@@ -158,12 +170,23 @@ export const jackaltestnet: Chain = {
     ],
     grpc: [
       {
+        address: 'http://jkl.grpc.t.stavr.tech:5913',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://testnet-grpc.jackalprotocol.com',
         provider: 'Jackal Labs',
       },
     ],
   },
   explorers: [
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Jackal-Testnet',
+      tx_page: 'https://explorer.stavr.tech/Jackal-Testnet/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Jackal-Testnet/account/${accountAddress}',
+    },
     {
       kind: 'ping.pub',
       url: 'https://ping.pub/jackal',

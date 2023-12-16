@@ -17,22 +17,25 @@ export const celestiatestnet3: Chain = {
       {
         denom: 'utia',
         fixed_min_gas_price: 0,
+        low_gas_price: 0.1,
+        average_gas_price: 0.2,
+        high_gas_price: 0.4,
       },
     ],
   },
   codebase: {
     git_repo: 'https://github.com/celestiaorg/celestia-app',
-    recommended_version: 'v1.0.0-rc14',
-    compatible_versions: ['v1.0.0-rc14'],
+    recommended_version: 'v1.3.0',
+    compatible_versions: ['v1.3.0'],
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/celestiaorg/networks/master/mocha-3/genesis.json',
     },
     versions: [
       {
-        name: 'v1.0.0-rc14',
-        recommended_version: 'v1.0.0-rc14',
-        compatible_versions: ['v1.0.0-rc14'],
+        name: 'v1.3.0',
+        recommended_version: 'v1.3.0',
+        compatible_versions: ['v1.3.0'],
       },
     ],
   },
@@ -89,11 +92,13 @@ export const celestiatestnet3AssetList: AssetLists = {
       display: 'tia',
       symbol: 'TIA',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/celestiatestnet/images/celestia.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/celestiatestnet3/images/celestia.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/celestiatestnet3/images/celestia.svg',
       },
       images: [
         {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/celestiatestnet/images/celestia.svg',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/celestiatestnet3/images/celestia.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/celestiatestnet3/images/celestia.png',
         },
       ],
     },

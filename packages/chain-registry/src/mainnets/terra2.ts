@@ -32,13 +32,13 @@ export const terra2: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/terra-money/core/',
-    recommended_version: 'v2.5.2',
-    compatible_versions: ['v2.5.2'],
+    recommended_version: 'v2.6.1',
+    compatible_versions: ['v2.6.1'],
     binaries: {
       'linux/arm64':
-        'https://github.com/terra-money/core/releases/download/v2.5.2/terra_2.5.2_Linux_arm64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.6.1/terra_2.6.1_Linux_arm64.tar.gz',
       'linux/amd64':
-        'https://github.com/terra-money/core/releases/download/v2.5.2/terra_2.5.2_Linux_x86_64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.6.1/terra_2.6.1_Linux_x86_64.tar.gz',
     },
     genesis: {
       name: 'v2.0',
@@ -169,6 +169,29 @@ export const terra2: Chain = {
           'linux/amd64':
             'https://github.com/terra-money/core/releases/download/v2.5.2/terra_2.5.2_Linux_x86_64.tar.gz',
         },
+        next_version_name: 'v2.6',
+      },
+      {
+        name: 'v2.6',
+        tag: 'v2.6.1',
+        recommended_version: 'v2.6.1',
+        compatible_versions: ['v2.6.1'],
+        proposal: 4792,
+        height: 7722000,
+        cosmos_sdk_version: 'v0.47.5-terra.2',
+        cosmwasm_enabled: true,
+        cosmwasm_version: 'v0.43.0',
+        ibc_go_version: 'v7.3.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        binaries: {
+          'linux/arm64':
+            'https://github.com/terra-money/core/releases/download/v2.6.1/terra_2.6.1_Linux_arm64.tar.gz',
+          'linux/amd64':
+            'https://github.com/terra-money/core/releases/download/v2.6.1/terra_2.6.1_Linux_x86_64.tar.gz',
+        },
         next_version_name: '',
       },
     ],
@@ -177,6 +200,8 @@ export const terra2: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg',
   },
+  description:
+    'Fueled by a passionate community and deep developer talent pool, the Terra blockchain is built to enable the next generation of Web3 products and services.',
   peers: {
     seeds: [
       {
@@ -199,14 +224,9 @@ export const terra2: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'terra2-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'terra2-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '1e094db9c147a0fd5e9793365d66736c80bfef46',
@@ -252,10 +272,6 @@ export const terra2: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc.terrav2.ccvalidators.com:443/',
-        provider: 'CryptoCrew',
-      },
-      {
         address: 'https://terra2-rpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
       },
@@ -268,10 +284,6 @@ export const terra2: Chain = {
         provider: 'stakely',
       },
       {
-        address: 'https://rpc-terra2.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
         address: 'https://terra-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -280,8 +292,8 @@ export const terra2: Chain = {
         provider: 'Terraform Labs',
       },
       {
-        address: 'https://terra-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://terra-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://rpc-terra-01.stakeflow.io',
@@ -306,20 +318,12 @@ export const terra2: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://lcd-terra2.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
         address: 'https://phoenix-lcd.terra.dev:443',
         provider: 'Terraform Labs',
       },
       {
         address: 'https://terra-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        address: 'terra2-api.lavenderfive.com:443',
-        provider: 'Lavender.Five Nodes 🐝',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://api-terra-01.stakeflow.io',
@@ -345,7 +349,7 @@ export const terra2: Chain = {
       },
       {
         address: 'terra-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'grpc-terra-01.stakeflow.io:1102',
@@ -408,8 +412,8 @@ export const terra2AssetList: AssetLists = {
       display: 'luna',
       symbol: 'LUNA',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg',
       },
       coingecko_id: 'terra-luna-2',
       images: [
@@ -799,8 +803,8 @@ export const terra2AssetList: AssetLists = {
       display: 'sayve',
       symbol: 'SAYVE',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/sayve.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/sayve.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/sayve.svg',
       },
       images: [
         {
@@ -884,6 +888,200 @@ export const terra2AssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/amproar.png',
+        },
+      ],
+    },
+    {
+      description: 'Nico Dao Money',
+      type_asset: 'cw20',
+      address:
+        'terra1e0efrrrj8d55pflme3dmtyuj7klzcef5cfmz6r2jyqz77kk2jz3qa6drg3',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1e0efrrrj8d55pflme3dmtyuj7klzcef5cfmz6r2jyqz77kk2jz3qa6drg3',
+          exponent: 0,
+        },
+        {
+          denom: 'nico',
+          exponent: 18,
+        },
+      ],
+      base: 'cw20:terra1e0efrrrj8d55pflme3dmtyuj7klzcef5cfmz6r2jyqz77kk2jz3qa6drg3',
+      name: 'nico',
+      display: 'nico',
+      symbol: 'NICO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/nicodao.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/nicodao.png',
+        },
+      ],
+    },
+    {
+      description:
+        'Sailing the Seas DAO is a community DAO built on Enterprise on Terra',
+      type_asset: 'cw20',
+      address:
+        'terra1rc6ssp5rym7a0hg29xpj4cc9e67tl56kg5jyzgl9qrhfxxc2ugvsnrkala',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1rc6ssp5rym7a0hg29xpj4cc9e67tl56kg5jyzgl9qrhfxxc2ugvsnrkala',
+          exponent: 0,
+        },
+        {
+          denom: 'seas',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra1rc6ssp5rym7a0hg29xpj4cc9e67tl56kg5jyzgl9qrhfxxc2ugvsnrkala',
+      name: 'Sailing The SeaS DAO',
+      display: 'seas',
+      symbol: 'SEAS',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/SEAS.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/SEAS.png',
+        },
+      ],
+    },
+    {
+      description: 'A community DAO built on Enterprise',
+      type_asset: 'cw20',
+      address:
+        'terra18vp5s0r7keezm35hdxsgw8zgfnyn8wejdkk893ag2kqncgpqxhjqwjpc0v',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra18vp5s0r7keezm35hdxsgw8zgfnyn8wejdkk893ag2kqncgpqxhjqwjpc0v',
+          exponent: 0,
+        },
+        {
+          denom: 'bitz',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra18vp5s0r7keezm35hdxsgw8zgfnyn8wejdkk893ag2kqncgpqxhjqwjpc0v',
+      name: 'BitzDAO',
+      display: 'bitz',
+      symbol: 'BITZ',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/BITZ.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/BITZ.png',
+        },
+      ],
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/A356EC90DC3AE43D485514DA7260EDC7ABB5CFAA0654CE2524C739392975AD3C',
+          exponent: 0,
+          aliases: ['wstETH'],
+        },
+        {
+          denom:
+            'factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/A356EC90DC3AE43D485514DA7260EDC7ABB5CFAA0654CE2524C739392975AD3C',
+      name: 'Wrapped Lido Staked Ether',
+      display: 'wstETH',
+      symbol: 'wstETH',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'neutron',
+            base_denom:
+              'factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH',
+            channel_id: 'channel-25',
+          },
+          chain: {
+            channel_id: 'channel-229',
+            path: 'transfer/channel-229/factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'neutron',
+            base_denom:
+              'factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg',
+      },
+    },
+    {
+      description: 'SEUL DAO',
+      type_asset: 'cw20',
+      address:
+        'terra13s5pxw5j2p4ssvzwvxd8l7h30vke8vjgtng75vqgv6p9vddfk3hskfka0l',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra13s5pxw5j2p4ssvzwvxd8l7h30vke8vjgtng75vqgv6p9vddfk3hskfka0l',
+          exponent: 0,
+        },
+        {
+          denom: 'seul',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra13s5pxw5j2p4ssvzwvxd8l7h30vke8vjgtng75vqgv6p9vddfk3hskfka0l',
+      name: 'seul',
+      display: 'seul',
+      symbol: 'SEUL',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/seul.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/seul.png',
+        },
+      ],
+    },
+    {
+      description: 'SEUL DAO',
+      type_asset: 'cw20',
+      address:
+        'terra1q328gl40az3cf9x67cgudn8e8w2az9vsmhtkwsgdu7a43rhy5caqc82yr5',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1q328gl40az3cf9x67cgudn8e8w2az9vsmhtkwsgdu7a43rhy5caqc82yr5',
+          exponent: 0,
+        },
+        {
+          denom: 'xseul',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra1q328gl40az3cf9x67cgudn8e8w2az9vsmhtkwsgdu7a43rhy5caqc82yr5',
+      name: 'xseul',
+      display: 'xseul',
+      symbol: 'xSEUL',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/xseul.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/xseul.png',
         },
       ],
     },

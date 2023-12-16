@@ -17,6 +17,9 @@ export const decentr: Chain = {
       {
         denom: 'udec',
         fixed_min_gas_price: 0.025,
+        low_gas_price: 0.025,
+        average_gas_price: 0.025,
+        high_gas_price: 0.025,
       },
     ],
   },
@@ -155,10 +158,6 @@ export const decentr: Chain = {
         provider: 'decentr',
       },
       {
-        address: 'https://decentr-rpc.badgerbite.io:443',
-        provider: 'BadgerBite',
-      },
-      {
         address: 'https://rpc.decentr.chaintools.tech/',
         provider: 'ChainTools',
       },
@@ -169,26 +168,6 @@ export const decentr: Chain = {
       {
         address: 'https://rpc-dcntr.nodine.id/',
         provider: 'Nodine.ID',
-      },
-      {
-        address: 'https://rpc-decentr.sxlzptprjkt.xyz',
-        provider: 'sxlzptprjkt | VALIDATOR',
-      },
-      {
-        address: 'https://rpc.decentr.hexnodes.co',
-        provider: 'Hexnodes',
-      },
-      {
-        address: 'https://rpc.decentr.nodexcapital.com',
-        provider: 'NodeX Validator',
-      },
-      {
-        address: 'https://rpc-decentr.comunitynode.my.id',
-        provider: 'Comunity Node',
-      },
-      {
-        address: 'https://rpc.decentr.indonode.net',
-        provider: 'Indonode',
       },
       {
         address: 'https://rpc-decentr.mms.team/',
@@ -207,34 +186,6 @@ export const decentr: Chain = {
       {
         address: 'https://decentr-api.ibs.team/',
         provider: 'Inter Blockchain Services',
-      },
-      {
-        address: 'https://api-dcntr.nodine.id',
-        provider: 'Nodine.ID',
-      },
-      {
-        address: 'https://api-decentr.sxlzptprjkt.xyz',
-        provider: 'sxlzptprjkt | VALIDATOR',
-      },
-      {
-        address: 'https://lcd.decentr.hexnodes.co',
-        provider: 'Hexnodes',
-      },
-      {
-        address: 'https://rest.decentr.nodexcapital.com',
-        provider: 'NodeX Validator',
-      },
-      {
-        address: 'https://api-decentr.comunitynode.my.id',
-        provider: 'Comunity Node',
-      },
-      {
-        address: 'https://api.decentr.indonode.net',
-        provider: 'Indonode',
-      },
-      {
-        address: 'https://api-decentr.mms.team',
-        provider: 'MMS',
       },
     ],
     grpc: [

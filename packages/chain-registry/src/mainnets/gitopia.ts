@@ -133,6 +133,8 @@ export const gitopia: Chain = {
       png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gitopia/images/gitopia.png',
     },
   ],
+  description:
+    'Gitopia is the next-generation Code Collaboration Platform fuelled by a decentralized network and interactive token economy. It is designed to optimize the open-source software development process through collaboration, transparency, and incentivization.',
   peers: {
     seeds: [
       {
@@ -267,14 +269,15 @@ export const gitopia: Chain = {
         address: '65.108.70.119:36656',
         provider: 'AlxVoy ⚡ ANODE.TEAM',
       },
+      {
+        id: 'aa26aa0baa5dfc41c126d16d4dc48bb45151d560',
+        address: 'gitopia-mainnet.peers.l0vd.com:22656',
+        provider: 'L0vd.com ❤️',
+      },
     ],
   },
   apis: {
     rpc: [
-      {
-        address: 'https://rpc.gitopia.indonode.net:443',
-        provider: 'indonode',
-      },
       {
         address: 'http://gitopia.rpc.nodersteam.com:20657',
         provider: '[NODERS]TEAM',
@@ -294,10 +297,6 @@ export const gitopia: Chain = {
       {
         address: 'https://gitopia-rpc.staketab.org:443',
         provider: 'Staketab',
-      },
-      {
-        address: 'https://gitopia-mainnet-grpc.autostake.com:443',
-        provider: 'autostake',
       },
       {
         address: 'https://gitopia-rpc.ibs.team:443',
@@ -324,28 +323,12 @@ export const gitopia: Chain = {
         provider: 'WhisperNode🤐',
       },
       {
-        address: 'https://rpc.gitopia.hexnodes.co',
-        provider: 'Hexnodes',
-      },
-      {
         address: 'https://gitopia.rpc.liveraven.net',
         provider: 'LiveRaveN',
       },
       {
-        address: 'https://rpc.gitopia.indonode.net',
-        provider: 'Indonode',
-      },
-      {
         address: 'https://gitopia-rpc.stake-town.com',
         provider: 'StakeTown',
-      },
-      {
-        address: 'https://rpc.gitopia.stake-take.com',
-        provider: 'Stake-Take',
-      },
-      {
-        address: 'https://rpc.gitopia.nodexcapital.com',
-        provider: '⚡NodeX Validator⚡',
       },
       {
         address: 'https://rpc.gitopia.silentvalidator.com',
@@ -415,12 +398,20 @@ export const gitopia: Chain = {
         address: 'https://rpc.gitopia.tcnetwork.io/',
         provider: 'TC Network',
       },
+      {
+        address: 'https://gitopia.nodejumper.io:443',
+        provider: 'NODEJUMPER',
+      },
+      {
+        address: 'https://rpc.gitopia.stakeup.tech/',
+        provider: 'StakeUp',
+      },
+      {
+        address: 'https://gitopia-mainnet.rpc.l0vd.com:443',
+        provider: 'L0vd.com ❤️',
+      },
     ],
     rest: [
-      {
-        address: 'https://api.gitopia.indonode.net:443',
-        provider: 'indonode',
-      },
       {
         address: 'http://gitopia.api.nodersteam.com:20017',
         provider: '[NODERS]TEAM',
@@ -470,28 +461,12 @@ export const gitopia: Chain = {
         provider: 'WhisperNode🤐',
       },
       {
-        address: 'https://lcd.gitopia.hexnodes.co',
-        provider: 'Hexnodes',
-      },
-      {
         address: 'https://gitopia.api.liveraven.net',
         provider: 'LiveRaveN',
       },
       {
-        address: 'https://api.gitopia.indonode.net',
-        provider: 'Indonode',
-      },
-      {
         address: 'https://gitopia-api.stake-town.com',
         provider: 'StakeTown',
-      },
-      {
-        address: 'https://api.gitopia.stake-take.com',
-        provider: 'Stake-Take',
-      },
-      {
-        address: 'https://rest.gitopia.nodexcapital.com',
-        provider: '⚡NodeX Validator⚡',
       },
       {
         address: 'https://api.gitopia.silentvalidator.com',
@@ -556,6 +531,18 @@ export const gitopia: Chain = {
       {
         address: 'https://rest.gitopia.tcnetwork.io/',
         provider: 'TC Network',
+      },
+      {
+        address: 'https://gitopia.nodejumper.io:1317',
+        provider: 'NODEJUMPER',
+      },
+      {
+        address: 'https://api.gitopia.stakeup.tech/',
+        provider: 'StakeUp',
+      },
+      {
+        address: 'https://gitopia-mainnet.api.l0vd.com:443',
+        provider: 'L0vd.com ❤️',
       },
     ],
     grpc: [
@@ -663,6 +650,18 @@ export const gitopia: Chain = {
         address: 'gitopia.grpc.stakevillage.net:14190',
         provider: 'Stake Village',
       },
+      {
+        address: 'gitopia.nodejumper.io:9090',
+        provider: 'NODEJUMPER',
+      },
+      {
+        address: 'grpc.gitopia.stakeup.tech:443',
+        provider: 'StakeUp',
+      },
+      {
+        address: 'gitopia-mainnet.grpc.l0vd.com:80',
+        provider: 'L0vd.com ❤️',
+      },
     ],
   },
   explorers: [
@@ -754,7 +753,17 @@ export const gitopia: Chain = {
       tx_page: 'https://main.anode.team/gitopia/tx/${txHash}',
       account_page: 'https://main.anode.team/gitopia/account/${accountAddress}',
     },
+    {
+      kind: 'L0vd.com ❤️',
+      url: 'https://chain-services.l0vd.com/mainnets/gitopia',
+      tx_page: 'https://chain-services.l0vd.com/mainnets/gitopia/tx/${txHash}',
+      account_page:
+        'https://chain-services.l0vd.com/mainnets/gitopia/account/${accountAddress}',
+    },
   ],
+  logo_URIs: {
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gitopia/images/gitopia.png',
+  },
 };
 
 export const gitopiaAssetList: AssetLists = {

@@ -11,11 +11,16 @@ export const aura: Chain = {
   bech32_prefix: 'aura',
   daemon_name: 'aurad',
   node_home: '$HOME/.aura',
+  key_algos: ['secp256k1'],
   slip44: 118,
   fees: {
     fee_tokens: [
       {
         denom: 'uaura',
+        fixed_min_gas_price: 0.001,
+        low_gas_price: 0.001,
+        average_gas_price: 0.002,
+        high_gas_price: 0.0025,
       },
     ],
   },
@@ -25,11 +30,22 @@ export const aura: Chain = {
         denom: 'uaura',
       },
     ],
+    lock_duration: {
+      time: '1209600s',
+    },
   },
   codebase: {
     git_repo: 'https://github.com/aura-nw/aura',
-    recommended_version: 'aura_v0.4.5',
-    compatible_versions: ['aura_v0.4.5'],
+    recommended_version: 'v0.7.2',
+    compatible_versions: ['v0.7.2'],
+    cosmos_sdk_version: '0.47.4',
+    ibc_go_version: 'v7.2.0',
+    consensus: {
+      type: 'cometbft',
+      version: '0.37.2',
+    },
+    cosmwasm_version: '0.41.0',
+    cosmwasm_enabled: true,
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/aura-nw/mainnet-artifacts/main/xstaxy-1/genesis.json',
@@ -47,6 +63,37 @@ export const aura: Chain = {
         height: 1292226,
         recommended_version: 'aura_v0.4.5',
         compatible_versions: ['aura_v0.4.5'],
+        next_version_name: 'v0.7.1',
+      },
+      {
+        name: 'v0.7.1',
+        proposal: 7,
+        height: 3666129,
+        recommended_version: 'v0.7.1',
+        compatible_versions: ['v0.7.1'],
+        cosmos_sdk_version: '0.47.4',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        cosmwasm_version: '0.41.0',
+        cosmwasm_enabled: true,
+        next_version_name: 'v0.7.2',
+      },
+      {
+        name: 'v0.7.2',
+        proposal: 8,
+        height: 4083908,
+        recommended_version: 'v0.7.2',
+        compatible_versions: ['v0.7.2'],
+        cosmos_sdk_version: '0.47.4',
+        ibc_go_version: 'v7.2.0',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        cosmwasm_version: '0.41.0',
+        cosmwasm_enabled: true,
         next_version_name: '',
       },
     ],
@@ -103,6 +150,11 @@ export const aura: Chain = {
         provider: 'KonsorTech',
       },
       {
+        id: 'dce07d176e5ba4cfdc7b806eb80eabab162a09d0',
+        address: '45.76.213.229:26656',
+        provider: '[NODERS]TEAM',
+      },
+      {
         id: '57406c041d38af3bac9acdcb2b4bdc90dc7a8852',
         address: 'aura.peers.stavr.tech:21056',
         provider: '🔥STAVR🔥',
@@ -132,6 +184,11 @@ export const aura: Chain = {
         address: 'peer-aura.mms.team:27656',
         provider: 'MMS',
       },
+      {
+        id: '2bd24dbac94c3b95707c8f06a57d61a31ae666fa',
+        address: '88.99.208.54:46656',
+        provider: 'StakeTown',
+      },
     ],
   },
   apis: {
@@ -139,10 +196,6 @@ export const aura: Chain = {
       {
         address: 'https://rpc.aura.network/',
         provider: 'Aura Network Foundation',
-      },
-      {
-        address: 'https://auranetwork-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://m-aura.rpc.utsa.tech',
@@ -155,10 +208,6 @@ export const aura: Chain = {
       {
         address: 'http://aura.rpc.m.stavr.tech:11047',
         provider: '🔥STAVR🔥',
-      },
-      {
-        address: 'https://rpc-aura.whispernode.com:443',
-        provider: 'WhisperNode🤐',
       },
       {
         address: 'https://aura-rpc.ramuchi.tech',
@@ -189,10 +238,6 @@ export const aura: Chain = {
         provider: 'Safe Block',
       },
       {
-        address: 'https://rpc.aura.stake-take.com',
-        provider: 'Stake-Take',
-      },
-      {
         address: 'https://rpc.aura.silentvalidator.com',
         provider: 'silent',
       },
@@ -204,15 +249,15 @@ export const aura: Chain = {
         address: 'https://rpc-aura.mms.team',
         provider: 'MMS',
       },
+      {
+        address: 'https://aura-rpc.stake-town.com',
+        provider: 'StakeTown',
+      },
     ],
     rest: [
       {
         address: 'https://lcd.aura.network/',
         provider: 'Aura Network Foundation',
-      },
-      {
-        address: 'https://auranetwork-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://m-aura.api.utsa.tech',
@@ -225,10 +270,6 @@ export const aura: Chain = {
       {
         address: 'https://api.aura.nodestake.top',
         provider: 'NodeStake',
-      },
-      {
-        address: 'https://lcd-aura.whispernode.com:443',
-        provider: 'WhisperNode🤐',
       },
       {
         address: 'https://aura-api.ramuchi.tech',
@@ -259,10 +300,6 @@ export const aura: Chain = {
         provider: 'Safe Block',
       },
       {
-        address: 'https://api.aura.stake-take.com',
-        provider: 'Stake-Take',
-      },
-      {
         address: 'https://api.aura.silentvalidator.com',
         provider: 'silent',
       },
@@ -273,6 +310,10 @@ export const aura: Chain = {
       {
         address: 'https://api-aura.mms.team',
         provider: 'MMS',
+      },
+      {
+        address: 'https://aura-api.stake-town.com',
+        provider: 'StakeTown',
       },
     ],
     grpc: [
@@ -287,6 +328,10 @@ export const aura: Chain = {
       {
         address: 'https://grpc.aura.nodestake.top',
         provider: 'NodeStake',
+      },
+      {
+        address: 'aura.mainnet.grpc.nodersteam.com:9100/',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://aura-grpc.ramuchi.tech:15000',
@@ -320,6 +365,14 @@ export const aura: Chain = {
         address: 'grpc-aura.mms.team:443',
         provider: 'MMS',
       },
+      {
+        address: 'aura-grpc.stake-town.com:443',
+        provider: 'StakeTown',
+      },
+      {
+        address: 'grpc.aura.safeblock.space:9090',
+        provider: 'Safe Block',
+      },
     ],
   },
   explorers: [
@@ -337,7 +390,7 @@ export const aura: Chain = {
     },
     {
       kind: '🔥STAVR🔥 Explorer',
-      url: 'https://explorer.stavr.tech/aura-mainnet',
+      url: 'https://explorer.stavr.tech/Aura-Mainnet',
       tx_page: 'https://explorer.stavr.tech/aura-mainnet/tx/${txHash}',
       account_page:
         'https://explorer.stavr.tech/aura-mainnet/account/${accountAddress}',

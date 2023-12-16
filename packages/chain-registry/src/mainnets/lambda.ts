@@ -65,10 +65,6 @@ export const lambda: Chain = {
         provider: 'Lambda',
       },
       {
-        address: 'https://rpc-lambda.d-stake.xyz',
-        provider: 'D-stake',
-      },
-      {
         address: 'http://lambda.rpc.m.stavr.tech:31327',
         provider: '🔥STAVR🔥',
       },
@@ -81,10 +77,6 @@ export const lambda: Chain = {
       {
         address: 'https://rest.lambda.im',
         provider: 'Lambda',
-      },
-      {
-        address: 'https://api-lambda.d-stake.xyz',
-        provider: 'D-stake',
       },
       {
         address: 'https://lambda.api.m.stavr.tech',
@@ -164,8 +156,8 @@ export const lambdaAssetList: AssetLists = {
       display: 'lamb',
       symbol: 'LAMB',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lambda/images/lambda.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lambda/images/lambda.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lambda/images/lambda.svg',
       },
       coingecko_id: 'lambda',
       images: [

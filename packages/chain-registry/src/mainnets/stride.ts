@@ -295,6 +295,8 @@ export const stride: Chain = {
       },
     ],
   },
+  description:
+    'Stride is a blockchain that provides liquidity for staked tokens. Using Stride, you can earn both taking and DeFi yields across the Cosmos IBC ecosystem.',
   peers: {
     seeds: [
       {
@@ -333,14 +335,9 @@ export const stride: Chain = {
         provider: 'Pro-Nodes75',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'stride-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'stride-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '95d0377592a657d4c0816d9845e11d659db75d5b',
@@ -399,24 +396,12 @@ export const stride: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://stride.rpc.bccnodes.com:443',
-        provider: 'BccNodes',
-      },
-      {
         address: 'https://stride-rpc.polkachu.com/',
         provider: 'Polkachu',
       },
       {
         address: 'https://stride-rpc.onivalidator.com',
         provider: 'Oni Validator ⛩️',
-      },
-      {
-        address: 'https://stride.rpc.chandrastation.com',
-        provider: 'Chandra Station',
-      },
-      {
-        address: 'http://rpc-stride.nodeist.net',
-        provider: 'Nodeist',
       },
       {
         address: 'https://stride-rpc.lavenderfive.com/',
@@ -431,10 +416,6 @@ export const stride: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'http://stride.rpc.m.stavr.tech:21017',
-        provider: '🔥STAVR🔥',
-      },
-      {
         address: 'https://stride.rpc.kjnodes.com',
         provider: 'kjnodes',
       },
@@ -447,16 +428,8 @@ export const stride: Chain = {
         provider: 'Architect Nodes',
       },
       {
-        address: 'https://stride.nodejumper.io',
-        provider: 'NODEJUMPER',
-      },
-      {
         address: 'https://rpc-stride.whispernode.com:443',
         provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rpc-stride.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
       },
       {
         address: 'https://stride-mainnet-rpc.autostake.com:443',
@@ -467,50 +440,26 @@ export const stride: Chain = {
         provider: 'Stake&Relax Validator 🦥',
       },
       {
-        address: 'https://stride.rpc.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'https://rpc-stride-01.stakeflow.io',
         provider: 'Stakeflow',
-      },
-      {
-        address: 'https://rpc.stride.stake-take.com',
-        provider: 'Stake-Take',
       },
       {
         address: 'https://stride-rpc.w3coins.io',
         provider: 'w3coins',
       },
       {
-        address: 'https://stride-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://stride-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://community.nuxian-node.ch:6797/stride/trpc',
         provider: 'PRO Delegators',
       },
-      {
-        address: 'https://rpc-stride.in3s.com:443',
-        provider: 'in3s.com',
-      },
     ],
     rest: [
       {
-        address: 'https://stride.api.bccnodes.com:443',
-        provider: 'BccNodes',
-      },
-      {
         address: 'https://stride-api.polkachu.com/',
         provider: 'Polkachu',
-      },
-      {
-        address: 'https://stride.api.chandrastation.com',
-        provider: 'Chandra Station',
-      },
-      {
-        address: 'http://api-stride.nodeist.net',
-        provider: 'Nodeist',
       },
       {
         address: 'https://api-stride.cosmos-spaces.cloud',
@@ -537,10 +486,6 @@ export const stride: Chain = {
         provider: 'PUPMØS',
       },
       {
-        address: 'https://stride.nodejumper.io:1317',
-        provider: 'NODEJUMPER',
-      },
-      {
         address: 'https://stride-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -553,24 +498,12 @@ export const stride: Chain = {
         provider: 'WhisperNode🤐',
       },
       {
-        address: 'https://rest-stride.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
         address: 'https://stride-api.stakeandrelax.net',
         provider: 'Stake&Relax Validator 🦥',
       },
       {
-        address: 'https://stride.rest.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'https://api-stride-01.stakeflow.io',
         provider: 'Stakeflow',
-      },
-      {
-        address: 'https://api.stride.stake-take.com',
-        provider: 'Stake-Take',
       },
       {
         address: 'https://stride-api.w3coins.io',
@@ -578,7 +511,7 @@ export const stride: Chain = {
       },
       {
         address: 'https://stride-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://community.nuxian-node.ch:6797/stride/crpc',
@@ -599,10 +532,6 @@ export const stride: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'stride.nodejumper.io:9090',
-        provider: 'NODEJUMPER',
-      },
-      {
         address: 'http://stride.grpc.m.stavr.tech:9986',
         provider: '🔥STAVR🔥',
       },
@@ -613,10 +542,6 @@ export const stride: Chain = {
       {
         address: 'stride-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'stride.grpc.interchain.ivaldilabs.xyz:443',
-        provider: 'ivaldilabs',
       },
       {
         address: 'stride.grpc.kjnodes.com:11690',
@@ -632,7 +557,7 @@ export const stride: Chain = {
       },
       {
         address: 'stride-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -758,7 +683,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'stuatom',
-      name: 'stATOM',
+      name: 'Stride Staked ATOM',
       display: 'statom',
       symbol: 'stATOM',
       traces: [
@@ -795,7 +720,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'stustars',
-      name: 'stSTARS',
+      name: 'Stride Staked STARS',
       display: 'ststars',
       symbol: 'stSTARS',
       traces: [
@@ -831,7 +756,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'stuosmo',
-      name: 'stOSMO',
+      name: 'Stride Staked OSMO',
       display: 'stosmo',
       symbol: 'stOSMO',
       traces: [
@@ -867,7 +792,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'stujuno',
-      name: 'stJUNO',
+      name: 'Stride Staked JUNO',
       display: 'stjuno',
       symbol: 'stJUNO',
       traces: [
@@ -903,7 +828,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'stuluna',
-      name: 'stLUNA',
+      name: 'Stride Staked LUNA',
       display: 'stluna',
       symbol: 'stLUNA',
       traces: [
@@ -939,7 +864,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'stinj',
-      name: 'stINJ',
+      name: 'Stride Staked INJ',
       display: 'stINJ',
       symbol: 'stINJ',
       traces: [
@@ -975,7 +900,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'staevmos',
-      name: 'stEVMOS',
+      name: 'Stride Staked EVMOS',
       display: 'stevmos',
       symbol: 'stEVMOS',
       traces: [
@@ -1011,7 +936,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'stuumee',
-      name: 'stUMEE',
+      name: 'Stride Staked UMEE',
       display: 'stumee',
       symbol: 'stUMEE',
       traces: [
@@ -1047,7 +972,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'stucmdx',
-      name: 'stCMDX',
+      name: 'Stride Staked CMDX',
       display: 'stcmdx',
       symbol: 'stCMDX',
       traces: [
@@ -1083,7 +1008,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       base: 'stusomm',
-      name: 'stSOMM',
+      name: 'Stride Staked SOMM',
       display: 'stsomm',
       symbol: 'stSOMM',
       traces: [

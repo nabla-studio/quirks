@@ -33,8 +33,8 @@ export const kujira: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Team-Kujira/core',
-    recommended_version: 'v0.9.0',
-    compatible_versions: ['v0.9.0'],
+    recommended_version: 'v0.9.1',
+    compatible_versions: ['v0.9.1'],
     cosmos_sdk_version: 'v0.47.5',
     consensus: {
       type: 'cometbft',
@@ -79,10 +79,25 @@ export const kujira: Chain = {
           type: 'cometbft',
           version: 'v0.37.2',
         },
+        next_version_name: 'v0.9.1',
+      },
+      {
+        name: 'v0.9.1',
+        proposal: 488,
+        height: 15205000,
+        recommended_version: 'v0.9.1',
+        compatible_versions: ['v0.9.1'],
+        cosmos_sdk_version: 'v0.47.5',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
         next_version_name: '',
       },
     ],
   },
+  description:
+    'A decentralized ecosystem for protocols, builders and web3 users seeking sustainable FinTech.',
   peers: {
     seeds: [
       {
@@ -108,7 +123,7 @@ export const kujira: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'kujira-mainnet-seed.autostake.com:26796',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake ⚡️ 0% fee',
       },
       {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
@@ -116,14 +131,9 @@ export const kujira: Chain = {
         provider: 'kjnodes',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'kujira-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'kujira-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
@@ -140,7 +150,7 @@ export const kujira: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'kujira-mainnet-peer.autostake.com:26796',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake ⚡️ 0% fee',
       },
       {
         id: 'c1a740841a6dc0b56730e975b1a4aa2d8c73b204',
@@ -180,10 +190,6 @@ export const kujira: Chain = {
         provider: 'Notional',
       },
       {
-        address: 'https://kujira-rpc.wildsage.io',
-        provider: 'WildSage Labs',
-      },
-      {
         address: 'https://kujira-rpc.ibs.team/',
         provider: 'Inter Blockchain Services',
       },
@@ -204,12 +210,8 @@ export const kujira: Chain = {
         provider: 'Golden Ratio Staking',
       },
       {
-        address: 'https://rpc-kujira.huginn.tech',
-        provider: 'Huginn',
-      },
-      {
         address: 'https://kujira-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake ⚡️ 0% fee',
       },
       {
         address: 'https://rpc.kujira.rektdao.club',
@@ -228,22 +230,18 @@ export const kujira: Chain = {
         provider: 'MMS',
       },
       {
-        address: 'https://kujira-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://kujira-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://rpc-kujira.rorcualnodes.com',
-        provider: 'Rorcual',
+        address: 'https://kujira.interstellar-lounge.org',
+        provider: 'Interstellar Lounge 🍸',
       },
     ],
     rest: [
       {
         address: 'https://lcd-kujira.whispernode.com:443',
         provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rest-kujira.goldenratiostaking.net',
-        provider: 'Golden Ratio Staking',
       },
       {
         address: 'https://lcd.kaiyo.kujira.setten.io',
@@ -287,7 +285,7 @@ export const kujira: Chain = {
       },
       {
         address: 'https://kujira-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake ⚡️ 0% fee',
       },
       {
         address: 'https://api.kujira.rektdao.club',
@@ -307,7 +305,7 @@ export const kujira: Chain = {
       },
       {
         address: 'https://kujira-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -329,7 +327,7 @@ export const kujira: Chain = {
       },
       {
         address: 'kujira-mainnet-grpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake ⚡️ 0% fee',
       },
       {
         address: 'kujira.grpc.kjnodes.com:11390',
@@ -345,7 +343,7 @@ export const kujira: Chain = {
       },
       {
         address: 'kujira-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -397,7 +395,7 @@ export const kujiraAssetList: AssetLists = {
         },
       ],
       base: 'ukuji',
-      name: 'Kuji',
+      name: 'Kujira',
       display: 'kuji',
       symbol: 'KUJI',
       coingecko_id: 'kujira',
@@ -428,7 +426,7 @@ export const kujiraAssetList: AssetLists = {
       ],
       base: 'factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk',
       name: 'USK',
-      display: 'USK',
+      display: 'usk',
       symbol: 'USK',
       coingecko_id: 'usk',
       logo_URIs: {
@@ -439,6 +437,32 @@ export const kujiraAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/usk.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/usk.svg',
+        },
+      ],
+    },
+    {
+      description: "Quark's auto-compounding KUJI derivative",
+      denom_units: [
+        {
+          denom:
+            'factory/kujira1m96ucsfpt2yy72w09z2rxjdj38y5qd8lqx5jtggnejmdua2ynpnsxyvjex/urcpt',
+          exponent: 0,
+        },
+        {
+          denom: 'qcKUJI',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira1m96ucsfpt2yy72w09z2rxjdj38y5qd8lqx5jtggnejmdua2ynpnsxyvjex/urcpt',
+      name: 'qcKUJI',
+      display: 'qcKUJI',
+      symbol: 'qcKUJI',
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/qckuji.svg',
+      },
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/qckuji.svg',
         },
       ],
     },
@@ -460,8 +484,8 @@ export const kujiraAssetList: AssetLists = {
       display: 'ampKUJI',
       symbol: 'ampKUJI',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/ampkuji.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/ampkuji.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/ampkuji.svg',
       },
       images: [
         {
@@ -483,18 +507,70 @@ export const kujiraAssetList: AssetLists = {
         },
       ],
       base: 'factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta',
-      name: 'MNTA',
-      display: 'MNTA',
+      name: 'MantaDAO',
+      display: 'mnta',
       symbol: 'MNTA',
       coingecko_id: 'mantadao',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/mnta.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/mnta.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/mnta.svg',
       },
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/mnta.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/mnta.svg',
+        },
+      ],
+    },
+    {
+      description: "Quark's auto-compounding MNTA derivative",
+      denom_units: [
+        {
+          denom:
+            'factory/kujira1qzu3up50auxhqyzfq56znuj8n38q2ra7daaf9ef7vg8gu66jh4fqd2wd2y/urcpt',
+          exponent: 0,
+        },
+        {
+          denom: 'qcMNTA',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira1qzu3up50auxhqyzfq56znuj8n38q2ra7daaf9ef7vg8gu66jh4fqd2wd2y/urcpt',
+      name: 'qcMNTA',
+      display: 'qcMNTA',
+      symbol: 'qcMNTA',
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/qcmnta.svg',
+      },
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/qcmnta.svg',
+        },
+      ],
+    },
+    {
+      description: 'ERIS Liquid Staked MNTA',
+      denom_units: [
+        {
+          denom:
+            'factory/kujira175yatpvkpgw07w0chhzuks3zrrae9z9g2y6r7u5pzqesyau4x9eqqyv0rr/ampMNTA',
+          exponent: 0,
+        },
+        {
+          denom: 'ampMNTA',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira175yatpvkpgw07w0chhzuks3zrrae9z9g2y6r7u5pzqesyau4x9eqqyv0rr/ampMNTA',
+      name: 'ERIS Amplified MNTA',
+      display: 'ampMNTA',
+      symbol: 'ampMNTA',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/ampmnta.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/ampmnta.png',
         },
       ],
     },
@@ -515,8 +591,8 @@ export const kujiraAssetList: AssetLists = {
       display: 'wink',
       symbol: 'WINK',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/wink.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/wink.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/wink.svg',
       },
       images: [
         {
@@ -565,7 +641,7 @@ export const kujiraAssetList: AssetLists = {
       ],
       type_asset: 'ics20',
       base: 'ibc/20014F963CC9E6488B299622F87B60C6DE71632864859EC08B4753478DAB2BB8',
-      name: 'Tether USDt',
+      name: 'Tether USD',
       display: 'usdt',
       symbol: 'USDt',
       traces: [
@@ -578,7 +654,7 @@ export const kujiraAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-95',
-            path: 'transfer/channel-95',
+            path: 'transfer/channel-95/erc20/tether/usdt',
           },
         },
       ],
@@ -588,6 +664,137 @@ export const kujiraAssetList: AssetLists = {
             chain_name: 'kava',
             base_denom: 'erc20/tether/usdt',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
+    },
+    {
+      description: 'The staking and governance token of Fuzion',
+      denom_units: [
+        {
+          denom: 'factory/kujira1sc6a0347cc5q3k890jj0pf3ylx2s38rh4sza4t/ufuzn',
+          exponent: 0,
+        },
+        {
+          denom: 'fuzn',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira1sc6a0347cc5q3k890jj0pf3ylx2s38rh4sza4t/ufuzn',
+      name: 'Fuzion',
+      display: 'fuzn',
+      symbol: 'FUZN',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/fuzion.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/fuzion.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/fuzion.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/fuzion.svg',
+        },
+      ],
+    },
+    {
+      description: 'The receipt token of Fuzion',
+      denom_units: [
+        {
+          denom: 'factory/kujira1sc6a0347cc5q3k890jj0pf3ylx2s38rh4sza4t/urfuzn',
+          exponent: 0,
+        },
+        {
+          denom: 'rfuzn',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira1sc6a0347cc5q3k890jj0pf3ylx2s38rh4sza4t/urfuzn',
+      name: 'Fuzion Receipt',
+      display: 'rfuzn',
+      symbol: 'rFUZN',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/fuzionr.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/fuzionr.png',
+        },
+      ],
+    },
+    {
+      description: 'The yield token of Fuzion',
+      denom_units: [
+        {
+          denom: 'factory/kujira1sc6a0347cc5q3k890jj0pf3ylx2s38rh4sza4t/uyfuzn',
+          exponent: 0,
+        },
+        {
+          denom: 'yfuzn',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira1sc6a0347cc5q3k890jj0pf3ylx2s38rh4sza4t/uyfuzn',
+      name: 'Fuzion Yield',
+      display: 'yfuzn',
+      symbol: 'yFUZN',
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/fuziony.svg',
+      },
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/fuziony.svg',
+        },
+      ],
+    },
+    {
+      description: 'The Revenue & Governance token of Unstake.fi',
+      denom_units: [
+        {
+          denom: 'factory/kujira1aaudpfr9y23lt9d45hrmskphpdfaq9ajxd3ukh/unstk',
+          exponent: 0,
+        },
+        {
+          denom: 'nstk',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira1aaudpfr9y23lt9d45hrmskphpdfaq9ajxd3ukh/unstk',
+      name: 'Unstake Fi',
+      display: 'nstk',
+      symbol: 'NSTK',
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nstk.svg',
+      },
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nstk.svg',
+        },
+      ],
+    },
+    {
+      description: 'Local Money',
+      denom_units: [
+        {
+          denom: 'factory/kujira1swkuyt08z74n5jl7zr6hx0ru5sa2yev5v896p6/local',
+          exponent: 0,
+        },
+        {
+          denom: 'local',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira1swkuyt08z74n5jl7zr6hx0ru5sa2yev5v896p6/local',
+      name: 'LOCAL',
+      display: 'local',
+      symbol: 'LOCAL',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/local.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/local.png',
         },
       ],
     },

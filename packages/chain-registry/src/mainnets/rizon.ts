@@ -65,14 +65,9 @@ export const rizon: Chain = {
         address: 'seed-3.mainnet.rizon.world:26656',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'rizon-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'rizon-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'f9b189e17add85a42a36d05fc57ed83c957e011e',
@@ -96,10 +91,6 @@ export const rizon: Chain = {
   apis: {
     rpc: [
       {
-        address: 'http://seed-1.mainnet.rizon.world:26657',
-        provider: 'HDAC Technology AG',
-      },
-      {
         address: 'https://rpcapi.rizon.world/',
         provider: 'HDAC Technology AG',
       },
@@ -112,23 +103,11 @@ export const rizon: Chain = {
         provider: 'Inter Blockchain Services',
       },
       {
-        address: 'https://rizon.nodejumper.io',
-        provider: 'NODEJUMPER',
-      },
-      {
-        address: 'https://rpc-rizon.mms.team',
-        provider: 'MMS',
-      },
-      {
-        address: 'https://rizon-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://rizon-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
-      {
-        address: 'http://seed-1.mainnet.rizon.world:1317',
-        provider: 'HDAC Technology AG',
-      },
       {
         address: 'https://restapi.rizon.world/',
         provider: 'HDAC Technology AG',
@@ -142,30 +121,18 @@ export const rizon: Chain = {
         provider: 'Inter Blockchain Services',
       },
       {
-        address: 'https://rizon.nodejumper.io:1317',
-        provider: 'NODEJUMPER',
-      },
-      {
-        address: 'https://api-rizon.mms.team',
-        provider: 'MMS',
-      },
-      {
         address: 'https://rizon-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
-      {
-        address: 'rizon.nodejumper.io:9090',
-        provider: 'NODEJUMPER',
-      },
       {
         address: 'grpc-rizon.mms.team:443',
         provider: 'MMS',
       },
       {
         address: 'rizon-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

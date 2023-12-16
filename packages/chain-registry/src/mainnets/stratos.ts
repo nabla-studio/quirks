@@ -54,7 +54,13 @@ export const stratos: Chain = {
         provider: 'thestratos.org',
       },
     ],
-    persistent_peers: [],
+    persistent_peers: [
+      {
+        id: '8a57d4701e87096c9bf151c376aafa97f9f516c7',
+        address: '78.46.174.39:25656',
+        provider: '[NODERS]TEAM',
+      },
+    ],
   },
   apis: {
     rpc: [
@@ -65,6 +71,10 @@ export const stratos: Chain = {
       {
         address: 'https://rpc.stratos.nodestake.top',
         provider: 'NodeStake',
+      },
+      {
+        address: 'http://stratos.rpc.nodersteam.com:26657/',
+        provider: '[NODERS]TEAM',
       },
     ],
     rest: [
@@ -85,6 +95,10 @@ export const stratos: Chain = {
       {
         address: 'https://grpc.stratos.nodestake.top',
         provider: 'NodeStake',
+      },
+      {
+        address: 'stratos.grpc.nodersteam.com:9090',
+        provider: '[NODERS]TEAM',
       },
     ],
     'evm-http-jsonrpc': [
@@ -119,6 +133,13 @@ export const stratos: Chain = {
       tx_page: 'https://explorer.nodestake.top/stratos/tx/${txHash}',
       account_page:
         'https://explorer.nodestake.top/stratos/accounts/${accountAddress}',
+    },
+    {
+      kind: 'TC Network',
+      url: 'https://explorer.tcnetwork.io/stratos',
+      tx_page: 'https://explorer.tcnetwork.io/stratos/transaction/${txHash}',
+      account_page:
+        'https://explorer.tcnetwork.io/stratos/account/${accountAddress}',
     },
   ],
   images: [

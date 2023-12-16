@@ -117,8 +117,8 @@ export const galaxyAssetList: AssetLists = {
       display: 'glx',
       symbol: 'GLX',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/galaxy/images/glx.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/galaxy/images/glx.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/galaxy/images/glx.svg',
       },
       images: [
         {

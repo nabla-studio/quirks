@@ -80,6 +80,8 @@ export const regen: Chain = {
       },
     ],
   },
+  description:
+    'Regen Network, a platform to originate and invest in high-integrity carbon and biodiversity credits from ecological regeneration projects.',
   peers: {
     seeds: [
       {
@@ -87,14 +89,9 @@ export const regen: Chain = {
         address: '104.236.201.138:26656',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'regen-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'regen-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
@@ -153,8 +150,8 @@ export const regen: Chain = {
         provider: 'w3coins',
       },
       {
-        address: 'https://regen-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://regen-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
@@ -192,7 +189,7 @@ export const regen: Chain = {
       },
       {
         address: 'https://regen-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -210,7 +207,7 @@ export const regen: Chain = {
       },
       {
         address: 'regen-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -273,8 +270,8 @@ export const regenAssetList: AssetLists = {
       display: 'regen',
       symbol: 'REGEN',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/regen/images/regen.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/regen/images/regen.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/regen/images/regen.svg',
       },
       coingecko_id: 'regen',
       images: [
@@ -302,8 +299,8 @@ export const regenAssetList: AssetLists = {
       display: 'nct',
       symbol: 'NCT',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/regen/images/nct.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/regen/images/nct.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/regen/images/nct.svg',
       },
       coingecko_id: 'toucan-protocol-nature-carbon-tonne',
       images: [

@@ -22,17 +22,17 @@ export const celestiatestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/celestiaorg/celestia-app',
-    recommended_version: 'v0.12.0',
-    compatible_versions: ['v0.12.0'],
+    recommended_version: 'v1.1.0',
+    compatible_versions: ['v1.1.0'],
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/celestiaorg/networks/master/blockspacerace/genesis.json',
     },
     versions: [
       {
-        name: 'v0.12.0',
-        recommended_version: 'v0.12.0',
-        compatible_versions: ['v0.12.0'],
+        name: 'v1.1.0',
+        recommended_version: 'v1.1.0',
+        compatible_versions: ['v1.1.0'],
       },
     ],
   },

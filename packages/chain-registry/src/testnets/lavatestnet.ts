@@ -80,19 +80,18 @@ export const lavatestnet: Chain = {
   },
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.png',
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.png',
       theme: {
         primary_color_hex: '#D7001F',
       },
     },
     {
-      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.svg',
     },
   ],
   logo_URIs: {
-    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.png',
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.svg',
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.png',
   },
   peers: {
     seeds: [
@@ -119,11 +118,19 @@ export const lavatestnet: Chain = {
         address: 'https://https://public-rpc-testnet2.lavanet.xyz/',
         provider: 'Lava',
       },
+      {
+        address: 'http://lava.rpc.t.stavr.tech:198',
+        provider: '🔥STAVR🔥',
+      },
     ],
     rest: [
       {
         address: 'https://public-rpc-testnet2.lavanet.xyz/rest/',
         provider: 'Lava',
+      },
+      {
+        address: 'https://lava.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
     ],
   },
@@ -133,6 +140,13 @@ export const lavatestnet: Chain = {
       url: 'https://lava.explorers.guru/',
       tx_page: 'https://lava.explorers.guru//transaction/${txHash}',
       account_page: 'https://lava.explorers.guru//account/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Lava-Testnet',
+      tx_page: 'https://explorer.stavr.tech/Lava-Testnet/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Lava-Testnet/account/${accountAddress}',
     },
   ],
   keywords: ['rpc', 'api'],
@@ -159,12 +173,12 @@ export const lavatestnetAssetList: AssetLists = {
       display: 'lava',
       symbol: 'LAVA',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.svg',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.svg',
       },
       keywords: ['rpc', 'api'],
       images: [
         {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/lava/images/lava-icon.svg',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/lavatestnet/images/lava-icon.svg',
         },
       ],
     },

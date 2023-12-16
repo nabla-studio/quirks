@@ -135,14 +135,14 @@ export const tenet: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'tenet-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'tenet-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: 'abcf18cbad7c83a19cbbde9d3bbe574657f35f56',
+        address: 'p2p.tenet.safeblock.space:26656',
+        provider: 'Safe Block',
       },
     ],
   },
@@ -157,12 +157,12 @@ export const tenet: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://rpc-tenet.nodeist.net',
-        provider: 'Nodeist',
+        address: 'https://tenet-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://tenet-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://rpc.tenet.safeblock.space',
+        provider: 'Safe Block',
       },
     ],
     rest: [
@@ -175,22 +175,26 @@ export const tenet: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://api-tenet.nodeist.net',
-        provider: 'Nodeist',
+        address: 'https://tenet-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://tenet-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://api.tenet.safeblock.space',
+        provider: 'Safe Block',
       },
     ],
     grpc: [
       {
         address: 'tenet-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'kichain-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
+        address: 'grpc.tenet.safeblock.space:9090',
+        provider: 'Safe Block',
       },
     ],
     'evm-http-jsonrpc': [
@@ -200,7 +204,11 @@ export const tenet: Chain = {
       },
       {
         address: 'https://tenet-evm.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://evm.tenet.safeblock.space',
+        provider: 'Safe Block',
       },
     ],
   },
@@ -214,6 +222,20 @@ export const tenet: Chain = {
       kind: 'Nodeist Explorer',
       url: 'https://exp.nodeist.net/Tenet',
       tx_page: 'https://exp.nodeist.net/Tenet/tx/${txHash}',
+    },
+    {
+      kind: 'TC Network',
+      url: 'https://explorer.tcnetwork.io/tenet',
+      tx_page: 'https://explorer.tcnetwork.io/tenet/transaction/${txHash}',
+      account_page:
+        'https://explorer.tcnetwork.io/tenet/account/${accountAddress}',
+    },
+    {
+      kind: 'Safe Block',
+      url: 'https://explorer.safeblock.space/tenet',
+      tx_page: 'https://explorer.safeblock.space/tenet/tx/${txHash}',
+      account_page:
+        'https://explorer.safeblock.space/tenet/account/${accountAddress}',
     },
   ],
   images: [
@@ -245,8 +267,8 @@ export const tenetAssetList: AssetLists = {
       display: 'tenet',
       symbol: 'TENET',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/tenet/images/tenet.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/tenet/images/tenet.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/tenet/images/tenet.svg',
       },
       coingecko_id: 'tenet-1b000f7b-59cb-4e06-89ce-d62b32d362b9',
       images: [

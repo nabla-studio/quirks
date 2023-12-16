@@ -249,14 +249,9 @@ export const terra: Chain = {
         provider: 'www.inotel.ro',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'terra-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'terra-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -284,8 +279,8 @@ export const terra: Chain = {
         provider: 'Terra Rebels',
       },
       {
-        address: 'https://terra-classic-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://terra-classic-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://rpc-terra-ia.cosmosia.notional.ventures/',
@@ -307,7 +302,7 @@ export const terra: Chain = {
       },
       {
         address: 'https://terra-classic-lcd.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://api-terra-ia.cosmosia.notional.ventures/',
@@ -329,7 +324,7 @@ export const terra: Chain = {
       },
       {
         address: 'terra-classic-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'grpc-terra-ia.cosmosia.notional.ventures:443',
@@ -404,8 +399,8 @@ export const terraAssetList: AssetLists = {
       display: 'luna',
       symbol: 'LUNC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/luna.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/luna.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/luna.svg',
       },
       coingecko_id: 'terra-luna',
       images: [
@@ -439,8 +434,8 @@ export const terraAssetList: AssetLists = {
       display: 'ust',
       symbol: 'USTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/ust.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/ust.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/ust.svg',
       },
       coingecko_id: 'terrausd',
       images: [
@@ -474,8 +469,8 @@ export const terraAssetList: AssetLists = {
       display: 'krt',
       symbol: 'KRTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/krt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/krt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/krt.svg',
       },
       coingecko_id: 'terrakrw',
       images: [
@@ -5249,8 +5244,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicAUD',
       symbol: 'AUTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/aut.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/aut.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/aut.svg',
       },
       images: [
         {
@@ -5283,8 +5278,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicCAD',
       symbol: 'CATC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/cat.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/cat.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/cat.svg',
       },
       images: [
         {
@@ -5317,8 +5312,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicCHF',
       symbol: 'CHTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/cht.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/cht.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/cht.svg',
       },
       images: [
         {
@@ -5351,8 +5346,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicCNY',
       symbol: 'CNTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/cnt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/cnt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/cnt.svg',
       },
       images: [
         {
@@ -5385,8 +5380,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicDKK',
       symbol: 'DKTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/dkt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/dkt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/dkt.svg',
       },
       images: [
         {
@@ -5419,8 +5414,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicEUR',
       symbol: 'EUTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/eut.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/eut.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/eut.svg',
       },
       images: [
         {
@@ -5453,8 +5448,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicGBP',
       symbol: 'GBTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/gbt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/gbt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/gbt.svg',
       },
       images: [
         {
@@ -5487,8 +5482,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicHKD',
       symbol: 'HKTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/hkt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/hkt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/hkt.svg',
       },
       images: [
         {
@@ -5521,8 +5516,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicIDR',
       symbol: 'IDTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/idt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/idt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/idt.svg',
       },
       images: [
         {
@@ -5555,8 +5550,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicINR',
       symbol: 'INTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/int.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/int.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/int.svg',
       },
       images: [
         {
@@ -5589,8 +5584,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicJPY',
       symbol: 'JPTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/jpt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/jpt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/jpt.svg',
       },
       images: [
         {
@@ -5623,8 +5618,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicMNT',
       symbol: 'MNTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/mnt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/mnt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/mnt.svg',
       },
       images: [
         {
@@ -5657,8 +5652,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicMYR',
       symbol: 'MYTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/myt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/myt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/myt.svg',
       },
       images: [
         {
@@ -5691,8 +5686,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicNOK',
       symbol: 'NOTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/not.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/not.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/not.svg',
       },
       images: [
         {
@@ -5725,8 +5720,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicPHP',
       symbol: 'PHTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/pht.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/pht.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/pht.svg',
       },
       images: [
         {
@@ -5759,8 +5754,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicSDR',
       symbol: 'SDTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/sdt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/sdt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/sdt.svg',
       },
       images: [
         {
@@ -5793,8 +5788,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicSEK',
       symbol: 'SETC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/set.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/set.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/set.svg',
       },
       images: [
         {
@@ -5827,8 +5822,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicSGD',
       symbol: 'SGTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/sgt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/sgt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/sgt.svg',
       },
       images: [
         {
@@ -5861,8 +5856,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicTHB',
       symbol: 'THTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/tht.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/tht.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/tht.svg',
       },
       images: [
         {
@@ -5895,8 +5890,8 @@ export const terraAssetList: AssetLists = {
       name: 'TerraClassicTWD',
       symbol: 'TWTC',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/twt.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/twt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/twt.svg',
       },
       images: [
         {

@@ -89,8 +89,8 @@ export const logosAssetList: AssetLists = {
       display: 'LYT',
       symbol: 'LYT',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/logos/images/logos.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/logos/images/logos.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/logos/images/logos.svg',
       },
       images: [
         {

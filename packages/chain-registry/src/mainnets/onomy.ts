@@ -157,8 +157,8 @@ export const onomyAssetList: AssetLists = {
       display: 'nom',
       symbol: 'NOM',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/onomy/images/nom.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/onomy/images/nom.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/onomy/images/nom.svg',
       },
       keywords: ['dex', 'stablecoin', 'bridge', 'staking'],
       coingecko_id: 'onomy-protocol',

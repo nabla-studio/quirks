@@ -237,6 +237,10 @@ export const elystestnet: Chain = {
         provider: 'Elys Network',
       },
       {
+        address: 'https://elys.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://elys-testnet-rest.staketab.org',
         provider: 'Staketab',
       },
@@ -249,6 +253,13 @@ export const elystestnet: Chain = {
     ],
   },
   explorers: [
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Elys-Testnet',
+      tx_page: 'https://explorer.stavr.tech/Elys-Testnet/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Elys-Testnet/account/${accountAddress}',
+    },
     {
       kind: 'ping.pub',
       url: 'https://testnet.elys.network/elys',

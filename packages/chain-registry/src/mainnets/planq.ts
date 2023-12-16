@@ -139,8 +139,8 @@ export const planq: Chain = {
         provider: 'sxlzptprjkt | VALIDATOR',
       },
       {
-        id: 'ade226fc22aec100ce5279d6ffc1708563045d9e',
-        address: 'rpc.planq.indonode.net:14656',
+        id: '2702b546525dd402197483121800a09edd4edea1',
+        address: 'rpc.planq.indonode.net:10656',
         provider: 'Indonode',
       },
       {
@@ -152,6 +152,11 @@ export const planq: Chain = {
         id: 'c48fd9194479c2f462bded977cfff7fa46327d17',
         address: '95.214.55.138:28656',
         provider: 'genznodes',
+      },
+      {
+        id: 'e755cbe005d920e5bca555f14251abae464b6a54',
+        address: 'p2p.planq.safeblock.space:26656',
+        provider: 'Safe Block',
       },
     ],
   },
@@ -170,36 +175,24 @@ export const planq: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://rpc-planq.nodine.id',
-        provider: 'Nodine.id',
-      },
-      {
-        address: 'https://rpc-planq.comunitynode.my.id',
-        provider: 'ComunityNode',
-      },
-      {
         address: 'https://planq-rpc.kynraze.com',
         provider: 'Kynraze',
-      },
-      {
-        address: 'https://rpc-planq.sxlzptprjkt.xyz',
-        provider: 'sxlzptprjkt | VALIDATOR',
-      },
-      {
-        address: 'https://rpc.planq.nodexcapital.com',
-        provider: 'NodeX Validator',
       },
       {
         address: 'https://rpc.planq.indonode.net',
         provider: 'Indonode',
       },
       {
-        address: 'https://rpc.planq.hexnodes.co',
-        provider: 'Hexnodes',
-      },
-      {
         address: 'https://planq-rpc.genznodes.dev',
         provider: 'genznodes',
+      },
+      {
+        address: 'https://rpc.planq.safeblock.space',
+        provider: 'Safe Block',
+      },
+      {
+        address: 'https://planq.rpc.skynodejs.net',
+        provider: 'skynodejs',
       },
     ],
     rest: [
@@ -208,44 +201,28 @@ export const planq: Chain = {
         provider: 'planq.network',
       },
       {
-        address: 'https://planq.api.bccnodes.com',
-        provider: 'BccNodes',
-      },
-      {
         address: 'https://api.planq.nodestake.top',
         provider: 'NodeStake',
-      },
-      {
-        address: 'https://api-planq.nodine.id',
-        provider: 'Nodine.ID',
-      },
-      {
-        address: 'https://api-planq.comunitynode.my.id',
-        provider: 'ComunityNode',
       },
       {
         address: 'https://planq-api.kynraze.com',
         provider: 'Kynraze',
       },
       {
-        address: 'https://api-planq.sxlzptprjkt.xyz',
-        provider: 'sxlzptprjkt | VALIDATOR',
-      },
-      {
-        address: 'https://rest.planq.nodexcapital.com',
-        provider: 'NodeX Validator',
-      },
-      {
         address: 'https://api.planq.indonode.net',
         provider: 'Indonode',
       },
       {
-        address: 'https://lcd.planq.hexnodes.co',
-        provider: 'Hexnodes',
-      },
-      {
         address: 'https://planq-api.genznodes.dev',
         provider: 'genznodes',
+      },
+      {
+        address: 'https://api.planq.safeblock.space',
+        provider: 'Safe Block',
+      },
+      {
+        address: 'https://planq.api.skynodejs.net',
+        provider: 'skynodejs',
       },
     ],
     grpc: [
@@ -274,16 +251,20 @@ export const planq: Chain = {
         provider: 'NodeX Validator',
       },
       {
-        address: 'https://grpc.planq.indonode.net:14090',
-        provider: 'Indonode',
-      },
-      {
         address: 'https://grpc.planq.hexnodes.co:33090',
         provider: 'Hexnodes',
       },
       {
         address: 'planq-grpc.genznodes.dev:28090',
         provider: 'genznodes',
+      },
+      {
+        address: 'grpc.planq.safeblock.space:9090',
+        provider: 'Safe Block',
+      },
+      {
+        address: 'https://planq.grpc.skynodejs.net',
+        provider: 'skynodejs',
       },
     ],
     'evm-http-jsonrpc': [
@@ -306,6 +287,10 @@ export const planq: Chain = {
       {
         address: 'https://planq-rpc-evm.genznodes.dev',
         provider: 'genznodes',
+      },
+      {
+        address: 'https://evm.planq.safeblock.space',
+        provider: 'Safe Block',
       },
     ],
   },
@@ -351,6 +336,16 @@ export const planq: Chain = {
       tx_page: 'https://atomscan.com/planq/transactions/${txHash}',
       account_page: 'https://atomscan.com/planq/accounts/${accountAddress}',
     },
+    {
+      kind: 'Indonode',
+      url: 'https://explorer.indonode.net/planq',
+      tx_page: 'https://explorer.indonode.net/planq/tx/${txHash}',
+    },
+    {
+      kind: 'Safe Block',
+      url: 'https://explorer.safeblock.space/planq',
+      tx_page: 'https://explorer.safeblock.space/planq/tx/${txHash}',
+    },
   ],
   images: [
     {
@@ -382,8 +377,8 @@ export const planqAssetList: AssetLists = {
       display: 'planq',
       symbol: 'PLQ',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.svg',
       },
       coingecko_id: 'planq',
       images: [

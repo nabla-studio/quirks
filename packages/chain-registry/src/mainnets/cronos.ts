@@ -70,17 +70,17 @@ export const cronos: Chain = {
       {
         id: '0d5cf1394a1cfde28dc8f023567222abc0f47534',
         address: 'cronos-seed-0.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: '3032073adc06d710dd512240281637c1bd0c8a7b',
         address: 'cronos-seed-1.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: '04f43116b4c6c70054d9c2b7485383df5b1ed1da',
         address: 'cronos-seed-2.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: '337377dcda43d79c537d2c4d93ad3b698ce9452e',
@@ -93,31 +93,26 @@ export const cronos: Chain = {
         provider: "Jerry's Pool",
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'cronos-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'cronos-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
       {
         id: '0d5cf1394a1cfde28dc8f023567222abc0f47534',
         address: 'cronos-seed-0.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: '3032073adc06d710dd512240281637c1bd0c8a7b',
         address: 'cronos-seed-1.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: '04f43116b4c6c70054d9c2b7485383df5b1ed1da',
         address: 'cronos-seed-2.crypto.org:26656',
-        provider: 'crypto-org',
+        provider: 'cronos.org',
       },
       {
         id: '337377dcda43d79c537d2c4d93ad3b698ce9452e',
@@ -130,45 +125,37 @@ export const cronos: Chain = {
     rpc: [
       {
         address: 'https://rpc.cronos.org/',
-        provider: 'crypto.org',
+        provider: 'cronos.org',
       },
       {
-        address: 'https://rpc-cronos.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
-        address: 'https://cronos-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://cronos-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
       {
         address: 'https://rest.cronos.org/',
-        provider: 'crypto.org',
-      },
-      {
-        address: 'https://api-cronos.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
+        provider: 'cronos.org',
       },
       {
         address: 'https://cronos-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
       {
-        address: 'cronos-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'grpc.cronos.org:443',
+        provider: 'cronos.org',
       },
       {
-        address: 'grpc-cronos.cosmos-spaces.cloud:1170',
-        provider: 'Cosmos Spaces',
+        address: 'cronos-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     'evm-http-jsonrpc': [
       {
         address: 'https://evm.cronos.org/',
-        provider: 'crypto.org',
+        provider: 'cronos.org',
       },
       {
         address: 'https://cronos-evm.publicnode.com',
@@ -217,17 +204,28 @@ export const cronosAssetList: AssetLists = {
       name: 'Cronos',
       display: 'cro',
       symbol: 'CRO',
-      logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cro.svg',
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cronos.png',
-      },
-      coingecko_id: 'crypto-com-chain',
+      traces: [
+        {
+          type: 'additional-mintage',
+          counterparty: {
+            chain_name: 'cryptoorgchain',
+            base_denom: 'basecro',
+          },
+          provider: 'Cronos',
+        },
+      ],
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cronos.png',
+          image_sync: {
+            chain_name: 'cryptoorgchain',
+            base_denom: 'basecro',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cro.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cro.svg',
+      },
     },
     {
       description: 'Tether USDt on Cronos',
@@ -257,7 +255,7 @@ export const cronosAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-11',
-            path: 'transfer/channel-11',
+            path: 'transfer/channel-11/erc20/tether/usdt',
           },
         },
       ],
@@ -267,8 +265,12 @@ export const cronosAssetList: AssetLists = {
             chain_name: 'kava',
             base_denom: 'erc20/tether/usdt',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
     },
   ],
 };

@@ -33,26 +33,26 @@ export const provenance: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/provenance-io/provenance',
-    recommended_version: 'v1.16.0',
-    compatible_versions: ['v1.16.0'],
+    recommended_version: 'v1.17.0',
+    compatible_versions: ['v1.17.0'],
+    cosmos_sdk_version: '0.46.13',
+    consensus: {
+      type: 'tendermint',
+      version: '0.34.29',
+    },
+    cosmwasm_version: '0.30',
+    cosmwasm_enabled: true,
+    ibc_go_version: '6.2.0',
+    ics_enabled: ['ics20-1', 'ics27-1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/provenance-io/provenance/releases/download/v1.16.0/provenance-linux-amd64-v1.16.0.zip',
+        'https://github.com/provenance-io/provenance/releases/download/v1.17.0/provenance-linux-amd64-v1.17.0.zip',
     },
     genesis: {
       name: 'v1.0.1',
       genesis_url:
         'https://raw.githubusercontent.com/provenance-io/mainnet/main/pio-mainnet-1/genesis.json',
     },
-    cosmos_sdk_version: '0.46.13',
-    consensus: {
-      type: 'tendermint',
-      version: '0.34.28',
-    },
-    cosmwasm_version: '0.30',
-    cosmwasm_enabled: true,
-    ibc_go_version: '6.2.0',
-    ics_enabled: ['ics20-1', 'ics27-1'],
     versions: [
       {
         name: 'v1.0.1',
@@ -208,6 +208,26 @@ export const provenance: Chain = {
             'https://github.com/provenance-io/provenance/releases/download/v1.16.0/provenance-linux-amd64-v1.16.0.zip',
         },
       },
+      {
+        name: 'saffron',
+        tag: 'v1.17.0',
+        height: 13736000,
+        recommended_version: 'v1.17.0',
+        compatible_versions: ['v1.17.0'],
+        cosmos_sdk_version: '0.46.13',
+        consensus: {
+          type: 'tendermint',
+          version: '0.34.29',
+        },
+        cosmwasm_version: '0.30',
+        cosmwasm_enabled: true,
+        ibc_go_version: '6.2.0',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/provenance-io/provenance/releases/download/v1.17.0/provenance-linux-amd64-v1.17.0.zip',
+        },
+      },
     ],
   },
   logo_URIs: {
@@ -275,6 +295,10 @@ export const provenance: Chain = {
         address: 'https://provenance-rpc.panthea.eu',
         provider: 'Panthea EU',
       },
+      {
+        address: 'https://rpc.provenance.blockval.io/',
+        provider: 'Blockval',
+      },
     ],
     rest: [
       {
@@ -305,6 +329,10 @@ export const provenance: Chain = {
         address: 'https://provenance-api.panthea.eu',
         provider: 'Panthea EU',
       },
+      {
+        address: 'https://api.provenance.blockval.io',
+        provider: 'Blockval',
+      },
     ],
     grpc: [
       {
@@ -318,6 +346,14 @@ export const provenance: Chain = {
       {
         address: 'grpc-provenance-ia.cosmosia.notional.ventures:443',
         provider: 'Notional',
+      },
+      {
+        address: 'provenance-grpc.panthea.eu:16780',
+        provider: 'Panthea EU',
+      },
+      {
+        address: 'grpc.provenance.blockval.io:9290',
+        provider: 'Blockval',
       },
     ],
   },

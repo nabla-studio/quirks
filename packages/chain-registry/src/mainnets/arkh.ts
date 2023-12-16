@@ -76,18 +76,6 @@ export const arkh: Chain = {
         address: 'https://rpc.arkh.nodestake.top',
         provider: 'NodeStake',
       },
-      {
-        address: 'https://rpc-arkhadian.comunitynode.my.id',
-        provider: 'ComunityNode',
-      },
-      {
-        address: 'https://arkh-rpc.kynraze.com',
-        provider: 'Kynraze',
-      },
-      {
-        address: 'https://rpc.arkh.nodexcapital.com',
-        provider: 'NodeX Validator',
-      },
     ],
     rest: [
       {
@@ -97,18 +85,6 @@ export const arkh: Chain = {
       {
         address: 'https://api.arkh.nodestake.top',
         provider: 'NodeStake',
-      },
-      {
-        address: 'https://api-arkhadian.comunitynode.my.id',
-        provider: 'ComunityNode',
-      },
-      {
-        address: 'https://arkh-api.kynraze.com',
-        provider: 'Kynraze',
-      },
-      {
-        address: 'https://rest.arkh.nodexcapital.com',
-        provider: 'NodeX Validator',
       },
     ],
     grpc: [
@@ -168,8 +144,8 @@ export const arkhAssetList: AssetLists = {
       display: 'ARKH',
       symbol: 'ARKH',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/arkh/images/arkh.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/arkh/images/arkh.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/arkh/images/arkh.svg',
       },
       images: [
         {

@@ -17,6 +17,9 @@ export const akash: Chain = {
       {
         denom: 'uakt',
         fixed_min_gas_price: 0,
+        low_gas_price: 0.00025,
+        average_gas_price: 0.0025,
+        high_gas_price: 0.025,
       },
     ],
   },
@@ -29,13 +32,13 @@ export const akash: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/akash-network/node/',
-    recommended_version: 'v0.26.1',
-    compatible_versions: ['v0.26.1'],
+    recommended_version: 'v0.30.0',
+    compatible_versions: ['v0.30.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/akash-network/node/releases/download/v0.26.1/akash_linux_amd64.zip',
+        'https://github.com/akash-network/node/releases/download/v0.30.0/akash_linux_amd64.zip',
       'linux/arm64':
-        'https://github.com/akash-network/node/releases/download/v0.26.1/akash_linux_arm64.zip',
+        'https://github.com/akash-network/node/releases/download/v0.30.0/akash_linux_arm64.zip',
     },
     genesis: {
       genesis_url:
@@ -68,15 +71,43 @@ export const akash: Chain = {
       },
       {
         name: 'v0.26.0',
-        recommended_version: 'v0.26.1',
-        compatible_versions: ['v0.26.1'],
+        recommended_version: 'v0.26.2',
+        compatible_versions: ['v0.26.1', 'v0.26.2'],
         proposal: 231,
         height: 12992204,
         binaries: {
           'linux/amd64':
-            'https://github.com/akash-network/node/releases/download/v0.26.1/akash_linux_amd64.zip',
+            'https://github.com/akash-network/node/releases/download/v0.26.2/akash_linux_amd64.zip',
           'linux/arm64':
-            'https://github.com/akash-network/node/releases/download/v0.26.1/akash_linux_arm64.zip',
+            'https://github.com/akash-network/node/releases/download/v0.26.2/akash_linux_arm64.zip',
+        },
+        next_version_name: 'v0.28.0',
+      },
+      {
+        name: 'v0.28.0',
+        recommended_version: 'v0.28.2',
+        compatible_versions: ['v0.28.2'],
+        proposal: 237,
+        height: 13759618,
+        binaries: {
+          'linux/amd64':
+            'https://github.com/akash-network/node/releases/download/v0.28.2/akash_linux_amd64.zip',
+          'linux/arm64':
+            'https://github.com/akash-network/node/releases/download/v0.28.2/akash_linux_arm64.zip',
+        },
+        next_version_name: 'v0.30.0',
+      },
+      {
+        name: 'v0.30.0',
+        recommended_version: 'v0.30.0',
+        compatible_versions: ['v0.30.0'],
+        proposal: 238,
+        height: 1388074,
+        binaries: {
+          'linux/amd64':
+            'https://github.com/akash-network/node/releases/download/v0.30.0/akash_linux_amd64.zip',
+          'linux/arm64':
+            'https://github.com/akash-network/node/releases/download/v0.30.0/akash_linux_arm64.zip',
         },
         next_version_name: '',
       },
@@ -86,6 +117,8 @@ export const akash: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/akash/images/akt.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/akash/images/akt.svg',
   },
+  description:
+    'Akash is open-source Supercloud that lets users buy and sell computing resources securely and efficiently. Purpose-built for public utility.',
   peers: {
     seeds: [
       {
@@ -120,19 +153,18 @@ export const akash: Chain = {
         address: 'rpc.la.akash.farm:26656',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'akash-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'akash-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '9aa4c9097c818871e45aaca4118a9fe5e86c60e2',
         address: 'seed-akash-01.stakeflow.io:1506',
         provider: 'Stakeflow',
+      },
+      {
+        id: '61686e588f0af938484579adbc2093adff06c7aa',
+        address: 'europlots.com:26656',
       },
     ],
     persistent_peers: [
@@ -199,10 +231,6 @@ export const akash: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://akash.rpc.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'https://akash-rpc.kleomedes.network',
         provider: 'Kleomedes',
       },
@@ -219,8 +247,8 @@ export const akash: Chain = {
         provider: 'w3coins',
       },
       {
-        address: 'https://akash-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://akash-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://akash-rpc.validatornode.com',
@@ -261,10 +289,6 @@ export const akash: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://akash.rest.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'https://akash-api.kleomedes.network',
         provider: 'Kleomedes',
       },
@@ -282,7 +306,7 @@ export const akash: Chain = {
       },
       {
         address: 'https://akash-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://akash-api.validatornode.com',
@@ -311,10 +335,6 @@ export const akash: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'akash.grpc.interchain.ivaldilabs.xyz:443',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'grpc-akash-01.stakeflow.io:1502',
         provider: 'Stakeflow',
       },
@@ -324,7 +344,7 @@ export const akash: Chain = {
       },
       {
         address: 'akash-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -442,7 +462,7 @@ export const akashAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-2',
-            path: 'transfer/channel-2',
+            path: 'transfer/channel-2/erc20/tether/usdt',
           },
         },
       ],
@@ -452,8 +472,12 @@ export const akashAssetList: AssetLists = {
             chain_name: 'kava',
             base_denom: 'erc20/tether/usdt',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
     },
   ],
 };

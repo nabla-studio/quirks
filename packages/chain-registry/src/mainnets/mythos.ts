@@ -84,8 +84,8 @@ export const mythosAssetList: AssetLists = {
       display: 'MYT',
       symbol: 'MYT',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mythos/images/mythos.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mythos/images/mythos.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mythos/images/mythos.svg',
       },
       images: [
         {

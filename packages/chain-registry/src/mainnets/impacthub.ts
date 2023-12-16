@@ -19,8 +19,8 @@ export const impacthub: Chain = {
         denom: 'uixo',
         fixed_min_gas_price: 0.025,
         low_gas_price: 0.025,
-        average_gas_price: 0.4,
-        high_gas_price: 0.1,
+        average_gas_price: 0.025,
+        high_gas_price: 0.04,
       },
     ],
   },
@@ -198,8 +198,8 @@ export const impacthubAssetList: AssetLists = {
       display: 'ixo',
       symbol: 'IXO',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthub/images/ixo.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthub/images/ixo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/impacthub/images/ixo.svg',
       },
       coingecko_id: 'ixo',
       images: [

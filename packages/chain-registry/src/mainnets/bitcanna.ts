@@ -129,8 +129,8 @@ export const bitcanna: Chain = {
         provider: 'AVIAONE 🟢',
       },
       {
-        id: 'ee0f401697311bd1eb01653c1c7747ce32290569',
-        address: '95.216.7.136:3656',
+        id: '33ab202dfef5e08d5d0346e7b3cfaab2a946198a',
+        address: 'seeds.bitcanna-mainnet.hexnodes.co:27656',
         provider: 'Hexnodes',
       },
       {
@@ -157,6 +157,11 @@ export const bitcanna: Chain = {
         id: '09ba537d6563018b97c502979c3478df4decf426',
         address: 'bitcanna-seed.genznodes.dev:20656',
         provider: 'genznodes',
+      },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -236,14 +241,19 @@ export const bitcanna: Chain = {
         provider: 'NODEJUMPER',
       },
       {
-        id: '2fd464b75c19b4e330c7f6e7ec9451504efe132a',
-        address: 'rpc.bitcanna.indonode.net:27656',
-        provider: 'Indonode',
-      },
-      {
         id: 'd2cb1f04b351e82dada97794d32a468dd71d6a84',
         address: 'peer-bitcanna.mms.team:56104',
         provider: 'MMS',
+      },
+      {
+        id: '88497ab3bbbcc1e8545771f45020e738bcce590f',
+        address: '95.165.89.222:26756',
+        provider: 'MaxFoton nodes',
+      },
+      {
+        id: 'a70da421632d3dbbb6de3712474bd564ac5653e1',
+        address: 'p2p.bitcanna.safeblock.space:26656',
+        provider: 'Safe Block',
       },
     ],
   },
@@ -298,7 +308,7 @@ export const bitcanna: Chain = {
         provider: 'AVIAONE 🟢',
       },
       {
-        address: 'https://rpc.bitcanna.hexnodes.co',
+        address: 'https://rpc.bitcanna-mainnet.hexnodes.co',
         provider: 'Hexnodes',
       },
       {
@@ -345,6 +355,14 @@ export const bitcanna: Chain = {
         address: 'https://bitcanna-rpc.validatornode.com',
         provider: 'ValidatorNode',
       },
+      {
+        address: 'https://bcna.rpc.arcturian.tech/',
+        provider: 'Arcturian Tech',
+      },
+      {
+        address: 'https://bitcanna-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -360,7 +378,7 @@ export const bitcanna: Chain = {
         provider: '🔥STAVR🔥',
       },
       {
-        address: 'grpc.bitcanna.hexnodes.co:21090',
+        address: 'grpc.bitcanna-mainnet.hexnodes.co:27090',
         provider: 'HexNodes',
       },
       {
@@ -390,6 +408,22 @@ export const bitcanna: Chain = {
       {
         address: 'bitcanna.grpc.m.anode.team:443',
         provider: 'AlxVoy ⚡ ANODE.TEAM',
+      },
+      {
+        address: 'bitcanna-grpc.panthea.eu:16710',
+        provider: 'Panthea EU',
+      },
+      {
+        address: 'https://grpc.bitcanna.indonode.net:11090',
+        provider: 'Indonode',
+      },
+      {
+        address: 'bitcanna-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'grpc.bitcanna.safeblock.space:9090',
+        provider: 'Safe Block',
       },
     ],
     rest: [
@@ -442,7 +476,7 @@ export const bitcanna: Chain = {
         provider: 'AVIAONE 🟢',
       },
       {
-        address: 'https://lcd.bitcanna.hexnodes.co',
+        address: 'https://lcd.bitcanna-mainnet.hexnodes.co',
         provider: 'Hexnodes',
       },
       {
@@ -480,6 +514,18 @@ export const bitcanna: Chain = {
       {
         address: 'https://bitcanna-api.validatornode.com',
         provider: 'ValidatorNode',
+      },
+      {
+        address: 'https://bcna.api.arcturian.tech/',
+        provider: 'Arcturian Tech',
+      },
+      {
+        address: 'https://api.bitcanna.indonode.net/',
+        provider: 'Indonode',
+      },
+      {
+        address: 'https://bitcanna-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -532,6 +578,25 @@ export const bitcanna: Chain = {
       tx_page: 'https://main.anode.team/bitcanna/txs/${txHash}',
       account_page:
         'https://main.anode.team/bitcanna/account/${accountAddress}',
+    },
+    {
+      kind: 'Moonbys Dashboard',
+      url: 'https://explorer.moonbys.com',
+      tx_page: 'https://explorer.moonbys.com/tx/${txHash}',
+      account_page:
+        'https://explorer.moonbys.com/bitcanna/account/${accountAddress}',
+    },
+    {
+      kind: 'Indonode',
+      url: 'https://explorer.indonode.net/bitcanna',
+      tx_page: 'https://explorer.indonode.net/bitcanna/tx/${txHash}',
+    },
+    {
+      kind: 'Safe Block',
+      url: 'https://explorer.safeblock.space/bitcanna',
+      tx_page: 'https://explorer.safeblock.space/bitcanna/tx/${txHash}',
+      account_page:
+        'https://explorer.safeblock.space/bitcanna/account/${accountAddress}',
     },
   ],
   images: [

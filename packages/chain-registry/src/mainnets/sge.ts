@@ -17,6 +17,9 @@ export const sge: Chain = {
       {
         denom: 'usge',
         fixed_min_gas_price: 0.001,
+        low_gas_price: 0.1,
+        average_gas_price: 0.25,
+        high_gas_price: 0.5,
       },
     ],
   },
@@ -29,8 +32,14 @@ export const sge: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sge-network/sge',
-    recommended_version: 'v1.1.0',
-    compatible_versions: ['v1.1.0'],
+    recommended_version: 'v1.1.1',
+    compatible_versions: ['v1.1.1'],
+    cosmos_sdk_version: 'v0.46.14',
+    ibc_go_version: 'v5.3.1',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.34.29',
+    },
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/sge-network/networks/master/mainnet/sgenet-1/genesis.json',
@@ -40,6 +49,27 @@ export const sge: Chain = {
         name: 'v1.1.0',
         recommended_version: 'v1.1.0',
         compatible_versions: ['v1.1.0'],
+        cosmos_sdk_version: 'v0.46.14',
+        ibc_go_version: 'v5.2.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        next_version_name: 'v1.1.1',
+      },
+      {
+        name: 'v1.1.1',
+        recommended_version: 'v1.1.1',
+        compatible_versions: ['v1.1.1'],
+        proposal: 1,
+        height: 1097000,
+        cosmos_sdk_version: 'v0.46.14',
+        ibc_go_version: 'v5.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        next_version_name: '',
       },
     ],
   },
@@ -97,6 +127,11 @@ export const sge: Chain = {
         provider: 'NodeStake',
       },
       {
+        id: '5dcd45e5e1c49b87179993651abe04df01001159',
+        address: 'sge.peers.stavr.tech:1156',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: 'af9d9bd15ca597eb77dab73c56b0ae51bafcbb28',
         address: '142.132.202.86:16656',
         provider: 'ramuchi.tech',
@@ -110,6 +145,16 @@ export const sge: Chain = {
         id: '17da9d2fea9d6d431d390c3b9575547d8881da2b',
         address: '185.16.39.190:11156',
         provider: 'StakerHouse',
+      },
+      {
+        id: '7e82897f6fa112e11f0b8defda1a9290f90a5320',
+        address: 'p2p.sge.safeblock.space:33656',
+        provider: 'Safe Block',
+      },
+      {
+        id: '26238cbb6bf285816bd06ca946b190e7248c389c',
+        address: 'mainnet-sge.konsortech.xyz:22656',
+        provider: 'KonsorTech',
       },
     ],
   },
@@ -128,12 +173,36 @@ export const sge: Chain = {
         provider: 'Nodestake',
       },
       {
+        address: 'http://sge.rpc.m.stavr.tech:1157',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://rpc-sge.nodeist.net/',
         provider: 'Nodeist',
       },
       {
         address: 'https://sge-rpc.ramuchi.tech',
         provider: 'ramuchi.tech',
+      },
+      {
+        address: 'https://sge-rpc.stakerhouse.com',
+        provider: 'StakerHouse',
+      },
+      {
+        address: 'https://rpc.sge.tcnetwork.io',
+        provider: 'TC Network',
+      },
+      {
+        address: 'https://sge-rpc.sr20de.xyz',
+        provider: 'Sr20de',
+      },
+      {
+        address: 'https://rpc.sge.safeblock.space',
+        provider: 'Safe Block',
+      },
+      {
+        address: 'https://mainnet-sge-rpc.konsortech.xyz',
+        provider: 'KonsorTech',
       },
     ],
     rest: [
@@ -154,8 +223,32 @@ export const sge: Chain = {
         provider: 'Nodeist',
       },
       {
+        address: 'https://sge.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://sge-api.ramuchi.tech/',
         provider: 'ramuchi.tech',
+      },
+      {
+        address: 'https://sge-rest.stakerhouse.com',
+        provider: 'StakerHouse',
+      },
+      {
+        address: 'https://rest.sge.tcnetwork.io',
+        provider: 'TC Network',
+      },
+      {
+        address: 'https://sge-api.sr20de.xyz',
+        provider: 'Sr20de',
+      },
+      {
+        address: 'https://api.sge.safeblock.space',
+        provider: 'Safe Block',
+      },
+      {
+        address: 'https://mainnet-sge-api.konsortech.xyz',
+        provider: 'KonsorTech',
       },
     ],
     grpc: [
@@ -175,6 +268,22 @@ export const sge: Chain = {
         address: 'https://sge-grpc.ramuchi.tech:443',
         provider: 'ramuchi.tech',
       },
+      {
+        address: 'http://sge.grpc.m.stavr.tech:543',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'sge-grpc.stakerhouse.com:443',
+        provider: 'StakerHouse',
+      },
+      {
+        address: 'https://sge-grpc.sr20de.xyz',
+        provider: 'Sr20de',
+      },
+      {
+        address: 'mainnet-sge.konsortech.xyz:22090',
+        provider: 'KonsorTech',
+      },
     ],
   },
   explorers: [
@@ -192,6 +301,34 @@ export const sge: Chain = {
       kind: 'stakerhouse',
       url: 'https://cosmotracker.com/sge',
       tx_page: 'https://cosmotracker.com/sge/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Sge-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Sge-Mainnet/transaction/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Sge-Mainnet/account/${accountAddress}',
+    },
+    {
+      kind: 'TC Network',
+      url: 'https://explorer.tcnetwork.io/sge',
+      tx_page: 'https://explorer.tcnetwork.io/sge/transaction/${txHash}',
+      account_page:
+        'https://explorer.tcnetwork.io/sge/account/${accountAddress}',
+    },
+    {
+      kind: 'Safe Block',
+      url: 'https://explorer.safeblock.space/sge',
+      tx_page: 'https://explorer.safeblock.space/sge/tx/${txHash}',
+      account_page:
+        'https://explorer.safeblock.space/sge/account/${accountAddress}',
+    },
+    {
+      kind: 'KonsorTech',
+      url: 'https://explorer.konsortech.xyz/sge',
+      tx_page: 'https://explorer.konsortech.xyz/sge/tx/${txHash}',
+      account_page:
+        'https://explorer.konsortech.xyz/sge/account/${accountAddress}',
     },
   ],
   images: [
@@ -226,7 +363,7 @@ export const sgeAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sge/images/sge.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sge/images/sge.svg',
       },
-      coingecko_id: 'sge',
+      coingecko_id: 'six-sigma',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sge/images/sge.png',

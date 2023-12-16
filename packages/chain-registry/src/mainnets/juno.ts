@@ -41,45 +41,82 @@ export const juno: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/CosmosContracts/juno',
-    recommended_version: 'v17.1.1',
-    compatible_versions: ['v17.0.0', 'v17.1.1'],
-    cosmos_sdk_version: '0.47.3',
+    recommended_version: 'v18.0.0',
+    compatible_versions: ['v18.0.0'],
+    binaries: {
+      'linux/amd64':
+        'https://github.com/CosmosContracts/juno/releases/download/v18.0.0/junod',
+    },
+    cosmos_sdk_version: '0.47.5',
     consensus: {
       type: 'cometbft',
-      version: '0.34.2',
+      version: '0.37.2',
     },
-    cosmwasm_version: '0.40.2',
+    cosmwasm_version: '0.45.0',
     cosmwasm_enabled: true,
+    ibc_go_version: 'v7.3.1',
     genesis: {
       genesis_url: 'https://download.dimi.sh/juno-phoenix2-genesis.tar.gz',
     },
     versions: [
       {
         name: 'v13',
+        proposal: 271,
+        height: 7374801,
         recommended_version: 'v13.0.0',
         compatible_versions: ['v13.0.0'],
-        cosmos_sdk_version: '0.45',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CosmosContracts/juno/releases/download/v13.0.0/junod',
+        },
+        cosmos_sdk_version: '0.45.14',
         consensus: {
           type: 'tendermint',
-          version: '0.34',
+          version: 'informalsystems/tendermint v0.34.26',
         },
-        cosmwasm_version: '0.30',
+        cosmwasm_version: '0.30.0',
         cosmwasm_enabled: true,
+        ibc_go_version: 'v4.3.0',
         next_version_name: 'v14',
       },
       {
         name: 'v14',
+        proposal: 282,
         height: 7875721,
         recommended_version: 'v14.1.0',
         compatible_versions: ['v14.0.0', 'v14.1.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CosmosContracts/juno/releases/download/v14.1.0/junod',
+        },
+        cosmos_sdk_version: '0.45.15',
+        consensus: {
+          type: 'cometbft',
+          version: 'mev-cometbft v0.34.27-mev.18',
+        },
+        cosmwasm_version: '0.31.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v4.3.0',
         next_version_name: 'v15',
       },
       {
         name: 'v15',
+        proposal: 295,
         height: 8577241,
         recommended_version: 'v15.0.0',
-        proposal: 295,
         compatible_versions: ['v15.0.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CosmosContracts/juno/releases/download/v15.0.0/junod',
+        },
+        cosmos_sdk_version: '0.45.16',
+        consensus: {
+          type: 'cometbft',
+          version: 'mev-cometbft v0.34.27-mev.18',
+        },
+        cosmwasm_version: '0.31.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v4.3.1',
         next_version_name: 'v16',
       },
       {
@@ -88,6 +125,18 @@ export const juno: Chain = {
         height: 9481382,
         recommended_version: 'v16.0.2',
         compatible_versions: ['v16.0.0', 'v16.0.2'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CosmosContracts/juno/releases/download/v16.0.2/junod',
+        },
+        cosmos_sdk_version: '0.47.3',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        cosmwasm_version: '0.40.2',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.2.0',
         next_version_name: 'v17',
       },
       {
@@ -96,6 +145,38 @@ export const juno: Chain = {
         height: 10078449,
         recommended_version: 'v17.1.1',
         compatible_versions: ['v17.0.0', 'v17.1.1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CosmosContracts/juno/releases/download/v17.1.1/junod',
+        },
+        cosmos_sdk_version: '0.47.5',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        cosmwasm_version: '0.41.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.3.0',
+        next_version_name: 'v18',
+      },
+      {
+        name: 'v18',
+        proposal: 325,
+        height: 12265007,
+        recommended_version: 'v18.0.0',
+        compatible_versions: ['v18.0.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CosmosContracts/juno/releases/download/v18.0.0/junod',
+        },
+        cosmos_sdk_version: '0.47.5',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        cosmwasm_version: '0.45.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.3.1',
         next_version_name: '',
       },
     ],
@@ -104,6 +185,8 @@ export const juno: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/juno.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/juno.svg',
   },
+  description:
+    'Juno is a completely community owned and operated smart contract platform.',
   peers: {
     seeds: [
       {
@@ -131,14 +214,9 @@ export const juno: Chain = {
         provider: 'Golden Ratio Staking',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'juno-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'juno-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
@@ -182,8 +260,8 @@ export const juno: Chain = {
         provider: 'Stakeflow',
       },
       {
-        id: '2d447001642d1a455f7539eaf55c0bcbba0e567c',
-        address: '88.99.208.54:33656',
+        id: '397281b9fa745482127093f08ac05724c2b8d6f8',
+        address: '65.108.195.213:33656',
         provider: 'StakeTown',
       },
       {
@@ -244,14 +322,6 @@ export const juno: Chain = {
         provider: 'Kleomedes',
       },
       {
-        address: 'https://rpc.juno.interbloc.org',
-        provider: 'Interbloc',
-      },
-      {
-        address: 'https://juno.rpc.stakin-nodes.com',
-        provider: 'Stakin',
-      },
-      {
         address: 'https://juno-rpc.icycro.org',
         provider: 'IcyCRO 🧊',
       },
@@ -272,24 +342,8 @@ export const juno: Chain = {
         provider: 'Stake&Relax Validator 🦥',
       },
       {
-        address: 'https://juno-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://rpc-juno.architectnodes.com',
         provider: 'Architect Nodes',
-      },
-      {
-        address: 'https://juno.rpc.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
-      },
-      {
-        address: 'http://167.235.211.168:26657',
-        provider: 'CommunityStaking',
-      },
-      {
-        address: 'https://juno.rpc.silknodes.io',
-        provider: 'Silk Nodes',
       },
       {
         address: 'https://rpc-juno-01.stakeflow.io',
@@ -304,11 +358,11 @@ export const juno: Chain = {
         provider: 'w3coins',
       },
       {
-        address: 'https://juno-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://juno-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://juno-rpc.stake-town.com:443',
+        address: 'https://juno-rpc.stake-town.com',
         provider: 'StakeTown',
       },
       {
@@ -358,14 +412,6 @@ export const juno: Chain = {
         provider: 'Kleomedes',
       },
       {
-        address: 'https://api.juno.interbloc.org',
-        provider: 'Interbloc',
-      },
-      {
-        address: 'https://juno.rest.stakin-nodes.com',
-        provider: 'Stakin',
-      },
-      {
         address: 'https://api.juno.bh.rocks',
         provider: 'BlockHunters 🎯',
       },
@@ -386,22 +432,6 @@ export const juno: Chain = {
         provider: 'Architect Nodes',
       },
       {
-        address: 'https://juno-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://juno.rest.interchain.ivaldilabs.xyz',
-        provider: 'ivaldilabs',
-      },
-      {
-        address: 'http://167.235.211.168:1317',
-        provider: 'CommunityStaking',
-      },
-      {
-        address: 'https://juno.api.silknodes.io',
-        provider: 'Silk Nodes',
-      },
-      {
         address: 'https://rest-juno.goldenratiostaking.net',
         provider: 'Golden Ratio Staking',
       },
@@ -419,15 +449,11 @@ export const juno: Chain = {
       },
       {
         address: 'https://juno-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://juno-api.stake-town.com:443',
+        address: 'https://juno-api.stake-town.com',
         provider: 'StakeTown',
-      },
-      {
-        address: 'https://api-juno.mainnet.validatrium.club',
-        provider: 'Validatrium',
       },
     ],
     grpc: [
@@ -448,15 +474,11 @@ export const juno: Chain = {
         provider: '🔥STAVR🔥',
       },
       {
-        address: 'juno.grpc.stakin-nodes.com:443',
-        provider: 'Stakin',
-      },
-      {
         address: 'grpc-juno.kingnodes.com:443',
         provider: 'kingnodes 👑',
       },
       {
-        address: 'grpc-juno.cosmos-spaces.cloud:1490',
+        address: 'grpc-juno.cosmos-spaces.cloud:4830',
         provider: 'Cosmos Spaces',
       },
       {
@@ -472,10 +494,6 @@ export const juno: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'juno.grpc.interchain.ivaldilabs.xyz:443',
-        provider: 'ivaldilabs',
-      },
-      {
         address: 'http://167.235.211.168:9091',
         provider: 'CommunityStaking',
       },
@@ -489,7 +507,7 @@ export const juno: Chain = {
       },
       {
         address: 'juno-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'juno-grpc.stake-town.com:443',
@@ -625,8 +643,14 @@ export const junoAssetList: AssetLists = {
             chain_name: 'cosmoshub',
             base_denom: 'uatom',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+      },
     },
     {
       description: 'The native token cw20 for Neta on Juno Chain',
@@ -838,8 +862,8 @@ export const junoAssetList: AssetLists = {
       display: 'raw',
       symbol: 'RAW',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/raw.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/raw.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/raw.svg',
       },
       coingecko_id: 'junoswap-raw-dao',
       images: [
@@ -881,7 +905,7 @@ export const junoAssetList: AssetLists = {
     },
     {
       description:
-        'IBC HNS is HNS, coin of Handshake, decentralized root namesystem, but wrapped to cosmos for IBC support by Another.Software through Juno netowrk.',
+        'IBC HNS is HNS, coin of Handshake, decentralized root namesystem, but wrapped to cosmos for IBC support by Another.Software through Juno network.',
       type_asset: 'cw20',
       address:
         'juno1ur4jx0sxchdevahep7fwq28yk4tqsrhshdtylz46yka3uf6kky5qllqp4k',
@@ -1182,7 +1206,6 @@ export const junoAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/seasy.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/seasy.svg',
       },
-      coingecko_id: 'seasy',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/seasy.png',
@@ -1332,8 +1355,8 @@ export const junoAssetList: AssetLists = {
       display: 'hopers',
       symbol: 'HOPERS',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hopers.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hopers.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hopers.svg',
       },
       coingecko_id: 'hopers-io ',
       images: [
@@ -1422,8 +1445,8 @@ export const junoAssetList: AssetLists = {
       display: 'wynd',
       symbol: 'WYND',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/wynd.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/wynd.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/wynd.svg',
       },
       images: [
         {
@@ -1482,8 +1505,8 @@ export const junoAssetList: AssetLists = {
       display: 'nride',
       symbol: 'NRIDE',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/nride.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/nride.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/nride.svg',
       },
       images: [
         {
@@ -1751,8 +1774,8 @@ export const junoAssetList: AssetLists = {
       display: 'sikoba',
       symbol: 'SKOJ',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/sikoba.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/sikoba.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/sikoba.svg',
       },
       images: [
         {
@@ -2540,6 +2563,65 @@ export const junoAssetList: AssetLists = {
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/ampjuno.svg',
+        },
+      ],
+    },
+    {
+      description: 'BITS - Native token of Bitswift Cash',
+      type_asset: 'cw20',
+      address:
+        'juno14fz92ehqt37e096xr95kmy8nc0kz803uezxtg4fwx7agjjma86sqm8mg3h',
+      denom_units: [
+        {
+          denom:
+            'cw20:juno14fz92ehqt37e096xr95kmy8nc0kz803uezxtg4fwx7agjjma86sqm8mg3h',
+          exponent: 0,
+        },
+        {
+          denom: 'bits',
+          exponent: 8,
+        },
+      ],
+      base: 'cw20:juno14fz92ehqt37e096xr95kmy8nc0kz803uezxtg4fwx7agjjma86sqm8mg3h',
+      name: 'BITS',
+      display: 'bits',
+      symbol: 'BITS',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/bits.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/bits.png',
+        },
+      ],
+    },
+    {
+      description:
+        "The least memeable memecoin in existence. The cats have had their day, it's time for $POIL coin to take reign.",
+      type_asset: 'cw20',
+      address:
+        'juno13epyeat7ef0k7q6kllmyvc8zpfd9xm7cqjrgtk0qkgrk7n5mjfmq8979jw',
+      denom_units: [
+        {
+          denom:
+            'cw20:juno13epyeat7ef0k7q6kllmyvc8zpfd9xm7cqjrgtk0qkgrk7n5mjfmq8979jw',
+          exponent: 0,
+        },
+        {
+          denom: 'poil',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:juno13epyeat7ef0k7q6kllmyvc8zpfd9xm7cqjrgtk0qkgrk7n5mjfmq8979jw',
+      name: 'POIL',
+      display: 'poil',
+      symbol: 'POIL',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/poil.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/poil.png',
         },
       ],
     },

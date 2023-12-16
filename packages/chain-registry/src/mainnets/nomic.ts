@@ -11,13 +11,35 @@ export const nomic: Chain = {
   bech32_prefix: 'nomic',
   daemon_name: 'nomic',
   node_home: '$HOME/.nomic-stakenet-3',
+  slip44: 118,
+  key_algos: ['secp256k1'],
+  fees: {
+    fee_tokens: [
+      {
+        denom: 'unom',
+        low_gas_price: 0,
+        average_gas_price: 0,
+        high_gas_price: 0,
+      },
+    ],
+  },
+  staking: {
+    staking_tokens: [
+      {
+        denom: 'unom',
+      },
+    ],
+    lock_duration: {
+      time: '1209600s',
+    },
+  },
   codebase: {
     git_repo: 'https://github.com/nomic-io/nomic',
-    recommended_version: 'develop',
+    recommended_version: 'main',
     compatible_versions: ['develop', 'v3'],
     genesis: {
       genesis_url:
-        'https://raw.githubusercontent.com/nomic-io/nomic/develop/genesis.json',
+        'https://raw.githubusercontent.com/nomic-io/nomic/develop/genesis/stakenet-3.json',
     },
     versions: [
       {
@@ -31,11 +53,14 @@ export const nomic: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nomic.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nomic.svg',
   },
+  description:
+    'The superior way to use Bitcoin in Cosmos DeFi. Use IBC to securely and efficiently bridge your BTC to Osmosis and more.',
   peers: {
     seeds: [
       {
         id: '238120dfe716082754048057c1fdc3d6f09609b5',
-        address: '161.35.51.124:26656',
+        address: 'rpc.nomic.mappum.io:26656',
+        provider: 'mappum',
       },
       {
         id: '34544f82960d2ff2b1defb7b04f097557f4183be',
@@ -52,13 +77,18 @@ export const nomic: Chain = {
         address: 'seeds.nethernode.xyz:12756',
         provider: 'carbonZERO🌲',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [],
   },
   apis: {
     rpc: [
       {
-        address: 'http://138.197.71.46:26657',
+        address: 'https://stakenet-rpc.nomic.io:2096',
         provider: 'nomic-io',
       },
       {
@@ -66,20 +96,8 @@ export const nomic: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://rpc.nomic.interbloc.org',
-        provider: 'Interbloc',
-      },
-      {
-        address: 'https://rpc.nomic.bh.rocks',
-        provider: 'BlockHunters 🎯',
-      },
-      {
         address: 'https://rpc-nomic.whispernode.com:443',
         provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rpc-nomic.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
       },
     ],
     rest: [
@@ -110,6 +128,14 @@ export const nomic: Chain = {
       svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nomic.svg',
     },
   ],
+  bech32_config: {
+    bech32PrefixAccAddr: 'nomic',
+    bech32PrefixAccPub: 'nomic',
+    bech32PrefixConsAddr: 'nomic',
+    bech32PrefixConsPub: 'nomic',
+    bech32PrefixValAddr: 'nomic',
+    bech32PrefixValPub: 'nomic',
+  },
 };
 
 export const nomicAssetList: AssetLists = {
@@ -117,8 +143,7 @@ export const nomicAssetList: AssetLists = {
   chain_name: 'nomic',
   assets: [
     {
-      description:
-        "Nomic Token (NOM) is the Nomic's native utility token, used as the primary means to govern, secure the blockchain, incentivize participants, and provide a default mechanism to store and exchange value.",
+      description: "Nomic's native token.",
       denom_units: [
         {
           denom: 'unom',
@@ -134,13 +159,50 @@ export const nomicAssetList: AssetLists = {
       display: 'nom',
       symbol: 'NOM',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nomic.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nomic.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nom.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nom.svg',
       },
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nomic.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nomic.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nom.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nom.svg',
+        },
+      ],
+    },
+    {
+      description: 'Bitcoin. On Cosmos.',
+      denom_units: [
+        {
+          denom: 'usat',
+          exponent: 0,
+        },
+        {
+          denom: 'nbtc',
+          exponent: 14,
+        },
+      ],
+      base: 'usat',
+      name: 'Nomic Bitcoin',
+      display: 'nbtc',
+      symbol: 'nBTC',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.svg',
+      },
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'bitcoin',
+            base_denom: 'sat',
+          },
+          provider: 'Nomic',
+        },
+      ],
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.svg',
         },
       ],
     },

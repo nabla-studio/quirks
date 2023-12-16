@@ -17,6 +17,9 @@ export const doravota: Chain = {
       {
         denom: 'peaka',
         fixed_min_gas_price: 100000000000,
+        low_gas_price: 100000000000,
+        average_gas_price: 100000000000,
+        high_gas_price: 100000000000,
       },
     ],
   },
@@ -85,7 +88,7 @@ export const doravota: Chain = {
     {
       kind: 'Dora Vota Ping Pub',
       url: 'https://vota-explorer.dorafactory.org',
-      tx_page: 'https://vota-explorer.dorafactory.org/dora/tx/${txHash}',
+      tx_page: 'https://vota-explorer.dorafactory.org/doravota/tx/${txHash}',
     },
   ],
 };

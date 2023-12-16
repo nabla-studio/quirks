@@ -196,7 +196,7 @@ export const xiontestnetAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-5',
-            path: 'transfer/channel-5',
+            path: 'transfer/channel-5/uaxl',
           },
         },
       ],
@@ -206,8 +206,14 @@ export const xiontestnetAssetList: AssetLists = {
             chain_name: 'axelartestnet',
             base_denom: 'uaxl',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.svg',
+      },
     },
     {
       denom_units: [
@@ -223,7 +229,7 @@ export const xiontestnetAssetList: AssetLists = {
         },
       ],
       type_asset: 'ics20',
-      base: 'ibc/92E0120F15D037353CFB73C14651FC8930ADC05B93100FD7754D3A689E53B333',
+      base: 'ibc/6AE2756AA7EAA8FA06E11472EA05CA681BD8D3FBC1AAA9F06C79D1EC1C90DC9B',
       name: 'Osmosis OSMO Token',
       display: 'osmo',
       symbol: 'OSMO',
@@ -237,7 +243,7 @@ export const xiontestnetAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-8',
-            path: 'transfer/channel-8',
+            path: 'transfer/channel-8/uosmo',
           },
         },
       ],
@@ -247,8 +253,14 @@ export const xiontestnetAssetList: AssetLists = {
             chain_name: 'osmosistestnet',
             base_denom: 'uosmo',
           },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
+      },
     },
     {
       denom_units: [
@@ -278,7 +290,7 @@ export const xiontestnetAssetList: AssetLists = {
           },
           chain: {
             channel_id: 'channel-9',
-            path: 'transfer/channel-9',
+            path: 'transfer/channel-9/uusdc',
           },
         },
       ],
@@ -288,8 +300,12 @@ export const xiontestnetAssetList: AssetLists = {
             chain_name: 'nobletestnet',
             base_denom: 'uusdc',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
+      },
     },
   ],
 };

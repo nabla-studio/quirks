@@ -5,7 +5,7 @@ export const temporaltestnet: Chain = {
   chain_name: 'temporaltestnet',
   chain_id: 'temporal-test-2',
   pretty_name: 'Temporal Testnet',
-  status: 'live',
+  status: 'killed',
   network_type: 'testnet',
   bech32_prefix: 'temporal',
   daemon_name: 'temporald',

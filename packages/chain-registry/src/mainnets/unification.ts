@@ -194,6 +194,10 @@ export const unification: Chain = {
         'https://atomscan.com/unification/accounts/${accountAddress}',
     },
   ],
+  logo_URIs: {
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/unification/images/fund.png',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/unification/images/fund.svg',
+  },
 };
 
 export const unificationAssetList: AssetLists = {
@@ -223,8 +227,8 @@ export const unificationAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/unification/images/fund.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/unification/images/fund.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/unification/images/fund.svg',
       },
       coingecko_id: 'unification',
     },

@@ -17,7 +17,10 @@ export const qwoyn: Chain = {
     fee_tokens: [
       {
         denom: 'uqwoyn',
-        fixed_min_gas_price: 0.025,
+        fixed_min_gas_price: 0.03,
+        low_gas_price: 0.03,
+        average_gas_price: 0.05,
+        high_gas_price: 0.075,
       },
     ],
   },
@@ -37,7 +40,7 @@ export const qwoyn: Chain = {
     ics_enabled: ['ics20-1', 'ics27-1'],
     genesis: {
       genesis_url:
-        'https://github.com/cosmic-horizon/mainnet/blob/main/genesis.json',
+        'https://raw.githubusercontent.com/cosmic-horizon/mainnet/main/genesis.json',
     },
     versions: [
       {

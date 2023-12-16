@@ -144,6 +144,7 @@ export const bostromAssetList: AssetLists = {
         {
           denom: 'boot',
           exponent: 0,
+          aliases: ['boot'],
         },
       ],
       base: 'boot',
@@ -151,8 +152,8 @@ export const bostromAssetList: AssetLists = {
       display: 'boot',
       symbol: 'BOOT',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/boot.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/boot.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/boot.svg',
       },
       coingecko_id: 'bostrom',
       images: [
@@ -168,7 +169,7 @@ export const bostromAssetList: AssetLists = {
         {
           denom: 'hydrogen',
           exponent: 0,
-          aliases: ['HYDROGEN'],
+          aliases: ['hydrogen'],
         },
       ],
       base: 'hydrogen',
@@ -176,13 +177,95 @@ export const bostromAssetList: AssetLists = {
       display: 'hydrogen',
       symbol: 'HYDROGEN',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/hydrogen.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/hydrogen.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/hydrogen.svg',
       },
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/hydrogen.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/hydrogen.svg',
+        },
+      ],
+    },
+    {
+      description: 'The resource token of Bostrom',
+      denom_units: [
+        {
+          denom: 'milliampere',
+          exponent: 0,
+          aliases: ['milliampere'],
+        },
+        {
+          denom: 'ampere',
+          exponent: 3,
+          aliases: ['ampere'],
+        },
+      ],
+      base: 'milliampere',
+      name: 'Bostrom Ampere',
+      display: 'ampere',
+      symbol: 'A',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/ampere.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/ampere.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/ampere.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/ampere.svg',
+        },
+      ],
+    },
+    {
+      description: 'The resource token of Bostrom',
+      denom_units: [
+        {
+          denom: 'millivolt',
+          exponent: 0,
+          aliases: ['millivolt'],
+        },
+        {
+          denom: 'volt',
+          exponent: 3,
+          aliases: ['volt'],
+        },
+      ],
+      base: 'millivolt',
+      name: 'Bostrom Volt',
+      display: 'volt',
+      symbol: 'V',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/volt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/volt.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/volt.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/volt.svg',
+        },
+      ],
+    },
+    {
+      description: 'The staking token of Cyber',
+      denom_units: [
+        {
+          denom: 'tocyb',
+          exponent: 0,
+          aliases: ['tocyb'],
+        },
+      ],
+      base: 'tocyb',
+      name: 'Bostrom Tocyb',
+      display: 'tocyb',
+      symbol: 'TOCYB',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/tocyb.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/tocyb.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/tocyb.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bostrom/images/tocyb.svg',
         },
       ],
     },

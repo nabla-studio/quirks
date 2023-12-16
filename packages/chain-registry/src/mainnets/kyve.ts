@@ -33,17 +33,23 @@ export const kyve: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/KYVENetwork/chain',
-    recommended_version: 'v1.3.0',
-    compatible_versions: ['v1.3.0'],
+    recommended_version: 'v1.4.0',
+    compatible_versions: ['v1.4.0'],
+    cosmos_sdk_version: 'v0.47.6-kyve-rc0',
+    ibc_go_version: 'v7.3.0',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.37.2',
+    },
     binaries: {
       'linux/amd64':
-        'https://github.com/KYVENetwork/chain/releases/download/v1.3.0/kyved_mainnet_linux_amd64.tar.gz',
+        'https://github.com/KYVENetwork/chain/releases/download/v1.4.0/kyved_mainnet_linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/KYVENetwork/chain/releases/download/v1.3.0/kyved_mainnet_linux_arm64.tar.gz',
+        'https://github.com/KYVENetwork/chain/releases/download/v1.4.0/kyved_mainnet_linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/KYVENetwork/chain/releases/download/v1.3.0/kyved_mainnet_darwin_amd64.tar.gz',
+        'https://github.com/KYVENetwork/chain/releases/download/v1.4.0/kyved_mainnet_darwin_amd64.tar.gz',
       'darwin/arm64':
-        'https://github.com/KYVENetwork/chain/releases/download/v1.3.0/kyved_mainnet_darwin_arm64.tar.gz',
+        'https://github.com/KYVENetwork/chain/releases/download/v1.4.0/kyved_mainnet_darwin_arm64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -88,6 +94,30 @@ export const kyve: Chain = {
           'darwin/arm64':
             'https://github.com/KYVENetwork/chain/releases/download/v1.3.0/kyved_mainnet_darwin_arm64.tar.gz',
         },
+        next_version_name: 'v1.4.0',
+      },
+      {
+        name: 'v1.4.0',
+        proposal: 21,
+        height: 3908000,
+        recommended_version: 'v1.4.0',
+        compatible_versions: ['v1.4.0'],
+        cosmos_sdk_version: 'v0.47.6-kyve-rc0',
+        ibc_go_version: 'v7.3.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/KYVENetwork/chain/releases/download/v1.4.0/kyved_mainnet_linux_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/KYVENetwork/chain/releases/download/v1.4.0/kyved_mainnet_linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/KYVENetwork/chain/releases/download/v1.4.0/kyved_mainnet_darwin_amd64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/KYVENetwork/chain/releases/download/v1.4.0/kyved_mainnet_darwin_arm64.tar.gz',
+        },
         next_version_name: '',
       },
     ],
@@ -96,6 +126,8 @@ export const kyve: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve.svg',
   },
+  description:
+    'Revolutionizing data reliability in the Web3 space, KYVE Network provides fast and easy tooling for data validation, immutability, and retrieval, ensuring trustless data for seamless scalability and eliminating data risks and roadblocks.',
   peers: {
     seeds: [
       {
@@ -124,6 +156,11 @@ export const kyve: Chain = {
         id: '146d27829fd240e0e4672700514e9835cb6fdd98',
         address: '34.212.201.1:26656',
         provider: 'kyve',
+      },
+      {
+        id: '23f2668adb6d7387c8bc7fdc8a9d10430a092df7',
+        address: 'kyve.peer.stavr.tech:12356',
+        provider: '🔥STAVR🔥',
       },
       {
         id: '25da6253fc8740893277630461eb34c2e4daf545',
@@ -162,6 +199,10 @@ export const kyve: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
+        address: 'http://kyve.rpc.m.stavr.tech:12357',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://rpc-kyve.imperator.co',
         provider: 'Imperator.co',
       },
@@ -178,16 +219,8 @@ export const kyve: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://kyve-rpc.enigma-validator.com',
-        provider: 'Enigma',
-      },
-      {
         address: 'https://kyve.rpc.liveraven.net',
         provider: 'LiveRaveN',
-      },
-      {
-        address: 'https://rpc.kyve.stake-take.com',
-        provider: 'Stake-Take',
       },
       {
         address: 'https://rpc-kyve.mms.team',
@@ -212,6 +245,10 @@ export const kyve: Chain = {
         provider: 'Imperator.co',
       },
       {
+        address: 'https://kyve.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://kyve-api.ibs.team',
         provider: 'Inter Blockchain Services',
       },
@@ -224,16 +261,8 @@ export const kyve: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'https://www.kyve-lcd.enigma-validator.com',
-        provider: 'Enigma',
-      },
-      {
         address: 'https://kyve.api.liveraven.net',
         provider: 'LiveRaveN',
-      },
-      {
-        address: 'https://api.kyve.stake-take.com',
-        provider: 'Stake-Take',
       },
       {
         address: 'https://api-kyve.mms.team',
@@ -258,6 +287,10 @@ export const kyve: Chain = {
         provider: 'Nodeist',
       },
       {
+        address: 'http://kyve.grpc.stavr.tech:7106',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://kyve.grpc.liveraven.net',
         provider: 'LiveRaveN',
       },
@@ -280,6 +313,13 @@ export const kyve: Chain = {
       tx_page: 'https://explorer.nodestake.top/kyve/txs/${txHash}',
       account_page:
         'https://explorer.nodestake.top/kyve/account/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Kyve',
+      tx_page: 'https://explorer.stavr.tech/Kyve/txs/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Kyve/account/${accountAddress}',
     },
     {
       kind: 'Stake-Take',
@@ -318,8 +358,8 @@ export const kyveAssetList: AssetLists = {
       display: 'kyve',
       symbol: 'KYVE',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve-token.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve-token.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve-token.svg',
       },
       coingecko_id: 'kyve-network',
       images: [

@@ -94,10 +94,6 @@ export const point: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://rpc.point.nodexcapital.com',
-        provider: '⚡NodeX Validator⚡',
-      },
-      {
         address: 'https://rpc.point.indonode.net',
         provider: 'Indonode',
       },
@@ -110,10 +106,6 @@ export const point: Chain = {
       {
         address: 'https://api.point.nodestake.top',
         provider: 'NodeStake',
-      },
-      {
-        address: 'https://rest.point.nodexcapital.com',
-        provider: '⚡NodeX Validator⚡',
       },
       {
         address: 'https://api.point.indonode.net',
@@ -198,8 +190,8 @@ export const pointAssetList: AssetLists = {
       display: 'point',
       symbol: 'POINT',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/point/images/point-logo.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/point/images/point-logo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/point/images/point-logo.svg',
       },
       coingecko_id: 'point-network',
       images: [

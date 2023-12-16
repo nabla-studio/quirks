@@ -34,19 +34,19 @@ export const haqq: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/haqq-network/haqq',
-    recommended_version: 'v1.6.1',
-    compatible_versions: ['v1.6.1'],
+    recommended_version: 'v1.6.3',
+    compatible_versions: ['v1.6.3'],
     binaries: {
       'linux/amd64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.6.1/haqq_1.6.1_Linux_x86_64.tar.gz',
+        'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Linux_x86_64.tar.gz',
       'linux/arm64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.6.1/haqq_1.6.1_Linux_arm64.tar.gz',
+        'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.6.1/haqq_1.6.1_Darwin_x86_64.tar.gz',
+        'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Darwin_x86_64.tar.gz',
       'darwin/arm64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.6.1/haqq_1.6.1_Darwin_arm64.tar.gz',
+        'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.6.1/haqq_1.6.1_Windows_x86_64.zip',
+        'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Windows_x86_64.zip',
     },
     cosmos_sdk_version: 'v0.46.13-ledger.3',
     consensus: {
@@ -253,6 +253,60 @@ export const haqq: Chain = {
           'windows/amd64':
             'https://github.com/haqq-network/haqq/releases/download/v1.6.1/haqq_1.6.1_Windows_x86_64.zip',
         },
+        next_version_name: 'v1.6.2',
+      },
+      {
+        name: 'v1.6.2',
+        tag: 'v1.6.2',
+        recommended_version: 'v1.6.2',
+        compatible_versions: ['v1.6.2'],
+        proposal: 23,
+        height: 8193000,
+        cosmos_sdk_version: 'v0.46.13-ledger.3',
+        consensus: {
+          type: 'cometbft',
+          version: '0.34.29',
+        },
+        ibc_go_version: '6.2.0',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.2/haqq_1.6.2_Linux_x86_64.tar.gz',
+          'linux/arm64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.2/haqq_1.6.2_Linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.2/haqq_1.6.2_Darwin_x86_64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.2/haqq_1.6.2_Darwin_arm64.tar.gz',
+          'windows/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.2/haqq_1.6.2_Windows_x86_64.zip',
+        },
+        next_version_name: 'v1.6.3',
+      },
+      {
+        name: 'v1.6.3',
+        tag: 'v1.6.3',
+        recommended_version: 'v1.6.3',
+        compatible_versions: ['v1.6.3'],
+        proposal: 25,
+        height: 8282000,
+        cosmos_sdk_version: 'v0.46.13-ledger.3',
+        consensus: {
+          type: 'cometbft',
+          version: '0.34.29',
+        },
+        ibc_go_version: '6.2.0',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Linux_x86_64.tar.gz',
+          'linux/arm64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Darwin_x86_64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Darwin_arm64.tar.gz',
+          'windows/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.6.3/haqq_1.6.3_Windows_x86_64.zip',
+        },
         next_version_name: '',
       },
     ],
@@ -289,14 +343,9 @@ export const haqq: Chain = {
         provider: 'kioqq',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'haqq-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'haqq-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '20e1000e88125698264454a884812746c2eb4807',
@@ -309,6 +358,11 @@ export const haqq: Chain = {
         id: '0533e20e65912f72f2ad88a4c91eefbc634212d7',
         address: 'haqq-sync.rpc.p2p.world:26656',
         provider: 'P2P.org',
+      },
+      {
+        id: '977ee99c89207677f116801a595c97979a0c0cd1',
+        address: '80.240.20.106:26656',
+        provider: '[NODERS]TEAM',
       },
       {
         id: '977ee99c89207677f116801a595c97979a0c0cd1',
@@ -333,16 +387,24 @@ export const haqq: Chain = {
         provider: 'kioqq',
       },
       {
+        address: 'http://haqq.rpc.nodersteam.com:19657',
+        provider: '[NODERS]TEAM',
+      },
+      {
         address: 'https://rpc.haqq.nodestake.top',
         provider: 'NodeStake',
       },
       {
-        address: 'https://haqq-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://haqq-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://haqq-rpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'https://rpc-haqq.sr20de.xyz:443',
+        provider: 'Sr20de',
       },
     ],
     rest: [
@@ -355,12 +417,16 @@ export const haqq: Chain = {
         provider: 'kioqq',
       },
       {
+        address: 'http://haqq.api.nodersteam.com:19017',
+        provider: '[NODERS]TEAM',
+      },
+      {
         address: 'https://api.haqq.nodestake.top',
         provider: 'NodeStake',
       },
       {
         address: 'https://haqq-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://haqq-api.lavenderfive.com',
@@ -369,6 +435,10 @@ export const haqq: Chain = {
       {
         address: 'https://mainnet-haqq-api.konsortech.xyz',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'https://api-haqq.sr20de.xyz',
+        provider: 'Sr20de',
       },
     ],
     grpc: [
@@ -381,12 +451,16 @@ export const haqq: Chain = {
         provider: 'kioqq',
       },
       {
+        address: 'haqq.grpc.nodersteam.com:9191',
+        provider: '[NODERS]TEAM',
+      },
+      {
         address: 'https://grpc.haqq.nodestake.top:443',
         provider: 'NodeStake',
       },
       {
         address: 'haqq-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://haqq-grpc.lavenderfive.com',
@@ -395,6 +469,10 @@ export const haqq: Chain = {
       {
         address: 'mainnet-haqq-grpc.konsortech.xyz:11090',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'https://grpc-haqq.sr20de.xyz',
+        provider: 'Sr20de',
       },
     ],
     'evm-http-jsonrpc': [
@@ -421,6 +499,10 @@ export const haqq: Chain = {
       {
         address: 'https://mainnet-haqq-evm.konsortech.xyz',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'https://evm-haqq.sr20de.xyz',
+        provider: 'Sr20de',
       },
     ],
   },
@@ -480,11 +562,11 @@ export const haqqAssetList: AssetLists = {
       name: 'Islamic Coin',
       display: 'ISLM',
       symbol: 'ISLM',
+      coingecko_id: 'islamic-coin',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/haqq/images/islm.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/haqq/images/islm.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/haqq/images/islm.svg',
       },
-      coingecko_id: '',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/haqq/images/islm.png',

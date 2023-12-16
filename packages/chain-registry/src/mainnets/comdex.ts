@@ -96,14 +96,9 @@ export const comdex: Chain = {
         provider: 'Golden Ratio Staking',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'comdex-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'comdex-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: '243d93ff2f663860f118fa32e2122fbba7f00a92',
@@ -170,16 +165,8 @@ export const comdex: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'https://rpc-comdex.goldenratiostaking.net',
-        provider: 'Golden Ratio Staking',
-      },
-      {
         address: 'https://rpc-comdex.whispernode.com:443',
         provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://rpc-comdex.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
       },
       {
         address: 'https://comdex-mainnet-rpc.autostake.com:443',
@@ -194,8 +181,8 @@ export const comdex: Chain = {
         provider: 'StakerHouse',
       },
       {
-        address: 'https://comdex-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://comdex-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://rpc-comdex-01.stakeflow.io',
@@ -236,10 +223,6 @@ export const comdex: Chain = {
         provider: 'WhisperNode🤐',
       },
       {
-        address: 'https://rest-comdex.carbonZERO.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
         address: 'https://comdex-api.w3coins.io',
         provider: 'w3coins',
       },
@@ -249,7 +232,7 @@ export const comdex: Chain = {
       },
       {
         address: 'https://comdex-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://api-comdex-01.stakeflow.io',
@@ -291,7 +274,7 @@ export const comdex: Chain = {
       },
       {
         address: 'comdex-grpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'grpc-comdex-01.stakeflow.io:10002',

@@ -6,7 +6,7 @@ export const humans: Chain = {
   status: 'live',
   network_type: 'mainnet',
   website: 'https://humans.ai/',
-  pretty_name: 'humans',
+  pretty_name: 'Humans.ai',
   chain_id: 'humans_1089-1',
   bech32_prefix: 'human',
   node_home: '$HOME/.humansd',
@@ -19,9 +19,9 @@ export const humans: Chain = {
       {
         denom: 'aheart',
         fixed_min_gas_price: 250000000,
-        low_gas_price: 20000000000,
-        average_gas_price: 25000000000,
-        high_gas_price: 40000000000,
+        low_gas_price: 80000000000,
+        average_gas_price: 100000000000,
+        high_gas_price: 160000000000,
       },
     ],
   },
@@ -90,6 +90,16 @@ export const humans: Chain = {
         address: 'mainnet-humans.konsortech.xyz:40656',
         provider: 'KonsorTech',
       },
+      {
+        id: '9193e655f0581b4acf2e87976ac0b55795359742',
+        address: '167.235.177.226:26656',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        id: '767edc7b5fa144c52703f0e9670ea1eea1a5e0fc',
+        address: 'p2p.humans.safeblock.space:26656',
+        provider: 'Safe Block',
+      },
     ],
   },
   apis: {
@@ -99,12 +109,12 @@ export const humans: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://rpc.nodejumper.io/humans',
-        provider: 'NODEJUMPER',
-      },
-      {
         address: 'https://humans.rpc.kjnodes.com',
         provider: 'kjnodes',
+      },
+      {
+        address: 'http://humans.rpc.nodersteam.com:22657',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://rpc-humans.nodeist.net',
@@ -142,6 +152,10 @@ export const humans: Chain = {
         address: 'https://rpc.humans-mainnet.stake-take.com/',
         provider: 'Stake-Take',
       },
+      {
+        address: 'https://rpc.humans.safeblock.space',
+        provider: 'Safe Block',
+      },
     ],
     rest: [
       {
@@ -149,12 +163,12 @@ export const humans: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://rest.nodejumper.io/humans',
-        provider: 'NODEJUMPER',
-      },
-      {
         address: 'https://humans.api.kjnodes.com',
         provider: 'kjnodes',
+      },
+      {
+        address: 'http://humans.api.nodersteam.com:22017',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://api-humans.nodeist.net',
@@ -188,6 +202,10 @@ export const humans: Chain = {
         address: 'https://api.humans-mainnet.stake-take.com/',
         provider: 'Stake-Take',
       },
+      {
+        address: 'https://api.humans.safeblock.space',
+        provider: 'Safe Block',
+      },
     ],
     grpc: [
       {
@@ -211,8 +229,16 @@ export const humans: Chain = {
         provider: 'Staketab',
       },
       {
+        address: 'humans.grpc.nodersteam.com:9221',
+        provider: '[NODERS]TEAM',
+      },
+      {
         address: 'https://grpc-humans.cosmos-spaces.cloud:1190',
         provider: 'StakePool',
+      },
+      {
+        address: 'grpc.humans.safeblock.space:9090',
+        provider: 'Safe Block',
       },
     ],
     'evm-http-jsonrpc': [
@@ -236,9 +262,18 @@ export const humans: Chain = {
         address: 'https://mainnet-humans-evm.konsortech.xyz',
         provider: 'KonsorTech',
       },
+      {
+        address: 'https://evm.humans.safeblock.space',
+        provider: 'Safe Block',
+      },
     ],
   },
   explorers: [
+    {
+      kind: 'mintscan',
+      url: 'https://mintscan.io/humans',
+      tx_page: 'https://www.mintscan.io/humans/tx/${txHash}',
+    },
     {
       kind: 'bigdipper',
       url: 'https://bigdipper.live/humans',
@@ -259,6 +294,13 @@ export const humans: Chain = {
       kind: 'exploreme',
       url: 'https://humansai.exploreme.pro/',
       tx_page: 'https://humans.exploreme.pro/transaction/${txHash}',
+    },
+    {
+      kind: 'Safe Block',
+      url: 'https://explorer.safeblock.space/humans',
+      tx_page: 'https://explorer.safeblock.space/humans/tx/${txHash}',
+      account_page:
+        'https://explorer.safeblock.space/humans/account/${accountAddress}',
     },
   ],
   images: [
@@ -290,8 +332,8 @@ export const humansAssetList: AssetLists = {
       display: 'heart',
       symbol: 'HEART',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.svg',
       },
       coingecko_id: 'humans-ai',
       images: [

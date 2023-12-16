@@ -74,6 +74,10 @@ export const chain4Energytestnet: Chain = {
     ],
     rest: [
       {
+        address: 'https://c4e.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://lcd-testnet.c4e.io',
         provider: 'C4E',
       },
@@ -86,6 +90,11 @@ export const chain4Energytestnet: Chain = {
     ],
   },
   explorers: [
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/C4E-Testnet',
+      tx_page: 'https://explorer.stavr.tech/C4E-Testnet/transactions/${txHash}',
+    },
     {
       kind: 'explorer',
       url: 'https://explorer-testnet.c4e.io/',

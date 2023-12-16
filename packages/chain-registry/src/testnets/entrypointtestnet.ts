@@ -6,7 +6,7 @@ export const entrypointtestnet: Chain = {
   status: 'live',
   network_type: 'testnet',
   pretty_name: 'EntryPoint Testnet',
-  chain_id: 'entrypoint-pubtest-1',
+  chain_id: 'entrypoint-pubtest-2',
   bech32_prefix: 'entrypoint',
   daemon_name: 'entrypointd',
   node_home: '$HOME/.entrypointd',
@@ -16,10 +16,10 @@ export const entrypointtestnet: Chain = {
     fee_tokens: [
       {
         denom:
-          'ibc/E774302AE43D5FA03522C42B14823288E7DD1B2F54F85DFD3D6FC3E5FCF54645',
-        low_gas_price: 0.01,
-        average_gas_price: 0.01,
-        high_gas_price: 0.02,
+          'ibc/8A138BC76D0FB2665F8937EC2BF01B9F6A714F6127221A0E155106A45E09BCC5',
+        low_gas_price: 0,
+        average_gas_price: 0,
+        high_gas_price: 0,
       },
     ],
   },
@@ -32,8 +32,8 @@ export const entrypointtestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/entrypoint-zone/testnets',
-    recommended_version: 'v1.0.0',
-    compatible_versions: ['v1.0.0'],
+    recommended_version: 'v1.1.1',
+    compatible_versions: ['v1.1.1'],
     cosmos_sdk_version: '0.47.4',
     consensus: {
       type: 'cometbft',
@@ -41,13 +41,13 @@ export const entrypointtestnet: Chain = {
     },
     genesis: {
       genesis_url:
-        'https://github.com/entrypoint-zone/testnets/blob/2c4490fcce0f9f32d579e2581e592f5c320e5c14/entrypoint-pubtest-1/genesis.json',
+        'https://raw.githubusercontent.com/entrypoint-zone/testnets/2f2bffec8e73db30886bffa67fda1a242a6dc1d1/entrypoint-pubtest-2/genesis.json',
     },
     versions: [
       {
-        name: 'v1.0.0',
-        recommended_version: 'v1.0.0',
-        compatible_versions: ['v1.0.0'],
+        name: 'v1.1.1',
+        recommended_version: 'v1.1.1',
+        compatible_versions: ['v1.1.1'],
         cosmos_sdk_version: '0.47.4',
         consensus: {
           type: 'cometbft',
@@ -59,13 +59,17 @@ export const entrypointtestnet: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://testnet-rest.entrypoint.zone',
+        address: 'https://testnet-rpc.entrypoint.zone',
         provider: 'Simply Staking',
       },
     ],
     rest: [
       {
-        address: 'https://testnet-rpc.entrypoint.zone',
+        address: 'https://entry.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'https://testnet-rest.entrypoint.zone',
         provider: 'Simply Staking',
       },
     ],
@@ -81,6 +85,13 @@ export const entrypointtestnet: Chain = {
       tx_page: 'https://explorer.entrypoint.zone/entrypoint/tx/${txHash}',
       account_page:
         'https://explorer.entrypoint.zone/entrypoint/account/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Entrypoint-Testnet',
+      tx_page: 'https://explorer.stavr.tech/Entrypoint-Testnet/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Entrypoint-Testnet/account/${accountAddress}',
     },
     {
       kind: 'ping.pub',
@@ -139,7 +150,7 @@ export const entrypointtestnetAssetList: AssetLists = {
       denom_units: [
         {
           denom:
-            'ibc/E774302AE43D5FA03522C42B14823288E7DD1B2F54F85DFD3D6FC3E5FCF54645',
+            'ibc/8A138BC76D0FB2665F8937EC2BF01B9F6A714F6127221A0E155106A45E09BCC5',
           exponent: 0,
         },
         {
@@ -147,7 +158,7 @@ export const entrypointtestnetAssetList: AssetLists = {
           exponent: 6,
         },
       ],
-      base: 'ibc/E774302AE43D5FA03522C42B14823288E7DD1B2F54F85DFD3D6FC3E5FCF54645',
+      base: 'ibc/9FF2B7A5F55038A7EE61F4FD6749D9A648B48E89830F2682B67B5DC158E2753C',
       name: 'Cosmos',
       display: 'atom',
       symbol: 'ATOM',
@@ -158,11 +169,11 @@ export const entrypointtestnetAssetList: AssetLists = {
             chain_name: 'osmosis',
             base_denom:
               'ibc/B28CFD38D84A480EF2A03AC575DCB05004D934A603A5A642888847BCDA6340C0',
-            channel_id: 'channel-1543',
+            channel_id: 'channel-4156',
           },
           chain: {
             channel_id: 'channel-0',
-            path: 'transfer/channel-0/transfer/channel-1497/uatom',
+            path: 'transfer/channel-0/transfer/channel-4156/uatom',
           },
         },
       ],

@@ -70,6 +70,8 @@ export const sentinel: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sentinel/images/dvpn.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sentinel/images/dvpn.svg',
   },
+  description:
+    'The Sentinel ecosystem is a global network of autonomous dVPN applications that enable private and censorship resistant internet access.',
   peers: {
     seeds: [
       {
@@ -78,14 +80,9 @@ export const sentinel: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: 'e1b058e5cfa2b836ddaa496b10911da62dcf182e',
-        address: 'sentinel-seed-de.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
-      },
-      {
-        id: 'e726816f42831689eab9378d5d577f1d06d25716',
-        address: 'sentinel-seed-us.allnodes.me:26656',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         id: 'e8b2ebbd5e90bd89cb89160dd040fda7d04984a4',
@@ -265,20 +262,12 @@ export const sentinel: Chain = {
         provider: '🐹 Quokka Stake',
       },
       {
-        address: 'https://sentinel-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://sentinel-rpc.badgerbite.io/',
         provider: 'BadgerBite',
       },
       {
-        address: 'https://sentinel-rpc2.badgerbite.io',
-        provider: 'BadgerBite',
-      },
-      {
-        address: 'https://sentinel-rpc.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        address: 'https://sentinel-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://sentinel-rpc.validatornode.com/',
@@ -291,10 +280,6 @@ export const sentinel: Chain = {
         provider: 'Notional',
       },
       {
-        address: 'https://sentinel-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://lcd-sentinel.whispernode.com:443',
         provider: 'WhisperNode🤐',
       },
@@ -304,7 +289,7 @@ export const sentinel: Chain = {
       },
       {
         address: 'https://sentinel-rest.publicnode.com',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
         address: 'https://sentinel-api.validatornode.com',
@@ -326,7 +311,7 @@ export const sentinel: Chain = {
       },
       {
         address: 'sentinel-rpc.publicnode.com:443',
-        provider: 'Allnodes.com ⚡️ Nodes & Staking',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -379,8 +364,8 @@ export const sentinelAssetList: AssetLists = {
       display: 'dvpn',
       symbol: 'DVPN',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sentinel/images/dvpn.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sentinel/images/dvpn.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sentinel/images/dvpn.svg',
       },
       coingecko_id: 'sentinel',
       images: [

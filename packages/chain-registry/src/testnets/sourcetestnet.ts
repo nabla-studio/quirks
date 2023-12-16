@@ -112,6 +112,10 @@ export const sourcetestnet: Chain = {
         provider: 'Nodeist',
       },
       {
+        address: 'https://source.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://source-testnet.api.kjnodes.com',
         provider: 'kjnodes',
       },
@@ -128,6 +132,11 @@ export const sourcetestnet: Chain = {
       kind: 'Nodestake',
       url: 'https://explorer.nodestake.top/source-testnet',
       tx_page: 'https://explorer.nodestake.top/source-testnet/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Source',
+      tx_page: 'https://explorer.stavr.tech/Source/tx/${txHash}',
     },
     {
       kind: 'kjnodes',

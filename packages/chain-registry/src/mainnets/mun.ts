@@ -54,6 +54,11 @@ export const mun: Chain = {
         address: '31.14.40.112:26656',
         provider: 'Mun',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -75,10 +80,6 @@ export const mun: Chain = {
         provider: 'Mun',
       },
       {
-        address: 'https://rpc.mun.indonode.net',
-        provider: 'Indonode',
-      },
-      {
         address: 'https://mainnet-mun-rpc.konsortech.xyz',
         provider: 'KonsorTech',
       },
@@ -91,10 +92,6 @@ export const mun: Chain = {
       {
         address: 'https://mainnet1.mun.money',
         provider: 'Mun',
-      },
-      {
-        address: 'https://api.mun.indonode.net',
-        provider: 'Indonode',
       },
       {
         address: 'https://mainnet-mun-api.konsortech.xyz',

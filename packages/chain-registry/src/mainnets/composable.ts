@@ -33,8 +33,8 @@ export const composable: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/notional-labs/composable-centauri',
-    recommended_version: 'v5.1.0',
-    compatible_versions: ['v5.1.0'],
+    recommended_version: 'v6.3.1',
+    compatible_versions: ['v6.3.1'],
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/notional-labs/composable-networks/main/mainnet/genesis.json',
@@ -109,9 +109,9 @@ export const composable: Chain = {
       },
       {
         name: 'v5',
-        tag: 'v5.0.1',
-        recommended_version: 'v5.1.0',
-        compatible_versions: ['v5.1.0'],
+        tag: 'v5.2.0',
+        recommended_version: 'v5.2.0',
+        compatible_versions: ['v5.1.0', 'v5.2.0'],
         cosmos_sdk_version: 'v0.47.3',
         ibc_go_version: 'v7.0.1',
         consensus: {
@@ -120,6 +120,21 @@ export const composable: Chain = {
         },
         height: 1515288,
         proposal: 10,
+        next_version_name: 'v6',
+      },
+      {
+        name: 'v6',
+        tag: 'v6.3.1',
+        recommended_version: 'v6.3.1',
+        compatible_versions: ['v6.3.1'],
+        cosmos_sdk_version: 'v0.47.5',
+        ibc_go_version: 'v7.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        height: 2301070,
+        proposal: 12,
         next_version_name: '',
       },
     ],
@@ -127,6 +142,8 @@ export const composable: Chain = {
   logo_URIs: {
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/composable.svg',
   },
+  description:
+    'Composable is the base layer connecting L1s and L2s. We are scaling IBC to other ecosystems, pushing the boundaries of trust-minimized interoperability. We abstract the cross-chain experience for users, delivering seamless chain-agnostic execution of user intentions.',
   peers: {
     seeds: [
       {
@@ -166,6 +183,11 @@ export const composable: Chain = {
         address: '65.108.206.74:36656',
         provider: 'vinjan',
       },
+      {
+        id: 'c6eefdcc5cbe41dd457183c7c3bd7311ddf97638',
+        address: 'composable.peer.stakevillage.net:16156',
+        provider: 'Stake Village',
+      },
     ],
   },
   apis: {
@@ -173,10 +195,6 @@ export const composable: Chain = {
       {
         address: 'https://rpc-composable-ia.cosmosia.notional.ventures',
         provider: 'Notional',
-      },
-      {
-        address: 'https://rpc.composable.nodestake.top',
-        provider: 'NodeStake',
       },
       {
         address: 'https://composable-mainnet-rpc.autostake.com:443',
@@ -207,18 +225,14 @@ export const composable: Chain = {
         provider: 'StakeTown',
       },
       {
-        address: 'https://rpc-composable.vinjan.xyz:443',
-        provider: 'vinjan',
+        address: 'https://composable.rpc.stakevillage.net:443',
+        provider: 'Stake Village',
       },
     ],
     rest: [
       {
         address: 'https://api-composable-ia.cosmosia.notional.ventures',
         provider: 'Notional',
-      },
-      {
-        address: 'https://api.composable.nodestake.top',
-        provider: 'NodeStake',
       },
       {
         address: 'https://composable-mainnet-lcd.autostake.com:443',
@@ -249,8 +263,8 @@ export const composable: Chain = {
         provider: 'StakeTown',
       },
       {
-        address: 'https://api-composable.vinjan.xyz:443',
-        provider: 'vinjan',
+        address: 'https://composable.api.stakevillage.net',
+        provider: 'Stake Village',
       },
     ],
     grpc: [
@@ -290,6 +304,14 @@ export const composable: Chain = {
         address: 'grpc-composable.vinjan.xyz:36090',
         provider: 'vinjan',
       },
+      {
+        address: 'composable.grpc.skynodejs.net',
+        provider: 'skynodejs',
+      },
+      {
+        address: 'composable.grpc.stakevillage.net:16190',
+        provider: 'Stake Village',
+      },
     ],
   },
   explorers: [
@@ -302,6 +324,13 @@ export const composable: Chain = {
       kind: 'NodeStake Explorer',
       url: 'https://explorer.nodestake.top/composable',
       tx_page: 'https://explorer.nodestake.top/composable/tx/${txHash}',
+    },
+    {
+      kind: 'Stake Village',
+      url: 'https://exp.stakevillage.net/composable',
+      tx_page: 'https://exp.stakevillage.net/composable/tx/${txHash}',
+      account_page:
+        'https://exp.stakevillage.net/composable/account/${accountAddress}',
     },
   ],
   images: [
@@ -348,8 +377,12 @@ export const composableAssetList: AssetLists = {
             chain_name: 'picasso',
             base_denom: 'ppica',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
+      },
     },
     {
       description:
@@ -391,8 +424,12 @@ export const composableAssetList: AssetLists = {
             chain_name: 'picasso',
             base_denom: '4',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/kusama/images/ksm.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/kusama/images/ksm.svg',
+      },
     },
     {
       description:
@@ -434,8 +471,12 @@ export const composableAssetList: AssetLists = {
             chain_name: 'picasso',
             base_denom: '79228162514264337593543950342',
           },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polkadot/images/dot.svg',
+      },
     },
     {
       description:

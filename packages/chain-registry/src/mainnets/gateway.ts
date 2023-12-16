@@ -65,7 +65,6 @@ export const gateway: Chain = {
   ],
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gateway/images/gateway_logo.png',
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gateway/images/wormhole_logo.svg',
   },
   peers: {
     seeds: [
@@ -225,14 +224,18 @@ export const gatewayAssetList: AssetLists = {
           provider: 'Wormhole',
         },
       ],
-      logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/sui/images/sui.svg',
-      },
       images: [
         {
+          image_sync: {
+            chain_name: 'sui',
+            base_denom: '0x2::sui::SUI',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/sui/images/sui.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/sui/images/sui.svg',
+      },
     },
     {
       description:
@@ -267,8 +270,8 @@ export const gatewayAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg',
       },
       images: [
         {
@@ -304,19 +307,23 @@ export const gatewayAssetList: AssetLists = {
           type: 'bridge',
           counterparty: {
             chain_name: 'ethereum',
-            base_denom: '0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0',
+            base_denom: '0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0',
           },
           provider: 'Wormhole',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg',
         },
       ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg',
       },
-      images: [
-        {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wsteth.svg',
-        },
-      ],
     },
     {
       description:
@@ -350,14 +357,18 @@ export const gatewayAssetList: AssetLists = {
           provider: 'Wormhole',
         },
       ],
-      logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/aptos/images/aptos.svg',
-      },
       images: [
         {
+          image_sync: {
+            chain_name: 'aptos',
+            base_denom: '0x1::aptos_coin::AptosCoin',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/aptos/images/aptos.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/aptos/images/aptos.svg',
+      },
     },
     {
       description:
@@ -386,19 +397,23 @@ export const gatewayAssetList: AssetLists = {
           type: 'bridge',
           counterparty: {
             chain_name: 'ethereum',
-            base_denom: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
+            base_denom: '0xdac17f958d2ee523a2206206994597c13d831ec7',
           },
           provider: 'Wormhole',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
         },
       ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
       },
-      images: [
-        {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
-        },
-      ],
     },
     {
       description:
@@ -432,14 +447,18 @@ export const gatewayAssetList: AssetLists = {
           provider: 'Wormhole',
         },
       ],
-      logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol.svg',
-      },
       images: [
         {
+          image_sync: {
+            chain_name: 'solana',
+            base_denom: 'So11111111111111111111111111111111111111112',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol.svg',
         },
       ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol.svg',
+      },
     },
     {
       description:
@@ -473,14 +492,18 @@ export const gatewayAssetList: AssetLists = {
           provider: 'Wormhole',
         },
       ],
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/bonk.png',
-      },
       images: [
         {
+          image_sync: {
+            chain_name: 'solana',
+            base_denom: 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/bonk.png',
         },
       ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/bonk.png',
+      },
     },
     {
       description:
@@ -509,21 +532,25 @@ export const gatewayAssetList: AssetLists = {
           type: 'bridge',
           counterparty: {
             chain_name: 'ethereum',
-            base_denom: '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599',
+            base_denom: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
           },
           provider: 'Wormhole',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.svg',
         },
       ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.svg',
       },
-      images: [
-        {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.svg',
-        },
-      ],
     },
     {
       description:
@@ -552,19 +579,23 @@ export const gatewayAssetList: AssetLists = {
           type: 'bridge',
           counterparty: {
             chain_name: 'ethereum',
-            base_denom: '0x18084fbA666a33d37592fA2633fD49a74DD93a88',
+            base_denom: '0x18084fba666a33d37592fa2633fd49a74dd93a88',
           },
           provider: 'Wormhole',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x18084fba666a33d37592fa2633fd49a74dd93a88',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/tbtc.svg',
         },
       ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/tbtc.svg',
       },
-      images: [
-        {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/tbtc.svg',
-        },
-      ],
     },
     {
       description:
@@ -593,19 +624,23 @@ export const gatewayAssetList: AssetLists = {
           type: 'bridge',
           counterparty: {
             chain_name: 'ethereum',
-            base_denom: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+            base_denom: '0x6b175474e89094c44da98b954eedeac495271d0f',
           },
           provider: 'Wormhole',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x6b175474e89094c44da98b954eedeac495271d0f',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/dai.svg',
         },
       ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/dai.svg',
       },
-      images: [
-        {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/dai.svg',
-        },
-      ],
     },
     {
       description:
@@ -634,19 +669,68 @@ export const gatewayAssetList: AssetLists = {
           type: 'bridge',
           counterparty: {
             chain_name: 'ethereum',
-            base_denom: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+            base_denom: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
           },
           provider: 'Wormhole',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
         },
       ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
       },
-      images: [
+    },
+    {
+      description:
+        'Pyth Network (Wormhole), PYTH, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/B8ohBnfisop27exk2gtNABJyYjLwQA7ogrp5uNzvZCoy',
+      denom_units: [
         {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
+          denom:
+            'factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/B8ohBnfisop27exk2gtNABJyYjLwQA7ogrp5uNzvZCoy',
+          exponent: 0,
+          aliases: ['HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3'],
+        },
+        {
+          denom: 'wormhole/B8ohBnfisop27exk2gtNABJyYjLwQA7ogrp5uNzvZCoy/6',
+          exponent: 6,
+          aliases: ['pyth'],
         },
       ],
+      address:
+        'wormhole1utjx3594tlvfw4375esgu72wa4sdgf0q7x4ye27husf5kvuzp5rsr72gdq',
+      base: 'factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/B8ohBnfisop27exk2gtNABJyYjLwQA7ogrp5uNzvZCoy',
+      display: 'wormhole/B8ohBnfisop27exk2gtNABJyYjLwQA7ogrp5uNzvZCoy/6',
+      name: 'Pyth Network',
+      symbol: 'PYTH',
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'solana',
+            base_denom: 'HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3',
+          },
+          provider: 'Wormhole',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'solana',
+            base_denom: 'HZ1JovNiVvGrGNiiYvEozEVgZ58xaU3RKwX8eACQBCt3',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/pyth.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/pyth.svg',
+      },
     },
   ],
 };

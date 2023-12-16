@@ -98,6 +98,11 @@ export const oraichain: Chain = {
         provider: 'synergynodes',
       },
       {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'oraichain-mainnet-seed.autostake.com:27436',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         id: 'f223f1be06ef35a6dfe54995f05daeb1897d94d7',
         address: 'seed-node.mms.team:42656',
         provider: 'MMS',
@@ -126,6 +131,11 @@ export const oraichain: Chain = {
         provider: 'synergynodes',
       },
       {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'oraichain-mainnet-peer.autostake.com:27436',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         id: 'c14df7b2e097d743aa7574c7cf65397a06ea3833',
         address: 'peer-oraichain.mms.team:56103',
         provider: 'MMS',
@@ -139,16 +149,12 @@ export const oraichain: Chain = {
         provider: 'oraichain-team',
       },
       {
-        address: 'http://64.225.53.108:26657',
-        provider: 'oraichain-team',
-      },
-      {
-        address: 'https://rpc-oraichain.vchain.zone',
-        provider: 'Vchain-team',
-      },
-      {
         address: 'https://rpc-orai.nodine.id/',
         provider: 'Nodine.ID',
+      },
+      {
+        address: 'https://oraichain-mainnet-rpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://rpc-oraichain.mms.team',
@@ -161,16 +167,8 @@ export const oraichain: Chain = {
         provider: 'oraichain-team',
       },
       {
-        address: 'http://64.225.53.108:1317',
-        provider: 'oraichain-team',
-      },
-      {
-        address: 'https://rest-oraichain.vchain.zone',
-        provider: 'Vchain-team',
-      },
-      {
-        address: 'https://api-orai.nodine.id',
-        provider: 'Noidne.ID',
+        address: 'https://oraichain-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://api-oraichain.mms.team',
@@ -181,6 +179,10 @@ export const oraichain: Chain = {
       {
         address: 'grpc-oraichain.mms.team:443',
         provider: 'MMS',
+      },
+      {
+        address: 'oraichain-mainnet-grpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
     ],
   },
