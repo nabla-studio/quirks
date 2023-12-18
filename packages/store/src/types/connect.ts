@@ -29,6 +29,7 @@ export type SetupState = (typeof SetupStates)[keyof typeof SetupStates];
 
 export interface ConnectOptions {
   autoSuggestions: boolean;
+  autoAccountChange: boolean;
 }
 
 export interface ConnectState {

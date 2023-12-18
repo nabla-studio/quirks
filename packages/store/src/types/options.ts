@@ -48,6 +48,12 @@ export interface Config {
    */
   autoSuggestions?: boolean;
   /**
+   * Automatically refresh data when the user change their account.
+   *
+   * @default true
+   */
+  autoAccountChange?: boolean;
+  /**
    * Specify custom sign option
    *
    * @default
