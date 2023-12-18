@@ -50,6 +50,8 @@ export interface Config {
   /**
    * Automatically refresh data when the user change their account.
    *
+   * It's useful in specific use case where you wanna handle account switch on your own.
+   *
    * @default true
    */
   autoAccountChange?: boolean;
