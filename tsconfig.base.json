@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@nabla-studio/chain-registry": ["packages/chain-registry/src/index.ts"],
+      "@nabla-studio/wallet-registry": [
+        "packages/wallet-registry/src/index.ts"
+      ],
       "@quirks/core": ["packages/core/src/index.ts"],
       "@quirks/nuxt": ["packages/nuxt/src/index.ts"],
       "@quirks/react": ["packages/react/src/index.ts"],
