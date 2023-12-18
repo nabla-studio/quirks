@@ -15,11 +15,17 @@ export interface CosmosWallet {
   website?: string;
   git_repo?: string;
   supported_chains: string[];
-  features?: ("suggest_chain" | "get_supported_chains" | "icns")[];
+  features?: ('suggest_chain' | 'get_supported_chains' | 'icns')[];
   platforms: {
-    device: "mobile" | "tablet" | "desktop" | "other";
-    type: "application" | "extension";
-    platform: "chrome" | "firefox" | "ios" | "android" | "otherOS" | "otherBrowser";
+    device: 'mobile' | 'tablet' | 'desktop' | 'other';
+    type: 'application' | 'extension';
+    platform:
+      | 'chrome'
+      | 'firefox'
+      | 'ios'
+      | 'android'
+      | 'otherOS'
+      | 'otherBrowser';
     install_link?: string;
   }[];
   images: {
@@ -33,11 +39,11 @@ export interface CosmosWallet {
     /**
      * logomark == icon only; logotype == text only; logo == icon + text.
      */
-    layout: "logo" | "logomark" | "logotype";
+    layout: 'logo' | 'logomark' | 'logotype';
     /**
      * Indicates in which position the text is placed, in case the layout is 'icon' type, it's required only in this case.
      */
-    text_position?: "top" | "bottom" | "left" | "right" | "integrated";
+    text_position?: 'top' | 'bottom' | 'left' | 'right' | 'integrated';
   }[];
   wallet_connect?: {
     /**
