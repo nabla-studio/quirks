@@ -46,6 +46,7 @@ export const createConfig = (config: Config) => {
     assetsLists,
     autoConnect = true,
     autoSuggestions = true,
+    autoAccountChange = true,
     persistOptions = defaultPersistOptions,
     sharedOptions = defaultSharedOptions,
     walletConnectOptions,
@@ -68,6 +69,7 @@ export const createConfig = (config: Config) => {
     options: {
       ...connectInitialState.options,
       autoSuggestions,
+      autoAccountChange,
     },
   };
 

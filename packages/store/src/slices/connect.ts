@@ -25,6 +25,7 @@ export const connectInitialState: ConnectState = {
   setupStatus: SetupStates.DEINITIALIZED,
   options: {
     autoSuggestions: true,
+    autoAccountChange: true,
   },
 };
 
@@ -41,9 +42,11 @@ export const createConnectSlice: StateCreator<
     if (wallet) {
       get().wallet?.addListeners();
 
-      get().wallet?.events.on('keystorechange', () => {
-        get().getWalletData();
-      });
+      if (get().options.autoAccountChange) {
+        get().wallet?.events.on('keystorechange', () => {
+          get().getWalletData();
+        });
+      }
 
       get().wallet?.events.on('session_delete', () => {
         get().disconnect();
