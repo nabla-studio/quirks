@@ -1,3 +1,6 @@
 [submodule "packages/chain-registry/chain-registry"]
 	path = packages/chain-registry/chain-registry
 	url = git@github.com:cosmos/chain-registry.git
+[submodule "packages/wallet-registry/wallet-registry"]
+	path = packages/wallet-registry/wallet-registry
+	url = git@github.com:cosmos/wallet-registry.git
