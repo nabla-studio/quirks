@@ -1,1 +1,1 @@
-export * from './lib/wallet-registry';
+export * from './types';
