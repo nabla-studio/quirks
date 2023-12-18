@@ -1,0 +1,86 @@
+import type { CosmosWallet } from '../types';
+
+export const keplrextension: CosmosWallet = {
+  $schema: '../../wallet.schema.json',
+  wallet_name: 'keplrextension',
+  pretty_name: 'Keplr',
+  website: 'https://www.keplr.app/',
+  git_repo: 'https://github.com/chainapsis/keplr-wallet',
+  supported_chains: [
+    'cosmoshub',
+    'osmosis',
+    'secretnetwork',
+    'regen',
+    'akash',
+    'sifchain',
+    'stargaze',
+    'sentinel',
+    'persistence',
+    'kava',
+    'cryptoorgchain',
+    'irisnet',
+    'agoric',
+    'axelar',
+    'certik',
+    'ixo',
+    'emoney',
+    'juno',
+    'sommelier',
+    'umee',
+    'evmos',
+    'bostrom',
+    'starname',
+    'gravitybridge',
+    'stride',
+    'tgrade',
+  ],
+  features: ['suggest_chain', 'icns'],
+  platforms: [
+    {
+      device: 'desktop',
+      type: 'extension',
+      platform: 'chrome',
+      install_link:
+        'https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap',
+    },
+    {
+      device: 'desktop',
+      type: 'extension',
+      platform: 'firefox',
+      install_link: 'https://addons.mozilla.org/firefox/addon/keplr/',
+    },
+  ],
+  images: [
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo.svg',
+      theme: {
+        primary_color_hex: '#1BB8FF',
+        circle: false,
+        dark_mode: false,
+      },
+      layout: 'logomark',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text.svg',
+      theme: {
+        primary_color_hex: '#EBF7FD',
+        circle: false,
+        dark_mode: false,
+      },
+      layout: 'logo',
+      text_position: 'right',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text-dark.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text-dark.svg',
+      theme: {
+        primary_color_hex: '#0A0718',
+        circle: false,
+        dark_mode: true,
+      },
+      layout: 'logomark',
+    },
+  ],
+};

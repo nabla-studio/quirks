@@ -1,0 +1,116 @@
+import type { CosmosWallet } from '../types';
+
+export const keplrmobile: CosmosWallet = {
+  $schema: '../../wallet.schema.json',
+  wallet_name: 'keplrmobile',
+  pretty_name: 'Keplr',
+  website: 'https://www.keplr.app/',
+  git_repo: 'https://github.com/chainapsis/keplr-wallet',
+  supported_chains: [
+    'cosmoshub',
+    'osmosis',
+    'secretnetwork',
+    'regen',
+    'akash',
+    'sifchain',
+    'stargaze',
+    'sentinel',
+    'persistence',
+    'cryptoorgchain',
+    'irisnet',
+    'agoric',
+    'axelar',
+    'certik',
+    'ixo',
+    'emoney',
+    'tick',
+    'terra',
+    'likecoin',
+    'bitcanna',
+    'bitsong',
+    'ki',
+    'panacea',
+    'juno',
+    'sommelier',
+    'umee',
+    'evmos',
+    'injective',
+    'bostrom',
+    'comdex',
+    'cheqd',
+    'chihuahua',
+    'lumnetwork',
+    'vidulum',
+    'desmos',
+    'dig',
+    'starname',
+    'gravitybridge',
+  ],
+  features: ['icns'],
+  platforms: [
+    {
+      device: 'mobile',
+      type: 'application',
+      platform: 'ios',
+      install_link: 'https://apps.apple.com/app/keplr-wallet/id1567851089',
+    },
+    {
+      device: 'mobile',
+      type: 'application',
+      platform: 'android',
+      install_link:
+        'https://play.google.com/store/apps/details?id=com.chainapsis.keplr',
+    },
+  ],
+  images: [
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo.svg',
+      theme: {
+        primary_color_hex: '#1BB8FF',
+        circle: false,
+        dark_mode: false,
+      },
+      layout: 'logomark',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text.svg',
+      theme: {
+        primary_color_hex: '#EBF7FD',
+        circle: false,
+        dark_mode: false,
+      },
+      layout: 'logo',
+      text_position: 'right',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text-dark.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text-dark.svg',
+      theme: {
+        primary_color_hex: '#0A0718',
+        circle: false,
+        dark_mode: true,
+      },
+      layout: 'logomark',
+    },
+  ],
+  wallet_connect: {
+    deeplink: {
+      path: {
+        android: 'wcV2',
+        ios: 'wcV2',
+      },
+    },
+  },
+  mobile: {
+    ios: {
+      bundle_identifier: 'com.chainapsis.keplrwallet',
+      schema: 'keplrwallet',
+    },
+    android: {
+      package_name: 'com.chainapsis.keplr',
+      schema: 'keplrwallet',
+    },
+  },
+};

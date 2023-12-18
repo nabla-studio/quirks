@@ -1,0 +1,21 @@
+{
+  "name": "@nabla-studio/wallet-registry",
+  "repository": "nabla-studio/quirks",
+  "keywords": [
+    "blockchain",
+    "cosmos",
+    "cosmos-sdk",
+    "registry",
+    "osmosis",
+    "juno",
+    "desmos",
+    "evmos"
+  ],
+  "version": "0.0.1",
+  "sideEffects": false,
+  "type": "module",
+  "dependencies": {},
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts"
+}
