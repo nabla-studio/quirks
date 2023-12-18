@@ -9,6 +9,13 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 * **store:** :sparkles: add autoAccountChange option ([ec1dca8](https://github.com/nabla-studio/quirks/commit/ec1dca8fbe72f1c0f69a30d5b5ad5154dde82112))
 
+## [0.10.0](https://github.com/nabla-studio/quirks/compare/store@0.9.5...store@0.10.0) (2023-12-18)
+
+
+### Features
+
+* **store:** :sparkles: add autoAccountChange option ([ec1dca8](https://github.com/nabla-studio/quirks/commit/ec1dca8fbe72f1c0f69a30d5b5ad5154dde82112))
+
 ## [0.9.5](https://github.com/nabla-studio/quirks/compare/store@0.9.4...store@0.9.5) (2023-12-16)
 
 ### Dependency Updates
