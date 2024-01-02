@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/nabla-studio/quirks/compare/wallet-registry@0.1.0...wallet-registry@0.2.0) (2024-01-02)
+
+
+### Features
+
+* **wallet-registry:** :sparkles: update registry ([f927e93](https://github.com/nabla-studio/quirks/commit/f927e930325db44db8c50c6f0d2a84d891ad4645))
+
 ## 0.1.0 (2023-12-18)
 
 
