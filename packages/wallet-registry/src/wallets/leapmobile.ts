@@ -51,8 +51,8 @@ export const leapmobile: CosmosWallet = {
   ],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/leapmobile/images/logo.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/leapmobile/images/logo.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/leapmobile/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/leapmobile/images/logo.svg',
       theme: {
         primary_color_hex: '#32DA6D',
         circle: false,

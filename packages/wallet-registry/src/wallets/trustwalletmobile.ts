@@ -32,8 +32,8 @@ export const trustwalletmobile: CosmosWallet = {
   ],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/trustwalletmobile/images/logo-text.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/trustwalletmobile/images/logo-text.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo-text.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo-text.svg',
       theme: {
         primary_color_hex: '#0500ff',
         circle: false,
@@ -43,8 +43,8 @@ export const trustwalletmobile: CosmosWallet = {
       text_position: 'right',
     },
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/trustwalletmobile/images/logo.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/trustwalletmobile/images/logo.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo.svg',
       theme: {
         primary_color_hex: '#0500ff',
         circle: false,

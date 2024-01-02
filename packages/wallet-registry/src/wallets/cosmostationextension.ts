@@ -76,8 +76,8 @@ export const cosmostationextension: CosmosWallet = {
   ],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/cosmostationextension/images/logo.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/cosmostationextension/images/logo.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/cosmostationextension/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/cosmostationextension/images/logo.svg',
       theme: {
         primary_color_hex: '#9C6CFF',
         circle: false,
