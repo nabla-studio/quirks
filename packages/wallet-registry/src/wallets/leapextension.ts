@@ -51,8 +51,8 @@ export const leapextension: CosmosWallet = {
   ],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/leapextension/images/logo.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/leapextension/images/logo.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/leapextension/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/leapextension/images/logo.svg',
       theme: {
         primary_color_hex: '#32DA6D',
         circle: false,

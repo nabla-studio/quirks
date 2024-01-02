@@ -64,8 +64,8 @@ export const keplrmobile: CosmosWallet = {
   ],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/keplrextension/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/keplrextension/images/logo.svg',
       theme: {
         primary_color_hex: '#1BB8FF',
         circle: false,
@@ -74,8 +74,8 @@ export const keplrmobile: CosmosWallet = {
       layout: 'logomark',
     },
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/keplrextension/images/logo-text.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/keplrextension/images/logo-text.svg',
       theme: {
         primary_color_hex: '#EBF7FD',
         circle: false,
@@ -85,8 +85,8 @@ export const keplrmobile: CosmosWallet = {
       text_position: 'right',
     },
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text-dark.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/keplrextension/images/logo-text-dark.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/keplrextension/images/logo-text-dark.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/keplrextension/images/logo-text-dark.svg',
       theme: {
         primary_color_hex: '#0A0718',
         circle: false,

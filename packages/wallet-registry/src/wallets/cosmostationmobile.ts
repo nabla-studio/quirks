@@ -79,8 +79,8 @@ export const cosmostationmobile: CosmosWallet = {
   ],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/cosmostationmobile/images/logo.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/cosmostationmobile/images/logo.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/cosmostationmobile/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/cosmostationmobile/images/logo.svg',
       theme: {
         primary_color_hex: '#9C6CFF',
         circle: false,
