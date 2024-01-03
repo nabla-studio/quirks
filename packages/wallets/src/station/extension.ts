@@ -19,7 +19,7 @@ import { ExtensionWallet, assertIsDefined } from '@quirks/core';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { Keplr } from '@keplr-wallet/types';
 import Long from 'long';
-import { chainRegistryChainToKeplr } from '../keplr/utils';
+import { getChainInfo } from '../utils';
 
 export class StationWalletExtension extends ExtensionWallet<Keplr> {
   constructor(options: WalletOptions) {
@@ -156,10 +156,7 @@ export class StationWalletExtension extends ExtensionWallet<Keplr> {
     assertIsDefined(this.client);
 
     for (const suggestion of suggestions) {
-      const suggestChain = chainRegistryChainToKeplr(
-        suggestion.chain,
-        suggestion.assetList ? [suggestion.assetList] : [],
-      );
+      const suggestChain = getChainInfo(suggestion.chain, suggestion.assetList);
 
       await this.client.experimentalSuggestChain(suggestChain);
     }
