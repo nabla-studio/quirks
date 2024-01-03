@@ -1,25 +1,15 @@
-import { QuirksConfigContext } from './config';
-import { type PropsWithChildren, useContext, useEffect, useState } from 'react';
+import { type PropsWithChildren, useSyncExternalStore } from 'react';
 
-export const QuirksNextProvider = (props: PropsWithChildren<unknown>) => {
-  const { children } = props;
-  const store = useContext(QuirksConfigContext);
-  const [hydrated, setHydrated] = useState(false);
+export const emptySubscribe = () => () => {};
 
-  if (!store) {
-    throw new Error(
-      ['`QuirksNextProvider` must be used within `QuirksConfig`.'].join('\n'),
-    );
-  }
+export const QuirksNextProvider = ({
+  children,
+}: PropsWithChildren<unknown>) => {
+  const isServer = useSyncExternalStore(
+    emptySubscribe,
+    () => false,
+    () => true,
+  );
 
-  useEffect(() => {
-    store.persist.rehydrate();
-    setHydrated(true);
-  }, [store.persist]);
-
-  if (!hydrated) {
-    return null;
-  }
-
-  return children;
+  return isServer ? null : children;
 };
