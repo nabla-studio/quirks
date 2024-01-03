@@ -44,7 +44,6 @@ export default defineConfig({
         '@keplr-wallet/types',
         '@cosmjs/proto-signing',
         '@cosmjs/amino',
-        'semver',
         'long',
         '@quirks/core',
         '@nabla-studio/chain-registry',

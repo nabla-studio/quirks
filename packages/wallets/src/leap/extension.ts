@@ -18,8 +18,8 @@ import type {
 import { ExtensionWallet, assertIsDefined } from '@quirks/core';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import Long from 'long';
-import { chainRegistryChainToKeplr } from '../keplr/utils';
-import { Leap } from './types';
+import { getChainInfo } from '../utils';
+import type { Leap } from './types';
 
 export class LeapWalletExtension extends ExtensionWallet<Leap> {
   constructor(options: WalletOptions) {
@@ -160,10 +160,7 @@ export class LeapWalletExtension extends ExtensionWallet<Leap> {
     assertIsDefined(this.client);
 
     for (const suggestion of suggestions) {
-      const suggestChain = chainRegistryChainToKeplr(
-        suggestion.chain,
-        suggestion.assetList ? [suggestion.assetList] : [],
-      );
+      const suggestChain = getChainInfo(suggestion.chain, suggestion.assetList);
 
       await this.client.experimentalSuggestChain(suggestChain);
     }

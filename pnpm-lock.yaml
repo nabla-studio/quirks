@@ -74,9 +74,6 @@ dependencies:
   react-qr-code:
     specifier: ^2.0.12
     version: 2.0.12(react@18.2.0)
-  semver:
-    specifier: ^7.5.4
-    version: 7.5.4
   stargazejs:
     specifier: ^0.14.1
     version: 0.14.1(bufferutil@4.0.8)(utf-8-validate@6.0.3)

@@ -101,7 +101,7 @@ export const createConnectSlice: StateCreator<
         name: chain.chain_name,
         assetList: get().assetsLists.find(
           (list) => list.chain_name === chain.chain_name,
-        ),
+        )!,
       }));
 
       return suggestChains(wallet.options.name, chains);
