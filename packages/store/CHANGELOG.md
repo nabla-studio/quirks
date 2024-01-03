@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.10.1](https://github.com/nabla-studio/quirks/compare/store@0.10.0...store@0.10.1) (2024-01-03)
+
+### Dependency Updates
+
+* `core` updated to version `0.10.0`
+
+### Bug Fixes
+
+* **store:** :bug: fix optional assetList suggestion ([c1b3b70](https://github.com/nabla-studio/quirks/commit/c1b3b7047651b6b7a1987ff8898554e6ebe65e10))
+
 ## [0.10.0](https://github.com/nabla-studio/quirks/compare/store@0.9.5...store@0.10.0) (2023-12-18)
 
 

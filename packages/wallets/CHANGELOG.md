@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.0](https://github.com/nabla-studio/quirks/compare/wallets@0.7.5...wallets@0.8.0) (2024-01-03)
+
+### Dependency Updates
+
+* `core` updated to version `0.7.5`
+
+### Features
+
+* **wallets:** :fire: remove semver ([2be8164](https://github.com/nabla-studio/quirks/commit/2be816409507b35865492ab75280dd4d4683e4ee))
+* **wallets:** :sparkles: refactor chainRegistryChainToKeplr ([a50727d](https://github.com/nabla-studio/quirks/commit/a50727d0d0b9e48b29d4362c0aa449077fb1047e)), closes [#41](https://github.com/nabla-studio/quirks/issues/41)
+
 ## [0.7.5](https://github.com/nabla-studio/quirks/compare/wallets@0.7.4...wallets@0.7.5) (2023-12-16)
 
 ### Dependency Updates
