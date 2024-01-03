@@ -2,7 +2,7 @@
 
 import { osmosis, osmosisAssetList } from '@nabla-studio/chain-registry';
 import { QuirksConfig, QuirksNextProvider } from '@quirks/react';
-import { type Config, ssrPersistOptions } from '@quirks/store';
+import { type Config } from '@quirks/store';
 import {
   xdefiExtension,
   keplrExtension,
@@ -22,7 +22,6 @@ const config: Config = {
   ],
   chains: [osmosis /* bitsong */],
   assetsLists: [osmosisAssetList /* bitsongAssetList */],
-  persistOptions: ssrPersistOptions,
   walletConnectOptions: {
     providerOpts: {
       logger: 'info',
@@ -39,8 +38,8 @@ const config: Config = {
 
 export const Provider = ({ children }: PropsWithChildren<unknown>) => {
   return (
-    <QuirksConfig config={config}>
-      <QuirksNextProvider>{children}</QuirksNextProvider>
-    </QuirksConfig>
+    <QuirksNextProvider>
+      <QuirksConfig config={config}>{children}</QuirksConfig>
+    </QuirksNextProvider>
   );
 };
