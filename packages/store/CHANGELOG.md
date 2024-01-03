@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.10.2](https://github.com/nabla-studio/quirks/compare/store@0.10.1...store@0.10.2) (2024-01-03)
+
+
+### Bug Fixes
+
+* **store:** :bug: fix persist default value ([a8339e0](https://github.com/nabla-studio/quirks/commit/a8339e0d9d8a21649314d096898b683f7e648afb))
+* **store:** :bug: fix skipHydration behaviour ([15a8311](https://github.com/nabla-studio/quirks/commit/15a8311112da092069eb5f5d14ba069cd9d63151))
+
 ## [0.10.1](https://github.com/nabla-studio/quirks/compare/store@0.10.0...store@0.10.1) (2024-01-03)
 
 ### Dependency Updates
