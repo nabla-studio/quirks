@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.0](https://github.com/nabla-studio/quirks/compare/react@0.5.6...react@0.6.0) (2024-01-03)
+
+### Dependency Updates
+
+* `store` updated to version `0.5.6`
+
+### Features
+
+* **react:** :sparkles: add usSES instead of useEffect ([801ec38](https://github.com/nabla-studio/quirks/commit/801ec381d37d3841c38aecd112dfc965fff743f4))
+
 ## [0.5.6](https://github.com/nabla-studio/quirks/compare/react@0.5.5...react@0.5.6) (2024-01-03)
 
 ### Dependency Updates
