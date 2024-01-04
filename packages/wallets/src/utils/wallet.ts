@@ -13,7 +13,7 @@ export const defaultChainInfoOptions: ChainInfoOptions = {
   getExplorer: getExplr,
 };
 
-export const defaultGasPriceStep: FeeCurrency['gasPriceStep'] = {
+export const defaultGasPriceStep: NonNullable<FeeCurrency['gasPriceStep']> = {
   low: 0.01,
   average: 0.025,
   high: 0.04,
