@@ -19,7 +19,7 @@ import { ExtensionWallet, assertIsDefined } from '@quirks/core';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import Long from 'long';
 import type { Cosmostation, RequestAccountResponse } from './types';
-import { chainRegistryChainToCosmostation } from './utils';
+import { getChainInfoCosmostation } from './utils';
 
 export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
   constructor(options: WalletOptions) {
@@ -181,9 +181,9 @@ export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
     assertIsDefined(this.cosmos, 'cosmos provider is not defined');
 
     for (const suggestion of suggestions) {
-      const suggestChain = chainRegistryChainToCosmostation(
+      const suggestChain = getChainInfoCosmostation(
         suggestion.chain,
-        suggestion.assetList ? [suggestion.assetList] : [],
+        suggestion.assetList,
       );
 
       const result = (await this.cosmos.request({

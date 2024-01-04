@@ -34,15 +34,15 @@ export const Button = () => {
         false
       )}
       {wallets.map((wallet) => (
-        <div key={wallet.options.name}>
+        <div key={wallet.options.wallet_name}>
           <button
             onClick={async () => {
-              await connect(wallet.options.name);
+              await connect(wallet.options.wallet_name);
             }}
           >
             <img
               src={wallet.logoLight}
-              alt={wallet.options.prettyName}
+              alt={wallet.options.pretty_name}
               height="48px"
               width="48px"
             />
@@ -51,8 +51,8 @@ export const Button = () => {
           {!wallet.injected ? (
             <a
               href={
-                wallet.options.downloads && wallet.options.downloads.length > 0
-                  ? wallet.options.downloads[0].link
+                wallet.options.platforms && wallet.options.platforms.length > 0
+                  ? wallet.options.platforms[0].install_link
                   : '#'
               }
               target="_blank"

@@ -93,7 +93,9 @@ export const createConnectSlice: StateCreator<
     }
   },
   suggestChains: async (walletName) => {
-    const wallet = get().wallets.find((el) => el.options.name === walletName);
+    const wallet = get().wallets.find(
+      (el) => el.options.wallet_name === walletName,
+    );
 
     if (wallet) {
       const chains: SuggestChain[] = get().chains.map((chain) => ({
@@ -104,12 +106,14 @@ export const createConnectSlice: StateCreator<
         )!,
       }));
 
-      return suggestChains(wallet.options.name, chains);
+      return suggestChains(wallet.options.wallet_name, chains);
     }
   },
   connect: async (walletName) => {
     try {
-      const wallet = get().wallets.find((el) => el.options.name === walletName);
+      const wallet = get().wallets.find(
+        (el) => el.options.wallet_name === walletName,
+      );
 
       if (!wallet) {
         throw createInvalidWalletName(walletName);
@@ -156,7 +160,9 @@ export const createConnectSlice: StateCreator<
   },
   reconnect: async (walletName) => {
     try {
-      const wallet = get().wallets.find((el) => el.options.name === walletName);
+      const wallet = get().wallets.find(
+        (el) => el.options.wallet_name === walletName,
+      );
 
       if (!wallet) {
         throw createInvalidWalletName(walletName);

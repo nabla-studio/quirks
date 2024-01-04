@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import type { StdSignature } from '@cosmjs/amino';
+import type { CosmosWallet } from '@nabla-studio/wallet-registry';
 import type { SignClientTypes } from '@walletconnect/types';
 
 export const WalletConnectionTypes = {
@@ -33,26 +34,12 @@ export interface WalletEvents {
   keystorechange: string;
 }
 
-export interface WalletOptions {
-  /**
-   * Unique name ID
-   */
-  name: string;
-  /**
-   * Display name
-   */
-  prettyName: string;
+export interface WalletOptions extends CosmosWallet {
   connectionType: WalletConnectionType;
   /**
    * Window extension key
    */
   windowKey?: string | string[];
-  /**
-   * Logo url
-   */
-  logoUrls?: WalletLogo;
-  description?: string;
-  downloads?: DownloadInfo[];
   events: WalletEvents;
 }
 
