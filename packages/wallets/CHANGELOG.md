@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.9.0](https://github.com/nabla-studio/quirks/compare/wallets@0.8.0...wallets@0.9.0) (2024-01-04)
+
+### Dependency Updates
+
+* `core` updated to version `0.8.0`
+
+### Features
+
+* **wallets:** :boom: add wallet registry types ([d82a615](https://github.com/nabla-studio/quirks/commit/d82a615f15fb3d680047b1c252074cfd429024c8))
+* **wallets:** :sparkles: add xdefi and wc data ([2597388](https://github.com/nabla-studio/quirks/commit/25973882528e0b23519e2691bf8b703d1d340b12))
+
 ## [0.8.0](https://github.com/nabla-studio/quirks/compare/wallets@0.7.5...wallets@0.8.0) (2024-01-03)
 
 ### Dependency Updates
