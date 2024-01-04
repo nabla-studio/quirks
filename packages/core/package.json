@@ -15,7 +15,8 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@nabla-studio/chain-registry": "*"
+    "@nabla-studio/chain-registry": "*",
+    "@nabla-studio/wallet-registry": "*"
   },
   "peerDependencies": {
     "@cosmjs/stargate": "^0.31.3",
