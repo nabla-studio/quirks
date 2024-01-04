@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.11.0](https://github.com/nabla-studio/quirks/compare/store@0.10.2...store@0.11.0) (2024-01-04)
+
+### Dependency Updates
+
+* `core` updated to version `0.10.2`
+
+### Features
+
+* **store:** :sparkles: add wallet registry support ([9eeee5e](https://github.com/nabla-studio/quirks/commit/9eeee5ecf76c45741ec6b13117e3d6c73c9c84a2))
+
 ## [0.10.2](https://github.com/nabla-studio/quirks/compare/store@0.10.1...store@0.10.2) (2024-01-03)
 
 
