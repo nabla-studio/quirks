@@ -16,7 +16,8 @@
   "type": "module",
   "dependencies": {
     "@quirks/core": "*",
-    "@nabla-studio/chain-registry": "*"
+    "@nabla-studio/chain-registry": "*",
+    "@nabla-studio/wallet-registry": "*"
   },
   "peerDependencies": {
     "@cosmjs/amino": "^0.31.3",
