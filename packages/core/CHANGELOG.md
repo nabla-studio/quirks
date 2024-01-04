@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.10.0](https://github.com/nabla-studio/quirks/compare/core@0.9.0...core@0.10.0) (2024-01-04)
+
+
+### Features
+
+* **core:** :boom: add wallet registry types ([5db6255](https://github.com/nabla-studio/quirks/commit/5db6255e287b7a1b879abced5f3fbbb0b3799ee9))
+
+
+### Bug Fixes
+
+* **core:** :bug: fix logos utils ([3a368df](https://github.com/nabla-studio/quirks/commit/3a368dfa9bea8008ebf8ca90d3404b95bad669f6))
+
 ## [0.9.0](https://github.com/nabla-studio/quirks/compare/core@0.8.5...core@0.9.0) (2024-01-03)
 
 
