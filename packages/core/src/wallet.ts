@@ -41,41 +41,31 @@ export abstract class Wallet<T = unknown, K = unknown> {
     this.events.removeAllListeners();
   }
 
+  /**
+   * Return dark mode logo mark
+   */
   get logoDark() {
-    const urls = this.options.logoUrls;
+    const image = this.options.images.find(
+      (img) => img.theme?.dark_mode === true && img.layout === 'logomark',
+    );
 
-    if (urls && urls.dark) {
-      const keys = Object.keys(urls.dark);
-
-      if (urls.dark.svg) {
-        return urls.dark.svg;
-      }
-
-      if (keys.length > 0) {
-        const [key] = keys;
-
-        return (urls.dark as { [key: string]: string })[key];
-      }
+    if (image) {
+      return image.svg ? image.svg : image.png;
     }
 
     return undefined;
   }
 
+  /**
+   * Return light mode logo mark
+   */
   get logoLight() {
-    const urls = this.options.logoUrls;
+    const image = this.options.images.find(
+      (img) => !img.theme?.dark_mode && img.layout === 'logomark',
+    );
 
-    if (urls && urls.light) {
-      const keys = Object.keys(urls.light);
-
-      if (urls.light.svg) {
-        return urls.light.svg;
-      }
-
-      if (keys.length > 0) {
-        const [key] = keys;
-
-        return (urls.light as { [key: string]: string })[key];
-      }
+    if (image) {
+      return image.svg ? image.svg : image.png;
     }
 
     return undefined;
