@@ -30,6 +30,7 @@ export const cosmwasmFeatures = {
 };
 
 /**
+ * The first version of the following utility is derived by a code which lays under an [MIT license](./Cosmology-LICENSE).
  *
  * @param chain An object that contains the chain configuration, can be retrieved from the chain-registry (@nabla-studio/chain-registry)
  * @param assets An array containing objects represented the token information of the chain passed before can be retrieved from the chain-registry

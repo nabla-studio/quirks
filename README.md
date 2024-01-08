@@ -89,14 +89,14 @@ contact us on discord.
 
 Thanks to the creators and contributors of the following projects, whose work has influenced the development of quirks:
 
-1. [Wagmi](https://github.com/wevm/wagmi) by [WEVM](https://github.com/wevm)
+- [Wagmi](https://github.com/wevm/wagmi) by [WEVM](https://github.com/wevm)
 
-2. [Web3Modal](https://github.com/WalletConnect/web3modal) by [WalletConnect](https://github.com/WalletConnect)
+- [Web3Modal](https://github.com/WalletConnect/web3modal) by [WalletConnect](https://github.com/WalletConnect)
 
-3. [Zustand](https://github.com/pmndrs/zustand) by [Poimandres](https://github.com/pmndrs)
+- [Zustand](https://github.com/pmndrs/zustand) by [Poimandres](https://github.com/pmndrs)
 
-4. [Graz](https://github.com/graz-sh/graz) by [Graz](https://github.com/graz-sh)
+- [Graz](https://github.com/graz-sh/graz) by [Graz](https://github.com/graz-sh)
 
-5. [Cosmos Kit](https://github.com/cosmology-tech/cosmos-kit) by [Cosmology Tech](https://github.com/cosmology-tech)
+- [Cosmos Kit](https://github.com/cosmology-tech/cosmos-kit) by [Cosmology Tech](https://github.com/cosmology-tech)
 
 Copyright © 2023 [nabla](https://github.com/nabla-studio).
