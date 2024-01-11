@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.11.0](https://github.com/nabla-studio/quirks/compare/core@0.10.0...core@0.11.0) (2024-01-11)
+
+
+### Features
+
+* **core:** :sparkles: improve log messages ([eb24147](https://github.com/nabla-studio/quirks/commit/eb2414793dd0e99a45131c78ca05f4d688d130a2))
+* **core:** :sparkles: improve wc provider logs ([d204582](https://github.com/nabla-studio/quirks/commit/d204582208c1f7cbcc1471ab6af253794a81e372))
+
 ## [0.10.0](https://github.com/nabla-studio/quirks/compare/core@0.9.0...core@0.10.0) (2024-01-04)
 
 
