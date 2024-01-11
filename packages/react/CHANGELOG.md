@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.0](https://github.com/nabla-studio/quirks/compare/react@0.6.1...react@0.7.0) (2024-01-11)
+
+### Dependency Updates
+
+* `store` updated to version `0.6.1`
+* `core` updated to version `0.6.1`
+
+### Features
+
+* **react:** :sparkles: add wallet info inside useConnect ([999d076](https://github.com/nabla-studio/quirks/commit/999d0760672199386e5dd7301222ee5d3d351be4))
+* **react:** :sparkles: improve log messages ([d0f78ed](https://github.com/nabla-studio/quirks/commit/d0f78ed111cd2636f478747a5244406262503a02))
+
 ## [0.6.1](https://github.com/nabla-studio/quirks/compare/react@0.6.0...react@0.6.1) (2024-01-04)
 
 ### Dependency Updates
