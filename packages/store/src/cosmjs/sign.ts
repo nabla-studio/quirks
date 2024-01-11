@@ -7,8 +7,14 @@ import {
   getEndpoint,
   getGasPrice,
 } from '@quirks/core';
-import type { SigningStargateClientOptions } from '@cosmjs/stargate';
-import type { SigningCosmWasmClientOptions } from '@cosmjs/cosmwasm-stargate';
+import type {
+  SigningStargateClientOptions,
+  SigningStargateClient,
+} from '@cosmjs/stargate';
+import type {
+  SigningCosmWasmClientOptions,
+  SigningCosmWasmClient,
+} from '@cosmjs/cosmwasm-stargate';
 import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { SignerType } from '../types';
 
@@ -285,4 +291,90 @@ export const signArbitrary = (
   assertIsDefined(state.wallet);
 
   return state.wallet.signArbitrary(chainId, signer, data);
+};
+
+/**
+ * Return an instance of CosmJS Signing Stargate Client
+ *
+ * @param chainName
+ * @param signerType
+ * @returns SigningStargateClient
+ */
+export const getSigningStargateClient = async (
+  chainName: string,
+  signerType: SignerType = 'auto',
+): Promise<SigningStargateClient> => {
+  const state = store.getState();
+  assertIsDefined(state.wallet, 'wallet is undefined');
+
+  const chain = state.chains.find((el) => el.chain_name === chainName);
+  assertIsDefined(chain);
+
+  const endpoint = getEndpoint(chainName, state.chains);
+
+  const offlineSigner = await getOfflineSigner(chain.chain_id, signerType);
+
+  let clientOptions: SigningStargateClientOptions | undefined = undefined;
+
+  const signingStargate = state.signerOptions?.signingStargate;
+
+  if (signingStargate) {
+    clientOptions = await signingStargate(chain);
+  }
+
+  const stargate = await import('@cosmjs/stargate');
+  const SigningStargateClient =
+    stargate.SigningStargateClient ?? stargate.default.SigningStargateClient;
+
+  const client = await SigningStargateClient.connectWithSigner(
+    endpoint.rpc.address,
+    offlineSigner,
+    clientOptions,
+  );
+
+  return client;
+};
+
+/**
+ * Return an instance of CosmJS Signing CosmWasm Stargate Client
+ *
+ * @param chainName
+ * @param signerType
+ * @returns SigningStargateClient
+ */
+export const getSigningCosmWasmClient = async (
+  chainName: string,
+  signerType: SignerType = 'auto',
+): Promise<SigningCosmWasmClient> => {
+  const state = store.getState();
+  assertIsDefined(state.wallet);
+
+  const chain = store
+    .getState()
+    .chains.find((el) => el.chain_name === chainName);
+  assertIsDefined(chain);
+
+  const endpoint = getEndpoint(chainName, state.chains);
+
+  const offlineSigner = await getOfflineSigner(chain.chain_id, signerType);
+
+  let clientOptions: SigningCosmWasmClientOptions | undefined = undefined;
+
+  const signingCosmwasm = state.signerOptions?.signingCosmwasm;
+
+  if (signingCosmwasm) {
+    clientOptions = await signingCosmwasm(chain);
+  }
+
+  const stargate = await import('@cosmjs/cosmwasm-stargate');
+  const SigningCosmWasmClient =
+    stargate.SigningCosmWasmClient ?? stargate.default.SigningCosmWasmClient;
+
+  const client = await SigningCosmWasmClient.connectWithSigner(
+    endpoint.rpc.address,
+    offlineSigner,
+    clientOptions,
+  );
+
+  return client;
 };

@@ -192,7 +192,7 @@ export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
       })) as boolean;
 
       if (!result) {
-        throw new Error(`Failed to add chain ${suggestion.name}.`);
+        throw new Error(`[Quirks]: Failed to add chain ${suggestion.name}.`);
       }
     }
   }

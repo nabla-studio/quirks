@@ -275,11 +275,11 @@ export class WCWallet extends Wallet<
    * Maybe we can implement it later using signDirect
    */
   override signArbitrary(): Promise<StdSignature> {
-    throw new Error('Method not implemented.');
+    throw new Error('[Quirks]: Method not implemented.');
   }
 
   override async verifyArbitrary(): Promise<boolean> {
-    throw new Error('Method not implemented.');
+    throw new Error('[Quirks]: Method not implemented.');
   }
 
   override async suggestTokens() {

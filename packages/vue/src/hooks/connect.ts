@@ -5,6 +5,8 @@ export const useConnect = () => {
   const connect = useQuirks()((state) => state.connect);
   const disconnect = useQuirks()((state) => state.disconnect);
   const status = useQuirks()((state) => state.status);
+  const wallet = useQuirks()((state) => state.wallet);
+  const walletName = useQuirks()((state) => state.walletName);
   const connected = useQuirks()(
     (state) => state.status === ConnectionStates.CONNECTED,
   );
@@ -26,5 +28,7 @@ export const useConnect = () => {
     waiting,
     disconnected,
     rejected,
+    wallet,
+    walletName,
   };
 };

@@ -12,5 +12,7 @@ export const useConnect = () => {
     waiting: store.use.status() === ConnectionStates.WAITING,
     disconnected: store.use.status() === ConnectionStates.DISCONNECTED,
     rejected: store.use.status() === ConnectionStates.REJECTED,
+    wallet: store.use.wallet ? store.use.wallet() : undefined,
+    walletName: store.use.walletName ? store.use.walletName() : undefined,
   };
 };
