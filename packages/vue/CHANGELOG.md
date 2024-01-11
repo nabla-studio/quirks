@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.5.0](https://github.com/nabla-studio/quirks/compare/vue@0.4.9...vue@0.5.0) (2024-01-11)
+
+### Dependency Updates
+
+* `store` updated to version `0.4.9`
+* `core` updated to version `0.4.9`
+
+### Features
+
+* **vue:** :sparkles: add wallet info inside useConnect ([f50e3e0](https://github.com/nabla-studio/quirks/commit/f50e3e0e23525c5b36f6a35a44af7b7e29b28325))
+* **vue:** :sparkles: improve log messages ([613a73f](https://github.com/nabla-studio/quirks/commit/613a73f4f1e803fc04cc952361b647358d22ddc1))
+
 ## [0.4.9](https://github.com/nabla-studio/quirks/compare/vue@0.4.8...vue@0.4.9) (2024-01-04)
 
 ### Dependency Updates
