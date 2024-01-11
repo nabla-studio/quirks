@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.12.0](https://github.com/nabla-studio/quirks/compare/store@0.11.0...store@0.12.0) (2024-01-11)
+
+### Dependency Updates
+
+* `core` updated to version `0.11.0`
+
+### Features
+
+* **store:** :sparkles: add stargate utils ([5880346](https://github.com/nabla-studio/quirks/commit/58803464cc010dc3f05a9c08054d5ad4325bdd25))
+
+
+### Bug Fixes
+
+* **store:** :bug: fix serialization errors ([ece1777](https://github.com/nabla-studio/quirks/commit/ece1777654535fc6002a3612e1a32de0155ae293))
+
 ## [0.11.0](https://github.com/nabla-studio/quirks/compare/store@0.10.2...store@0.11.0) (2024-01-04)
 
 ### Dependency Updates
