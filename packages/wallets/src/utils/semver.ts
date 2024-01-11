@@ -28,7 +28,7 @@ export const parseVer = (version: string) => {
     const padding = 3 - spaces;
 
     if (padding < 0) {
-      throw new Error('contact maintainers: bad version');
+      throw new Error('[Quirks]: contact maintainers: bad version');
     }
 
     const paddingZero =
@@ -87,7 +87,7 @@ export const checkVersionConstraint = (
     case '<':
       return comparisonResult < 0;
     default:
-      throw new Error(`Invalid operator: ${constraint.operator}`);
+      throw new Error(`[Quirks]: Invalid operator: ${constraint.operator}`);
   }
 };
 
@@ -105,6 +105,6 @@ export const satisfies = (version: string, compare: string) => {
 
     return isSatisfied;
   } else {
-    throw new Error(`${compare} isn't a valid compare string format`);
+    throw new Error(`[Quirks]: ${compare} isn't a valid compare string format`);
   }
 };
