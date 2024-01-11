@@ -22,7 +22,7 @@ export const QuirksConfig = (props: PropsWithChildren<QuirksConfigProps>) => {
 
   if (!configOptions) {
     throw new Error(
-      ['`config` must be setup within `QuirksConfig`.'].join('\n'),
+      ['[Quirks]: `config` must be setup within `QuirksConfig`.'].join('\n'),
     );
   }
 
@@ -42,7 +42,7 @@ export const useQuirks = () => {
 
   if (!store) {
     throw new Error(
-      ['`useQuirks` must be used within `QuirksConfig`.'].join('\n'),
+      ['[Quirks]: `useQuirks` must be used within `QuirksConfig`.'].join('\n'),
     );
   }
 
