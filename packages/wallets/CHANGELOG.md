@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.10.0](https://github.com/nabla-studio/quirks/compare/wallets@0.9.0...wallets@0.10.0) (2024-01-11)
+
+### Dependency Updates
+
+* `core` updated to version `0.9.0`
+
+### Features
+
+* **wallets:** :sparkles: improve log messages ([d067528](https://github.com/nabla-studio/quirks/commit/d067528db00276870248cd8035a940140acde570))
+
 ## [0.9.0](https://github.com/nabla-studio/quirks/compare/wallets@0.8.0...wallets@0.9.0) (2024-01-04)
 
 ### Dependency Updates
