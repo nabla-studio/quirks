@@ -1,3 +1,4 @@
+import { openDeeplink } from '@quirks/core';
 import type {
   AppState,
   WalletConnectSlice,
@@ -6,6 +7,7 @@ import type {
 import type { StateCreator } from 'zustand/vanilla';
 
 export const walletConnectInitialState: WalletConnectState = {
+  openDeeplink,
   pairingURI: undefined,
   providerOpts: undefined,
   namespaces: {

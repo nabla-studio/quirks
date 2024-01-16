@@ -4,6 +4,7 @@ import {
   createInvalidWalletName,
   WalletConnectionTypes,
   type WCWallet,
+  openWCDeeplink,
 } from '@quirks/core';
 import {
   ConnectionStates,
@@ -130,13 +131,21 @@ export const createConnectSlice: StateCreator<
 
         await wallet.init(get().providerOpts);
 
-        wallet.events.on('display_uri', (uri) => {
+        const wcWallet = wallet as WCWallet;
+
+        wcWallet.events.on('display_uri', (uri) => {
           set({
             pairingURI: uri,
           });
+
+          openWCDeeplink(
+            wcWallet,
+            get().openDeeplink,
+            wcWallet.pairingDeeplinks,
+          );
         });
 
-        await (wallet as WCWallet).generateURI({
+        await wcWallet.generateURI({
           namespaces: get().namespaces,
         });
       }

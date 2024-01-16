@@ -1,4 +1,4 @@
-import type { SignOptions, Wallet } from '@quirks/core';
+import type { OpenDeeplinkCallback, SignOptions, Wallet } from '@quirks/core';
 import type { AssetLists, Chain } from '@nabla-studio/chain-registry';
 import type {
   SigningStargateClientOptions,
@@ -69,6 +69,12 @@ export interface Config {
   signOptions?: SignOptions;
   signerOptions?: SignerOptions;
   walletConnectOptions?: {
+    /**
+     * Is used to customize how a wallet connect deeplink is opened, useful for customizing behavior for example between browser and react native
+     *
+     * default: opens links with browser behavior
+     */
+    openDeeplink?: OpenDeeplinkCallback;
     providerOpts: UniversalProviderOpts;
     namespaces?: { cosmos: Omit<Namespace, 'chains'> };
   };

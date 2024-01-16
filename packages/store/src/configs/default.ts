@@ -10,6 +10,11 @@ export const excludedKeys: (keyof AppState)[] = [
   'providerOpts',
   'chains',
   'assetsLists',
+  'pairingURI',
+  'namespaces',
+  'signOptions',
+  'signerOptions',
+  'openDeeplink',
 ];
 
 export const defaultPersistOptions: PersistOptions<AppState> = {
