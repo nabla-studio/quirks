@@ -1,6 +1,11 @@
 'use client';
 
-import { osmosis, osmosisAssetList } from '@nabla-studio/chain-registry';
+import {
+  cosmoshub,
+  cosmoshubAssetList,
+  osmosis,
+  osmosisAssetList,
+} from '@nabla-studio/chain-registry';
 import { QuirksConfig, QuirksNextProvider } from '@quirks/react';
 import { type Config } from '@quirks/store';
 import {
@@ -9,6 +14,8 @@ import {
   leapExtension,
   cosmostationExtension,
   universalWalletConnect,
+  keplrMobile,
+  leapMobile,
 } from '@quirks/wallets';
 import { PropsWithChildren } from 'react';
 
@@ -19,9 +26,11 @@ const config: Config = {
     cosmostationExtension,
     xdefiExtension,
     universalWalletConnect,
+    keplrMobile,
+    leapMobile,
   ],
-  chains: [osmosis /* bitsong */],
-  assetsLists: [osmosisAssetList /* bitsongAssetList */],
+  chains: [osmosis, cosmoshub],
+  assetsLists: [osmosisAssetList, cosmoshubAssetList],
   walletConnectOptions: {
     providerOpts: {
       logger: 'info',
