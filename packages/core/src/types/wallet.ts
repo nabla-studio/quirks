@@ -103,6 +103,16 @@ export interface WalletConnectAccountData {
   pubkey: string;
 }
 
+export interface WalletConnectSessionKey {
+  name: string;
+  algo: string;
+  pubKey: string;
+  address: string | null;
+  bech32Address: string;
+  isNanoLedger: boolean | null;
+  isKeystone: boolean | null;
+}
+
 export interface WalletConnectDirectSignDoc {
   chainId: string;
   accountNumber: string;
