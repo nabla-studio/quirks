@@ -29,6 +29,7 @@ export default defineConfig({
       entry: {
         index: 'src/index.ts',
         babel: 'src/babel.ts',
+        setup: 'src/setup.ts',
       },
       name: 'react-native',
       // Change this to the formats you want to support.
@@ -47,6 +48,11 @@ export default defineConfig({
         'react-native-get-random-values',
         'react-native-mmkv',
         'react-native-quick-crypto',
+        'stream-browserify',
+        '@walletconnect/react-native-compat',
+        '@react-native-community/netinfo',
+        '@ethersproject/shims',
+        'fast-text-encoding',
       ],
     },
   },

@@ -23,7 +23,12 @@
     "react-native": "^0.73.2",
     "react-native-get-random-values": "^1.10.0",
     "react-native-mmkv": "^2.11.0",
-    "react-native-quick-crypto": "^0.6.1"
+    "react-native-quick-crypto": "^0.6.1",
+    "@ethersproject/shims": "^5.7.0",
+    "@react-native-community/netinfo": "^11.2.1",
+    "@walletconnect/react-native-compat": "^2.11.0",
+    "fast-text-encoding": "^1.0.6",
+    "stream-browserify": "^3.0.0"
   },
   "main": "./index.js",
   "module": "./index.js",
@@ -36,6 +41,10 @@
     "./babel": {
       "import": "./babel.js",
       "require": "./babel.cjs"
+    },
+    "./setup": {
+      "import": "./setup.js",
+      "require": "./setup.cjs"
     }
   }
 }
