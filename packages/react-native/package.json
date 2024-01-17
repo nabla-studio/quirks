@@ -15,8 +15,27 @@
   "version": "0.0.0",
   "sideEffects": false,
   "type": "module",
-  "dependencies": {},
+  "dependencies": {
+    "babel-plugin-module-resolver": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@craftzdog/react-native-buffer": "^6.0.5",
+    "react-native": "^0.73.2",
+    "react-native-get-random-values": "^1.10.0",
+    "react-native-mmkv": "^2.11.0",
+    "react-native-quick-crypto": "^0.6.1"
+  },
   "main": "./index.js",
   "module": "./index.js",
-  "typings": "./index.d.ts"
+  "typings": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    },
+    "./babel": {
+      "import": "./babel.js",
+      "require": "./babel.cjs"
+    }
+  }
 }
