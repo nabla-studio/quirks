@@ -17,6 +17,7 @@
     "vue",
     "examples-vue3",
     "nuxt",
-    "wallet-registry"
+    "wallet-registry",
+    "react-native"
   ]
 }

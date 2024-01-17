@@ -1,0 +1,22 @@
+{
+  "name": "@quirks/react-native",
+  "repository": "nabla-studio/quirks",
+  "keywords": [
+    "blockchain",
+    "cosmos",
+    "cosmos-sdk",
+    "registry",
+    "osmosis",
+    "juno",
+    "desmos",
+    "evmos",
+    "react-native"
+  ],
+  "version": "0.0.0",
+  "sideEffects": false,
+  "type": "module",
+  "dependencies": {},
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts"
+}
