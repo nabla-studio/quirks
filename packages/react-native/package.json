@@ -16,6 +16,8 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
+    "@quirks/store": "*",
+    "@quirks/core": "*",
     "babel-plugin-module-resolver": "^5.0.0"
   },
   "peerDependencies": {
@@ -28,7 +30,8 @@
     "@react-native-community/netinfo": "^11.2.1",
     "@walletconnect/react-native-compat": "^2.11.0",
     "fast-text-encoding": "^1.0.6",
-    "stream-browserify": "^3.0.0"
+    "stream-browserify": "^3.0.0",
+    "zustand": "^4.4.4"
   },
   "main": "./index.js",
   "module": "./index.js",
