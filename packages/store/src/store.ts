@@ -12,7 +12,7 @@ import {
   createWalletConnectSlice,
 } from './slices';
 import { createStore } from 'zustand/vanilla';
-import type { Config } from './types';
+import type { Config, WalletConnectState } from './types';
 import { defaultPersistOptions, emptyPersistOptions } from './configs';
 import { shared, defaultSharedOptions } from './middlewares';
 
@@ -97,8 +97,9 @@ export const createConfig = (config: Config) => {
     };
   }
 
-  const walletConnectOverrideInitialState = {
+  const walletConnectOverrideInitialState: WalletConnectState = {
     ...walletConnectInitialState,
+    openDeeplink: walletConnectOptions?.openDeeplink,
     providerOpts: walletConnectOptions?.providerOpts,
     namespaces: overridedNamespaces,
   };
