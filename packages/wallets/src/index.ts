@@ -4,5 +4,7 @@ export * from './cosmostation';
 export * from './xdefi';
 export * from './station';
 export * from './wallet-connect';
+export * from './keplr-mobile';
+export * from './leap-mobile';
 export * from './utils';
 export * from './types';

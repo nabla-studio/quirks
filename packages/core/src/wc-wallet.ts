@@ -16,9 +16,10 @@ import {
   type WalletOptions,
   WcProviderEventType,
   type WalletEventNames,
-  type WalletConnectAccountData,
   type WalletConnectSignDirectRequest,
   type WalletConnectSignDirectResponse,
+  type WalletConnectSessionKey,
+  type WalletConnectAccountData,
 } from './types';
 import { Wallet } from './wallet';
 import type {
@@ -35,6 +36,8 @@ export class WCWallet extends Wallet<
   InstanceType<typeof UniversalProvider>,
   UniversalProviderOpts
 > {
+  private pairingURI?: string;
+
   constructor(options: WalletOptions) {
     super(options);
 
@@ -81,8 +84,6 @@ export class WCWallet extends Wallet<
        */
       for (const event of this.wcEventNames) {
         this.client.on(event, (data: never) => {
-          console.log(event, data);
-
           this.events.emit(event, data);
 
           if (event === 'accountsChanged') {
@@ -90,6 +91,14 @@ export class WCWallet extends Wallet<
           }
         });
       }
+
+      /**
+       * We storage pairing uri, so that one can be used for deeplink urls,
+       * useful when we need to use them around the core logic
+       */
+      this.events.on('display_uri', (uri) => {
+        this.pairingURI = uri;
+      });
     }
   }
 
@@ -106,7 +115,7 @@ export class WCWallet extends Wallet<
   }
 
   override async enable(): Promise<void> {
-    console.warn('enable method not implemented');
+    console.debug('enable method not implemented');
   }
 
   override async disable(): Promise<void> {
@@ -162,6 +171,25 @@ export class WCWallet extends Wallet<
 
   async getSignerAccounts(): Promise<AccountData[]> {
     assertIsDefined(this.client, 'client is undefined');
+
+    /**
+     * some wallets, like keplr, insert by default a property to provide
+     * the data directly when the user connects to the wallet,
+     * if I can't find the data I try to request it with an explicit request
+     */
+    if (this.client.session?.sessionProperties?.['keys']) {
+      const accounts = JSON.parse(
+        this.client.session.sessionProperties['keys'],
+      ) as WalletConnectSessionKey[];
+
+      const signerAccounts: AccountData[] = accounts.map((account) => ({
+        address: account.bech32Address,
+        algo: account.algo as Algo,
+        pubkey: toByteArray(account.pubKey),
+      }));
+
+      return signerAccounts;
+    }
 
     const accounts = await this.client.request<WalletConnectAccountData[]>({
       method: 'cosmos_getAccounts',
@@ -283,11 +311,11 @@ export class WCWallet extends Wallet<
   }
 
   override async suggestTokens() {
-    console.warn('suggestTokens method not implemented.');
+    console.debug('suggestTokens method not implemented.');
   }
 
   override async suggestChains() {
-    console.warn('suggestChains method not implemented.');
+    console.debug('suggestChains method not implemented.');
   }
 
   get wcEventNames() {
@@ -295,5 +323,29 @@ export class WCWallet extends Wallet<
       ...(Object.keys(WcEventTypes) as WalletEventNames[]),
       ...(Object.keys(WcProviderEventType) as WalletEventNames[]),
     ];
+  }
+
+  get deeplinks() {
+    const { mobile, wallet_connect } = this.options;
+
+    if (!mobile || !wallet_connect) {
+      return undefined;
+    }
+
+    return {
+      ios: `${mobile.ios?.schema}://${wallet_connect.deeplink?.path?.ios}`,
+      android: `${mobile.android?.schema}://${wallet_connect.deeplink?.path?.android}`,
+    };
+  }
+
+  get pairingDeeplinks() {
+    if (!this.deeplinks) {
+      return undefined;
+    }
+
+    return {
+      ios: `${this.deeplinks.ios}?${this.pairingURI}`,
+      android: `${this.deeplinks.android}?${this.pairingURI}`,
+    };
   }
 }

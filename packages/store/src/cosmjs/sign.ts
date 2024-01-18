@@ -6,6 +6,7 @@ import {
   estimateFee,
   getEndpoint,
   getGasPrice,
+  openWCDeeplink,
 } from '@quirks/core';
 import type {
   SigningStargateClientOptions,
@@ -217,6 +218,8 @@ export const sign = async (
     fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
 
+  openWCDeeplink(state.wallet);
+
   return client.sign(sender, messages, fee, memo ?? '');
 };
 
@@ -278,6 +281,8 @@ export const signCW = async (
     fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
 
+  openWCDeeplink(state.wallet);
+
   return client.sign(sender, messages, fee, memo ?? '');
 };
 
@@ -289,6 +294,8 @@ export const signArbitrary = (
   const state = store.getState();
 
   assertIsDefined(state.wallet);
+
+  openWCDeeplink(state.wallet);
 
   return state.wallet.signArbitrary(chainId, signer, data);
 };
