@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.13.0](https://github.com/nabla-studio/quirks/compare/store@0.12.0...store@0.13.0) (2024-01-18)
+
+### Dependency Updates
+
+* `core` updated to version `0.12.0`
+
+### Features
+
+* **store:** :sparkles: add mobile deeplink ([9706496](https://github.com/nabla-studio/quirks/commit/9706496d3abb76e4a9f8a2d50ca59d3d2491f3a3))
+
 ## [0.12.0](https://github.com/nabla-studio/quirks/compare/store@0.11.0...store@0.12.0) (2024-01-11)
 
 ### Dependency Updates
