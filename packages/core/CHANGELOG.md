@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.12.0](https://github.com/nabla-studio/quirks/compare/core@0.11.0...core@0.12.0) (2024-01-18)
+
+
+### Features
+
+* **core:** :sparkles: add deeplink utils ([33cda91](https://github.com/nabla-studio/quirks/commit/33cda9164cabb1575315b9b27ab66d1fc70a83ee))
+* **core:** :sparkles: add wc deeplinks ([fedae98](https://github.com/nabla-studio/quirks/commit/fedae989d00029a3686f73111e577112bca4af9d))
+
 ## [0.11.0](https://github.com/nabla-studio/quirks/compare/core@0.10.0...core@0.11.0) (2024-01-11)
 
 
