@@ -39,15 +39,18 @@
   "exports": {
     ".": {
       "import": "./index.js",
-      "require": "./index.cjs"
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
     },
     "./babel": {
       "import": "./babel.js",
-      "require": "./babel.cjs"
+      "require": "./babel.cjs",
+      "types": "./babel.d.ts"
     },
     "./setup": {
       "import": "./setup.js",
-      "require": "./setup.cjs"
+      "require": "./setup.cjs",
+      "types": "./setup.d.ts"
     }
   }
 }
