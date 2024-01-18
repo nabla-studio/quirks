@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.11.0](https://github.com/nabla-studio/quirks/compare/wallets@0.10.0...wallets@0.11.0) (2024-01-18)
+
+### Dependency Updates
+
+* `core` updated to version `0.10.0`
+
+### Features
+
+* **wallets:** :sparkles: add keplr mobile ([f8fbf9f](https://github.com/nabla-studio/quirks/commit/f8fbf9f2db5aac9d539d68b6ee8bebb2b0dddcab))
+* **wallets:** :sparkles: add leap mobile ([ede5c77](https://github.com/nabla-studio/quirks/commit/ede5c77b7cb40110a3f4041d7283890bddc575fd))
+
 ## [0.10.0](https://github.com/nabla-studio/quirks/compare/wallets@0.9.0...wallets@0.10.0) (2024-01-11)
 
 ### Dependency Updates
