@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.13.1](https://github.com/nabla-studio/quirks/compare/store@0.13.0...store@0.13.1) (2024-01-19)
+
+
+### Bug Fixes
+
+* **store:** :bug: fix openDeeplink assign ([573aad8](https://github.com/nabla-studio/quirks/commit/573aad86572f857324b450798e893e28ab5d5e5e))
+
 ## [0.13.0](https://github.com/nabla-studio/quirks/compare/store@0.12.0...store@0.13.0) (2024-01-18)
 
 ### Dependency Updates
