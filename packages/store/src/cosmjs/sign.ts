@@ -218,7 +218,7 @@ export const sign = async (
     fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
 
-  openWCDeeplink(state.wallet);
+  openWCDeeplink(state.wallet, state.openDeeplink);
 
   return client.sign(sender, messages, fee, memo ?? '');
 };
@@ -281,7 +281,7 @@ export const signCW = async (
     fee = await estimateFee(client, sender, messages, gasPrice, memo);
   }
 
-  openWCDeeplink(state.wallet);
+  openWCDeeplink(state.wallet, state.openDeeplink);
 
   return client.sign(sender, messages, fee, memo ?? '');
 };
@@ -295,7 +295,7 @@ export const signArbitrary = (
 
   assertIsDefined(state.wallet);
 
-  openWCDeeplink(state.wallet);
+  openWCDeeplink(state.wallet, state.openDeeplink);
 
   return state.wallet.signArbitrary(chainId, signer, data);
 };
