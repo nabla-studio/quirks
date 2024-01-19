@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.13.2](https://github.com/nabla-studio/quirks/compare/store@0.13.1...store@0.13.2) (2024-01-19)
+
+
+### Bug Fixes
+
+* **store:** :bug: fix mobile deeplink ([3e27de8](https://github.com/nabla-studio/quirks/commit/3e27de8508370b0b98ace4f64900b0e610c30445))
+
 ## [0.13.1](https://github.com/nabla-studio/quirks/compare/store@0.13.0...store@0.13.1) (2024-01-19)
 
 
