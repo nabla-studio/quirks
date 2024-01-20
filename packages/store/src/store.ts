@@ -126,7 +126,7 @@ export const createConfig = (config: Config) => {
                 ...connectOverrideInitialState,
                 ...accountInitialState,
                 ...signOverrideInitialState,
-                ...walletConnectInitialState,
+                ...walletConnectOverrideInitialState,
                 wallets,
                 chains,
                 assetsLists,
