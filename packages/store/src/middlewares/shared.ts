@@ -23,7 +23,7 @@ export const shared: SharedType =
   (f, options = defaultSharedOptions) =>
   (set, get, store) => {
     if (!globalThis.BroadcastChannel) {
-      console.warn('BroadcastChannel is not supported in this context!');
+      console.debug('BroadcastChannel is not supported in this context!');
     }
 
     /**
