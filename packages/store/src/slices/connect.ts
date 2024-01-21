@@ -16,7 +16,6 @@ import {
   SetupStates,
 } from '../types';
 import type { StateCreator } from 'zustand/vanilla';
-import { suggestChains } from '../utils';
 
 export const connectInitialState: ConnectState = {
   walletName: undefined,
@@ -107,7 +106,7 @@ export const createConnectSlice: StateCreator<
         )!,
       }));
 
-      return suggestChains(wallet.options.wallet_name, chains);
+      return wallet.suggestChains(chains);
     }
   },
   connect: async (walletName) => {
