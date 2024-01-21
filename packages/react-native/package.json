@@ -31,7 +31,7 @@
     "@walletconnect/react-native-compat": "^2.11.0",
     "fast-text-encoding": "^1.0.6",
     "stream-browserify": "^3.0.0",
-    "zustand": "^4.4.4"
+    "zustand": "^4.5.0"
   },
   "main": "./index.js",
   "module": "./index.js",
