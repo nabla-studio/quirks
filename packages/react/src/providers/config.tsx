@@ -13,7 +13,7 @@ export const QuirksConfigContext = createContext<QuirksConfigState | undefined>(
 );
 
 export interface QuirksConfigProps {
-  config?: Config;
+  config: Config;
 }
 
 export const QuirksConfig = (props: PropsWithChildren<QuirksConfigProps>) => {
