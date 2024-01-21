@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const gravitybridge: Chain = {
   $schema: '../chain.schema.json',
@@ -218,6 +218,10 @@ export const gravitybridge: Chain = {
         address: 'https://gravity-rpc.w3coins.io',
         provider: 'w3coins',
       },
+      {
+        address: 'https://rpc.g-bridge.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -260,6 +264,10 @@ export const gravitybridge: Chain = {
         address: 'https://gravity-api.w3coins.io',
         provider: 'w3coins',
       },
+      {
+        address: 'https://lcd.g-bridge.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     grpc: [
       {
@@ -293,6 +301,10 @@ export const gravitybridge: Chain = {
       {
         address: 'gravity-grpc.w3coins.io:14290',
         provider: 'w3coins',
+      },
+      {
+        address: 'https://grpc.g-bridge.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },
@@ -725,6 +737,48 @@ export const gravitybridgeAssetList: AssetLists = {
             base_denom: '0x2F109021aFe75B949429fe30523Ee7C0D5B27207',
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/occamfi.png',
+        },
+      ],
+    },
+    {
+      description:
+        'The PAGE token is used for actions in the PageDAO NFT literary ecosystem and for DAO governance.',
+      denom_units: [
+        {
+          denom: 'gravity0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e',
+          exponent: 0,
+        },
+        {
+          denom: 'page',
+          exponent: 8,
+        },
+      ],
+      base: 'gravity0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e',
+      name: 'Page',
+      display: 'page',
+      symbol: 'PAGE',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.svg',
+      },
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e',
+          },
+          provider: 'Gravity Bridge',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.svg',
         },
       ],
     },

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const coreum: Chain = {
   $schema: '../chain.schema.json',
@@ -36,18 +36,18 @@ export const coreum: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/CoreumFoundation/coreum',
-    recommended_version: 'v2.0.2',
-    compatible_versions: ['v2.0.2'],
+    recommended_version: 'v3.0.2',
+    compatible_versions: ['v3.0.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/CoreumFoundation/coreum/releases/download/v2.0.2/cored-linux-amd64?checksum=sha256:3facf55f7ff795719f68b9bcf76ea08262bc7c9e9cd735c660257ba73678250e',
+        'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.2/cored-linux-amd64',
       'linux/arm64':
-        'https://github.com/CoreumFoundation/coreum/releases/download/v2.0.2/cored-linux-arm64?checksum=sha256:35e261eb3b87c833c30174e6b8667a6155f5962441275d443157e209bbb0bf0d',
+        'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.2/cored-linux-arm64',
     },
-    cosmos_sdk_version: '0.45',
+    cosmos_sdk_version: '0.47',
     consensus: {
-      type: 'tendermint',
-      version: '0.34',
+      type: 'cometbft',
+      version: '0.37',
     },
     cosmwasm_version: '0.30',
     cosmwasm_enabled: true,
@@ -81,7 +81,8 @@ export const coreum: Chain = {
       {
         name: 'v2',
         tag: 'v2.0.2',
-        height: 0,
+        proposal: 5,
+        height: 6947500,
         recommended_version: 'v2.0.2',
         compatible_versions: ['v2.0.2'],
         cosmos_sdk_version: '0.45',
@@ -96,6 +97,28 @@ export const coreum: Chain = {
             'https://github.com/CoreumFoundation/coreum/releases/download/v2.0.2/cored-linux-amd64?checksum=sha256:3facf55f7ff795719f68b9bcf76ea08262bc7c9e9cd735c660257ba73678250e',
           'linux/arm64':
             'https://github.com/CoreumFoundation/coreum/releases/download/v2.0.2/cored-linux-arm64?checksum=sha256:35e261eb3b87c833c30174e6b8667a6155f5962441275d443157e209bbb0bf0d',
+        },
+        next_version_name: 'v3',
+      },
+      {
+        name: 'v3',
+        tag: 'v3.0.2',
+        proposal: 8,
+        height: 13480000,
+        recommended_version: 'v3.0.2',
+        compatible_versions: ['v3.0.2'],
+        cosmos_sdk_version: '0.47',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37',
+        },
+        cosmwasm_version: '0.30',
+        cosmwasm_enabled: true,
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.2/cored-linux-amd64',
+          'linux/arm64':
+            'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.2/cored-linux-arm64',
         },
       },
     ],
@@ -138,6 +161,13 @@ export const coreum: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
+    persistent_peers: [
+      {
+        id: 'b657918c029d10e5cab97f4e348b9a53e74dd85c',
+        address: '95.214.55.138:35656',
+        provider: 'genznodes',
+      },
+    ],
   },
   apis: {
     rpc: [
@@ -169,6 +199,10 @@ export const coreum: Chain = {
         address: 'https://coreum-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://coreum-rpc.genznodes.dev',
+        provider: 'genznodes',
+      },
     ],
     grpc: [
       {
@@ -195,6 +229,10 @@ export const coreum: Chain = {
         address: 'coreum-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'coreum-grpc.genznodes.dev:35090',
+        provider: 'genznodes',
+      },
     ],
     rest: [
       {
@@ -212,6 +250,10 @@ export const coreum: Chain = {
       {
         address: 'https://coreum-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://coreum-api.genznodes.dev',
+        provider: 'genznodes',
       },
     ],
   },

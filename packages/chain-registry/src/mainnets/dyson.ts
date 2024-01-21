@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const dyson: Chain = {
   $schema: '../chain.schema.json',
@@ -96,11 +96,8 @@ export const dyson: Chain = {
       kind: 'dysonprotocol',
       url: 'https://explorer.dys.dysonprotocol.com/dyson/',
       tx_page: 'https://explorer.dys.dysonprotocol.com/dyson/tx/${txHash}',
-    },
-    {
-      kind: 'lol',
-      url: 'https://explorer.dys.dyson.lol',
-      tx_page: 'https://explorer.dys.dyson.lol/dyson/tx/${txHash}',
+      account_page:
+        'https://explorer.dys.dysonprotocol.com/dyson/account/${accountAddress}',
     },
   ],
   images: [

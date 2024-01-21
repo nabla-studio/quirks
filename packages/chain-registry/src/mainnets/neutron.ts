@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const neutron: Chain = {
   $schema: '../chain.schema.json',
@@ -17,23 +17,51 @@ export const neutron: Chain = {
     fee_tokens: [
       {
         denom: 'untrn',
-        low_gas_price: 0.56,
-        average_gas_price: 0.56,
-        high_gas_price: 0.84,
+        low_gas_price: 0.075,
+        average_gas_price: 0.075,
+        high_gas_price: 0.1125,
       },
       {
         denom:
           'ibc/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9',
-        low_gas_price: 0.02,
-        average_gas_price: 0.02,
-        high_gas_price: 0.03,
+        low_gas_price: 0.007,
+        average_gas_price: 0.007,
+        high_gas_price: 0.0105,
       },
       {
         denom:
           'ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349',
-        low_gas_price: 0.2,
-        average_gas_price: 0.2,
-        high_gas_price: 0.3,
+        low_gas_price: 0.08,
+        average_gas_price: 0.08,
+        high_gas_price: 0.12,
+      },
+      {
+        denom:
+          'factory/neutron1ug740qrkquxzrk2hh29qrlx3sktkfml3je7juusc2te7xmvsscns0n2wry/wstETH',
+        low_gas_price: 30125586.037,
+        average_gas_price: 30125586.037,
+        high_gas_price: 45188379.0555,
+      },
+      {
+        denom:
+          'ibc/2CB87BCE0937B1D1DFCEE79BE4501AAF3C265E923509AEAC410AD85D27F35130',
+        low_gas_price: 25641025641.026,
+        average_gas_price: 25641025641.026,
+        high_gas_price: 38461538461.5,
+      },
+      {
+        denom:
+          'ibc/773B4D0A3CD667B2275D5A4A7A2F0909C0BA0F4059C0B9181E680DDF4965DCC7',
+        low_gas_price: 0.006,
+        average_gas_price: 0.006,
+        high_gas_price: 0.009,
+      },
+      {
+        denom:
+          'ibc/B7864B03E1B9FD4F049243E92ABD691586F682137037A9F3FCA5222815620B3C',
+        low_gas_price: 0.006,
+        average_gas_price: 0.006,
+        high_gas_price: 0.009,
       },
     ],
   },
@@ -46,16 +74,20 @@ export const neutron: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/neutron-org/neutron',
-    recommended_version: 'v1.0.4',
-    compatible_versions: ['v1.0.3', 'v1.0.4'],
-    cosmos_sdk_version: '0.45',
-    consensus: {
-      type: 'tendermint',
-      version: '0.34',
+    recommended_version: 'v2.0.1',
+    compatible_versions: ['v2.0.1'],
+    binaries: {
+      'linux/amd64':
+        'https://github.com/neutron-org/neutron/releases/download/v2.0.1/neutrond-linux-amd64',
     },
-    cosmwasm_version: '0.31',
+    cosmos_sdk_version: 'v0.47.6',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.37.2',
+    },
+    cosmwasm_version: 'v0.45.0',
     cosmwasm_enabled: true,
-    ibc_go_version: '4.3.0',
+    ibc_go_version: 'v7.3.1',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/neutron-org/mainnet-assets/main/neutron-1-genesis.json',
@@ -73,6 +105,27 @@ export const neutron: Chain = {
         cosmwasm_version: '0.31',
         cosmwasm_enabled: true,
         ibc_go_version: '4.3.0',
+        next_version_name: 'v2.0.0',
+      },
+      {
+        name: 'v2.0.0',
+        proposal: 25,
+        height: 5416000,
+        recommended_version: 'v2.0.1',
+        compatible_versions: ['v2.0.1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/neutron-org/neutron/releases/download/v2.0.0/neutrond-linux-amd64',
+        },
+        cosmos_sdk_version: 'v0.47.6',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.3.1',
+        next_version_name: '',
       },
     ],
   },
@@ -85,13 +138,13 @@ export const neutron: Chain = {
   peers: {
     seeds: [
       {
-        id: '24f609fb5946ca3a979f40b7f54132c00104433e',
-        address: 'p2p-erheim.neutron-1.neutron.org:26656',
+        id: '74f3a4a0423e72334f4439b438b29934e5f0dbbd',
+        address: 'p2p-xyphion.neutron-1.neutron.org:26656',
         provider: 'Neutron',
       },
       {
-        id: 'b1c6fa570a184c56d0d736d260b8065d887e717c',
-        address: 'p2p-kralum.neutron-1.neutron.org:26656',
+        id: '65beeffac5c0f29e6c3749687f03b2040d265895',
+        address: 'p2p-talzor.neutron-1.neutron.org:26656',
         provider: 'Neutron',
       },
       {
@@ -100,9 +153,9 @@ export const neutron: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        id: 'f4422e68f9a678838522d75fa8221985c723294d',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:19156',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
@@ -121,7 +174,7 @@ export const neutron: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc-kralum.neutron-1.neutron.org',
+        address: 'https://rpc-lb.neutron.org',
         provider: 'Neutron',
       },
       {
@@ -134,7 +187,7 @@ export const neutron: Chain = {
       },
       {
         address: 'https://rpc-neutron.whispernode.com',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://rpc-neutron.cosmos-spaces.cloud',
@@ -156,10 +209,14 @@ export const neutron: Chain = {
         address: 'https://rpc-neutron.in3s.com:443',
         provider: 'in3s.com',
       },
+      {
+        address: 'https://rpc.neutron.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
-        address: 'https://rest-kralum.neutron-1.neutron.org',
+        address: 'https://rest-lb.neutron.org',
         provider: 'Neutron',
       },
       {
@@ -172,7 +229,7 @@ export const neutron: Chain = {
       },
       {
         address: 'https://lcd-neutron.whispernode.com',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://api-neutron.cosmos-spaces.cloud',
@@ -189,6 +246,10 @@ export const neutron: Chain = {
       {
         address: 'https://community.nuxian-node.ch:6797/neutron/crpc',
         provider: 'PRO Delegators',
+      },
+      {
+        address: 'https://lcd.neutron.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     grpc: [
@@ -210,7 +271,7 @@ export const neutron: Chain = {
       },
       {
         address: 'grpc-neutron.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'grpc-neutron.cosmos-spaces.cloud:3090',
@@ -223,6 +284,10 @@ export const neutron: Chain = {
       {
         address: 'neutron-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://grpc.neutron.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },
@@ -601,9 +666,296 @@ export const neutronAssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/newt.png',
       },
+      coingecko_id: 'newt',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/newt.png',
+        },
+      ],
+    },
+    {
+      description: 'ASTRO on Neutron',
+      denom_units: [
+        {
+          denom:
+            'ibc/5751B8BCDA688FD0A8EC0B292EEF1CDEAB4B766B63EC632778B196D317C40C3A',
+          exponent: 0,
+          aliases: ['uastro'],
+        },
+        {
+          denom: 'astro',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/5751B8BCDA688FD0A8EC0B292EEF1CDEAB4B766B63EC632778B196D317C40C3A',
+      name: 'Astroport token',
+      display: 'astro',
+      symbol: 'ASTRO',
+      traces: [
+        {
+          type: 'ibc-cw20',
+          counterparty: {
+            chain_name: 'terra2',
+            base_denom:
+              'cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26',
+            channel_id: 'channel-167',
+            port: 'wasm.terra1jhfjnm39y3nn9l4520mdn4k5mw23nz0674c4gsvyrcr90z9tqcvst22fce',
+          },
+          chain: {
+            channel_id: 'channel-5',
+            path: 'transfer/channel-5/cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26',
+            port: 'transfer',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'terra2',
+            base_denom:
+              'cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
+      },
+    },
+    {
+      description: 'Baby Corgi is the real doggo of Neutron!',
+      denom_units: [
+        {
+          denom: 'factory/neutron1tklm6cvr2wxg8k65t8gh5ewslnzdfd5fsk0w3f/corgi',
+          exponent: 0,
+          aliases: ['ucorgi'],
+        },
+        {
+          denom: 'corgi',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron1tklm6cvr2wxg8k65t8gh5ewslnzdfd5fsk0w3f/corgi',
+      name: 'Baby Corgi',
+      display: 'corgi',
+      symbol: 'CORGI',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/babycorgi.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/babycorgi.png',
+        },
+      ],
+    },
+    {
+      description: 'clownmaxxed store of value',
+      denom_units: [
+        {
+          denom:
+            'factory/neutron170v88vrtnedesyfytuku257cggxc79rd7lwt7q/ucircus',
+          exponent: 0,
+          aliases: ['ucircus'],
+        },
+        {
+          denom: 'circus',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron170v88vrtnedesyfytuku257cggxc79rd7lwt7q/ucircus',
+      name: 'AtomEconomicZone69JaeKwonInu',
+      display: 'circus',
+      symbol: 'CIRCUS',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/circus.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/circus.png',
+        },
+      ],
+    },
+    {
+      description: 'Jimmy Neutron Finance',
+      denom_units: [
+        {
+          denom: 'factory/neutron108x7vp9zv22d6wxrs9as8dshd3pd5vsga463yd/JIMMY',
+          exponent: 0,
+          aliases: ['ujimmy'],
+        },
+        {
+          denom: 'jimmy',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron108x7vp9zv22d6wxrs9as8dshd3pd5vsga463yd/JIMMY',
+      name: 'jimmy',
+      display: 'jimmy',
+      symbol: 'JIMMY',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/jimmy.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/jimmy.png',
+        },
+      ],
+    },
+    {
+      description: 'Baddest coin on Cosmos',
+      denom_units: [
+        {
+          denom: 'factory/neutron143wp6g8paqasnuuey6zyapucknwy9rhnld8hkr/bad',
+          exponent: 0,
+          aliases: ['ubad'],
+        },
+        {
+          denom: 'bad',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron143wp6g8paqasnuuey6zyapucknwy9rhnld8hkr/bad',
+      name: 'Badcoin',
+      display: 'bad',
+      symbol: 'BAD',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/bad.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/bad.png',
+        },
+      ],
+    },
+    {
+      description: 'BITCOSMOS',
+      denom_units: [
+        {
+          denom:
+            'neutron1fjzg7fmv770hsvahqm0nwnu6grs3rjnd2wa6fvm9unv6vedkzekqpw44qj',
+          exponent: 0,
+          aliases: ['ubitcosmos'],
+        },
+        {
+          denom: 'bitcosmos',
+          exponent: 6,
+        },
+      ],
+      base: 'neutron1fjzg7fmv770hsvahqm0nwnu6grs3rjnd2wa6fvm9unv6vedkzekqpw44qj',
+      name: 'Bitcosmos',
+      display: 'bitcosmos',
+      symbol: 'BTC',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/bitcosmos.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/bitcosmos.png',
+        },
+      ],
+    },
+    {
+      description: 'What the Fuck',
+      denom_units: [
+        {
+          denom:
+            'neutron12h09p8hq5y4xpsmcuxxzsn9juef4f6jvekp8yefc6xnlwm6uumnsdk29wf',
+          exponent: 0,
+          aliases: ['uwtf'],
+        },
+        {
+          denom: 'wtf',
+          exponent: 6,
+        },
+      ],
+      base: 'neutron12h09p8hq5y4xpsmcuxxzsn9juef4f6jvekp8yefc6xnlwm6uumnsdk29wf',
+      name: 'wtf',
+      display: 'wtf',
+      symbol: 'WTF',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/WTF.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/WTF.png',
+        },
+      ],
+    },
+    {
+      description: 'NLS on Neutron',
+      denom_units: [
+        {
+          denom:
+            'ibc/6C9E6701AC217C0FC7D74B0F7A6265B9B4E3C3CDA6E80AADE5F950A8F52F9972',
+          exponent: 0,
+          aliases: ['unls'],
+        },
+        {
+          denom: 'nls',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/6C9E6701AC217C0FC7D74B0F7A6265B9B4E3C3CDA6E80AADE5F950A8F52F9972',
+      name: 'Nolus NLS',
+      display: 'nls',
+      symbol: 'NLS',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'nolus',
+            base_denom: 'unls',
+            channel_id: 'channel-3839',
+          },
+          chain: {
+            channel_id: 'channel-44',
+            path: 'transfer/channel-44/unls',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'nolus',
+            base_denom: 'unls',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nolus/images/nolus.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nolus/images/nolus.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nolus/images/nolus.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nolus/images/nolus.svg',
+      },
+    },
+    {
+      description: 'A Mechanical Canine',
+      denom_units: [
+        {
+          denom:
+            'factory/neutron1t5qrjtyryh8gzt800qr5vylhh2f8cmx4wmz9mc/ugoddard',
+          exponent: 0,
+          aliases: ['ugoddard'],
+        },
+        {
+          denom: 'goddard',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron1t5qrjtyryh8gzt800qr5vylhh2f8cmx4wmz9mc/ugoddard',
+      name: 'Goddard',
+      display: 'goddard',
+      symbol: 'GODDARD',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/goddardntrn.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/goddardntrn.png',
         },
       ],
     },

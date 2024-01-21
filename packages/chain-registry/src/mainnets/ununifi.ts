@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const ununifi: Chain = {
   $schema: '../chain.schema.json',
@@ -309,6 +309,14 @@ export const ununifi: Chain = {
         address: 'https://ununifi-rpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
       },
+      {
+        address: 'https://ununifi-rpc.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'https://ununifi-rpc.genznodes.dev',
+        provider: 'genznodes',
+      },
     ],
     rest: [
       {
@@ -326,6 +334,10 @@ export const ununifi: Chain = {
       {
         address: 'https://ununifi-api.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'https://ununifi-api.genznodes.dev',
+        provider: 'genznodes',
       },
     ],
     grpc: [
@@ -352,6 +364,10 @@ export const ununifi: Chain = {
       {
         address: 'https://ununifi-grpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'ununifi-grpc.genznodes.dev:54090',
+        provider: 'genznodes',
       },
     ],
   },

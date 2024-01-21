@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const crescent: Chain = {
   $schema: '../chain.schema.json',
@@ -191,6 +191,10 @@ export const crescent: Chain = {
         address: 'https://crescent-rpc.w3coins.io',
         provider: 'w3coins',
       },
+      {
+        address: 'https://rpc.crescent.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -225,6 +229,10 @@ export const crescent: Chain = {
         address: 'https://crescent-api.w3coins.io',
         provider: 'w3coins',
       },
+      {
+        address: 'https://lcd.crescent.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     grpc: [
       {
@@ -250,6 +258,10 @@ export const crescent: Chain = {
       {
         address: 'crescent-grpc.w3coins.io:14590',
         provider: 'w3coins',
+      },
+      {
+        address: 'https://grpc.crescent.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },

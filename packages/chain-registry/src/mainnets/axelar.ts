@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const axelar: Chain = {
   $schema: '../chain.schema.json',
@@ -102,19 +102,14 @@ export const axelar: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: '1e5c0b8f4431b0881edbd04537f4351bd7f19afc',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:15156',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '3470414cd299d15911e9bb28557f6bffb8e514c6',
         address: 'seed-axelar-01.stakeflow.io:1606',
         provider: 'Stakeflow',
-      },
-      {
-        id: '27b6d74c8408e033e2e5a9e966a0d15782e33596',
-        address: 'seeds.nethernode.xyz:15156',
-        provider: 'carbonZERO🌲',
       },
       {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
@@ -202,7 +197,7 @@ export const axelar: Chain = {
       },
       {
         address: 'https://rpc-axelar.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://axelar-rpc.quantnode.tech/',
@@ -276,7 +271,7 @@ export const axelar: Chain = {
       },
       {
         address: 'https://lcd-axelar.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://axelar-mainnet-lcd.autostake.com:443',
@@ -341,12 +336,12 @@ export const axelar: Chain = {
         provider: 'Stakeflow',
       },
       {
-        address: 'grpc-axelar.carbonzero.zone:443',
-        provider: 'carbonZERO🌲',
-      },
-      {
         address: 'axelar-grpc.w3coins.io:15190',
         provider: 'w3coins',
+      },
+      {
+        address: 'grpc-axelar.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
       },
     ],
   },

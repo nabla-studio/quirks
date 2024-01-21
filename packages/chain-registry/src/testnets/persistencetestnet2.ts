@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const persistencetestnet2: Chain = {
   $schema: '../../chain.schema.json',
@@ -340,6 +340,35 @@ export const persistencetestnet2AssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.svg',
+        },
+      ],
+    },
+    {
+      description: 'PSTAKE Liquid-Staked DV4TNT',
+      denom_units: [
+        {
+          denom: 'stk/adv4tnt',
+          exponent: 0,
+          aliases: [],
+        },
+        {
+          denom: 'stkdv4tnt',
+          exponent: 18,
+          aliases: ['stk/dv4tnt'],
+        },
+      ],
+      base: 'stk/adv4tnt',
+      name: 'PSTAKE staked DV4TNT',
+      display: 'stkdv4tnt',
+      symbol: 'stkDV4TNT',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdv4tnt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdv4tnt.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdv4tnt.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdv4tnt.svg',
         },
       ],
     },

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const nolus: Chain = {
   $schema: '../chain.schema.json',
@@ -35,9 +35,9 @@ export const nolus: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/nolus-protocol/nolus-core',
-    recommended_version: 'v0.4.1',
-    compatible_versions: ['v0.4.1'],
-    cosmos_sdk_version: '0.45',
+    recommended_version: 'v0.4.2',
+    compatible_versions: ['v0.4.2'],
+    cosmos_sdk_version: 'v0.45.15-ics',
     consensus: {
       type: 'cometbft',
       version: '0.34.27',
@@ -82,6 +82,23 @@ export const nolus: Chain = {
         recommended_version: 'v0.4.1',
         compatible_versions: ['v0.4.1'],
         cosmos_sdk_version: '0.45',
+        consensus: {
+          type: 'cometbft',
+          version: '0.34.27',
+        },
+        cosmwasm_version: '0.31',
+        cosmwasm_enabled: true,
+        ibc_go_version: '4.3.1',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        next_version_name: '',
+      },
+      {
+        name: 'v0.4.2',
+        proposal: 54,
+        height: 3044000,
+        recommended_version: 'v0.4.2',
+        compatible_versions: ['v0.4.2'],
+        cosmos_sdk_version: 'v0.45.15-ics',
         consensus: {
           type: 'cometbft',
           version: '0.34.27',
@@ -1137,6 +1154,160 @@ export const nolusAssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg',
+      },
+    },
+    {
+      description:
+        'STRD transferred from the Osmosis mainnet that is supported on the Nolus chain',
+      denom_units: [
+        {
+          denom:
+            'ibc/04CA9067228BB51F1C39A506DA00DF07E1496D8308DD21E8EF66AD6169FA722B',
+          exponent: 0,
+          aliases: ['ustrd'],
+        },
+        {
+          denom: 'strd',
+          exponent: 6,
+          aliases: [],
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/04CA9067228BB51F1C39A506DA00DF07E1496D8308DD21E8EF66AD6169FA722B',
+      name: 'STRD',
+      display: 'strd',
+      symbol: 'STRD',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'osmosis',
+            base_denom:
+              'ibc/A8CA5EE328FA10C9519DF6057DA1F69682D28F7D0F5CCC7ECB72E3DCA2D157A4',
+            channel_id: 'channel-783',
+          },
+          chain: {
+            channel_id: 'channel-0',
+            path: 'transfer/channel-0/transfer/channel-326/ustrd',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'osmosis',
+            base_denom:
+              'ibc/A8CA5EE328FA10C9519DF6057DA1F69682D28F7D0F5CCC7ECB72E3DCA2D157A4',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
+      },
+    },
+    {
+      description:
+        'NTRN transferred from the Neutron mainnet that is supported on the Nolus chain',
+      denom_units: [
+        {
+          denom:
+            'ibc/3D6BC6E049CAEB905AC97031A42800588C58FB471EBDC7A3530FFCD0C3DC9E09',
+          exponent: 0,
+          aliases: ['untrn'],
+        },
+        {
+          denom: 'ntrn',
+          exponent: 6,
+          aliases: [],
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/3D6BC6E049CAEB905AC97031A42800588C58FB471EBDC7A3530FFCD0C3DC9E09',
+      name: 'NTRN',
+      display: 'ntrn',
+      symbol: 'NTRN',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'neutron',
+            base_denom: 'untrn',
+            channel_id: 'channel-44',
+          },
+          chain: {
+            channel_id: 'channel-3839',
+            path: 'transfer/channel-3839/untrn',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'neutron',
+            base_denom: 'untrn',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/neutron.svg',
+      },
+    },
+    {
+      description:
+        'DYDX transferred from the Neutron mainnet that is supported on the Nolus chain',
+      denom_units: [
+        {
+          denom:
+            'ibc/6DF8CF5C976851D152E2C7270B0AB25C4F9D64C0A46513A68D6CBB2662A98DF4',
+          exponent: 0,
+          aliases: ['adydx'],
+        },
+        {
+          denom: 'dydx',
+          exponent: 18,
+          aliases: [],
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/6DF8CF5C976851D152E2C7270B0AB25C4F9D64C0A46513A68D6CBB2662A98DF4',
+      name: 'DYDX',
+      display: 'dydx',
+      symbol: 'DYDX',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'neutron',
+            base_denom:
+              'ibc/2CB87BCE0937B1D1DFCEE79BE4501AAF3C265E923509AEAC410AD85D27F35130',
+            channel_id: 'channel-44',
+          },
+          chain: {
+            channel_id: 'channel-3839',
+            path: 'transfer/channel-3839/transfer/channel-48/adydx',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'neutron',
+            base_denom:
+              'ibc/2CB87BCE0937B1D1DFCEE79BE4501AAF3C265E923509AEAC410AD85D27F35130',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg',
       },
     },
   ],

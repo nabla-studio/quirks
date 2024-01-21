@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const chimba: Chain = {
   $schema: '../chain.schema.json',
@@ -34,7 +34,7 @@ export const chimba: Chain = {
     recommended_version: 'v1.0.0',
     compatible_versions: ['v1.0.0'],
     genesis: {
-      genesis_url: 'https://rpc.mainnet.chimbablockchain.io/genesis',
+      genesis_url: 'https://rpc.mainnet.chimba.ooo/genesis',
     },
     versions: [
       {
@@ -54,13 +54,13 @@ export const chimba: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc.mainnet.chimbablockchain.io',
+        address: 'https://rpc.mainnet.chimba.ooo',
         provider: 'chimba',
       },
     ],
     rest: [
       {
-        address: 'https://mainnet.chimbablockchain.io',
+        address: 'https://mainnet.chimba.ooo',
         provider: 'chimba',
       },
     ],

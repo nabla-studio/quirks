@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const bostrom: Chain = {
   $schema: '../chain.schema.json',
@@ -86,6 +86,10 @@ export const bostrom: Chain = {
         address: 'https://rpc-cyber-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
       },
+      {
+        address: 'https://rpc.cyber.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -100,11 +104,19 @@ export const bostrom: Chain = {
         address: 'https://api-cyber-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
       },
+      {
+        address: 'https://lcd.cyber.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     grpc: [
       {
         address: 'grpc-cyber-ia.cosmosia.notional.ventures:443',
         provider: 'Notional',
+      },
+      {
+        address: 'https://grpc.cyber.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },

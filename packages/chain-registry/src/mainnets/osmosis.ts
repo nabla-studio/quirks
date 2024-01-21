@@ -1,4 +1,183 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
+
+export const osmosisVersions: ChainVersions = {
+  $schema: '../versions.schema.json',
+  chain_name: 'osmosis',
+  versions: [
+    {
+      name: 'v3',
+      tag: 'v3.1.0',
+      height: 0,
+      binaries: {
+        'darwin/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v3.1.0/osmosisd-3.1.0-darwin-amd64?checksum=sha256:a532f25ae754d2573f6a3c91ba59496ddb9f6766ccf6f69f408f6e1597144a74',
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v3.1.0/osmosisd-3.1.0-linux-amd64?checksum=sha256:6a73d75e9c75ea402c13edc8c5c4ed08e26c5d8e517d540a9ca8b7e7afa67f79',
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v3.1.0/osmosisd-3.1.0-linux-arm64?checksum=sha256:893f8a9786ae76d4217260201cd94ab67010f68d98b9676a9b31c0a5e68d1eae',
+      },
+      next_version_name: 'v4',
+    },
+    {
+      name: 'v4',
+      tag: 'v4.2.0',
+      height: 1314500,
+      binaries: {
+        'darwin/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v4.2.0/osmosisd-4.2.0-darwin-amd64?checksum=sha256:eee08350b223dd06a2aa16aab44aa51eb116f6267924ee1e788ca28fb54fe02d',
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v4.2.0/osmosisd-4.2.0-linux-amd64?checksum=sha256:a11c61a737983d176f23ce83fa5ff985000ce8d5107d738ee6fa7d59b8dd3053',
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v4.2.0/osmosisd-4.2.0-linux-arm64?checksum=sha256:41260be15e874fbc6cc49757d9fe3d4e459634729e2b745923e508e9cb26f837',
+      },
+      previous_version_name: 'v3',
+      next_version_name: 'v5',
+    },
+    {
+      name: 'v5',
+      tag: 'v6.4.0',
+      height: 2383300,
+      binaries: {
+        'darwin/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v6.4.0/osmosisd-6.4.0-darwin-amd64?checksum=sha256:735c7828b0bc311381f4c18081fa648f849df03aeccf173425cc52a634e3c7d8',
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v6.4.0/osmosisd-6.4.0-linux-amd64?checksum=sha256:e4017da5d1a0a3b37b4f6936ba7ef16f39972ae25f95feae43e506f14933cf94',
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v6.4.0/osmosisd-6.4.0-linux-arm64?checksum=sha256:a101bb3feb0419293a3ecee17d732a312bf9e864a829905ed509c65b5944040b',
+      },
+      previous_version_name: 'v4',
+      next_version_name: 'v7',
+    },
+    {
+      name: 'v7',
+      tag: 'v8.0.0',
+      height: 3401000,
+      binaries: {
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v8.0.0/osmosisd-8.0.0-linux-amd64?checksum=sha256:4559ffe7d1e83b1519c2d45a709d35a89b51f8b35f8bba3b58aef92e667e254c',
+      },
+      previous_version_name: 'v5',
+      next_version_name: 'v9',
+    },
+    {
+      name: 'v9',
+      tag: 'v10.1.1',
+      height: 4707300,
+      binaries: {
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v10.1.1/osmosisd-10.1.1-linux-amd64?checksum=sha256:aeae58f8b0be86d5e6e3aec1a8774eab4947207c88c7d4f309c46da98f6694e8',
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v10.1.1/osmosisd-10.1.1-linux-arm64?checksum=sha256:d2c672ffa9782687f91d8d03bd23fdf8bd2fbe8b79c9cfcf8e9d302a1238a12c',
+      },
+      previous_version_name: 'v7',
+      next_version_name: 'v11',
+    },
+    {
+      name: 'v11',
+      tag: 'v11.0.1',
+      height: 5432450,
+      binaries: {
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v11.0.1/osmosisd-11.0.1-linux-amd64?checksum=sha256:41b8fd2345a5e5b77ee5ed9b9ec5370d94bd1b1aa0d4ac2ac0ab02ee98ddd0d8',
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v11.0.1/osmosisd-11.0.1-linux-arm64?checksum=sha256:267776170495ecaa831238ea8994f8790a379663c9ae47a2e93e5beceafd8e1d',
+      },
+      previous_version_name: 'v9',
+      next_version_name: 'v12',
+    },
+    {
+      name: 'v12',
+      tag: 'v12.3.0',
+      height: 6246000,
+      binaries: {
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v12.3.0/osmosisd-12.3.0-linux-amd64?checksum=sha256:958210c919d13c281896fa9773c323c5534f0fa46d74807154f737609a00db70',
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v12.3.0/osmosisd-12.3.0-linux-arm64?checksum=sha256:a931618c8a839c30e5cecfd2a88055cda1d68cc68557fe3303fe14e2de3bef8f',
+      },
+      previous_version_name: 'v11',
+      next_version_name: 'v13',
+    },
+    {
+      name: 'v13',
+      tag: 'v13.1.2',
+      height: 7241500,
+      binaries: {
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v13.1.2/osmosisd-13.1.2-linux-amd64?checksum=sha256:67ed53046667c72ec6bfe962bcb4d6b122610876b3adf75fb7820ce52c34872d',
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v13.1.2/osmosisd-13.1.2-linux-arm64?checksum=sha256:ad35c2a8d55852fa28187a55bdeb983494c07923f2a8a9f4479fb044d8d62bd9',
+      },
+      previous_version_name: 'v12',
+      next_version_name: 'v14',
+    },
+    {
+      name: 'v14',
+      tag: 'v14.0.1',
+      height: 7937500,
+      binaries: {
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v14.0.1/osmosisd-14.0.1-linux-amd64?checksum=sha256:2cc4172bcf000f0f06b30b16864d875a8de2ee12df994a593dfd52a506851bce',
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v14.0.1/osmosisd-14.0.1-linux-arm64?checksum=sha256:9a44c17d239c8d9afd19d0ff0bd14ca883fb9e9fbf69aff18c2607ffa6bff378',
+      },
+      previous_version_name: 'v13',
+      next_version_name: 'v15',
+    },
+    {
+      name: 'v15',
+      tag: 'v15.2.0',
+      height: 8732500,
+      recommended_version: 'v15.2.0',
+      compatible_versions: ['v15.2.0', 'v15.1.2', 'v15.0.0'],
+      cosmos_sdk_version: '0.46.10',
+      consensus: {
+        type: 'tendermint',
+        version: '0.34.24',
+      },
+      cosmwasm_version: '0.30',
+      cosmwasm_enabled: true,
+      ibc_go_version: '4.3.1',
+      ics_enabled: ['ics20-1'],
+      binaries: {
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v15.2.0/osmosisd-15.2.0-linux-amd64?checksum=sha256:3aab2f2668cb5a713d5770e46a777ef01c433753378702d9ae941aa2d1ee5618',
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v15.2.0/osmosisd-15.2.0-linux-arm64?checksum=sha256:e158d30707a0ea51482237f99676223e81ce5a353966a5c83791d2662a930f35',
+      },
+      previous_version_name: 'v14',
+      next_version_name: 'v16',
+    },
+    {
+      name: 'v16',
+      tag: 'v16.1.1',
+      height: 10517000,
+      recommended_version: 'v16.1.1',
+      compatible_versions: ['v16.1.0', 'v16.1.1'],
+      cosmos_sdk_version:
+        'osmosis-labs/cosmos-sdk@0.45.0-rc1.0.20230703010110-ed4eb883f2a6',
+      consensus: {
+        type: 'tendermint',
+        version: 'informalsystems/tendermint@0.34.24',
+      },
+      cosmwasm_version: 'osmosis-labs/wasmd@0.31.0-osmo-v16',
+      cosmwasm_enabled: true,
+      ibc_go_version: '4.3.1',
+      ics_enabled: ['ics20-1'],
+      binaries: {
+        'linux/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v16.1.1/osmosisd-16.1.1-linux-arm64?checksum=sha256:b96ff1f4c9b4abecb1b38998b1a1f891cfed2cc8078ab64914b151183c0c199b',
+        'darwin/arm64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v16.1.1/osmosisd-16.1.1-darwin-arm64?checksum=sha256:c743da4d3632a2bc3ea0ce784bbd13383492a4a34d53295eb2c96987bacf8e8c',
+        'darwin/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v16.1.1/osmosisd-16.1.1-darwin-amd64?checksum=sha256:d856ebda9c31f052d10a78443967a93374f2033292f0afdb6434b82b4ed79790',
+        'linux/amd64':
+          'https://github.com/osmosis-labs/osmosis/releases/download/v16.1.1/osmosisd-16.1.1-linux-amd64?checksum=sha256:f838618633c1d42f593dc33d26b25842f5900961e987fc08570bb81a062e311d',
+      },
+      previous_version_name: 'v15',
+    },
+  ],
+};
 
 export const osmosis: Chain = {
   $schema: '../chain.schema.json',
@@ -378,9 +557,9 @@ export const osmosis: Chain = {
         provider: 'FreshSTAKING',
       },
       {
-        id: 'bd7064a50f5843e2c84c71c4dc18ac07424bdcc1',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:12556',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '38ab18cb2ea1dfeb6232b429e1508f56b6ae5031',
@@ -396,6 +575,11 @@ export const osmosis: Chain = {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        id: '2cb8dd6195c65458e3c18505bb70ce2ff624f85c',
+        address: 'seed.osmosis.validatus.com:2000',
+        provider: 'Validatus',
       },
     ],
     persistent_peers: [
@@ -536,6 +720,14 @@ export const osmosis: Chain = {
         address: 'https://osmosis-rpc.reece.sh',
         provider: 'Reecepbcups',
       },
+      {
+        address: 'https://rpc.osmosis.validatus.com',
+        provider: 'Validatus',
+      },
+      {
+        address: 'https://rpc.osmosis.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -588,7 +780,7 @@ export const osmosis: Chain = {
       },
       {
         address: 'https://lcd-osmosis.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://api-osmosis.mms.team',
@@ -613,6 +805,14 @@ export const osmosis: Chain = {
       {
         address: 'https://osmosis-api.reece.sh',
         provider: 'Reecepbcups',
+      },
+      {
+        address: 'https://api.osmosis.validatus.com:443',
+        provider: 'Validatus',
+      },
+      {
+        address: 'https://lcd.osmosis.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     grpc: [
@@ -667,6 +867,18 @@ export const osmosis: Chain = {
       {
         address: 'osmosis-mainnet.grpc.l0vd.com:80',
         provider: 'L0vd.com ❤️',
+      },
+      {
+        address: 'grpc-osmosis.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
+      },
+      {
+        address: 'grpc.osmosis.validatus.com:443',
+        provider: 'Validatus',
+      },
+      {
+        address: 'https://grpc.osmosis.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },
@@ -729,6 +941,11 @@ export const osmosis: Chain = {
       kind: 'L0vd.com ❤️',
       url: 'https://explorers.l0vd.com/osmosis-mainnet',
       tx_page: 'https://explorers.l0vd.com/osmosis-mainnet/tx/${txHash}',
+    },
+    {
+      kind: 'Chainscope',
+      url: 'https://chainsco.pe/osmosis',
+      tx_page: 'https://chainsco.pe/osmosis/tx/${txHash}',
     },
   ],
   keywords: ['dex'],
@@ -897,6 +1114,50 @@ export const osmosisAssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/0B3C3D06228578334B66B57FBFBA4033216CEB8119B27ACDEE18D92DA5B28D43',
+          exponent: 0,
+          aliases: ['avalanche-uusdc'],
+        },
+        {
+          denom: 'avalanche-usdc',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/0B3C3D06228578334B66B57FBFBA4033216CEB8119B27ACDEE18D92DA5B28D43',
+      name: 'Wormhole USDC(Avalanche)',
+      display: 'avalanche.USDC.wh',
+      symbol: 'avalanche.USDC.wh',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'gateway',
+            base_denom:
+              'factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5ZLmAZpcbaP4EGyihSmpfwryzDr84h51tboV392BCjW4',
+            channel_id: 'channel-3',
+          },
+          chain: {
+            channel_id: 'channel-2186',
+            path: 'transfer/channel-2186/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5ZLmAZpcbaP4EGyihSmpfwryzDr84h51tboV392BCjW4',
+          },
+        },
+      ],
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/usdc.hole.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/usdc.hole.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/usdc.hole.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/usdc.hole.svg',
       },
     },
     {
@@ -1147,9 +1408,9 @@ export const osmosisAssetList: AssetLists = {
       ],
       type_asset: 'ics20',
       base: 'ibc/D1542AA8762DB13087D8364F3EA6509FD6F009A34F00426AF9E4F9FA85CBBF1F',
-      name: 'Wrapped Bitcoin',
+      name: 'Wrapped Bitcoin (Axelar)',
       display: 'wbtc',
-      symbol: 'WBTC',
+      symbol: 'WBTC.axl',
       traces: [
         {
           type: 'ibc',
@@ -1166,6 +1427,10 @@ export const osmosisAssetList: AssetLists = {
       ],
       images: [
         {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wbtc.axl.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wbtc.axl.png',
+        },
+        {
           image_sync: {
             chain_name: 'axelar',
             base_denom: 'wbtc-satoshi',
@@ -1174,7 +1439,8 @@ export const osmosisAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/wbtc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wbtc.axl.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wbtc.axl.png',
       },
     },
     {
@@ -1753,6 +2019,7 @@ export const osmosisAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/levana.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/levana.svg',
       },
+      coingecko_id: 'levana-protocol',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/levana.png',
@@ -1792,10 +2059,13 @@ export const osmosisAssetList: AssetLists = {
       ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.svg',
       },
+      coingecko_id: 'milkyway-staked-tia',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.svg',
         },
       ],
     },
@@ -1846,6 +2116,481 @@ export const osmosisAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.svg',
       },
+    },
+    {
+      description:
+        'The PAGE token is used for actions in the PageDAO NFT literary ecosystem and for DAO governance.',
+      denom_units: [
+        {
+          denom:
+            'ibc/23A62409E4AD8133116C249B1FA38EED30E500A115D7B153109462CD82C1CD99',
+          exponent: 0,
+          aliases: [
+            'gravity0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e',
+            '0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e',
+          ],
+        },
+        {
+          denom: 'page',
+          exponent: 8,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/23A62409E4AD8133116C249B1FA38EED30E500A115D7B153109462CD82C1CD99',
+      name: 'PageDAO',
+      display: 'page',
+      symbol: 'PAGE.grv',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'gravity',
+            base_denom: 'gravity0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e',
+            channel_id: 'channel-10',
+          },
+          chain: {
+            channel_id: 'channel-144',
+            path: 'transfer/channel-144/gravity0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'gravitybridge',
+            base_denom: 'gravity0x60e683C6514Edd5F758A55b6f393BeBBAfaA8d5e',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.svg',
+      },
+    },
+    {
+      description: "Nomic's native token.",
+      denom_units: [
+        {
+          denom:
+            'ibc/F49DFB3BC8105C57EE7F17EC2402438825B31212CFDD81681EB87911E934F32C',
+          exponent: 0,
+          aliases: ['unom'],
+        },
+        {
+          denom: 'nom',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/F49DFB3BC8105C57EE7F17EC2402438825B31212CFDD81681EB87911E934F32C',
+      name: 'Nomic',
+      display: 'nomic',
+      symbol: 'NOM',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'nomic',
+            base_denom: 'unom',
+            channel_id: 'channel-1',
+          },
+          chain: {
+            channel_id: 'channel-6897',
+            path: 'transfer/channel-6897/unom',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'nomic',
+            base_denom: 'unom',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nom.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nom.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nom.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nom.svg',
+      },
+    },
+    {
+      description: 'Bitcoin. On Cosmos.',
+      denom_units: [
+        {
+          denom:
+            'ibc/75345531D87BD90BF108BE7240BD721CB2CB0A1F16D4EBA71B09EC3C43E15C8F',
+          exponent: 0,
+          aliases: ['usat'],
+        },
+        {
+          denom: 'nbtc',
+          exponent: 14,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/75345531D87BD90BF108BE7240BD721CB2CB0A1F16D4EBA71B09EC3C43E15C8F',
+      name: 'Nomic Bitcoin',
+      display: 'nbtc',
+      symbol: 'nBTC',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'nomic',
+            base_denom: 'usat',
+            channel_id: 'channel-1',
+          },
+          chain: {
+            channel_id: 'channel-6897',
+            path: 'transfer/channel-6897/usat',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'nomic',
+            base_denom: 'usat',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nomic/images/nbtc.svg',
+      },
+    },
+    {
+      description: 'AUTISM on Osmosis',
+      denom_units: [
+        {
+          denom:
+            'ibc/9DDF52A334F92BC57A9E0D59DFF9984EAC61D2A14E5162605DF601AA58FDFC6D',
+          exponent: 0,
+          aliases: ['uautism'],
+        },
+        {
+          denom: 'autism',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/9DDF52A334F92BC57A9E0D59DFF9984EAC61D2A14E5162605DF601AA58FDFC6D',
+      name: 'Injective AUTISM',
+      display: 'autism',
+      symbol: 'AUTISM',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'injective',
+            base_denom:
+              'factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism',
+            channel_id: 'channel-8',
+          },
+          chain: {
+            channel_id: 'channel-122',
+            path: 'transfer/channel-122/factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'injective',
+            base_denom:
+              'factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/autism.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/autism.png',
+      },
+    },
+    {
+      description: 'Woof on Osmosis',
+      denom_units: [
+        {
+          denom:
+            'ibc/9B8EC667B6DF55387DC0F3ACC4F187DA6921B0806ED35DE6B04DE96F5AB81F53',
+          exponent: 0,
+          aliases: ['uwoof'],
+        },
+        {
+          denom: 'WOOF',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/9B8EC667B6DF55387DC0F3ACC4F187DA6921B0806ED35DE6B04DE96F5AB81F53',
+      name: 'WOOF chihuahua',
+      display: 'WOOF',
+      symbol: 'WOOF',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'chihuahua',
+            base_denom:
+              'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/uwoof',
+            channel_id: 'channel-7',
+          },
+          chain: {
+            channel_id: 'channel-113',
+            path: 'transfer/channel-113/factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/uwoof',
+          },
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/woof.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/woof.png',
+        },
+      ],
+    },
+    {
+      description: 'The native coin of Sneaky Productions.',
+      denom_units: [
+        {
+          denom:
+            'ibc/94ED1F172BC633DFC56D7E26551D8B101ADCCC69052AC44FED89F97FF658138F',
+          exponent: 0,
+          aliases: ['usneaky'],
+        },
+        {
+          denom: 'sneaky',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/94ED1F172BC633DFC56D7E26551D8B101ADCCC69052AC44FED89F97FF658138F',
+      name: 'Sneaky Productions',
+      display: 'sneaky',
+      symbol: 'SNEAKY',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'stargaze',
+            base_denom:
+              'factory/stars1xx5976njvxpl9n4v8huvff6cudhx7yuu8e7rt4/usneaky',
+            channel_id: 'channel-0',
+          },
+          chain: {
+            channel_id: 'channel-75',
+            path: 'transfer/channel-75/factory/stars1xx5976njvxpl9n4v8huvff6cudhx7yuu8e7rt4/usneaky',
+          },
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/sneaky.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/sneaky.png',
+        },
+      ],
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc',
+          exponent: 0,
+          aliases: ['wbtc-satoshi'],
+        },
+        {
+          denom: 'wbtc',
+          exponent: 8,
+        },
+      ],
+      address:
+        'osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743',
+      type_asset: 'sdk.coin',
+      base: 'factory/osmo1z0qrq605sjgcqpylfl4aa6s90x738j7m58wyatt0tdzflg2ha26q67k743/wbtc',
+      name: 'Wrapped Bitcoin',
+      display: 'wbtc',
+      symbol: 'WBTC',
+      traces: [
+        {
+          type: 'additional-mintage',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
+          },
+          provider: 'BitGo, Kyber, and Ren',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.svg',
+      },
+    },
+    {
+      description:
+        "The first native memecoin on Osmosis. Crafted by the deftest of hands in the lab of lunacy. It's scientifically anarchic, professionally foolish, and your ticket to the madhouse.",
+      denom_units: [
+        {
+          denom: 'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+          exponent: 0,
+        },
+        {
+          denom: 'WOSMO',
+          exponent: 6,
+        },
+      ],
+      address: 'osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3',
+      base: 'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+      name: 'WOSMO',
+      display: 'WOSMO',
+      symbol: 'WOSMO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+        },
+      ],
+    },
+    {
+      description: 'NLS on Osmosis',
+      denom_units: [
+        {
+          denom:
+            'ibc/D9AFCECDD361D38302AA66EB3BAC23B95234832C51D12489DC451FA2B7C72782',
+          exponent: 0,
+          aliases: ['unls'],
+        },
+        {
+          denom: 'nls',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/D9AFCECDD361D38302AA66EB3BAC23B95234832C51D12489DC451FA2B7C72782',
+      name: 'Nolus',
+      display: 'nls',
+      symbol: 'NLS',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'nolus',
+            base_denom: 'unls',
+            channel_id: 'channel-0',
+          },
+          chain: {
+            channel_id: 'channel-783',
+            path: 'transfer/channel-783/unls',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'nolus',
+            base_denom: 'unls',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nolus/images/nolus.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nolus/images/nolus.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nolus/images/nolus.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nolus/images/nolus.svg',
+      },
+    },
+    {
+      description: 'STRD on Osmosis',
+      denom_units: [
+        {
+          denom:
+            'ibc/A8CA5EE328FA10C9519DF6057DA1F69682D28F7D0F5CCC7ECB72E3DCA2D157A4',
+          exponent: 0,
+          aliases: ['ustrd'],
+        },
+        {
+          denom: 'strd',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/A8CA5EE328FA10C9519DF6057DA1F69682D28F7D0F5CCC7ECB72E3DCA2D157A4',
+      name: 'Stride',
+      display: 'strd',
+      symbol: 'STRD',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'stride',
+            base_denom: 'ustrd',
+            channel_id: 'channel-5',
+          },
+          chain: {
+            channel_id: 'channel-326',
+            path: 'transfer/channel-326/ustrd',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'stride',
+            base_denom: 'ustrd',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
+      },
+    },
+    {
+      description: 'Margined Power Token sqTIA',
+      denom_units: [
+        {
+          denom: 'factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqtia',
+          exponent: 0,
+        },
+        {
+          denom: 'sqtia',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/osmo1g8qypve6l95xmhgc0fddaecerffymsl7kn9muw/sqtia',
+      name: 'TIA Squared',
+      display: 'sqtia',
+      symbol: 'sqTIA',
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg',
+      },
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg',
+        },
+      ],
     },
   ],
 };

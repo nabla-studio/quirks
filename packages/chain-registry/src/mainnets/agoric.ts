@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const agoric: Chain = {
   $schema: '../chain.schema.json',
@@ -147,6 +147,14 @@ export const agoric: Chain = {
         address: 'https://rpc-agoric-ia.cosmosia.notional.ventures',
         provider: 'Notional',
       },
+      {
+        address: 'https://agoric-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://rpc.agoric.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -188,6 +196,14 @@ export const agoric: Chain = {
         address: 'https://api-agoric-ia.cosmosia.notional.ventures',
         provider: 'Notional',
       },
+      {
+        address: 'https://agoric-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://lcd.agoric.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     grpc: [
       {
@@ -225,6 +241,14 @@ export const agoric: Chain = {
       {
         address: 'grpc-agoric-ia.cosmosia.notional.ventures:443',
         provider: 'Notional',
+      },
+      {
+        address: 'agoric-grpc.stakeandrelax.net:14490',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://grpc.agoric.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },
@@ -315,6 +339,7 @@ export const agoricAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/ist.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/ist.svg',
       },
+      coingecko_id: 'inter-stable-token',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/ist.png',

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const aura: Chain = {
   $schema: '../chain.schema.json',
@@ -121,11 +121,6 @@ export const aura: Chain = {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
         address: 'aura.rpc.kjnodes.com:11759',
         provider: 'kjnodes',
-      },
-      {
-        id: 'dc92560346a63ac23e117a8b16207c6adbb57f5e',
-        address: 'seeds.whispernode.com:21756',
-        provider: 'WhisperNode🤐',
       },
       {
         id: '20e1000e88125698264454a884812746c2eb4807',

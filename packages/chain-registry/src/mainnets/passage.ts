@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const passage: Chain = {
   $schema: '../chain.schema.json',
@@ -102,14 +102,19 @@ export const passage: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        id: '2534bb8af72ab14e001a9f48b7cf9626221c6be5',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:15656',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: 'df949a46ae6529ae1e09b034b49716468d5cc7e9',
         address: 'seeds.stakerhouse.com:10556',
         provider: 'StakerHouse',
+      },
+      {
+        id: '2b238d2c05c47629e03608a6107e156fcb50344c',
+        address: '65.108.101.158:20556',
+        provider: 'Validatrium',
       },
     ],
     persistent_peers: [
@@ -130,6 +135,11 @@ export const passage: Chain = {
         id: '621f75a74a95298fe16e0c2dd899c087bcba6594',
         address: '65.108.195.29:50656',
         provider: 'Staketab',
+      },
+      {
+        id: '2b238d2c05c47629e03608a6107e156fcb50344c',
+        address: '65.108.101.158:20556',
+        provider: 'Validatrium',
       },
     ],
   },
@@ -177,7 +187,7 @@ export const passage: Chain = {
       },
       {
         address: 'https://rpc-passage.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://passage-mainnet-rpc.autostake.com:443',
@@ -190,6 +200,14 @@ export const passage: Chain = {
       {
         address: 'https://passage-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://passage-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://rpc-passage.mainnet.validatrium.club',
+        provider: 'Validatrium',
       },
     ],
     rest: [
@@ -239,7 +257,7 @@ export const passage: Chain = {
       },
       {
         address: 'https://lcd-passage.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://passage-rest.stakerhouse.com',
@@ -248,6 +266,14 @@ export const passage: Chain = {
       {
         address: 'https://passage-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://passage-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://api-passage.mainnet.validatrium.club',
+        provider: 'Validatrium',
       },
     ],
     grpc: [
@@ -286,6 +312,14 @@ export const passage: Chain = {
       {
         address: 'passage-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'passage-grpc.stakeandrelax.net:15690',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'grpc-passage.mainnet.validatrium.club:20590',
+        provider: 'Validatrium',
       },
     ],
   },

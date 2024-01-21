@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const carbon: Chain = {
   $schema: '../chain.schema.json',
@@ -128,6 +128,18 @@ export const carbon: Chain = {
       },
       {
         denom:
+          'ibc/16065EE5282C5217685C8F084FC44864C25C706AC37356B0D62811D50B96920F',
+        fixed_min_gas_price: 0,
+        low_gas_price: 0.0000075,
+        average_gas_price: 0.0000075,
+        high_gas_price: 0.0000075,
+        gas_costs: {
+          cosmos_send: 100000000,
+          ibc_transfer: 100000000,
+        },
+      },
+      {
+        denom:
           'ibc/2B58B8C147E8718EECCB3713271DF46DEE8A3A00A27242628604E31C2F370EF5',
         fixed_min_gas_price: 0,
         low_gas_price: 0.00005,
@@ -181,6 +193,18 @@ export const carbon: Chain = {
         low_gas_price: 0.00015,
         average_gas_price: 0.00015,
         high_gas_price: 0.00015,
+        gas_costs: {
+          cosmos_send: 100000000,
+          ibc_transfer: 100000000,
+        },
+      },
+      {
+        denom:
+          'ibc/6C349F0EB135C5FA99301758F35B87DB88403D690E5E314AB080401FEE4066E5',
+        fixed_min_gas_price: 0,
+        low_gas_price: 0.0000075,
+        average_gas_price: 0.0000075,
+        high_gas_price: 0.0000075,
         gas_costs: {
           cosmos_send: 100000000,
           ibc_transfer: 100000000,
@@ -290,13 +314,13 @@ export const carbon: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Switcheo/carbon-bootstrap',
-    recommended_version: 'v2.36.0',
-    compatible_versions: ['v2.36.0'],
+    recommended_version: 'v2.36.9',
+    compatible_versions: ['v2.36.0', 'v2.36.9'],
     binaries: {
       'linux/amd64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.0/carbond2.36.0-mainnet.linux-amd64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.9/carbond2.36.9-mainnet.linux-amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.0/carbond2.36.0-mainnet.linux-arm64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.9/carbond2.36.9-mainnet.linux-arm64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -479,13 +503,13 @@ export const carbon: Chain = {
         name: 'v2.36.0',
         proposal: 323,
         height: 49677971,
-        recommended_version: 'v2.36.0',
-        compatible_versions: ['v2.36.0'],
+        recommended_version: 'v2.36.9',
+        compatible_versions: ['v2.36.0', 'v2.36.9'],
         binaries: {
           'linux/amd64':
-            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.0/carbond2.36.0-mainnet.linux-amd64.tar.gz',
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.9/carbond2.36.9-mainnet.linux-amd64.tar.gz',
           'linux/arm64':
-            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.0/carbond2.36.0-mainnet.linux-arm64.tar.gz',
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.9/carbond2.36.9-mainnet.linux-arm64.tar.gz',
         },
         next_version_name: '',
       },

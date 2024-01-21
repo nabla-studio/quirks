@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const gateway: Chain = {
   $schema: '../chain.schema.json',
@@ -115,15 +115,19 @@ export const gateway: Chain = {
   apis: {
     rpc: [
       {
+        address: 'https://tncnt-eu-wormchain-main-01.rpc.p2p.world/',
+        provider: 'P2P',
+      },
+      {
         address: 'https://wormchain-rpc.quickapi.com/',
         provider: 'ChainLayer',
       },
-      {
-        address: 'https://wormchain.jumpisolated.com:443',
-        provider: 'Jump Crypto',
-      },
     ],
     rest: [
+      {
+        address: 'https://tncnt-eu-wormchain-main-01.rpc.p2p.world/lcd/',
+        provider: 'P2P',
+      },
       {
         address: 'https://wormchain-lcd.quickapi.com/',
         provider: 'ChainLayer',
@@ -131,7 +135,7 @@ export const gateway: Chain = {
     ],
     grpc: [
       {
-        address: 'grpc.wormchain-mainnet.tm.p2p.org:443',
+        address: 'tncnt-eu-wormchain-main-01-grpc.rpc.p2p.world:80',
         provider: 'P2P',
       },
     ],
@@ -264,7 +268,7 @@ export const gatewayAssetList: AssetLists = {
           type: 'bridge',
           counterparty: {
             chain_name: 'ethereum',
-            base_denom: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
+            base_denom: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
           },
           provider: 'Wormhole',
         },
@@ -679,6 +683,51 @@ export const gatewayAssetList: AssetLists = {
           image_sync: {
             chain_name: 'ethereum',
             base_denom: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
+      },
+    },
+    {
+      description:
+        'Avalanche USD Coin (Wormhole), Avalanche USDC, factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5ZLmAZpcbaP4EGyihSmpfwryzDr84h51tboV392BCjW4',
+      denom_units: [
+        {
+          denom:
+            'factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5ZLmAZpcbaP4EGyihSmpfwryzDr84h51tboV392BCjW4',
+          exponent: 0,
+          aliases: [],
+        },
+        {
+          denom: 'wormhole/5ZLmAZpcbaP4EGyihSmpfwryzDr84h51tboV392BCjW4/6',
+          exponent: 6,
+          aliases: [],
+        },
+      ],
+      address:
+        'wormhole1utjx3594tlvfw4375esgu72wa4sdgf0q7x4ye27husf5kvuzp5rsr72gdq',
+      base: 'factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/5ZLmAZpcbaP4EGyihSmpfwryzDr84h51tboV392BCjW4',
+      display: 'wormhole/5ZLmAZpcbaP4EGyihSmpfwryzDr84h51tboV392BCjW4/6',
+      name: 'Avalanche USD Coin (Wormhole)',
+      symbol: 'avalanche.USDC.wh',
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'avalanche',
+            base_denom: '0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E',
+          },
+          provider: 'Wormhole',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'avalanche',
+            base_denom: '0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E',
           },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
         },

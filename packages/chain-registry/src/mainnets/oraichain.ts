@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const oraichain: Chain = {
   $schema: '../chain.schema.json',
@@ -160,6 +160,10 @@ export const oraichain: Chain = {
         address: 'https://rpc-oraichain.mms.team',
         provider: 'MMS',
       },
+      {
+        address: 'https://rpc-orai.blockval.io/',
+        provider: 'Blockval',
+      },
     ],
     rest: [
       {
@@ -174,6 +178,10 @@ export const oraichain: Chain = {
         address: 'https://api-oraichain.mms.team',
         provider: 'MMS',
       },
+      {
+        address: 'https://api-orai.blockval.io',
+        provider: 'Blockval',
+      },
     ],
     grpc: [
       {
@@ -183,6 +191,10 @@ export const oraichain: Chain = {
       {
         address: 'oraichain-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
+        address: 'grpc-orai.blockval.io:9390',
+        provider: 'Blockval',
       },
     ],
   },
@@ -196,6 +208,11 @@ export const oraichain: Chain = {
       kind: 'Nodine Explorer',
       url: 'https://explorer.co.id/orai',
       tx_page: 'https://explorer.co.id/orai/tx/${txHash}',
+    },
+    {
+      kind: 'Blockval Explorer',
+      url: 'https://explorer.blockval.io/oraichain',
+      tx_page: 'https://explorer.blockval.io/oraichain/tx/${txHash}',
     },
     {
       kind: 'atomscan',

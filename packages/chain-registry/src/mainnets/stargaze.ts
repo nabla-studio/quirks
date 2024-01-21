@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const stargaze: Chain = {
   $schema: '../chain.schema.json',
@@ -107,9 +107,9 @@ export const stargaze: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        id: '604f4baaa30cd3f50d080bf45806d222c7fadc94',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:13756',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '96e0040d44a2f0b59d2a07e128369363d8535b67',
@@ -184,7 +184,7 @@ export const stargaze: Chain = {
       },
       {
         address: 'https://rpc-stargaze.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://stargaze-mainnet-rpc.autostake.com:443',
@@ -213,6 +213,10 @@ export const stargaze: Chain = {
       {
         address: 'https://stargaze-rpc.reece.sh:443',
         provider: 'Reecepbcups',
+      },
+      {
+        address: 'https://rpc.stargaze.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     rest: [
@@ -262,7 +266,7 @@ export const stargaze: Chain = {
       },
       {
         address: 'https://lcd-stargaze.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://stargaze-api.ramuchi.tech',
@@ -287,6 +291,10 @@ export const stargaze: Chain = {
       {
         address: 'https://stargaze-api.reece.sh:443',
         provider: 'Reecepbcups',
+      },
+      {
+        address: 'https://lcd.stargaze.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     grpc: [
@@ -325,6 +333,10 @@ export const stargaze: Chain = {
       {
         address: 'stargaze-grpc.stakerhouse.com:443',
         provider: 'StakerHouse',
+      },
+      {
+        address: 'https://grpc.stargaze.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },
@@ -510,6 +522,34 @@ export const stargazeAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/ohh.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/ohh.svg',
+        },
+      ],
+    },
+    {
+      description: 'The native coin of Sneaky Productions.',
+      denom_units: [
+        {
+          denom: 'factory/stars1xx5976njvxpl9n4v8huvff6cudhx7yuu8e7rt4/usneaky',
+          exponent: 0,
+        },
+        {
+          denom: 'sneaky',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/stars1xx5976njvxpl9n4v8huvff6cudhx7yuu8e7rt4/usneaky',
+      name: 'Sneaky Productions',
+      display: 'sneaky',
+      symbol: 'SNEAKY',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/sneaky.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/sneaky.svg',
+      },
+      coingecko_id: '',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/sneaky.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/sneaky.svg',
         },
       ],
     },

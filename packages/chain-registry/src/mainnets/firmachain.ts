@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const firmachain: Chain = {
   $schema: '../chain.schema.json',
@@ -74,7 +74,7 @@ export const firmachain: Chain = {
     persistent_peers: [
       {
         id: '931a7c680d28c84a8a53e4017a6eae0788ee7cf2',
-        address: 'firmachain-seed.ramuchi.tech:57656',
+        address: 'firmachain.ramuchi.tech:57656',
         provider: 'ramuchi.tech',
       },
     ],

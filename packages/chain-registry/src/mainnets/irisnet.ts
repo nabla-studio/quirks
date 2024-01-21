@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const irisnet: Chain = {
   $schema: '../chain.schema.json',
@@ -114,10 +114,6 @@ export const irisnet: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc-iris.keplr.app',
-        provider: 'chainapsis',
-      },
-      {
         address: 'https://rpc-irisnet-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
       },
@@ -147,10 +143,6 @@ export const irisnet: Chain = {
       },
     ],
     rest: [
-      {
-        address: 'https://lcd-iris.keplr.app',
-        provider: 'chainapsis',
-      },
       {
         address: 'https://api-irisnet-ia.cosmosia.notional.ventures/',
         provider: 'Notional',

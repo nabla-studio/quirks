@@ -133,6 +133,10 @@ export interface Chain {
        */
       proposal?: number;
       /**
+       * [Optional] Name of the previous version
+       */
+      previous_version_name?: string;
+      /**
        * [Optional] Name of the following version
        */
       next_version_name?: string;

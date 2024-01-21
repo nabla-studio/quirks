@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const terpnettestnet: Chain = {
   $schema: '../chain.schema.json',
@@ -21,13 +21,6 @@ export const terpnettestnet: Chain = {
         average_gas_price: 1,
         high_gas_price: 1.25,
       },
-      {
-        denom: 'uterpx',
-        fixed_min_gas_price: 0.05,
-        low_gas_price: 0.075,
-        average_gas_price: 0.1,
-        high_gas_price: 0.125,
-      },
     ],
   },
   staking: {
@@ -40,7 +33,7 @@ export const terpnettestnet: Chain = {
 
   codebase: {
     git_repo: 'github.com/terpnetwork/terp-core.git',
-    recommended_version: 'v3-pigeonfall',
+    recommended_version: 'v4.1.testnet',
     consensus: {
       type: 'cometbft',
       version: 'v0.37.2',
@@ -52,9 +45,9 @@ export const terpnettestnet: Chain = {
     },
     binaries: {
       'linux/amd64':
-        'https://github.com/terpnetwork/terp-core/releases/download/v3-pigeonfall/terpd-v3-pigeonfall-amd64',
+        'https://github.com/terpnetwork/terp-core/releases/download/v4.1.testnet/terpd-linux-amd64',
       'linux/arm64':
-        'https://github.com/terpnetwork/terp-core/releases/download/v3-pigeonfall/terpd-v3-pigeonfall-arm64',
+        'https://github.com/terpnetwork/terp-core/releases/download/v4.1.testnet/terpd-linux-arm64',
     },
     versions: [
       {
@@ -120,6 +113,15 @@ export const terpnettestnet: Chain = {
           version: '0.37.2',
         },
       },
+      {
+        name: 'v4.1.testnet',
+        recommended_version: 'v4.1.testnet',
+        compatible_versions: ['v4.1.testnet'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
     ],
   },
   peers: {
@@ -139,11 +141,13 @@ export const terpnettestnet: Chain = {
     rpc: [
       {
         address: 'https://terp-testnet-rpc.itrocket.net:443/',
+        provider: 'itrocket',
       },
     ],
     rest: [
       {
         address: 'https://terp-testnet-api.itrocket.net:443/',
+        provider: 'itrocket',
       },
     ],
     grpc: [

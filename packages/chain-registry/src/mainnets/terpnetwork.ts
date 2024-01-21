@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const terpnetwork: Chain = {
   $schema: '../chain.schema.json',
@@ -12,21 +12,21 @@ export const terpnetwork: Chain = {
   node_home: '$HOME/.terp',
   codebase: {
     git_repo: 'https://github.com/terpnetwork/terp-core.git',
-    recommended_version: 'v3-pigeonfall',
+    recommended_version: 'v4.1.0',
     consensus: {
       type: 'cometbft',
       version: '0.37.2',
     },
-    compatible_versions: ['v3-pigeonfall'],
+    compatible_versions: ['v4.1.0'],
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/terpnetwork/mainnet/main/morocco-1/genesis.json',
     },
     binaries: {
       'linux/amd64':
-        'https://github.com/terpnetwork/terp-core/releases/download/v3-pigeonfall/terpd-v3-pigeonfall-amd64',
+        'https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/terpd-linux-amd64',
       'linux/arm64':
-        'https://github.com/terpnetwork/terp-core/releases/download/v3-pigeonfall/terpd-v3-pigeonfall-arm64',
+        'https://github.com/terpnetwork/terp-core/releases/download/v4.1.0/terpd-linux-arm64',
     },
     versions: [
       {
@@ -91,18 +91,27 @@ export const terpnetwork: Chain = {
           type: 'cometbft',
           version: '0.37.2',
         },
+        next_version_name: 'v4.1.0',
+      },
+      {
+        name: 'v4.1.0',
+        proposal: 30,
+        height: 3698609,
+        recommended_version: 'v4.1.0',
+        compatible_versions: ['v4.1.0'],
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        next_version_name: '',
       },
     ],
   },
   fees: {
     fee_tokens: [
       {
-        denom: 'uterp',
-        fixed_min_gas_price: 0.005,
-      },
-      {
         denom: 'uthiol',
-        fixed_min_gas_price: 0.5,
+        fixed_min_gas_price: 0.05,
       },
     ],
   },
@@ -122,6 +131,11 @@ export const terpnetwork: Chain = {
         id: 'd8256642afae77264bcce1631d51233a9d00249b',
         address: 'terp-mainnet-seed.itrocket.net:13656',
         provider: 'itrocket.net',
+      },
+      {
+        id: '5f5cfac5c38506fbb4275c19e87c4107ec48808d',
+        address: 'seeds.nodex.one:10410',
+        provider: 'nodex.one',
       },
     ],
     persistent_peers: [
@@ -146,6 +160,10 @@ export const terpnetwork: Chain = {
         address: 'https://terp-mainnet-rpc.itrocket.net:443',
         provider: 'itrocket.net',
       },
+      {
+        address: ' https://terp.rpc.nodex.one:443',
+        provider: 'nodex.one',
+      },
     ],
     rest: [
       {
@@ -160,6 +178,10 @@ export const terpnetwork: Chain = {
         address: 'https://terp-mainnet-api.itrocket.net:443',
         provider: 'itrocket.net',
       },
+      {
+        address: ' https://terp.api.nodex.one:443',
+        provider: 'nodex.one',
+      },
     ],
     grpc: [
       {
@@ -169,6 +191,10 @@ export const terpnetwork: Chain = {
       {
         address: 'terp-mainnet-grpc.itrocket.net:13090',
         provider: 'itrocket.net',
+      },
+      {
+        address: ' https://terp.grpc.nodex.one:443',
+        provider: 'nodex.one',
       },
     ],
   },

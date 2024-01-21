@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const celestiatestnet: Chain = {
   $schema: '../../chain.schema.json',

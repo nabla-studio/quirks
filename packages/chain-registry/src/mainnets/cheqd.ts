@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const cheqd: Chain = {
   $schema: '../chain.schema.json',
@@ -109,14 +109,9 @@ export const cheqd: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        id: 'd8676573a3718c05d3d0d07906f3604a9e3a034d',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:16156',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        id: '27b6d74c8408e033e2e5a9e966a0d15782e33596',
-        address: 'seeds.nethernode.xyz:16156',
-        provider: 'carbonZERO🌲',
+        provider: 'WhisperNode 🤐',
       },
     ],
     persistent_peers: [
@@ -162,7 +157,7 @@ export const cheqd: Chain = {
       },
       {
         address: 'https://rpc-cheqd.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://cheqd-mainnet-rpc.autostake.com:443',
@@ -196,7 +191,7 @@ export const cheqd: Chain = {
       },
       {
         address: 'https://lcd-cheqd.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://api-cheqd.blockval.io',

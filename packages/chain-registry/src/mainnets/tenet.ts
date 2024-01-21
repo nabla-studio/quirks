@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const tenet: Chain = {
   $schema: '../chain.schema.json',
@@ -139,11 +139,6 @@ export const tenet: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
-      {
-        id: 'abcf18cbad7c83a19cbbde9d3bbe574657f35f56',
-        address: 'p2p.tenet.safeblock.space:26656',
-        provider: 'Safe Block',
-      },
     ],
   },
   apis: {
@@ -160,10 +155,6 @@ export const tenet: Chain = {
         address: 'https://tenet-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
-      {
-        address: 'https://rpc.tenet.safeblock.space',
-        provider: 'Safe Block',
-      },
     ],
     rest: [
       {
@@ -178,10 +169,6 @@ export const tenet: Chain = {
         address: 'https://tenet-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
-      {
-        address: 'https://api.tenet.safeblock.space',
-        provider: 'Safe Block',
-      },
     ],
     grpc: [
       {
@@ -192,10 +179,6 @@ export const tenet: Chain = {
         address: 'kichain-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
-      {
-        address: 'grpc.tenet.safeblock.space:9090',
-        provider: 'Safe Block',
-      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -205,10 +188,6 @@ export const tenet: Chain = {
       {
         address: 'https://tenet-evm.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
-      },
-      {
-        address: 'https://evm.tenet.safeblock.space',
-        provider: 'Safe Block',
       },
     ],
   },
@@ -229,13 +208,6 @@ export const tenet: Chain = {
       tx_page: 'https://explorer.tcnetwork.io/tenet/transaction/${txHash}',
       account_page:
         'https://explorer.tcnetwork.io/tenet/account/${accountAddress}',
-    },
-    {
-      kind: 'Safe Block',
-      url: 'https://explorer.safeblock.space/tenet',
-      tx_page: 'https://explorer.safeblock.space/tenet/tx/${txHash}',
-      account_page:
-        'https://explorer.safeblock.space/tenet/account/${accountAddress}',
     },
   ],
   images: [

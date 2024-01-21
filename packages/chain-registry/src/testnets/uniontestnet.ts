@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const uniontestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -54,6 +54,10 @@ export const uniontestnet: Chain = {
         address: 'https://union-testnet-rpc.polkachu.com',
         provider: 'Polkachu',
       },
+      {
+        address: 'https://rpc-testnet-union.nodeist.net',
+        provider: 'Nodeist',
+      },
     ],
     rest: [
       {
@@ -64,6 +68,10 @@ export const uniontestnet: Chain = {
         address: 'https://union-testnet-api.polkachu.com',
         provider: 'Polkachu',
       },
+      {
+        address: 'https://api-testnet-union.nodeist.net',
+        provider: 'Nodeist',
+      },
     ],
     grpc: [
       {
@@ -73,6 +81,10 @@ export const uniontestnet: Chain = {
       {
         address: 'http://union-testnet-grpc.polkachu.com:24690',
         provider: 'Polkachu',
+      },
+      {
+        address: 'https://grpc-testnet-union.nodeist.net',
+        provider: 'Nodeist',
       },
     ],
   },

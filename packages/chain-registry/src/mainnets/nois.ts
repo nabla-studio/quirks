@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const nois: Chain = {
   $schema: '../chain.schema.json',
@@ -192,6 +192,10 @@ export const nois: Chain = {
         address: 'https://rpc.nois.silentvalidator.com',
         provider: 'silent',
       },
+      {
+        address: 'https://nois-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
     ],
     grpc: [
       {
@@ -258,6 +262,10 @@ export const nois: Chain = {
         address: 'grpc.nois.silentvalidator.com:443',
         provider: 'silent',
       },
+      {
+        address: 'nois-grpc.stakeandrelax.net:17390',
+        provider: 'Stake&Relax 🦥',
+      },
     ],
     rest: [
       {
@@ -311,6 +319,10 @@ export const nois: Chain = {
       {
         address: 'https://api.nois.silentvalidator.com',
         provider: 'silent',
+      },
+      {
+        address: 'https://nois-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
       },
     ],
   },

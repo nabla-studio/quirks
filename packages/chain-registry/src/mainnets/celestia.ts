@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const celestia: Chain = {
   $schema: '../chain.schema.json',
@@ -297,6 +297,7 @@ export const celestia: Chain = {
       kind: 'Mintscan',
       url: 'https://mintscan.io/celestia',
       tx_page: 'https://mintscan.io/celestia/txs/${txHash}',
+      account_page: 'https://mintscan.io/celestia/address/${accountAddress}',
     },
     {
       kind: 'NodeStake',

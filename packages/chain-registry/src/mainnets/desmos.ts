@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const desmos: Chain = {
   $schema: '../chain.schema.json',
@@ -33,11 +33,11 @@ export const desmos: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/desmos-labs/desmos',
-    recommended_version: 'v6.2.0',
-    compatible_versions: ['v6.2.0'],
+    recommended_version: 'v6.2.1',
+    compatible_versions: ['v6.2.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/desmos-labs/desmos/releases/download/v6.2.0/desmos-6.2.0-linux-amd64',
+        'https://github.com/desmos-labs/desmos/releases/download/v6.2.1/desmos-6.2.1-linux-amd64',
     },
     genesis: {
       genesis_url:
@@ -92,13 +92,13 @@ export const desmos: Chain = {
       },
       {
         name: 'v6.2.0',
-        recommended_version: 'v6.2.0',
-        compatible_versions: ['v6.2.0'],
+        recommended_version: 'v6.2.1',
+        compatible_versions: ['v6.2.1'],
         proposal: 36,
         height: 11312575,
         binaries: {
           'linux/amd64':
-            'https://github.com/desmos-labs/desmos/releases/download/v6.2.0/desmos-6.2.0-linux-amd64',
+            'https://github.com/desmos-labs/desmos/releases/download/v6.2.1/desmos-6.2.1-linux-amd64',
         },
         next_version_name: '',
       },
@@ -136,27 +136,12 @@ export const desmos: Chain = {
         provider: 'Nodine.ID',
       },
       {
-        id: '73fc6b8b41aada42306b2f149619cc0ff935a868',
-        address: 'desmos-seed.panthea.eu:39656',
-        provider: 'Panthea EU',
-      },
-      {
-        id: '6580d5123923ec1426c67658d2ae1e68cfd6a62f',
-        address: 'seeds.whispernode.com:16256',
-        provider: 'WhisperNode🤐',
-      },
-      {
         id: 'b7c72e371caca2e5287c0d9a68bfcdabc93fc664',
         address: 'seed-desmos.ibs.team:16658',
         provider: 'Inter Blockchain Services',
       },
     ],
     persistent_peers: [
-      {
-        id: '7c506d9e32cfc486ea714ee0c0307022398b8c20',
-        address: 'desmos-peer.panthea.eu:29656',
-        provider: 'Panthea EU',
-      },
       {
         id: 'e8ff89b51d9fbf594e7f9237f01a6a2f19c44725',
         address: '65.21.91.99:36656',
@@ -188,12 +173,12 @@ export const desmos: Chain = {
         provider: 'Staketab',
       },
       {
-        address: 'https://desmos-rpc.panthea.eu',
-        provider: 'Panthea EU',
-      },
-      {
         address: 'https://rpc.desmos.tcnetwork.io',
         provider: 'TC Network',
+      },
+      {
+        address: 'https://rpc.desmos.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     rest: [
@@ -214,12 +199,12 @@ export const desmos: Chain = {
         provider: 'Staketab',
       },
       {
-        address: 'https://desmos-api.panthea.eu',
-        provider: 'Panthea EU',
-      },
-      {
         address: 'https://rest.desmos.tcnetwork.io',
         provider: 'TC Network',
+      },
+      {
+        address: 'https://lcd.desmos.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     grpc: [
@@ -244,8 +229,8 @@ export const desmos: Chain = {
         provider: 'Sr20de',
       },
       {
-        address: 'desmos-grpc.panthea.eu:16730',
-        provider: 'Panthea EU',
+        address: 'https://grpc.desmos.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },

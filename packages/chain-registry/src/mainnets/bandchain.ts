@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const bandchain: Chain = {
   $schema: '../chain.schema.json',
@@ -147,7 +147,7 @@ export const bandchain: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'http://band.rpc.m.stavr.tech:11067',
+        address: 'https://band.rpc.m.stavr.tech:443',
         provider: '🔥STAVR🔥',
       },
       {

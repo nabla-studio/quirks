@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const likecoin: Chain = {
   $schema: '../chain.schema.json',
@@ -247,7 +247,7 @@ export const likecoin: Chain = {
       },
       {
         address: 'http://51.159.223.25:28657',
-        provider: 'Citizen',
+        provider: 'Citizen Web3',
       },
     ],
     rest: [

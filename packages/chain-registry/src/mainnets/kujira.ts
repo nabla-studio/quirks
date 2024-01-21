@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const kujira: Chain = {
   $schema: '../chain.schema.json',
@@ -17,10 +17,130 @@ export const kujira: Chain = {
     fee_tokens: [
       {
         denom: 'ukuji',
-        fixed_min_gas_price: 0.00119,
-        low_gas_price: 0.01,
-        average_gas_price: 0.025,
-        high_gas_price: 0.03,
+        fixed_min_gas_price: 0.0034,
+        low_gas_price: 0.0034,
+        average_gas_price: 0.0051,
+        high_gas_price: 0.00681,
+      },
+      {
+        denom:
+          'factory/kujira1qk00h5atutpsv900x202pxx42npjr9thg58dnqpa72f2p7m2luase444a7/uusk',
+        fixed_min_gas_price: 0.01186,
+        low_gas_price: 0.01186,
+        average_gas_price: 0.01779,
+        high_gas_price: 0.02372,
+      },
+      {
+        denom:
+          'ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F',
+        fixed_min_gas_price: 0.0119,
+        low_gas_price: 0.0119,
+        average_gas_price: 0.01785,
+        high_gas_price: 0.02379,
+      },
+      {
+        denom:
+          'ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
+        fixed_min_gas_price: 0.00129,
+        low_gas_price: 0.00129,
+        average_gas_price: 0.00193,
+        high_gas_price: 0.00258,
+      },
+      {
+        denom:
+          'ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23',
+        fixed_min_gas_price: 0.01795,
+        low_gas_price: 0.01795,
+        average_gas_price: 0.02692,
+        high_gas_price: 0.0359,
+      },
+      {
+        denom:
+          'ibc/3607EB5B5E64DD1C0E12E07F077FF470D5BC4706AFCBC98FE1BA960E5AE4CE07',
+        fixed_min_gas_price: 0.65943,
+        low_gas_price: 0.65943,
+        average_gas_price: 0.98915,
+        high_gas_price: 1.31887,
+      },
+      {
+        denom:
+          'ibc/F3AA7EF362EC5E791FE78A0F4CCC69FEE1F9A7485EB1A8CAB3F6601C00522F10',
+        fixed_min_gas_price: 160416396197,
+        low_gas_price: 160416396197,
+        average_gas_price: 240624594296,
+        high_gas_price: 320832792394,
+      },
+      {
+        denom:
+          'ibc/EFF323CC632EC4F747C61BCE238A758EFDB7699C3226565F7C20DA06509D59A5',
+        fixed_min_gas_price: 0.02689,
+        low_gas_price: 0.02689,
+        average_gas_price: 0.04034,
+        high_gas_price: 0.05379,
+      },
+      {
+        denom:
+          'ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986',
+        fixed_min_gas_price: 0.01495,
+        low_gas_price: 0.01495,
+        average_gas_price: 0.02243,
+        high_gas_price: 0.02991,
+      },
+      {
+        denom:
+          'ibc/A358D7F19237777AF6D8AD0E0F53268F8B18AE8A53ED318095C14D6D7F3B2DB5',
+        fixed_min_gas_price: 0.03139,
+        low_gas_price: 0.03139,
+        average_gas_price: 0.04709,
+        high_gas_price: 0.06278,
+      },
+      {
+        denom:
+          'ibc/4F393C3FCA4190C0A6756CE7F6D897D5D1BE57D6CCB80D0BC87393566A7B6602',
+        fixed_min_gas_price: 0.90403,
+        low_gas_price: 0.90403,
+        average_gas_price: 1.35605,
+        high_gas_price: 1.80806,
+      },
+      {
+        denom:
+          'ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2',
+        fixed_min_gas_price: 559196837,
+        low_gas_price: 559196837,
+        average_gas_price: 838795256,
+        high_gas_price: 1118393675,
+      },
+      {
+        denom:
+          'ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7',
+        fixed_min_gas_price: 5772801,
+        low_gas_price: 5772801,
+        average_gas_price: 8659201,
+        high_gas_price: 11545602,
+      },
+      {
+        denom: 'factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta',
+
+        fixed_min_gas_price: 0.01807,
+        low_gas_price: 0.01807,
+        average_gas_price: 0.02711,
+        high_gas_price: 0.03615,
+      },
+      {
+        denom:
+          'ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9',
+        fixed_min_gas_price: 0.01194,
+        low_gas_price: 0.01194,
+        average_gas_price: 0.01792,
+        high_gas_price: 0.02389,
+      },
+      {
+        denom:
+          'ibc/E5CA126979E2FFB4C70C072F8094D07ECF27773B37623AD2BF7582AD0726F0F3',
+        fixed_min_gas_price: 0.00019,
+        low_gas_price: 0.00019,
+        average_gas_price: 0.00029,
+        high_gas_price: 0.00039,
       },
     ],
   },
@@ -33,13 +153,15 @@ export const kujira: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Team-Kujira/core',
-    recommended_version: 'v0.9.1',
-    compatible_versions: ['v0.9.1'],
+    recommended_version: 'v0.9.3-1',
+    compatible_versions: ['v0.9.3-1'],
     cosmos_sdk_version: 'v0.47.5',
     consensus: {
       type: 'cometbft',
       version: 'v0.37.2',
     },
+    cosmwasm_version: 'v0.45.0',
+    cosmwasm_enabled: true,
     ics_enabled: ['ics20-1'],
     genesis: {
       genesis_url:
@@ -85,13 +207,28 @@ export const kujira: Chain = {
         name: 'v0.9.1',
         proposal: 488,
         height: 15205000,
-        recommended_version: 'v0.9.1',
-        compatible_versions: ['v0.9.1'],
+        recommended_version: 'v0.9.1-1',
+        compatible_versions: ['v0.9.1-1'],
         cosmos_sdk_version: 'v0.47.5',
         consensus: {
           type: 'cometbft',
           version: 'v0.37.2',
         },
+        next_version_name: 'v0.9.3',
+      },
+      {
+        name: 'v0.9.3',
+        proposal: 534,
+        height: 16610000,
+        recommended_version: 'v0.9.3-1',
+        compatible_versions: ['v0.9.3-1'],
+        cosmos_sdk_version: 'v0.47.5',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
         next_version_name: '',
       },
     ],
@@ -138,7 +275,7 @@ export const kujira: Chain = {
       {
         id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:11856',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '654ba97f74254965a80c0fac0f277f6f6e5506b6',
@@ -163,7 +300,7 @@ export const kujira: Chain = {
     rpc: [
       {
         address: 'https://rpc-kujira.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://rpc.kaiyo.kujira.setten.io',
@@ -241,7 +378,7 @@ export const kujira: Chain = {
     rest: [
       {
         address: 'https://lcd-kujira.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://lcd.kaiyo.kujira.setten.io',
@@ -307,6 +444,10 @@ export const kujira: Chain = {
         address: 'https://kujira-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://kujira-rest.interstellar-lounge.org',
+        provider: 'Interstellar Lounge 🍸',
+      },
     ],
     grpc: [
       {
@@ -344,6 +485,10 @@ export const kujira: Chain = {
       {
         address: 'kujira-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'grpc-kujira.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
       },
     ],
   },
@@ -643,7 +788,7 @@ export const kujiraAssetList: AssetLists = {
       base: 'ibc/20014F963CC9E6488B299622F87B60C6DE71632864859EC08B4753478DAB2BB8',
       name: 'Tether USD',
       display: 'usdt',
-      symbol: 'USDt',
+      symbol: 'USDT',
       traces: [
         {
           type: 'ibc',
@@ -749,6 +894,32 @@ export const kujiraAssetList: AssetLists = {
       ],
     },
     {
+      description: "Quark's auto-compounding FUZN derivative",
+      denom_units: [
+        {
+          denom:
+            'factory/kujira1l04ged98c7a7s9tllu62ld09ztylwf442qgm4thfgmadrvngeumsz4zrh2/urcpt',
+          exponent: 0,
+        },
+        {
+          denom: 'qcFUZN',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira1l04ged98c7a7s9tllu62ld09ztylwf442qgm4thfgmadrvngeumsz4zrh2/urcpt',
+      name: 'qcFUZN',
+      display: 'qcFUZN',
+      symbol: 'qcFUZN',
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/qcfuzn.svg',
+      },
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/qcfuzn.svg',
+        },
+      ],
+    },
+    {
       description: 'The Revenue & Governance token of Unstake.fi',
       denom_units: [
         {
@@ -767,6 +938,7 @@ export const kujiraAssetList: AssetLists = {
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nstk.svg',
       },
+      coingecko_id: 'unstake-fi',
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nstk.svg',
@@ -797,6 +969,612 @@ export const kujiraAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/local.png',
         },
       ],
+    },
+    {
+      description: 'Food for whales',
+      denom_units: [
+        {
+          denom: 'factory/kujira166ysf07ze5suazfzj0r05tv8amk2yn8zvsfuu7/uplnk',
+          exponent: 0,
+        },
+        {
+          denom: 'PLNK',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira166ysf07ze5suazfzj0r05tv8amk2yn8zvsfuu7/uplnk',
+      name: 'Plankton',
+      display: 'PLNK',
+      symbol: 'PLNK',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/PLNK_drk.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/PLNK_drk.png',
+        },
+      ],
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/E5CA126979E2FFB4C70C072F8094D07ECF27773B37623AD2BF7582AD0726F0F3',
+          exponent: 0,
+        },
+        {
+          denom: 'sol',
+          exponent: 8,
+        },
+      ],
+      base: 'ibc/E5CA126979E2FFB4C70C072F8094D07ECF27773B37623AD2BF7582AD0726F0F3',
+      name: 'Wormhole Solana',
+      display: 'sol',
+      symbol: 'whSOL',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'gateway',
+            base_denom:
+              'factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA',
+            channel_id: 'channel-9',
+          },
+          chain: {
+            channel_id: 'channel-113',
+            path: 'transfer/channel-113/factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'gateway',
+            base_denom:
+              'factory/wormhole14ejqjyq8um4p3xfqj74yld5waqljf88fz25yxnma0cngspxe3les00fpjx/8sYgCzLRJC3J7qPn2bNbx6PiGcarhyx8rBhVaNnfvHCA',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/solana/images/sol.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/F3AA7EF362EC5E791FE78A0F4CCC69FEE1F9A7485EB1A8CAB3F6601C00522F10',
+          exponent: 0,
+        },
+        {
+          denom: 'evmos',
+          exponent: 18,
+        },
+      ],
+      base: 'ibc/F3AA7EF362EC5E791FE78A0F4CCC69FEE1F9A7485EB1A8CAB3F6601C00522F10',
+      name: 'Evmos',
+      display: 'evmos',
+      symbol: 'EVMOS',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'evmos',
+            base_denom: 'aevmos',
+            channel_id: 'channel-18',
+          },
+          chain: {
+            channel_id: 'channel-23',
+            path: 'transfer/channel-23/aevmos',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'evmos',
+            base_denom: 'aevmos',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2',
+          exponent: 0,
+        },
+        {
+          denom: 'avax',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/004EBF085BBED1029326D56BE8A2E67C08CECE670A94AC1947DF413EF5130EB2',
+      name: 'Axelar Wrapped AVAX',
+      display: 'avax',
+      symbol: 'wAVAX',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'axelar',
+            base_denom: 'wawax-wei',
+            channel_id: 'channel-14',
+          },
+          chain: {
+            channel_id: 'channel-9',
+            path: 'transfer/channel-9/wavax-wei',
+          },
+        },
+      ],
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/avalanche/images/wavax.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/avalanche/images/wavax.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9',
+          exponent: 0,
+        },
+        {
+          denom: 'usdc',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9',
+      name: 'Noble USD Coin',
+      display: 'usdc',
+      symbol: 'USDC',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'noble',
+            base_denom: 'uusdc',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-62',
+            path: 'transfer/channel-62/uusdc',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'noble',
+            base_denom: 'uusdc',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23',
+          exponent: 0,
+        },
+        {
+          denom: 'osmo',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/47BD209179859CDE4A2806763D7189B6E6FE13A17880FE2B42DE1E6C1E329E23',
+      name: 'Osmosis',
+      display: 'osmo',
+      symbol: 'OSMO',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'osmosis',
+            base_denom: 'uosmo',
+            channel_id: 'channel-259',
+          },
+          chain: {
+            channel_id: 'channel-3',
+            path: 'transfer/channel-3/uosmo',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'osmosis',
+            base_denom: 'uosmo',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F',
+          exponent: 0,
+        },
+        {
+          denom: 'usdc',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F',
+      name: 'Axelar USD Coin',
+      display: 'usdc',
+      symbol: 'axlUSDC',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'axelar',
+            base_denom: 'uusdc',
+            channel_id: 'channel-14',
+          },
+          chain: {
+            channel_id: 'channel-9',
+            path: 'transfer/channel-9/uusdc',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'axelar',
+            base_denom: 'uusdc',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/3607EB5B5E64DD1C0E12E07F077FF470D5BC4706AFCBC98FE1BA960E5AE4CE07',
+          exponent: 0,
+        },
+        {
+          denom: 'cmdx',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/3607EB5B5E64DD1C0E12E07F077FF470D5BC4706AFCBC98FE1BA960E5AE4CE07',
+      name: 'Comdex',
+      display: 'cmdx',
+      symbol: 'CMDX',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'comdex',
+            base_denom: 'ucmdx',
+            channel_id: 'channel-31',
+          },
+          chain: {
+            channel_id: 'channel-18',
+            path: 'transfer/channel-18/ucmdx',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'comdex',
+            base_denom: 'ucmdx',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/comdex/images/cmdx.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/comdex/images/cmdx.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/comdex/images/cmdx.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/comdex/images/cmdx.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/EFF323CC632EC4F747C61BCE238A758EFDB7699C3226565F7C20DA06509D59A5',
+          exponent: 0,
+        },
+        {
+          denom: 'juno',
+          exponent: 6,
+        },
+      ],
+      base: 'ibc/EFF323CC632EC4F747C61BCE238A758EFDB7699C3226565F7C20DA06509D59A5',
+      name: 'Juno',
+      display: 'juno',
+      symbol: 'JUNO',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'juno',
+            base_denom: 'ujuno',
+            channel_id: 'channel-87',
+          },
+          chain: {
+            channel_id: 'channel-1',
+            path: 'transfer/channel-1/ujuno',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'juno',
+            base_denom: 'ujuno',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/juno.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/juno.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/juno.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/juno.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7',
+          exponent: 0,
+        },
+        {
+          denom: 'weth',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/1B38805B1C75352B28169284F96DF56BDEBD9E8FAC005BDCC8CF0378C82AA8E7',
+      name: 'Axelar Wrapped Ether',
+      display: 'weth',
+      symbol: 'wETH',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'axelar',
+            base_denom: 'weth-wei',
+            channel_id: 'channel-14',
+          },
+          chain: {
+            channel_id: 'channel-9',
+            path: 'transfer/channel-9/weth-wei',
+          },
+        },
+      ],
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/weth.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/weth.png',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
+          exponent: 0,
+        },
+        {
+          denom: 'atom',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/27394FB092D2ECCD56123C74F36E4C1F926001CEADA9CA97EA622B25F41E5EB2',
+      name: 'Cosmos Hub Atom',
+      display: 'atom',
+      symbol: 'ATOM',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+            channel_id: 'channel-343',
+          },
+          chain: {
+            channel_id: 'channel-0',
+            path: 'transfer/channel-0/uatom',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986',
+          exponent: 0,
+        },
+        {
+          denom: 'luna',
+          exponent: 6,
+        },
+      ],
+      base: 'ibc/DA59C009A0B3B95E0549E6BF7B075C8239285989FF457A8EDDBB56F10B2A6986',
+      name: 'Luna',
+      display: 'luna',
+      symbol: 'LUNA',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'terra2',
+            base_denom: 'uluna',
+            channel_id: 'channel-10',
+          },
+          chain: {
+            channel_id: 'channel-5',
+            path: 'transfer/channel-5/uluna',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'luna',
+            base_denom: 'uluna',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/4F393C3FCA4190C0A6756CE7F6D897D5D1BE57D6CCB80D0BC87393566A7B6602',
+          exponent: 0,
+        },
+        {
+          denom: 'stars',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/4F393C3FCA4190C0A6756CE7F6D897D5D1BE57D6CCB80D0BC87393566A7B6602',
+      name: 'Stargaze',
+      display: 'stars',
+      symbol: 'STARS',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'stargaze',
+            base_denom: 'ustars',
+            channel_id: 'channel-49',
+          },
+          chain: {
+            channel_id: 'channel-7',
+            path: 'transfer/channel-7/ustars',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'stargaze',
+            base_denom: 'ustars',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/A358D7F19237777AF6D8AD0E0F53268F8B18AE8A53ED318095C14D6D7F3B2DB5',
+          exponent: 0,
+        },
+        {
+          denom: 'scrt',
+          exponent: 6,
+        },
+      ],
+      base: 'ibc/A358D7F19237777AF6D8AD0E0F53268F8B18AE8A53ED318095C14D6D7F3B2DB5',
+      name: 'Secret Network',
+      display: 'scrt',
+      symbol: 'SCRT',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'secretnetwork',
+            base_denom: 'uscrt',
+            channel_id: 'channel-22',
+          },
+          chain: {
+            channel_id: 'channel-10',
+            path: 'transfer/channel-10/uscrt',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'scrt',
+            base_denom: 'uscrt',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.svg',
+      },
     },
   ],
 };

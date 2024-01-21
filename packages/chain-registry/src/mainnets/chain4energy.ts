@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const chain4Energy: Chain = {
   $schema: '../chain.schema.json',
@@ -238,6 +238,11 @@ export const chain4Energy: Chain = {
         address: 'c4e.seed.kalia.network:30656',
         provider: 'Kalia Network',
       },
+      {
+        id: '8739107d0484a4c58c4f980d61f488655597f80c',
+        address: 'seed.c4e.validatus.com:2000',
+        provider: 'Validatus',
+      },
     ],
     persistent_peers: [
       {
@@ -419,6 +424,10 @@ export const chain4Energy: Chain = {
         address: 'http://209.182.239.169:46657',
         provider: 'SECARD',
       },
+      {
+        address: 'https://rpc.c4e.validatus.com:443',
+        provider: 'Validatus',
+      },
     ],
     rest: [
       {
@@ -521,6 +530,10 @@ export const chain4Energy: Chain = {
         address: 'http://209.182.239.169:1417',
         provider: 'SECARD',
       },
+      {
+        address: 'https://api.c4e.validatus.com:443',
+        provider: 'Validatus',
+      },
     ],
     grpc: [
       {
@@ -606,6 +619,10 @@ export const chain4Energy: Chain = {
       {
         address: 'http://209.182.239.169:9190',
         provider: 'SECARD',
+      },
+      {
+        address: 'https://grpc.c4e.validatus.com:443',
+        provider: 'Validatus',
       },
     ],
   },

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const persistence: Chain = {
   $schema: '../chain.schema.json',
@@ -253,6 +253,10 @@ export const persistence: Chain = {
         address: 'https://persistence-rpc.highstakes.ch:26657/',
         provider: 'High Stakes 🇨🇭',
       },
+      {
+        address: 'https://persistence-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
     ],
     rest: [
       {
@@ -315,6 +319,10 @@ export const persistence: Chain = {
         address: 'https://persistence-api.highstakes.ch:1317/',
         provider: 'High Stakes 🇨🇭',
       },
+      {
+        address: 'https://persistence-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
     ],
     grpc: [
       {
@@ -356,6 +364,10 @@ export const persistence: Chain = {
       {
         address: 'persistence-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'persistence-grpc.stakeandrelax.net:15490',
+        provider: 'Stake&Relax 🦥',
       },
     ],
   },
@@ -742,6 +754,7 @@ export const persistenceAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.svg',
       },
+      coingecko_id: 'pstake-staked-osmo',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.png',

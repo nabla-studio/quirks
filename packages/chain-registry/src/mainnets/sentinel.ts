@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const sentinel: Chain = {
   $schema: '../chain.schema.json',
@@ -85,14 +85,19 @@ export const sentinel: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
+        id: 'b46d8fea2e951ba21594c047c8746ab6dc315cea',
+        address: 'p2p-pve01.roomit.xyz:16604',
+        provider: 'RoomIT',
+      },
+      {
         id: 'e8b2ebbd5e90bd89cb89160dd040fda7d04984a4',
         address: 'seeds.badgerbite.io:26656',
         provider: 'BadgerBite',
       },
       {
-        id: '1a409560619766355f818ef2e42c935453782635',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:17256',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
     ],
     persistent_peers: [
@@ -251,7 +256,7 @@ export const sentinel: Chain = {
       },
       {
         address: 'https://rpc-sentinel.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://rpc.sentinel.chaintools.tech/',
@@ -260,6 +265,10 @@ export const sentinel: Chain = {
       {
         address: 'https://rpc.sentinel.quokkastake.io',
         provider: '🐹 Quokka Stake',
+      },
+      {
+        address: 'https://rpc.dvpn.roomit.xyz',
+        provider: 'RoomIT',
       },
       {
         address: 'https://sentinel-rpc.badgerbite.io/',
@@ -273,6 +282,10 @@ export const sentinel: Chain = {
         address: 'https://sentinel-rpc.validatornode.com/',
         provider: 'ValidatorNode',
       },
+      {
+        address: 'https://rpc.trinityvalidator.com',
+        provider: 'Trinity Validator',
+      },
     ],
     rest: [
       {
@@ -281,11 +294,15 @@ export const sentinel: Chain = {
       },
       {
         address: 'https://lcd-sentinel.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://api.sentinel.quokkastake.io',
         provider: '🐹 Quokka Stake',
+      },
+      {
+        address: 'https://api.dvpn.roomit.xyz',
+        provider: 'RoomIT',
       },
       {
         address: 'https://sentinel-rest.publicnode.com',
@@ -294,6 +311,10 @@ export const sentinel: Chain = {
       {
         address: 'https://sentinel-api.validatornode.com',
         provider: 'ValidatorNode',
+      },
+      {
+        address: 'https://api.trinityvalidator.com',
+        provider: 'Trinity Validator',
       },
     ],
     grpc: [
@@ -308,6 +329,10 @@ export const sentinel: Chain = {
       {
         address: 'sentinel-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
+        address: 'grpc.dvpn.roomit.xyz:8443',
+        provider: 'RoomIT',
       },
       {
         address: 'sentinel-rpc.publicnode.com:443',
@@ -328,6 +353,14 @@ export const sentinel: Chain = {
       url: 'https://atomscan.com/sentinel',
       tx_page: 'https://atomscan.com/sentinel/transactions/${txHash}',
       account_page: 'https://atomscan.com/sentinel/accounts/${accountAddress}',
+    },
+    {
+      kind: 'RoomIT',
+      url: 'https://explorer.tendermint.roomit.xyz/sentinel-mainnet',
+      tx_page:
+        'https://explorer.tendermint.roomit.xyz/sentinel-mainnet/transactions/${txHash}',
+      account_page:
+        'https://explorer.tendermint.roomit.xyz/sentinel-mainnet/accounts/${accountAddress}',
     },
     {
       kind: 'ValidatorNode',

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const jackal: Chain = {
   $schema: '../chain.schema.json',
@@ -33,13 +33,13 @@ export const jackal: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/JackalLabs/canine-chain',
-    recommended_version: 'v3.0.2',
-    compatible_versions: ['v3.0.0', 'v3.0.2'],
+    recommended_version: 'v3.1.1',
+    compatible_versions: ['v3.1.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.2/canined-Linux',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.1/canined-Linux',
       'darwin/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.2/canined-macOS',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.1/canined-macOS',
     },
     genesis: {
       genesis_url:
@@ -94,17 +94,33 @@ export const jackal: Chain = {
       },
       {
         name: 'v3',
-        tag: 'V3.0.2',
+        tag: 'V3.0.5',
         proposal: 9,
         height: 4074200,
-        recommended_version: 'v3.0.2',
-        compatible_versions: ['v3.0.0', 'v3.0.2'],
+        recommended_version: 'v3.0.5',
+        compatible_versions: ['v3.0.5'],
         cosmwasm_enabled: true,
         binaries: {
           'linux/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.2/canined-Linux',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.5/canined-Linux',
           'darwin/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.2/canined-macOS',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.0.5/canined-macOS',
+        },
+        next_version_name: 'v3.1.1',
+      },
+      {
+        name: 'v3.1.1',
+        tag: 'V3.1.1',
+        proposal: 11,
+        height: 6095000,
+        recommended_version: 'v3.1.1',
+        compatible_versions: ['v3.1.1'],
+        cosmwasm_enabled: true,
+        binaries: {
+          'linux/amd64':
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.1/canined-Linux',
+          'darwin/amd64':
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.1/canined-macOS',
         },
         next_version_name: '',
       },
@@ -137,14 +153,9 @@ export const jackal: Chain = {
         provider: 'kjnodes',
       },
       {
-        id: 'f6c5d2bf222699a35968e5f262baacd6c34e261c',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:17556',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        id: '27b6d74c8408e033e2e5a9e966a0d15782e33596',
-        address: 'seeds.nethernode.xyz:17556',
-        provider: 'carbonZERO🌲',
+        provider: 'WhisperNode 🤐',
       },
     ],
     persistent_peers: [
@@ -215,7 +226,7 @@ export const jackal: Chain = {
       },
       {
         address: 'https://rpc-jackal.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://jackal-mainnet-rpc.autostake.com:443',
@@ -277,7 +288,7 @@ export const jackal: Chain = {
       },
       {
         address: 'https://lcd-jackal.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://jackal.api.kjnodes.com',
@@ -365,6 +376,11 @@ export const jackal: Chain = {
       kind: 'Nodeist Explorer',
       url: 'https://exp.nodeist.net/jackal',
       tx_page: 'https://exp.nodeist.net/jackal/tx/${txHash}',
+    },
+    {
+      kind: 'Big Dipper',
+      url: 'https://bigdipper.live/jackal',
+      tx_page: 'https://bigdipper.live/jackal/transactions/${txHash}',
     },
   ],
   images: [

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const bitcanna: Chain = {
   $schema: '../chain.schema.json',
@@ -313,7 +313,7 @@ export const bitcanna: Chain = {
       },
       {
         address: 'http://rpc.bitcanna.citizencosmos.space/',
-        provider: 'Citizen Cosmos',
+        provider: 'Citizen Web3',
       },
       {
         address: 'https://bitcanna-mainnet.rpc.l0vd.com/',

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const rsprovidertestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -16,7 +16,7 @@ export const rsprovidertestnet: Chain = {
     fee_tokens: [
       {
         denom: 'uatom',
-        fixed_min_gas_price: 0.0025,
+        fixed_min_gas_price: 0.005,
       },
     ],
   },
@@ -29,21 +29,21 @@ export const rsprovidertestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/cosmos/gaia',
-    recommended_version: 'v13.0.0',
-    compatible_versions: ['v13.0.0-rc0', 'v13.0.0'],
+    recommended_version: 'v14.1.0',
+    compatible_versions: ['v14.1.0-rc0', 'v14.1.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-linux-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-amd64',
       'linux/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-linux-arm64',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-arm64',
       'darwin/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-darwin-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-amd64',
       'darwin/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-darwin-arm64',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-arm64',
       'windows/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-windows-amd64.exe',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-amd64.exe',
       'windows/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-windows-arm64.exe',
+        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-arm64.exe',
     },
     genesis: {
       genesis_url:
@@ -86,6 +86,25 @@ export const rsprovidertestnet: Chain = {
             'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-windows-amd64.exe',
           'windows/arm64':
             'https://github.com/cosmos/gaia/releases/download/v13.0.0/gaiad-v13.0.0-windows-arm64.exe',
+        },
+      },
+      {
+        name: 'v14',
+        recommended_version: 'v14.1.0',
+        compatible_versions: ['v14.1.0-rc0', 'v14.1.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-amd64',
+          'linux/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-arm64',
+          'darwin/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-amd64',
+          'darwin/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-arm64',
+          'windows/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-amd64.exe',
+          'windows/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-arm64.exe',
         },
       },
     ],

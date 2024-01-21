@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const secretnetwork: Chain = {
   $schema: '../chain.schema.json',
@@ -18,8 +18,8 @@ export const secretnetwork: Chain = {
     fee_tokens: [
       {
         denom: 'uscrt',
-        fixed_min_gas_price: 0.1,
-        low_gas_price: 0.1,
+        fixed_min_gas_price: 0.05,
+        low_gas_price: 0.05,
         average_gas_price: 0.1,
         high_gas_price: 0.25,
       },
@@ -183,9 +183,9 @@ export const secretnetwork: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        id: 'd6a6edd7d3d04b59955e135e2d27b7dcc285ead7',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:17156',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '5b0d6ef879fe1326045fa18d5bf767c5968704e6',
@@ -205,13 +205,13 @@ export const secretnetwork: Chain = {
     'grpc-web': [
       {
         address: 'https://wgrpc.secret.express',
-        provider: 'Secret Community API team - Secret Express',
+        provider: 'Secret Community API - Secret Express',
       },
     ],
     rpc: [
       {
         address: 'https://rpc.secret.express',
-        provider: 'Secret Community API team - Secret Express',
+        provider: 'Secret Community API - Secret Express',
       },
       {
         address: 'https://scrt.public-rpc.com',
@@ -233,7 +233,7 @@ export const secretnetwork: Chain = {
     rest: [
       {
         address: 'https://lcd.secret.express',
-        provider: 'Secret Community API team - Secret Express',
+        provider: 'Secret Community API - Secret Express',
       },
       {
         address: 'https://secretnetwork-api.lavenderfive.com:443',
@@ -260,6 +260,10 @@ export const secretnetwork: Chain = {
       {
         address: 'secretnetwork-mainnet-grpc.autostake.com:9090',
         provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
+        address: 'https://grpc.secret.express',
+        provider: 'Secret Community API - Secret Express',
       },
     ],
   },
@@ -445,6 +449,7 @@ export const secretnetworkAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/silk.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/silk.svg',
       },
+      coingecko_id: 'silk-bcec1136-561c-4706-a42c-8b67d0d7f7d2',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/silk.png',
