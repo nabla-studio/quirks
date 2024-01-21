@@ -25,7 +25,7 @@ export async function processChains(chains: Path[], outputPath: string) {
     if (!chainDataMap.has(chainName)) {
       await writeFile(
         filename,
-        `import type { Chain, AssetLists } from '../types'\n\n`
+        `import type { Chain, AssetLists, ChainVersions } from '../types'\n\n`,
       );
     }
 
@@ -35,9 +35,13 @@ export async function processChains(chains: Path[], outputPath: string) {
       suffix = 'AssetList: AssetLists';
     }
 
+    if (chain.isNamed('versions.json')) {
+      suffix = 'Versions: ChainVersions';
+    }
+
     await appendFile(
       filename,
-      `export const ${camelCase(chainName)}${suffix} = ${data}\n\n`
+      `export const ${camelCase(chainName)}${suffix} = ${data}\n\n`,
     );
 
     chainDataMap.add(chainName);
