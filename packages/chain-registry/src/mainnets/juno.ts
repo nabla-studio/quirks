@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const juno: Chain = {
   $schema: '../chain.schema.json',
@@ -41,11 +41,11 @@ export const juno: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/CosmosContracts/juno',
-    recommended_version: 'v18.0.0',
-    compatible_versions: ['v18.0.0'],
+    recommended_version: 'v18.1.0',
+    compatible_versions: ['v18.1.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/CosmosContracts/juno/releases/download/v18.0.0/junod',
+        'https://github.com/CosmosContracts/juno/releases/download/v18.1.0/junod',
     },
     cosmos_sdk_version: '0.47.5',
     consensus: {
@@ -163,11 +163,11 @@ export const juno: Chain = {
         name: 'v18',
         proposal: 325,
         height: 12265007,
-        recommended_version: 'v18.0.0',
-        compatible_versions: ['v18.0.0'],
+        recommended_version: 'v18.1.0',
+        compatible_versions: ['v18.1.0'],
         binaries: {
           'linux/amd64':
-            'https://github.com/CosmosContracts/juno/releases/download/v18.0.0/junod',
+            'https://github.com/CosmosContracts/juno/releases/download/v18.1.0/junod',
         },
         cosmos_sdk_version: '0.47.5',
         consensus: {
@@ -224,9 +224,9 @@ export const juno: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: '47d942718533d36823e16b9502c035ca9f318ef4',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:12656',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '509f6dbae3133a9df177edea051b31e1210b117e',
@@ -275,7 +275,7 @@ export const juno: Chain = {
     rpc: [
       {
         address: 'https://rpc-juno.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://rpc-juno.goldenratiostaking.net',
@@ -369,6 +369,14 @@ export const juno: Chain = {
         address: 'https://rpc-juno.mainnet.validatrium.club:443',
         provider: 'Validatrium',
       },
+      {
+        address: 'https://juno-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://rpc.juno.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -455,6 +463,18 @@ export const juno: Chain = {
         address: 'https://juno-api.stake-town.com',
         provider: 'StakeTown',
       },
+      {
+        address: 'https://lcd-juno.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
+      },
+      {
+        address: 'https://juno-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://lcd.juno.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     grpc: [
       {
@@ -516,6 +536,14 @@ export const juno: Chain = {
       {
         address: '138.201.21.121:24990',
         provider: 'Validatrium',
+      },
+      {
+        address: 'juno-grpc.stakeandrelax.net:12690',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://grpc.juno.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },
@@ -1448,6 +1476,7 @@ export const junoAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/wynd.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/wynd.svg',
       },
+      coingecko_id: 'wynd',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/wynd.png',
@@ -2622,6 +2651,32 @@ export const junoAssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/poil.png',
+        },
+      ],
+    },
+    {
+      description:
+        'Hava Coin is the lifeblood of the Cosmos & Juno networks, rewarding builders and welcoming supporters. https://havacoin.xyz/',
+      denom_units: [
+        {
+          denom: 'factory/juno195asgku87kxgu48s447z0ryhsyn5rl3yzvfw0d/uhava',
+          exponent: 0,
+        },
+        {
+          denom: 'hava',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/juno195asgku87kxgu48s447z0ryhsyn5rl3yzvfw0d/uhava',
+      name: 'Hava Coin',
+      display: 'hava',
+      symbol: 'HAVA',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hava.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hava.png',
         },
       ],
     },

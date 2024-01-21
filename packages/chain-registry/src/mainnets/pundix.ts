@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const pundix: Chain = {
   $schema: '../chain.schema.json',
@@ -236,7 +236,7 @@ export const pundixAssetList: AssetLists = {
       description: 'PURSE Token',
       denom_units: [
         {
-          denom: 'bsc0x29a63f4b209c29b4dc47f06ffa896f32667dad2c',
+          denom: 'bsc0x29a63F4B209C29B4DC47f06FFA896F32667DAD2C',
           exponent: 0,
         },
         {
@@ -244,7 +244,7 @@ export const pundixAssetList: AssetLists = {
           exponent: 18,
         },
       ],
-      base: 'bsc0x29a63f4b209c29b4dc47f06ffa896f32667dad2c',
+      base: 'bsc0x29a63F4B209C29B4DC47f06FFA896F32667DAD2C',
       name: 'PURSE Token',
       display: 'PURSE',
       symbol: 'PURSE',

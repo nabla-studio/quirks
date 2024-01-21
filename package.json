@@ -120,7 +120,7 @@
     "utf-8-validate": "^6.0.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4",
-    "zustand": "^4.4.4",
+    "zustand": "^4.5.0",
     "zustand-vue": "1.0.0-beta.20"
   }
 }

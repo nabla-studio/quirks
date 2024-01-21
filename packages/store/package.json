@@ -19,7 +19,7 @@
     "@quirks/core": "*"
   },
   "peerDependencies": {
-    "zustand": "^4.4.4",
+    "zustand": "^4.5.0",
     "@cosmjs/amino": "^0.31.3",
     "@cosmjs/proto-signing": "^0.31.3",
     "@cosmjs/stargate": "^0.31.3",

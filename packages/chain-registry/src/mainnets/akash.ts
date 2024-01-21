@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const akash: Chain = {
   $schema: '../chain.schema.json',
@@ -166,6 +166,11 @@ export const akash: Chain = {
         id: '61686e588f0af938484579adbc2093adff06c7aa',
         address: 'europlots.com:26656',
       },
+      {
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
+        address: 'seeds.whispernode.com:12856',
+        provider: 'WhisperNode 🤐',
+      },
     ],
     persistent_peers: [
       {
@@ -254,6 +259,10 @@ export const akash: Chain = {
         address: 'https://akash-rpc.validatornode.com',
         provider: 'ValidatorNode',
       },
+      {
+        address: 'https://rpc-akash.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
+      },
     ],
     rest: [
       {
@@ -311,6 +320,10 @@ export const akash: Chain = {
       {
         address: 'https://akash-api.validatornode.com',
         provider: 'ValidatorNode',
+      },
+      {
+        address: 'https://lcd-akash.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
       },
     ],
     grpc: [

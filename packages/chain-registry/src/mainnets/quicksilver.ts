@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const quicksilver: Chain = {
   $schema: '../chain.schema.json',
@@ -32,20 +32,21 @@ export const quicksilver: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/ingenuity-build/quicksilver',
-    recommended_version: 'v1.2.17',
-    compatible_versions: ['v1.2.17'],
+    recommended_version: 'v1.4.6',
+    compatible_versions: ['v1.4.6'],
     binaries: {
       'linux/amd64':
-        'https://github.com/ingenuity-build/quicksilver/releases/download/v1.2.17/quicksilverd-v1.2.17-amd64',
+        'https://github.com/ingenuity-build/quicksilver/releases/download/v1.4.6/quicksilverd-v1.4.6-amd64',
     },
-    cosmos_sdk_version: '0.46.15',
+    cosmos_sdk_version: 'v0.46.16',
     consensus: {
       type: 'cometbft',
       version: 'v0.34.29',
     },
-    cosmwasm_version: 'v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
+    cosmwasm_version:
+      'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
     cosmwasm_enabled: true,
-    ibc_go_version: '5.3.2',
+    ibc_go_version: 'v5.3.2',
     genesis: {
       genesis_url:
         'https://github.com/ingenuity-build/mainnet/raw/main/genesis.json',
@@ -142,6 +143,48 @@ export const quicksilver: Chain = {
         cosmwasm_version: 'v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
         cosmwasm_enabled: true,
         ibc_go_version: '5.3.2',
+        next_version_name: 'v1.4.5',
+      },
+      {
+        name: 'v1.4.5',
+        proposal: 27,
+        height: 5432500,
+        recommended_version: 'v1.4.5',
+        compatible_versions: ['v1.4.5'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/ingenuity-build/quicksilver/releases/download/v1.4.5/quicksilverd-v1.4.5-amd64',
+        },
+        cosmos_sdk_version: 'v0.46.16',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        cosmwasm_version:
+          'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v5.3.2',
+        next_version_name: 'v1.4.6',
+      },
+      {
+        name: 'v1.4.6',
+        proposal: 28,
+        height: 5493000,
+        recommended_version: 'v1.4.6',
+        compatible_versions: ['v1.4.6'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/ingenuity-build/quicksilver/releases/download/v1.4.6/quicksilverd-v1.4.6-amd64',
+        },
+        cosmos_sdk_version: 'v0.46.16',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        cosmwasm_version:
+          'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v5.3.2',
         next_version_name: '',
       },
     ],

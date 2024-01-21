@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const mars: Chain = {
   $schema: '../chain.schema.json',
@@ -97,16 +97,6 @@ export const mars: Chain = {
         address: 'mars.rpc.kjnodes.com:14559',
         provider: 'kjnodes',
       },
-      {
-        id: 'c4168cce14ec32e067cf153a08a1b85be881e25a',
-        address: 'seeds.whispernode.com:18556',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        id: '27b6d74c8408e033e2e5a9e966a0d15782e33596',
-        address: 'seeds.nethernode.xyz:18556',
-        provider: 'carbonZERO🌲',
-      },
     ],
     persistent_peers: [
       {
@@ -150,6 +140,10 @@ export const mars: Chain = {
         address: 'https://mars-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://mars-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
     ],
     rest: [
       {
@@ -184,6 +178,10 @@ export const mars: Chain = {
         address: 'https://mars-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://mars-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
     ],
     grpc: [
       {
@@ -203,7 +201,7 @@ export const mars: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'mars-grpc.genznodes.dev:9090',
+        address: 'mars-grpc.genznodes.dev:26090',
         provider: 'genznodes',
       },
       {
@@ -217,6 +215,10 @@ export const mars: Chain = {
       {
         address: 'mars-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'mars-grpc.stakeandrelax.net:18590',
+        provider: 'Stake&Relax 🦥',
       },
     ],
   },

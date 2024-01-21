@@ -27,3 +27,12 @@ compileFromFile(
 ).then((ts) =>
   writeFileSync('packages/chain-registry/src/types/memo-keys.ts', ts),
 );
+
+compileFromFile(
+  'packages/chain-registry/chain-registry/versions.schema.json',
+).then((ts) =>
+  writeFileSync(
+    'packages/chain-registry/src/types/versions.ts',
+    ts.replace('interface CosmosChain', 'interface ChainVersions'),
+  ),
+);

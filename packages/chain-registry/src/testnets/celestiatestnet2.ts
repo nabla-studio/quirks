@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const celestiatestnet2: Chain = {
   $schema: '../../chain.schema.json',
@@ -17,9 +17,9 @@ export const celestiatestnet2: Chain = {
       {
         denom: 'utia',
         fixed_min_gas_price: 0,
-        low_gas_price: 0.1,
-        average_gas_price: 0.2,
-        high_gas_price: 0.4,
+        low_gas_price: 0.01,
+        average_gas_price: 0.02,
+        high_gas_price: 0.1,
       },
     ],
   },

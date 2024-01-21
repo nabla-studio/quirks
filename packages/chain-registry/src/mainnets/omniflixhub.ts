@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const omniflixhub: Chain = {
   $schema: '../chain.schema.json',
@@ -176,6 +176,10 @@ export const omniflixhub: Chain = {
         address: 'https://rpc.omniflix.stakeup.tech:443',
         provider: 'StakeUp',
       },
+      {
+        address: 'https://rpc.omniflix.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -226,6 +230,10 @@ export const omniflixhub: Chain = {
         address: 'https://api.omniflix.stakeup.tech',
         provider: 'StakeUp',
       },
+      {
+        address: 'https://lcd.omniflix.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     grpc: [
       {
@@ -267,6 +275,10 @@ export const omniflixhub: Chain = {
       {
         address: 'grpc.omniflix.stakeup.tech:443',
         provider: 'StakeUp',
+      },
+      {
+        address: 'https://grpc.omniflix.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },

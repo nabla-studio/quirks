@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const chihuahua: Chain = {
   $schema: '../chain.schema.json',
@@ -33,8 +33,8 @@ export const chihuahua: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/ChihuahuaChain/chihuahua/',
-    recommended_version: 'v5.0.4',
-    compatible_versions: ['v5.0.3', 'v5.0.4'],
+    recommended_version: 'v6.0.1',
+    compatible_versions: ['v6.0.1'],
     cosmos_sdk_version: 'v0.47.5',
     consensus: {
       type: 'cometbft',
@@ -98,6 +98,23 @@ export const chihuahua: Chain = {
         cosmwasm_version: 'v0.41.0',
         cosmwasm_enabled: true,
         cosmwasm_path: '$HOME/.chihuahuad/data/wasm',
+        next_version_name: 'v6',
+      },
+      {
+        name: 'v6',
+        recommended_version: 'v6.0.1',
+        compatible_versions: ['v6.0.1'],
+        proposal: 66,
+        height: 10666000,
+        cosmos_sdk_version: 'v0.47.5',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        ibc_go_version: '7.3.0',
+        cosmwasm_version: 'v0.41.0',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.chihuahuad/data/wasm',
         next_version_name: '',
       },
     ],
@@ -137,16 +154,6 @@ export const chihuahua: Chain = {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
-      },
-      {
-        id: '3c5b1a13f810507b9ef1240372b3cbc9bd90da26',
-        address: 'seeds.whispernode.com:12956',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        id: '27b6d74c8408e033e2e5a9e966a0d15782e33596',
-        address: 'seeds.nethernode.xyz:12956',
-        provider: 'carbonZERO🌲',
       },
     ],
     persistent_peers: [
@@ -358,6 +365,58 @@ export const chihuahuaAssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/puppyhuahua_logo.png',
       },
+    },
+    {
+      description: 'has a hat',
+      denom_units: [
+        {
+          denom:
+            'factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat',
+          exponent: 0,
+        },
+        {
+          denom: 'achihuahuawifhat',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/chihuahua1x4q2vkrz4dfgd9hcw0p5m2f2nuv2uqmt9xr8k2/achihuahuawifhat',
+      name: 'Chihuahuawifhat',
+      display: 'achihuahuawifhat',
+      symbol: 'BADDOG',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/baddog.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/baddog.png',
+        },
+      ],
+    },
+    {
+      description: 'Woof',
+      denom_units: [
+        {
+          denom:
+            'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/uwoof',
+          exponent: 0,
+        },
+        {
+          denom: 'WOOF',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/uwoof',
+      name: 'WOOF',
+      display: 'WOOF',
+      symbol: 'WOOF',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/woof.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/woof.png',
+        },
+      ],
     },
   ],
 };

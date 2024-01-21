@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const gitopia: Chain = {
   $schema: '../chain.schema.json',
@@ -153,9 +153,9 @@ export const gitopia: Chain = {
         provider: 'autostake',
       },
       {
-        id: 'd2362ebcdd562500ac8c4cfa2214a89ad811033c',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:11356',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '187425bc3739daaef8cb1d7cf47d655117396dbe',
@@ -320,7 +320,7 @@ export const gitopia: Chain = {
       },
       {
         address: 'https://rpc-gitopia.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://gitopia.rpc.liveraven.net',
@@ -345,10 +345,6 @@ export const gitopia: Chain = {
       {
         address: 'https://gitopia.rpc.kjnodes.com',
         provider: 'kjnodes',
-      },
-      {
-        address: 'https://rpc-gitopia.mms.team',
-        provider: 'MMS',
       },
       {
         address: 'https://rpc.gitopia.sgtstake.com',
@@ -458,7 +454,7 @@ export const gitopia: Chain = {
       },
       {
         address: 'https://lcd-gitopia.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://gitopia.api.liveraven.net',
@@ -483,10 +479,6 @@ export const gitopia: Chain = {
       {
         address: 'https://gitopia.api.kjnodes.com',
         provider: 'kjnodes',
-      },
-      {
-        address: 'https://api-gitopia.mms.team',
-        provider: 'MMS',
       },
       {
         address: 'https://api.gitopia.sgtstake.com/',
@@ -583,10 +575,6 @@ export const gitopia: Chain = {
         provider: 'genznodes',
       },
       {
-        address: 'grpc-gitopia.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
         address: 'https://grpc.gitopia.hexnodes.co:16090',
         provider: 'Hexnodes',
       },
@@ -619,11 +607,7 @@ export const gitopia: Chain = {
         provider: 'kjnodes',
       },
       {
-        address: 'grpc-gitopia.mms.team:443',
-        provider: 'MMS',
-      },
-      {
-        address: 'grpc.gitopia.roomit.xyz:443',
+        address: 'grpc.gitopia.roomit.xyz:8443',
         provider: 'RoomIT',
       },
       {

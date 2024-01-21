@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const shentu: Chain = {
   $schema: '../chain.schema.json',
@@ -138,11 +138,6 @@ export const shentu: Chain = {
         provider: 'Polkachu',
       },
       {
-        id: '3edd4e16b791218b623f883d04f8aa5c3ff2cca6',
-        address: 'shentu-seed.panthea.eu:36656',
-        provider: 'Panthea EU',
-      },
-      {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
@@ -154,11 +149,6 @@ export const shentu: Chain = {
       },
     ],
     persistent_peers: [
-      {
-        id: '207c47bed435e4174844064ef3f51ca35b059de2',
-        address: 'shentu-peer.panthea.eu:26656',
-        provider: 'Panthea EU',
-      },
       {
         id: '8f91d396e3395210ef3a8394d48d1888af6d01cd',
         address: 'shentu.ramuchi.tech:56656',
@@ -201,10 +191,6 @@ export const shentu: Chain = {
         address: 'https://shentu-rpc.highstakes.ch:26657/',
         provider: 'High Stakes 🇨🇭',
       },
-      {
-        address: 'https://shentu-rpc.panthea.eu',
-        provider: 'Panthea EU',
-      },
     ],
     rest: [
       {
@@ -235,10 +221,6 @@ export const shentu: Chain = {
         address: 'https://shentu-api.highstakes.ch:1317/',
         provider: 'High Stakes 🇨🇭',
       },
-      {
-        address: 'https://shentu-api.panthea.eu',
-        provider: 'Panthea EU',
-      },
     ],
     grpc: [
       {
@@ -260,10 +242,6 @@ export const shentu: Chain = {
       {
         address: 'shentu-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
-      },
-      {
-        address: 'shentu-grpc.panthea.eu:16700',
-        provider: 'Panthea EU',
       },
     ],
   },

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const lumnetwork: Chain = {
   $schema: '../chain.schema.json',
@@ -182,11 +182,6 @@ export const lumnetwork: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        id: '0df233b1eb62504f96a856ce358014b2fb8ce91b',
-        address: 'lum-seed.panthea.eu:43656',
-        provider: 'Panthea EU',
-      },
-      {
         id: 'df949a46ae6529ae1e09b034b49716468d5cc7e9',
         address: 'seeds.stakerhouse.com:10756',
         provider: 'StakerHouse',
@@ -218,11 +213,6 @@ export const lumnetwork: Chain = {
         address: '34.209.132.0:26656',
         provider: 'cosmostation',
       },
-      {
-        id: '43216584c1e6b1056566a4825b15cdfbfc79d9e8',
-        address: 'lum-peer.panthea.eu:33656',
-        provider: 'Panthea EU',
-      },
     ],
   },
   apis: {
@@ -243,10 +233,6 @@ export const lumnetwork: Chain = {
         address: 'https://lum-rpc.stakerhouse.com',
         provider: 'StakerHouse',
       },
-      {
-        address: 'https://lum-rpc.panthea.eu',
-        provider: 'Panthea EU',
-      },
     ],
     rest: [
       {
@@ -258,20 +244,12 @@ export const lumnetwork: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://api-lum.starsquid.io',
-        provider: 'Starsquid',
-      },
-      {
         address: 'https://lum-api.ibs.team',
         provider: 'Inter Blockchain Services',
       },
       {
         address: 'https://lum-rest.stakerhouse.com',
         provider: 'StakerHouse',
-      },
-      {
-        address: 'https://lum-api.panthea.eu',
-        provider: 'Panthea EU',
       },
     ],
     grpc: [
@@ -286,10 +264,6 @@ export const lumnetwork: Chain = {
       {
         address: 'lum-grpc.stakerhouse.com:443',
         provider: 'StakerHouse',
-      },
-      {
-        address: 'lum-grpc.panthea.eu:16770',
-        provider: 'Panthea EU',
       },
     ],
   },

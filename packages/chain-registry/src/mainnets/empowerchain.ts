@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const empowerchain: Chain = {
   $schema: '../chain.schema.json',
@@ -70,9 +70,9 @@ export const empowerchain: Chain = {
         address: 'seed.empowerchain.io:26656',
       },
       {
-        id: 'd2362ebcdd562500ac8c4cfa2214a89ad811033c',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:17456',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '9aa8a73ea9364aa3cf7806d4dd25b6aed88d8152',
@@ -133,7 +133,7 @@ export const empowerchain: Chain = {
       },
       {
         address: 'https://rpc-empower.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://rpc-empowerchain.mzonder.com:443',
@@ -159,6 +159,10 @@ export const empowerchain: Chain = {
         address: 'https://empower.rpc.stakevillage.net:443',
         provider: 'Stake Village',
       },
+      {
+        address: 'https://rpc.empowerchain.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -183,7 +187,7 @@ export const empowerchain: Chain = {
       },
       {
         address: 'https://lcd-empower.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://api-empower.vinjan.xyz:443',
@@ -200,6 +204,10 @@ export const empowerchain: Chain = {
       {
         address: 'https://empower.api.stakevillage.net',
         provider: 'Stake Village',
+      },
+      {
+        address: 'https://lcd.empowerchain.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     grpc: [
@@ -234,6 +242,10 @@ export const empowerchain: Chain = {
       {
         address: 'empower.grpc.stakevillage.net:16890',
         provider: 'Stake Village',
+      },
+      {
+        address: 'https://grpc.empowerchain.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },

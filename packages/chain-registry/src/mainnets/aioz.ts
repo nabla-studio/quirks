@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const aioz: Chain = {
   $schema: '../chain.schema.json',
@@ -112,6 +112,8 @@ export const aioz: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/aioz/images/aioz.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/aioz/images/aioz.svg',
   },
+  description:
+    'AIOZ Network is a DePIN for Web3 AI, Storage and Streaming.\n\nAIOZ empowers a faster, secure and decentralized future.\n\nPowered by a global network of DePINs, AIOZ rewards you for sharing your computational resources for storing, transcoding, and streaming digital media content and powering decentralized AI computation.',
   peers: {
     seeds: [
       {

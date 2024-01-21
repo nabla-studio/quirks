@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const terra2: Chain = {
   $schema: '../chain.schema.json',
@@ -16,8 +16,8 @@ export const terra2: Chain = {
     fee_tokens: [
       {
         denom: 'uluna',
-        fixed_min_gas_price: 0.0125,
-        low_gas_price: 0.0125,
+        fixed_min_gas_price: 0.015,
+        low_gas_price: 0.015,
         average_gas_price: 0.015,
         high_gas_price: 0.04,
       },
@@ -32,13 +32,13 @@ export const terra2: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/terra-money/core/',
-    recommended_version: 'v2.6.1',
-    compatible_versions: ['v2.6.1'],
+    recommended_version: 'v2.6.4',
+    compatible_versions: ['v2.6.3', 'v2.6.4'],
     binaries: {
       'linux/arm64':
-        'https://github.com/terra-money/core/releases/download/v2.6.1/terra_2.6.1_Linux_arm64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.6.4/terra_2.6.4_Linux_arm64.tar.gz',
       'linux/amd64':
-        'https://github.com/terra-money/core/releases/download/v2.6.1/terra_2.6.1_Linux_x86_64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.6.4/terra_2.6.4_Linux_x86_64.tar.gz',
     },
     genesis: {
       name: 'v2.0',
@@ -173,9 +173,9 @@ export const terra2: Chain = {
       },
       {
         name: 'v2.6',
-        tag: 'v2.6.1',
-        recommended_version: 'v2.6.1',
-        compatible_versions: ['v2.6.1'],
+        tag: 'v2.6.4',
+        recommended_version: 'v2.6.4',
+        compatible_versions: ['v2.6.3', 'v2.6.4'],
         proposal: 4792,
         height: 7722000,
         cosmos_sdk_version: 'v0.47.5-terra.2',
@@ -188,9 +188,9 @@ export const terra2: Chain = {
         },
         binaries: {
           'linux/arm64':
-            'https://github.com/terra-money/core/releases/download/v2.6.1/terra_2.6.1_Linux_arm64.tar.gz',
+            'https://github.com/terra-money/core/releases/download/v2.6.4/terra_2.6.4_Linux_arm64.tar.gz',
           'linux/amd64':
-            'https://github.com/terra-money/core/releases/download/v2.6.1/terra_2.6.1_Linux_x86_64.tar.gz',
+            'https://github.com/terra-money/core/releases/download/v2.6.4/terra_2.6.4_Linux_x86_64.tar.gz',
         },
         next_version_name: '',
       },
@@ -227,11 +227,6 @@ export const terra2: Chain = {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
-      },
-      {
-        id: '1e094db9c147a0fd5e9793365d66736c80bfef46',
-        address: 'seeds.whispernode.com:11756',
-        provider: 'WhisperNode🤐',
       },
       {
         id: 'a8d12536bdcc210ac35a9f092f3295360b97830d',
@@ -300,12 +295,24 @@ export const terra2: Chain = {
         provider: 'Stakeflow',
       },
       {
+        address: 'https://rpc-terra.cosmos-spaces.cloud',
+        provider: 'Cosmos Spaces',
+      },
+      {
         address: 'https://terra-phoenix-rpc.highstakes.ch:26657/',
         provider: 'High Stakes 🇨🇭',
       },
       {
         address: 'https://rpc-terra.wildsage.io',
         provider: '🧙 WildSage Labs',
+      },
+      {
+        address: 'https://terra.interstellar-lounge.org',
+        provider: 'Interstellar Lounge 🍸',
+      },
+      {
+        address: 'https://terra2.tdrsys.com:2053',
+        provider: 'TdrSys',
       },
     ],
     rest: [
@@ -322,6 +329,10 @@ export const terra2: Chain = {
         provider: 'Terraform Labs',
       },
       {
+        address: 'https://api-terra.cosmos-spaces.cloud',
+        provider: 'Cosmos Spaces',
+      },
+      {
         address: 'https://terra-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
@@ -332,6 +343,14 @@ export const terra2: Chain = {
       {
         address: 'https://terra-phoenix-api.highstakes.ch:1317/',
         provider: 'High Stakes 🇨🇭',
+      },
+      {
+        address: 'https://terra-rest.interstellar-lounge.org',
+        provider: 'Interstellar Lounge 🍸',
+      },
+      {
+        address: 'https://terra2.tdrsys.com',
+        provider: 'TdrSys',
       },
     ],
     grpc: [
@@ -352,8 +371,16 @@ export const terra2: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
+        address: 'grpc-terra.cosmos-spaces.cloud:2690',
+        provider: 'Cosmos Spaces',
+      },
+      {
         address: 'grpc-terra-01.stakeflow.io:1102',
         provider: 'Stakeflow',
+      },
+      {
+        address: 'https://terra2.tdrsys.com:2083',
+        provider: 'TdrSys',
       },
     ],
   },
@@ -628,6 +655,7 @@ export const terra2AssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/roar.png',
       },
+      coingecko_id: 'lion-dao',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/roar.png',
@@ -1084,6 +1112,112 @@ export const terra2AssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/xseul.png',
         },
       ],
+    },
+    {
+      description: 'ITO DAO',
+      type_asset: 'cw20',
+      address:
+        'terra1c77xqv746m7ghxayrge79dxr4kcezev8g6cnrfled4f3n4ufj0vs5gz28s',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1c77xqv746m7ghxayrge79dxr4kcezev8g6cnrfled4f3n4ufj0vs5gz28s',
+          exponent: 0,
+        },
+        {
+          denom: 'ito',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra1c77xqv746m7ghxayrge79dxr4kcezev8g6cnrfled4f3n4ufj0vs5gz28s',
+      name: 'ito',
+      display: 'ito',
+      symbol: 'ITO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/I.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/I.png',
+        },
+      ],
+    },
+    {
+      description: 'Chris Armani Token',
+      type_asset: 'cw20',
+      address:
+        'terra1aa7stl3fytvave9xtcexgv0kne4k7ks068dcljkrfj37hy8q270sjadav8',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1aa7stl3fytvave9xtcexgv0kne4k7ks068dcljkrfj37hy8q270sjadav8',
+          exponent: 0,
+        },
+        {
+          denom: 'ARMANI',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra1aa7stl3fytvave9xtcexgv0kne4k7ks068dcljkrfj37hy8q270sjadav8',
+      name: 'ARMANI',
+      display: 'ARMANI',
+      symbol: 'ARMANI',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/armani.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/armani.png',
+        },
+      ],
+    },
+    {
+      description: 'useless meme coin',
+      type_asset: 'cw20',
+      address:
+        'terra1cl273523kmr2uwjhhznq54je69mted2u3ljffm8kp2ap4z3drdksftwqun',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1cl273523kmr2uwjhhznq54je69mted2u3ljffm8kp2ap4z3drdksftwqun',
+          exponent: 0,
+        },
+        {
+          denom: 'DROGO',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra1cl273523kmr2uwjhhznq54je69mted2u3ljffm8kp2ap4z3drdksftwqun',
+      name: 'DROGO',
+      display: 'DROGO',
+      symbol: 'DROGO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/drogo.png',
+      },
+    },
+    {
+      description: 'ado the flower of night',
+      type_asset: 'cw20',
+      address:
+        'terra1w8xk6rtu40st6lvl3yv7ynw5urm2n686u9cchvrzltmnktzwdesqcwy0nu',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1w8xk6rtu40st6lvl3yv7ynw5urm2n686u9cchvrzltmnktzwdesqcwy0nu',
+          exponent: 0,
+        },
+        {
+          denom: 'ADO',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra1w8xk6rtu40st6lvl3yv7ynw5urm2n686u9cchvrzltmnktzwdesqcwy0nu',
+      name: 'ADO',
+      display: 'ADO',
+      symbol: 'ADO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/ADO.png',
+      },
     },
   ],
 };

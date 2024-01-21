@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const terra: Chain = {
   $schema: '../chain.schema.json',
@@ -4298,7 +4298,7 @@ export const terraAssetList: AssetLists = {
       type_asset: 'cw20',
       address: 'terra15a9dr3a2a2lj5fclrw35xxg9yuxg0d908wpf2y',
       base: 'cw20:terra15a9dr3a2a2lj5fclrw35xxg9yuxg0d908wpf2y',
-      name: 'Magic Internet Money (Portal from Ethereum)',
+      name: 'Magic Internet Money',
       display: 'mimet',
       symbol: 'MIMet',
       logo_URIs: {
@@ -5923,6 +5923,34 @@ export const terraAssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/neb.png',
+        },
+      ],
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1g6fm3yu79gv0rc8067n2nnfpf0vks6n0wpzaf4u7w48tdrmj98zsy7uu00',
+          exponent: 0,
+        },
+        {
+          denom: 'trit',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'cw20',
+      address:
+        'terra1g6fm3yu79gv0rc8067n2nnfpf0vks6n0wpzaf4u7w48tdrmj98zsy7uu00',
+      base: 'cw20:terra1g6fm3yu79gv0rc8067n2nnfpf0vks6n0wpzaf4u7w48tdrmj98zsy7uu00',
+      name: 'Terra Tritium Token',
+      display: 'trit',
+      symbol: 'TRIT',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/trit.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/trit.png',
         },
       ],
     },

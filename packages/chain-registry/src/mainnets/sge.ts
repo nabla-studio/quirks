@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const sge: Chain = {
   $schema: '../chain.schema.json',
@@ -32,9 +32,9 @@ export const sge: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sge-network/sge',
-    recommended_version: 'v1.1.1',
-    compatible_versions: ['v1.1.1'],
-    cosmos_sdk_version: 'v0.46.14',
+    recommended_version: 'v1.3.1',
+    compatible_versions: ['v1.3.1'],
+    cosmos_sdk_version: 'v0.46.17-0.20231114190313-b9164dd660b6',
     ibc_go_version: 'v5.3.1',
     consensus: {
       type: 'cometbft',
@@ -69,6 +69,48 @@ export const sge: Chain = {
           type: 'cometbft',
           version: 'v0.34.29',
         },
+        next_version_name: 'v1.2.0',
+      },
+      {
+        name: 'v1.2.0',
+        recommended_version: 'v1.2.0',
+        compatible_versions: ['v1.2.0'],
+        proposal: 3,
+        height: 1564215,
+        cosmos_sdk_version: 'v0.46.14',
+        ibc_go_version: 'v5.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        next_version_name: 'v1.3.0',
+      },
+      {
+        name: 'v1.3.0',
+        recommended_version: 'v1.3.0',
+        compatible_versions: ['v1.3.0'],
+        proposal: 4,
+        height: 1887954,
+        cosmos_sdk_version: 'v0.46.14',
+        ibc_go_version: 'v5.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        next_version_name: 'v1.3.1',
+      },
+      {
+        name: 'v1.3.1',
+        recommended_version: 'v1.3.1',
+        compatible_versions: ['v1.3.1'],
+        proposal: 5,
+        height: 1911750,
+        cosmos_sdk_version: 'v0.46.17-0.20231114190313-b9164dd660b6',
+        ibc_go_version: 'v5.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
         next_version_name: '',
       },
     ],
@@ -98,6 +140,11 @@ export const sge: Chain = {
         id: 'df949a46ae6529ae1e09b034b49716468d5cc7e9',
         address: 'seeds.stakerhouse.com:11156',
         provider: 'stakerhouse.com',
+      },
+      {
+        id: 'b7f6da1a8aea371206b4d234398c4888c0564066',
+        address: 'p2p-pve01.roomit.xyz:16605',
+        provider: 'RoomIT',
       },
       {
         id: 'af9d9bd15ca597eb77dab73c56b0ae51bafcbb28',
@@ -152,6 +199,11 @@ export const sge: Chain = {
         provider: 'Safe Block',
       },
       {
+        id: 'b7f6da1a8aea371206b4d234398c4888c0564066',
+        address: 'p2p-pve01.roomit.xyz:16605',
+        provider: 'RoomIT',
+      },
+      {
         id: '26238cbb6bf285816bd06ca946b190e7248c389c',
         address: 'mainnet-sge.konsortech.xyz:22656',
         provider: 'KonsorTech',
@@ -173,7 +225,11 @@ export const sge: Chain = {
         provider: 'Nodestake',
       },
       {
-        address: 'http://sge.rpc.m.stavr.tech:1157',
+        address: 'https://rpc.sge.roomit.xyz/',
+        provider: 'RoomIT',
+      },
+      {
+        address: 'https://sge.rpc.m.stavr.tech:443',
         provider: '🔥STAVR🔥',
       },
       {
@@ -203,6 +259,10 @@ export const sge: Chain = {
       {
         address: 'https://mainnet-sge-rpc.konsortech.xyz',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'https://sge-rpc.genznodes.dev',
+        provider: 'genznodes',
       },
     ],
     rest: [
@@ -250,6 +310,14 @@ export const sge: Chain = {
         address: 'https://mainnet-sge-api.konsortech.xyz',
         provider: 'KonsorTech',
       },
+      {
+        address: 'https://sge-api.genznodes.dev',
+        provider: 'genznodes',
+      },
+      {
+        address: 'https://api.sge.roomit.xyz/',
+        provider: 'RoomIT',
+      },
     ],
     grpc: [
       {
@@ -283,6 +351,14 @@ export const sge: Chain = {
       {
         address: 'mainnet-sge.konsortech.xyz:22090',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'sge-grpc.genznodes.dev:5090',
+        provider: 'genznodes',
+      },
+      {
+        address: 'grpc.sge.roomit.xyz:8443',
+        provider: 'RoomIT',
       },
     ],
   },
@@ -329,6 +405,14 @@ export const sge: Chain = {
       tx_page: 'https://explorer.konsortech.xyz/sge/tx/${txHash}',
       account_page:
         'https://explorer.konsortech.xyz/sge/account/${accountAddress}',
+    },
+    {
+      kind: 'RoomIT',
+      url: 'https://explorer.tendermint.roomit.xyz/sge-mainnet',
+      tx_page:
+        'https://explorer.tendermint.roomit.xyz/sge-mainnet/tx/${txHash}',
+      account_page:
+        'https://explorer.tendermint.roomit.xyz/sge-mainnet/account/${accountAddress}',
     },
   ],
   images: [

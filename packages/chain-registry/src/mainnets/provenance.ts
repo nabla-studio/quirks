@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const provenance: Chain = {
   $schema: '../chain.schema.json',
@@ -251,11 +251,6 @@ export const provenance: Chain = {
         address: 'seed.provenance.io:26656',
         provider: 'Figure',
       },
-      {
-        id: 'ad3386812bb9f2fee4e9da6d9f37547afc948977',
-        address: 'provenance-seed.panthea.eu:42656',
-        provider: 'Panthea EU',
-      },
     ],
     persistent_peers: [
       {
@@ -292,10 +287,6 @@ export const provenance: Chain = {
         provider: 'High Stakes 🇨🇭',
       },
       {
-        address: 'https://provenance-rpc.panthea.eu',
-        provider: 'Panthea EU',
-      },
-      {
         address: 'https://rpc.provenance.blockval.io/',
         provider: 'Blockval',
       },
@@ -326,10 +317,6 @@ export const provenance: Chain = {
         provider: 'High Stakes 🇨🇭',
       },
       {
-        address: 'https://provenance-api.panthea.eu',
-        provider: 'Panthea EU',
-      },
-      {
         address: 'https://api.provenance.blockval.io',
         provider: 'Blockval',
       },
@@ -346,10 +333,6 @@ export const provenance: Chain = {
       {
         address: 'grpc-provenance-ia.cosmosia.notional.ventures:443',
         provider: 'Notional',
-      },
-      {
-        address: 'provenance-grpc.panthea.eu:16780',
-        provider: 'Panthea EU',
       },
       {
         address: 'grpc.provenance.blockval.io:9290',

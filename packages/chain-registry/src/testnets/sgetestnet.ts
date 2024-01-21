@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const sgetestnet: Chain = {
   $schema: '../chain.schema.json',
@@ -100,7 +100,7 @@ export const sgetestnet: Chain = {
         provider: 'Nodestake.top',
       },
       {
-        address: 'http://sge.rpc.t.stavr.tech:1147',
+        address: 'https://sge.rpc.t.stavr.tech:443',
         provider: '🔥STAVR🔥',
       },
     ],

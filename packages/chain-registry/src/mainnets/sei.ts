@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const sei: Chain = {
   $schema: '../chain.schema.json',
@@ -33,15 +33,15 @@ export const sei: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sei-protocol/sei-chain',
-    recommended_version: 'v3.3.1',
-    compatible_versions: ['v3.3.1'],
+    recommended_version: 'v3.5.1',
+    compatible_versions: ['v3.5.0', 'v3.5.1'],
     ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
     cosmos_sdk_version: 'sei-cosmos v0.2.63',
     consensus: {
       type: 'sei-tendermint',
-      version: 'v0.2.28',
+      version: 'v0.2.35',
     },
-    cosmwasm_version: 'sei-wasmd v0.0.2',
+    cosmwasm_version: 'sei-wasmd v0.0.4',
     cosmwasm_enabled: true,
     cosmwasm_path: '$HOME/.sei/wasm',
     genesis: {
@@ -101,8 +101,8 @@ export const sei: Chain = {
       },
       {
         name: 'v3.3.0',
-        recommended_version: 'v3.3.1',
-        compatible_versions: ['v3.3.1'],
+        recommended_version: 'v3.3.4',
+        compatible_versions: ['v3.3.1', 'v3.3.2', 'v3.3.3', 'v3.3.4'],
         ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
         cosmos_sdk_version: 'sei-cosmos v0.2.63',
         consensus: {
@@ -110,6 +110,21 @@ export const sei: Chain = {
           version: 'v0.2.28',
         },
         cosmwasm_version: 'sei-wasmd v0.0.2',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.sei/wasm',
+        next_version_name: 'v3.5.0',
+      },
+      {
+        name: 'v3.5.0',
+        recommended_version: 'v3.5.1',
+        compatible_versions: ['v3.5.0', 'V3.5.1'],
+        ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
+        cosmos_sdk_version: 'sei-cosmos v0.2.63',
+        consensus: {
+          type: 'sei-tendermint',
+          version: 'v0.2.35',
+        },
+        cosmwasm_version: 'sei-wasmd v0.0.4',
         cosmwasm_enabled: true,
         cosmwasm_path: '$HOME/.sei/wasm',
         next_version_name: '',
@@ -135,7 +150,7 @@ export const sei: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: '7cbcea0b3041960d1d7b8a6a2eccce0e1f7add50',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:11956',
         provider: 'WhisperNode 🤐',
       },
@@ -356,6 +371,56 @@ export const seiAssetList: AssetLists = {
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/ampsei.svg',
+        },
+      ],
+    },
+    {
+      description: 'Popeye the Seilor',
+      denom_units: [
+        {
+          denom: 'factory/sei1fl8pg59wfsgw2wp4aruk38zqccfnc2g8ptrm24/popeye',
+          exponent: 0,
+        },
+        {
+          denom: 'popeye',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/sei1fl8pg59wfsgw2wp4aruk38zqccfnc2g8ptrm24/popeye',
+      name: 'Popeye',
+      display: 'popeye',
+      symbol: 'POPEYE',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/popeye.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/popeye.png',
+        },
+      ],
+    },
+    {
+      description: 'A wise dog and a marshal arts master',
+      denom_units: [
+        {
+          denom: 'factory/sei1ta5rkr6y2qlkj7px8w2cvear7m2822q4f4ea0m/sensei',
+          exponent: 0,
+        },
+        {
+          denom: 'sensei',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/sei1ta5rkr6y2qlkj7px8w2cvear7m2822q4f4ea0m/sensei',
+      name: 'Sensei Dog',
+      display: 'sensei',
+      symbol: 'SENSEI',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/SenseiDog.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/SenseiDog.png',
         },
       ],
     },

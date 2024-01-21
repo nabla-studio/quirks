@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const source: Chain = {
   $schema: '../chain.schema.json',
@@ -132,10 +132,6 @@ export const source: Chain = {
         provider: 'MoonBridge',
       },
       {
-        address: 'https://carbon-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://source.rpc.m.stavr.tech',
         provider: '🔥STAVR🔥',
       },
@@ -178,10 +174,6 @@ export const source: Chain = {
         provider: 'Nodeist',
       },
       {
-        address: 'https://carbon-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://source.api.m.stavr.tech',
         provider: '🔥STAVR🔥',
       },
@@ -214,10 +206,6 @@ export const source: Chain = {
       {
         address: 'source-mainnet-grpc.itrocket.net:32090',
         provider: 'ITRocket',
-      },
-      {
-        address: 'carbon-mainnet-grpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'http://source.grpc.m.stavr.tech:9590',

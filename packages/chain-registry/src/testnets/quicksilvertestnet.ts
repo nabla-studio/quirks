@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const quicksilvertestnet: Chain = {
   $schema: '../chain.schema.json',
@@ -6,7 +6,7 @@ export const quicksilvertestnet: Chain = {
   status: 'live',
   network_type: 'testnet',
   pretty_name: 'Quicksilver Testnet',
-  chain_id: 'rhye-1',
+  chain_id: 'rhye-2',
   bech32_prefix: 'quick',
   daemon_name: 'quicksilverd',
   node_home: '$HOME/.quicksilverd',
@@ -31,8 +31,8 @@ export const quicksilvertestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/ingenuity-build/quicksilver',
-    recommended_version: 'v1.4.2-rc7',
-    compatible_versions: ['v1.4.2-rc7'],
+    recommended_version: 'v1.4.5-rc2',
+    compatible_versions: ['v1.4.5-rc2'],
     cosmos_sdk_version: '0.46',
     consensus: {
       type: 'tendermint',
@@ -40,16 +40,16 @@ export const quicksilvertestnet: Chain = {
     },
     cosmwasm_version: '0.29',
     cosmwasm_enabled: true,
-    ibc_go_version: '5.2.0',
+    ibc_go_version: '5.3.2',
     genesis: {
       genesis_url:
-        'https://raw.githubusercontent.com/ingenuity-build/testnets/main/rhye/genesis.json',
+        'https://raw.githubusercontent.com/ingenuity-build/testnets/main/rhye-2/genesis.json',
     },
     versions: [
       {
-        name: 'v1.4.2-rc7',
-        recommended_version: 'v1.4.2-rc7',
-        compatible_versions: ['v1.4.2-rc7'],
+        name: 'v1.4.5-rc2',
+        recommended_version: 'v1.4.5-rc2',
+        compatible_versions: ['v1.4.5-rc2'],
         cosmos_sdk_version: '0.46',
         consensus: {
           type: 'tendermint',
@@ -57,7 +57,7 @@ export const quicksilvertestnet: Chain = {
         },
         cosmwasm_version: '0.29',
         cosmwasm_enabled: true,
-        ibc_go_version: '5.2.0',
+        ibc_go_version: '5.3.2',
       },
     ],
   },

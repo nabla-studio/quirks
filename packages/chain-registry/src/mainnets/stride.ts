@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const stride: Chain = {
   $schema: '../chain.schema.json',
@@ -168,14 +168,14 @@ export const stride: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Stride-Labs/stride',
-    recommended_version: 'v16.0.0',
-    compatible_versions: ['v16.0.0'],
-    cosmos_sdk_version: 'v0.47.4-stride-distribution-fix-1',
+    recommended_version: 'v17.0.0',
+    compatible_versions: ['v17.0.0'],
+    cosmos_sdk_version: 'v0.47.5-stride-distribution-fix-0',
     consensus: {
       type: 'cometbft',
       version: 'v0.37.2',
     },
-    ibc_go_version: '7.2.0',
+    ibc_go_version: '7.3.1',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/Stride-Labs/testnet/main/mainnet/genesis.json',
@@ -283,7 +283,7 @@ export const stride: Chain = {
         name: 'v16',
         tag: 'v16.0.0',
         recommended_version: 'v16.0.0',
-        compatible_versions: ['v15.0.0'],
+        compatible_versions: ['v16.0.0'],
         proposal: 220,
         height: 5932395,
         consensus: {
@@ -291,6 +291,21 @@ export const stride: Chain = {
           version: '0.37.2',
         },
         ibc_go_version: '7.2.0',
+        next_version_name: 'v17',
+      },
+      {
+        name: 'v17',
+        tag: 'v17.0.0',
+        recommended_version: 'v17.0.0',
+        compatible_versions: ['v17.0.0'],
+        proposal: 226,
+        height: 7244427,
+        cosmos_sdk_version: 'v0.47.5-stride-distribution-fix-0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        ibc_go_version: '7.3.1',
         next_version_name: '',
       },
     ],
@@ -340,14 +355,9 @@ export const stride: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        id: '95d0377592a657d4c0816d9845e11d659db75d5b',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:12256',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        id: '27b6d74c8408e033e2e5a9e966a0d15782e33596',
-        address: 'seeds.nethernode.xyz:12256',
-        provider: 'carbonZERO🌲',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: 'ced7684f4d60399986cdbc1465ac00a420a14202',
@@ -429,15 +439,11 @@ export const stride: Chain = {
       },
       {
         address: 'https://rpc-stride.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://stride-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'https://stride-rpc.stakeandrelax.net',
-        provider: 'Stake&Relax Validator 🦥',
       },
       {
         address: 'https://rpc-stride-01.stakeflow.io',
@@ -454,6 +460,14 @@ export const stride: Chain = {
       {
         address: 'https://community.nuxian-node.ch:6797/stride/trpc',
         provider: 'PRO Delegators',
+      },
+      {
+        address: 'https://stride-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://rpc.stride.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     rest: [
@@ -495,11 +509,7 @@ export const stride: Chain = {
       },
       {
         address: 'https://lcd-stride.whispernode.com:443',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        address: 'https://stride-api.stakeandrelax.net',
-        provider: 'Stake&Relax Validator 🦥',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://api-stride-01.stakeflow.io',
@@ -516,6 +526,14 @@ export const stride: Chain = {
       {
         address: 'https://community.nuxian-node.ch:6797/stride/crpc',
         provider: 'PRO Delegators',
+      },
+      {
+        address: 'https://stride-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://lcd.stride.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     grpc: [
@@ -558,6 +576,14 @@ export const stride: Chain = {
       {
         address: 'stride-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'stride-grpc.stakeandrelax.net:12290',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://grpc.stride.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },
@@ -737,6 +763,7 @@ export const strideAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/ststars.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/ststars.svg',
       },
+      coingecko_id: 'stride-staked-stars',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/ststars.png',
@@ -773,6 +800,7 @@ export const strideAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stosmo.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stosmo.svg',
       },
+      coingecko_id: 'stride-staked-osmo',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stosmo.png',
@@ -809,6 +837,7 @@ export const strideAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stjuno.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stjuno.svg',
       },
+      coingecko_id: 'stride-staked-juno',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stjuno.png',
@@ -845,6 +874,7 @@ export const strideAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stluna.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stluna.svg',
       },
+      coingecko_id: 'stride-staked-luna',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stluna.png',
@@ -917,6 +947,7 @@ export const strideAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stevmos.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stevmos.svg',
       },
+      coingecko_id: 'stride-staked-evmos',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stevmos.png',
@@ -953,6 +984,7 @@ export const strideAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stumee.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stumee.svg',
       },
+      coingecko_id: 'stride-staked-umee',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stumee.png',
@@ -1025,6 +1057,7 @@ export const strideAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsomm.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsomm.svg',
       },
+      coingecko_id: 'stride-staked-sommelier',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsomm.png',

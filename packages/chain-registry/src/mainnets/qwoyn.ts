@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const qwoyn: Chain = {
   $schema: '../chain.schema.json',
@@ -33,11 +33,16 @@ export const qwoyn: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/cosmic-horizon/QWOYN',
-    recommended_version: 'v5.2.0',
-    compatible_versions: ['v5.2.0'],
-    cosmos_sdk_version: '0.47.3',
+    recommended_version: 'v5.3.0',
+    compatible_versions: ['v5.3.0'],
+    cosmos_sdk_version: '0.47.6',
     ibc_go_version: '7.0.1',
     ics_enabled: ['ics20-1', 'ics27-1'],
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.37.2',
+    },
+    cosmwasm_version: '0.40.0',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/cosmic-horizon/mainnet/main/genesis.json',
@@ -88,6 +93,23 @@ export const qwoyn: Chain = {
           type: 'cometbft',
           version: 'v0.37.1',
         },
+        next_version_name: 'v5.3.0',
+      },
+      {
+        name: 'v5.3.0',
+        tag: 'v5.3.0',
+        proposal: 13,
+        height: 2789768,
+        recommended_version: 'v5.3.0',
+        compatible_versions: ['v5.3.0'],
+        cosmos_sdk_version: '0.47.6',
+        ibc_go_version: '7.0.1',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: '0.40.0',
         next_version_name: '',
       },
     ],
@@ -153,6 +175,10 @@ export const qwoyn: Chain = {
         address: 'https://rpc-qwoyn.mzonder.com:443',
         provider: 'MZONDER',
       },
+      {
+        address: 'https://rpc.qwoyn.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     grpc: [
       {
@@ -175,6 +201,10 @@ export const qwoyn: Chain = {
         address: 'grpc-qwoyn.mzonder.com:443',
         provider: 'MZONDER',
       },
+      {
+        address: 'https://grpc.qwoyn.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -196,6 +226,10 @@ export const qwoyn: Chain = {
       {
         address: 'https://api-qwoyn.mzonder.com',
         provider: 'MZONDER',
+      },
+      {
+        address: 'https://lcd.qwoyn.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },

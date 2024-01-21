@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const quasar: Chain = {
   $schema: '../chain.schema.json',
@@ -127,9 +127,9 @@ export const quasar: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        id: 'd3c60cb339736ab2d504904492fe4e7d9efe5d42',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:18256',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '86fd17151eec60145e6c1a635e8365aff70a77d7',
@@ -147,6 +147,11 @@ export const quasar: Chain = {
         address: 'quasar-mainnet-peer.autostake.com:27146',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
+      {
+        id: 'f85f57bd852fd460bc99628444df26c45e02e95a',
+        address: '95.214.55.138:29656',
+        provider: 'genznodes',
+      },
     ],
   },
   apis: {
@@ -161,7 +166,7 @@ export const quasar: Chain = {
       },
       {
         address: 'https://rpc-quasar.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://quasar-rpc.enigma-validator.com',
@@ -195,6 +200,14 @@ export const quasar: Chain = {
         address: 'https://quasar-rpc.ibs.team',
         provider: 'Inter Blockchain Services',
       },
+      {
+        address: 'https://quasar-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://quasar-rpc.genznodes.dev',
+        provider: 'genznodes',
+      },
     ],
     rest: [
       {
@@ -207,7 +220,7 @@ export const quasar: Chain = {
       },
       {
         address: 'https://lcd-quasar.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://api-quasar.cosmos-spaces.cloud',
@@ -241,6 +254,14 @@ export const quasar: Chain = {
         address: 'https://quasar-api.ibs.team',
         provider: 'Inter Blockchain Services',
       },
+      {
+        address: 'https://quasar-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://quasar-api.genznodes.dev',
+        provider: 'genznodes',
+      },
     ],
     grpc: [
       {
@@ -270,6 +291,14 @@ export const quasar: Chain = {
       {
         address: 'quasar-grpc.stake-town.com:443',
         provider: 'StakeTown',
+      },
+      {
+        address: 'quasar-grpc.stakeandrelax.net:18290',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'quasar-grpc.genznodes.dev:29090',
+        provider: 'genznodes',
       },
     ],
   },

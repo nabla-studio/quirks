@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const cudostestnet: Chain = {
   $schema: '../../chain.schema.json',

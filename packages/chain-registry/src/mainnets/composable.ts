@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const composable: Chain = {
   $schema: '../chain.schema.json',
@@ -33,8 +33,8 @@ export const composable: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/notional-labs/composable-centauri',
-    recommended_version: 'v6.3.1',
-    compatible_versions: ['v6.3.1'],
+    recommended_version: 'v6.3.6',
+    compatible_versions: ['v6.3.6'],
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/notional-labs/composable-networks/main/mainnet/genesis.json',
@@ -125,8 +125,8 @@ export const composable: Chain = {
       {
         name: 'v6',
         tag: 'v6.3.1',
-        recommended_version: 'v6.3.1',
-        compatible_versions: ['v6.3.1'],
+        recommended_version: 'v6.3.6',
+        compatible_versions: ['v6.3.6'],
         cosmos_sdk_version: 'v0.47.5',
         ibc_go_version: 'v7.3.1',
         consensus: {
@@ -157,9 +157,9 @@ export const composable: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        id: 'd2362ebcdd562500ac8c4cfa2214a89ad811033c',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:22256',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
     ],
     persistent_peers: [
@@ -218,7 +218,7 @@ export const composable: Chain = {
       },
       {
         address: 'https://rpc-composable.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://composable-rpc.stake-town.com',
@@ -227,6 +227,18 @@ export const composable: Chain = {
       {
         address: 'https://composable.rpc.stakevillage.net:443',
         provider: 'Stake Village',
+      },
+      {
+        address: 'https://composable-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://rpc.centauri.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'https://composable.rpc.moonbridge.team',
+        provider: 'Moonbridge',
       },
     ],
     rest: [
@@ -256,7 +268,7 @@ export const composable: Chain = {
       },
       {
         address: 'https://lcd-composable.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://composable-api.stake-town.com',
@@ -265,6 +277,18 @@ export const composable: Chain = {
       {
         address: 'https://composable.api.stakevillage.net',
         provider: 'Stake Village',
+      },
+      {
+        address: 'https://composable-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://lcd.centauri.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'https://composable.api.moonbridge.team',
+        provider: 'Moonbridge',
       },
     ],
     grpc: [
@@ -311,6 +335,18 @@ export const composable: Chain = {
       {
         address: 'composable.grpc.stakevillage.net:16190',
         provider: 'Stake Village',
+      },
+      {
+        address: 'composable-rpc.stakeandrelax.net:22290',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://grpc.centauri.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'https://composable.grpc.moonbridge.team',
+        provider: 'Moonbridge',
       },
     ],
   },

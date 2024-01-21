@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const migaloo: Chain = {
   $schema: '../chain.schema.json',
@@ -37,8 +37,8 @@ export const migaloo: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain',
-    recommended_version: 'v3.0.2',
-    compatible_versions: ['v3.0.2'],
+    recommended_version: 'v3.0.4',
+    compatible_versions: ['v3.0.4'],
     cosmos_sdk_version: '0.46.15',
     ibc_go_version: '6.2.0',
     consensus: {
@@ -102,8 +102,8 @@ export const migaloo: Chain = {
         name: 'v3.0.2',
         proposal: 19,
         height: 4128108,
-        recommended_version: 'v3.0.2',
-        compatible_versions: ['v3.0.2'],
+        recommended_version: 'v3.0.4',
+        compatible_versions: ['v3.0.4'],
         cosmos_sdk_version: '0.46.15',
         ibc_go_version: '6.2.0',
         consensus: {
@@ -142,16 +142,6 @@ export const migaloo: Chain = {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
         address: 'migaloo.rpc.kjnodes.com:14959',
         provider: 'kjnodes',
-      },
-      {
-        id: '1b6a3dd166b8814f3064444206c2194a92dea62d',
-        address: 'seeds.whispernode.com:20756',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        id: '27b6d74c8408e033e2e5a9e966a0d15782e33596',
-        address: 'seeds.nethernode.xyz:20756',
-        provider: 'carbonZERO🌲',
       },
     ],
     persistent_peers: [
@@ -570,6 +560,58 @@ export const migalooAssetList: AssetLists = {
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/mUSDC.svg',
+        },
+      ],
+    },
+    {
+      description: 'GUPPY',
+      denom_units: [
+        {
+          denom:
+            'factory/migaloo1etlu2h30tjvv8rfa4fwdc43c92f6ul5w9acxzk/uguppy',
+          exponent: 0,
+        },
+        {
+          denom: 'GUPPY',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/migaloo1etlu2h30tjvv8rfa4fwdc43c92f6ul5w9acxzk/uguppy',
+      name: 'GUPPY',
+      display: 'GUPPY',
+      symbol: 'GUPPY',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/guppy.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/guppy.png',
+        },
+      ],
+    },
+    {
+      description: 'OPHIR is a Cosmos Treasury DAO established on Migaloo.',
+      denom_units: [
+        {
+          denom:
+            'factory/migaloo1t862qdu9mj5hr3j727247acypym3ej47axu22rrapm4tqlcpuseqltxwq5/ophir',
+          exponent: 0,
+        },
+        {
+          denom: 'OPHIR',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/migaloo1t862qdu9mj5hr3j727247acypym3ej47axu22rrapm4tqlcpuseqltxwq5/ophir',
+      name: 'OPHIR',
+      display: 'OPHIR',
+      symbol: 'OPHIR',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/ophir.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/ophir.png',
         },
       ],
     },

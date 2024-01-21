@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const injective: Chain = {
   $schema: '../chain.schema.json',
@@ -33,18 +33,13 @@ export const injective: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/InjectiveLabs/injective-chain-releases',
-    recommended_version: 'v1.11.5-1687535916',
-    compatible_versions: [
-      'v1.11',
-      'v1.11.3-1686246472',
-      'v1.11.4-1686608669',
-      'v1.11.5-1687535916',
-    ],
+    recommended_version: 'v1.12.0-1704530206',
+    compatible_versions: ['v1.12.0-1704530206'],
     binaries: {
       'linux/amd64':
-        'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.11.5-1687535916/linux-amd64.zip',
+        'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.0-1704530206/linux-amd64.zip',
       'darwin/amd64':
-        'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.11.5-1687535916/darwin-amd64.zip',
+        'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.0-1704530206/darwin-amd64.zip',
     },
     genesis: {
       genesis_url:
@@ -80,6 +75,21 @@ export const injective: Chain = {
           'darwin/amd64':
             'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.11.5-1687535916/darwin-amd64.zip',
         },
+        next_version_name: 'v1.12.0',
+      },
+      {
+        name: 'v1.12.0',
+        proposal: 314,
+        height: 57076000,
+        recommended_version: 'v1.12.0-1704530206',
+        compatible_versions: ['v1.12.0-1704530206'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.0-1704530206/linux-amd64.zip',
+          'darwin/amd64':
+            'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.0-1704530206/darwin-amd64.zip',
+        },
+        next_version_name: '',
       },
     ],
   },
@@ -152,9 +162,9 @@ export const injective: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        id: '62ae24dfc6841ff1ab513522255c94914861df7c',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:14356',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '858c86e2590f82934b8483ed184afd88416a7b31',
@@ -237,7 +247,7 @@ export const injective: Chain = {
       },
       {
         address: 'https://rpc-injective.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://rpc-injective-01.stakeflow.io',
@@ -279,7 +289,7 @@ export const injective: Chain = {
       },
       {
         address: 'https://lcd-injective.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://api-injective-01.stakeflow.io',
@@ -342,6 +352,10 @@ export const injective: Chain = {
       {
         address: 'injective-grpc.w3coins.io:14390',
         provider: 'w3coins',
+      },
+      {
+        address: 'grpc-injective.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
       },
     ],
   },
@@ -483,6 +497,85 @@ export const injectiveAssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ampinj.png',
+        },
+      ],
+    },
+    {
+      description:
+        '$AUTISM exists to celebrate autism as a superior biological tech stack for a changing world',
+      denom_units: [
+        {
+          denom: 'factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism',
+          exponent: 0,
+        },
+        {
+          denom: 'autism',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/inj14lf8xm6fcvlggpa7guxzjqwjmtr24gnvf56hvz/autism',
+      name: 'Autism',
+      display: 'autism',
+      symbol: 'AUTISM',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/autism.png',
+      },
+      coingecko_id: 'autism',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/autism.png',
+        },
+      ],
+    },
+    {
+      description:
+        'The first meme coin on Injective. It’s a dog, but he has nunchucks',
+      denom_units: [
+        {
+          denom: 'factory/inj1xtel2knkt8hmc9dnzpjz6kdmacgcfmlv5f308w/ninja',
+          exponent: 0,
+        },
+        {
+          denom: 'NINJA',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/inj1xtel2knkt8hmc9dnzpjz6kdmacgcfmlv5f308w/ninja',
+      name: 'Dog wif nunchucks',
+      display: 'NINJA',
+      symbol: 'NINJA',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ninja.png',
+      },
+      coingecko_id: 'dog-wif-nuchucks',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ninja.png',
+        },
+      ],
+    },
+    {
+      description: 'The $WGMI Token - We Gonna Make It. Are you ready?',
+      denom_units: [
+        {
+          denom: 'factory/inj1rmjzj9fn47kdmfk4f3z39qr6czexxe0yjyc546/WGMI',
+          exponent: 0,
+        },
+        {
+          denom: 'WGMI',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/inj1rmjzj9fn47kdmfk4f3z39qr6czexxe0yjyc546/WGMI',
+      name: 'WGMI',
+      display: 'WGMI',
+      symbol: 'WGMI',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/wgmi.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/wgmi.png',
         },
       ],
     },

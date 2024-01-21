@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const stratos: Chain = {
   $schema: '../chain.schema.json',
@@ -53,6 +53,11 @@ export const stratos: Chain = {
         address: '34.84.212.13:26656',
         provider: 'thestratos.org',
       },
+      {
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
+        address: 'seeds.whispernode.com:21856',
+        provider: 'WhisperNode 🤐',
+      },
     ],
     persistent_peers: [
       {
@@ -76,6 +81,10 @@ export const stratos: Chain = {
         address: 'http://stratos.rpc.nodersteam.com:26657/',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://rpc-stratos.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
+      },
     ],
     rest: [
       {
@@ -85,6 +94,10 @@ export const stratos: Chain = {
       {
         address: 'https://api.stratos.nodestake.top',
         provider: 'NodeStake',
+      },
+      {
+        address: 'https://lcd-stratos.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
       },
     ],
     grpc: [

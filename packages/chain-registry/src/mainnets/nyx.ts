@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const nyx: Chain = {
   $schema: '../chain.schema.json',
@@ -17,6 +17,16 @@ export const nyx: Chain = {
       {
         denom: 'unym',
         fixed_min_gas_price: 0.025,
+        low_gas_price: 0.025,
+        average_gas_price: 0.025,
+        high_gas_price: 0.04,
+      },
+      {
+        denom: 'unyx',
+        fixed_min_gas_price: 0.025,
+        low_gas_price: 0.025,
+        average_gas_price: 0.025,
+        high_gas_price: 0.04,
       },
     ],
   },

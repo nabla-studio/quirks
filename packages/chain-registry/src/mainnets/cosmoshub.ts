@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const cosmoshub: Chain = {
   $schema: '../chain.schema.json',
@@ -254,9 +254,9 @@ export const cosmoshub: Chain = {
         provider: 'Golden Ratio Staking',
       },
       {
-        id: '7aa410eb8f699c366b1f1e2904ba6b0d1cac379b',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:14956',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
@@ -336,7 +336,7 @@ export const cosmoshub: Chain = {
       },
       {
         address: 'https://rpc-cosmoshub.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://cosmoshub-rpc.lavenderfive.com:443',
@@ -454,6 +454,10 @@ export const cosmoshub: Chain = {
         address: 'https://cosmoshub-rpc.cosmosrescue.dev',
         provider: 'cosmosrescue',
       },
+      {
+        address: 'https://cosmos-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
     ],
     rest: [
       {
@@ -506,7 +510,7 @@ export const cosmoshub: Chain = {
       },
       {
         address: 'https://lcd-cosmoshub.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://cosmos-lcd.easy2stake.com',
@@ -564,6 +568,10 @@ export const cosmoshub: Chain = {
         address: 'https://cosmoshub-api.cosmosrescue.dev',
         provider: 'cosmosrescue',
       },
+      {
+        address: 'https://cosmos-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
     ],
     grpc: [
       {
@@ -616,7 +624,7 @@ export const cosmoshub: Chain = {
       },
       {
         address: 'grpc-cosmoshub.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'cosmos-grpc.w3coins.io:14990',
@@ -637,6 +645,10 @@ export const cosmoshub: Chain = {
       {
         address: 'https://grpc-cosmos.nodeist.net',
         provider: 'Nodeist',
+      },
+      {
+        address: 'cosmos-grpc.stakeandrelax.net:14990',
+        provider: 'Stake&Relax 🦥',
       },
     ],
   },

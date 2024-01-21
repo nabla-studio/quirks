@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const planq: Chain = {
   $schema: '../chain.schema.json',
@@ -144,6 +144,11 @@ export const planq: Chain = {
         provider: 'Indonode',
       },
       {
+        id: '3eb12284b7fb707490b8adfda6fa7d94e2fa5cd9',
+        address: 'p2p-pve01.roomit.xyz:16603',
+        provider: 'RoomIT',
+      },
+      {
         id: '8391cf5a7fe59098205015870635f90acfb5dcb4',
         address: 'rpc.planq.hexnodes.co:33656',
         provider: 'Hexnodes',
@@ -183,6 +188,10 @@ export const planq: Chain = {
         provider: 'Indonode',
       },
       {
+        address: 'https://rpc.planq.roomit.xyz',
+        provider: 'RoomIT',
+      },
+      {
         address: 'https://planq-rpc.genznodes.dev',
         provider: 'genznodes',
       },
@@ -211,6 +220,10 @@ export const planq: Chain = {
       {
         address: 'https://api.planq.indonode.net',
         provider: 'Indonode',
+      },
+      {
+        address: 'https://api.planq.roomit.xyz',
+        provider: 'RoomIT',
       },
       {
         address: 'https://planq-api.genznodes.dev',
@@ -249,6 +262,10 @@ export const planq: Chain = {
       {
         address: 'https://grpc.planq.nodexcapital.com:443',
         provider: 'NodeX Validator',
+      },
+      {
+        address: 'https://grpc.planq.roomit.xyz:8443',
+        provider: 'RoomIT',
       },
       {
         address: 'https://grpc.planq.hexnodes.co:33090',
@@ -314,6 +331,12 @@ export const planq: Chain = {
       kind: 'TC Network',
       url: 'https://explorer.tcnetwork.io/planq',
       tx_page: 'https://explorer.tcnetwork.io/planq/transaction/${txHash}',
+    },
+    {
+      kind: 'RoomIT',
+      url: 'https://explorer.tendermint.roomit.xyz/planq',
+      tx_page:
+        'https://explorer.tendermint.roomit.xyz/planq/transaction/${txHash}',
     },
     {
       kind: 'Kynraze',

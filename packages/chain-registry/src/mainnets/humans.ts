@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const humans: Chain = {
   $schema: '../chain.schema.json',
@@ -95,11 +95,6 @@ export const humans: Chain = {
         address: '167.235.177.226:26656',
         provider: '[NODERS]TEAM',
       },
-      {
-        id: '767edc7b5fa144c52703f0e9670ea1eea1a5e0fc',
-        address: 'p2p.humans.safeblock.space:26656',
-        provider: 'Safe Block',
-      },
     ],
   },
   apis: {
@@ -121,7 +116,7 @@ export const humans: Chain = {
         provider: 'Nodeist',
       },
       {
-        address: 'https://humans-mainnet-rpc.itrocket.net:443',
+        address: 'https://humans-mainnet-rpc.itrocket.net',
         provider: 'itrocket',
       },
       {
@@ -152,10 +147,6 @@ export const humans: Chain = {
         address: 'https://rpc.humans-mainnet.stake-take.com/',
         provider: 'Stake-Take',
       },
-      {
-        address: 'https://rpc.humans.safeblock.space',
-        provider: 'Safe Block',
-      },
     ],
     rest: [
       {
@@ -175,7 +166,7 @@ export const humans: Chain = {
         provider: 'Nodeist',
       },
       {
-        address: 'https://humans-mainnet-api.itrocket.net:443',
+        address: 'https://humans-mainnet-api.itrocket.net',
         provider: 'itrocket',
       },
       {
@@ -201,10 +192,6 @@ export const humans: Chain = {
       {
         address: 'https://api.humans-mainnet.stake-take.com/',
         provider: 'Stake-Take',
-      },
-      {
-        address: 'https://api.humans.safeblock.space',
-        provider: 'Safe Block',
       },
     ],
     grpc: [
@@ -236,10 +223,6 @@ export const humans: Chain = {
         address: 'https://grpc-humans.cosmos-spaces.cloud:1190',
         provider: 'StakePool',
       },
-      {
-        address: 'grpc.humans.safeblock.space:9090',
-        provider: 'Safe Block',
-      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -247,7 +230,7 @@ export const humans: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://humans-mainnet-evm.itrocket.net:443',
+        address: 'https://humans-mainnet-evm.itrocket.net',
         provider: 'itrocket',
       },
       {
@@ -261,10 +244,6 @@ export const humans: Chain = {
       {
         address: 'https://mainnet-humans-evm.konsortech.xyz',
         provider: 'KonsorTech',
-      },
-      {
-        address: 'https://evm.humans.safeblock.space',
-        provider: 'Safe Block',
       },
     ],
   },
@@ -296,11 +275,11 @@ export const humans: Chain = {
       tx_page: 'https://humans.exploreme.pro/transaction/${txHash}',
     },
     {
-      kind: 'Safe Block',
-      url: 'https://explorer.safeblock.space/humans',
-      tx_page: 'https://explorer.safeblock.space/humans/tx/${txHash}',
+      kind: 'itrocket',
+      url: 'https://mainnet.itrocket.net/humans/staking',
+      tx_page: 'https://mainnet.itrocket.net/humans/tx/${txHash}',
       account_page:
-        'https://explorer.safeblock.space/humans/account/${accountAddress}',
+        'https://mainnet.itrocket.net/humans/account/${accountAddress}',
     },
   ],
   images: [

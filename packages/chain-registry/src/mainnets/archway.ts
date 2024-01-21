@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const archway: Chain = {
   $schema: '../chain.schema.json',
@@ -36,17 +36,17 @@ export const archway: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/archway-network/archway',
-    recommended_version: 'v4.0.2',
-    compatible_versions: ['v4.0.1', 'v4.0.2'],
+    recommended_version: 'v4.0.3',
+    compatible_versions: ['v4.0.3'],
     binaries: {
       'linux/amd64':
-        'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_linux_amd64',
+        'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_linux_amd64',
       'linux/arm64':
-        'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_linux_arm64',
+        'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_linux_arm64',
       'darwin/amd64':
-        'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_darwin_amd64',
+        'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_darwin_amd64',
       'darwin/arm64':
-        'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_darwin_arm64',
+        'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_darwin_arm64',
     },
     cosmos_sdk_version: 'v0.45.16',
     consensus: {
@@ -110,8 +110,8 @@ export const archway: Chain = {
       },
       {
         name: 'v4.0.2',
-        recommended_version: 'v4.0.2',
-        compatible_versions: ['v4.0.1', 'v4.0.2'],
+        recommended_version: 'v4.0.3',
+        compatible_versions: ['v4.0.3'],
         proposal: 21,
         height: 1215711,
         consensus: {
@@ -125,9 +125,13 @@ export const archway: Chain = {
         cosmwasm_path: '$HOME/.archway/data/wasm',
         binaries: {
           'linux/amd64':
-            'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_linux_amd64',
+            'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_linux_amd64',
           'linux/arm64':
-            'https://github.com/archway-network/archway/releases/download/v4.0.2/archwayd_linux_arm64',
+            'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_linux_arm64',
+          'darwin/amd64':
+            'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_darwin_amd64',
+          'darwin/arm64':
+            'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_darwin_arm64',
         },
         next_version_name: '',
       },
@@ -152,9 +156,9 @@ export const archway: Chain = {
         provider: 'AM Solutions',
       },
       {
-        id: 'd2362ebcdd562500ac8c4cfa2214a89ad811033c',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:11556',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
@@ -268,8 +272,8 @@ export const archway: Chain = {
         provider: 'AM Solutions',
       },
       {
-        address: 'https://rpc-archway.whispernode.com',
-        provider: 'WhisperNode🤐',
+        address: 'https://rpc-archway.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://archway-rpc.w3coins.io',
@@ -331,6 +335,14 @@ export const archway: Chain = {
         address: 'https://archway-rpc.tienthuattoan.ventures',
         provider: 'TienThuatToan',
       },
+      {
+        address: 'https://archway-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://rpc.archway.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -375,7 +387,7 @@ export const archway: Chain = {
       },
       {
         address: 'https://lcd-archway.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://archway-api.lavenderfive.com:443',
@@ -428,6 +440,14 @@ export const archway: Chain = {
       {
         address: 'https://archway-api.tienthuattoan.ventures',
         provider: 'TienThuatToan',
+      },
+      {
+        address: 'https://archway-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://lcd.archway.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     grpc: [
@@ -514,6 +534,14 @@ export const archway: Chain = {
       {
         address: 'archway-grpc.tienthuattoan.ventures:9290',
         provider: 'TienThuatToan',
+      },
+      {
+        address: 'archway-grpc.stakeandrelax.net:11590',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://grpc.archway.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },

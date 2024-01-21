@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const xpla: Chain = {
   $schema: '../chain.schema.json',
@@ -33,8 +33,14 @@ export const xpla: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/xpladev/xpla',
-    recommended_version: 'v1.2.1',
-    compatible_versions: ['v1.2.1'],
+    recommended_version: 'v1.3.0',
+    compatible_versions: ['v1.3.0'],
+    cosmos_sdk_version: '0.45.16',
+    consensus: {
+      type: 'cometbft',
+      version: '0.34.27',
+    },
+    cosmwasm_version: '0.33.0',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/xpladev/mainnet/main/dimension_37-1/genesis.json',
@@ -44,6 +50,25 @@ export const xpla: Chain = {
         name: 'evm',
         recommended_version: 'v1.2.1',
         compatible_versions: ['v1.2.1'],
+        cosmos_sdk_version: '0.45.9',
+        consensus: {
+          type: 'tendermint',
+          version: '0.34.21',
+        },
+        cosmwasm_version: '0.28.0',
+        next_version_name: 'Volunteer',
+      },
+      {
+        name: 'volunteer',
+        recommended_version: 'v1.3.0',
+        compatible_versions: ['v1.3.0'],
+        cosmos_sdk_version: '0.45.16',
+        consensus: {
+          type: 'cometbft',
+          version: '0.34.27',
+        },
+        cosmwasm_version: '0.33.0',
+        next_version_name: '',
       },
     ],
   },

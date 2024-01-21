@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const comdex: Chain = {
   $schema: '../chain.schema.json',
@@ -30,8 +30,18 @@ export const comdex: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/comdex-official/comdex',
-    recommended_version: 'v11.5.0',
-    compatible_versions: ['v11.5.0'],
+    recommended_version: 'v13.4.0',
+    compatible_versions: ['v13.4.0'],
+    binaries: {
+      'linux/amd64':
+        'https://github.com/comdex-official/comdex/releases/download/v13.4.0/comdex-linux-amd64.tar.gz',
+    },
+    cosmos_sdk_version: 'v0.47.5',
+    consensus: {
+      type: 'cometbft',
+      version: '0.37.2',
+    },
+    cosmwasm_version: 'v0.41.0',
     cosmwasm_enabled: true,
     genesis: {
       genesis_url:
@@ -56,9 +66,29 @@ export const comdex: Chain = {
         name: 'v11.5.0',
         height: 8184000,
         proposal: 154,
-        recommended_version: 'v11.5.0',
-        compatible_versions: ['v11.5.0'],
+        recommended_version: 'v11.5.2',
+        compatible_versions: ['v11.5.2'],
         cosmwasm_enabled: true,
+        next_version_name: 'v13.3.0',
+      },
+      {
+        name: 'v13.3.0',
+        proposal: 216,
+        height: 10981900,
+        recommended_version: 'v13.4.0',
+        compatible_versions: ['v13.4.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/comdex-official/comdex/releases/download/v13.4.0/comdex-linux-amd64.tar.gz',
+        },
+        cosmos_sdk_version: 'v0.47.5',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        cosmwasm_version: 'v0.41.0',
+        cosmwasm_enabled: true,
+        next_version_name: '',
       },
     ],
   },
@@ -101,14 +131,9 @@ export const comdex: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        id: '243d93ff2f663860f118fa32e2122fbba7f00a92',
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
         address: 'seeds.whispernode.com:13156',
-        provider: 'WhisperNode🤐',
-      },
-      {
-        id: '27b6d74c8408e033e2e5a9e966a0d15782e33596',
-        address: 'seeds.nethernode.xyz:13156',
-        provider: 'carbonZERO🌲',
+        provider: 'WhisperNode 🤐',
       },
       {
         id: '88ba33fbdf0279efaf27cff629f3cf72814d4069',
@@ -166,7 +191,7 @@ export const comdex: Chain = {
       },
       {
         address: 'https://rpc-comdex.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://comdex-mainnet-rpc.autostake.com:443',
@@ -220,7 +245,7 @@ export const comdex: Chain = {
       },
       {
         address: 'https://lcd-comdex.whispernode.com:443',
-        provider: 'WhisperNode🤐',
+        provider: 'WhisperNode 🤐',
       },
       {
         address: 'https://comdex-api.w3coins.io',
@@ -392,7 +417,7 @@ export const comdexAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/comdex/images/harbor.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/comdex/images/harbor.svg',
       },
-      coingecko_id: '',
+      coingecko_id: 'harbor-2',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/comdex/images/harbor.png',

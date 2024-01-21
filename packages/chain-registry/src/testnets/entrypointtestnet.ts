@@ -1,4 +1,4 @@
-import type { Chain, AssetLists } from '../types';
+import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const entrypointtestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -17,9 +17,9 @@ export const entrypointtestnet: Chain = {
       {
         denom:
           'ibc/8A138BC76D0FB2665F8937EC2BF01B9F6A714F6127221A0E155106A45E09BCC5',
-        low_gas_price: 0,
-        average_gas_price: 0,
-        high_gas_price: 0,
+        low_gas_price: 0.01,
+        average_gas_price: 0.01,
+        high_gas_price: 0.02,
       },
     ],
   },
@@ -32,8 +32,8 @@ export const entrypointtestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/entrypoint-zone/testnets',
-    recommended_version: 'v1.1.1',
-    compatible_versions: ['v1.1.1'],
+    recommended_version: 'v1.2.0',
+    compatible_versions: ['v1.2.0'],
     cosmos_sdk_version: '0.47.4',
     consensus: {
       type: 'cometbft',
@@ -48,6 +48,16 @@ export const entrypointtestnet: Chain = {
         name: 'v1.1.1',
         recommended_version: 'v1.1.1',
         compatible_versions: ['v1.1.1'],
+        cosmos_sdk_version: '0.47.4',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
+      {
+        name: 'v1.2.0',
+        recommended_version: 'v1.2.0',
+        compatible_versions: ['v1.2.0'],
         cosmos_sdk_version: '0.47.4',
         consensus: {
           type: 'cometbft',
