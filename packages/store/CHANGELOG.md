@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.15.0](https://github.com/nabla-studio/quirks/compare/store@0.14.0...store@0.15.0) (2024-01-21)
+
+### Dependency Updates
+
+* `chain-registry` updated to version `0.14.0`
+* `core` updated to version `0.14.0`
+
+### Features
+
+* :arrow_up: upgrade zustand ([4913851](https://github.com/nabla-studio/quirks/commit/4913851f2448d27a11a958dc148beba383b94117))
+* **store:** :sparkles: remove suggestChains cycle ([f02bc37](https://github.com/nabla-studio/quirks/commit/f02bc378eb6b813681a91421005b86f15f82c22c))
+
 ## [0.14.0](https://github.com/nabla-studio/quirks/compare/store@0.13.2...store@0.14.0) (2024-01-21)
 
 
