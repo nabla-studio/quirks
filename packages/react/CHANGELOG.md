@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.0](https://github.com/nabla-studio/quirks/compare/react@0.7.4...react@0.8.0) (2024-01-21)
+
+### Dependency Updates
+
+* `store` updated to version `0.7.4`
+* `core` updated to version `0.7.4`
+
+### Features
+
+* **react:** :sparkles: improve types ([62bdb26](https://github.com/nabla-studio/quirks/commit/62bdb2611458745161d4773a66f5105ae25c4c2f))
+
 ## [0.7.4](https://github.com/nabla-studio/quirks/compare/react@0.7.3...react@0.7.4) (2024-01-21)
 
 ### Dependency Updates
