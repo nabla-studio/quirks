@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.14.0](https://github.com/nabla-studio/quirks/compare/store@0.13.2...store@0.14.0) (2024-01-21)
+
+
+### Features
+
+* **store:** :sparkles: improve debug log ([64fba93](https://github.com/nabla-studio/quirks/commit/64fba93c7e7f7aab5eb2f961f8252e9e3c04f078))
+
+
+### Bug Fixes
+
+* **store:** :bug: fix wc initial state reset ([3c2be45](https://github.com/nabla-studio/quirks/commit/3c2be450f41a6be4d5e9b9746e6656715e88585a))
+
 ## [0.13.2](https://github.com/nabla-studio/quirks/compare/store@0.13.1...store@0.13.2) (2024-01-19)
 
 
