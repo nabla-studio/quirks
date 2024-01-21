@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.0](https://github.com/nabla-studio/quirks/compare/vue@0.5.4...vue@0.6.0) (2024-01-21)
+
+### Dependency Updates
+
+* `store` updated to version `0.5.4`
+* `core` updated to version `0.5.4`
+
+### Features
+
+* :arrow_up: upgrade zustand ([4913851](https://github.com/nabla-studio/quirks/commit/4913851f2448d27a11a958dc148beba383b94117))
+
 ## [0.5.4](https://github.com/nabla-studio/quirks/compare/vue@0.5.3...vue@0.5.4) (2024-01-21)
 
 ### Dependency Updates
