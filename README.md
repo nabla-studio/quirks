@@ -18,7 +18,7 @@ And many more to come:
 
 - [x] Adding more wallets
 - [x] Web [Broadcast API](https://developer.mozilla.org/en-US/docs/Web/API/Broadcast_Channel_API) Support, for tabs, windows and iframe sync
-- [ ] React Native Support
+- [x] React Native Support
 - [x] Wallet Connect Support
 - [ ] Web3 Modal Support
 - [ ] UI Kit (Cross Framework)
@@ -29,6 +29,7 @@ And many more to come:
 - [NuxtJS](https://github.com/nabla-studio/quirks-nuxt-example)
 - [NextJS](https://github.com/nabla-studio/quirks/tree/main/examples/nextjs)
 - [Vue 3](https://github.com/nabla-studio/quirks/tree/main/examples/vue3)
+- [React Native](https://github.com/nabla-studio/quirks-mobile-dapp-starter)
 
 ## 🔧 Installation
 
