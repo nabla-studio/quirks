@@ -42,10 +42,10 @@ export interface ConnectState {
 }
 
 export interface ConnectActions {
-  setWallet: (wallet?: Wallet) => void;
-  getWalletData: () => void;
-  connect: (walletName: string) => void;
-  reconnect: (walletName: string) => void;
+  setWallet: (wallet?: Wallet) => Promise<void>;
+  getWalletData: () => Promise<void>;
+  connect: (walletName: string) => Promise<void>;
+  reconnect: (walletName: string) => Promise<void>;
   disconnect: () => void;
   suggestChains: (walletName: string) => Promise<void>;
 }
