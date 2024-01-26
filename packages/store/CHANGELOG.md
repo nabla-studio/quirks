@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.16.0](https://github.com/nabla-studio/quirks/compare/store@0.15.0...store@0.16.0) (2024-01-26)
+
+
+### Features
+
+* **store:** :label: improve connect slice types ([54a4a81](https://github.com/nabla-studio/quirks/commit/54a4a81677954268c0df86616f32fa599d293394))
+
 ## [0.15.0](https://github.com/nabla-studio/quirks/compare/store@0.14.0...store@0.15.0) (2024-01-21)
 
 ### Dependency Updates
