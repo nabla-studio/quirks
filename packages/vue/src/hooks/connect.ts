@@ -11,7 +11,7 @@ export const useConnect = () => {
     (state) => state.status === ConnectionStates.CONNECTED,
   );
   const waiting = useQuirks()(
-    (state) => state.status === ConnectionStates.CONNECTED,
+    (state) => state.status === ConnectionStates.WAITING,
   );
   const disconnected = useQuirks()(
     (state) => state.status === ConnectionStates.DISCONNECTED,
