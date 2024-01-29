@@ -19,5 +19,6 @@ export const functionsVue = [
   'useChain',
   'useConfig',
   'useConnect',
+  'useWalletConnect',
   'useWalletEvents',
 ];
