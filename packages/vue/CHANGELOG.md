@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.2](https://github.com/nabla-studio/quirks/compare/vue@0.6.1...vue@0.6.2) (2024-01-29)
+
+
+### Bug Fixes
+
+* **vue:** :bug: fix waiting status util ([a8f1614](https://github.com/nabla-studio/quirks/commit/a8f1614f13ab109f0f52e1f1b2b738435f1e61d5))
+
 ## [0.6.1](https://github.com/nabla-studio/quirks/compare/vue@0.6.0...vue@0.6.1) (2024-01-26)
 
 ### Dependency Updates
