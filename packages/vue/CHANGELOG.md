@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.0](https://github.com/nabla-studio/quirks/compare/vue@0.6.2...vue@0.7.0) (2024-01-29)
+
+
+### Features
+
+* **vue:** :sparkles: add useConnect states ([4b26711](https://github.com/nabla-studio/quirks/commit/4b26711361aea5e52be005390075e8806b0d65d9))
+
 ## [0.6.2](https://github.com/nabla-studio/quirks/compare/vue@0.6.1...vue@0.6.2) (2024-01-29)
 
 
