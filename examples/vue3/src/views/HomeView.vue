@@ -4,14 +4,16 @@ import {
   useConfig,
   useChains,
   useChain,
-  useWalletEvents,
+  useWalletConnect,
 } from '@quirks/vue';
 import { bitsong, bitsongAssetList } from '@nabla-studio/chain-registry';
+import VueQrcode from 'vue-qrcode';
 
 const { wallets } = useConfig();
 const { accounts } = useChains();
 const { address } = useChain('bitsong');
-const { connect, disconnect, connected, status } = useConnect();
+const { connect, disconnect, connected, status, walletName } = useConnect();
+const { pairingURI } = useWalletConnect();
 
 const open = async (chainName: string) => {
   const suggestChains = (await import('@quirks/store')).suggestChains;
@@ -50,29 +52,24 @@ const send = async () => {
 
   console.log(res);
 };
-
-useWalletEvents('keystorechange', () => {
-  console.log('Changed');
-});
 </script>
 
 <template>
   <div>
-    Hello world {{ status }} {{ connected }}
-    {{ wallets.length }}
+    Wallet {{ walletName }} status: {{ status }}
     <button @click="disconnect" v-if="connected">DISCONNECT</button>
     <div v-else>
-      <div v-for="wallet in wallets" :key="wallet.options.name">
-        <button
-          @click="
-            {
-              open(wallet.options.name);
-            }
-          "
-        >
+      <VueQrcode
+        v-if="pairingURI"
+        :value="pairingURI"
+        type="image/png"
+        :color="{ dark: '#000000ff', light: '#ffffffff' }"
+      />
+      <div v-for="wallet in wallets" :key="wallet.options.wallet_name">
+        <button @click="open(wallet.options.wallet_name)">
           <img
-            :src="wallet.options.logoUrls?.light?.svg"
-            :alt="wallet.options.prettyName"
+            :src="wallet.logoLight"
+            :alt="wallet.options.pretty_name"
             height="48px"
             width="48px"
             :style="{ width: '48px', height: '48px' }"
@@ -81,8 +78,8 @@ useWalletEvents('keystorechange', () => {
 
         <a
           :href="
-            wallet.options.downloads && wallet.options.downloads.length > 0
-              ? wallet.options.downloads[0].link
+            wallet.options.platforms && wallet.options.platforms.length > 0
+              ? wallet.options.platforms[0].install_link
               : '#'
           "
           target="_blank"

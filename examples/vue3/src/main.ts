@@ -13,12 +13,24 @@ import {
   osmosisAssetList,
 } from '@nabla-studio/chain-registry';
 import type { Config } from '@quirks/store';
-import { keplrExtension, leapExtension } from '@quirks/wallets';
+import { keplrExtension, keplrMobile, leapExtension } from '@quirks/wallets';
 
 const config: Config = {
-  wallets: [keplrExtension, leapExtension],
+  wallets: [keplrExtension, leapExtension, keplrMobile],
   chains: [osmosis, bitsong],
   assetsLists: [osmosisAssetList, bitsongAssetList],
+  walletConnectOptions: {
+    providerOpts: {
+      logger: 'info',
+      projectId: import.meta.env.VITE_PROJECT_ID,
+      metadata: {
+        name: 'Quirks App',
+        description: 'Quirks App for WalletConnect',
+        url: 'https://walletconnect.com/',
+        icons: ['https://avatars.githubusercontent.com/u/37784886'],
+      },
+    },
+  },
 };
 
 app.use(router).use(quirksPlugin, config).mount('#root');

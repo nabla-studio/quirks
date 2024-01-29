@@ -119,6 +119,7 @@
     "stream-browserify": "^3.0.0",
     "utf-8-validate": "^6.0.3",
     "vue": "^3.3.4",
+    "vue-qrcode": "^2.2.2",
     "vue-router": "^4.2.4",
     "zustand": "^4.5.0",
     "zustand-vue": "1.0.0-beta.20"
