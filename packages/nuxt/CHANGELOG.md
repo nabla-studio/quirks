@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/nabla-studio/quirks/compare/nuxt@0.1.30...nuxt@0.2.0) (2024-01-29)
+
+### Dependency Updates
+
+* `vue` updated to version `0.1.30`
+
+### Features
+
+* **nuxt:** :sparkles: expose useWalletConnect ([76d7f15](https://github.com/nabla-studio/quirks/commit/76d7f15c43eb913e0501d58ddb138863d189eb11))
+
 ## [0.1.30](https://github.com/nabla-studio/quirks/compare/nuxt@0.1.29...nuxt@0.1.30) (2024-01-29)
 
 ### Dependency Updates
