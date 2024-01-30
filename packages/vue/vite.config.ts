@@ -45,7 +45,7 @@ export default defineConfig({
         'zustand',
         'zustand/vanilla',
         'zustand/middleware',
-        'zustand-vue',
+        'vue-zustand',
         '@quirks/store',
         '@quirks/core',
         'cosmjs-types',
