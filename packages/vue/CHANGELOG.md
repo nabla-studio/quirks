@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.1](https://github.com/nabla-studio/quirks/compare/vue@0.7.0...vue@0.7.1) (2024-01-30)
+
+
+### Bug Fixes
+
+* **vue:** :bug: fix reactivity ([2b548ab](https://github.com/nabla-studio/quirks/commit/2b548aba1231272af4c6c6b44ade6add6948f967))
+
 ## [0.7.0](https://github.com/nabla-studio/quirks/compare/vue@0.6.2...vue@0.7.0) (2024-01-29)
 
 
