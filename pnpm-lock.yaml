@@ -122,12 +122,12 @@ dependencies:
   vue-router:
     specifier: ^4.2.4
     version: 4.2.5(vue@3.3.8)
+  vue-zustand:
+    specifier: ^0.6.0
+    version: 0.6.0(vue@3.3.8)(zustand@4.5.0)
   zustand:
     specifier: ^4.5.0
     version: 4.5.0(@types/react@18.2.31)(react@18.2.0)
-  zustand-vue:
-    specifier: 1.0.0-beta.20
-    version: 1.0.0-beta.20(vue@3.3.8)(zustand@4.5.0)
 
 devDependencies:
   '@babel/core':
@@ -6239,6 +6239,10 @@ packages:
     resolution: {integrity: sha512-95Sfz4nvMAb0Nl9DTxN3j64adfwfbBPEYq14VN7zT5J5O2M9V6iZMIIQU1U+pJyl9agHYHNCqhCXgyEtIRRa5A==}
     dev: true
 
+  /@types/web-bluetooth@0.0.20:
+    resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
+    dev: false
+
   /@types/yargs-parser@21.0.2:
     resolution: {integrity: sha512-5qcvofLPbfjmBfKaLfj/+f+Sbd6pN4zl7w7VSVI5uz7m9QZTuB2aZAa2uo1wHFBNN2x6g/SoTkXmd8mQnQF2Cw==}
 
@@ -7097,6 +7101,31 @@ packages:
       '@vue/language-core': 1.8.20(typescript@5.2.2)
     transitivePeerDependencies:
       - typescript
+
+  /@vueuse/core@10.7.2(vue@3.3.8):
+    resolution: {integrity: sha512-AOyAL2rK0By62Hm+iqQn6Rbu8bfmbgaIMXcE3TSr7BdQ42wnSFlwIdPjInO62onYsEMK/yDMU8C6oGfDAtZ2qQ==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.20
+      '@vueuse/metadata': 10.7.2
+      '@vueuse/shared': 10.7.2(vue@3.3.8)
+      vue-demi: 0.14.6(vue@3.3.8)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
+
+  /@vueuse/metadata@10.7.2:
+    resolution: {integrity: sha512-kCWPb4J2KGrwLtn1eJwaJD742u1k5h6v/St5wFe8Quih90+k2a0JP8BS4Zp34XUuJqS2AxFYMb1wjUL8HfhWsQ==}
+    dev: false
+
+  /@vueuse/shared@10.7.2(vue@3.3.8):
+    resolution: {integrity: sha512-qFbXoxS44pi2FkgFjPvF4h7c9oMDutpyBdcJdMYIMg9XyXli2meFMuaKn+UMgsClo//Th6+beeCgqweT/79BVA==}
+    dependencies:
+      vue-demi: 0.14.6(vue@3.3.8)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: false
 
   /@walletconnect/core@2.10.5(@react-native-async-storage/async-storage@1.21.0)(bufferutil@4.0.8)(utf-8-validate@6.0.3):
     resolution: {integrity: sha512-QnGHkA05KzJrtqExPqXm/TsstM1uTDI8tQT0x86/DuR6LdiYEntzSpVjnv7kKK6Mo9UxlXfud431dNRfOW5uJg==}
@@ -18965,6 +18994,21 @@ packages:
     resolution: {integrity: sha512-6bnLkn8O0JJyiFSIF0EfCogzeqNXpnjJ0vW/SZzNHfe6sPx30lTtTXlE5TFs2qhJlAtDFybStVNpL73cPe3OMQ==}
     dev: true
 
+  /vue-demi@0.14.6(vue@3.3.8):
+    resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.3.8(typescript@5.2.2)
+    dev: false
+
   /vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: false
@@ -19023,6 +19067,19 @@ packages:
       '@vue/typescript': 1.8.20(typescript@5.2.2)
       semver: 7.5.4
       typescript: 5.2.2
+
+  /vue-zustand@0.6.0(vue@3.3.8)(zustand@4.5.0):
+    resolution: {integrity: sha512-injGg2Nxcq7RBXe4n92LmIOcAP3DxqHr3w5uVhkV1BnCIChjztXfsWEX9k8IP3zb7EmHnDV5SW0XtxY6TQct2Q==}
+    peerDependencies:
+      vue: '>=3.2.0'
+      zustand: '>=4.3.0'
+    dependencies:
+      '@vueuse/core': 10.7.2(vue@3.3.8)
+      vue: 3.3.8(typescript@5.2.2)
+      zustand: 4.5.0(@types/react@18.2.31)(react@18.2.0)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+    dev: false
 
   /vue@3.3.8(typescript@5.2.2):
     resolution: {integrity: sha512-5VSX/3DabBikOXMsxzlW8JyfeLKlG9mzqnWgLQLty88vdZL7ZJgrdgBOmrArwxiLtmS+lNNpPcBYqrhE6TQW5w==}
@@ -19527,16 +19584,6 @@ packages:
       archiver-utils: 4.0.1
       compress-commons: 5.0.1
       readable-stream: 3.6.2
-    dev: false
-
-  /zustand-vue@1.0.0-beta.20(vue@3.3.8)(zustand@4.5.0):
-    resolution: {integrity: sha512-4lKOGVxFNnSpisO9czhv+RHGTIsVKSLh/Ub63i7A2jaebDQ5MrmBcXrHG094SiIsw4PGF2AEfI9LG9tpVxqj4A==}
-    peerDependencies:
-      vue: '>=2.6.0'
-      zustand: '>=4.1.4'
-    dependencies:
-      vue: 3.3.8(typescript@5.2.2)
-      zustand: 4.5.0(@types/react@18.2.31)(react@18.2.0)
     dev: false
 
   /zustand@4.5.0(@types/react@18.2.31)(react@18.2.0):

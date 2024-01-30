@@ -1,15 +1,15 @@
 import { createConfig } from '@quirks/store';
-import { type Ref, inject } from 'vue';
-import create from 'zustand-vue';
+import { inject } from 'vue';
+import create from 'vue-zustand';
 import { USE_QUIRKS_KEY } from '../plugin';
 
 export function useQuirks() {
-  const store = inject<Ref<ReturnType<typeof createConfig>>>(USE_QUIRKS_KEY);
+  const store = inject<ReturnType<typeof createConfig>>(USE_QUIRKS_KEY);
 
-  if (!store?.value)
+  if (!store)
     throw new Error(
-      ['[Quirks]: `useConfig` must be used within `quirksPlugin`'].join('\n'),
+      ['[Quirks]: `useQuirks` must be used within `quirksPlugin`'].join('\n'),
     );
 
-  return create(store.value);
+  return create(store);
 }

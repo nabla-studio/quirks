@@ -1,9 +1,11 @@
+import { computed } from 'vue';
 import { useQuirks } from './quirks';
 
 export const useConfig = () => {
-  const wallets = useQuirks()((state) => state.wallets);
-  const chains = useQuirks()((state) => state.chains);
-  const assetsLists = useQuirks()((state) => state.assetsLists);
+  const state = useQuirks()((state) => state);
+  const wallets = computed(() => state.wallets.value);
+  const chains = computed(() => state.chains.value);
+  const assetsLists = computed(() => state.assetsLists.value);
 
   return {
     wallets,

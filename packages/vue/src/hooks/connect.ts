@@ -1,26 +1,22 @@
 import { ConnectionStates } from '@quirks/store';
 import { useQuirks } from './quirks';
+import { computed } from 'vue';
 
 export const useConnect = () => {
+  const state = useQuirks()((state) => state);
   const connect = useQuirks()((state) => state.connect);
   const disconnect = useQuirks()((state) => state.disconnect);
-  const status = useQuirks()((state) => state.status);
-  const setupStatus = useQuirks()((state) => state.setupStatus);
-  const reconnectionStatus = useQuirks()((state) => state.reconnectionStatus);
-  const wallet = useQuirks()((state) => state.wallet);
-  const walletName = useQuirks()((state) => state.walletName);
-  const connected = useQuirks()(
-    (state) => state.status === ConnectionStates.CONNECTED,
+  const status = computed(() => state.status.value);
+  const setupStatus = computed(() => state.setupStatus.value);
+  const reconnectionStatus = computed(() => state.reconnectionStatus.value);
+  const wallet = computed(() => state.wallet?.value);
+  const walletName = computed(() => state.walletName?.value);
+  const connected = computed(() => status.value === ConnectionStates.CONNECTED);
+  const waiting = computed(() => status.value === ConnectionStates.WAITING);
+  const disconnected = computed(
+    () => status.value === ConnectionStates.DISCONNECTED,
   );
-  const waiting = useQuirks()(
-    (state) => state.status === ConnectionStates.WAITING,
-  );
-  const disconnected = useQuirks()(
-    (state) => state.status === ConnectionStates.DISCONNECTED,
-  );
-  const rejected = useQuirks()(
-    (state) => state.status === ConnectionStates.REJECTED,
-  );
+  const rejected = computed(() => status.value === ConnectionStates.REJECTED);
 
   return {
     connect,

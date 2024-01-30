@@ -1,9 +1,11 @@
+import { computed } from 'vue';
 import { useQuirks } from './quirks';
 
 export const useWalletConnect = () => {
-  const pairingURI = useQuirks()((state) => state.pairingURI);
-  const namespaces = useQuirks()((state) => state.namespaces);
-  const providerOpts = useQuirks()((state) => state.providerOpts);
+  const state = useQuirks()((state) => state);
+  const pairingURI = computed(() => state.pairingURI?.value);
+  const namespaces = computed(() => state.namespaces.value);
+  const providerOpts = computed(() => state.providerOpts?.value);
 
   return {
     pairingURI,

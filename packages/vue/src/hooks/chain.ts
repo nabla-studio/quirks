@@ -4,8 +4,9 @@ import type { StdSignDoc } from '@cosmjs/amino';
 import { computed } from 'vue';
 
 export const useChains = () => {
-  const accounts = useQuirks()((state) => state.accounts);
-  const accountName = useQuirks()((state) => state.accountName);
+  const state = useQuirks()((state) => state);
+  const accounts = computed(() => state.accounts.value);
+  const accountName = computed(() => state.accountName);
   const getAddresses = useQuirks()((state) => state.getAddresses);
   const getAddress = useQuirks()((state) => state.getAddress);
   const getChain = useQuirks()((state) => state.getChain);
@@ -20,9 +21,10 @@ export const useChains = () => {
 };
 
 export const useChain = (chainName: string) => {
-  const chains = useQuirks()((state) => state.chains);
-  const accounts = useQuirks()((state) => state.accounts);
-  const accountName = useQuirks()((state) => state.accountName);
+  const state = useQuirks()((state) => state);
+  const chains = computed(() => state.chains.value);
+  const accounts = computed(() => state.accounts.value);
+  const accountName = computed(() => state.accountName);
   const getOfflineSigner = useQuirks()((state) => state.getOfflineSigner);
   const getOfflineSignerOnlyAmino = useQuirks()(
     (state) => state.getOfflineSignerOnlyAmino,
@@ -38,7 +40,7 @@ export const useChain = (chainName: string) => {
   );
 
   const account = computed(() =>
-    accounts.value.find((account) => account.chainId === chain.value!.chain_id),
+    accounts.value.find((account) => account.chainId === chain.value?.chain_id),
   );
 
   const address = computed(() => account.value?.bech32Address);
