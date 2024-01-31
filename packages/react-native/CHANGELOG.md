@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.2](https://github.com/nabla-studio/quirks/compare/react-native@0.2.1...react-native@0.2.2) (2024-01-31)
+
+### Dependency Updates
+
+* `store` updated to version `0.2.1`
+* `core` updated to version `0.2.1`
 ## [0.2.1](https://github.com/nabla-studio/quirks/compare/react-native@0.2.0...react-native@0.2.1) (2024-01-26)
 
 ### Dependency Updates
