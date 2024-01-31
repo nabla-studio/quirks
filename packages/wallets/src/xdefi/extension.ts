@@ -8,11 +8,18 @@ import type {
   OfflineDirectSigner,
   DirectSignResponse,
 } from '@cosmjs/proto-signing';
-import type { Key, SignOptions, WalletOptions } from '@quirks/core';
+import type {
+  Key,
+  SignOptions,
+  SuggestChain,
+  SuggestToken,
+  WalletOptions,
+} from '@quirks/core';
 import { ExtensionWallet, assertIsDefined } from '@quirks/core';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import Long from 'long';
 import type { XDEFI } from './types';
+import { getChainInfo } from '../utils';
 
 export class XDEFIWalletExtension extends ExtensionWallet<XDEFI> {
   constructor(options: WalletOptions) {
@@ -131,11 +138,27 @@ export class XDEFIWalletExtension extends ExtensionWallet<XDEFI> {
     return this.client.verifyArbitrary(chainId, signer, data, signature);
   }
 
-  override async suggestTokens(): Promise<void> {
-    console.warn("xDefi doesn't support suggestTokens");
+  override async suggestTokens(suggestions: SuggestToken[]): Promise<void> {
+    assertIsDefined(this.client);
+
+    for (const suggestion of suggestions) {
+      for (const token of suggestion.tokens) {
+        await this.client.suggestToken(
+          suggestion.chainId,
+          token.contractAddress,
+          token.viewingKey,
+        );
+      }
+    }
   }
 
-  override async suggestChains(): Promise<void> {
-    console.warn("xDefi doesn't support suggestChains");
+  override async suggestChains(suggestions: SuggestChain[]): Promise<void> {
+    assertIsDefined(this.client);
+
+    for (const suggestion of suggestions) {
+      const suggestChain = getChainInfo(suggestion.chain, suggestion.assetList);
+
+      await this.client.experimentalSuggestChain(suggestChain);
+    }
   }
 }
