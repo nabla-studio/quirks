@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.12.0](https://github.com/nabla-studio/quirks/compare/wallets@0.11.2...wallets@0.12.0) (2024-01-31)
+
+
+### Features
+
+* **wallets:** :sparkles: improve xdefi extension ([8320dbc](https://github.com/nabla-studio/quirks/commit/8320dbce71a73dd8e11c179a925c99fabb1b1675))
+* **wallets:** :sparkles: remove duplicated code ([b644aeb](https://github.com/nabla-studio/quirks/commit/b644aeb638485e7a48fafe25c9ed3dd858bf4556))
+* **wallets:** :sparkles: remove duplicated code ([6695fe6](https://github.com/nabla-studio/quirks/commit/6695fe6dc4ed1e00508872f22389eb209031bda4))
+
 ## [0.11.2](https://github.com/nabla-studio/quirks/compare/wallets@0.11.1...wallets@0.11.2) (2024-01-31)
 
 ### Dependency Updates
