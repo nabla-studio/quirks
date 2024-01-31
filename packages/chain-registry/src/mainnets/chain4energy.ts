@@ -243,6 +243,11 @@ export const chain4Energy: Chain = {
         address: 'seed.c4e.validatus.com:2000',
         provider: 'Validatus',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {

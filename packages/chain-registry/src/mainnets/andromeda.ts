@@ -77,7 +77,7 @@ export const andromeda: Chain = {
       },
       {
         id: '28876b3094518bef97a1250ef641c26b7d4a658d',
-        address: '88.99.208.54:39656',
+        address: '138.201.21.197:39656',
         provider: 'StakeTown',
       },
     ],
@@ -87,10 +87,6 @@ export const andromeda: Chain = {
       {
         address: 'https://rpc.andromeda-1.andromeda.aviaone.com',
         provider: 'AVIAONE',
-      },
-      {
-        address: 'https://rpc-andromeda.nodeist.net',
-        provider: 'nodeist',
       },
       {
         address: 'https://andromeda.rpc.kjnodes.com',
@@ -129,10 +125,6 @@ export const andromeda: Chain = {
       {
         address: 'https://api.andromeda-1.andromeda.aviaone.com/',
         provider: 'AVIAONE',
-      },
-      {
-        address: 'https://api-andromeda.nodeist.net',
-        provider: 'nodeist',
       },
       {
         address: 'https://andromeda.api.kjnodes.com',
@@ -175,10 +167,6 @@ export const andromeda: Chain = {
       {
         address: 'https://grpc.andromeda-1.andromeda.aviaone.com:9094',
         provider: 'AVIAONE',
-      },
-      {
-        address: 'https://grpc-andromeda.nodeist.net:443',
-        provider: 'nodeist',
       },
       {
         address: 'andromeda.grpc.kjnodes.com:443',
@@ -254,6 +242,7 @@ export const andromedaAssetList: AssetLists = {
           exponent: 6,
         },
       ],
+      coingecko_id: 'andromeda-2',
       base: 'uandr',
       name: 'Andr',
       display: 'andr',

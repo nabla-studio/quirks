@@ -33,8 +33,8 @@ export const composable: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/notional-labs/composable-centauri',
-    recommended_version: 'v6.3.6',
-    compatible_versions: ['v6.3.6'],
+    recommended_version: 'v6.4.3',
+    compatible_versions: ['v6.4.3'],
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/notional-labs/composable-networks/main/mainnet/genesis.json',
@@ -135,6 +135,22 @@ export const composable: Chain = {
         },
         height: 2301070,
         proposal: 12,
+        next_version_name: 'v6_4',
+      },
+      {
+        name: 'v6_4',
+        tag: 'v6.4.2',
+        recommended_version: 'v6.4.3',
+        compatible_versions: ['v6.4.3'],
+        cosmos_sdk_version: 'v0.47.5',
+        ibc_go_version:
+          'notional-labs/ibc-go/v7 v7.2.1-0.20231010040541-6cf43006971f',
+        consensus: {
+          type: 'cometbft',
+          version: 'composablefi/cometbft v0.37.2-fixed-len-vote-time-tag',
+        },
+        height: 3486739,
+        proposal: 14,
         next_version_name: '',
       },
     ],
@@ -161,6 +177,16 @@ export const composable: Chain = {
         address: 'seeds.whispernode.com:22256',
         provider: 'WhisperNode 🤐',
       },
+      {
+        id: 'a3910d1bf22b4dacf66979d6ea75fd134aee00db',
+        address: 'seed.composable.validatus.com:2000',
+        provider: 'Validatus',
+      },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -175,7 +201,7 @@ export const composable: Chain = {
       },
       {
         id: '7082a715395427a519e611ed1454b0965fd95ef5',
-        address: '88.99.208.54:37656',
+        address: '138.201.21.197:37656',
         provider: 'StakeTown',
       },
       {
@@ -233,6 +259,10 @@ export const composable: Chain = {
         provider: 'Stake&Relax 🦥',
       },
       {
+        address: 'https://rpc.composable.validatus.com',
+        provider: 'Validatus',
+      },
+      {
         address: 'https://rpc.centauri.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
@@ -281,6 +311,10 @@ export const composable: Chain = {
       {
         address: 'https://composable-api.stakeandrelax.net',
         provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://api.composable.validatus.com',
+        provider: 'Validatus',
       },
       {
         address: 'https://lcd.centauri.bronbro.io:443',
@@ -339,6 +373,10 @@ export const composable: Chain = {
       {
         address: 'composable-rpc.stakeandrelax.net:22290',
         provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'grpc.composable.validatus.com',
+        provider: 'Validatus',
       },
       {
         address: 'https://grpc.centauri.bronbro.io:443',

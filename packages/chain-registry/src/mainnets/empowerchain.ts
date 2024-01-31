@@ -79,6 +79,11 @@ export const empowerchain: Chain = {
         address: 'empowerchain.seed.mzonder.com:12156',
         provider: 'MZONDER',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {

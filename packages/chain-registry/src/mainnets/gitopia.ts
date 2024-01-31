@@ -187,6 +187,11 @@ export const gitopia: Chain = {
         address: 'seeds-3.anode.team:10260',
         provider: 'AlxVoy ⚡ ANODE.TEAM',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -231,7 +236,7 @@ export const gitopia: Chain = {
       },
       {
         id: 'd5525675ceb88d2c4f4df828ec01d237bcc11950',
-        address: '88.99.208.54:26656',
+        address: '138.201.21.197:26656',
         provider: 'StakeTown',
       },
       {

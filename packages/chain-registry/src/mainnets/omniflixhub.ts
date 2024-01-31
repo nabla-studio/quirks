@@ -14,8 +14,14 @@ export const omniflixhub: Chain = {
   slip44: 118,
   codebase: {
     git_repo: 'https://github.com/OmniFlix/omniflixhub',
-    recommended_version: 'v0.12.1',
-    compatible_versions: ['v0.12.1'],
+    recommended_version: 'v2.0.0',
+    compatible_versions: ['v2.0.0'],
+    cosmos_sdk_version: 'v0.47.5',
+    ibc_go_version: 'v7.3.1',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.37.2',
+    },
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/OmniFlix/mainnet/main/omniflixhub-1/genesis.json',
@@ -25,6 +31,12 @@ export const omniflixhub: Chain = {
         name: 'v0.8.0',
         recommended_version: 'v0.8.0',
         compatible_versions: ['v0.8.0'],
+        cosmos_sdk_version: 'v0.45.10',
+        ibc_go_version: 'v3.3.1',
+        consensus: {
+          type: 'tendermint',
+          version: 'v0.34.22',
+        },
         next_version_name: 'v0.10.0',
       },
       {
@@ -33,6 +45,12 @@ export const omniflixhub: Chain = {
         height: 6262420,
         recommended_version: 'v0.10.0',
         compatible_versions: ['v0.10.0'],
+        cosmos_sdk_version: 'v0.45.15',
+        ibc_go_version: 'v3.4.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.27',
+        },
         next_version_name: 'v0.11.0',
       },
       {
@@ -41,6 +59,12 @@ export const omniflixhub: Chain = {
         height: 7339200,
         recommended_version: 'v0.11.1',
         compatible_versions: ['v0.11.1'],
+        cosmos_sdk_version: 'v0.45.16',
+        ibc_go_version: 'v4.4.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
         next_version_name: 'v0.12.x',
       },
       {
@@ -49,6 +73,26 @@ export const omniflixhub: Chain = {
         height: 8054200,
         recommended_version: 'v0.12.1',
         compatible_versions: ['v0.12.1'],
+        cosmos_sdk_version: 'v0.45.16',
+        ibc_go_version: 'v4.4.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        next_version_name: 'v2.0.0',
+      },
+      {
+        name: 'v2.0.0',
+        proposal: 28,
+        height: 10428200,
+        recommended_version: 'v2.0.0',
+        compatible_versions: ['v2.0.0'],
+        cosmos_sdk_version: 'v0.47.5',
+        ibc_go_version: 'v7.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
         next_version_name: '',
       },
     ],
@@ -103,6 +147,11 @@ export const omniflixhub: Chain = {
         id: '6b0ffcce9b59b91ceb8eea5d4599e27707e3604a',
         address: 'seeds.stakeup.tech:10215',
         provider: 'StakeUp',
+      },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [

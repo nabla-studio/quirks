@@ -114,6 +114,16 @@ export const sommelier: Chain = {
         address: 'sommelier-mainnet-seed.autostake.com:27176',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
+      {
+        id: 'ab5a8afdc5db008c1288e129c2eb9e3e900e7fda',
+        address: 'seed.sommelier.validatus.com:6000',
+        provider: 'Validatus',
+      },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -158,6 +168,10 @@ export const sommelier: Chain = {
         address: 'https://sommelier-rpc.w3coins.io',
         provider: 'w3coins',
       },
+      {
+        address: 'https://rpc.sommelier.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     rest: [
       {
@@ -188,6 +202,10 @@ export const sommelier: Chain = {
         address: 'https://sommelier-api.w3coins.io',
         provider: 'w3coins',
       },
+      {
+        address: 'https://api.sommelier.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     grpc: [
       {
@@ -213,6 +231,10 @@ export const sommelier: Chain = {
       {
         address: 'sommelier-grpc.w3coins.io:14190',
         provider: 'w3coins',
+      },
+      {
+        address: 'grpc.sommelier.validatus.com',
+        provider: 'Validatus',
       },
     ],
   },

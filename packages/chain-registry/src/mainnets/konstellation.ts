@@ -70,6 +70,11 @@ export const konstellation: Chain = {
         address: 'seeds.stakerhouse.com:10856',
         provider: 'StakerHouse',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {

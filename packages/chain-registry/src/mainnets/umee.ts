@@ -405,6 +405,11 @@ export const umee: Chain = {
         address: 'umee.seed.mzonder.com:10256',
         provider: 'MZONDER',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -449,7 +454,7 @@ export const umee: Chain = {
       },
       {
         id: '635debe6c5cbcb6861b6c8b32c47d8ee84d99c16',
-        address: '88.99.208.54:29656',
+        address: '138.201.21.197:29656',
         provider: 'StakeTown',
       },
       {

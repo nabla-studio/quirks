@@ -181,7 +181,7 @@ export const aura: Chain = {
       },
       {
         id: '2bd24dbac94c3b95707c8f06a57d61a31ae666fa',
-        address: '88.99.208.54:46656',
+        address: '138.201.21.197:46656',
         provider: 'StakeTown',
       },
     ],
@@ -248,6 +248,10 @@ export const aura: Chain = {
         address: 'https://aura-rpc.stake-town.com',
         provider: 'StakeTown',
       },
+      {
+        address: 'https://aura-rpc.palamar.io',
+        provider: 'Palamar',
+      },
     ],
     rest: [
       {
@@ -310,6 +314,10 @@ export const aura: Chain = {
         address: 'https://aura-api.stake-town.com',
         provider: 'StakeTown',
       },
+      {
+        address: 'https://aura-api.palamar.io',
+        provider: 'Palamar',
+      },
     ],
     grpc: [
       {
@@ -367,6 +375,10 @@ export const aura: Chain = {
       {
         address: 'grpc.aura.safeblock.space:9090',
         provider: 'Safe Block',
+      },
+      {
+        address: 'aura-grpc.palamar.io:443',
+        provider: 'Palamar',
       },
     ],
   },

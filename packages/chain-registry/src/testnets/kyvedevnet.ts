@@ -3,7 +3,7 @@ import type { Chain, AssetLists, ChainVersions } from '../types';
 export const kyvedevnet: Chain = {
   $schema: '../../chain.schema.json',
   chain_name: 'kyvedevnet',
-  chain_id: 'korellia',
+  chain_id: 'korellia-2',
   pretty_name: 'KYVE Korellia',
   status: 'live',
   network_type: 'devnet',
@@ -95,19 +95,35 @@ export const kyvedevnetAssetList: AssetLists = {
         },
         {
           denom: 'kyve',
-          exponent: 9,
+          exponent: 6,
         },
       ],
       base: 'tkyve',
       name: 'KYVE',
       display: 'kyve',
       symbol: 'KYVE',
+      traces: [
+        {
+          type: 'test-mintage',
+          counterparty: {
+            chain_name: 'kyve',
+            base_denom: 'ukyve',
+          },
+          provider: 'Kyve',
+        },
+      ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/kyvedevnet/images/kyve.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve-token.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve-token.svg',
       },
       images: [
         {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/kyvedevnet/images/kyve.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve-token.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve-token.svg',
+          image_sync: {
+            chain_name: 'kyve',
+            base_denom: 'ukyve',
+          },
         },
       ],
     },

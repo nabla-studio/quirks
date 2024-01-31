@@ -110,6 +110,10 @@ export const okp4Testnet: Chain = {
         provider: 'Chainlayer',
       },
       {
+        address: 'http://okp.rpc.t.stavr.tech:10097',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://okp4-testnet-rpc.polkachu.com',
         provider: 'Polkachu',
       },
@@ -118,6 +122,10 @@ export const okp4Testnet: Chain = {
       {
         address: 'https://okptest-lcd.quickapi.com',
         provider: 'Chainlayer',
+      },
+      {
+        address: 'https://okp4.api.t.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://okp4-testnet-api.polkachu.com/',
@@ -130,6 +138,10 @@ export const okp4Testnet: Chain = {
         provider: 'Polkachu',
       },
       {
+        address: 'http://okp.grpc.t.stavr.tech:8029',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'grpc.testnet.okp4.network:443',
         provider: 'OKP4',
       },
@@ -140,6 +152,11 @@ export const okp4Testnet: Chain = {
       kind: 'ping.pub',
       url: 'https://testnet.ping.pub/OKP4%20testnet',
       tx_page: 'https://testnet.ping.pub/OKP4%20testnet/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/OKP4-Testnet',
+      tx_page: 'https://explorer.stavr.tech/OKP4-Testnet/tx/${txHash}',
     },
     {
       kind: 'ping.pub',

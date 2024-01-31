@@ -33,13 +33,13 @@ export const sei: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sei-protocol/sei-chain',
-    recommended_version: 'v3.5.1',
-    compatible_versions: ['v3.5.0', 'v3.5.1'],
+    recommended_version: 'v3.6.1',
+    compatible_versions: ['v3.6.1'],
     ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
-    cosmos_sdk_version: 'sei-cosmos v0.2.63',
+    cosmos_sdk_version: 'sei-cosmos v0.2.72',
     consensus: {
       type: 'sei-tendermint',
-      version: 'v0.2.35',
+      version: 'v0.2.37',
     },
     cosmwasm_version: 'sei-wasmd v0.0.4',
     cosmwasm_enabled: true,
@@ -127,6 +127,23 @@ export const sei: Chain = {
         cosmwasm_version: 'sei-wasmd v0.0.4',
         cosmwasm_enabled: true,
         cosmwasm_path: '$HOME/.sei/wasm',
+        next_version_name: 'v3.6.1',
+      },
+      {
+        name: 'v3.6.1',
+        proposal: 49,
+        height: 53894102,
+        recommended_version: 'v3.6.1',
+        compatible_versions: ['v3.6.1'],
+        ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
+        cosmos_sdk_version: 'sei-cosmos v0.2.72',
+        consensus: {
+          type: 'sei-tendermint',
+          version: 'v0.2.37',
+        },
+        cosmwasm_version: 'sei-wasmd v0.0.4',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.sei/wasm',
         next_version_name: '',
       },
     ],
@@ -209,6 +226,10 @@ export const sei: Chain = {
         address: 'https://sei.rpc.kjnodes.com',
         provider: 'kjnodes',
       },
+      {
+        address: 'https://sei-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -235,6 +256,10 @@ export const sei: Chain = {
         address: 'https://sei.api.kjnodes.com',
         provider: 'kjnodes',
       },
+      {
+        address: 'https://sei-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -256,6 +281,10 @@ export const sei: Chain = {
       {
         address: 'sei.grpc.kjnodes.com:443',
         provider: 'kjnodes',
+      },
+      {
+        address: 'sei-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -423,6 +452,53 @@ export const seiAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/SenseiDog.png',
         },
       ],
+    },
+    {
+      description: 'The first memecoin on osmosis.',
+      denom_units: [
+        {
+          denom:
+            'ibc/AB7C92666DE8C7A977666B8080CABF0127B652B9D40F7251E6914DE942D9942B',
+          exponent: 0,
+        },
+        {
+          denom: 'WOSMO',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/AB7C92666DE8C7A977666B8080CABF0127B652B9D40F7251E6914DE942D9942B',
+      name: 'Wosmo',
+      display: 'WOSMO',
+      symbol: 'WOSMO',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+            channel_id: 'channel-0',
+          },
+          chain: {
+            channel_id: 'channel-782',
+            path: 'transfer/channel-782/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+      },
     },
   ],
 };

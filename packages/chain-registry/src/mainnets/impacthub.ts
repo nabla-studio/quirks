@@ -74,6 +74,11 @@ export const impacthub: Chain = {
         address: 'seeds.lavenderfive.com:16656',
         provider: 'Lavender.Five Nodes 🐝',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {

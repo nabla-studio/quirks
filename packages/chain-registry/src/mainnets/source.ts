@@ -78,6 +78,16 @@ export const source: Chain = {
         address: 'rpc.source.nodestake.top:666',
         provider: 'NodeStake',
       },
+      {
+        id: '8fb118f995c146357b67798e9bdd650d0c4161ea',
+        address: 'seed.source.validatus.com:3000',
+        provider: 'Validatus',
+      },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -111,7 +121,7 @@ export const source: Chain = {
       },
       {
         id: 'afc8fa287e2b6b46bbeba57dfcb4bd6dcab6b6a3',
-        address: '88.99.208.54:28656',
+        address: '138.201.21.197:28656',
         provider: 'StakeTown',
       },
       {
@@ -163,6 +173,10 @@ export const source: Chain = {
         address: 'https://source.rpc.skynodejs.net/',
         provider: 'skynodejs',
       },
+      {
+        address: 'rpc.source.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     rest: [
       {
@@ -201,6 +215,10 @@ export const source: Chain = {
         address: 'https://api.source.indonode.net',
         provider: 'Indonode',
       },
+      {
+        address: 'https://api.source.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     grpc: [
       {
@@ -230,6 +248,10 @@ export const source: Chain = {
       {
         address: 'https://source.grpc.skynodejs.net',
         provider: 'skynodejs',
+      },
+      {
+        address: 'https://grpc.source.validatus.com',
+        provider: 'Validatus',
       },
     ],
   },

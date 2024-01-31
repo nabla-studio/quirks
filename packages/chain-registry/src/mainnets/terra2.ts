@@ -32,13 +32,13 @@ export const terra2: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/terra-money/core/',
-    recommended_version: 'v2.6.4',
-    compatible_versions: ['v2.6.3', 'v2.6.4'],
+    recommended_version: 'v2.9.4',
+    compatible_versions: ['v2.9.4'],
     binaries: {
       'linux/arm64':
-        'https://github.com/terra-money/core/releases/download/v2.6.4/terra_2.6.4_Linux_arm64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.9.4/terra_2.9.4_Linux_arm64.tar.gz',
       'linux/amd64':
-        'https://github.com/terra-money/core/releases/download/v2.6.4/terra_2.6.4_Linux_x86_64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.9.4/terra_2.9.4_Linux_x86_64.tar.gz',
     },
     genesis: {
       name: 'v2.0',
@@ -192,6 +192,29 @@ export const terra2: Chain = {
           'linux/amd64':
             'https://github.com/terra-money/core/releases/download/v2.6.4/terra_2.6.4_Linux_x86_64.tar.gz',
         },
+        next_version_name: 'v2.9',
+      },
+      {
+        name: 'v2.9',
+        tag: 'v2.9.3',
+        recommended_version: 'v2.9.4',
+        compatible_versions: ['v2.9.4'],
+        proposal: 4798,
+        height: 8782000,
+        cosmos_sdk_version: 'v0.47.5-terra.2',
+        cosmwasm_enabled: true,
+        cosmwasm_version: 'v0.43.0-terra',
+        ibc_go_version: 'v7.3.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        binaries: {
+          'linux/arm64':
+            'https://github.com/terra-money/core/releases/download/v2.9.4/terra_2.9.4_Linux_arm64.tar.gz',
+          'linux/amd64':
+            'https://github.com/terra-money/core/releases/download/v2.9.4/terra_2.9.4_Linux_x86_64.tar.gz',
+        },
         next_version_name: '',
       },
     ],
@@ -314,6 +337,10 @@ export const terra2: Chain = {
         address: 'https://terra2.tdrsys.com:2053',
         provider: 'TdrSys',
       },
+      {
+        address: 'https://terra-rpc.cosmosrescue.dev:8443',
+        provider: 'cosmosrescue',
+      },
     ],
     rest: [
       {
@@ -351,6 +378,10 @@ export const terra2: Chain = {
       {
         address: 'https://terra2.tdrsys.com',
         provider: 'TdrSys',
+      },
+      {
+        address: 'https://terra-api.cosmosrescue.dev:8443',
+        provider: 'cosmosrescue',
       },
     ],
     grpc: [
@@ -1217,6 +1248,53 @@ export const terra2AssetList: AssetLists = {
       symbol: 'ADO',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/ADO.png',
+      },
+    },
+    {
+      description: 'The first memecoin on osmosis.',
+      denom_units: [
+        {
+          denom:
+            'ibc/7CB33A66F90533ED1E168CB3251253C719CF4B04FF1290AFD795F14CA1D67278',
+          exponent: 0,
+        },
+        {
+          denom: 'WOSMO',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/7CB33A66F90533ED1E168CB3251253C719CF4B04FF1290AFD795F14CA1D67278',
+      name: 'Wosmo',
+      display: 'WOSMO',
+      symbol: 'WOSMO',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+            channel_id: 'channel-1',
+          },
+          chain: {
+            channel_id: 'channel-251',
+            path: 'transfer/channel-251/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
       },
     },
   ],

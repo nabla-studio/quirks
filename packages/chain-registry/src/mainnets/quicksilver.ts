@@ -247,6 +247,11 @@ export const quicksilver: Chain = {
         address: 'seed-node.mms.team:27656',
         provider: 'MMS',
       },
+      {
+        id: '20783f43c3b574e9020d22be3415f8a545f0617f',
+        address: 'seed.quicksilver.validatus.com:4000',
+        provider: 'Validatus',
+      },
     ],
     persistent_peers: [
       {
@@ -291,7 +296,7 @@ export const quicksilver: Chain = {
       },
       {
         id: '3b3384dc98b0e0d8bb12eb21c396c19ce0e46cb0',
-        address: '88.99.208.54:50656',
+        address: '138.201.21.197:50656',
         provider: 'StakeTown',
       },
       {
@@ -387,6 +392,10 @@ export const quicksilver: Chain = {
         address: 'https://quicksilver.tdrsys.com:2053',
         provider: 'TdrSys',
       },
+      {
+        address: 'https://rpc.quicksilver.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     rest: [
       {
@@ -465,6 +474,10 @@ export const quicksilver: Chain = {
         address: 'https://quicksilver.tdrsys.com',
         provider: 'TdrSys',
       },
+      {
+        address: 'https://api.quicksilver.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     grpc: [
       {
@@ -542,6 +555,10 @@ export const quicksilver: Chain = {
       {
         address: 'https://quicksilver.tdrsys.com:2083',
         provider: 'TdrSys',
+      },
+      {
+        address: 'grpc.quicksilver.validatus.com',
+        provider: 'Validatus',
       },
     ],
   },

@@ -155,6 +155,11 @@ export const chihuahua: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: '7549de9e4fada385ec0bd2807f83f7d97c6a15ec',
+        address: 'seed.chihuahua.validatus.com:2000',
+        provider: 'Validatus',
+      },
     ],
     persistent_peers: [
       {
@@ -211,6 +216,10 @@ export const chihuahua: Chain = {
         address: 'https://chihuahua-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://rpc.chihuahua.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     rest: [
       {
@@ -249,6 +258,10 @@ export const chihuahua: Chain = {
         address: 'https://chihuahua-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://api.chihuahua.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     grpc: [
       {
@@ -274,6 +287,10 @@ export const chihuahua: Chain = {
       {
         address: 'chihuahua-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'grpc.chihuahua.validatus.com:443',
+        provider: 'Validatus',
       },
     ],
   },
@@ -415,6 +432,110 @@ export const chihuahuaAssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/woof.png',
+        },
+      ],
+    },
+    {
+      description: 'Tacos',
+      denom_units: [
+        {
+          denom:
+            'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/utacos',
+          exponent: 0,
+        },
+        {
+          denom: 'TACOS',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/utacos',
+      name: 'TACOS',
+      display: 'TACOS',
+      symbol: 'TACOS',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/tacos.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/tacos.png',
+        },
+      ],
+    },
+    {
+      description: 'Weed',
+      denom_units: [
+        {
+          denom:
+            'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/uweed',
+          exponent: 0,
+        },
+        {
+          denom: 'WEED',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/uweed',
+      name: 'WEED',
+      display: 'WEED',
+      symbol: 'WEED',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/weed.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/weed.png',
+        },
+      ],
+    },
+    {
+      description: 'Bulldog',
+      denom_units: [
+        {
+          denom:
+            'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/ubdog',
+          exponent: 0,
+        },
+        {
+          denom: 'BDOG',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/ubdog',
+      name: 'BDOG',
+      display: 'BDOG',
+      symbol: 'BDOG',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/bdog.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/bdog.png',
+        },
+      ],
+    },
+    {
+      description: 'CaneCorso',
+      denom_units: [
+        {
+          denom:
+            'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/ucorso',
+          exponent: 0,
+        },
+        {
+          denom: 'CORSO',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/chihuahua13jawsn574rf3f0u5rhu7e8n6sayx5gkw3eddhp/ucorso',
+      name: 'CORSO',
+      display: 'CORSO',
+      symbol: 'CORSO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/corso.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/corso.png',
         },
       ],
     },

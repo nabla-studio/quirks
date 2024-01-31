@@ -100,6 +100,11 @@ export const celestia: Chain = {
         address: 'seed-celestia.theamsolutions.info:23656',
         provider: 'AM Solutions',
       },
+      {
+        id: '23b88ebcfb2177dbd2d8b2920c363a25e038e69a',
+        address: 'seed.celestia.validatus.com:2000',
+        provider: 'Validatus',
+      },
     ],
     persistent_peers: [
       {
@@ -186,6 +191,10 @@ export const celestia: Chain = {
         address: 'https://rpc-celestia.theamsolutions.info',
         provider: 'AM Solutions',
       },
+      {
+        address: 'https://rpc.celestia.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     rest: [
       {
@@ -244,6 +253,10 @@ export const celestia: Chain = {
         address: 'https://rest-celestia.theamsolutions.info',
         provider: 'AM Solutions',
       },
+      {
+        address: 'https://api.celestia.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     grpc: [
       {
@@ -289,6 +302,10 @@ export const celestia: Chain = {
       {
         address: 'grpc-celestia.theamsolutions.info:443',
         provider: 'AM Solutions',
+      },
+      {
+        address: 'grpc.celestia.validatus.com',
+        provider: 'Validatus',
       },
     ],
   },

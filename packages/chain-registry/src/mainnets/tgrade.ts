@@ -50,7 +50,13 @@ export const tgrade: Chain = {
     ],
   },
   peers: {
-    seeds: [],
+    seeds: [
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+    ],
     persistent_peers: [
       {
         id: '0a63421f67d02e7fb823ea6d6ceb8acf758df24d',

@@ -106,6 +106,11 @@ export const emoney: Chain = {
         address: 'emoney-mainnet-seed.autostake.com:26746',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -265,7 +270,7 @@ export const emoneyAssetList: AssetLists = {
           exponent: 0,
         },
         {
-          denom: 'echf',
+          denom: 'chf',
           exponent: 6,
         },
       ],
@@ -294,7 +299,7 @@ export const emoneyAssetList: AssetLists = {
           exponent: 0,
         },
         {
-          denom: 'enok',
+          denom: 'nok',
           exponent: 6,
         },
       ],
@@ -323,7 +328,7 @@ export const emoneyAssetList: AssetLists = {
           exponent: 0,
         },
         {
-          denom: 'edkk',
+          denom: 'dkk',
           exponent: 6,
         },
       ],
@@ -352,7 +357,7 @@ export const emoneyAssetList: AssetLists = {
           exponent: 0,
         },
         {
-          denom: 'esek',
+          denom: 'sek',
           exponent: 6,
         },
       ],
