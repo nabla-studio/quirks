@@ -113,6 +113,11 @@ export const cheqd: Chain = {
         address: 'seeds.whispernode.com:16156',
         provider: 'WhisperNode 🤐',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {

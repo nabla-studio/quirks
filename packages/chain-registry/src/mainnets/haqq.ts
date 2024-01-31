@@ -460,6 +460,10 @@ export const haqq: Chain = {
         address: 'https://rpc-haqq.sr20de.xyz:443',
         provider: 'Sr20de',
       },
+      {
+        address: 'https://haqq-rpc.palamar.io',
+        provider: 'Palamar',
+      },
     ],
     rest: [
       {
@@ -494,6 +498,10 @@ export const haqq: Chain = {
         address: 'https://api-haqq.sr20de.xyz',
         provider: 'Sr20de',
       },
+      {
+        address: 'https://haqq-api.palamar.io',
+        provider: 'Palamar',
+      },
     ],
     grpc: [
       {
@@ -527,6 +535,10 @@ export const haqq: Chain = {
       {
         address: 'https://grpc-haqq.sr20de.xyz',
         provider: 'Sr20de',
+      },
+      {
+        address: 'haqq-grpc.palamar.io:443',
+        provider: 'Palamar',
       },
     ],
     'evm-http-jsonrpc': [
@@ -585,6 +597,11 @@ export const haqq: Chain = {
       kind: 'KonsorTech Explorer',
       url: 'https://explorer.konsortech.xyz/haqq',
       tx_page: 'https://explorer.konsortech.xyz/haqq/tx/${txHash}',
+    },
+    {
+      kind: 'Palamar Explorer',
+      url: 'https://explorer.palamar.io/haqq',
+      tx_page: 'https://explorer.palamar.io/haqq/tx/${txHash}',
     },
   ],
   images: [

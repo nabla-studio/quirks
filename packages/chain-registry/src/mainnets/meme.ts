@@ -57,6 +57,11 @@ export const meme: Chain = {
         address: 'seeds.polkachu.com:14756',
         provider: 'Polkachu',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {

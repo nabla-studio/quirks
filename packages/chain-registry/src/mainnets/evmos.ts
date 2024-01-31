@@ -269,6 +269,11 @@ export const evmos: Chain = {
         address: 'seed-node.mms.team:37656',
         provider: 'MMS',
       },
+      {
+        id: '8f0364267437c746762af90e6ac550033553b399',
+        address: 'seed.evmos.validatus.com:2000',
+        provider: 'Validatus',
+      },
     ],
     persistent_peers: [
       {
@@ -404,6 +409,10 @@ export const evmos: Chain = {
         provider: 'Stake Village',
       },
       {
+        address: 'https://rpc.evmos.validatus.com',
+        provider: 'Validatus',
+      },
+      {
         address: 'https://rpc.evmos.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
@@ -490,6 +499,10 @@ export const evmos: Chain = {
         provider: 'Stake Village',
       },
       {
+        address: 'https://api.evmos.validatus.com',
+        provider: 'Validatus',
+      },
+      {
         address: 'https://lcd.evmos.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
@@ -568,6 +581,10 @@ export const evmos: Chain = {
         provider: 'Stake Village',
       },
       {
+        address: 'grpc.evmos.validatus.com:443',
+        provider: 'Validatus',
+      },
+      {
         address: 'https://grpc.evmos.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
@@ -636,6 +653,10 @@ export const evmos: Chain = {
       {
         address: 'https://evmos-mainnet.jsonrpc.stakevillage.net',
         provider: 'Stake Village',
+      },
+      {
+        address: 'https://json-rpc.evmos.validatus.com',
+        provider: 'Validatus',
       },
     ],
   },

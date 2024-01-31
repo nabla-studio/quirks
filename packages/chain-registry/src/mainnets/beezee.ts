@@ -194,6 +194,11 @@ export const beezee: Chain = {
         address: '51.15.138.216:26656',
         provider: 'AlphaTeam',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {

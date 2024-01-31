@@ -58,6 +58,11 @@ export const stratos: Chain = {
         address: 'seeds.whispernode.com:21856',
         provider: 'WhisperNode 🤐',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {

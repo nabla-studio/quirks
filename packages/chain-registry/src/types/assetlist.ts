@@ -18,6 +18,10 @@ export interface Asset {
    * [OPTIONAL] A short description of the asset
    */
   description?: string;
+  /**
+   * [OPTIONAL] A long description of the asset
+   */
+  extended_description?: string;
   denom_units: DenomUnit[];
   /**
    * [OPTIONAL] The potential options for type of asset. By default, assumes sdk.coin

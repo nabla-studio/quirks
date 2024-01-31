@@ -33,13 +33,13 @@ export const injective: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/InjectiveLabs/injective-chain-releases',
-    recommended_version: 'v1.12.0-1704530206',
-    compatible_versions: ['v1.12.0-1704530206'],
+    recommended_version: 'v1.12.1-1705909076',
+    compatible_versions: ['v1.12.0-1704530206', 'v1.12.1-1705909076'],
     binaries: {
       'linux/amd64':
-        'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.0-1704530206/linux-amd64.zip',
+        'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.1-1705909076/linux-amd64.zip',
       'darwin/amd64':
-        'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.0-1704530206/darwin-amd64.zip',
+        'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.1-1705909076/darwin-amd64.zip',
     },
     genesis: {
       genesis_url:
@@ -81,13 +81,13 @@ export const injective: Chain = {
         name: 'v1.12.0',
         proposal: 314,
         height: 57076000,
-        recommended_version: 'v1.12.0-1704530206',
-        compatible_versions: ['v1.12.0-1704530206'],
+        recommended_version: 'v1.12.1-1705909076',
+        compatible_versions: ['v1.12.0-1704530206', 'v1.12.1-1705909076'],
         binaries: {
           'linux/amd64':
-            'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.0-1704530206/linux-amd64.zip',
+            'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.1-1705909076/linux-amd64.zip',
           'darwin/amd64':
-            'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.0-1704530206/darwin-amd64.zip',
+            'https://github.com/InjectiveLabs/injective-chain-releases/releases/download/v1.12.1-1705909076/darwin-amd64.zip',
         },
         next_version_name: '',
       },
@@ -578,6 +578,53 @@ export const injectiveAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/wgmi.png',
         },
       ],
+    },
+    {
+      description: 'The first memecoin on osmosis.',
+      denom_units: [
+        {
+          denom:
+            'ibc/DD648F5D3CDA56D0D8D8820CF703D246B9FC4007725D8B38D23A21FF1A1477E3',
+          exponent: 0,
+        },
+        {
+          denom: 'WOSMO',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/DD648F5D3CDA56D0D8D8820CF703D246B9FC4007725D8B38D23A21FF1A1477E3',
+      name: 'Wosmo',
+      display: 'WOSMO',
+      symbol: 'WOSMO',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+            channel_id: 'channel-8',
+          },
+          chain: {
+            channel_id: 'channel-122',
+            path: 'transfer/channel-122/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+      },
     },
   ],
 };

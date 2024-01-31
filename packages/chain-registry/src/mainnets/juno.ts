@@ -238,6 +238,11 @@ export const juno: Chain = {
         address: '138.201.21.121:24956',
         provider: 'Validatrium',
       },
+      {
+        id: 'cfc31e41e66527a3b12b65c06aa3eac58e27c6ab',
+        address: 'seed.juno.validatus.com:3000',
+        provider: 'Validatus',
+      },
     ],
     persistent_peers: [
       {
@@ -374,6 +379,10 @@ export const juno: Chain = {
         provider: 'Stake&Relax 🦥',
       },
       {
+        address: 'https://rpc.juno.validatus.com',
+        provider: 'Validatus',
+      },
+      {
         address: 'https://rpc.juno.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
@@ -472,6 +481,10 @@ export const juno: Chain = {
         provider: 'Stake&Relax 🦥',
       },
       {
+        address: 'https://api.juno.validatus.com',
+        provider: 'Validatus',
+      },
+      {
         address: 'https://lcd.juno.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
@@ -540,6 +553,10 @@ export const juno: Chain = {
       {
         address: 'juno-grpc.stakeandrelax.net:12690',
         provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'grpc.juno.validatus.com',
+        provider: 'Validatus',
       },
       {
         address: 'https://grpc.juno.bronbro.io:443',
@@ -2474,7 +2491,7 @@ export const junoAssetList: AssetLists = {
       ],
       base: 'cw20:juno15au4k2jgwd0jnchy0fkg3lm00fpt7jt0j2duuzradn2q7sega2dszyn5pp',
       name: 'Palantin',
-      display: 'palantin',
+      display: 'pltn',
       symbol: 'PLTN',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/pltn.png',

@@ -217,14 +217,15 @@ export const osmosis: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/osmosis-labs/osmosis',
-    recommended_version: 'v20.5.0',
-    compatible_versions: ['v20.5.0'],
+    recommended_version: 'v22.0.1',
+    compatible_versions: ['v22.0.0', 'v22.0.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/osmosis-labs/osmosis/releases/download/v20.5.0/osmosisd-20.5.0-linux-amd64',
+        'https://github.com/osmosis-labs/osmosis/releases/download/v22.0.1/osmosisd-22.0.1-linux-amd64',
       'linux/arm64':
-        'https://github.com/osmosis-labs/osmosis/releases/download/v20.5.0/osmosisd-20.5.0-linux-arm64',
+        'https://github.com/osmosis-labs/osmosis/releases/download/v22.0.1/osmosisd-22.0.1-linux-arm64',
     },
+    go_version: '1.21',
     cosmos_sdk_version:
       'osmosis-labs/cosmos-sdk@0.45.0-rc1.0.20230922030206-734f99fba785',
     consensus: {
@@ -502,6 +503,56 @@ export const osmosis: Chain = {
           'linux/arm64':
             'https://github.com/osmosis-labs/osmosis/releases/download/v20.5.0/osmosisd-20.5.0-linux-arm64?checksum=sha256:99359257ff81d21b55b685924a74473d532cbc5af196a672a784bf13dad06d26',
         },
+        next_version_name: 'v21',
+      },
+      {
+        name: 'v21',
+        tag: 'v21.2.1',
+        proposal: 696,
+        height: 12834100,
+        recommended_version: 'v21.2.1',
+        compatible_versions: ['v21.2.1'],
+        cosmos_sdk_version: 'osmosis-labs/cosmos-sdk v0.47.5-osmo-4',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'osmosis-labs/wasmd v0.45.0-osmo',
+        cosmwasm_enabled: true,
+        ibc_go_version: '7.3.1',
+        ics_enabled: ['ics20-1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/osmosis-labs/osmosis/releases/download/v21.2.1/osmosisd-21.2.1-linux-amd64?checksum=sha256:f9ff6176e32499f22b20288c71dbc802556eb5399baef23de164fe6158a55a69',
+          'linux/arm64':
+            'https://github.com/osmosis-labs/osmosis/releases/download/v21.2.1/osmosisd-21.2.1-linux-arm64?checksum=sha256:99359257ff81d21b55b685924a74473d532cbc5af196a672a784bf13dad06d26',
+        },
+        next_version_name: 'v21',
+      },
+      {
+        name: 'v22',
+        tag: 'v22.0.1',
+        proposal: 714,
+        height: 13325950,
+        recommended_version: 'v22.0.1',
+        compatible_versions: ['v22.0.0', 'v22.0.1'],
+        cosmos_sdk_version: 'osmosis-labs/cosmos-sdk v0.47.5-v22-osmo-2',
+        consensus: {
+          type: 'cometbft',
+          version: 'osmosis-labs/cometbft v0.37.2-v21-osmo-1',
+        },
+        cosmwasm_version: 'osmosis-labs/wasmd v0.45.0-osmo',
+        cosmwasm_enabled: true,
+        ibc_go_version: '7.3.1',
+        ics_enabled: ['ics20-1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/osmosis-labs/osmosis/releases/download/v22.0.1/osmosisd-22.0.1-linux-amd64',
+          'linux/arm64':
+            'https://github.com/osmosis-labs/osmosis/releases/download/v22.0.1/osmosisd-22.0.1-linux-arm64',
+        },
+        go_version: '1.21',
+        next_version_name: '',
       },
     ],
   },
@@ -1132,7 +1183,7 @@ export const osmosisAssetList: AssetLists = {
       type_asset: 'ics20',
       base: 'ibc/0B3C3D06228578334B66B57FBFBA4033216CEB8119B27ACDEE18D92DA5B28D43',
       name: 'Wormhole USDC(Avalanche)',
-      display: 'avalanche.USDC.wh',
+      display: 'avalanche-usdc',
       symbol: 'avalanche.USDC.wh',
       traces: [
         {
@@ -2139,7 +2190,7 @@ export const osmosisAssetList: AssetLists = {
       base: 'ibc/23A62409E4AD8133116C249B1FA38EED30E500A115D7B153109462CD82C1CD99',
       name: 'PageDAO',
       display: 'page',
-      symbol: 'PAGE.grv',
+      symbol: 'PAGE',
       traces: [
         {
           type: 'ibc',
@@ -2463,11 +2514,11 @@ export const osmosisAssetList: AssetLists = {
       display: 'WOSMO',
       symbol: 'WOSMO',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
       },
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
         },
       ],
     },
@@ -2589,6 +2640,59 @@ export const osmosisAssetList: AssetLists = {
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sqtia.svg',
+        },
+      ],
+    },
+    {
+      description: 'Sail DAO Token',
+      denom_units: [
+        {
+          denom:
+            'factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail',
+          exponent: 0,
+        },
+        {
+          denom: 'sail',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/osmo1rckme96ptawr4zwexxj5g5gej9s2dmud8r2t9j0k0prn5mch5g4snzzwjv/sail',
+      name: 'Sail',
+      display: 'sail',
+      symbol: 'SAIL',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sail.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sail.png',
+        },
+      ],
+    },
+    {
+      description:
+        'Rapture insurance is the first ever P2P insurance platform on $OSMO. Get rewarded to take care of peoples loved ones after the Rapture.',
+      denom_units: [
+        {
+          denom: 'factory/osmo1279xudevmf5cw83vkhglct7jededp86k90k2le/RAPTR',
+          exponent: 0,
+        },
+        {
+          denom: 'RAPTR',
+          exponent: 6,
+        },
+      ],
+      address: 'osmo1279xudevmf5cw83vkhglct7jededp86k90k2le',
+      base: 'factory/osmo1279xudevmf5cw83vkhglct7jededp86k90k2le/RAPTR',
+      name: 'RAPTR',
+      display: 'RAPTR',
+      symbol: 'RAPTR',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/RAPTR.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/RAPTR.png',
         },
       ],
     },

@@ -200,6 +200,10 @@ export const coreum: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
+        address: 'https://rpc.mainnet.solonation.cf',
+        provider: '#SoloNation',
+      },
+      {
         address: 'https://coreum-rpc.genznodes.dev',
         provider: 'genznodes',
       },
@@ -252,6 +256,10 @@ export const coreum: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
+        address: 'https://api.mainnet.solonation.cf',
+        provider: '#SoloNation',
+      },
+      {
         address: 'https://coreum-api.genznodes.dev',
         provider: 'genznodes',
       },
@@ -284,6 +292,13 @@ export const coreum: Chain = {
       tx_page: 'https://explorer.silknodes.io/coreum/tx/${txHash}',
       account_page:
         'https://explorer.silknodes.io/coreum/account/${accountAddress}',
+    },
+    {
+      kind: '#SoloNation',
+      url: 'https://explorer.solonation.cf/core-main',
+      tx_page: 'https://explorer.solonation.cf/core-main/tx/${txHash}',
+      account_page:
+        'https://explorer.solonation.cf/core-main/account/${accountAddress}',
     },
     {
       kind: 'TC Network',

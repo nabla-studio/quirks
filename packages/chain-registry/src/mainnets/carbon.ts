@@ -22,8 +22,8 @@ export const carbon: Chain = {
         average_gas_price: 1,
         high_gas_price: 1,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -33,8 +33,8 @@ export const carbon: Chain = {
         average_gas_price: 0.0001,
         high_gas_price: 0.0001,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -44,8 +44,8 @@ export const carbon: Chain = {
         average_gas_price: 1000000,
         high_gas_price: 1000000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -55,8 +55,8 @@ export const carbon: Chain = {
         average_gas_price: 0.0015,
         high_gas_price: 0.0015,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -66,8 +66,8 @@ export const carbon: Chain = {
         average_gas_price: 100000000,
         high_gas_price: 100000000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -77,8 +77,8 @@ export const carbon: Chain = {
         average_gas_price: 100000000,
         high_gas_price: 100000000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -88,8 +88,8 @@ export const carbon: Chain = {
         average_gas_price: 100000000,
         high_gas_price: 100000000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -99,8 +99,8 @@ export const carbon: Chain = {
         average_gas_price: 100000,
         high_gas_price: 100000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -110,8 +110,8 @@ export const carbon: Chain = {
         average_gas_price: 100000,
         high_gas_price: 100000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -122,8 +122,8 @@ export const carbon: Chain = {
         average_gas_price: 0.0035,
         high_gas_price: 0.0035,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -134,8 +134,8 @@ export const carbon: Chain = {
         average_gas_price: 0.0000075,
         high_gas_price: 0.0000075,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -146,8 +146,8 @@ export const carbon: Chain = {
         average_gas_price: 0.00005,
         high_gas_price: 0.00005,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -158,8 +158,8 @@ export const carbon: Chain = {
         average_gas_price: 0.00032,
         high_gas_price: 0.00032,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -170,8 +170,8 @@ export const carbon: Chain = {
         average_gas_price: 300000000,
         high_gas_price: 300000000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -182,8 +182,8 @@ export const carbon: Chain = {
         average_gas_price: 0.0006,
         high_gas_price: 0.0006,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -194,8 +194,8 @@ export const carbon: Chain = {
         average_gas_price: 0.00015,
         high_gas_price: 0.00015,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -206,8 +206,8 @@ export const carbon: Chain = {
         average_gas_price: 0.0000075,
         high_gas_price: 0.0000075,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -218,8 +218,8 @@ export const carbon: Chain = {
         average_gas_price: 0.00015,
         high_gas_price: 0.00015,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -230,8 +230,8 @@ export const carbon: Chain = {
         average_gas_price: 200000000,
         high_gas_price: 200000000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -242,8 +242,8 @@ export const carbon: Chain = {
         average_gas_price: 0.00001,
         high_gas_price: 0.00001,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -254,8 +254,8 @@ export const carbon: Chain = {
         average_gas_price: 0.00001,
         high_gas_price: 0.00001,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -266,8 +266,8 @@ export const carbon: Chain = {
         average_gas_price: 0.00015,
         high_gas_price: 0.00015,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -277,8 +277,8 @@ export const carbon: Chain = {
         average_gas_price: 0.0001,
         high_gas_price: 0.0001,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -288,8 +288,8 @@ export const carbon: Chain = {
         average_gas_price: 100000000,
         high_gas_price: 100000000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
       {
@@ -299,8 +299,8 @@ export const carbon: Chain = {
         average_gas_price: 6000,
         high_gas_price: 6000,
         gas_costs: {
-          cosmos_send: 100000000,
-          ibc_transfer: 100000000,
+          cosmos_send: 10000000,
+          ibc_transfer: 10000000,
         },
       },
     ],
@@ -314,13 +314,13 @@ export const carbon: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Switcheo/carbon-bootstrap',
-    recommended_version: 'v2.36.9',
-    compatible_versions: ['v2.36.0', 'v2.36.9'],
+    recommended_version: 'v2.37.1',
+    compatible_versions: ['v2.37.0', 'v2.37.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.9/carbond2.36.9-mainnet.linux-amd64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.37.1/carbond2.37.1-mainnet.linux-amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.9/carbond2.36.9-mainnet.linux-arm64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.37.1/carbond2.37.1-mainnet.linux-arm64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -510,6 +510,20 @@ export const carbon: Chain = {
             'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.9/carbond2.36.9-mainnet.linux-amd64.tar.gz',
           'linux/arm64':
             'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.36.9/carbond2.36.9-mainnet.linux-arm64.tar.gz',
+        },
+        next_version_name: 'v2.37.0',
+      },
+      {
+        name: 'v2.37.0',
+        proposal: 338,
+        height: 52699891,
+        recommended_version: 'v2.37.1',
+        compatible_versions: ['v2.37.0', 'v2.37.1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.37.1/carbond2.37.1-mainnet.linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.37.1/carbond2.37.1-mainnet.linux-arm64.tar.gz',
         },
         next_version_name: '',
       },
@@ -1053,6 +1067,97 @@ export const carbonAssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.png',
+        },
+      ],
+    },
+    {
+      description: 'TIA token on Carbon',
+      denom_units: [
+        {
+          denom:
+            'ibc/6C349F0EB135C5FA99301758F35B87DB88403D690E5E314AB080401FEE4066E5',
+          exponent: 0,
+          aliases: ['utia'],
+        },
+        {
+          denom: 'tia',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/6C349F0EB135C5FA99301758F35B87DB88403D690E5E314AB080401FEE4066E5',
+      name: 'Celestia TIA',
+      display: 'tia',
+      symbol: 'TIA',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'osmosis',
+            base_denom:
+              'ibc/D79E7D83AB399BFFF93433E54FAA480C191248FC556924A2A8351AE2638B3877',
+            channel_id: 'channel-188',
+          },
+          chain: {
+            channel_id: 'channel-0',
+            path: 'transfer/channel-6994/utia',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'celestia',
+            base_denom: 'utia',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg',
+      },
+    },
+    {
+      description: 'MilkTIA token on Carbon',
+      denom_units: [
+        {
+          denom:
+            'ibc/16065EE5282C5217685C8F084FC44864C25C706AC37356B0D62811D50B96920F',
+          exponent: 0,
+          aliases: ['umilkTIA'],
+        },
+        {
+          denom: 'milkTIA',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/16065EE5282C5217685C8F084FC44864C25C706AC37356B0D62811D50B96920F',
+      name: 'milkTIA',
+      display: 'milkTIA',
+      symbol: 'milkTIA',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA',
+          },
+          provider: 'MilkyWay',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.svg',
+      },
+      coingecko_id: 'milkyway-staked-tia',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.svg',
         },
       ],
     },

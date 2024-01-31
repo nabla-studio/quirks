@@ -33,15 +33,21 @@ export const bitcanna: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/BitCannaGlobal/bcna',
-    recommended_version: 'v2.0.3',
-    compatible_versions: ['v2.0.2', 'v2.0.3'],
+    recommended_version: 'v3.0.0',
+    compatible_versions: ['v3.0.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/BitCannaGlobal/bcna/releases/download/v2.0.3/bcna_linux_amd64.tar.gz',
+        'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.0/bcna_linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/BitCannaGlobal/bcna/releases/download/v2.0.3/bcna_linux_arm64.tar.gz',
+        'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.0/bcna_linux_arm64.tar.gz',
       'darwin/arm64':
-        'https://github.com/BitCannaGlobal/bcna/releases/download/v2.0.3/bcna_darwin_arm64.tar.gz',
+        'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.0/bcna_darwin_arm64.tar.gz',
+    },
+    cosmos_sdk_version: 'v0.47.7',
+    ibc_go_version: 'v7.3.1',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.37.4',
     },
     genesis: {
       genesis_url:
@@ -94,6 +100,29 @@ export const bitcanna: Chain = {
           'darwin/arm64':
             'https://github.com/BitCannaGlobal/bcna/releases/download/v2.0.3/bcna_darwin_arm64.tar.gz',
         },
+        next_version_name: 'ganjarevolution',
+      },
+      {
+        name: 'ganjarevolution',
+        proposal: 14,
+        height: 12288420,
+        recommended_version: 'v3.0.0',
+        compatible_versions: ['v3.0.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.0/bcna_linux_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.0/bcna_linux_arm64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.0/bcna_darwin_arm64.tar.gz',
+        },
+        cosmos_sdk_version: 'v0.47.7',
+        ibc_go_version: 'v7.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        next_version_name: '',
       },
     ],
   },

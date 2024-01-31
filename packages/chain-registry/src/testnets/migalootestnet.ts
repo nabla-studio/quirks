@@ -7,7 +7,7 @@ export const migalootestnet: Chain = {
   network_type: 'testnet',
   website: 'https://www.whitewhale.money/',
   pretty_name: 'Migaloo Testnet',
-  chain_id: 'narwhal-1',
+  chain_id: 'narwhal-2',
   bech32_prefix: 'migaloo',
   daemon_name: 'migalood',
   node_home: '$HOME/.migalood',
@@ -37,8 +37,8 @@ export const migalootestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain',
-    recommended_version: 'v2.0.0',
-    compatible_versions: ['v2.0.0'],
+    recommended_version: 'v3.0.4',
+    compatible_versions: ['v3.0.4'],
     cosmos_sdk_version: '0.45',
     consensus: {
       type: 'tendermint',
@@ -52,9 +52,9 @@ export const migalootestnet: Chain = {
     },
     versions: [
       {
-        name: 'v2.0.0',
-        recommended_version: 'v2.0.0',
-        compatible_versions: ['v2.0.0'],
+        name: 'v3.0.4',
+        recommended_version: 'v3.0.4',
+        compatible_versions: ['v3.0.4'],
         cosmos_sdk_version: '0.45',
         consensus: {
           type: 'tendermint',
@@ -87,8 +87,8 @@ export const migalootestnet: Chain = {
   explorers: [
     {
       kind: 'ping.pub',
-      url: 'https://testnet.ping.pub/narwhal',
-      tx_page: 'https://testnet.ping.pub/narwhal/tx/${txHash}',
+      url: 'https://ping.pfc.zone/narwhal-testnet',
+      tx_page: 'https://ping.pfc.zone/narwhal-testnet/tx/${txHash}',
     },
   ],
   images: [

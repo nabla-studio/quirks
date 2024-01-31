@@ -38,6 +38,20 @@ export interface IbcData {
       [k: string]: unknown;
     };
   }[];
+  /**
+   * ibc connection operator information.
+   */
+  operators?: {
+    chain_1: ChainOperatorInfo;
+    chain_2: ChainOperatorInfo1;
+    memo: string;
+    /**
+     * Operator display name
+     */
+    name: string;
+    discord_handle?: string;
+    [k: string]: unknown;
+  }[];
 }
 /**
  * Top level IBC data pertaining to the chain. `chain_1` and `chain_2` should be in alphabetical order.
@@ -102,4 +116,18 @@ export interface ChannelInfo1 {
    * Optional. The connection ID on the corresponding chain representing a connection to the other chain.
    */
   connection_id?: string;
+}
+/**
+ * Operator information on a specific chain.
+ */
+export interface ChainOperatorInfo {
+  address?: string;
+  [k: string]: unknown;
+}
+/**
+ * Operator information on a specific chain.
+ */
+export interface ChainOperatorInfo1 {
+  address?: string;
+  [k: string]: unknown;
 }

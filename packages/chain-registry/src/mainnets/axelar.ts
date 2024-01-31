@@ -227,6 +227,10 @@ export const axelar: Chain = {
         address: 'https://axelar-rpc.w3coins.io',
         provider: 'w3coins',
       },
+      {
+        address: 'https://axelar-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -297,6 +301,10 @@ export const axelar: Chain = {
         address: 'https://axelar-api.w3coins.io',
         provider: 'w3coins',
       },
+      {
+        address: 'https://axelar-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -342,6 +350,10 @@ export const axelar: Chain = {
       {
         address: 'grpc-axelar.whispernode.com:443',
         provider: 'WhisperNode 🤐',
+      },
+      {
+        address: 'axelar-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

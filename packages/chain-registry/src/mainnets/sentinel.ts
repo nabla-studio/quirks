@@ -286,6 +286,10 @@ export const sentinel: Chain = {
         address: 'https://rpc.trinityvalidator.com',
         provider: 'Trinity Validator',
       },
+      {
+        address: 'https://rpc.sentinelgrowthdao.com',
+        provider: 'Sentinel Growth DAO',
+      },
     ],
     rest: [
       {
@@ -315,6 +319,10 @@ export const sentinel: Chain = {
       {
         address: 'https://api.trinityvalidator.com',
         provider: 'Trinity Validator',
+      },
+      {
+        address: 'https://api.sentinelgrowthdao.com',
+        provider: 'Sentinel Growth DAO',
       },
     ],
     grpc: [

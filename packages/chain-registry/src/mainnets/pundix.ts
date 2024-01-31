@@ -114,6 +114,11 @@ export const pundix: Chain = {
         address: 'pundix-mainnet-seed-node-2.pundix.com:26656',
         provider: 'Pundi X',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -191,7 +196,7 @@ export const pundixAssetList: AssetLists = {
       denom_units: [
         {
           denom:
-            'ibc/55367b7b6572631b78a93c66ef9fdfce87cde372cc4ed7848da78c1eb1dcdd78',
+            'ibc/55367B7B6572631B78A93C66EF9FDFCE87CDE372CC4ED7848DA78C1EB1DCDD78',
           exponent: 0,
         },
         {
@@ -199,7 +204,7 @@ export const pundixAssetList: AssetLists = {
           exponent: 18,
         },
       ],
-      base: 'ibc/55367b7b6572631b78a93c66ef9fdfce87cde372cc4ed7848da78c1eb1dcdd78',
+      base: 'ibc/55367B7B6572631B78A93C66EF9FDFCE87CDE372CC4ED7848DA78C1EB1DCDD78',
       name: 'Pundi X Token',
       display: 'PUNDIX',
       symbol: 'PUNDIX',

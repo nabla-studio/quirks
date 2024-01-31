@@ -57,6 +57,13 @@ export const starname: Chain = {
   description:
     'Starname is the best way to claim your part of the blockchain. You can use it for decentralized identification, payments, ownership and applications. Starname can be integrated into digital wallets, dapps and exchanges.',
   peers: {
+    seeds: [
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+    ],
     persistent_peers: [
       {
         id: '9aabe0ac122f3104d8fc098e19c66714c6f1ace9',
@@ -82,6 +89,10 @@ export const starname: Chain = {
         address: 'https://rpc.starname.cosmos.iov.one',
         provider: 'starname.me',
       },
+      {
+        address: 'https://rpc.starname.app',
+        provider: 'Chainmasters',
+      },
     ],
     rest: [
       {
@@ -95,6 +106,10 @@ export const starname: Chain = {
       {
         address: 'https://api.starname.cosmos.iov.one',
         provider: 'starname.me',
+      },
+      {
+        address: 'https://rest.starname.app',
+        provider: 'Chainmasters',
       },
     ],
     grpc: [

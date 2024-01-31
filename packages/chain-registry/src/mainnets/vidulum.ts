@@ -72,7 +72,13 @@ export const vidulum: Chain = {
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/vidulum/images/vdl.svg',
   },
   peers: {
-    seeds: [],
+    seeds: [
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+    ],
     persistent_peers: [
       {
         id: '52051fef449e76eb399966312f523e8e5e27490b',

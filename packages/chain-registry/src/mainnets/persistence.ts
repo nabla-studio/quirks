@@ -162,6 +162,11 @@ export const persistence: Chain = {
         address: 'seed-persistence-01.stakeflow.io:33656',
         provider: 'Stakeflow',
       },
+      {
+        id: 'ba6ca269cfcf412c175dd6259c1ae15ee5370b08',
+        address: 'seed.persistence.validatus.com:3000',
+        provider: 'Validatus',
+      },
     ],
     persistent_peers: [
       {
@@ -257,6 +262,10 @@ export const persistence: Chain = {
         address: 'https://persistence-rpc.stakeandrelax.net',
         provider: 'Stake&Relax 🦥',
       },
+      {
+        address: 'https://rpc.persistence.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     rest: [
       {
@@ -323,6 +332,10 @@ export const persistence: Chain = {
         address: 'https://persistence-api.stakeandrelax.net',
         provider: 'Stake&Relax 🦥',
       },
+      {
+        address: 'https://api.persistence.validatus.com',
+        provider: 'Validatus',
+      },
     ],
     grpc: [
       {
@@ -368,6 +381,10 @@ export const persistence: Chain = {
       {
         address: 'persistence-grpc.stakeandrelax.net:15490',
         provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'grpc.persistence.validatus.com',
+        provider: 'Validatus',
       },
     ],
   },
