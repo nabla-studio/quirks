@@ -11,7 +11,6 @@ import {
   type AppState,
   type ConnectSlice,
   type AddressWithChain,
-  ReconnectionStates,
   type ConnectState,
   SetupStates,
 } from '../types';
@@ -21,8 +20,8 @@ export const connectInitialState: ConnectState = {
   walletName: undefined,
   wallet: undefined,
   status: ConnectionStates.DISCONNECTED,
-  reconnectionStatus: ReconnectionStates.IDLE,
   setupStatus: SetupStates.DEINITIALIZED,
+  connecting: false,
   options: {
     autoSuggestions: true,
     autoAccountChange: true,
@@ -119,7 +118,7 @@ export const createConnectSlice: StateCreator<
         throw createInvalidWalletName(walletName);
       }
 
-      set(() => ({ walletName, status: ConnectionStates.WAITING }));
+      set(() => ({ walletName, connecting: true }));
 
       if (
         wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
@@ -164,6 +163,8 @@ export const createConnectSlice: StateCreator<
         walletName: undefined,
         status: ConnectionStates.REJECTED,
       }));
+    } finally {
+      set(() => ({ connecting: false }));
     }
   },
   reconnect: async (walletName) => {
@@ -183,7 +184,7 @@ export const createConnectSlice: StateCreator<
 
       await wallet.init(metadata);
 
-      set(() => ({ reconnectionStatus: ReconnectionStates.WAITING }));
+      set(() => ({ connecting: true }));
 
       if (get().options.autoSuggestions) {
         await get().suggestChains(walletName);
@@ -192,19 +193,12 @@ export const createConnectSlice: StateCreator<
       await wallet.enable(get().chains.map((el) => el.chain_id));
 
       await get().setWallet(wallet);
-      set(() => ({ reconnectionStatus: ReconnectionStates.RECONNECTED }));
     } catch (error) {
       console.error(error);
 
-      set(() => ({
-        reconnectionStatus: ReconnectionStates.REJECTED,
-      }));
-
-      get().wallet?.disable(get().chains.map((el) => el.chain_id));
-
-      get().wallet?.removeListeners();
-
-      get().reset();
+      get().disconnect();
+    } finally {
+      set(() => ({ connecting: false }));
     }
   },
   disconnect: () => {

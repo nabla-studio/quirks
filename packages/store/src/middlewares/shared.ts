@@ -72,8 +72,7 @@ export const shared: SharedType =
         state.walletName &&
         !state.wallet &&
         state.status === 'CONNECTED' &&
-        (state.reconnectionStatus === 'IDLE' ||
-          state.reconnectionStatus === 'RECONNECTED')
+        !state.connecting
       ) {
         const wallet = get().wallets.find(
           (el) => el.options.wallet_name === state.walletName,

@@ -6,13 +6,13 @@ import {
   useChain,
   useWalletConnect,
 } from '@quirks/vue';
-import { bitsong, bitsongAssetList } from '@nabla-studio/chain-registry';
 import VueQrcode from 'vue-qrcode';
 
 const { wallets } = useConfig();
 const { accounts } = useChains();
 const { address } = useChain('bitsong');
-const { connect, disconnect, connected, status, walletName } = useConnect();
+const { connect, disconnect, connected, status, walletName, connecting } =
+  useConnect();
 const { pairingURI } = useWalletConnect();
 
 const open = async (chainName: string) => {
@@ -52,7 +52,8 @@ const send = async () => {
 
 <template>
   <div>
-    Wallet {{ walletName }} status: {{ status }}
+    Wallet {{ walletName }} status: {{ status }} connecting:
+    {{ connecting }}
     <button @click="disconnect" v-if="connected">DISCONNECT</button>
     <div v-else>
       <VueQrcode

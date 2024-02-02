@@ -2,23 +2,12 @@ import type { Wallet } from '@quirks/core';
 
 export const ConnectionStates = {
   DISCONNECTED: 'DISCONNECTED',
-  WAITING: 'WAITING',
   CONNECTED: 'CONNECTED',
   REJECTED: 'REJECTED',
 } as const;
 
 export type ConnectionState =
   (typeof ConnectionStates)[keyof typeof ConnectionStates];
-
-export const ReconnectionStates = {
-  IDLE: 'IDLE',
-  WAITING: 'WAITING',
-  RECONNECTED: 'RECONNECTED',
-  REJECTED: 'REJECTED',
-} as const;
-
-export type ReconnectionState =
-  (typeof ReconnectionStates)[keyof typeof ReconnectionStates];
 
 export const SetupStates = {
   DEINITIALIZED: 'DEINITIALIZED',
@@ -36,8 +25,8 @@ export interface ConnectState {
   walletName?: string;
   wallet?: Wallet;
   status: ConnectionState;
+  connecting: boolean;
   setupStatus: SetupState;
-  reconnectionStatus: ReconnectionState;
   options: ConnectOptions;
 }
 
