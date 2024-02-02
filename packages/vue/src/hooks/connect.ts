@@ -12,7 +12,8 @@ export const useConnect = () => {
   const wallet = computed(() => state.wallet?.value);
   const walletName = computed(() => state.walletName?.value);
   const connected = computed(() => status.value === ConnectionStates.CONNECTED);
-  const waiting = computed(() => status.value === ConnectionStates.WAITING);
+  const waiting = computed(() => state.isConnecting.value);
+  const isConnecting = computed(() => state.isConnecting.value);
   const disconnected = computed(
     () => status.value === ConnectionStates.DISCONNECTED,
   );
@@ -24,6 +25,7 @@ export const useConnect = () => {
     status,
     connected,
     waiting,
+    isConnecting,
     disconnected,
     rejected,
     wallet,
