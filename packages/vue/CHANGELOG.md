@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.9.0](https://github.com/nabla-studio/quirks/compare/vue@0.8.0...vue@0.9.0) (2024-02-02)
+
+### Dependency Updates
+
+* `store` updated to version `0.8.0`
+
+### Features
+
+* **vue:** :sparkles: add isConnecting for useConnect ([47ccb19](https://github.com/nabla-studio/quirks/commit/47ccb19a6fcb961b49f368e024d1ecdf503cc1e2))
+* **vue:** :sparkles: remove reconnectionStatus ([9f518bc](https://github.com/nabla-studio/quirks/commit/9f518bc24f1a9a580fea159805926a00afd09550))
+
 ## [0.8.0](https://github.com/nabla-studio/quirks/compare/vue@0.7.3...vue@0.8.0) (2024-02-02)
 
 ### Dependency Updates
