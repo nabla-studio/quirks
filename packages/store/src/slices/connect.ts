@@ -23,6 +23,7 @@ export const connectInitialState: ConnectState = {
   status: ConnectionStates.DISCONNECTED,
   reconnectionStatus: ReconnectionStates.IDLE,
   setupStatus: SetupStates.DEINITIALIZED,
+  isConnecting: false,
   options: {
     autoSuggestions: true,
     autoAccountChange: true,
@@ -119,7 +120,7 @@ export const createConnectSlice: StateCreator<
         throw createInvalidWalletName(walletName);
       }
 
-      set(() => ({ walletName, status: ConnectionStates.WAITING }));
+      set(() => ({ walletName, isConnecting: true }));
 
       if (
         wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
@@ -164,6 +165,8 @@ export const createConnectSlice: StateCreator<
         walletName: undefined,
         status: ConnectionStates.REJECTED,
       }));
+    } finally {
+      set(() => ({ isConnecting: false }));
     }
   },
   reconnect: async (walletName) => {
@@ -183,7 +186,7 @@ export const createConnectSlice: StateCreator<
 
       await wallet.init(metadata);
 
-      set(() => ({ reconnectionStatus: ReconnectionStates.WAITING }));
+      set(() => ({ isConnecting: true }));
 
       if (get().options.autoSuggestions) {
         await get().suggestChains(walletName);
@@ -205,6 +208,8 @@ export const createConnectSlice: StateCreator<
       get().wallet?.removeListeners();
 
       get().reset();
+    } finally {
+      set(() => ({ isConnecting: false }));
     }
   },
   disconnect: () => {

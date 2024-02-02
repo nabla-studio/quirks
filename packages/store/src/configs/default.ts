@@ -15,6 +15,7 @@ export const excludedKeys: (keyof AppState)[] = [
   'signOptions',
   'signerOptions',
   'openDeeplink',
+  'isConnecting',
 ];
 
 export const defaultPersistOptions: PersistOptions<AppState> = {
