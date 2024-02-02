@@ -9,7 +9,6 @@ export const useConnect = () => {
     disconnect: store.use.disconnect(),
     status: store.use.status(),
     setupStatus: store.use.setupStatus(),
-    reconnectionStatus: store.use.reconnectionStatus(),
     connected: store.use.status() === ConnectionStates.CONNECTED,
     connecting: store.use.connecting(),
     disconnected: store.use.status() === ConnectionStates.DISCONNECTED,
