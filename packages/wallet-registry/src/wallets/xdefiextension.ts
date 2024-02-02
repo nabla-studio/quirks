@@ -4,6 +4,7 @@ export const xdefiextension: CosmosWallet = {
   $schema: '../../wallet.schema.json',
   wallet_name: 'xdefiextension',
   pretty_name: 'xDefi',
+  connection_type: 'browser_extension',
   website: 'https://www.xdefi.io/',
   git_repo: '',
   supported_chains: [

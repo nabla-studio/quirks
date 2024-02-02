@@ -3,7 +3,8 @@ import type { CosmosWallet } from '../types';
 export const leapmobile: CosmosWallet = {
   $schema: '../../wallet.schema.json',
   wallet_name: 'leapmobile',
-  pretty_name: 'Leap cosmos',
+  pretty_name: 'Leap Mobile',
+  connection_type: 'wallet_connect',
   website: 'https://leapwallet.io',
   git_repo: '',
   supported_chains: [

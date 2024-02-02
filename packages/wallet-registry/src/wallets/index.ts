@@ -1,5 +1,6 @@
 export * from './xdefiextension';
 export * from './trustwalletmobile';
+export * from './okxextension';
 export * from './leapmobile';
 export * from './leapextension';
 export * from './keplrmobile';

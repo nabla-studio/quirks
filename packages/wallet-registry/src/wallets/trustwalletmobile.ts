@@ -4,6 +4,7 @@ export const trustwalletmobile: CosmosWallet = {
   $schema: '../../wallet.schema.json',
   wallet_name: 'trustwalletmobile',
   pretty_name: 'Trust Wallet',
+  connection_type: 'wallet_connect',
   website: 'https://www.trustwallet.com',
   git_repo: 'https://github.com/trustwallet',
   supported_chains: [

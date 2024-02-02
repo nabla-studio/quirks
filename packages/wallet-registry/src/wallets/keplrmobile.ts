@@ -3,7 +3,8 @@ import type { CosmosWallet } from '../types';
 export const keplrmobile: CosmosWallet = {
   $schema: '../../wallet.schema.json',
   wallet_name: 'keplrmobile',
-  pretty_name: 'Keplr',
+  pretty_name: 'Keplr Mobile',
+  connection_type: 'wallet_connect',
   website: 'https://www.keplr.app/',
   git_repo: 'https://github.com/chainapsis/keplr-wallet',
   supported_chains: [
