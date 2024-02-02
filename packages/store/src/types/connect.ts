@@ -9,15 +9,6 @@ export const ConnectionStates = {
 export type ConnectionState =
   (typeof ConnectionStates)[keyof typeof ConnectionStates];
 
-export const ReconnectionStates = {
-  IDLE: 'IDLE',
-  RECONNECTED: 'RECONNECTED',
-  REJECTED: 'REJECTED',
-} as const;
-
-export type ReconnectionState =
-  (typeof ReconnectionStates)[keyof typeof ReconnectionStates];
-
 export const SetupStates = {
   DEINITIALIZED: 'DEINITIALIZED',
   INITIALIZED: 'INITIALIZED',
@@ -36,7 +27,6 @@ export interface ConnectState {
   status: ConnectionState;
   connecting: boolean;
   setupStatus: SetupState;
-  reconnectionStatus: ReconnectionState;
   options: ConnectOptions;
 }
 

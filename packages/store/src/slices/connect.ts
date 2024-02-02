@@ -11,7 +11,6 @@ import {
   type AppState,
   type ConnectSlice,
   type AddressWithChain,
-  ReconnectionStates,
   type ConnectState,
   SetupStates,
 } from '../types';
@@ -21,7 +20,6 @@ export const connectInitialState: ConnectState = {
   walletName: undefined,
   wallet: undefined,
   status: ConnectionStates.DISCONNECTED,
-  reconnectionStatus: ReconnectionStates.IDLE,
   setupStatus: SetupStates.DEINITIALIZED,
   connecting: false,
   options: {
@@ -195,19 +193,10 @@ export const createConnectSlice: StateCreator<
       await wallet.enable(get().chains.map((el) => el.chain_id));
 
       await get().setWallet(wallet);
-      set(() => ({ reconnectionStatus: ReconnectionStates.RECONNECTED }));
     } catch (error) {
       console.error(error);
 
-      set(() => ({
-        reconnectionStatus: ReconnectionStates.REJECTED,
-      }));
-
-      get().wallet?.disable(get().chains.map((el) => el.chain_id));
-
-      get().wallet?.removeListeners();
-
-      get().reset();
+      get().disconnect();
     } finally {
       set(() => ({ connecting: false }));
     }
