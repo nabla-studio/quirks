@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.0](https://github.com/nabla-studio/quirks/compare/vue@0.7.3...vue@0.8.0) (2024-02-02)
+
+### Dependency Updates
+
+* `store` updated to version `0.7.3`
+
+### Features
+
+* **vue:** :sparkles: add external deps ([9215c00](https://github.com/nabla-studio/quirks/commit/9215c00a00e2b26eb1e4de0f2f16279a2f8345cc))
+
 ## [0.7.3](https://github.com/nabla-studio/quirks/compare/vue@0.7.2...vue@0.7.3) (2024-02-02)
 
 ### Dependency Updates
