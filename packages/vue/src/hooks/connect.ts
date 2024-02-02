@@ -8,7 +8,6 @@ export const useConnect = () => {
   const disconnect = useQuirks()((state) => state.disconnect);
   const status = computed(() => state.status.value);
   const setupStatus = computed(() => state.setupStatus.value);
-  const reconnectionStatus = computed(() => state.reconnectionStatus.value);
   const wallet = computed(() => state.wallet?.value);
   const walletName = computed(() => state.walletName?.value);
   const connected = computed(() => status.value === ConnectionStates.CONNECTED);
@@ -29,6 +28,5 @@ export const useConnect = () => {
     wallet,
     walletName,
     setupStatus,
-    reconnectionStatus,
   };
 };
