@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.11.0](https://github.com/nabla-studio/quirks/compare/react@0.10.0...react@0.11.0) (2024-02-02)
+
+### Dependency Updates
+
+* `store` updated to version `0.10.0`
+
+### Features
+
+* **react:** :sparkles: add isConnecting for useConnect ([4fa2d8e](https://github.com/nabla-studio/quirks/commit/4fa2d8e75d9eed6f819708ec11e7d713c54b34a8))
+* **react:** :sparkles: remove reconnectionStatus ([3c98fc5](https://github.com/nabla-studio/quirks/commit/3c98fc5cd1d7a2e45306e5ecf9b67a96b5157e91))
+
 ## [0.10.0](https://github.com/nabla-studio/quirks/compare/react@0.9.2...react@0.10.0) (2024-02-02)
 
 ### Dependency Updates
