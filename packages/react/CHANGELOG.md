@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.10.0](https://github.com/nabla-studio/quirks/compare/react@0.9.2...react@0.10.0) (2024-02-02)
+
+### Dependency Updates
+
+* `store` updated to version `0.9.2`
+
+### Features
+
+* **react:** :sparkles: add createSelectors utility ([07df408](https://github.com/nabla-studio/quirks/commit/07df408a54129eebdac4b94c4d6977c66c66e89f))
+
 ## [0.9.2](https://github.com/nabla-studio/quirks/compare/react@0.9.1...react@0.9.2) (2024-02-02)
 
 ### Dependency Updates
