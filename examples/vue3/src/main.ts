@@ -6,19 +6,30 @@ import { quirksPlugin } from '@quirks/vue';
 
 const app = createApp(App);
 
-import {
-  bitsong,
-  bitsongAssetList,
-  osmosis,
-  osmosisAssetList,
-} from '@nabla-studio/chain-registry';
+import { osmosis, osmosisAssetList } from '@nabla-studio/chain-registry';
 import type { Config } from '@quirks/store';
-import { keplrExtension, keplrMobile, leapExtension } from '@quirks/wallets';
+import {
+  cosmostationMobile,
+  keplrExtension,
+  keplrMobile,
+  leapExtension,
+  okxExtension,
+  stationExtension,
+  xdefiExtension,
+} from '@quirks/wallets';
 
 const config: Config = {
-  wallets: [keplrExtension, leapExtension, keplrMobile],
-  chains: [osmosis, bitsong],
-  assetsLists: [osmosisAssetList, bitsongAssetList],
+  wallets: [
+    keplrExtension,
+    leapExtension,
+    keplrMobile,
+    xdefiExtension,
+    stationExtension,
+    okxExtension,
+    cosmostationMobile,
+  ],
+  chains: [osmosis],
+  assetsLists: [osmosisAssetList],
   walletConnectOptions: {
     providerOpts: {
       logger: 'info',

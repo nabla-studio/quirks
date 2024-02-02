@@ -16,10 +16,6 @@ const { connect, disconnect, connected, status, walletName } = useConnect();
 const { pairingURI } = useWalletConnect();
 
 const open = async (chainName: string) => {
-  const suggestChains = (await import('@quirks/store')).suggestChains;
-  await suggestChains(chainName, [
-    { chain: bitsong, assetList: bitsongAssetList, name: 'bitsong' },
-  ]);
   await connect(chainName);
 };
 
@@ -68,7 +64,7 @@ const send = async () => {
       <div v-for="wallet in wallets" :key="wallet.options.wallet_name">
         <button @click="open(wallet.options.wallet_name)">
           <img
-            :src="wallet.logoLight"
+            :src="wallet.logoLight ?? wallet.logoDark"
             :alt="wallet.options.pretty_name"
             height="48px"
             width="48px"
