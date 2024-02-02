@@ -1,4 +1,5 @@
-import { createConfig, type Config, createSelectors } from '@quirks/store';
+import { createConfig, type Config } from '@quirks/store';
+import { createSelectors } from '../utils';
 import {
   type PropsWithChildren,
   createContext,
