@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.18.0](https://github.com/nabla-studio/quirks/compare/store@0.17.0...store@0.18.0) (2024-02-02)
+
+
+### Features
+
+* **store:** :boom: remove WAITING states ([03514fc](https://github.com/nabla-studio/quirks/commit/03514fc37a03192446973d5f70e443ff06641462))
+* **store:** :sparkles: remove reconnectionStatus ([c309217](https://github.com/nabla-studio/quirks/commit/c309217b4af461f348b7ba31435630050a5af687))
+
 ## [0.17.0](https://github.com/nabla-studio/quirks/compare/store@0.16.2...store@0.17.0) (2024-02-02)
 
 
