@@ -34,7 +34,7 @@ export interface ConnectState {
   walletName?: string;
   wallet?: Wallet;
   status: ConnectionState;
-  isConnecting: boolean;
+  connecting: boolean;
   setupStatus: SetupState;
   reconnectionStatus: ReconnectionState;
   options: ConnectOptions;
