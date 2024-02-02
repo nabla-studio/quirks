@@ -2,6 +2,19 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.13.0](https://github.com/nabla-studio/quirks/compare/wallets@0.12.0...wallets@0.13.0) (2024-02-02)
+
+### Dependency Updates
+
+* `core` updated to version `0.12.0`
+* `wallet-registry` updated to version `0.12.0`
+
+### Features
+
+* **wallets:** :sparkles: add cosmostation mobile ([14dd920](https://github.com/nabla-studio/quirks/commit/14dd92031414780b03611b4c17353beb8f522844))
+* **wallets:** :sparkles: add okx wallet ([f7051e1](https://github.com/nabla-studio/quirks/commit/f7051e1f63f6013c40d061b9696a4b9e11cf5707))
+* **wallets:** :sparkles: improve keplr type ([3f2d67d](https://github.com/nabla-studio/quirks/commit/3f2d67df67e0d258aad039d881041147bc059fe2))
+
 ## [0.12.0](https://github.com/nabla-studio/quirks/compare/wallets@0.11.2...wallets@0.12.0) (2024-01-31)
 
 
