@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.17.0](https://github.com/nabla-studio/quirks/compare/store@0.16.2...store@0.17.0) (2024-02-02)
+
+
+### Features
+
+* **store:** :fire: remove createSelectors ([786c25d](https://github.com/nabla-studio/quirks/commit/786c25d49b326080034b8e0bd7c1633a110764f3))
+
 ## [0.16.2](https://github.com/nabla-studio/quirks/compare/store@0.16.1...store@0.16.2) (2024-02-02)
 
 ### Dependency Updates
