@@ -3,7 +3,8 @@ import type { CosmosWallet } from '../types';
 export const cosmostationmobile: CosmosWallet = {
   $schema: '../../wallet.schema.json',
   wallet_name: 'cosmostation',
-  pretty_name: 'Cosmostation',
+  pretty_name: 'Cosmostation Mobile',
+  connection_type: 'wallet_connect',
   website: 'https://www.cosmostation.io/',
   git_repo: 'https://github.com/cosmostation/cosmostation-android',
   supported_chains: [
@@ -89,12 +90,22 @@ export const cosmostationmobile: CosmosWallet = {
       layout: 'logomark',
     },
   ],
+  wallet_connect: {
+    deeplink: {
+      path: {
+        android: 'wc',
+        ios: 'wc',
+      },
+    },
+  },
   mobile: {
     ios: {
       bundle_identifier: 'io.wannabit.cosmostation',
+      schema: 'cosmostation',
     },
     android: {
       package_name: 'wannabit.io.cosmostaion',
+      schema: 'cosmostation',
     },
   },
 };

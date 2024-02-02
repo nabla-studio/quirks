@@ -21,7 +21,9 @@ import type { Keplr } from '@keplr-wallet/types';
 import Long from 'long';
 import { getChainInfo } from '../utils';
 
-export class KeplrWalletExtension extends ExtensionWallet<Keplr> {
+export class KeplrWalletExtension<
+  T extends Keplr = Keplr,
+> extends ExtensionWallet<T> {
   constructor(options: WalletOptions) {
     super(options);
   }

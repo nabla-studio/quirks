@@ -4,6 +4,7 @@ export const cosmostationextension: CosmosWallet = {
   $schema: '../../wallet.schema.json',
   wallet_name: 'cosmostationextention',
   pretty_name: 'Cosmostation',
+  connection_type: 'browser_extension',
   website: 'https://www.cosmostation.io/',
   git_repo: 'https://github.com/cosmostation/cosmostation-chrome-extension',
   supported_chains: [

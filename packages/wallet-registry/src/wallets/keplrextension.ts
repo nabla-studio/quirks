@@ -4,6 +4,7 @@ export const keplrextension: CosmosWallet = {
   $schema: '../../wallet.schema.json',
   wallet_name: 'keplrextension',
   pretty_name: 'Keplr',
+  connection_type: 'browser_extension',
   website: 'https://www.keplr.app/',
   git_repo: 'https://github.com/chainapsis/keplr-wallet',
   supported_chains: [
