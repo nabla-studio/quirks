@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.18.1](https://github.com/nabla-studio/quirks/compare/store@0.18.0...store@0.18.1) (2024-02-05)
+
+
+### Bug Fixes
+
+* **store:** :bug: fix getWalletData error propagation ([2f0a087](https://github.com/nabla-studio/quirks/commit/2f0a0871d42a8ad19e9dec2623f57f64d55f5829))
+
 ## [0.18.0](https://github.com/nabla-studio/quirks/compare/store@0.17.0...store@0.18.0) (2024-02-02)
 
 
