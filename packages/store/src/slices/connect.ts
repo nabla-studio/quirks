@@ -64,31 +64,27 @@ export const createConnectSlice: StateCreator<
     const wallet = get().wallet;
 
     if (wallet) {
-      try {
-        const accounts: AddressWithChain[] = [];
-        let accountName = '';
+      const accounts: AddressWithChain[] = [];
+      let accountName = '';
 
-        for (const chain of get().chains) {
-          const account = await wallet.getAccount(chain.chain_id);
+      for (const chain of get().chains) {
+        const account = await wallet.getAccount(chain.chain_id);
 
-          if (account) {
-            accountName = account.name;
+        if (account) {
+          accountName = account.name;
 
-            accounts.push({
-              ...account,
-              chainId: chain.chain_id,
-              chainName: chain.chain_name,
-            });
-          }
+          accounts.push({
+            ...account,
+            chainId: chain.chain_id,
+            chainName: chain.chain_name,
+          });
         }
-
-        set({
-          accountName,
-          accounts,
-        });
-      } catch (error) {
-        console.error(error);
       }
+
+      set({
+        accountName,
+        accounts,
+      });
     }
   },
   suggestChains: async (walletName) => {
