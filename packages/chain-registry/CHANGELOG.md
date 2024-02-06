@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.0](https://github.com/nabla-studio/quirks/compare/chain-registry@0.6.0...chain-registry@0.7.0) (2024-02-06)
+
+
+### Features
+
+* **chain-registry:** :sparkles: add dymension chain ([b7419bf](https://github.com/nabla-studio/quirks/commit/b7419bf27b83fe205917dd5b95ce172ab6570d85))
+
 ## [0.6.0](https://github.com/nabla-studio/quirks/compare/chain-registry@0.5.0...chain-registry@0.6.0) (2024-01-31)
 
 
