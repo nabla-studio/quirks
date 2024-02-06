@@ -41,18 +41,18 @@ export const juno: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/CosmosContracts/juno',
-    recommended_version: 'v18.1.0',
-    compatible_versions: ['v18.1.0'],
+    recommended_version: 'v19.1.0',
+    compatible_versions: ['v19.1.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/CosmosContracts/juno/releases/download/v18.1.0/junod',
+        'https://github.com/CosmosContracts/juno/releases/download/v19.1.0/junod',
     },
-    cosmos_sdk_version: '0.47.5',
+    cosmos_sdk_version: 'v0.47.6',
     consensus: {
       type: 'cometbft',
-      version: '0.37.2',
+      version: 'v0.37.2',
     },
-    cosmwasm_version: '0.45.0',
+    cosmwasm_version: 'v0.45.0',
     cosmwasm_enabled: true,
     ibc_go_version: 'v7.3.1',
     genesis: {
@@ -177,6 +177,26 @@ export const juno: Chain = {
         cosmwasm_version: '0.45.0',
         cosmwasm_enabled: true,
         ibc_go_version: 'v7.3.1',
+        next_version_name: 'v19',
+      },
+      {
+        name: 'v19',
+        proposal: 333,
+        height: 13678871,
+        recommended_version: 'v19.1.0',
+        compatible_versions: ['v19.1.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CosmosContracts/juno/releases/download/v19.1.0/junod',
+        },
+        cosmos_sdk_version: 'v0.47.6',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.3.1',
         next_version_name: '',
       },
     ],
@@ -281,10 +301,6 @@ export const juno: Chain = {
       {
         address: 'https://rpc-juno.whispernode.com:443',
         provider: 'WhisperNode 🤐',
-      },
-      {
-        address: 'https://rpc-juno.goldenratiostaking.net',
-        provider: 'Golden Ratio Staking',
       },
       {
         address: 'https://rpc-juno.itastakers.com',
@@ -437,20 +453,12 @@ export const juno: Chain = {
         provider: 'kingnodes 👑',
       },
       {
-        address: 'https://juno-api.reece.sh',
-        provider: 'Reecepbcups',
-      },
-      {
         address: 'https://juno-api.stakeandrelax.net',
         provider: 'Stake&Relax Validator 🦥',
       },
       {
         address: 'https://rest-juno.architectnodes.com',
         provider: 'Architect Nodes',
-      },
-      {
-        address: 'https://rest-juno.goldenratiostaking.net',
-        provider: 'Golden Ratio Staking',
       },
       {
         address: 'https://api-juno-01.stakeflow.io',
@@ -1403,7 +1411,7 @@ export const junoAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hopers.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hopers.svg',
       },
-      coingecko_id: 'hopers-io ',
+      coingecko_id: 'hopers-io',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hopers.png',

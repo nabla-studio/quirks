@@ -120,7 +120,6 @@ export const kujira: Chain = {
       },
       {
         denom: 'factory/kujira1643jxg8wasy5cfcn7xm8rd742yeazcksqlg4d7/umnta',
-
         fixed_min_gas_price: 0.01807,
         low_gas_price: 0.01807,
         average_gas_price: 0.02711,

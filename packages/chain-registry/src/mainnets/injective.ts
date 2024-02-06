@@ -218,10 +218,6 @@ export const injective: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://injective-rpc.quickapi.com:443',
-        provider: 'Chainlayer',
-      },
-      {
         address: 'https://rpc-injective.goldenratiostaking.net',
         provider: 'Golden Ratio Staking',
       },
@@ -242,10 +238,6 @@ export const injective: Chain = {
         provider: 'AutoStake.com',
       },
       {
-        address: 'https://rpc.injective.posthuman.digital:443',
-        provider: 'POSTHUMAN ꝏ DVS',
-      },
-      {
         address: 'https://rpc-injective.whispernode.com:443',
         provider: 'WhisperNode 🤐',
       },
@@ -258,19 +250,11 @@ export const injective: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://injective-rpc.w3coins.io',
-        provider: 'w3coins',
-      },
-      {
         address: 'https://injective-rpc.highstakes.ch:26657/',
         provider: 'High Stakes 🇨🇭',
       },
     ],
     rest: [
-      {
-        address: 'https://injective-lcd.quickapi.com:443',
-        provider: 'Chainlayer',
-      },
       {
         address: 'https://api-injective-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
@@ -282,10 +266,6 @@ export const injective: Chain = {
       {
         address: 'https://injective-api.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
-      },
-      {
-        address: 'https://rest.injective.posthuman.digital:443',
-        provider: 'POSTHUMAN ꝏ DVS',
       },
       {
         address: 'https://lcd-injective.whispernode.com:443',
@@ -302,10 +282,6 @@ export const injective: Chain = {
       {
         address: 'https://injective-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
-      },
-      {
-        address: 'https://injective-api.w3coins.io',
-        provider: 'w3coins',
       },
       {
         address: 'https://injective-api.highstakes.ch:1317/',
@@ -624,6 +600,47 @@ export const injectiveAssetList: AssetLists = {
       ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+      },
+    },
+    {
+      description: 'GLTO-ERC20 on injective',
+      denom_units: [
+        {
+          denom: 'peggy0xd73175f9eb15eee81745d367ae59309Ca2ceb5e2',
+          exponent: 0,
+        },
+        {
+          denom: 'glto',
+          exponent: 6,
+        },
+      ],
+      base: 'peggy0xd73175f9eb15eee81745d367ae59309Ca2ceb5e2',
+      name: 'Gelotto',
+      display: 'glto',
+      symbol: 'GLTO',
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0xd73175f9eb15eee81745d367ae59309Ca2ceb5e2',
+          },
+          provider: 'Peggy',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xd73175f9eb15eee81745d367ae59309Ca2ceb5e2',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/glto.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/glto.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/glto.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/glto.svg',
       },
     },
   ],

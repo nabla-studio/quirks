@@ -441,10 +441,6 @@ export const haqq: Chain = {
         provider: 'kioqq',
       },
       {
-        address: 'http://haqq.rpc.nodersteam.com:19657',
-        provider: '[NODERS]TEAM',
-      },
-      {
         address: 'https://rpc.haqq.nodestake.top',
         provider: 'NodeStake',
       },
@@ -473,10 +469,6 @@ export const haqq: Chain = {
       {
         address: 'https://m-s1-sdk.haqq.sh',
         provider: 'kioqq',
-      },
-      {
-        address: 'http://haqq.api.nodersteam.com:19017',
-        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://api.haqq.nodestake.top',

@@ -79,6 +79,11 @@ export const source: Chain = {
         provider: 'NodeStake',
       },
       {
+        id: '6f6a3a908634b79b6fe7c4988efec2553f188234',
+        address: 'source.rpc.nodeshub.online:15856',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
+      {
         id: '8fb118f995c146357b67798e9bdd650d0c4161ea',
         address: 'seed.source.validatus.com:3000',
         provider: 'Validatus',
@@ -174,8 +179,8 @@ export const source: Chain = {
         provider: 'skynodejs',
       },
       {
-        address: 'rpc.source.validatus.com',
-        provider: 'Validatus',
+        address: 'https://source.rpc.nodeshub.online/',
+        provider: 'Nodes Hub',
       },
     ],
     rest: [
@@ -216,6 +221,10 @@ export const source: Chain = {
         provider: 'Indonode',
       },
       {
+        address: 'https://source.api.nodeshub.online/',
+        provider: 'Nodes Hub',
+      },
+      {
         address: 'https://api.source.validatus.com',
         provider: 'Validatus',
       },
@@ -248,6 +257,10 @@ export const source: Chain = {
       {
         address: 'https://source.grpc.skynodejs.net',
         provider: 'skynodejs',
+      },
+      {
+        address: 'https://source.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
       },
       {
         address: 'https://grpc.source.validatus.com',

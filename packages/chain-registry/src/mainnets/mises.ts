@@ -87,10 +87,6 @@ export const mises: Chain = {
         address: 'https://e2.mises.site:443',
         provider: 'Mises-3',
       },
-      {
-        address: 'https://w2.mises.site:443',
-        provider: 'Mises-5',
-      },
     ],
     rest: [],
     grpc: [],

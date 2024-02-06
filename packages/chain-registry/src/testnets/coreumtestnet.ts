@@ -107,7 +107,7 @@ export const coreumtestnet: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://full-node-pluto.testnet-1.coreum.dev:26657',
+        address: 'https://full-node.testnet-1.coreum.dev:26657',
         provider: 'Coreum Foundation',
       },
       {
@@ -117,7 +117,7 @@ export const coreumtestnet: Chain = {
     ],
     grpc: [
       {
-        address: 'https://full-node-pluto.testnet-1.coreum.dev:9090',
+        address: 'https://full-node.testnet-1.coreum.dev:9090',
         provider: 'Coreum Foundation',
       },
       {

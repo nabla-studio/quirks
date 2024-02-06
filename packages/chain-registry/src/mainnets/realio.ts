@@ -187,10 +187,6 @@ export const realio: Chain = {
         provider: 'Indonode',
       },
       {
-        address: 'https://rpc.realio.nodestake.top',
-        provider: 'NodeStake',
-      },
-      {
         address: 'https://rpc-realio.vinjan.xyz',
         provider: 'vinjan',
       },
@@ -223,10 +219,6 @@ export const realio: Chain = {
       {
         address: 'https://api.realio.indonode.net',
         provider: 'Indonode',
-      },
-      {
-        address: 'https://api.realio.nodestake.top',
-        provider: 'NodeStake',
       },
       {
         address: 'https://api-realio.vinjan.xyz',

@@ -156,10 +156,6 @@ export const uptick: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'http://uptick.rpc.nodersteam.com:21657',
-        provider: '[NODERS]TEAM',
-      },
-      {
         address: 'https://uptick.rpc.kjnodes.com',
         provider: 'kjnodes',
       },
@@ -200,10 +196,6 @@ export const uptick: Chain = {
       {
         address: 'https://uptick-rest.brocha.in:443',
         provider: 'Brochain',
-      },
-      {
-        address: 'http://uptick.api.nodersteam.com:21017',
-        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://api.uptick.nodestake.top',

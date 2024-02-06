@@ -128,10 +128,6 @@ export const fetchhub: Chain = {
         provider: 'Kleomedes',
       },
       {
-        address: 'https://fetch-rpc.teasel.org',
-        provider: '𝗧𝗲𝗮𝘀𝗲𝗹',
-      },
-      {
         address: 'https://fetch-rpc.antrixy.org',
         provider: 'Antrix',
       },
@@ -180,10 +176,6 @@ export const fetchhub: Chain = {
       {
         address: 'https://fetchai-api.kleomedes.network',
         provider: 'Kleomedes',
-      },
-      {
-        address: 'https://fetch-rest.teasel.org',
-        provider: '𝗧𝗲𝗮𝘀𝗲𝗹',
       },
       {
         address: 'https://fetch-rest.antrixy.org',

@@ -168,10 +168,6 @@ export const sommelier: Chain = {
         address: 'https://sommelier-rpc.w3coins.io',
         provider: 'w3coins',
       },
-      {
-        address: 'https://rpc.sommelier.validatus.com',
-        provider: 'Validatus',
-      },
     ],
     rest: [
       {
@@ -197,14 +193,6 @@ export const sommelier: Chain = {
       {
         address: 'https://somm-api.kleomedes.network',
         provider: 'Kleomedes',
-      },
-      {
-        address: 'https://sommelier-api.w3coins.io',
-        provider: 'w3coins',
-      },
-      {
-        address: 'https://api.sommelier.validatus.com',
-        provider: 'Validatus',
       },
     ],
     grpc: [

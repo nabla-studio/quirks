@@ -68,12 +68,7 @@ export const conscious: Chain = {
         provider: 'cvn.io',
       },
     ],
-    rest: [
-      {
-        address: 'https://api.consciousdao.com',
-        provider: 'consciousdao.com',
-      },
-    ],
+    rest: [],
     grpc: [
       {
         address: 'https://rest.consciousdao.com',

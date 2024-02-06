@@ -43,6 +43,11 @@ export const andromeda: Chain = {
         address: 'seeds.stakerhouse.com:12156',
         provider: 'StakerHouse',
       },
+      {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'andromeda-mainnet-peer.autostake.com:27126',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
     persistent_peers: [
       {
@@ -76,6 +81,11 @@ export const andromeda: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'andromeda-mainnet-seed.autostake.com:27126',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         id: '28876b3094518bef97a1250ef641c26b7d4a658d',
         address: '138.201.21.197:39656',
         provider: 'StakeTown',
@@ -103,6 +113,10 @@ export const andromeda: Chain = {
       {
         address: 'https://andromeda-rpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'https://andromeda-mainnet-rpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://andromeda-rpc.stake-town.com:443',
@@ -143,6 +157,10 @@ export const andromeda: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
+        address: 'https://andromeda-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         address: 'https://andromeda-api.stake-town.com:443',
         provider: 'StakeTown',
       },
@@ -171,6 +189,10 @@ export const andromeda: Chain = {
       {
         address: 'andromeda.grpc.kjnodes.com:443',
         provider: 'kjnodes',
+      },
+      {
+        address: 'andromeda-mainnet-grpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://andromeda.grpc.nodex.one:443',

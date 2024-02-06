@@ -231,10 +231,6 @@ export const composable: Chain = {
         provider: 'Cogwheel',
       },
       {
-        address: 'https://rpc-centauri.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://composable-rpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
       },
@@ -259,10 +255,6 @@ export const composable: Chain = {
         provider: 'Stake&Relax 🦥',
       },
       {
-        address: 'https://rpc.composable.validatus.com',
-        provider: 'Validatus',
-      },
-      {
         address: 'https://rpc.centauri.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
@@ -283,10 +275,6 @@ export const composable: Chain = {
       {
         address: 'https://composable-api.cogwheel.zone:443',
         provider: 'Cogwheel',
-      },
-      {
-        address: 'https://api-centauri.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
       },
       {
         address: 'https://composable-api.lavenderfive.com:443',
@@ -311,10 +299,6 @@ export const composable: Chain = {
       {
         address: 'https://composable-api.stakeandrelax.net',
         provider: 'Stake&Relax 🦥',
-      },
-      {
-        address: 'https://api.composable.validatus.com',
-        provider: 'Validatus',
       },
       {
         address: 'https://lcd.centauri.bronbro.io:443',

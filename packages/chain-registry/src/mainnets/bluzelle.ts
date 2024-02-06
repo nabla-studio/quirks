@@ -133,10 +133,6 @@ export const bluzelle: Chain = {
         address: 'https://c.client.sentry.net.bluzelle.com:26657',
         provider: 'Bluzelle',
       },
-      {
-        address: 'https://bluzelle-rpc.genznodes.dev',
-        provider: 'genznodes',
-      },
     ],
     rest: [
       {

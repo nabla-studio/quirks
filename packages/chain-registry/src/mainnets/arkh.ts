@@ -72,19 +72,11 @@ export const arkh: Chain = {
         address: 'https://asc-dataseed.arkhadian.com/',
         provider: 'arkhnetwork',
       },
-      {
-        address: 'https://rpc.arkh.nodestake.top',
-        provider: 'NodeStake',
-      },
     ],
     rest: [
       {
         address: 'https://asc-blockchain-api.arkhadian.com/',
         provider: 'arkhnetwork',
-      },
-      {
-        address: 'https://api.arkh.nodestake.top',
-        provider: 'NodeStake',
       },
     ],
     grpc: [

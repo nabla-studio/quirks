@@ -195,6 +195,10 @@ export const celestia: Chain = {
         address: 'https://rpc.celestia.validatus.com',
         provider: 'Validatus',
       },
+      {
+        address: 'https://celestia-rpc.sr20de.xyz',
+        provider: 'Sr20de',
+      },
     ],
     rest: [
       {
@@ -257,6 +261,10 @@ export const celestia: Chain = {
         address: 'https://api.celestia.validatus.com',
         provider: 'Validatus',
       },
+      {
+        address: 'https://celestia-api.sr20de.xyz',
+        provider: 'Sr20de',
+      },
     ],
     grpc: [
       {
@@ -306,6 +314,10 @@ export const celestia: Chain = {
       {
         address: 'grpc.celestia.validatus.com',
         provider: 'Validatus',
+      },
+      {
+        address: 'celestia-grpc.sr20de.xyz',
+        provider: 'Sr20de',
       },
     ],
   },

@@ -744,10 +744,6 @@ export const osmosis: Chain = {
         provider: 'w3coins',
       },
       {
-        address: 'https://rpc-osmosis.mms.team',
-        provider: 'MMS',
-      },
-      {
         address: 'https://osmosis-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
@@ -778,6 +774,10 @@ export const osmosis: Chain = {
       {
         address: 'https://rpc.osmosis.bronbro.io:443',
         provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'https://osmosis.interstellar-lounge.org',
+        provider: 'Interstellar Lounge 🍸',
       },
     ],
     rest: [
@@ -834,10 +834,6 @@ export const osmosis: Chain = {
         provider: 'WhisperNode 🤐',
       },
       {
-        address: 'https://api-osmosis.mms.team',
-        provider: 'MMS',
-      },
-      {
         address: 'https://osmosis-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
@@ -850,10 +846,6 @@ export const osmosis: Chain = {
         provider: 'StakeTown',
       },
       {
-        address: 'https://osmosis-mainnet.api.l0vd.com:443',
-        provider: 'L0vd.com ❤️',
-      },
-      {
         address: 'https://osmosis-api.reece.sh',
         provider: 'Reecepbcups',
       },
@@ -864,6 +856,10 @@ export const osmosis: Chain = {
       {
         address: 'https://lcd.osmosis.bronbro.io:443',
         provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'https://osmosis-rest.interstellar-lounge.org',
+        provider: 'Interstellar Lounge 🍸',
       },
     ],
     grpc: [
