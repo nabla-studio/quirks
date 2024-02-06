@@ -148,10 +148,6 @@ export const tenet: Chain = {
         provider: 'tenet',
       },
       {
-        address: 'https://tenet-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://tenet-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
@@ -160,10 +156,6 @@ export const tenet: Chain = {
       {
         address: 'https://app.rpc.tenet.org',
         provider: 'tenet',
-      },
-      {
-        address: 'https://tenet-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://tenet-rest.publicnode.com',

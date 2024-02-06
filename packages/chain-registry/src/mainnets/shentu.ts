@@ -147,6 +147,11 @@ export const shentu: Chain = {
         address: 'seed-shentu-01.stakeflow.io:2407',
         provider: 'Stakeflow',
       },
+      {
+        id: '3edd4e16b791218b623f883d04f8aa5c3ff2cca6',
+        address: 'shentu-seed.panthea.eu:36656',
+        provider: 'Panthea EU',
+      },
     ],
     persistent_peers: [
       {
@@ -158,6 +163,11 @@ export const shentu: Chain = {
         id: 'f97807210f9547b8a5016fb18000b46072ca5e30',
         address: 'peer-shentu-01.stakeflow.io:2407',
         provider: 'Stakeflow',
+      },
+      {
+        id: '207c47bed435e4174844064ef3f51ca35b059de2',
+        address: 'shentu-peer.panthea.eu:26656',
+        provider: 'Panthea EU',
       },
     ],
   },
@@ -191,6 +201,10 @@ export const shentu: Chain = {
         address: 'https://shentu-rpc.highstakes.ch:26657/',
         provider: 'High Stakes 🇨🇭',
       },
+      {
+        address: 'https://shentu-rpc.panthea.eu',
+        provider: 'Panthea EU',
+      },
     ],
     rest: [
       {
@@ -221,6 +235,10 @@ export const shentu: Chain = {
         address: 'https://shentu-api.highstakes.ch:1317/',
         provider: 'High Stakes 🇨🇭',
       },
+      {
+        address: 'https://shentu-api.panthea.eu',
+        provider: 'Panthea EU',
+      },
     ],
     grpc: [
       {
@@ -242,6 +260,10 @@ export const shentu: Chain = {
       {
         address: 'shentu-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'shentu-grpc.panthea.eu:16700',
+        provider: 'Panthea EU',
       },
     ],
   },

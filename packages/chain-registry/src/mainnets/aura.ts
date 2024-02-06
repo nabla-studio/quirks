@@ -197,10 +197,6 @@ export const aura: Chain = {
         provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
       },
       {
-        address: 'https://rpc.aura.nodestake.top',
-        provider: 'NodeStake',
-      },
-      {
         address: 'http://aura.rpc.m.stavr.tech:11047',
         provider: '🔥STAVR🔥',
       },
@@ -237,10 +233,6 @@ export const aura: Chain = {
         provider: 'silent',
       },
       {
-        address: 'https://aura-rpc.sergo.dev',
-        provider: 'SerGo',
-      },
-      {
         address: 'https://rpc-aura.mms.team',
         provider: 'MMS',
       },
@@ -265,10 +257,6 @@ export const aura: Chain = {
       {
         address: 'https://aura.api.m.stavr.tech',
         provider: '🔥STAVR🔥',
-      },
-      {
-        address: 'https://api.aura.nodestake.top',
-        provider: 'NodeStake',
       },
       {
         address: 'https://aura-api.ramuchi.tech',
@@ -301,10 +289,6 @@ export const aura: Chain = {
       {
         address: 'https://api.aura.silentvalidator.com',
         provider: 'silent',
-      },
-      {
-        address: 'https://aura-api.sergo.dev',
-        provider: 'SerGo',
       },
       {
         address: 'https://api-aura.mms.team',

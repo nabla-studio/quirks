@@ -78,16 +78,8 @@ export const starname: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc.starname.cosmos.iov.one',
-        provider: 'Starname',
-      },
-      {
         address: 'https://rpc-starname-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
-      },
-      {
-        address: 'https://rpc.starname.cosmos.iov.one',
-        provider: 'starname.me',
       },
       {
         address: 'https://rpc.starname.app',
@@ -96,16 +88,8 @@ export const starname: Chain = {
     ],
     rest: [
       {
-        address: 'https://api.starname.cosmos.iov.one',
-        provider: 'Starname',
-      },
-      {
         address: 'https://api-starname-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
-      },
-      {
-        address: 'https://api.starname.cosmos.iov.one',
-        provider: 'starname.me',
       },
       {
         address: 'https://rest.starname.app',

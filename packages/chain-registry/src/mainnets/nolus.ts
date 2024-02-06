@@ -185,10 +185,6 @@ export const nolus: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://nolus-rpc.sphincs.plus',
-        provider: 'Sphincs.plus 🔅',
-      },
-      {
         address: 'https://nolus.rpc.liveraven.net',
         provider: 'LiveRaveN',
       },
@@ -233,10 +229,6 @@ export const nolus: Chain = {
       {
         address: 'https://nolus-api.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
-      },
-      {
-        address: 'https://nolus-lcd.sphincs.plus',
-        provider: 'Sphincs.plus 🔅',
       },
       {
         address: 'https://api-nolus.cosmos-spaces.cloud',

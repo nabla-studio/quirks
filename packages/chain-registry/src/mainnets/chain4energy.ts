@@ -326,18 +326,6 @@ export const chain4Energy: Chain = {
         provider: '🔥STAVR🔥',
       },
       {
-        address: 'https://rpc-c4e.d-stake.xyz',
-        provider: 'D-Stake',
-      },
-      {
-        address: 'https://c4e.rpc.bccnodes.com',
-        provider: 'BccNodes',
-      },
-      {
-        address: 'https://rpc-m.c4e.hexnodes.co',
-        provider: 'Hexnodes',
-      },
-      {
         address: 'https://rpc-c4e.takeshi.team',
         provider: 'TAKESHI',
       },
@@ -382,10 +370,6 @@ export const chain4Energy: Chain = {
         provider: 'AlxVoy ⚡ ANODE.TEAM',
       },
       {
-        address: 'https://c4e-rpc.validatrium.club',
-        provider: 'Validatrium',
-      },
-      {
         address: 'http://185.245.182.192:46657',
         provider: 'Meerlabs',
       },
@@ -396,10 +380,6 @@ export const chain4Energy: Chain = {
       {
         address: 'http://c4e.rpc.node75.org:26957',
         provider: 'Pro-nodes75',
-      },
-      {
-        address: 'https://rpc-c4e.stakerun.com:443',
-        provider: 'StakeRun',
       },
       {
         address: 'http://164.68.125.243:26657',
@@ -416,10 +396,6 @@ export const chain4Energy: Chain = {
       {
         address: 'https://c4e-rpc.kalia.network:443',
         provider: 'Kalia Network',
-      },
-      {
-        address: 'https://c4e.rpc.skynodejs.net',
-        provider: 'skynodejs',
       },
       {
         address: 'http://38.242.220.64:16657',
@@ -450,10 +426,6 @@ export const chain4Energy: Chain = {
       {
         address: 'https://c4e.api.m.stavr.tech',
         provider: '🔥STAVR🔥',
-      },
-      {
-        address: 'https://api-m.c4e.hexnodes.co',
-        provider: 'Hexnodes',
       },
       {
         address: 'https://api-c4e.takeshi.team',
@@ -500,16 +472,8 @@ export const chain4Energy: Chain = {
         provider: 'AlxVoy ⚡ ANODE.TEAM',
       },
       {
-        address: 'https://c4e-api.validatrium.club',
-        provider: 'Validatrium',
-      },
-      {
         address: 'http://c4e.api.node75.org:1397',
         provider: 'Pro-nodes75',
-      },
-      {
-        address: 'https://lcd-c4e.stakerun.com:443',
-        provider: 'StakeRun',
       },
       {
         address: 'http://164.68.125.243:1319',
@@ -522,10 +486,6 @@ export const chain4Energy: Chain = {
       {
         address: 'https://c4e-api.kalia.network:443',
         provider: 'Kalia Network',
-      },
-      {
-        address: 'https://c4e.api.skynodejs.net',
-        provider: 'skynodejs',
       },
       {
         address: 'http://38.242.220.64:11317',

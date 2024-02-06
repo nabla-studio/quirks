@@ -79,6 +79,11 @@ export const humans: Chain = {
         provider: 'RHINO',
       },
       {
+        id: '0e959a22dfdd34ac16f9af82d76ec6ae5f0e8e73',
+        address: '46.4.14.172:10256',
+        provider: 'PPNV Service',
+      },
+      {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
@@ -89,6 +94,11 @@ export const humans: Chain = {
         id: '5e51671241340f1d1e1409a9e0cc4474820bf782',
         address: 'humans-mainnet-peer.itrocket.net:17656',
         provider: 'itrocket',
+      },
+      {
+        id: 'fd66247c122117190c9f2e7a09797e4039a05ba2',
+        address: '46.4.14.172:16656',
+        provider: 'PPNV Service',
       },
       {
         id: '2f8a0bf63e23606dc85bdd11afbf34e68a9f3b74',
@@ -113,14 +123,6 @@ export const humans: Chain = {
         provider: 'kjnodes',
       },
       {
-        address: 'http://humans.rpc.nodersteam.com:22657',
-        provider: '[NODERS]TEAM',
-      },
-      {
-        address: 'https://rpc-humans.nodeist.net',
-        provider: 'Nodeist',
-      },
-      {
         address: 'https://humans-mainnet-rpc.itrocket.net',
         provider: 'itrocket',
       },
@@ -137,16 +139,16 @@ export const humans: Chain = {
         provider: 'StakeAngle',
       },
       {
-        address: 'https://rpc.humans.stakepool.dev.br',
-        provider: 'StakePool',
-      },
-      {
         address: 'https://humans-rpc.anyvalid.com:26627',
         provider: 'AnyValid',
       },
       {
         address: 'https://mainnet-humans-rpc.konsortech.xyz',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'http://46.4.14.172:16657',
+        provider: 'PPNV Service',
       },
       {
         address: 'https://rpc.humans-mainnet.stake-take.com/',
@@ -161,14 +163,6 @@ export const humans: Chain = {
       {
         address: 'https://humans.api.kjnodes.com',
         provider: 'kjnodes',
-      },
-      {
-        address: 'http://humans.api.nodersteam.com:22017',
-        provider: '[NODERS]TEAM',
-      },
-      {
-        address: 'https://api-humans.nodeist.net',
-        provider: 'Nodeist',
       },
       {
         address: 'https://humans-mainnet-api.itrocket.net',
@@ -187,12 +181,12 @@ export const humans: Chain = {
         provider: 'StakeAngle',
       },
       {
-        address: 'https://rest.humans.stakepool.dev.br',
-        provider: 'StakePool',
-      },
-      {
         address: 'https://mainnet-humans-api.konsortech.xyz',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'http://46.4.14.172:16317',
+        provider: 'PPNV Service',
       },
       {
         address: 'https://api.humans-mainnet.stake-take.com/',
@@ -223,6 +217,10 @@ export const humans: Chain = {
       {
         address: 'humans.grpc.nodersteam.com:9221',
         provider: '[NODERS]TEAM',
+      },
+      {
+        address: '46.4.14.172:16090',
+        provider: 'PPNV Service',
       },
       {
         address: 'https://grpc-humans.cosmos-spaces.cloud:1190',

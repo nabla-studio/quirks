@@ -166,10 +166,6 @@ export const teritori: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://rpc.teritori.nodestake.top',
-        provider: 'NodeStake',
-      },
-      {
         address: 'https://teritori.rpc.m.stavr.tech',
         provider: '🔥STAVR🔥',
       },
@@ -202,10 +198,6 @@ export const teritori: Chain = {
         provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
       },
       {
-        address: 'https://teritori.rpc.silknodes.io',
-        provider: 'Silk Nodes',
-      },
-      {
         address: 'https://rpc-teritori.pupmos.network',
         provider: 'PUPMØS',
       },
@@ -230,10 +222,6 @@ export const teritori: Chain = {
       {
         address: 'https://teritori-api.polkachu.com',
         provider: 'Polkachu',
-      },
-      {
-        address: 'https://api.teritori.nodestake.top',
-        provider: 'NodeStake',
       },
       {
         address: 'https://teritori.api.m.stavr.tech',
@@ -262,10 +250,6 @@ export const teritori: Chain = {
       {
         address: 'https://m-teritori.api.utsa.tech',
         provider: '𝐥𝐞𝐬𝐧𝐢𝐤 | 𝐔𝐓𝐒𝐀',
-      },
-      {
-        address: 'https://teritori.api.silknodes.io',
-        provider: 'Silk Nodes',
       },
       {
         address: 'https://api-teritori.pupmos.network',

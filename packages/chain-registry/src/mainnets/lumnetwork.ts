@@ -33,8 +33,8 @@ export const lumnetwork: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/lum-network/chain',
-    recommended_version: 'v1.6.3',
-    compatible_versions: ['v1.6.3'],
+    recommended_version: 'v1.6.4',
+    compatible_versions: ['v1.6.4'],
     cosmos_sdk_version: 'v0.47.5',
     ibc_go_version: 'v7.2.0',
     consensus: {
@@ -43,17 +43,17 @@ export const lumnetwork: Chain = {
     },
     binaries: {
       'linux/amd64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_ubuntu-latest_amd64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_ubuntu-latest_amd64.zip',
       'linux/arm64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_ubuntu-latest_arm64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_ubuntu-latest_arm64.zip',
       'darwin/amd64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_macos-latest_amd64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_macos-latest_amd64.zip',
       'darwin/arm64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_macos-latest_arm64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_macos-latest_arm64.zip',
       'windows/amd64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_windows-latest_amd64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_windows-latest_amd64.zip',
       'windows/arm64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_windows-latest_arm64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_windows-latest_arm64.zip',
     },
     genesis: {
       genesis_url:
@@ -156,6 +156,34 @@ export const lumnetwork: Chain = {
           'windows/arm64':
             'https://github.com/lum-network/chain/releases/download/v1.6.3/lumd_windows-latest_arm64.zip',
         },
+        next_version_name: 'v1.6.4',
+      },
+      {
+        name: 'v1.6.4',
+        proposal: 97,
+        height: 11390000,
+        recommended_version: 'v1.6.4',
+        compatible_versions: ['v1.6.4'],
+        cosmos_sdk_version: 'v0.47.5',
+        ibc_go_version: 'v7.2.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_ubuntu-latest_amd64.zip',
+          'linux/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_ubuntu-latest_arm64.zip',
+          'darwin/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_macos-latest_amd64.zip',
+          'darwin/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_macos-latest_arm64.zip',
+          'windows/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_windows-latest_amd64.zip',
+          'windows/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_windows-latest_arm64.zip',
+        },
         next_version_name: '',
       },
     ],
@@ -191,6 +219,11 @@ export const lumnetwork: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: '0df233b1eb62504f96a856ce358014b2fb8ce91b',
+        address: 'lum-seed.panthea.eu:43656',
+        provider: 'Panthea EU',
+      },
     ],
     persistent_peers: [
       {
@@ -213,6 +246,11 @@ export const lumnetwork: Chain = {
         address: '34.209.132.0:26656',
         provider: 'cosmostation',
       },
+      {
+        id: '43216584c1e6b1056566a4825b15cdfbfc79d9e8',
+        address: 'lum-peer.panthea.eu:33656',
+        provider: 'Panthea EU',
+      },
     ],
   },
   apis: {
@@ -233,6 +271,10 @@ export const lumnetwork: Chain = {
         address: 'https://lum-rpc.stakerhouse.com',
         provider: 'StakerHouse',
       },
+      {
+        address: 'https://lum-rpc.panthea.eu',
+        provider: 'Panthea EU',
+      },
     ],
     rest: [
       {
@@ -251,6 +293,10 @@ export const lumnetwork: Chain = {
         address: 'https://lum-rest.stakerhouse.com',
         provider: 'StakerHouse',
       },
+      {
+        address: 'https://lum-api.panthea.eu',
+        provider: 'Panthea EU',
+      },
     ],
     grpc: [
       {
@@ -264,6 +310,10 @@ export const lumnetwork: Chain = {
       {
         address: 'lum-grpc.stakerhouse.com:443',
         provider: 'StakerHouse',
+      },
+      {
+        address: 'lum-grpc.panthea.eu:16770',
+        provider: 'Panthea EU',
       },
     ],
   },

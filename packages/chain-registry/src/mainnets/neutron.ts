@@ -167,10 +167,6 @@ export const neutron: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc-lb.neutron.org',
-        provider: 'Neutron',
-      },
-      {
         address: 'https://rpc.novel.remedy.tm.p2p.org',
         provider: 'P2P',
       },
@@ -199,19 +195,11 @@ export const neutron: Chain = {
         provider: 'PRO Delegators',
       },
       {
-        address: 'https://rpc-neutron.in3s.com:443',
-        provider: 'in3s.com',
-      },
-      {
         address: 'https://rpc.neutron.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
     ],
     rest: [
-      {
-        address: 'https://rest-lb.neutron.org',
-        provider: 'Neutron',
-      },
       {
         address: 'https://api.novel.remedy.tm.p2p.org',
         provider: 'P2P',
@@ -251,11 +239,7 @@ export const neutron: Chain = {
         provider: 'Neutron',
       },
       {
-        address: 'https://grpc.novel.remedy.tm.p2p.org',
-        provider: 'P2P',
-      },
-      {
-        address: 'https://grpc-web.novel.remedy.tm.p2p.org',
+        address: 'neutron-grpc-pub.rpc.p2p.world:3001',
         provider: 'P2P',
       },
       {

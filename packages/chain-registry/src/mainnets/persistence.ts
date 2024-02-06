@@ -37,21 +37,21 @@ export const persistence: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/persistenceOne/persistenceCore',
-    recommended_version: 'v10.0.0',
-    compatible_versions: ['v10.0.0'],
-    cosmos_sdk_version: 'v0.47.3-lsm5',
-    ibc_go_version: 'v7.2.0-lsm3',
+    recommended_version: 'v10.4.0',
+    compatible_versions: ['v10.4.0'],
+    cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.3-lsm5',
+    ibc_go_version: 'persistenceOne/ibc-go/v7 v7.2.0-lsm3',
     ics_enabled: ['ics20-1', 'ics27-1'],
     consensus: {
       type: 'cometbft',
       version: 'v0.37.2',
     },
-    cosmwasm_version: 'v0.40.2-lsm3',
+    cosmwasm_version: 'persistenceOne/wasmd v0.40.2-lsm3',
     cosmwasm_enabled: true,
     cosmwasm_path: '$HOME/.persistenceCore/wasm',
     binaries: {
       'linux/amd64':
-        'https://github.com/persistenceOne/persistenceCore/releases/download/v10.0.0/persistenceCore-v10.0.0-linux-amd64.tar.gz',
+        'https://github.com/persistenceOne/persistenceCore/releases/download/v10.4.0/persistenceCore-v10.4.0-linux-amd64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -125,6 +125,52 @@ export const persistence: Chain = {
         binaries: {
           'linux/amd64':
             'https://github.com/persistenceOne/persistenceCore/releases/download/v10.0.0/persistenceCore-v10.0.0-linux-amd64.tar.gz',
+        },
+        next_version_name: 'v10.3.0',
+      },
+      {
+        name: 'v10.3.0',
+        tag: 'v10.3.0',
+        proposal: 67,
+        height: 14965000,
+        recommended_version: 'v10.3.0',
+        compatible_versions: ['v10.3.0'],
+        cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.3-lsm5',
+        ibc_go_version: 'persistenceOne/ibc-go/v7 v7.2.0-lsm3',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'persistenceOne/wasmd v0.40.2-lsm3',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.persistenceCore/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/persistenceOne/persistenceCore/releases/download/v10.3.0/persistenceCore-v10.3.0-linux-amd64.tar.gz',
+        },
+        next_version_name: 'v10.4.0',
+      },
+      {
+        name: 'v10.4.0',
+        tag: 'v10.4.0',
+        proposal: 68,
+        height: 15242222,
+        recommended_version: 'v10.4.0',
+        compatible_versions: ['v10.4.0'],
+        cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.3-lsm5',
+        ibc_go_version: 'persistenceOne/ibc-go/v7 v7.2.0-lsm3',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'persistenceOne/wasmd v0.40.2-lsm3',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.persistenceCore/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/persistenceOne/persistenceCore/releases/download/v10.4.0/persistenceCore-v10.4.0-linux-amd64.tar.gz',
         },
         next_version_name: '',
       },
@@ -776,6 +822,35 @@ export const persistenceAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.svg',
+        },
+      ],
+    },
+    {
+      description: 'PSTAKE Liquid-Staked DYDX',
+      denom_units: [
+        {
+          denom: 'stk/adydx',
+          exponent: 0,
+          aliases: [],
+        },
+        {
+          denom: 'stkdydx',
+          exponent: 18,
+          aliases: ['stk/dydx'],
+        },
+      ],
+      base: 'stk/adydx',
+      name: 'PSTAKE staked DYDX',
+      display: 'stkdydx',
+      symbol: 'stkDYDX',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdydx.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdydx.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdydx.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdydx.svg',
         },
       ],
     },

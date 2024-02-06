@@ -130,10 +130,6 @@ export const nomic: Chain = {
         address: 'https://app.nomic.io:8443',
         provider: 'nomic-io',
       },
-      {
-        address: 'https://rest.nomic.bronbro.io:443',
-        provider: 'Bro_n_Bro',
-      },
     ],
   },
   explorers: [

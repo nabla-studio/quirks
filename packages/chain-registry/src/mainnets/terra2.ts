@@ -302,10 +302,6 @@ export const terra2: Chain = {
         provider: 'stakely',
       },
       {
-        address: 'https://terra-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
         address: 'https://phoenix-rpc.terra.dev:443',
         provider: 'Terraform Labs',
       },
@@ -346,10 +342,6 @@ export const terra2: Chain = {
       {
         address: 'https://lcd-terra.wildsage.io',
         provider: '🧙 WildSage Labs',
-      },
-      {
-        address: 'https://terra-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://phoenix-lcd.terra.dev:443',
@@ -1296,6 +1288,35 @@ export const terra2AssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
       },
+    },
+    {
+      description: 'DNA DAO',
+      type_asset: 'cw20',
+      address:
+        'terra1epka8wevu90rxlvt6g5x9veevd800a760vtuftc5kqdfmrh47qds9f0m8h',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1epka8wevu90rxlvt6g5x9veevd800a760vtuftc5kqdfmrh47qds9f0m8h',
+          exponent: 0,
+        },
+        {
+          denom: 'DNA',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra1epka8wevu90rxlvt6g5x9veevd800a760vtuftc5kqdfmrh47qds9f0m8h',
+      name: 'DNA',
+      display: 'DNA',
+      symbol: 'DNA',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/DNA.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/DNA.png',
+        },
+      ],
     },
   ],
 };

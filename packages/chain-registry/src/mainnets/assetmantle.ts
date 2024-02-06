@@ -132,10 +132,6 @@ export const assetmantle: Chain = {
         provider: 'AssetMantle',
       },
       {
-        address: 'https://rpc-assetmantle.blockpower.capital',
-        provider: 'Blockpower',
-      },
-      {
         address: 'https://rpc-assetmantle.ecostake.com',
         provider: 'ecostake',
       },

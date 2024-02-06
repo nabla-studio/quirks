@@ -134,10 +134,6 @@ export const irisnet: Chain = {
         provider: 'High Stakes 🇨🇭',
       },
       {
-        address: 'https://iris-mainnet.rpc.l0vd.com:443',
-        provider: 'L0vd.com ❤️',
-      },
-      {
         address: 'https://mainnet-iris-rpc.konsortech.xyz',
         provider: 'KonsorTech',
       },
@@ -162,10 +158,6 @@ export const irisnet: Chain = {
       {
         address: 'https://iris-api.highstakes.ch:1317/',
         provider: 'High Stakes 🇨🇭',
-      },
-      {
-        address: 'https://iris-mainnet.api.l0vd.com:443',
-        provider: 'L0vd.com ❤️',
       },
       {
         address: 'https://mainnet-iris-api.konsortech.xyz',

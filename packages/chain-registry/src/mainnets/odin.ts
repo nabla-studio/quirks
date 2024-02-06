@@ -100,10 +100,6 @@ export const odin: Chain = {
   apis: {
     rpc: [
       {
-        address: 'http://34.79.179.216:26657',
-        provider: 'Odin Protocol',
-      },
-      {
         address: 'https://odin-rpc.lavenderfive.com/',
         provider: 'Lavender.Five Nodes 🐝',
       },

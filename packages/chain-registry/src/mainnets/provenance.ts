@@ -256,12 +256,22 @@ export const provenance: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: 'ad3386812bb9f2fee4e9da6d9f37547afc948977',
+        address: 'provenance-seed.panthea.eu:42656',
+        provider: 'Panthea EU',
+      },
     ],
     persistent_peers: [
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'provenance-mainnet-peer.autostake.com:27376',
         provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
+        id: 'aa808927715ad82be258605060c21fc5afc1cd00',
+        address: 'provenance-peer.panthea.eu:34656',
+        provider: 'Panthea EU',
       },
     ],
   },
@@ -295,6 +305,10 @@ export const provenance: Chain = {
         address: 'https://rpc.provenance.blockval.io/',
         provider: 'Blockval',
       },
+      {
+        address: 'https://provenance-rpc.panthea.eu',
+        provider: 'Panthea EU',
+      },
     ],
     rest: [
       {
@@ -325,6 +339,10 @@ export const provenance: Chain = {
         address: 'https://api.provenance.blockval.io',
         provider: 'Blockval',
       },
+      {
+        address: 'https://provenance-api.panthea.eu',
+        provider: 'Panthea EU',
+      },
     ],
     grpc: [
       {
@@ -342,6 +360,10 @@ export const provenance: Chain = {
       {
         address: 'grpc.provenance.blockval.io:9290',
         provider: 'Blockval',
+      },
+      {
+        address: 'provenance-grpc.panthea.eu:16780',
+        provider: 'Panthea EU',
       },
     ],
   },

@@ -516,10 +516,6 @@ export const stride: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'https://stride.api.m.stavr.tech',
-        provider: '🔥STAVR🔥',
-      },
-      {
         address: 'https://stride-api.lavenderfive.com/',
         provider: 'Lavender.Five Nodes 🐝',
       },
