@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.13.0](https://github.com/nabla-studio/quirks/compare/core@0.12.4...core@0.13.0) (2024-02-10)
+
+
+### Features
+
+* **core:** :sparkles: add signArbitrary support ([2020c2d](https://github.com/nabla-studio/quirks/commit/2020c2dc2f1272b1fe02dfee6d40397f00522c74))
+
 ## [0.12.4](https://github.com/nabla-studio/quirks/compare/core@0.12.3...core@0.12.4) (2024-02-06)
 
 ### Dependency Updates
