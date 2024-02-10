@@ -299,11 +299,46 @@ export class WCWallet extends Wallet<
     };
   }
 
-  /**
-   * Maybe we can implement it later using signDirect
-   */
-  override signArbitrary(): Promise<StdSignature> {
-    throw new Error('[Quirks]: Method not implemented.');
+  override async signArbitrary(
+    chainId: string,
+    signer: string,
+    data: string | Uint8Array,
+  ): Promise<StdSignature> {
+    assertIsDefined(this.client, 'client is undefined');
+
+    const result = await this.client.request<AminoSignResponse>(
+      {
+        method: 'cosmos_signAmino',
+        params: {
+          signerAddress: signer,
+          signDoc: {
+            chain_id: '',
+            account_number: '0',
+            sequence: '0',
+            fee: {
+              gas: '0',
+              amount: [],
+            },
+            msgs: [
+              {
+                type: 'sign/MsgSignData',
+                value: {
+                  signer: signer,
+                  data:
+                    typeof data === 'string' ? btoa(data) : fromByteArray(data),
+                },
+              },
+            ],
+            memo: '',
+          },
+        },
+      },
+      `cosmos:${chainId}`,
+    );
+
+    return {
+      ...result.signature,
+    };
   }
 
   override async verifyArbitrary(): Promise<boolean> {

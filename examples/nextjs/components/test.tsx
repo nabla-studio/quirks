@@ -1,6 +1,6 @@
 'use client';
 
-import { sign, getAddress, broadcast } from '@quirks/store';
+import { sign, getAddress, broadcast, signArbitrary } from '@quirks/store';
 import { useChains, useConnect, useWalletEvents } from '@quirks/react';
 
 const send = async () => {
@@ -29,6 +29,17 @@ const send = async () => {
   console.log(res);
 };
 
+const signJWT = async () => {
+  const sender = getAddress('osmosis');
+  const result = await signArbitrary(
+    'osmosis-1',
+    sender,
+    new TextEncoder().encode('Bearer TOKEN test '),
+  );
+
+  console.log(result);
+};
+
 export const Test = ({ iframe = false }: { iframe?: boolean }) => {
   const { status, connected } = useConnect();
   const { accounts } = useChains();
@@ -45,6 +56,7 @@ export const Test = ({ iframe = false }: { iframe?: boolean }) => {
         <div>
           Addresses:
           <button onClick={send}>SIGN</button>
+          <button onClick={signJWT}>SIGN ARBITRARY</button>
           {accounts.map((account) => (
             <div key={account.chainId}>
               <div>Chain ID: {account.chainId}</div>
