@@ -6,7 +6,7 @@ export const uniontestnet: Chain = {
   status: 'live',
   network_type: 'testnet',
   pretty_name: 'union Testnet',
-  chain_id: 'union-testnet-4',
+  chain_id: 'union-testnet-6',
   bech32_prefix: 'union',
   daemon_name: 'uniond',
   node_home: '$HOME/.uniond',
@@ -33,13 +33,8 @@ export const uniontestnet: Chain = {
   peers: {
     seeds: [
       {
-        id: 'a069a341154484298156a56ace42b6e6a71e7b9d',
-        address: 'blazingbit.io:27656',
-        provider: '',
-      },
-      {
-        id: '8a07752a234bb16471dbb577180de7805ba6b5d9',
-        address: 'union.testnet.4.seed.poisonphang.com:26656',
+        id: 'f1d2674dc111d99dae4638234c502f4a4aaf8270',
+        address: 'union.testnet.4.val.poisonphang.com:2665',
         provider: '',
       },
     ],
@@ -58,6 +53,10 @@ export const uniontestnet: Chain = {
         address: 'https://rpc-testnet-union.nodeist.net',
         provider: 'Nodeist',
       },
+      {
+        address: 'https://rpc.testnet.bonlulu.uno',
+        provider: 'bonlulu',
+      },
     ],
     rest: [
       {
@@ -72,6 +71,10 @@ export const uniontestnet: Chain = {
         address: 'https://api-testnet-union.nodeist.net',
         provider: 'Nodeist',
       },
+      {
+        address: 'https://api.testnet.bonlulu.uno',
+        provider: 'bonlulu',
+      },
     ],
     grpc: [
       {
@@ -85,6 +88,10 @@ export const uniontestnet: Chain = {
       {
         address: 'https://grpc-testnet-union.nodeist.net',
         provider: 'Nodeist',
+      },
+      {
+        address: 'https://grpc.testnet.bonlulu.uno',
+        provider: 'bonlulu',
       },
     ],
   },

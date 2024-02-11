@@ -32,20 +32,26 @@ export const sommelier: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/PeggyJV/sommelier',
-    recommended_version: 'v6.0.0',
-    compatible_versions: ['v6.0.0'],
+    recommended_version: 'v7.0.1',
+    compatible_versions: ['v7.0.0', 'v7.0.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/PeggyJV/sommelier/releases/download/v6.0.0/sommelier_6.0.0_linux_amd64.tar.gz',
+        'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/PeggyJV/sommelier/releases/download/v6.0.0/sommelier_6.0.0_linux_arm64.tar.gz',
+        'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/PeggyJV/sommelier/releases/download/v6.0.0/sommelier_6.0.0_darwin_amd64.tar.gz',
+        'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_darwin_amd64.tar.gz',
       'darwin/arm64':
-        'https://github.com/PeggyJV/sommelier/releases/download/v6.0.0/sommelier_6.0.0_darwin_arm64.tar.gz',
+        'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/PeggyJV/sommelier/releases/download/v6.0.0/sommelier_6.0.0_windows_amd64.tar.gz',
+        'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_windows_amd64.tar.gz',
     },
+    cosmos_sdk_version: 'v0.46.14',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.34.28',
+    },
+    ibc_go_version: 'v6.2.0',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/PeggyJV/sommelier/main/contrib/mainnet/sommelier-2/genesis.json',
@@ -84,6 +90,33 @@ export const sommelier: Chain = {
           'windows/amd64':
             'https://github.com/PeggyJV/sommelier/releases/download/v6.0.0/sommelier_6.0.0_windows_amd64.tar.gz',
         },
+        next_version_name: 'v7',
+      },
+      {
+        name: 'v7',
+        proposal: 119,
+        height: 13010200,
+        recommended_version: 'v7.0.1',
+        compatible_versions: ['v7.0.0', 'v7.0.1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_linux_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_darwin_amd64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_darwin_arm64.tar.gz',
+          'windows/amd64':
+            'https://github.com/PeggyJV/sommelier/releases/download/v7.0.1/sommelier_7.0.1_windows_amd64.tar.gz',
+        },
+        cosmos_sdk_version: 'v0.46.14',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        ibc_go_version: 'v6.2.0',
+        next_version_name: '',
       },
     ],
   },

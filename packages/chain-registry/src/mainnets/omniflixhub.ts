@@ -14,8 +14,8 @@ export const omniflixhub: Chain = {
   slip44: 118,
   codebase: {
     git_repo: 'https://github.com/OmniFlix/omniflixhub',
-    recommended_version: 'v2.0.0',
-    compatible_versions: ['v2.0.0'],
+    recommended_version: 'v2.1.0',
+    compatible_versions: ['v2.1.0'],
     cosmos_sdk_version: 'v0.47.5',
     ibc_go_version: 'v7.3.1',
     consensus: {
@@ -87,6 +87,20 @@ export const omniflixhub: Chain = {
         height: 10428200,
         recommended_version: 'v2.0.0',
         compatible_versions: ['v2.0.0'],
+        cosmos_sdk_version: 'v0.47.5',
+        ibc_go_version: 'v7.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        next_version_name: 'v2.1',
+      },
+      {
+        name: 'v2.1',
+        proposal: 29,
+        height: 10678600,
+        recommended_version: 'v2.1.0',
+        compatible_versions: ['v2.1.0'],
         cosmos_sdk_version: 'v0.47.5',
         ibc_go_version: 'v7.3.1',
         consensus: {

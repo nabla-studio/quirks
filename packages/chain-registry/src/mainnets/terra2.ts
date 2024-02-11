@@ -243,7 +243,7 @@ export const terra2: Chain = {
       },
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
-        address: 'terra-mainnet-seed.autostake.com:26676',
+        address: 'terra-mainnet-seed.autostake.com:27486',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
@@ -272,7 +272,7 @@ export const terra2: Chain = {
       },
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
-        address: 'terra-mainnet-peer.autostake.com:26676',
+        address: 'terra-mainnet-peer.autostake.com:27486',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {

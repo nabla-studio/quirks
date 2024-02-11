@@ -16,7 +16,7 @@ export const dydxtestnet: Chain = {
   fees: {
     fee_tokens: [
       {
-        denom: 'adydx',
+        denom: 'adv4tnt',
         fixed_min_gas_price: 12500000000,
         low_gas_price: 12500000000,
         average_gas_price: 12500000000,
@@ -27,7 +27,7 @@ export const dydxtestnet: Chain = {
   staking: {
     staking_tokens: [
       {
-        denom: 'adydx',
+        denom: 'adv4tnt',
       },
     ],
   },
@@ -162,19 +162,18 @@ export const dydxtestnetAssetList: AssetLists = {
       description: 'The native staking token of dYdX Protocol.',
       denom_units: [
         {
-          denom: 'adydx',
+          denom: 'adv4tnt',
           exponent: 0,
         },
         {
-          denom: 'dydx',
+          denom: 'dv4tnt',
           exponent: 18,
         },
       ],
-      base: 'adydx',
+      base: 'adv4tnt',
       name: 'dYdX',
-      display: 'dydx',
-      symbol: 'DYDX',
-      coingecko_id: 'dydx',
+      display: 'dv4tnt',
+      symbol: 'DV4TNT',
       traces: [
         {
           type: 'test-mintage',
