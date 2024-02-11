@@ -145,6 +145,11 @@ export const desmos: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: '73fc6b8b41aada42306b2f149619cc0ff935a868',
+        address: 'desmos-seed.panthea.eu:39656',
+        provider: 'Panthea EU',
+      },
     ],
     persistent_peers: [
       {
@@ -156,6 +161,11 @@ export const desmos: Chain = {
         id: '311cfd5691f11ec0cb0f0b8e5303016d86fb4789',
         address: '148.251.19.41:26656',
         provider: '[NODERS]TEAM',
+      },
+      {
+        id: '7c506d9e32cfc486ea714ee0c0307022398b8c20',
+        address: 'desmos-peer.panthea.eu:29656',
+        provider: 'Panthea EU',
       },
     ],
   },
@@ -185,6 +195,10 @@ export const desmos: Chain = {
         address: 'https://rpc.desmos.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://desmos-rpc.panthea.eu',
+        provider: 'Panthea EU',
+      },
     ],
     rest: [
       {
@@ -211,6 +225,10 @@ export const desmos: Chain = {
         address: 'https://lcd.desmos.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://desmos-api.panthea.eu',
+        provider: 'Panthea EU',
+      },
     ],
     grpc: [
       {
@@ -236,6 +254,10 @@ export const desmos: Chain = {
       {
         address: 'https://grpc.desmos.bronbro.io:443',
         provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'desmos-grpc.panthea.eu:16730',
+        provider: 'Panthea EU',
       },
     ],
   },

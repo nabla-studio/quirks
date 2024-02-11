@@ -161,10 +161,6 @@ export const xpla: Chain = {
         address: 'https://xpla-api.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
       },
-      {
-        address: 'http://xpla.api.staking-explorer.com',
-        provider: 'staking-explorer.com',
-      },
     ],
     grpc: [],
     'evm-http-jsonrpc': [

@@ -41,11 +41,11 @@ export const juno: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/CosmosContracts/juno',
-    recommended_version: 'v19.1.0',
-    compatible_versions: ['v19.1.0'],
+    recommended_version: 'v20.0.0',
+    compatible_versions: ['v20.0.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/CosmosContracts/juno/releases/download/v19.1.0/junod',
+        'https://github.com/CosmosContracts/juno/releases/download/v20.0.0/junod',
     },
     cosmos_sdk_version: 'v0.47.6',
     consensus: {
@@ -183,11 +183,11 @@ export const juno: Chain = {
         name: 'v19',
         proposal: 333,
         height: 13678871,
-        recommended_version: 'v19.1.0',
-        compatible_versions: ['v19.1.0'],
+        recommended_version: 'v20.0.0',
+        compatible_versions: ['v20.0.0'],
         binaries: {
           'linux/amd64':
-            'https://github.com/CosmosContracts/juno/releases/download/v19.1.0/junod',
+            'https://github.com/CosmosContracts/juno/releases/download/v20.0.0/junod',
         },
         cosmos_sdk_version: 'v0.47.6',
         consensus: {

@@ -53,12 +53,32 @@ export const dymension: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'dymension-mainnet-seed.autostake.com:27086',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         id: '20e1000e88125698264454a884812746c2eb4807',
         address: 'seeds.lavenderfive.com:20556',
         provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+        address: 'dymension.rpc.kjnodes.com:14659',
+        provider: 'kjnodes.com 🦄',
+      },
+      {
+        id: '193262e32a9d7d3fffe14073160cabc4cdfef26b',
+        address: 'dymension-rpc.stakeandrelax.net:20556',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        id: 'c28827cb96c14c905b127b92065a3fb4cd77d7f6',
+        address: 'seeds.whispernode.com:20556',
+        provider: 'WhisperNode 🤐',
       },
     ],
     persistent_peers: [
@@ -67,9 +87,13 @@ export const dymension: Chain = {
         address: '141.94.64.81:26656',
       },
       {
+        id: 'e0d84deab2d0fd85f447c5c417fecbbdba584be0',
+        address: 'dymension-m.peer.stavr.tech:17086',
+      },
+      {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'dymension-mainnet-peer.autostake.com:27086',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
     ],
   },
@@ -81,7 +105,7 @@ export const dymension: Chain = {
       },
       {
         address: 'https://dymension-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         address: 'https://dymension-rpc.lavenderfive.com:443',
@@ -95,6 +119,62 @@ export const dymension: Chain = {
         address: 'https://m-dymension.rpc.utsa.tech',
         provider: 'lesnik | UTSA',
       },
+      {
+        address: 'https://rpc-dymension.nodeist.net',
+        provider: 'Nodeist',
+      },
+      {
+        address: 'https://dym.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'https://rpc.dymension.hexnodes.co',
+        provider: 'Hexnodes',
+      },
+      {
+        address: 'https://dymension.rpc.kjnodes.com:443',
+        provider: 'kjnodes.com 🦄',
+      },
+      {
+        address: 'https://dymension-rpc.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://dymension-rpc.takeshi.team',
+        provider: 'TAKESHI',
+      },
+      {
+        address: 'https://dymension-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://rpc.dymension.silentvalidator.com:443',
+        provider: 'silent',
+      },
+      {
+        address: 'https://rpc-dymension.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
+      },
+      {
+        address: 'https://community.nuxian-node.ch:6797/dymension/trpc',
+        provider: 'PRO Delegators',
+      },
+      {
+        address: 'https://dymension-rpc.enigma-validator.com',
+        provider: 'Enigma',
+      },
+      {
+        address: 'https://dymension-rpc.ibs.team',
+        provider: 'Inter Blockchain Services',
+      },
+      {
+        address: 'https://dymension.nodejumper.io:443',
+        provider: 'NODEJUMPER',
+      },
+      {
+        address: 'https://rpc-dymension.hoodrun.io:443',
+        provider: 'HoodRun',
+      },
     ],
     rest: [
       {
@@ -103,7 +183,7 @@ export const dymension: Chain = {
       },
       {
         address: 'https://dymension-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         address: 'https://dymension-api.lavenderfive.com:443',
@@ -117,6 +197,62 @@ export const dymension: Chain = {
         address: 'https://m-dymension.api.utsa.tech',
         provider: 'lesnik | UTSA',
       },
+      {
+        address: 'https://api-dymension.nodeist.net',
+        provider: 'Nodeist',
+      },
+      {
+        address: 'https://dymension.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'https://lcd.dymension.hexnodes.co',
+        provider: 'Hexnodes',
+      },
+      {
+        address: 'https://dymension.api.kjnodes.com:443',
+        provider: 'kjnodes.com 🦄',
+      },
+      {
+        address: 'https://dymension-api.stakeandrelax.net',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://dymension-api.takeshi.team',
+        provider: 'TAKESHI',
+      },
+      {
+        address: 'https://dymension-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://api.dymension.silentvalidator.com:443',
+        provider: 'silent',
+      },
+      {
+        address: 'https://api-dymension.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
+      },
+      {
+        address: 'https://community.nuxian-node.ch:6797/dymension/crpc',
+        provider: 'PRO Delegators',
+      },
+      {
+        address: 'https://dymension-lcd.enigma-validator.com',
+        provider: 'Enigma',
+      },
+      {
+        address: 'https://dymension-api.ibs.team',
+        provider: 'Inter Blockchain Services',
+      },
+      {
+        address: 'https://dymension.nodejumper.io:1317',
+        provider: 'NODEJUMPER',
+      },
+      {
+        address: 'https://lcd-dymension.hoodrun.io',
+        provider: 'HoodRun',
+      },
     ],
     grpc: [
       {
@@ -125,15 +261,65 @@ export const dymension: Chain = {
       },
       {
         address: 'dymension-mainnet-grpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         address: 'https://dymension-grpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'dymension-grpc.lavenderfive.com:77',
+        address: 'dymension-grpc.kynraze.com:77',
         provider: 'Kynraze',
+      },
+      {
+        address: 'https://grpc-dymension.nodeist.net',
+        provider: 'Nodeist',
+      },
+      {
+        address: 'dymension.grpc.m.stavr.tech:7119',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'dymension.grpc.kjnodes.com:443',
+        provider: 'kjnodes.com 🦄',
+      },
+      {
+        address: 'http://dymension-grpc.stakeandrelax.net:20590',
+        provider: 'Stake&Relax 🦥',
+      },
+      {
+        address: 'https://dymension-grpc.takeshi.team',
+        provider: 'TAKESHI',
+      },
+      {
+        address: 'dymension-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'grpc.dymension.silentvalidator.com:443',
+        provider: 'silent',
+      },
+      {
+        address: 'https://grpc-dymension.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
+      },
+      {
+        address: 'dymension.nodejumper.io:9090',
+        provider: 'NODEJUMPER',
+      },
+      {
+        address: 'grpc-dymension.hoodrun.io:9095',
+        provider: 'HoodRun',
+      },
+    ],
+    'evm-http-jsonrpc': [
+      {
+        address: 'https://dymension-jsonrpc.ibs.team',
+        provider: 'Inter Blockchain Services',
+      },
+      {
+        address: 'https://evm-dymension.hoodrun.io:8547',
+        provider: 'HoodRun',
       },
     ],
   },
@@ -151,6 +337,25 @@ export const dymension: Chain = {
       tx_page: 'https://explorer.kynraze.com/dymension/tx/${txHash}',
       account_page:
         'https://explorer.kynraze.com/dymension/account/${accountAddress}',
+    },
+    {
+      kind: 'Nodeist Explorer',
+      url: 'https://explorer.ist/dymension',
+      tx_page: 'https://explorer.ist/dymension/tx/${txHash}',
+      account_page: 'https://explorer.ist/dymension/account/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Dymension-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Dymension-Mainnet/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Dymension-Mainnet/account/${accountAddress}',
+    },
+    {
+      kind: 'HoodScan',
+      url: 'https://hoodscan.io/dymension',
+      tx_page: 'https://hoodscan.io/dymension/transactions/${txHash}',
+      account_page: 'https://hoodscan.io/dymension/accounts/${accountAddress}',
     },
   ],
 };

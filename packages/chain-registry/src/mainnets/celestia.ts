@@ -199,6 +199,10 @@ export const celestia: Chain = {
         address: 'https://celestia-rpc.sr20de.xyz',
         provider: 'Sr20de',
       },
+      {
+        address: 'https://rpc-celestia-full.avril14th.org',
+        provider: 'Avril 14th',
+      },
     ],
     rest: [
       {
@@ -265,6 +269,10 @@ export const celestia: Chain = {
         address: 'https://celestia-api.sr20de.xyz',
         provider: 'Sr20de',
       },
+      {
+        address: 'https://api-celestia-full.avril14th.org',
+        provider: 'Avril 14th',
+      },
     ],
     grpc: [
       {
@@ -318,6 +326,10 @@ export const celestia: Chain = {
       {
         address: 'celestia-grpc.sr20de.xyz',
         provider: 'Sr20de',
+      },
+      {
+        address: 'grpc-celestia-full.avril14th.org',
+        provider: 'Avril 14th',
       },
     ],
   },

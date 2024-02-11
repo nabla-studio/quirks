@@ -48,6 +48,11 @@ export const andromeda: Chain = {
         address: 'andromeda-mainnet-peer.autostake.com:27126',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
+      {
+        id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+        address: 'nibiru.rpc.kjnodes.com:13959',
+        provider: 'kjnodes.com 🦄',
+      },
     ],
     persistent_peers: [
       {
@@ -134,6 +139,10 @@ export const andromeda: Chain = {
         address: 'https://andromeda-rpc.genznodes.dev',
         provider: 'genznodes',
       },
+      {
+        address: 'https://nibiru.rpc.kjnodes.comv',
+        provider: 'kjnodes.com 🦄',
+      },
     ],
     rest: [
       {
@@ -176,6 +185,10 @@ export const andromeda: Chain = {
         address: 'https://andromeda-api.genznodes.dev',
         provider: 'genznodes',
       },
+      {
+        address: 'https://nibiru.api.kjnodes.com',
+        provider: 'kjnodes.com 🦄',
+      },
     ],
     grpc: [
       {
@@ -213,6 +226,10 @@ export const andromeda: Chain = {
       {
         address: 'andromeda-grpc.genznodes.dev:27090',
         provider: 'genznodes',
+      },
+      {
+        address: 'nibiru.grpc.kjnodes.com:443',
+        provider: 'kjnodes.com 🦄',
       },
     ],
   },

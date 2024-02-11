@@ -172,14 +172,27 @@ export interface Chain {
       };
     }[];
   };
-  images?: (
-    | {
-        [k: string]: unknown;
-      }
-    | {
-        [k: string]: unknown;
-      }
-  )[];
+  images?: {
+    image_sync?: {
+      chain_name: string;
+      base_denom?: string;
+    };
+    png?: string;
+    svg?: string;
+    theme?: {
+      primary_color_hex?: string;
+      circle?: boolean;
+      dark_mode?: boolean;
+    };
+    /**
+     * logomark == icon only; logotype == text only; logo == icon + text.
+     */
+    layout?: 'logo' | 'logomark' | 'logotype';
+    /**
+     * Indicates in which position the text is placed, in case the layout is 'icon' type, it's required only in this case.
+     */
+    text_position?: 'top' | 'bottom' | 'left' | 'right' | 'integrated';
+  }[];
   logo_URIs?: {
     png?: string;
     svg?: string;

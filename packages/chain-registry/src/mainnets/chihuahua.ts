@@ -220,6 +220,10 @@ export const chihuahua: Chain = {
         address: 'https://rpc.chihuahua.validatus.com',
         provider: 'Validatus',
       },
+      {
+        address: 'https://chihuahua-rpc.ibs.team',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     rest: [
       {
@@ -261,6 +265,10 @@ export const chihuahua: Chain = {
       {
         address: 'https://api.chihuahua.validatus.com',
         provider: 'Validatus',
+      },
+      {
+        address: 'https://chihuahua-api.ibs.team',
+        provider: 'Inter Blockchain Services',
       },
     ],
     grpc: [
