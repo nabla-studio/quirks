@@ -239,6 +239,11 @@ export const fxcore: Chain = {
       account_page:
         'https://explorer.tcnetwork.io/fx/account/${accountAddress}',
     },
+    {
+      kind: 'ping.pub',
+      url: 'https://ping.pub/fxcore',
+      tx_page: 'https://ping.pub/fxcore/tx/${txHash}',
+    },
   ],
 };
 

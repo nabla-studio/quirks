@@ -312,6 +312,10 @@ export const persistence: Chain = {
         address: 'https://rpc.persistence.validatus.com',
         provider: 'Validatus',
       },
+      {
+        address: 'https://public.stakewolle.com/cosmos/persistence/rpc',
+        provider: 'Stakewolle',
+      },
     ],
     rest: [
       {
@@ -381,6 +385,10 @@ export const persistence: Chain = {
       {
         address: 'https://api.persistence.validatus.com',
         provider: 'Validatus',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/persistence/rest',
+        provider: 'Stakewolle',
       },
     ],
     grpc: [

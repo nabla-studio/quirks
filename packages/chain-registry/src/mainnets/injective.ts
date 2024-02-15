@@ -139,7 +139,7 @@ export const injective: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'injective-mainnet-seed.autostake.com:26726',
-        provider: 'AutoStake.com',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         id: '20e1000e88125698264454a884812746c2eb4807',
@@ -206,7 +206,7 @@ export const injective: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'injective-mainnet-peer.autostake.com:26726',
-        provider: 'AutoStake.com',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         id: '858c86e2590f82934b8483ed184afd88416a7b31',
@@ -235,7 +235,7 @@ export const injective: Chain = {
       },
       {
         address: 'https://injective-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake.com',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://rpc-injective.whispernode.com:443',
@@ -252,6 +252,10 @@ export const injective: Chain = {
       {
         address: 'https://injective-rpc.highstakes.ch:26657/',
         provider: 'High Stakes 🇨🇭',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/injective/rpc',
+        provider: 'Stakewolle',
       },
     ],
     rest: [
@@ -284,8 +288,16 @@ export const injective: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
+        address: 'injective-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         address: 'https://injective-api.highstakes.ch:1317/',
         provider: 'High Stakes 🇨🇭',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/injective/rest',
+        provider: 'Stakewolle',
       },
     ],
     grpc: [
@@ -303,7 +315,7 @@ export const injective: Chain = {
       },
       {
         address: 'injective-mainnet-grpc.autostake.com:443',
-        provider: 'AutoStake.com',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'grpc-injective.cosmos-spaces.cloud:9900',
@@ -580,11 +592,11 @@ export const injectiveAssetList: AssetLists = {
             chain_name: 'osmosis',
             base_denom:
               'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
-            channel_id: 'channel-8',
+            channel_id: 'channel-122',
           },
           chain: {
-            channel_id: 'channel-122',
-            path: 'transfer/channel-122/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
+            channel_id: 'channel-8',
+            path: 'transfer/channel-8/factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
           },
         },
       ],
@@ -595,11 +607,11 @@ export const injectiveAssetList: AssetLists = {
             base_denom:
               'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
           },
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
         },
       ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
       },
     },
     {
@@ -641,6 +653,80 @@ export const injectiveAssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/glto.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/glto.svg',
+      },
+    },
+    {
+      description:
+        'Hava Coin is the lifeblood of the Cosmos & Injective networks, rewarding builders and welcoming supporters. https://havacoin.xyz/',
+      denom_units: [
+        {
+          denom: 'factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava',
+          exponent: 0,
+        },
+        {
+          denom: 'hava',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava',
+      name: 'Hava Coin',
+      display: 'hava',
+      symbol: 'HAVA',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/hava.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/hava.png',
+        },
+      ],
+    },
+    {
+      description:
+        "A clan of 11y bad kids crafting chaos on the Cosmos eco. One bad memecoin to rule them all  $BADKID. Airdropped to Badkids NFT holders and $STARS stakers. It's so bad, your wallet's throwing a tantrum for it.",
+      denom_units: [
+        {
+          denom:
+            'ibc/A0C5AD197FECAF6636F589071338DC7ECD6B0809CD3A5AB131EAAA5395E7E5E8',
+          exponent: 0,
+        },
+        {
+          denom: 'BADKID',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/A0C5AD197FECAF6636F589071338DC7ECD6B0809CD3A5AB131EAAA5395E7E5E8',
+      name: 'Badkid',
+      display: 'BADKID',
+      symbol: 'BADKID',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo10n8rv8npx870l69248hnp6djy6pll2yuzzn9x8/BADKID',
+            channel_id: 'channel-122',
+          },
+          chain: {
+            channel_id: 'channel-8',
+            path: 'transfer/channel-8/factory/osmo10n8rv8npx870l69248hnp6djy6pll2yuzzn9x8/BADKID',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo10n8rv8npx870l69248hnp6djy6pll2yuzzn9x8/BADKID',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/badkid.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/badkid.png',
       },
     },
   ],

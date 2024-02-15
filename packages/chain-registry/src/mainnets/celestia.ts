@@ -68,7 +68,7 @@ export const celestia: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'celestia-mainnet-seed.autostake.com:27206',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         id: '20e1000e88125698264454a884812746c2eb4807',
@@ -105,12 +105,17 @@ export const celestia: Chain = {
         address: 'seed.celestia.validatus.com:2000',
         provider: 'Validatus',
       },
+      {
+        id: 'b7408d0c59fc0fd0c9153365d5593c6c32870cb0',
+        address: 'seed-celestia.freshstaking.com:34656',
+        provider: 'FreshSTAKING',
+      },
     ],
     persistent_peers: [
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'celestia-mainnet-peer.autostake.com:27206',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         id: '24a607a217cf12be29bae5b2e8151391bde2d8c8',
@@ -192,6 +197,10 @@ export const celestia: Chain = {
         provider: 'AM Solutions',
       },
       {
+        address: 'https://celestia-mainnet-rpc.autostake.com:443',
+        provider: 'AutoStake | Delegate for StakeDrops',
+      },
+      {
         address: 'https://rpc.celestia.validatus.com',
         provider: 'Validatus',
       },
@@ -202,6 +211,10 @@ export const celestia: Chain = {
       {
         address: 'https://rpc-celestia-full.avril14th.org',
         provider: 'Avril 14th',
+      },
+      {
+        address: 'https://rpc.freshstaking.com/celestia',
+        provider: 'FreshSTAKING',
       },
     ],
     rest: [
@@ -270,6 +283,10 @@ export const celestia: Chain = {
         provider: 'Sr20de',
       },
       {
+        address: 'https://celestia-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake | Delegate for StakeDrops',
+      },
+      {
         address: 'https://api-celestia-full.avril14th.org',
         provider: 'Avril 14th',
       },
@@ -281,7 +298,7 @@ export const celestia: Chain = {
       },
       {
         address: 'celestia-mainnet-grpc.autostake.com:443',
-        provider: 'AutoStake 🛡️ Slash Protected',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         address: 'https://celestia-grpc.lavenderfive.com:443',

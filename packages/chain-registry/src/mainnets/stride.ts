@@ -505,6 +505,10 @@ export const stride: Chain = {
         address: 'https://rpc.stride.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://public.stakewolle.com/cosmos/stride/rpc',
+        provider: 'Stakewolle',
+      },
     ],
     rest: [
       {
@@ -566,6 +570,10 @@ export const stride: Chain = {
       {
         address: 'https://lcd.stride.bronbro.io:443',
         provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/stride/rest',
+        provider: 'Stakewolle',
       },
     ],
     grpc: [

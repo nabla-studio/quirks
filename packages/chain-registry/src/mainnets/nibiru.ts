@@ -137,6 +137,10 @@ export const nibiru: Chain = {
         address: 'https://nibiru.rpc.kjnodes.com',
         provider: 'kjnodes.com 🦄',
       },
+      {
+        address: 'https://rpc.nibiru.nodestake.org',
+        provider: 'NodeStake',
+      },
     ],
     rest: [
       {
@@ -146,6 +150,10 @@ export const nibiru: Chain = {
       {
         address: 'https://nibiru.api.kjnodes.com',
         provider: 'kjnodes.com 🦄',
+      },
+      {
+        address: 'https://api.nibiru.nodestake.org',
+        provider: 'NodeStake',
       },
     ],
     grpc: [
@@ -157,6 +165,10 @@ export const nibiru: Chain = {
         address: 'nibiru.grpc.kjnodes.com:443',
         provider: 'kjnodes.com 🦄',
       },
+      {
+        address: 'grpc.nibiru.nodestake.org:443',
+        provider: 'NodeStake',
+      },
     ],
   },
   explorers: [
@@ -165,6 +177,13 @@ export const nibiru: Chain = {
       url: 'https://nibiru.explorers.guru/',
       tx_page: 'https://nibiru.explorers.guru/transaction/${txHash}',
       account_page: 'https://nibiru.explorers.guru/account/${accountAddress}',
+    },
+    {
+      kind: 'NodeStake',
+      url: 'https://explorer.nodestake.org/nibiru',
+      tx_page: 'https://explorer.nodestake.org/nibiru/tx/${txHash}',
+      account_page:
+        'https://explorer.nodestake.org/nibiru/account/${accountAddress}',
     },
   ],
   images: [

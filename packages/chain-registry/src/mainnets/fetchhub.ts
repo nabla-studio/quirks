@@ -159,6 +159,10 @@ export const fetchhub: Chain = {
         address: 'https://fetch-rpc.highstakes.ch:26657/',
         provider: 'High Stakes 🇨🇭',
       },
+      {
+        address: 'https://public.stakewolle.com/cosmos/fetchhub/rpc',
+        provider: 'Stakewolle',
+      },
     ],
     rest: [
       {
@@ -208,6 +212,10 @@ export const fetchhub: Chain = {
       {
         address: 'https://fetch-api.highstakes.ch:1317/',
         provider: 'High Stakes 🇨🇭',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/fetchhub/rest',
+        provider: 'Stakewolle',
       },
     ],
     grpc: [

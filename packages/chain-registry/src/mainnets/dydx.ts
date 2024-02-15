@@ -171,7 +171,7 @@ export const dydx: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'dydx-mainnet-seed.autostake.com:27366',
-        provider: 'AutoStake ⚡ 0% fee > Airdrops 🪂💰',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         id: '09ba537d6563018b97c502979c3478df4decf426',
@@ -183,7 +183,7 @@ export const dydx: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'dydx-mainnet-peer.autostake.com:27366',
-        provider: 'AutoStake ⚡ 0% fee > Airdrops 🪂💰',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
     ],
   },
@@ -211,7 +211,7 @@ export const dydx: Chain = {
       },
       {
         address: 'https://dydx-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake ⚡ 0% fee > Airdrops 🪂💰',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         address: 'https://rpc-dydx.ecostake.com:443',
@@ -261,7 +261,7 @@ export const dydx: Chain = {
       },
       {
         address: 'https://dydx-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake ⚡ 0% fee > Airdrops 🪂💰',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         address: 'https://rest-dydx.ecostake.com:443',
@@ -323,7 +323,7 @@ export const dydx: Chain = {
       },
       {
         address: 'dydx-mainnet-grpc.autostake.com:443',
-        provider: 'AutoStake ⚡ 0% fee > Airdrops 🪂💰',
+        provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
         address: 'https://grpc.dydx.nodestake.top',

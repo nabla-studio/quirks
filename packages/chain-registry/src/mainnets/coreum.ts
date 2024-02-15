@@ -211,6 +211,10 @@ export const coreum: Chain = {
         address: 'https://coreum-rpc.ibs.team',
         provider: 'Inter Blockchain Services',
       },
+      {
+        address: 'https://public.stakewolle.com/cosmos/coreum/rpc',
+        provider: 'Stakewolle',
+      },
     ],
     grpc: [
       {
@@ -270,6 +274,10 @@ export const coreum: Chain = {
       {
         address: 'https://coreum-api.ibs.team',
         provider: 'Inter Blockchain Services',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/coreum/rest',
+        provider: 'Stakewolle',
       },
     ],
   },

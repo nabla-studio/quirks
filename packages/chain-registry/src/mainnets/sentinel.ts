@@ -290,6 +290,10 @@ export const sentinel: Chain = {
         address: 'https://rpc.sentinelgrowthdao.com',
         provider: 'Sentinel Growth DAO',
       },
+      {
+        address: 'https://public.stakewolle.com/cosmos/sentinel/rpc',
+        provider: 'Stakewolle',
+      },
     ],
     rest: [
       {
@@ -323,6 +327,10 @@ export const sentinel: Chain = {
       {
         address: 'https://api.sentinelgrowthdao.com',
         provider: 'Sentinel Growth DAO',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/sentinel/rest',
+        provider: 'Stakewolle',
       },
     ],
     grpc: [
