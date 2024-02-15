@@ -243,6 +243,10 @@ export const omniflixhub: Chain = {
         address: 'https://rpc.omniflix.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://omniflix-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -297,6 +301,10 @@ export const omniflixhub: Chain = {
         address: 'https://lcd.omniflix.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://omniflix-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -342,6 +350,10 @@ export const omniflixhub: Chain = {
       {
         address: 'https://grpc.omniflix.bronbro.io:443',
         provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'omniflix-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

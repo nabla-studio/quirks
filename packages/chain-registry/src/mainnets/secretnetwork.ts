@@ -234,6 +234,10 @@ export const secretnetwork: Chain = {
         address: 'https://secretnetwork-rpc.highstakes.ch:26657/',
         provider: 'High Stakes 🇨🇭',
       },
+      {
+        address: 'https://public.stakewolle.com/cosmos/secretnetwork/rpc',
+        provider: 'Stakewolle',
+      },
     ],
     rest: [
       {
@@ -255,6 +259,10 @@ export const secretnetwork: Chain = {
       {
         address: 'https://secretnetwork-api.highstakes.ch:1317/',
         provider: 'High Stakes 🇨🇭',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/secretnetwork/rest',
+        provider: 'Stakewolle',
       },
     ],
     grpc: [

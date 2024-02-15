@@ -84,6 +84,11 @@ export const source: Chain = {
         provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
       },
       {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'source-mainnet-seed.autostake.com:27446',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         id: '8fb118f995c146357b67798e9bdd650d0c4161ea',
         address: 'seed.source.validatus.com:3000',
         provider: 'Validatus',
@@ -134,6 +139,11 @@ export const source: Chain = {
         address: 'rpc.source.indonode.net:12656',
         provider: 'Indonode',
       },
+      {
+        id: '47b858cda8717aef908f2567b05ef312d18bb6f3',
+        address: 'p2p-pve01.roomit.xyz:16602',
+        provider: 'RoomIT',
+      },
     ],
   },
   apis: {
@@ -153,6 +163,10 @@ export const source: Chain = {
       {
         address: 'https://rpc-source.nodeist.net',
         provider: 'Nodeist',
+      },
+      {
+        address: 'https://source-mainnet-rpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://source-mainnet-rpc.itrocket.net:443',
@@ -182,6 +196,10 @@ export const source: Chain = {
         address: 'https://source.rpc.nodeshub.online/',
         provider: 'Nodes Hub',
       },
+      {
+        address: 'https://rpc.source.roomit.xyz/',
+        provider: 'RoomIT',
+      },
     ],
     rest: [
       {
@@ -199,6 +217,10 @@ export const source: Chain = {
       {
         address: 'https://source-mainnet-api.itrocket.net:443',
         provider: 'ITRocket',
+      },
+      {
+        address: 'https://source-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://source.api.moonbridge.team/',
@@ -228,6 +250,10 @@ export const source: Chain = {
         address: 'https://api.source.validatus.com',
         provider: 'Validatus',
       },
+      {
+        address: 'https://api.source.roomit.xyz',
+        provider: 'RoomIT',
+      },
     ],
     grpc: [
       {
@@ -251,6 +277,10 @@ export const source: Chain = {
         provider: 'Sr20de',
       },
       {
+        address: 'source-mainnet-grpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
         address: 'source-grpc.stake-town.com:443',
         provider: 'StakeTown',
       },
@@ -265,6 +295,10 @@ export const source: Chain = {
       {
         address: 'https://grpc.source.validatus.com',
         provider: 'Validatus',
+      },
+      {
+        address: 'grpc.source.roomit.xyz:8443',
+        provider: 'RoomIT',
       },
     ],
   },
@@ -312,6 +346,12 @@ export const source: Chain = {
       kind: 'Indonode',
       url: 'https://explorer.indonode.net/source',
       tx_page: 'https://explorer.indonode.net/source/tx/${txHash}',
+    },
+    {
+      kind: 'RoomIT',
+      url: 'https://explorer.tendermint.roomit.xyz/source-mainnet/',
+      tx_page:
+        'https://explorer.tendermint.roomit.xyz/source-mainnet/tx/${txHash}',
     },
   ],
   images: [

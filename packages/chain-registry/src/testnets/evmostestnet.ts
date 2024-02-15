@@ -70,7 +70,13 @@ export const evmostestnet: Chain = {
     ],
   },
   peers: {
-    seeds: [],
+    seeds: [
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+    ],
     persistent_peers: [
       {
         id: 'b7635a113a52d0d25c82267de0648e71e46dc584',
@@ -94,6 +100,10 @@ export const evmostestnet: Chain = {
         address: 'https://evmos-testnet-rpc.polkachu.com',
         provider: 'Polkachu',
       },
+      {
+        address: 'https://evmos-testnet-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -104,11 +114,19 @@ export const evmostestnet: Chain = {
         address: 'https://evmos-testnet-api.polkachu.com',
         provider: 'Polkachu',
       },
+      {
+        address: 'https://evmos-testnet-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
         address: 'https://evmos.test.grpc.coldyvalidator.net',
         provider: 'coldy',
+      },
+      {
+        address: 'evmos-testnet-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

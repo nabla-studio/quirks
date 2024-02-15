@@ -100,6 +100,10 @@ export const dymension: Chain = {
   apis: {
     rpc: [
       {
+        address: 'https://dym-m-rpc.agoranodes.com',
+        provider: 'AgoraNodes',
+      },
+      {
         address: 'https://rpc.dymension.nodestake.org',
         provider: 'NodeStake',
       },
@@ -125,6 +129,10 @@ export const dymension: Chain = {
       },
       {
         address: 'https://dym.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'https://dym.rpc-archive.m.stavr.tech:443',
         provider: '🔥STAVR🔥',
       },
       {
@@ -175,8 +183,16 @@ export const dymension: Chain = {
         address: 'https://rpc-dymension.hoodrun.io:443',
         provider: 'HoodRun',
       },
+      {
+        address: 'https://dymension.0xwave.com:2053',
+        provider: 'Wave',
+      },
     ],
     rest: [
+      {
+        address: 'https://dym-m-api.agoranodes.com',
+        provider: 'AgoraNodes',
+      },
       {
         address: 'https://api.dymension.nodestake.org',
         provider: 'NodeStake',
@@ -203,6 +219,10 @@ export const dymension: Chain = {
       },
       {
         address: 'https://dymension.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'https://dym.api-archive.m.stavr.tech',
         provider: '🔥STAVR🔥',
       },
       {
@@ -253,8 +273,16 @@ export const dymension: Chain = {
         address: 'https://lcd-dymension.hoodrun.io',
         provider: 'HoodRun',
       },
+      {
+        address: 'https://dymension.0xwave.com',
+        provider: 'Wave',
+      },
     ],
     grpc: [
+      {
+        address: 'https://dym-m-grpc.agoranodes.com',
+        provider: 'AgoraNodes',
+      },
       {
         address: 'grpc.dymension.nodestake.org:443',
         provider: 'NodeStake',
@@ -311,8 +339,16 @@ export const dymension: Chain = {
         address: 'grpc-dymension.hoodrun.io:9095',
         provider: 'HoodRun',
       },
+      {
+        address: 'https://dymension.0xwave.com:2083',
+        provider: 'Wave',
+      },
     ],
     'evm-http-jsonrpc': [
+      {
+        address: 'https://dym-m-json.agoranodes.com',
+        provider: 'AgoraNodes',
+      },
       {
         address: 'https://dymension-jsonrpc.ibs.team',
         provider: 'Inter Blockchain Services',
@@ -320,6 +356,10 @@ export const dymension: Chain = {
       {
         address: 'https://evm-dymension.hoodrun.io:8547',
         provider: 'HoodRun',
+      },
+      {
+        address: 'https://dymension.0xwave.com:2087',
+        provider: 'Wave',
       },
     ],
   },

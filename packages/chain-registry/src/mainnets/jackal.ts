@@ -249,6 +249,10 @@ export const jackal: Chain = {
         address: 'https://jackal.rpc.skynodejs.net',
         provider: 'skynodejs',
       },
+      {
+        address: 'https://public.stakewolle.com/cosmos/jackal/rpc',
+        provider: 'Stakewolle',
+      },
     ],
     rest: [
       {
@@ -298,6 +302,10 @@ export const jackal: Chain = {
       {
         address: 'https://jackal.api.skynodejs.net',
         provider: 'skynodejs',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/jackal/rest',
+        provider: 'Stakewolle',
       },
     ],
     grpc: [

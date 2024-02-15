@@ -446,6 +446,10 @@ export const cosmoshub: Chain = {
         address: 'https://cosmos.interstellar-lounge.org',
         provider: 'Interstellar Lounge 🍸',
       },
+      {
+        address: 'https://public.stakewolle.com/cosmos/cosmoshub/rpc',
+        provider: 'Stakewolle',
+      },
     ],
     rest: [
       {
@@ -547,6 +551,10 @@ export const cosmoshub: Chain = {
       {
         address: 'https://cosmos-rest.interstellar-lounge.org',
         provider: 'Interstellar Lounge 🍸',
+      },
+      {
+        address: 'https://public.stakewolle.com/cosmos/cosmoshub/rest',
+        provider: 'Stakewolle',
       },
     ],
     grpc: [
