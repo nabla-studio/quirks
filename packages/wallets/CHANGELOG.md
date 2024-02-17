@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.13.5](https://github.com/nabla-studio/quirks/compare/wallets@0.13.4...wallets@0.13.5) (2024-02-17)
+
+
+### Bug Fixes
+
+* **wallets:** :bug: fix keplr deps ([46b18ce](https://github.com/nabla-studio/quirks/commit/46b18cef1c8571add33c8021f7fda1d5491adb11))
+
 ## [0.13.4](https://github.com/nabla-studio/quirks/compare/wallets@0.13.3...wallets@0.13.4) (2024-02-15)
 
 ### Dependency Updates
