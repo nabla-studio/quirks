@@ -17,15 +17,15 @@
   "dependencies": {
     "@quirks/core": "*",
     "@nabla-studio/chain-registry": "*",
-    "@nabla-studio/wallet-registry": "*"
+    "@nabla-studio/wallet-registry": "*",
+    "@keplr-wallet/types": "^0.12.38",
+    "@cosmostation/extension-client": "^0.1.15"
   },
   "peerDependencies": {
     "@cosmjs/amino": "^0.31.3",
     "@cosmjs/proto-signing": "^0.31.3",
     "cosmjs-types": "^0.8.0",
-    "@keplr-wallet/types": "^0.12.38",
-    "long": "^5.2.3",
-    "@cosmostation/extension-client": "^0.1.15"
+    "long": "^5.2.3"
   },
   "main": "./index.js",
   "module": "./index.js",
