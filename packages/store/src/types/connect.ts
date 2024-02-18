@@ -26,6 +26,7 @@ export interface ConnectState {
   wallet?: Wallet;
   status: ConnectionState;
   connecting: boolean;
+  connectionError?: Error;
   setupStatus: SetupState;
   options: ConnectOptions;
 }
