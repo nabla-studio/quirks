@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.10.0](https://github.com/nabla-studio/quirks/compare/vue@0.9.5...vue@0.10.0) (2024-02-18)
+
+### Dependency Updates
+
+* `store` updated to version `0.9.5`
+
+### Features
+
+* **vue:** :sparkles: add connectionError for useConnect ([97233c5](https://github.com/nabla-studio/quirks/commit/97233c54e06efa1944a6b2f4ee00f80c703f5186))
+
 ## [0.9.5](https://github.com/nabla-studio/quirks/compare/vue@0.9.4...vue@0.9.5) (2024-02-15)
 
 ### Dependency Updates
