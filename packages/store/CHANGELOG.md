@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.19.0](https://github.com/nabla-studio/quirks/compare/store@0.18.5...store@0.19.0) (2024-02-18)
+
+
+### Features
+
+* **store:** :sparkles: improve disconnect state ([98d1e09](https://github.com/nabla-studio/quirks/commit/98d1e090f7157762780526fe366fa3dd808c53cc))
+* **store:** :sparkles: improve error management ([f0a0e97](https://github.com/nabla-studio/quirks/commit/f0a0e973d8f34a956a290a095bb16eb9bd9da468))
+
 ## [0.18.5](https://github.com/nabla-studio/quirks/compare/store@0.18.4...store@0.18.5) (2024-02-15)
 
 ### Dependency Updates
