@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.12.0](https://github.com/nabla-studio/quirks/compare/react@0.11.5...react@0.12.0) (2024-02-18)
+
+### Dependency Updates
+
+* `store` updated to version `0.11.5`
+
+### Features
+
+* **react:** :sparkles: add connectionError for useConnect ([2693de1](https://github.com/nabla-studio/quirks/commit/2693de11bf204fad5ebaebf28631671548683506))
+
 ## [0.11.5](https://github.com/nabla-studio/quirks/compare/react@0.11.4...react@0.11.5) (2024-02-15)
 
 ### Dependency Updates
