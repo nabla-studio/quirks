@@ -115,7 +115,11 @@ export const createConnectSlice: StateCreator<
         throw createInvalidWalletName(walletName);
       }
 
-      set(() => ({ walletName, connecting: true }));
+      set(() => ({
+        walletName,
+        status: ConnectionStates.DISCONNECTED,
+        connecting: true,
+      }));
 
       if (
         wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
