@@ -21,6 +21,7 @@ export const connectInitialState: ConnectState = {
   wallet: undefined,
   status: ConnectionStates.DISCONNECTED,
   setupStatus: SetupStates.DEINITIALIZED,
+  connectionError: undefined,
   connecting: false,
   options: {
     autoSuggestions: true,
@@ -114,7 +115,11 @@ export const createConnectSlice: StateCreator<
         throw createInvalidWalletName(walletName);
       }
 
-      set(() => ({ walletName, connecting: true }));
+      set(() => ({
+        walletName,
+        status: ConnectionStates.DISCONNECTED,
+        connecting: true,
+      }));
 
       if (
         wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
@@ -153,12 +158,14 @@ export const createConnectSlice: StateCreator<
       await get().setWallet(wallet);
       set(() => ({ status: ConnectionStates.CONNECTED }));
     } catch (error) {
-      console.error(error);
+      const connectionError = new Error(error as string);
 
       set(() => ({
-        walletName: undefined,
+        connectionError,
         status: ConnectionStates.REJECTED,
       }));
+
+      throw connectionError;
     } finally {
       set(() => ({ connecting: false }));
     }
@@ -193,6 +200,8 @@ export const createConnectSlice: StateCreator<
       console.error(error);
 
       get().disconnect();
+
+      throw error;
     } finally {
       set(() => ({ connecting: false }));
     }

@@ -11,6 +11,9 @@ export const useConnect = () => {
     setupStatus: store.use.setupStatus(),
     connected: store.use.status() === ConnectionStates.CONNECTED,
     connecting: store.use.connecting(),
+    connectionError: store.use.connectionError
+      ? store.use.connectionError()
+      : undefined,
     disconnected: store.use.status() === ConnectionStates.DISCONNECTED,
     rejected: store.use.status() === ConnectionStates.REJECTED,
     wallet: store.use.wallet ? store.use.wallet() : undefined,

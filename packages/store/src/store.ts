@@ -150,12 +150,22 @@ export const createConfig = (config: Config) => {
   if (!store.persist.getOptions().skipHydration) {
     const state = store.getState();
 
-    if (state.walletName && !state.wallet && autoConnect) {
+    if (
+      state.walletName &&
+      state.status === 'CONNECTED' &&
+      !state.wallet &&
+      autoConnect
+    ) {
       store.getState().reconnect(state.walletName);
     }
   } else {
     const unsub = store.persist?.onFinishHydration((state) => {
-      if (state.walletName && !state.wallet && autoConnect) {
+      if (
+        state.walletName &&
+        state.status === 'CONNECTED' &&
+        !state.wallet &&
+        autoConnect
+      ) {
         store.getState().reconnect(state.walletName);
 
         /**
