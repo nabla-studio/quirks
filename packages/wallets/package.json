@@ -22,9 +22,9 @@
     "@cosmostation/extension-client": "^0.1.15"
   },
   "peerDependencies": {
-    "@cosmjs/amino": "^0.31.3",
-    "@cosmjs/proto-signing": "^0.31.3",
-    "cosmjs-types": "^0.8.0",
+    "@cosmjs/amino": "^0.32.2",
+    "@cosmjs/proto-signing": "^0.32.2",
+    "cosmjs-types": "^0.9.0",
     "long": "^5.2.3"
   },
   "main": "./index.js",
