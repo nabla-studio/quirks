@@ -20,10 +20,10 @@
     "vue-zustand": "^0.6.0",
     "eventemitter3": "^5.0.1",
     "zustand": "^4.5.0",
-    "cosmjs-types": "^0.8.0",
-    "@cosmjs/amino": "^0.31.3",
-    "@cosmjs/stargate": "^0.31.3",
-    "@cosmjs/cosmwasm-stargate": "^0.31.3",
+    "cosmjs-types": "^0.9.0",
+    "@cosmjs/amino": "^0.32.3",
+    "@cosmjs/stargate": "^0.32.3",
+    "@cosmjs/cosmwasm-stargate": "^0.32.3",
     "@walletconnect/universal-provider": "^2.10.5"
   },
   "peerDependencies": {
