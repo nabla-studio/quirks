@@ -1,6 +1,5 @@
 import {
   type SuggestChain,
-  assertIsDefined,
   createInvalidWalletName,
   type WCWallet,
   openWCDeeplink,
@@ -204,11 +203,6 @@ export const createConnectSlice: StateCreator<
     }
   },
   disconnect: () => {
-    assertIsDefined(
-      get().wallet,
-      'You must first connect a wallet to disconnect it',
-    );
-
     get().wallet?.disable(get().chains.map((el) => el.chain_id));
 
     get().wallet?.removeListeners();
