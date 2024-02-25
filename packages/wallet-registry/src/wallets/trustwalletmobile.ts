@@ -44,8 +44,8 @@ export const trustwalletmobile: CosmosWallet = {
       text_position: 'right',
     },
     {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo-text-top.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo-text-top.svg',
       theme: {
         primary_color_hex: '#0500ff',
         circle: false,
@@ -53,6 +53,26 @@ export const trustwalletmobile: CosmosWallet = {
       },
       layout: 'logo',
       text_position: 'top',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo.svg',
+      theme: {
+        primary_color_hex: '#0500ff',
+        circle: false,
+        dark_mode: false,
+      },
+      layout: 'logomark',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/trustwalletmobile/images/logo.svg',
+      theme: {
+        primary_color_hex: '#0500ff',
+        circle: false,
+        dark_mode: true,
+      },
+      layout: 'logomark',
     },
   ],
   mobile: {

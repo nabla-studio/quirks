@@ -35,5 +35,14 @@ export const okxextension: CosmosWallet = {
       },
       layout: 'logomark',
     },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/okxextension/images/logo.png',
+      theme: {
+        primary_color_hex: '#000000',
+        circle: false,
+        dark_mode: false,
+      },
+      layout: 'logomark',
+    },
   ],
 };
