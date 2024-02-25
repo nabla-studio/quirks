@@ -49,6 +49,8 @@ export default defineConfig({
         '@nabla-studio/chain-registry',
         '@nabla-studio/wallet-registry',
         '@cosmostation/extension-client',
+        '@leapwallet/cosmos-snap-provider',
+        'base64-js',
       ],
     },
   },
