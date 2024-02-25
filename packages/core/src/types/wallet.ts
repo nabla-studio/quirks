@@ -3,14 +3,6 @@ import type { StdSignature } from '@cosmjs/amino';
 import type { CosmosWallet } from '@nabla-studio/wallet-registry';
 import type { SignClientTypes } from '@walletconnect/types';
 
-export const WalletConnectionTypes = {
-  EXTENSION: 'extension',
-  WALLET_CONNECT: 'wallet_connect',
-} as const;
-
-export type WalletConnectionType =
-  (typeof WalletConnectionTypes)[keyof typeof WalletConnectionTypes];
-
 export type Logo =
   | {
       png?: string;
@@ -35,12 +27,11 @@ export interface WalletEvents {
 }
 
 export interface WalletOptions extends CosmosWallet {
-  connectionType: WalletConnectionType;
   /**
    * Window extension key
    */
   windowKey?: string | string[];
-  events: WalletEvents;
+  events?: WalletEvents;
 }
 
 export interface SignOptions {
