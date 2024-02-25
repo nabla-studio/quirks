@@ -30,7 +30,6 @@ import type {
 import { assertIsDefined } from './utils';
 import { fromByteArray, toByteArray } from 'base64-js';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
-import Long from 'long';
 
 export class WCWallet extends Wallet<
   InstanceType<typeof UniversalProvider>,
@@ -292,7 +291,7 @@ export class WCWallet extends Wallet<
       ...result,
       signed: {
         chainId: result.signed.chainId,
-        accountNumber: Long.fromString(result.signed.accountNumber, false),
+        accountNumber: BigInt(result.signed.accountNumber),
         authInfoBytes: toByteArray(result.signed.authInfoBytes),
         bodyBytes: toByteArray(result.signed.bodyBytes),
       },

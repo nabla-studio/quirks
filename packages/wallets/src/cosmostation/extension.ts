@@ -3,6 +3,8 @@ import type {
   StdSignDoc,
   AminoSignResponse,
   StdSignature,
+  AccountData,
+  Algo,
 } from '@cosmjs/amino';
 import type {
   OfflineDirectSigner,
@@ -65,6 +67,16 @@ export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
     };
   }
 
+  async getSignerAccount(chainId: string): Promise<AccountData> {
+    const key = await this.getAccount(chainId);
+
+    return {
+      address: key.bech32Address,
+      algo: key.algo as Algo,
+      pubkey: key.pubKey,
+    };
+  }
+
   override async getAccounts(chainIds: string[]) {
     assertIsDefined(this.cosmos, 'cosmos provider is not defined');
 
@@ -89,7 +101,13 @@ export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
   ): Promise<OfflineAminoSigner & OfflineDirectSigner> {
     assertIsDefined(this.ikeplr, 'ikeplr is not defined');
 
-    return this.ikeplr.getOfflineSigner(chainId, options);
+    return {
+      getAccounts: async () => [await this.getSignerAccount(chainId)],
+      signAmino: (signerAddress, signDoc) =>
+        this.signAmino(chainId, signerAddress, signDoc, options),
+      signDirect: (signerAddress, signDoc) =>
+        this.signDirect(chainId, signerAddress, signDoc, options),
+    };
   }
 
   override async getOfflineSignerOnlyAmino(
@@ -101,13 +119,19 @@ export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
     return this.ikeplr.getOfflineSignerOnlyAmino(chainId, options);
   }
 
-  override getOfflineSignerAuto(
+  override async getOfflineSignerAuto(
     chainId: string,
     options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner | OfflineDirectSigner> {
     assertIsDefined(this.ikeplr, 'ikeplr is not defined');
 
-    return this.ikeplr.getOfflineSignerAuto(chainId, options);
+    return {
+      getAccounts: async () => [await this.getSignerAccount(chainId)],
+      signAmino: (signerAddress, signDoc) =>
+        this.signAmino(chainId, signerAddress, signDoc, options),
+      signDirect: (signerAddress, signDoc) =>
+        this.signDirect(chainId, signerAddress, signDoc, options),
+    };
   }
 
   override signAmino(
@@ -121,7 +145,7 @@ export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
     return this.ikeplr.signAmino(chainId, signer, signDoc, signOptions);
   }
 
-  override signDirect(
+  override async signDirect(
     chainId: string,
     signer: string,
     signDoc: SignDoc,
@@ -129,7 +153,7 @@ export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
   ): Promise<DirectSignResponse> {
     assertIsDefined(this.ikeplr, 'ikeplr is not defined');
 
-    return this.ikeplr.signDirect(
+    const signResponse = await this.ikeplr.signDirect(
       chainId,
       signer,
       {
@@ -138,6 +162,14 @@ export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
       },
       signOptions,
     );
+
+    return {
+      ...signResponse,
+      signed: {
+        ...signResponse.signed,
+        accountNumber: BigInt(signResponse.signed.accountNumber.toString()),
+      },
+    };
   }
 
   override signArbitrary(

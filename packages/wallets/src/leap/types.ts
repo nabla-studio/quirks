@@ -1,5 +1,5 @@
 import type { Keplr } from '@keplr-wallet/types';
 
-export interface Leap extends Omit<Keplr, 'disable' | 'getKeysSettled'> {
+export interface Leap extends Keplr {
   disconnect: (chainId: string) => Promise<boolean>;
 }

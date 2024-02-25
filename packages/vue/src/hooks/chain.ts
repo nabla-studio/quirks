@@ -23,6 +23,11 @@ export const useChains = () => {
 export const useChain = (chainName: string) => {
   const state = useQuirks()((state) => state);
   const chains = computed(() => state.chains.value);
+  const assetList = computed(() =>
+    state.assetsLists.value.find(
+      (assetList) => assetList.chain_name === chainName,
+    ),
+  );
   const accounts = computed(() => state.accounts.value);
   const accountName = computed(() => state.accountName);
   const getOfflineSigner = useQuirks()((state) => state.getOfflineSigner);
@@ -47,6 +52,7 @@ export const useChain = (chainName: string) => {
 
   return {
     chain,
+    assetList,
     account,
     address,
     accountName,

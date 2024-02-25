@@ -3,6 +3,8 @@ import type {
   StdSignDoc,
   AminoSignResponse,
   StdSignature,
+  Algo,
+  AccountData,
 } from '@cosmjs/amino';
 import type {
   OfflineDirectSigner,
@@ -46,6 +48,16 @@ export class KeplrWalletExtension<
     return await this.client.getKey(chainId);
   }
 
+  async getSignerAccount(chainId: string): Promise<AccountData> {
+    const key = await this.getAccount(chainId);
+
+    return {
+      address: key.bech32Address,
+      algo: key.algo as Algo,
+      pubkey: key.pubKey,
+    };
+  }
+
   override async getAccounts(chainIds: string[]) {
     assertIsDefined(this.client);
 
@@ -68,7 +80,13 @@ export class KeplrWalletExtension<
   ): Promise<OfflineAminoSigner & OfflineDirectSigner> {
     assertIsDefined(this.client);
 
-    return await this.client.getOfflineSigner(chainId, options);
+    return {
+      getAccounts: async () => [await this.getSignerAccount(chainId)],
+      signAmino: (signerAddress, signDoc) =>
+        this.signAmino(chainId, signerAddress, signDoc, options),
+      signDirect: (signerAddress, signDoc) =>
+        this.signDirect(chainId, signerAddress, signDoc, options),
+    };
   }
 
   override async getOfflineSignerOnlyAmino(
@@ -77,16 +95,22 @@ export class KeplrWalletExtension<
   ): Promise<OfflineAminoSigner> {
     assertIsDefined(this.client);
 
-    return await this.client.getOfflineSignerOnlyAmino(chainId, options);
+    return this.client.getOfflineSignerOnlyAmino(chainId, options);
   }
 
-  override getOfflineSignerAuto(
+  override async getOfflineSignerAuto(
     chainId: string,
     options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner | OfflineDirectSigner> {
     assertIsDefined(this.client);
 
-    return this.client.getOfflineSignerAuto(chainId, options);
+    return {
+      getAccounts: async () => [await this.getSignerAccount(chainId)],
+      signAmino: (signerAddress, signDoc) =>
+        this.signAmino(chainId, signerAddress, signDoc, options),
+      signDirect: (signerAddress, signDoc) =>
+        this.signDirect(chainId, signerAddress, signDoc, options),
+    };
   }
 
   override signAmino(
@@ -100,7 +124,7 @@ export class KeplrWalletExtension<
     return this.client.signAmino(chainId, signer, signDoc, signOptions);
   }
 
-  override signDirect(
+  override async signDirect(
     chainId: string,
     signer: string,
     signDoc: SignDoc,
@@ -108,7 +132,7 @@ export class KeplrWalletExtension<
   ): Promise<DirectSignResponse> {
     assertIsDefined(this.client);
 
-    return this.client.signDirect(
+    const signResponse = await this.client.signDirect(
       chainId,
       signer,
       {
@@ -117,6 +141,14 @@ export class KeplrWalletExtension<
       },
       signOptions,
     );
+
+    return {
+      ...signResponse,
+      signed: {
+        ...signResponse.signed,
+        accountNumber: BigInt(signResponse.signed.accountNumber.toString()),
+      },
+    };
   }
 
   override signArbitrary(

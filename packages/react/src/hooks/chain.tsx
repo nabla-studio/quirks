@@ -24,6 +24,9 @@ export const useChain = (chainName: string) => {
 
   return {
     chain,
+    assetsList: store.use
+      .assetsLists()
+      .find((assetsList) => assetsList.chain_name === chainName),
     address: store.use
       .accounts()
       .find((account) => account.chainId === chain.chain_id)?.bech32Address,
