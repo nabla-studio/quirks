@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.15.0](https://github.com/nabla-studio/quirks/compare/core@0.14.0...core@0.15.0) (2024-02-25)
+
+### Dependency Updates
+
+* `chain-registry` updated to version `0.14.0`
+* `wallet-registry` updated to version `0.14.0`
+
+### Features
+
+* **core:** :boom: remove deprecated connectionType ([8bd3960](https://github.com/nabla-studio/quirks/commit/8bd3960ef3afd85ba78549aa30748c8e28013089))
+
 ## [0.14.0](https://github.com/nabla-studio/quirks/compare/core@0.13.2...core@0.14.0) (2024-02-25)
 
 
