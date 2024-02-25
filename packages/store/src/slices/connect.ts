@@ -2,7 +2,6 @@ import {
   type SuggestChain,
   assertIsDefined,
   createInvalidWalletName,
-  WalletConnectionTypes,
   type WCWallet,
   openWCDeeplink,
 } from '@quirks/core';
@@ -121,9 +120,7 @@ export const createConnectSlice: StateCreator<
         connecting: true,
       }));
 
-      if (
-        wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
-      ) {
+      if (wallet.options.connection_type === 'wallet_connect') {
         set({
           pairingURI: undefined,
         });
@@ -181,7 +178,7 @@ export const createConnectSlice: StateCreator<
       }
 
       const metadata =
-        wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
+        wallet.options.connection_type === 'wallet_connect'
           ? get().providerOpts
           : undefined;
 
