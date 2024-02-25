@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.13.0](https://github.com/nabla-studio/quirks/compare/react@0.12.0...react@0.13.0) (2024-02-25)
+
+### Dependency Updates
+
+* `store` updated to version `0.12.0`
+* `core` updated to version `0.12.0`
+
+### Features
+
+* **react:** :sparkles: add assetsList return ([62dab56](https://github.com/nabla-studio/quirks/commit/62dab56b91e15cf107e5114336756221b780ca3e))
+
 ## [0.12.0](https://github.com/nabla-studio/quirks/compare/react@0.11.5...react@0.12.0) (2024-02-18)
 
 ### Dependency Updates
