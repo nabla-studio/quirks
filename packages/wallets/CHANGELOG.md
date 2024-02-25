@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.14.0](https://github.com/nabla-studio/quirks/compare/wallets@0.13.5...wallets@0.14.0) (2024-02-25)
+
+### Dependency Updates
+
+* `core` updated to version `0.13.5`
+
+### Features
+
+* **wallets:** :boom: add bigint support ([4df6553](https://github.com/nabla-studio/quirks/commit/4df655351d637e3db4eadd0affd075229d31e0c4))
+* **wallets:** :boom: add bigint support ([701579b](https://github.com/nabla-studio/quirks/commit/701579bc6598952689217c5a44e3e2be4a148651))
+
 ## [0.13.5](https://github.com/nabla-studio/quirks/compare/wallets@0.13.4...wallets@0.13.5) (2024-02-17)
 
 
