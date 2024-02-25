@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.14.0](https://github.com/nabla-studio/quirks/compare/core@0.13.2...core@0.14.0) (2024-02-25)
+
+
+### Features
+
+* **core:** :arrow_up: upgrade wc deps ([6eb659c](https://github.com/nabla-studio/quirks/commit/6eb659c982740578214138c69843941c5cbb4145))
+* **core:** :boom: add bigint support ([6973f46](https://github.com/nabla-studio/quirks/commit/6973f46ecbd1aedaa7f1d71909eedc747008a9c2))
+
 ## [0.13.2](https://github.com/nabla-studio/quirks/compare/core@0.13.1...core@0.13.2) (2024-02-15)
 
 ### Dependency Updates
