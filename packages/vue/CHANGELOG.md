@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.11.0](https://github.com/nabla-studio/quirks/compare/vue@0.10.0...vue@0.11.0) (2024-02-25)
+
+### Dependency Updates
+
+* `store` updated to version `0.10.0`
+* `core` updated to version `0.10.0`
+
+### Features
+
+* **vue:** :arrow_up: upgrade wc deps ([a380c7a](https://github.com/nabla-studio/quirks/commit/a380c7a35715311188587d4849fec16362cd890d))
+* **vue:** :sparkles: add assetsList return ([c2f5338](https://github.com/nabla-studio/quirks/commit/c2f5338863763629a986c3d3d38aebdd181ec234))
+
 ## [0.10.0](https://github.com/nabla-studio/quirks/compare/vue@0.9.5...vue@0.10.0) (2024-02-18)
 
 ### Dependency Updates
