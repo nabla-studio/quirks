@@ -1,9 +1,5 @@
 import type { WCWallet } from '../wc-wallet';
-import {
-  OpenDeeplinkCallback,
-  PlatformDeeplinks,
-  WalletConnectionTypes,
-} from '../types';
+import { OpenDeeplinkCallback, PlatformDeeplinks } from '../types';
 import type { Wallet } from '../wallet';
 import { isMobile, isiOS } from './platform';
 
@@ -39,7 +35,7 @@ export const openWCDeeplink = (
   const wcWallet = wallet as WCWallet;
 
   if (
-    wcWallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT &&
+    wcWallet.options.connection_type === 'wallet_connect' &&
     wcWallet.deeplinks
   ) {
     open(links ?? wcWallet.deeplinks);

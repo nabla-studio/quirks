@@ -1,6 +1,6 @@
-import { KeplrWalletExtension as StationWalletExtension } from '../keplr/extension';
+import { KeplrWalletExtension } from '../keplr/extension';
 import { stationExtensionOptions } from './registry';
 
-const stationExtension = new StationWalletExtension(stationExtensionOptions);
+const stationExtension = new KeplrWalletExtension(stationExtensionOptions);
 
 export { stationExtension };

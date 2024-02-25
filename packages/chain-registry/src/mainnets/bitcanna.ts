@@ -33,17 +33,17 @@ export const bitcanna: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/BitCannaGlobal/bcna',
-    recommended_version: 'v3.0.1',
-    compatible_versions: ['v3.0.0', 'v3.0.1'],
+    recommended_version: 'v3.0.2',
+    compatible_versions: ['v3.0.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.1/bcna_linux_amd64.tar.gz',
+        'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.2/bcna_linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.1/bcna_linux_arm64.tar.gz',
+        'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.2/bcna_linux_arm64.tar.gz',
       'darwin/arm64':
-        'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.1/bcna_darwin_arm64.tar.gz',
+        'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.2/bcna_darwin_arm64.tar.gz',
     },
-    cosmos_sdk_version: 'v0.47.7',
+    cosmos_sdk_version: 'v0.47.9',
     ibc_go_version: 'v7.3.1',
     consensus: {
       type: 'cometbft',
@@ -106,17 +106,17 @@ export const bitcanna: Chain = {
         name: 'ganjarevolution',
         proposal: 14,
         height: 12288420,
-        recommended_version: 'v3.0.1',
-        compatible_versions: ['v3.0.0', 'v3.0.1'],
+        recommended_version: 'v3.0.2',
+        compatible_versions: ['v3.0.2'],
         binaries: {
           'linux/amd64':
-            'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.1/bcna_linux_amd64.tar.gz',
+            'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.2/bcna_linux_amd64.tar.gz',
           'linux/arm64':
-            'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.1/bcna_linux_arm64.tar.gz',
+            'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.2/bcna_linux_arm64.tar.gz',
           'darwin/arm64':
-            'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.1/bcna_darwin_arm64.tar.gz',
+            'https://github.com/BitCannaGlobal/bcna/releases/download/v3.0.2/bcna_darwin_arm64.tar.gz',
         },
-        cosmos_sdk_version: 'v0.47.7',
+        cosmos_sdk_version: 'v0.47.9',
         ibc_go_version: 'v7.3.1',
         consensus: {
           type: 'cometbft',

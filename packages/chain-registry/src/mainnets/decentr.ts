@@ -122,6 +122,11 @@ export const decentr: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: 'ca6c4b66c41cfca3e1b873321527781d46c92e57',
+        address: 'seed-decentr.ibs.team:16657',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     persistent_peers: [
       {

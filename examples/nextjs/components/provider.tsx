@@ -16,6 +16,8 @@ import {
   universalWalletConnect,
   keplrMobile,
   leapMobile,
+  shellExtension,
+  leapMetamaskSnapExtension,
 } from '@quirks/wallets';
 import { PropsWithChildren } from 'react';
 
@@ -25,6 +27,8 @@ const config: Config = {
     leapExtension,
     cosmostationExtension,
     xdefiExtension,
+    shellExtension,
+    leapMetamaskSnapExtension,
     universalWalletConnect,
     keplrMobile,
     leapMobile,

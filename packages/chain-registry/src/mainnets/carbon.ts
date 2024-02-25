@@ -314,13 +314,13 @@ export const carbon: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Switcheo/carbon-bootstrap',
-    recommended_version: 'v2.37.1',
-    compatible_versions: ['v2.37.0', 'v2.37.1'],
+    recommended_version: 'v2.38.1',
+    compatible_versions: ['v2.38.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.37.1/carbond2.37.1-mainnet.linux-amd64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.38.1/carbond2.38.1-mainnet.linux-amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.37.1/carbond2.37.1-mainnet.linux-arm64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.38.1/carbond2.38.1-mainnet.linux-arm64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -524,6 +524,20 @@ export const carbon: Chain = {
             'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.37.1/carbond2.37.1-mainnet.linux-amd64.tar.gz',
           'linux/arm64':
             'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.37.1/carbond2.37.1-mainnet.linux-arm64.tar.gz',
+        },
+        next_version_name: 'v2.38.0',
+      },
+      {
+        name: 'v2.38.0',
+        proposal: 340,
+        height: 53991841,
+        recommended_version: 'v2.38.1',
+        compatible_versions: ['v2.38.1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.38.1/carbond2.38.1-mainnet.linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.38.1/carbond2.38.1-mainnet.linux-arm64.tar.gz',
         },
         next_version_name: '',
       },

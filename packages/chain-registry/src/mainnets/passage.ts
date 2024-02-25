@@ -34,8 +34,15 @@ export const passage: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/envadiv/Passage3D',
-    recommended_version: 'v2.2.0',
-    compatible_versions: ['v2.2.0'],
+    recommended_version: 'v2.4.0',
+    compatible_versions: ['v2.4.0'],
+    cosmos_sdk_version: 'v0.45.16',
+    ibc_go_version: 'v4.4.2',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.34.27',
+    },
+    cosmwasm_version: 'v0.31.0',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/envadiv/mainnet/main/passage-2/genesis.json',
@@ -63,6 +70,19 @@ export const passage: Chain = {
           type: 'cometbft',
           version: 'v0.34.27',
         },
+        next_version_name: 'v2.4.0',
+      },
+      {
+        name: 'v2.4.0',
+        recommended_version: 'v2.4.0',
+        compatible_versions: ['v2.4.0'],
+        cosmos_sdk_version: 'v0.45.16',
+        ibc_go_version: 'v4.4.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.27',
+        },
+        cosmwasm_version: 'v0.31.0',
         next_version_name: '',
       },
     ],
@@ -115,6 +135,11 @@ export const passage: Chain = {
         id: '2b238d2c05c47629e03608a6107e156fcb50344c',
         address: '65.108.101.158:20556',
         provider: 'Validatrium',
+      },
+      {
+        id: '526d07b882df4cb820a8b9df819e14532d1811b0',
+        address: 'seed-passage.ibs.team:16666',
+        provider: 'Inter Blockchain Services',
       },
     ],
     persistent_peers: [
@@ -209,6 +234,10 @@ export const passage: Chain = {
         address: 'https://rpc-passage.mainnet.validatrium.club',
         provider: 'Validatrium',
       },
+      {
+        address: 'https://rpc.passage.silentvalidator.com',
+        provider: 'silent',
+      },
     ],
     rest: [
       {
@@ -275,6 +304,10 @@ export const passage: Chain = {
         address: 'https://api-passage.mainnet.validatrium.club',
         provider: 'Validatrium',
       },
+      {
+        address: 'https://api.passage.silentvalidator.com',
+        provider: 'silent',
+      },
     ],
     grpc: [
       {
@@ -320,6 +353,10 @@ export const passage: Chain = {
       {
         address: 'grpc-passage.mainnet.validatrium.club:20590',
         provider: 'Validatrium',
+      },
+      {
+        address: 'grpc.passage.silentvalidator.com:443',
+        provider: 'silent',
       },
     ],
   },

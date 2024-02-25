@@ -1,6 +1,6 @@
 import { assertIsDefined } from '@quirks/core';
 import { KeplrWalletExtension } from '../keplr/extension';
-import { OKX } from './types';
+import type { OKX } from './types';
 
 export class OKXWalletExtension extends KeplrWalletExtension<OKX> {
   override async disable(): Promise<void> {

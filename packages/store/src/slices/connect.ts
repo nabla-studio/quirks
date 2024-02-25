@@ -1,8 +1,6 @@
 import {
   type SuggestChain,
-  assertIsDefined,
   createInvalidWalletName,
-  WalletConnectionTypes,
   type WCWallet,
   openWCDeeplink,
 } from '@quirks/core';
@@ -121,9 +119,7 @@ export const createConnectSlice: StateCreator<
         connecting: true,
       }));
 
-      if (
-        wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
-      ) {
+      if (wallet.options.connection_type === 'wallet_connect') {
         set({
           pairingURI: undefined,
         });
@@ -158,7 +154,10 @@ export const createConnectSlice: StateCreator<
       await get().setWallet(wallet);
       set(() => ({ status: ConnectionStates.CONNECTED }));
     } catch (error) {
-      const connectionError = new Error(error as string);
+      const connectionError =
+        error instanceof Error
+          ? error
+          : new Error(error === 'string' ? error : JSON.stringify(error));
 
       set(() => ({
         connectionError,
@@ -181,7 +180,7 @@ export const createConnectSlice: StateCreator<
       }
 
       const metadata =
-        wallet.options.connectionType === WalletConnectionTypes.WALLET_CONNECT
+        wallet.options.connection_type === 'wallet_connect'
           ? get().providerOpts
           : undefined;
 
@@ -207,11 +206,6 @@ export const createConnectSlice: StateCreator<
     }
   },
   disconnect: () => {
-    assertIsDefined(
-      get().wallet,
-      'You must first connect a wallet to disconnect it',
-    );
-
     get().wallet?.disable(get().chains.map((el) => el.chain_id));
 
     get().wallet?.removeListeners();

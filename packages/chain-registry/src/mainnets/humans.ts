@@ -154,6 +154,10 @@ export const humans: Chain = {
         address: 'https://rpc.humans-mainnet.stake-take.com/',
         provider: 'Stake-Take',
       },
+      {
+        address: 'https://rpc.humans.posthuman.digital',
+        provider: 'posthuman',
+      },
     ],
     rest: [
       {
@@ -191,6 +195,10 @@ export const humans: Chain = {
       {
         address: 'https://api.humans-mainnet.stake-take.com/',
         provider: 'Stake-Take',
+      },
+      {
+        address: 'https://rest.humans.posthuman.digital',
+        provider: 'posthuman',
       },
     ],
     grpc: [
@@ -248,6 +256,10 @@ export const humans: Chain = {
         address: 'https://mainnet-humans-evm.konsortech.xyz',
         provider: 'KonsorTech',
       },
+      {
+        address: 'https://evm.humans.posthuman.digital',
+        provider: 'posthuman',
+      },
     ],
   },
   explorers: [
@@ -283,6 +295,13 @@ export const humans: Chain = {
       tx_page: 'https://mainnet.itrocket.net/humans/tx/${txHash}',
       account_page:
         'https://mainnet.itrocket.net/humans/account/${accountAddress}',
+    },
+    {
+      kind: 'posthuman',
+      url: 'https://explorer.posthuman.digital/humans',
+      tx_page: 'https://explorer.posthuman.digital/humans/tx/${txHash}',
+      account_page:
+        'https://explorer.posthuman.digital/humans/account/${accountAddress}',
     },
   ],
   images: [
@@ -322,6 +341,16 @@ export const humansAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.svg',
+          theme: {
+            dark_mode: false,
+          },
+        },
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.svg',
+          theme: {
+            dark_mode: true,
+          },
         },
       ],
     },

@@ -17,7 +17,7 @@ export abstract class ExtensionWallet<T> extends Wallet<T> {
   override removeListeners(): void {
     super.removeListeners();
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && this.options.events) {
       window.removeEventListener(
         this.options.events.keystorechange,
         this.keystoreChange,
@@ -28,7 +28,7 @@ export abstract class ExtensionWallet<T> extends Wallet<T> {
   override addListeners() {
     this.removeListeners();
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && this.options.events) {
       window.addEventListener(
         this.options.events.keystorechange,
         this.keystoreChange,

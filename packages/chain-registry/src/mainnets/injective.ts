@@ -729,5 +729,55 @@ export const injectiveAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/badkid.png',
       },
     },
+    {
+      description: 'The second meme coin on Injective.',
+      denom_units: [
+        {
+          denom: 'inj1sudjgsyhufqu95yp7rqad3g78ws8g6htf32h88',
+          exponent: 0,
+        },
+        {
+          denom: 'NINPO',
+          exponent: 6,
+        },
+      ],
+      base: 'inj1sudjgsyhufqu95yp7rqad3g78ws8g6htf32h88',
+      name: 'Ninpo',
+      display: 'NINPO',
+      symbol: 'NINPO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ninpo.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/ninpo.png',
+        },
+      ],
+    },
+    {
+      description: 'JUDO is a very futuristic meme token.',
+      denom_units: [
+        {
+          denom: 'inj16ukv8g2jcmml7gykxn5ws8ykhxjkugl4zhft5h',
+          exponent: 0,
+        },
+        {
+          denom: 'JUDO',
+          exponent: 6,
+        },
+      ],
+      base: 'inj16ukv8g2jcmml7gykxn5ws8ykhxjkugl4zhft5h',
+      name: 'Judo',
+      display: 'JUDO',
+      symbol: 'JUDO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/judo.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/judo.png',
+        },
+      ],
+    },
   ],
 };

@@ -22,6 +22,9 @@ export interface CosmosWallet {
     type: 'application' | 'extension';
     platform:
       | 'chrome'
+      | 'edge'
+      | 'opera'
+      | 'brave'
       | 'firefox'
       | 'ios'
       | 'android'

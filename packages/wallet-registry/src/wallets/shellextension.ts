@@ -1,0 +1,92 @@
+import type { CosmosWallet } from '../types';
+
+export const shellextension: CosmosWallet = {
+  $schema: '../../wallet.schema.json',
+  wallet_name: 'shellextension',
+  pretty_name: 'Shell',
+  connection_type: 'browser_extension',
+  website: 'https://shellwallet.io/',
+  git_repo: '',
+  supported_chains: [
+    'cosmoshub',
+    'osmosis',
+    'secretnetwork',
+    'regen',
+    'akash',
+    'sifchain',
+    'stargaze',
+    'sentinel',
+    'persistence',
+    'kava',
+    'cryptoorgchain',
+    'irisnet',
+    'agoric',
+    'axelar',
+    'certik',
+    'ixo',
+    'emoney',
+    'juno',
+    'sommelier',
+    'umee',
+    'evmos',
+    'bostrom',
+    'starname',
+    'gravitybridge',
+    'stride',
+    'tgrade',
+  ],
+  features: ['suggest_chain', 'icns'],
+  platforms: [
+    {
+      device: 'desktop',
+      type: 'extension',
+      platform: 'chrome',
+      install_link:
+        'https://chromewebstore.google.com/detail/shell-wallet/kbdcddcmgoplfockflacnnefaehaiocb',
+    },
+  ],
+  images: [
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/shellextension/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/shellextension/images/logo.svg',
+      theme: {
+        primary_color_hex: '#78E6F9',
+        circle: false,
+        dark_mode: true,
+      },
+      layout: 'logomark',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/shellextension/images/logo-dark.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/shellextension/images/logo-dark.svg',
+      theme: {
+        primary_color_hex: '#005283',
+        circle: false,
+        dark_mode: false,
+      },
+      layout: 'logomark',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/shellextension/images/logo-text.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/shellextension/images/logo-text.svg',
+      theme: {
+        primary_color_hex: '#78E6F9',
+        circle: false,
+        dark_mode: true,
+      },
+      layout: 'logo',
+      text_position: 'right',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/shellextension/images/logo-text-dark.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/shellextension/images/logo-text-dark.svg',
+      theme: {
+        primary_color_hex: '#005283',
+        circle: false,
+        dark_mode: false,
+      },
+      layout: 'logo',
+      text_position: 'right',
+    },
+  ],
+};

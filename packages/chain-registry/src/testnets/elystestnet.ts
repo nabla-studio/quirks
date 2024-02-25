@@ -211,12 +211,22 @@ export const elystestnet: Chain = {
         address: '5.101.138.254:26656',
         provider: 'euphoria',
       },
+      {
+        id: 'ae7191b2b922c6a59456588c3a262df518b0d130',
+        address: 'elys-testnet-seed.itrocket.net:54656',
+        provider: 'itrocket',
+      },
     ],
     persistent_peers: [
       {
         id: '609c64cc50fb4ebbe7cae3347545d3950ea2c018',
         address: '65.108.195.29:23656',
         provider: 'Staketab',
+      },
+      {
+        id: '0977dd5475e303c99b66eaacab53c8cc28e49b05',
+        address: 'elys-testnet-peer.itrocket.net:38656',
+        provider: 'itrocket',
       },
     ],
   },
@@ -229,6 +239,10 @@ export const elystestnet: Chain = {
       {
         address: 'https://elys-testnet-rpc.staketab.org:443',
         provider: 'Staketab',
+      },
+      {
+        address: 'https://elys-testnet-rpc.itrocket.net:443',
+        provider: 'itrocket',
       },
     ],
     rest: [
@@ -244,11 +258,19 @@ export const elystestnet: Chain = {
         address: 'https://elys-testnet-rest.staketab.org',
         provider: 'Staketab',
       },
+      {
+        address: 'https://elys-testnet-api.itrocket.net',
+        provider: 'itrocket',
+      },
     ],
     grpc: [
       {
         address: 'services.staketab.com:9390',
         provider: 'Staketab',
+      },
+      {
+        address: 'elys-testnet-grpc.itrocket.net:38090',
+        provider: 'itrocket',
       },
     ],
   },
@@ -264,6 +286,13 @@ export const elystestnet: Chain = {
       kind: 'ping.pub',
       url: 'https://testnet.elys.network/elys',
       tx_page: 'https://testnet.elys.network/elys/tx/${txHash}',
+    },
+    {
+      kind: 'itrocket',
+      url: 'https://testnet.itrocket.net/elys',
+      tx_page: 'https://testnet.itrocket.net/elys/staking/tx/${txHash}',
+      account_page:
+        'https://testnet.itrocket.net/elys/account/${accountAddress}',
     },
   ],
 };

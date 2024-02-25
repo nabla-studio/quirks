@@ -160,6 +160,11 @@ export const chihuahua: Chain = {
         address: 'seed.chihuahua.validatus.com:2000',
         provider: 'Validatus',
       },
+      {
+        id: '10ed1e176d874c8bb3c7c065685d2da6a4b86475',
+        address: 'seed-chihuahua.ibs.team:16673',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     persistent_peers: [
       {

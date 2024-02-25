@@ -281,6 +281,11 @@ export const kujira: Chain = {
         address: 'seed-node.mms.team:29656',
         provider: 'MMS',
       },
+      {
+        id: '10ed1e176d874c8bb3c7c065685d2da6a4b86475',
+        address: 'seed-kujira.ibs.team:16678',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     persistent_peers: [
       {

@@ -80,7 +80,7 @@ export const keplrmobile: CosmosWallet = {
       theme: {
         primary_color_hex: '#EBF7FD',
         circle: false,
-        dark_mode: false,
+        dark_mode: true,
       },
       layout: 'logo',
       text_position: 'right',
@@ -91,9 +91,10 @@ export const keplrmobile: CosmosWallet = {
       theme: {
         primary_color_hex: '#0A0718',
         circle: false,
-        dark_mode: true,
+        dark_mode: false,
       },
-      layout: 'logomark',
+      layout: 'logo',
+      text_position: 'right',
     },
   ],
   wallet_connect: {

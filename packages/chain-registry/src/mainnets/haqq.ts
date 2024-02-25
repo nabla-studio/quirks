@@ -34,19 +34,19 @@ export const haqq: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/haqq-network/haqq',
-    recommended_version: 'v1.7.1',
-    compatible_versions: ['v1.7.1'],
+    recommended_version: 'v1.7.3',
+    compatible_versions: ['v1.7.3'],
     binaries: {
       'linux/amd64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.7.1/haqq_1.7.1_Linux_x86_64.tar.gz',
+        'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Linux_x86_64.tar.gz',
       'linux/arm64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.7.1/haqq_1.7.1_Linux_arm64.tar.gz',
+        'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.7.1/haqq_1.7.1_Darwin_x86_64.tar.gz',
+        'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Darwin_x86_64.tar.gz',
       'darwin/arm64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.7.1/haqq_1.7.1_Darwin_arm64.tar.gz',
+        'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/haqq-network/haqq/releases/download/v1.7.1/haqq_1.7.1_Windows_x86_64.zip',
+        'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Windows_x86_64.zip',
     },
     cosmos_sdk_version: 'evmos/cosmos-sdk v0.47.5-evmos',
     consensus: {
@@ -387,6 +387,60 @@ export const haqq: Chain = {
             'https://github.com/haqq-network/haqq/releases/download/v1.7.1/haqq_1.7.1_Darwin_arm64.tar.gz',
           'windows/amd64':
             'https://github.com/haqq-network/haqq/releases/download/v1.7.1/haqq_1.7.1_Windows_x86_64.zip',
+        },
+        next_version_name: 'v1.7.2',
+      },
+      {
+        name: 'v1.7.2',
+        tag: 'v1.7.2',
+        recommended_version: 'v1.7.2',
+        compatible_versions: ['v1.7.2'],
+        proposal: 29,
+        height: 9862000,
+        cosmos_sdk_version: 'evmos/cosmos-sdk v0.47.5-evmos',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.3',
+        },
+        ibc_go_version: '7.3.1',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.2/haqq_1.7.2_Linux_x86_64.tar.gz',
+          'linux/arm64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.2/haqq_1.7.2_Linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.2/haqq_1.7.2_Darwin_x86_64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.2/haqq_1.7.2_Darwin_arm64.tar.gz',
+          'windows/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.2/haqq_1.7.2_Windows_x86_64.zip',
+        },
+        next_version_name: 'v1.7.3',
+      },
+      {
+        name: 'v1.7.3',
+        tag: 'v1.7.3',
+        recommended_version: 'v1.7.3',
+        compatible_versions: ['v1.7.3'],
+        proposal: 30,
+        height: 9950000,
+        cosmos_sdk_version: 'evmos/cosmos-sdk v0.47.5-evmos',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.3',
+        },
+        ibc_go_version: '7.3.1',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Linux_x86_64.tar.gz',
+          'linux/arm64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Darwin_x86_64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Darwin_arm64.tar.gz',
+          'windows/amd64':
+            'https://github.com/haqq-network/haqq/releases/download/v1.7.3/haqq_1.7.3_Windows_x86_64.zip',
         },
         next_version_name: '',
       },

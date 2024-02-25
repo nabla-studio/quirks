@@ -209,15 +209,11 @@ export const secretnetwork: Chain = {
   apis: {
     'grpc-web': [
       {
-        address: 'https://wgrpc.secret.express',
-        provider: 'Secret Community API - Secret Express',
+        address: 'https://grpc.mainnet.secretsaturn.net',
+        provider: '🪐 𝕊ecret 𝕊aturn',
       },
     ],
     rpc: [
-      {
-        address: 'https://rpc.secret.express',
-        provider: 'Secret Community API - Secret Express',
-      },
       {
         address: 'https://scrt.public-rpc.com',
         provider: 'ANKR',
@@ -235,15 +231,19 @@ export const secretnetwork: Chain = {
         provider: 'High Stakes 🇨🇭',
       },
       {
+        address: 'https://rpc.mainnet.secretsaturn.net',
+        provider: '🪐 𝕊ecret 𝕊aturn',
+      },
+      {
+        address: 'https://rpc-secret.01node.com',
+        provider: '01node',
+      },
+      {
         address: 'https://public.stakewolle.com/cosmos/secretnetwork/rpc',
         provider: 'Stakewolle',
       },
     ],
     rest: [
-      {
-        address: 'https://lcd.secret.express',
-        provider: 'Secret Community API - Secret Express',
-      },
       {
         address: 'https://secretnetwork-api.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
@@ -261,6 +261,14 @@ export const secretnetwork: Chain = {
         provider: 'High Stakes 🇨🇭',
       },
       {
+        address: 'https://lcd.mainnet.secretsaturn.net',
+        provider: '🪐 𝕊ecret 𝕊aturn',
+      },
+      {
+        address: 'https://rest-secret.01node.com',
+        provider: '01node',
+      },
+      {
         address: 'https://public.stakewolle.com/cosmos/secretnetwork/rest',
         provider: 'Stakewolle',
       },
@@ -274,10 +282,6 @@ export const secretnetwork: Chain = {
         address: 'secretnetwork-mainnet-grpc.autostake.com:9090',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
-      {
-        address: 'https://grpc.secret.express',
-        provider: 'Secret Community API - Secret Express',
-      },
     ],
   },
   explorers: [
@@ -287,12 +291,6 @@ export const secretnetwork: Chain = {
       tx_page: 'https://app.ezstaking.io/secretnetwork/txs/${txHash}',
       account_page:
         'https://app.ezstaking.io/secretnetwork/account/${accountAddress}',
-    },
-    {
-      kind: 'secret nodes',
-      url: 'https://secretnodes.com/secret/chains/secret-4',
-      tx_page:
-        'https://secretnodes.com/secret/chains/secret-4/transactions/${txHash}',
     },
     {
       kind: 'ping.pub',

@@ -261,6 +261,11 @@ export const provenance: Chain = {
         address: 'provenance-seed.panthea.eu:42656',
         provider: 'Panthea EU',
       },
+      {
+        id: '10ed1e176d874c8bb3c7c065685d2da6a4b86475',
+        address: 'seed-provenance.ibs.team:16675',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     persistent_peers: [
       {

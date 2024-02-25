@@ -1,11 +1,11 @@
-import { WalletConnectionTypes, type WalletOptions } from '@quirks/core';
+import type { WalletOptions } from '@quirks/core';
 import { keplrextension } from '@nabla-studio/wallet-registry';
 
 export const universalWalletConnectOptions: WalletOptions = {
   ...keplrextension,
   wallet_name: 'universal-wallet-connect',
   pretty_name: 'Wallet Connect',
-  connectionType: WalletConnectionTypes.WALLET_CONNECT,
+  connection_type: 'wallet_connect',
   platforms: [],
   images: [
     {

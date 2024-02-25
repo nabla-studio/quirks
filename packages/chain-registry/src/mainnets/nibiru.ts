@@ -36,29 +36,29 @@ export const nibiru: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/NibiruChain/nibiru',
-    recommended_version: 'v1.0.0',
-    compatible_versions: ['v1.0.0'],
+    recommended_version: 'v1.0.1',
+    compatible_versions: ['v1.0.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.0/nibid_1.0.0_linux_amd64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.1/nibid_1.0.1_linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.0/nibid_1.0.0_linux_arm64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.1/nibid_1.0.1_linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.0/nibid_1.0.0_darwin_amd64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.1/nibid_1.0.1_darwin_amd64.tar.gz',
       'darwin/arm64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.0/nibid_1.0.0_darwin_arm64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.1/nibid_1.0.1_darwin_arm64.tar.gz',
     },
-    cosmos_sdk_version: 'v0.45.5',
+    cosmos_sdk_version: 'v0.47.7',
     consensus: {
       type: 'cometbft',
-      version: 'v0.37.2',
+      version: 'v0.37.4',
     },
     cosmwasm_version: 'v0.44.0',
     cosmwasm_enabled: true,
     ibc_go_version: 'v7.3.1',
     genesis: {
       genesis_url:
-        'https://github.com/NibiruChain/Networks/blob/main/Mainnet/cataclysm-1/genesis.json',
+        'https://raw.githubusercontent.com/NibiruChain/Networks/main/Mainnet/cataclysm-1/genesis.json',
     },
     versions: [
       {
@@ -82,6 +82,33 @@ export const nibiru: Chain = {
           'linux/arm64':
             'https://github.com/NibiruChain/nibiru/releases/download/v1.0.0/nibid_1.0.0_linux_arm64.tar.gz',
         },
+        next_version_name: 'v1.0.1',
+      },
+      {
+        name: 'v1.0.1',
+        recommended_version: 'v1.0.1',
+        compatible_versions: ['v1.0.1'],
+        tag: 'v1.0.1',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.0.1/nibid_1.0.1_linux_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.0.1/nibid_1.0.1_linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.0.1/nibid_1.0.1_darwin_amd64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.0.1/nibid_1.0.1_darwin_arm64.tar.gz',
+        },
+        proposal: 2,
+        height: 2753803,
+        cosmos_sdk_version: 'v0.47.7',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'v0.44.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.3.1',
         next_version_name: '',
       },
     ],
@@ -93,6 +120,11 @@ export const nibiru: Chain = {
   description: 'A Web3 hub ushering in the next era of money',
   peers: {
     seeds: [
+      {
+        id: '20e1000e88125698264454a884812746c2eb4807',
+        address: 'seeds.lavenderfive.com:19856',
+        provider: 'Lavender.Five Nodes 🐝',
+      },
       {
         id: 'b7262df35a7e1d1fb4027464efe9d9d6218ca4c7',
         address: '35.233.111.89:26656',
@@ -141,6 +173,14 @@ export const nibiru: Chain = {
         address: 'https://rpc.nibiru.nodestake.org',
         provider: 'NodeStake',
       },
+      {
+        address: 'https://nibiru-rpc.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'https://rpc.nibiru.silentvalidator.com',
+        provider: 'silent',
+      },
     ],
     rest: [
       {
@@ -155,6 +195,14 @@ export const nibiru: Chain = {
         address: 'https://api.nibiru.nodestake.org',
         provider: 'NodeStake',
       },
+      {
+        address: 'https://api.nibiru.silentvalidator.com',
+        provider: 'silent',
+      },
+      {
+        address: 'https://nibiru-api.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
+      },
     ],
     grpc: [
       {
@@ -168,6 +216,14 @@ export const nibiru: Chain = {
       {
         address: 'grpc.nibiru.nodestake.org:443',
         provider: 'NodeStake',
+      },
+      {
+        address: 'grpc.nibiru.silentvalidator.com:443',
+        provider: 'silent',
+      },
+      {
+        address: 'https://nibiru-grpc.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
       },
     ],
   },

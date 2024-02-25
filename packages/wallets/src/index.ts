@@ -4,6 +4,8 @@ export * from './cosmostation';
 export * from './xdefi';
 export * from './station';
 export * from './okx';
+export * from './shell';
+export * from './leap-metamask-snap';
 export * from './wallet-connect';
 export * from './keplr-mobile';
 export * from './leap-mobile';

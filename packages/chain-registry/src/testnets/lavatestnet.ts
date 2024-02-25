@@ -148,6 +148,13 @@ export const lavatestnet: Chain = {
       account_page:
         'https://explorer.stavr.tech/Lava-Testnet/account/${accountAddress}',
     },
+    {
+      kind: 'NodeStake Explorer',
+      url: 'https://explorer.nodestake.org/lava-testnet',
+      tx_page: 'https://explorer.nodestake.org/lava-testnet/tx/${txHash}',
+      account_page:
+        'https://explorer.nodestake.org/lava-testnet/account/${accountAddress}',
+    },
   ],
   keywords: ['rpc', 'api'],
 };

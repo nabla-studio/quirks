@@ -649,29 +649,22 @@ export const bitsongAssetList: AssetLists = {
       ],
     },
     {
-      description: 'L DON a BitSong Music FanToken',
+      deprecated: true,
+      description: '[Redacted] a BitSong Music FanToken',
       denom_units: [
         {
           denom: 'ft347B1612A2B7659913679CF6CD45B8B130C50A00',
           exponent: 0,
         },
         {
-          denom: 'ldon',
+          denom: 'ft347B1612A2B7659913679CF6CD45B8B130C50A00/6',
           exponent: 6,
         },
       ],
       base: 'ft347B1612A2B7659913679CF6CD45B8B130C50A00',
-      name: 'L DON Fantoken',
-      display: 'ldon',
+      name: '[Redacted] Fantoken (ft3...A00)',
+      display: 'ft347B1612A2B7659913679CF6CD45B8B130C50A00/6',
       symbol: 'LDON',
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bitsong/images/ft347B1612A2B7659913679CF6CD45B8B130C50A00.png',
-      },
-      images: [
-        {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bitsong/images/ft347B1612A2B7659913679CF6CD45B8B130C50A00.png',
-        },
-      ],
     },
   ],
 };
