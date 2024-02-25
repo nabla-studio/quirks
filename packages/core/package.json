@@ -24,8 +24,8 @@
     "cosmjs-types": "^0.9.0",
     "@cosmjs/amino": "^0.32.2",
     "eventemitter3": "^5.0.1",
-    "@walletconnect/universal-provider": "^2.10.5",
-    "@walletconnect/types": "^2.10.5",
+    "@walletconnect/universal-provider": "^2.11.2",
+    "@walletconnect/types": "^2.11.2",
     "base64-js": "^1.5.1",
     "pino-pretty": "^10.2.3"
   },
