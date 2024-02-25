@@ -79,6 +79,11 @@ export const impacthub: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: '9194ed56c5b93a0a7e3bdbcad8f62467f7137f56',
+        address: 'seed-ixo.ibs.team:16662',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     persistent_peers: [
       {

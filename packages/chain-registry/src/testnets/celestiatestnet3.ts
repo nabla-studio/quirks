@@ -46,6 +46,16 @@ export const celestiatestnet3: Chain = {
         address: '65.108.66.220:26656',
         provider: 'P-OPS',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        id: '8c780fa4df00621926a9b20e80410895548cb0d9',
+        address: 'mocha-full.avril14th.org:26656',
+        provider: 'Avril 14th',
+      },
     ],
   },
   apis: {
@@ -54,11 +64,37 @@ export const celestiatestnet3: Chain = {
         address: 'https://rpc-mocha.pops.one',
         provider: 'P-OPs',
       },
+      {
+        address: 'https://celestia-testnet-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://rpc-mocha-full.avril14th.org',
+        provider: 'Avril 14th',
+      },
     ],
     rest: [
       {
         address: 'https://api-mocha.pops.one',
         provider: 'P-OPs',
+      },
+      {
+        address: 'https://celestia-testnet-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://api-mocha-full.avril14th.org',
+        provider: 'Avril 14th',
+      },
+    ],
+    grpc: [
+      {
+        address: 'celestia-testnet-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'grpc-mocha-full.avril14th.org',
+        provider: 'Avril 14th',
       },
     ],
   },

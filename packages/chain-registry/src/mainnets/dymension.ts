@@ -15,8 +15,8 @@ export const dymension: Chain = {
     fee_tokens: [
       {
         denom: 'adym',
-        low_gas_price: 20000000000,
-        average_gas_price: 20000000000,
+        low_gas_price: 5000000000,
+        average_gas_price: 5000000000,
         high_gas_price: 20000000000,
       },
     ],
@@ -80,6 +80,16 @@ export const dymension: Chain = {
         address: 'seeds.whispernode.com:20556',
         provider: 'WhisperNode 🤐',
       },
+      {
+        id: '10ed1e176d874c8bb3c7c065685d2da6a4b86475',
+        address: 'seed-dymension.ibs.team:16676',
+        provider: 'Inter Blockchain Services',
+      },
+      {
+        id: '86bd5cb6e762f673f1706e5889e039d5406b4b90',
+        address: 'seed.dymension.node75.org:10956',
+        provider: 'Pro-Nodes75',
+      },
     ],
     persistent_peers: [
       {
@@ -91,9 +101,18 @@ export const dymension: Chain = {
         address: 'dymension-m.peer.stavr.tech:17086',
       },
       {
+        id: 'be3c133f618a8326f2f8da6f803750292454ebdc',
+        address: '45.76.38.67:26656',
+      },
+      {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'dymension-mainnet-peer.autostake.com:27086',
         provider: 'AutoStake | Delegate for StakeDrops',
+      },
+      {
+        id: 'b8d6d233805f3b60c56b0efecda80c50be1a108f',
+        address: '74.208.16.201:26646',
+        provider: 'Cumulo',
       },
     ],
   },
@@ -106,6 +125,10 @@ export const dymension: Chain = {
       {
         address: 'https://rpc.dymension.nodestake.org',
         provider: 'NodeStake',
+      },
+      {
+        address: 'http://dymension.mainnet.rpc.noders.team:42657',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://dymension-mainnet-rpc.autostake.com:443',
@@ -187,6 +210,18 @@ export const dymension: Chain = {
         address: 'https://dymension.0xwave.com:2053',
         provider: 'Wave',
       },
+      {
+        address: 'https://dym.rpc.cumulo.com.es:443',
+        provider: 'Cumulo',
+      },
+      {
+        address: 'https://rpc.dymension.posthuman.digital',
+        provider: 'posthuman',
+      },
+      {
+        address: 'https://rpc.dymension.node75.org',
+        provider: 'Pro-Nodes75',
+      },
     ],
     rest: [
       {
@@ -196,6 +231,10 @@ export const dymension: Chain = {
       {
         address: 'https://api.dymension.nodestake.org',
         provider: 'NodeStake',
+      },
+      {
+        address: 'http://dymension.mainnet.api.noders.team:42317',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://dymension-mainnet-lcd.autostake.com:443',
@@ -277,6 +316,18 @@ export const dymension: Chain = {
         address: 'https://dymension.0xwave.com',
         provider: 'Wave',
       },
+      {
+        address: 'https://dym.api.cumulo.com.es',
+        provider: 'Cumulo',
+      },
+      {
+        address: 'https://rest.dymension.posthuman.digital',
+        provider: 'posthuman',
+      },
+      {
+        address: 'https://api.dymension.node75.org',
+        provider: 'Pro-Nodes75',
+      },
     ],
     grpc: [
       {
@@ -290,6 +341,10 @@ export const dymension: Chain = {
       {
         address: 'dymension-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake | Delegate for StakeDrops',
+      },
+      {
+        address: 'dymension.mainnet.grpc.noders.team:42090',
+        provider: '[NODERS]TEAM',
       },
       {
         address: 'https://dymension-grpc.lavenderfive.com:443',
@@ -343,6 +398,14 @@ export const dymension: Chain = {
         address: 'https://dymension.0xwave.com:2083',
         provider: 'Wave',
       },
+      {
+        address: 'dym.grpc.cumulo.com.es:443',
+        provider: 'Cumulo',
+      },
+      {
+        address: 'https://grpc.dymension.posthuman.digital',
+        provider: 'posthuman',
+      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -360,6 +423,18 @@ export const dymension: Chain = {
       {
         address: 'https://dymension.0xwave.com:2087',
         provider: 'Wave',
+      },
+      {
+        address: 'https://dym.json-rpc.cumulo.com.es:443',
+        provider: 'Cumulo',
+      },
+      {
+        address: 'https://evm-rpc.dymension.node75.org',
+        provider: 'Pro-Nodes75',
+      },
+      {
+        address: 'https://evm-rpc.dymension.posthuman.digital',
+        provider: 'posthuman',
       },
     ],
   },
@@ -396,6 +471,13 @@ export const dymension: Chain = {
       url: 'https://hoodscan.io/dymension',
       tx_page: 'https://hoodscan.io/dymension/transactions/${txHash}',
       account_page: 'https://hoodscan.io/dymension/accounts/${accountAddress}',
+    },
+    {
+      kind: 'posthuman',
+      url: 'https://explorer.posthuman.digital/dymension',
+      tx_page: 'https://explorer.posthuman.digital/dymension/tx/${txHash}',
+      account_page:
+        'https://explorer.posthuman.digital/dymension/account/${accountAddress}',
     },
   ],
 };

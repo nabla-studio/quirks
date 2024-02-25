@@ -67,25 +67,28 @@ export const zetachaintestnet: Chain = {
         address: 'https://zetachain-athens.blockpi.network/rpc/v1/public',
         provider: 'BlockPI',
       },
+      {
+        address: 'https://zetachain-testnet-archive.allthatnode.com:26657',
+        provider: 'All That Node',
+      },
     ],
     rest: [
       {
         address: 'https://zetachain-athens.blockpi.network/lcd/v1/public',
         provider: 'BlockPI',
       },
-    ],
-    grpc: [
       {
-        address: 'https://zetachain-testnet.nodejumper.io:9090',
-        provider: 'NodeJumper',
+        address: 'https://zetachain-testnet-archive.allthatnode.com:1317',
+        provider: 'All That Node',
       },
     ],
+    grpc: [],
   },
   explorers: [
     {
       kind: 'ZetaScan',
-      url: 'https://explorer.zetachain.com/',
-      tx_page: 'https://explorer.zetachain.com/cc/tx/${txHash}',
+      url: 'https://athens.explorer.zetachain.com/',
+      tx_page: 'https://athens.explorer.zetachain.com/cc/tx/${txHash}',
     },
     {
       kind: 'BlockScout',

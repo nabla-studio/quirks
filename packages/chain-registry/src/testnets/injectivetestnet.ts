@@ -78,6 +78,11 @@ export const injectivetestnet: Chain = {
         address: 'testnet-seeds.polkachu.com:14356',
         provider: 'polkachu',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -126,6 +131,10 @@ export const injectivetestnet: Chain = {
         address: 'https://testnet.tm.injective.network',
         provider: 'injectiveLabs',
       },
+      {
+        address: 'https://injective-testnet-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -140,6 +149,10 @@ export const injectivetestnet: Chain = {
         address: 'https://testnet.grpc.injective.network',
         provider: 'injectiveLabs',
       },
+      {
+        address: 'https://injective-testnet-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -153,6 +166,10 @@ export const injectivetestnet: Chain = {
       {
         address: 'https://testnet.grpc.injective.network',
         provider: 'injectiveLabs',
+      },
+      {
+        address: 'injective-testnet-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

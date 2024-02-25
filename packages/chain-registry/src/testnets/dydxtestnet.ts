@@ -84,6 +84,11 @@ export const dydxtestnet: Chain = {
           '20e1000e88125698264454a884812746c2eb4807@seeds.lavenderfive.com:23856',
         provider: 'Lavender Five',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
   },
   apis: {
@@ -104,6 +109,10 @@ export const dydxtestnet: Chain = {
         address: 'https://dydx-testnet-rpc.polkachu.com',
         provider: 'Polkachu',
       },
+      {
+        address: 'https://dydx-testnet-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -118,6 +127,10 @@ export const dydxtestnet: Chain = {
         address: 'https://dydx-testnet-api.polkachu.com',
         provider: 'Polkachu',
       },
+      {
+        address: 'https://dydx-testnet-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -127,6 +140,10 @@ export const dydxtestnet: Chain = {
       {
         address: 'https://dydx-testnet-api.polkachu.com',
         provider: 'Polkachu',
+      },
+      {
+        address: 'dydx-testnet-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

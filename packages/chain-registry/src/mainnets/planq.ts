@@ -33,19 +33,19 @@ export const planq: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/planq-network/planq',
-    recommended_version: 'v1.0.7',
-    compatible_versions: ['v1.0.7'],
+    recommended_version: 'v1.1.0',
+    compatible_versions: ['v1.1.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Linux_x86_64.tar.gz',
+        'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Linux_arm64.tar.gz',
+        'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Darwin_x86_64.tar.gz',
+        'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_darwin_amd64.tar.gz',
       'darwin/arm64':
-        'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Darwin_arm64.tar.gz',
+        'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Windows_x86_64.zip',
+        'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_windows_amd64.zip',
     },
     cosmos_sdk_version: 'v0.46.3',
     consensus: {
@@ -77,8 +77,8 @@ export const planq: Chain = {
       },
       {
         name: 'v1.0.7',
-        recommended_version: 'v1.0.7',
-        compatible_versions: ['v1.0.7'],
+        recommended_version: 'v1.1.0',
+        compatible_versions: ['v1.1.0'],
         cosmos_sdk_version: 'v0.46.3',
         consensus: {
           type: 'cometbft',
@@ -87,16 +87,17 @@ export const planq: Chain = {
         ibc_go_version: '5.0.2',
         binaries: {
           'linux/amd64':
-            'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Linux_x86_64.tar.gz',
+            'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_linux_amd64.tar.gz',
           'linux/arm64':
-            'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Linux_arm64.tar.gz',
+            'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_linux_arm64.tar.gz',
           'darwin/amd64':
-            'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Darwin_x86_64.tar.gz',
+            'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_darwin_amd64.tar.gz',
           'darwin/arm64':
-            'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Darwin_arm64.tar.gz',
+            'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_darwin_arm64.tar.gz',
           'windows/amd64':
-            'https://github.com/planq-network/planq/releases/download/v1.0.7/planq_1.0.7_Windows_x86_64.zip',
+            'https://github.com/planq-network/planq/releases/download/v1.1.0/planq_1.1.0_windows_amd64.zip',
         },
+        next_version_name: '',
       },
     ],
   },
@@ -208,6 +209,10 @@ export const planq: Chain = {
         address: 'https://planq.rpc.skynodejs.net',
         provider: 'skynodejs',
       },
+      {
+        address: 'https://planq-rpc.stake-town.com',
+        provider: 'StakeTown',
+      },
     ],
     rest: [
       {
@@ -241,6 +246,10 @@ export const planq: Chain = {
       {
         address: 'https://planq.api.skynodejs.net',
         provider: 'skynodejs',
+      },
+      {
+        address: 'https://planq-api.stake-town.com',
+        provider: 'StakeTown',
       },
     ],
     grpc: [
@@ -288,6 +297,10 @@ export const planq: Chain = {
         address: 'https://planq.grpc.skynodejs.net',
         provider: 'skynodejs',
       },
+      {
+        address: 'planq-grpc.stake-town.com:443',
+        provider: 'StakeTown',
+      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -313,6 +326,10 @@ export const planq: Chain = {
       {
         address: 'https://evm.planq.safeblock.space',
         provider: 'Safe Block',
+      },
+      {
+        address: 'https://planq-jsonrpc.stake-town.com',
+        provider: 'StakeTown',
       },
     ],
   },
@@ -415,6 +432,49 @@ export const planqAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.svg',
         },
       ],
+    },
+    {
+      description: 'The token of Source Protocol bridged from BSC.',
+      denom_units: [
+        {
+          denom: 'erc20/0x091F9A57A3F58d758b6572E9d41675918EAC7F09',
+          exponent: 0,
+        },
+        {
+          denom: 'srcx',
+          exponent: 9,
+        },
+      ],
+      base: 'erc20/0x091F9A57A3F58d758b6572E9d41675918EAC7F09',
+      name: 'Source Token',
+      display: 'srcx',
+      symbol: 'SRCX',
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'binancesmartchain',
+            base_denom: '0x454b90716a9435e7161a9aea5cf00e0acbe565ae',
+            contract: '0xC891aBa0b42818fb4c975Bf6461033c62BCE75ff',
+          },
+          chain: {
+            contract: '0xC891aBa0b42818fb4c975Bf6461033c62BCE75ff',
+          },
+          provider: 'DeltaSwap.io',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'binancesmartchain',
+            base_denom: '0x454b90716a9435e7161a9aea5cf00e0acbe565ae',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/srcx.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/srcx.png',
+      },
     },
   ],
 };

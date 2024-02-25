@@ -254,6 +254,11 @@ export const andromeda: Chain = {
       account_page:
         'https://cosmotracker.com/andromeda/account/${accountAddress}',
     },
+    {
+      kind: 'ping.pub',
+      url: 'https://ping.pub/andromeda',
+      tx_page: 'https://ping.pub/andromeda/tx/${txHash}',
+    },
   ],
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/andromeda/images/andromeda-logo.png',

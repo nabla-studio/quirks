@@ -144,7 +144,7 @@ export const noble: Chain = {
   },
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/stake.png',
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/Noble-Logo.svg',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/stake.svg',
   },
   description:
     'The most reliable, secure, and frictionless way to natively issue a digital asset in Cosmos.',
@@ -210,7 +210,7 @@ export const noble: Chain = {
   images: [
     {
       png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/stake.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/Noble-Logo.svg',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/stake.svg',
     },
   ],
 };

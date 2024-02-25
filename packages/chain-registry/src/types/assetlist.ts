@@ -15,6 +15,10 @@ export interface AssetLists {
 }
 export interface Asset {
   /**
+   * [OPTIONAL] Whether the asset has been deprected for use. For readability, it is best to omit this property unless TRUE.
+   */
+  deprecated?: boolean;
+  /**
    * [OPTIONAL] A short description of the asset
    */
   description?: string;

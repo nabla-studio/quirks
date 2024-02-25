@@ -251,6 +251,10 @@ export const sentinel: Chain = {
   apis: {
     rpc: [
       {
+        address: 'https://rpc-sentinel.busurnode.com',
+        provider: 'Busurnode',
+      },
+      {
         address: 'https://rpc-sentinel-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
       },
@@ -296,6 +300,10 @@ export const sentinel: Chain = {
       },
     ],
     rest: [
+      {
+        address: 'https://api-sentinel.busurnode.com',
+        provider: 'Busurnode',
+      },
       {
         address: 'https://api-sentinel-ia.cosmosia.notional.ventures/',
         provider: 'Notional',

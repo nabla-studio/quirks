@@ -118,7 +118,7 @@ export const teritori: Chain = {
       },
       {
         id: '1ef268d56b79edbd0c32815f4bf9c362a0617ed4',
-        address: 'seed-teritori.ibs.team:16659',
+        address: 'seed-teritori.ibs.team:16670',
         provider: 'Inter Blockchain Services',
       },
       {

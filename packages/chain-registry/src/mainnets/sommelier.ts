@@ -153,6 +153,11 @@ export const sommelier: Chain = {
         provider: 'Validatus',
       },
       {
+        id: 'ac65237d8760a58be6818566139d33713983d9ef',
+        address: 'sommelier.seed.stavr.tech:2076',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
@@ -180,6 +185,10 @@ export const sommelier: Chain = {
       {
         address: 'https://rpc-sommelier.pupmos.network',
         provider: 'PUPMØS',
+      },
+      {
+        address: 'https://somm.rpc.m.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://sommelier-rpc.lavenderfive.com/',
@@ -212,6 +221,10 @@ export const sommelier: Chain = {
         provider: 'Polkachu',
       },
       {
+        address: 'https://som.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://sommelier-api.lavenderfive.com/',
         provider: 'Lavender.Five Nodes 🐝',
       },
@@ -232,6 +245,10 @@ export const sommelier: Chain = {
       {
         address: 'sommelier-grpc.polkachu.com:14190',
         provider: 'Polkachu',
+      },
+      {
+        address: 'somm.grpc.m.stavr.tech:114',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'sommelier-grpc.lavenderfive.com:443',
@@ -271,6 +288,13 @@ export const sommelier: Chain = {
       tx_page: 'https://www.mintscan.io/sommelier/transactions/${txHash}',
       account_page:
         'https://www.mintscan.io/sommelier/accounts/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Sommelier-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Sommelier-Mainnet/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Sommelier-Mainnet/account/${accountAddress}',
     },
     {
       kind: 'NODEXPLORER',

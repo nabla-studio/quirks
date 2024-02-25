@@ -74,11 +74,6 @@ export const ball8: Chain = {
         provider: '8ball',
       },
       {
-        id: 'ce168b8022e525650011352175fa020ce75edcfa',
-        address: '45.141.122.178:34656',
-        provider: 'genznodes',
-      },
-      {
         id: '49778546e7511a1cd6dde65805cd70547c75ce2b',
         address: 'rpc.8ball.nodexcapital.com:11056',
         provider: 'NodeX Validator',
@@ -95,10 +90,6 @@ export const ball8: Chain = {
         address: 'https://rpc.8ball.nodestake.top',
         provider: 'NodeStake',
       },
-      {
-        address: 'https://8ball-rpc.genznodes.dev/',
-        provider: 'genznodes',
-      },
     ],
     rest: [
       {
@@ -110,10 +101,6 @@ export const ball8: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://8ball-api.genznodes.dev/',
-        provider: 'genznodes',
-      },
-      {
         address: 'https://api-8ball.nodine.id/',
         provider: 'Nodine.ID',
       },
@@ -122,10 +109,6 @@ export const ball8: Chain = {
       {
         address: 'grpc.8ball.nodestake.top:443',
         provider: 'NodeStake',
-      },
-      {
-        address: '8ball-grpc.genznodes.dev:31090',
-        provider: 'genznodes',
       },
       {
         address: 'https://grpc.8ball.nodexcapital.com:443',

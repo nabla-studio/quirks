@@ -5,8 +5,8 @@ export const umee: Chain = {
   chain_name: 'umee',
   status: 'live',
   network_type: 'mainnet',
-  website: 'https://www.umee.cc/',
-  pretty_name: 'Umee',
+  website: 'https://www.ux.xyz',
+  pretty_name: 'UX Chain',
   chain_id: 'umee-1',
   bech32_prefix: 'umee',
   daemon_name: 'umeed',
@@ -32,20 +32,20 @@ export const umee: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/umee-network/umee',
-    recommended_version: 'v6.0.2',
-    compatible_versions: ['v6.0.2'],
+    recommended_version: 'v6.3.0',
+    compatible_versions: ['v6.3.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/umee-network/umee/releases/download/v6.0.2/umeed-v6.0.2-linux-amd64.tar.gz',
+        'https://github.com/umee-network/umee/releases/download/v6.3.0/umeed-v6.3.0-linux-amd64.tar.gz',
     },
-    cosmos_sdk_version: '0.46',
+    cosmos_sdk_version: '0.47',
     consensus: {
       type: 'cometbft',
-      version: '0.34',
+      version: '0.37',
     },
-    cosmwasm_version: '0.31',
+    cosmwasm_version: '0.43',
     cosmwasm_enabled: true,
-    ibc_go_version: '6.2.0',
+    ibc_go_version: '7.3.2',
     genesis: {
       name: 'v1.0.1',
       genesis_url:
@@ -360,6 +360,63 @@ export const umee: Chain = {
         binaries: {
           'linux/amd64':
             'https://github.com/umee-network/umee/releases/download/v6.0.2/umeed-v6.0.2-linux-amd64.tar.gz',
+        },
+      },
+      {
+        name: 'v6.1',
+        tag: 'v6.1.0',
+        height: 8941650,
+        recommended_version: 'v6.1.0',
+        compatible_versions: ['v6.1.0'],
+        cosmos_sdk_version: '0.46',
+        consensus: {
+          type: 'cometbft',
+          version: '0.34',
+        },
+        cosmwasm_version: '0.31',
+        cosmwasm_enabled: true,
+        ibc_go_version: '6.2.0',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/umee-network/umee/releases/download/v6.1.0/umeed-v6.1.0-linux-amd64.tar.gz',
+        },
+      },
+      {
+        name: 'v6.2',
+        tag: 'v6.2.0',
+        height: 9561500,
+        recommended_version: 'v6.2.0',
+        compatible_versions: ['v6.2.0'],
+        cosmos_sdk_version: '0.47',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37',
+        },
+        cosmwasm_version: '0.43',
+        cosmwasm_enabled: true,
+        ibc_go_version: '7.3.1',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/umee-network/umee/releases/download/v6.2.0/umeed-v6.2.0-linux-amd64.tar.gz',
+        },
+      },
+      {
+        name: 'v6.3',
+        tag: 'v6.3.0',
+        height: 10046600,
+        recommended_version: 'v6.3.0',
+        compatible_versions: ['v6.3.0'],
+        cosmos_sdk_version: '0.47',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37',
+        },
+        cosmwasm_version: '0.43',
+        cosmwasm_enabled: true,
+        ibc_go_version: '7.3.1',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/umee-network/umee/releases/download/v6.3.0/umeed-v6.3.0-linux-amd64.tar.gz',
         },
       },
     ],

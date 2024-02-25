@@ -41,7 +41,7 @@ export const oraichain: Chain = {
     },
     genesis: {
       genesis_url:
-        'https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/mainnet-static-files/genesis.json',
+        'https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json',
     },
     versions: [
       {
@@ -112,6 +112,11 @@ export const oraichain: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: 'fe0a0d46eb5436905bf8465f83d2da5a503bf4eb',
+        address: 'mainnet-seed.konsortech.xyz:33165',
+        provider: 'KonsorTech',
+      },
     ],
     persistent_peers: [
       {
@@ -145,6 +150,11 @@ export const oraichain: Chain = {
         address: 'peer-oraichain.mms.team:56103',
         provider: 'MMS',
       },
+      {
+        id: 'efb9d22a6fdf7460f965982ae013d242bbbfd53c',
+        address: 'mainnet-orai.konsortech.xyz:33656',
+        provider: 'KonsorTech',
+      },
     ],
   },
   apis: {
@@ -169,6 +179,10 @@ export const oraichain: Chain = {
         address: 'https://rpc-orai.blockval.io/',
         provider: 'Blockval',
       },
+      {
+        address: 'https://mainnet-orai-rpc.konsortech.xyz',
+        provider: 'KonsorTech',
+      },
     ],
     rest: [
       {
@@ -187,6 +201,10 @@ export const oraichain: Chain = {
         address: 'https://api-orai.blockval.io',
         provider: 'Blockval',
       },
+      {
+        address: 'https://mainnet-orai-api.konsortech.xyz',
+        provider: 'KonsorTech',
+      },
     ],
     grpc: [
       {
@@ -200,6 +218,10 @@ export const oraichain: Chain = {
       {
         address: 'grpc-orai.blockval.io:9390',
         provider: 'Blockval',
+      },
+      {
+        address: 'mainnet-orai.konsortech.xyz:33090',
+        provider: 'KonsorTech',
       },
     ],
   },
@@ -224,6 +246,14 @@ export const oraichain: Chain = {
       url: 'https://atomscan.com/orai',
       tx_page: 'https://atomscan.com/orai/transactions/${txHash}',
       account_page: 'https://atomscan.com/orai/accounts/${accountAddress}',
+    },
+    {
+      kind: 'KonsorTech Explorer',
+      url: 'https://explorer.konsortech.xyz/oraichain',
+      tx_page:
+        'https://explorer.konsortech.xyz/oraichain/transactions/${txHash}',
+      account_page:
+        'https://explorer.konsortech.xyz/oraichain/accounts/${accountAddress}',
     },
   ],
   images: [

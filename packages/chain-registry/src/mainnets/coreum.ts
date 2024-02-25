@@ -160,6 +160,11 @@ export const coreum: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: '10ed1e176d874c8bb3c7c065685d2da6a4b86475',
+        address: 'seed-coreum.ibs.team:16674',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     persistent_peers: [
       {

@@ -80,6 +80,12 @@ export const celestia: Chain = {
         address: 'seed-celestia-01.stakeflow.io:15007',
         provider: 'Stakeflow',
       },
+
+      {
+        id: 'c809ca6486cd54501ce5291714c892f5dc9cfa93',
+        address: 'celestia.seeds.validao.xyz:36656',
+        provider: 'ValiDAO',
+      },
       {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
         address: 'seed.publicnode.com:26656',
@@ -132,6 +138,11 @@ export const celestia: Chain = {
         address: '65.108.226.26:29656',
         provider: '[NODERS]TEAM',
       },
+      {
+        id: 'c48d92566837d95f1eeae5815ac7e70fb80416f7',
+        address: '74.208.94.42:26656',
+        provider: 'Cumulo',
+      },
     ],
   },
   apis: {
@@ -167,6 +178,10 @@ export const celestia: Chain = {
       {
         address: 'http://celestia.rpc.nodersteam.com:29657',
         provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://celestia.rpc.interchain.validao.xyz',
+        provider: 'ValiDAO',
       },
       {
         address: 'https://celestia-rpc.publicnode.com:443',
@@ -216,6 +231,14 @@ export const celestia: Chain = {
         address: 'https://rpc.freshstaking.com/celestia',
         provider: 'FreshSTAKING',
       },
+      {
+        address: 'https://celestia.cumulo.org.es/',
+        provider: 'Cumulo',
+      },
+      {
+        address: 'https://celestia-rpc.stake-town.com',
+        provider: 'StakeTown',
+      },
     ],
     rest: [
       {
@@ -249,6 +272,10 @@ export const celestia: Chain = {
       {
         address: 'https://api-celestia.cosmos-spaces.cloud',
         provider: 'Cosmos Spaces',
+      },
+      {
+        address: 'https://celestia.rest.interchain.validao.xyz',
+        provider: 'ValiDAO',
       },
       {
         address: 'https://celestia-rest.publicnode.com',
@@ -290,6 +317,14 @@ export const celestia: Chain = {
         address: 'https://api-celestia-full.avril14th.org',
         provider: 'Avril 14th',
       },
+      {
+        address: 'https://celestia.api.cumulo.org.es',
+        provider: 'Cumulo',
+      },
+      {
+        address: 'https://celestia-api.stake-town.com',
+        provider: 'StakeTown',
+      },
     ],
     grpc: [
       {
@@ -315,6 +350,10 @@ export const celestia: Chain = {
       {
         address: 'grpc-celestia.cosmos-spaces.cloud:5190',
         provider: 'Cosmos Spaces',
+      },
+      {
+        address: 'celestia.grpc.interchain.validao.xyz:443',
+        provider: 'ValiDAO',
       },
       {
         address: 'celestia-grpc.publicnode.com:443',
@@ -347,6 +386,14 @@ export const celestia: Chain = {
       {
         address: 'grpc-celestia-full.avril14th.org',
         provider: 'Avril 14th',
+      },
+      {
+        address: 'celestia.grpc.cumulo.org.es',
+        provider: 'Cumulo',
+      },
+      {
+        address: 'https://celestia-grpc.stake-town.com',
+        provider: 'StakeTown',
       },
     ],
   },

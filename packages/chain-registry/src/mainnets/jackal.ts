@@ -33,13 +33,13 @@ export const jackal: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/JackalLabs/canine-chain',
-    recommended_version: 'v3.1.1',
-    compatible_versions: ['v3.1.1'],
+    recommended_version: 'v3.1.3',
+    compatible_versions: ['v3.1.1', 'v3.1.3'],
     binaries: {
       'linux/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.1/canined-Linux',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.3/canined-Linux',
       'darwin/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.1/canined-macOS',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.3/canined-macOS',
     },
     genesis: {
       genesis_url:
@@ -110,17 +110,17 @@ export const jackal: Chain = {
       },
       {
         name: 'v3.1.1',
-        tag: 'V3.1.1',
+        tag: 'V3.1.3',
         proposal: 11,
         height: 6095000,
-        recommended_version: 'v3.1.1',
-        compatible_versions: ['v3.1.1'],
+        recommended_version: 'v3.1.3',
+        compatible_versions: ['v3.1.1', 'v3.1.3'],
         cosmwasm_enabled: true,
         binaries: {
           'linux/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.1/canined-Linux',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.3/canined-Linux',
           'darwin/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.1/canined-macOS',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.3/canined-macOS',
         },
         next_version_name: '',
       },
@@ -186,6 +186,10 @@ export const jackal: Chain = {
       {
         id: '2af06d39d68345d41cd16182e3472d96c5a0150b',
         address: '136.244.29.116:27656',
+      },
+      {
+        id: '41c19eebb3879cd9f4a7561c0953af7d1564624b',
+        address: '167.114.159.157:26656',
       },
     ],
   },
@@ -253,6 +257,14 @@ export const jackal: Chain = {
         address: 'https://public.stakewolle.com/cosmos/jackal/rpc',
         provider: 'Stakewolle',
       },
+      {
+        address: 'https://rpc.jackal.silentvalidator.com',
+        provider: 'silent',
+      },
+      {
+        address: 'https://rpc.jackal.mathnodes.com',
+        provider: 'MathNodes',
+      },
     ],
     rest: [
       {
@@ -307,6 +319,14 @@ export const jackal: Chain = {
         address: 'https://public.stakewolle.com/cosmos/jackal/rest',
         provider: 'Stakewolle',
       },
+      {
+        address: 'https://api.jackal.silentvalidator.com',
+        provider: 'silent',
+      },
+      {
+        address: 'https://api.jackal.mathnodes.com',
+        provider: 'MathNodes',
+      },
     ],
     grpc: [
       {
@@ -348,6 +368,10 @@ export const jackal: Chain = {
       {
         address: 'https://jackal.grpc.skynodejs.net',
         provider: 'skynodejs',
+      },
+      {
+        address: 'grpc.jackal.silentvalidator.com:443',
+        provider: 'silent',
       },
     ],
   },

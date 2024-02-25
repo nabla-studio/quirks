@@ -65,6 +65,11 @@ export const pryzmtestnet: Chain = {
         address: 'testnet-seed.pryzm.zone:26656',
         provider: 'PRYZM',
       },
+      {
+        id: 'fbfd48af73cd1f6de7f9102a0086ac63f46fb911',
+        address: 'pryzm-testnet-seed.itrocket.net:41656',
+        provider: 'ITRocket',
+      },
     ],
     persistent_peers: [],
   },
@@ -74,17 +79,29 @@ export const pryzmtestnet: Chain = {
         address: 'https://testnet-rpc.pryzm.zone',
         provider: 'PRYZM',
       },
+      {
+        address: 'https://pryzm-testnet-rpc.itrocket.net',
+        provider: 'ITRocket',
+      },
     ],
     rest: [
       {
         address: 'https://testnet-api.pryzm.zone',
         provider: 'PRYZM',
       },
+      {
+        address: 'https://pryzm-testnet-api.itrocket.net',
+        provider: 'ITRocket',
+      },
     ],
     grpc: [
       {
         address: 'https://testnet-grpc.pryzm.zone',
         provider: 'PRYZM',
+      },
+      {
+        address: 'http://pryzm-testnet-grpc.itrocket.net:41090',
+        provider: 'ITRocket',
       },
     ],
   },
@@ -99,6 +116,13 @@ export const pryzmtestnet: Chain = {
       tx_page: 'https://testnets.cosmosrun.info/pryzm-indigo-1/tx/${txHash}',
       account_page:
         'https://testnets.cosmosrun.info/pryzm-indigo-1/account/${accountAddress}',
+    },
+    {
+      kind: 'ITRocket',
+      url: 'https://testnet.itrocket.net/pryzm',
+      tx_page: 'https://testnet.itrocket.net/pryzm/tx/${txHash}',
+      account_page:
+        'https://testnet.itrocket.net/pryzm/account/${accountAddress}',
     },
   ],
   images: [

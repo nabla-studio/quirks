@@ -35,9 +35,8 @@ export const nomic: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/nomic-io/nomic',
-    recommended_version: 'v7.0.1',
-    compatible_versions: ['v7.0.0', 'v7.0.1'],
-    cosmos_sdk_version: 'cosmos-sdk-proto 0.19.0',
+    recommended_version: 'v8.0.0',
+    compatible_versions: ['v8.0.0'],
     consensus: {
       type: 'tendermint',
       version: 'v0.32.0',
@@ -48,10 +47,9 @@ export const nomic: Chain = {
     },
     versions: [
       {
-        name: 'v7.0.0',
-        recommended_version: 'v7.0.1',
-        compatible_versions: ['v7.0.0', 'v7.0.1'],
-        cosmos_sdk_version: 'cosmos-sdk-proto 0.19.0',
+        name: 'v8.0.0',
+        recommended_version: 'v8.0.0',
+        compatible_versions: ['v8.0.0'],
         consensus: {
           type: 'tendermint',
           version: 'v0.32.0',
