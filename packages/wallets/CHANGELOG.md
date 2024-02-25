@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.15.0](https://github.com/nabla-studio/quirks/compare/wallets@0.14.0...wallets@0.15.0) (2024-02-25)
+
+### Dependency Updates
+
+* `core` updated to version `0.14.0`
+* `chain-registry` updated to version `0.14.0`
+* `wallet-registry` updated to version `0.14.0`
+
+### Features
+
+* **wallets:** :sparkles: add leap metamask snap support ([525e21d](https://github.com/nabla-studio/quirks/commit/525e21db502ea822813cb8e1e7aa3ff3a7407ca0))
+* **wallets:** :sparkles: add new connection type ([e19115d](https://github.com/nabla-studio/quirks/commit/e19115d9649269bd5d65bd065f10de475f15eafd))
+* **wallets:** :sparkles: add shell wallet support ([30e96d8](https://github.com/nabla-studio/quirks/commit/30e96d85e2b6cf3dd500802aecb9b9eb04810ae2))
+
 ## [0.14.0](https://github.com/nabla-studio/quirks/compare/wallets@0.13.5...wallets@0.14.0) (2024-02-25)
 
 ### Dependency Updates
