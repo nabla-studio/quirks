@@ -1,11 +1,10 @@
-import { WalletConnectionTypes, type WalletOptions } from '@quirks/core';
+import type { WalletOptions } from '@quirks/core';
 import { keplrextension } from '@nabla-studio/wallet-registry';
 
 export const stationExtensionOptions: WalletOptions = {
   ...keplrextension,
   wallet_name: 'station-extension',
   pretty_name: 'Station',
-  connectionType: WalletConnectionTypes.EXTENSION,
   windowKey: 'station.keplr',
   platforms: [
     {

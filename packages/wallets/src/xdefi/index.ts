@@ -1,6 +1,6 @@
-import { KeplrWalletExtension as XDEFIWalletExtension } from '../keplr/extension';
+import { KeplrWalletExtension } from '../keplr/extension';
 import { xdefiExtensionOptions } from './registry';
 
-const xdefiExtension = new XDEFIWalletExtension(xdefiExtensionOptions);
+const xdefiExtension = new KeplrWalletExtension(xdefiExtensionOptions);
 
 export { xdefiExtension };
