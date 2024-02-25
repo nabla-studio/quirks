@@ -154,7 +154,10 @@ export const createConnectSlice: StateCreator<
       await get().setWallet(wallet);
       set(() => ({ status: ConnectionStates.CONNECTED }));
     } catch (error) {
-      const connectionError = new Error(error as string);
+      const connectionError =
+        error instanceof Error
+          ? error
+          : new Error(error === 'string' ? error : JSON.stringify(error));
 
       set(() => ({
         connectionError,
