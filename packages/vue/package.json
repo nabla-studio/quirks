@@ -24,7 +24,7 @@
     "@cosmjs/amino": "^0.32.3",
     "@cosmjs/stargate": "^0.32.3",
     "@cosmjs/cosmwasm-stargate": "^0.32.3",
-    "@walletconnect/universal-provider": "^2.10.5"
+    "@walletconnect/universal-provider": "^2.11.2"
   },
   "peerDependencies": {
     "vue": "^3.3.4"
