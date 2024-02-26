@@ -11,6 +11,7 @@ import {
 import type {
   SigningStargateClientOptions,
   SigningStargateClient,
+  SignerData,
 } from '@cosmjs/stargate';
 import type {
   SigningCosmWasmClientOptions,
@@ -177,6 +178,8 @@ export const sign = async (
   fee: StdFee | 'auto' = 'auto',
   signerType: SignerType = 'auto',
   memo?: string,
+  explicitSignerData?: SignerData,
+  timeoutHeight?: bigint,
 ): Promise<TxRaw> => {
   const state = store.getState();
   assertIsDefined(state.wallet, 'wallet is undefined');
@@ -220,7 +223,14 @@ export const sign = async (
 
   openWCDeeplink(state.wallet, state.openDeeplink);
 
-  return client.sign(sender, messages, fee, memo ?? '');
+  return client.sign(
+    sender,
+    messages,
+    fee,
+    memo ?? '',
+    explicitSignerData,
+    timeoutHeight,
+  );
 };
 
 /**
@@ -238,6 +248,8 @@ export const signCW = async (
   fee: StdFee | 'auto' = 'auto',
   signerType: SignerType = 'auto',
   memo?: string,
+  explicitSignerData?: SignerData,
+  timeoutHeight?: bigint,
 ): Promise<TxRaw> => {
   const state = store.getState();
   assertIsDefined(state.wallet);
@@ -283,7 +295,14 @@ export const signCW = async (
 
   openWCDeeplink(state.wallet, state.openDeeplink);
 
-  return client.sign(sender, messages, fee, memo ?? '');
+  return client.sign(
+    sender,
+    messages,
+    fee,
+    memo ?? '',
+    explicitSignerData,
+    timeoutHeight,
+  );
 };
 
 export const signArbitrary = (
