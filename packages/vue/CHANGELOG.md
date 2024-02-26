@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.11.3](https://github.com/nabla-studio/quirks/compare/vue@0.11.2...vue@0.11.3) (2024-02-26)
+
 ## [0.11.2](https://github.com/nabla-studio/quirks/compare/vue@0.11.1...vue@0.11.2) (2024-02-26)
 
 
