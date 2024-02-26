@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.22.0](https://github.com/nabla-studio/quirks/compare/store@0.21.0...store@0.22.0) (2024-02-26)
+
+
+### Features
+
+* **store:** :sparkles: add extended sign params ([17d7774](https://github.com/nabla-studio/quirks/commit/17d77747fafa9e836460816c98127c2191717647))
+
 ## [0.21.0](https://github.com/nabla-studio/quirks/compare/store@0.20.0...store@0.21.0) (2024-02-25)
 
 ### Dependency Updates
