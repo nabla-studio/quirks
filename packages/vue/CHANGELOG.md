@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.11.2](https://github.com/nabla-studio/quirks/compare/vue@0.11.1...vue@0.11.2) (2024-02-26)
+
+
+### Bug Fixes
+
+* **vue:** :bug: fix deps pin ([a84fa14](https://github.com/nabla-studio/quirks/commit/a84fa142a22fce16e8a99e3a57b5bfb33b0a3852))
+
 ## [0.11.1](https://github.com/nabla-studio/quirks/compare/vue@0.11.0...vue@0.11.1) (2024-02-25)
 
 ### Dependency Updates
