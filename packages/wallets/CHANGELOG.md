@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.15.1](https://github.com/nabla-studio/quirks/compare/wallets@0.15.0...wallets@0.15.1) (2024-03-01)
+
+
+### Bug Fixes
+
+* **wallets:** :bug: fix semver validation ([ca24b49](https://github.com/nabla-studio/quirks/commit/ca24b49f09f8644bf2bae6fb6fac03423ca82de9))
+
 ## [0.15.0](https://github.com/nabla-studio/quirks/compare/wallets@0.14.0...wallets@0.15.0) (2024-02-25)
 
 ### Dependency Updates
