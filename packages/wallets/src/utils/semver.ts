@@ -5,10 +5,12 @@ export const compareOperatorRegex =
   /^\s*([<>]=?)\s*([0-9]+\.[0-9]+\.[0-9]+)\s*$/;
 
 export const extractVer = (version: string) => {
-  const results = semverRegex.exec(version);
+  const match = version.match(semverRegex);
 
-  if (results && results.length > 0) {
-    return results[0];
+  if (match && match.groups) {
+    const { Major, Minor, Patch } = match.groups;
+
+    return [Major, Minor, Patch].filter((el) => !!el).join('.');
   }
 
   return null;

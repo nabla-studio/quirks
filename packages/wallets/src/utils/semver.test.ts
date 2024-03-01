@@ -4,6 +4,7 @@ const validVer =
   'osmosis-labs/cosmos-sdk@0.45.0-rc1.0.20230922030206-734f99fba785';
 const validVer2 = 'osmosis-labs/cosmos-sdk@0.45';
 const invalidVer = 'osmosis-labs/cosmos-sdk';
+const invalidVer2 = 'v0.30.1-0.20230320091624-f5072b9b04a6';
 
 const versionToCheck = '0.40.0';
 
@@ -13,6 +14,10 @@ test('extract valid version', () => {
 
 test('extract invalid version', () => {
   expect(extractVer(invalidVer)).toBe(null);
+});
+
+test('extract invalid version', () => {
+  expect(extractVer(invalidVer2)).toBe('0.30.1');
 });
 
 test('parse version', () => {
