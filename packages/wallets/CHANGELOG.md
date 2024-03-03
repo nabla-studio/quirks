@@ -2,6 +2,19 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.16.0](https://github.com/nabla-studio/quirks/compare/wallets@0.15.1...wallets@0.16.0) (2024-03-03)
+
+### Dependency Updates
+
+* `core` updated to version `0.15.1`
+* `chain-registry` updated to version `0.15.1`
+* `wallet-registry` updated to version `0.15.1`
+
+### Features
+
+* **wallets:** :sparkles: add station extension metadata ([04dd972](https://github.com/nabla-studio/quirks/commit/04dd9726b0be0a9980fcca4ef9e4b3c7f46883a2))
+* **wallets:** :sparkles: add trust wallet ([8d246de](https://github.com/nabla-studio/quirks/commit/8d246de72aaa3432bc869ba3e201211bfb9484a4))
+
 ## [0.15.1](https://github.com/nabla-studio/quirks/compare/wallets@0.15.0...wallets@0.15.1) (2024-03-01)
 
 
