@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.11.0](https://github.com/nabla-studio/quirks/compare/chain-registry@0.10.0...chain-registry@0.11.0) (2024-03-03)
+
+
+### Features
+
+* **chain-registry:** :sparkles: bump registry ([609cbe8](https://github.com/nabla-studio/quirks/commit/609cbe8f050beee2280398f16ed332b25899f643))
+
 ## [0.10.0](https://github.com/nabla-studio/quirks/compare/chain-registry@0.9.0...chain-registry@0.10.0) (2024-02-25)
 
 
