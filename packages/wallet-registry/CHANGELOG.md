@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.5.0](https://github.com/nabla-studio/quirks/compare/wallet-registry@0.4.0...wallet-registry@0.5.0) (2024-03-03)
+
+
+### Features
+
+* **wallet-registry:** :label: add WalletNames type ([bca11ec](https://github.com/nabla-studio/quirks/commit/bca11ec8bba41eebfd723f8817f96af88827aa1a))
+* **wallet-registry:** :sparkles: bump registry ([524c198](https://github.com/nabla-studio/quirks/commit/524c1989b0bc440e6bd4b24ae7b46bf4fb8800d1))
+
 ## [0.4.0](https://github.com/nabla-studio/quirks/compare/wallet-registry@0.3.0...wallet-registry@0.4.0) (2024-02-25)
 
 
