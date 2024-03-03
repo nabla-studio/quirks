@@ -140,6 +140,11 @@ export const planq: Chain = {
         provider: 'Nodine.ID',
       },
       {
+        id: '192ff55d15d7ad9fc9ded5c5a9f4393beba9b222',
+        address: 'planq.peer.stavr.tech:1076',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: 'b611a4058ac5caf8b56c1012c695afc75aea4217',
         address: 'peers-planq.sxlzptprjkt.xyz:18656',
         provider: 'sxlzptprjkt | VALIDATOR',
@@ -182,6 +187,10 @@ export const planq: Chain = {
         provider: 'BccNodes',
       },
       {
+        address: 'https://planq.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://rpc.planq.nodestake.top',
         provider: 'NodeStake',
       },
@@ -220,6 +229,10 @@ export const planq: Chain = {
         provider: 'planq.network',
       },
       {
+        address: 'https://planq.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://api.planq.nodestake.top',
         provider: 'NodeStake',
       },
@@ -256,6 +269,10 @@ export const planq: Chain = {
       {
         address: 'grpc.planq.network:443',
         provider: 'planq.network',
+      },
+      {
+        address: 'planq.grpc.m.stavr.tech:2070',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'planq.grpc.bccnodes.com:443',
@@ -338,6 +355,11 @@ export const planq: Chain = {
       kind: 'bigdipper',
       url: 'https://explorer.planq.network',
       tx_page: 'https://explorer.planq.network/transactions/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Planq-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Planq-Mainnet/tx/${txHash}',
     },
     {
       kind: 'blockscout',

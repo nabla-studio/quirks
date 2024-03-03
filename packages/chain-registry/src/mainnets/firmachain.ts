@@ -82,6 +82,11 @@ export const firmachain: Chain = {
         address: 'firmachain.ramuchi.tech:57656',
         provider: 'ramuchi.tech',
       },
+      {
+        id: '35b9e0a0818d2c5e9ef187984872c0ad2dbd447c',
+        address: 'firma.peer.stavr.tech:1036',
+        provider: '🔥STAVR🔥',
+      },
     ],
   },
   apis: {
@@ -89,6 +94,10 @@ export const firmachain: Chain = {
       {
         address: 'https://lcd-mainnet.firmachain.dev:26657',
         provider: 'FirmaChain',
+      },
+      {
+        address: 'https://firma.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://rpc.firmachain.chaintools.tech/',
@@ -109,6 +118,10 @@ export const firmachain: Chain = {
         provider: 'FirmaChain',
       },
       {
+        address: 'https://firma.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://api.firmachain.chaintools.tech/',
         provider: 'ChainTools',
       },
@@ -127,6 +140,10 @@ export const firmachain: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
+        address: 'firma.grpc.m.stavr.tech:2030',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://firmachain-grpc.ramuchi.tech:1390',
         provider: 'ramuchi.tech',
       },
@@ -139,6 +156,13 @@ export const firmachain: Chain = {
       tx_page: 'https://app.ezstaking.io/firmachain/txs/${txHash}',
       account_page:
         'https://app.ezstaking.io/firmachain/account/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Firmachain-M',
+      tx_page: 'https://explorer.stavr.tech/Firmachain-M/txs/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Firmachain-M/account/${accountAddress}',
     },
     {
       kind: 'bigdipper',

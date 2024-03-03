@@ -160,6 +160,11 @@ export const shentu: Chain = {
         provider: 'ramuchi.tech',
       },
       {
+        id: '060027d3bc10ff7ebc1ec315ae5671c541e1568c',
+        address: 'shentu.peer.stavr.tech:20016',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: 'f97807210f9547b8a5016fb18000b46072ca5e30',
         address: 'peer-shentu-01.stakeflow.io:2407',
         provider: 'Stakeflow',
@@ -180,6 +185,10 @@ export const shentu: Chain = {
       {
         address: 'https://shentu-rpc.polkachu.com',
         provider: 'Polkachu',
+      },
+      {
+        address: 'https://shentu.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://shentu-rpc.ramuchi.tech',
@@ -216,6 +225,10 @@ export const shentu: Chain = {
         provider: 'Polkachu',
       },
       {
+        address: 'https://shentu.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://shentu-api.ramuchi.tech',
         provider: 'ramuchi.tech',
       },
@@ -246,6 +259,10 @@ export const shentu: Chain = {
         provider: 'Polkachu',
       },
       {
+        address: 'shentu.grpc.m.stavr.tech:9593',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://shentu-grpc.ramuchi.tech:12090',
         provider: 'ramuchi.tech',
       },
@@ -273,6 +290,13 @@ export const shentu: Chain = {
       url: 'https://app.ezstaking.io/shentu',
       tx_page: 'https://app.ezstaking.io/shentu/txs/${txHash}',
       account_page: 'https://app.ezstaking.io/shentu/account/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Shentu-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Shentu-Mainnet/txs/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Shentu-Mainnet/account/${accountAddress}',
     },
     {
       kind: 'mintscan',

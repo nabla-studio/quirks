@@ -86,6 +86,11 @@ export const vidulum: Chain = {
         provider: 'minerpool',
       },
       {
+        id: '197f4d559555de6b7fe360c6a926ca8812a749be',
+        address: 'vidulum.peer.stavr.tech:1046',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: '209688f5bccb88f6397a97cc11ab545a014aa559',
         address: '137.184.92.115:26656',
         provider: '1square',
@@ -97,6 +102,10 @@ export const vidulum: Chain = {
       {
         address: 'https://mainnet-rpc.vidulum.app/',
         provider: 'vidulum',
+      },
+      {
+        address: 'https://vidulum.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://rpc-vidulum-ia.cosmosia.notional.ventures/',
@@ -113,6 +122,10 @@ export const vidulum: Chain = {
         provider: 'Notional',
       },
       {
+        address: 'https://vidulum.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://api-vdl.nodine.id/',
         provider: 'Nodine.ID',
       },
@@ -121,6 +134,10 @@ export const vidulum: Chain = {
       {
         address: 'grpc-vidulum-ia.cosmosia.notional.ventures:443',
         provider: 'Notional',
+      },
+      {
+        address: 'vidulum.grpc.m.stavr.tech:2040',
+        provider: '🔥STAVR🔥',
       },
     ],
   },
@@ -134,6 +151,11 @@ export const vidulum: Chain = {
       kind: 'ping.pub',
       url: 'https://ping.pub/vidulum',
       tx_page: 'https://ping.pub/vidulum/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Vidulum-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Vidulum-Mainnet/tx/${txHash}',
     },
     {
       kind: 'atomscan',

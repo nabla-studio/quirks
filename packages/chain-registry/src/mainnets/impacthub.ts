@@ -91,6 +91,11 @@ export const impacthub: Chain = {
         address: '80.64.208.43:26656',
         provider: 'simplyvc',
       },
+      {
+        id: 'd4448c5b10b43d444034533ede7d2e66cbf9e519',
+        address: 'ixo.peer.stavr.tech:1016',
+        provider: '🔥STAVR🔥',
+      },
     ],
   },
   apis: {
@@ -102,6 +107,10 @@ export const impacthub: Chain = {
       {
         address: 'https://impacthub.ixo.world/rpc/',
         provider: 'ixoworld',
+      },
+      {
+        address: 'https://ixo.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://rpc-ixo-ia.cosmosia.notional.ventures/',
@@ -126,6 +135,10 @@ export const impacthub: Chain = {
         provider: 'ixoworld',
       },
       {
+        address: 'https://ixo.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://api-ixo-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
       },
@@ -144,6 +157,10 @@ export const impacthub: Chain = {
         provider: 'Notional',
       },
       {
+        address: 'ixo.grpc.m.stavr.tech:2010',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'impacthub-grpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
       },
@@ -155,6 +172,13 @@ export const impacthub: Chain = {
       url: 'https://app.ezstaking.io/ixo',
       tx_page: 'https://app.ezstaking.io/ixo/txs/${txHash}',
       account_page: 'https://app.ezstaking.io/ixo/account/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/IXO-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/IXO-Mainnet/txs/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/IXO-Mainnet/account/${accountAddress}',
     },
     {
       kind: 'bigdipper',

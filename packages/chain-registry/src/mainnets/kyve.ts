@@ -216,10 +216,6 @@ export const kyve: Chain = {
         provider: 'Inter Blockchain Services',
       },
       {
-        address: 'https://rpc-kyve.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://rpc.kyve.nodestake.top',
         provider: 'NodeStake',
       },
@@ -262,10 +258,6 @@ export const kyve: Chain = {
         provider: 'NodeStake',
       },
       {
-        address: 'https://api-kyve.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://kyve.api.liveraven.net',
         provider: 'LiveRaveN',
       },
@@ -282,10 +274,6 @@ export const kyve: Chain = {
       {
         address: 'https://kyve-grpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
-      },
-      {
-        address: 'grpc-kyve.cosmos-spaces.cloud:2590',
-        provider: 'Cosmos Spaces',
       },
       {
         address: 'https://grpc-kyve.nodeist.net',

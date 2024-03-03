@@ -82,6 +82,11 @@ export const point: Chain = {
         provider: 'Point Network',
       },
       {
+        id: 'f675d544f5e6b8bc7ef9923d6f594dd0a3570190',
+        address: 'point.peer.stavr.tech:1056',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: '9c7902cf292e1dbb79b2a0c3ed18f9e6f826483f',
         address: 'rpc.point.indonode.net:21656',
         provider: 'Indonode',
@@ -99,6 +104,10 @@ export const point: Chain = {
         provider: 'NodeStake',
       },
       {
+        address: 'https://point.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://rpc.point.indonode.net',
         provider: 'Indonode',
       },
@@ -107,6 +116,10 @@ export const point: Chain = {
       {
         address: 'https://rpc-mainnet-1.point.space:1317',
         provider: 'Point Network',
+      },
+      {
+        address: 'https://point.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://api.point.nodestake.top',
@@ -121,6 +134,10 @@ export const point: Chain = {
       {
         address: 'grpc.point.nodestake.top:443',
         provider: 'NodeStake',
+      },
+      {
+        address: 'point.grpc.m.stavr.tech:2050',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://grpc.point.nodexcapital.com',
@@ -147,6 +164,11 @@ export const point: Chain = {
       kind: 'blockscout',
       url: 'https://explorer.pointnetwork.io/',
       tx_page: 'https://explorer.pointnetwork.io/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Point-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Point-Mainnet/tx/${txHash}',
     },
     {
       kind: 'ping.pub',

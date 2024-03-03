@@ -96,6 +96,11 @@ export const humans: Chain = {
         provider: 'itrocket',
       },
       {
+        id: '52ce913cd01c55b9471b0d13338d6db242f7b509',
+        address: 'humans.rpc.nodeshub.online:18456',
+        provider: 'Nodes Hub',
+      },
+      {
         id: 'fd66247c122117190c9f2e7a09797e4039a05ba2',
         address: '46.4.14.172:16656',
         provider: 'PPNV Service',
@@ -121,6 +126,10 @@ export const humans: Chain = {
       {
         address: 'https://humans.rpc.kjnodes.com',
         provider: 'kjnodes',
+      },
+      {
+        address: 'https://humans.rpc.nodeshub.online',
+        provider: 'NodesHub',
       },
       {
         address: 'https://humans-mainnet-rpc.itrocket.net',
@@ -167,6 +176,10 @@ export const humans: Chain = {
       {
         address: 'https://humans.api.kjnodes.com',
         provider: 'kjnodes',
+      },
+      {
+        address: 'https://humans.api.nodeshub.online',
+        provider: 'NodesHub',
       },
       {
         address: 'https://humans-mainnet-api.itrocket.net',

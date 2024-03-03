@@ -32,17 +32,18 @@ export const xiontestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/burnt-labs/xion',
-    recommended_version: 'v0.3.2',
-    compatible_versions: ['v0.3.2'],
-    cosmos_sdk_version: '0.47.3',
+    recommended_version: 'v0.3.4',
+    compatible_versions: ['v0.3.4'],
+    cosmos_sdk_version: '0.47.5',
     consensus: {
       type: 'cometbft',
       version: '0.37.2',
     },
-    cosmwasm_version: '0.40.1',
+    cosmwasm_version: '0.43.0',
     cosmwasm_enabled: true,
     genesis: {
-      genesis_url: 'https://files.xion-testnet-1.burnt.com/genesis.json',
+      genesis_url:
+        'https://raw.githubusercontent.com/burnt-labs/burnt-networks/main/testnets/xion-testnet-1/genesis.json',
     },
     versions: [
       {
@@ -57,7 +58,6 @@ export const xiontestnet: Chain = {
           type: 'cometbft',
           version: '0.37.0',
         },
-        next_version_name: 'v0.3.2',
       },
       {
         name: 'v0.3.2',
@@ -73,40 +73,64 @@ export const xiontestnet: Chain = {
           version: '0.37.2',
         },
       },
+      {
+        name: 'v0.3.3',
+        tag: 'v0.3.3',
+        height: 1929544,
+        recommended_version: 'v0.3.3',
+        cosmos_sdk_version: '0.47.3',
+        cosmwasm_enabled: true,
+        cosmwasm_version: '0.40.1',
+        ibc_go_version: 'v7.2.0',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
+      {
+        name: 'v0.3.4',
+        tag: 'v0.3.4',
+        height: 1929544,
+        recommended_version: 'v0.3.4',
+        cosmos_sdk_version: '0.47.5',
+        cosmwasm_enabled: true,
+        cosmwasm_version: '0.43.0',
+        ibc_go_version: 'v7.3.0',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+      },
     ],
   },
   peers: {
     seeds: [
       {
         id: '7900d5f177228def24170f9631db76afab20278e',
-        address: 'seed.xion-testnet-1.burnt.com:11656',
+        address: 'xion-testnet-1.burnt.com:11656',
         provider: 'burnt-labs',
       },
     ],
     persistent_peers: [
       {
         id: '93db3539d6cc9603bbb6b9e43bfb473bdaff7e4b',
-        address: 'sentry-use1a.xion-testnet-1.burnt.com:32656',
+        address: 'xion-testnet-1.burnt.com:32656',
         provider: 'burnt-labs',
       },
       {
         id: '0f2ccb6d7e8f233c03f91dee690f5ff714319fba',
-        address: 'sentry-use1b.xion-testnet-1.burnt.com:33656',
+        address: 'xion-testnet-1.burnt.com:33656',
         provider: 'burnt-labs',
       },
       {
         id: 'f684e3873191d62a74e5431202581d99fe3439b7',
-        address: 'sentry-use1c.xion-testnet-1.burnt.com:34656',
+        address: 'xion-testnet-1.burnt.com:34656',
         provider: 'burnt-labs',
       },
     ],
   },
   apis: {
     rpc: [
-      {
-        address: 'https://rpc.xion-testnet-1.burnt.com',
-        provider: 'burnt-labs',
-      },
       {
         address: 'https://testnet-burnt-rpc.lavenderfive.com',
         provider: 'Lavender.Five Nodes 🐝',
@@ -118,10 +142,6 @@ export const xiontestnet: Chain = {
     ],
     rest: [
       {
-        address: 'https://api.xion-testnet-1.burnt.com',
-        provider: 'burnt-labs',
-      },
-      {
         address: 'https://testnet-burnt-api.lavenderfive.com',
         provider: 'Lavender.Five Nodes 🐝',
       },
@@ -131,10 +151,6 @@ export const xiontestnet: Chain = {
       },
     ],
     grpc: [
-      {
-        address: 'https://grpc.xion-testnet-1.burnt.com:443',
-        provider: 'burnt-labs',
-      },
       {
         address: 'https://testnet-burnt-grpc.lavenderfive.com',
         provider: 'Lavender.Five Nodes 🐝',
@@ -167,11 +183,6 @@ export const xiontestnetAssetList: AssetLists = {
           denom: 'uxion',
           exponent: 0,
           aliases: ['microxion'],
-        },
-        {
-          denom: 'mxion',
-          exponent: 3,
-          aliases: ['millixion'],
         },
         {
           denom: 'XION',
@@ -329,6 +340,51 @@ export const xiontestnetAssetList: AssetLists = {
       ],
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/0166AE2224341A3F70943E315DAC6EDF012A638D0F9358794FF7525BA1DFC191',
+          exponent: 0,
+          aliases: ['inj'],
+        },
+        {
+          denom: 'INJ',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/0166AE2224341A3F70943E315DAC6EDF012A638D0F9358794FF7525BA1DFC191',
+      name: 'Injective INJ token',
+      display: 'INJ',
+      symbol: 'INJ',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'injectivetestnet',
+            base_denom: 'inj',
+            channel_id: 'channel-324',
+          },
+          chain: {
+            channel_id: 'channel-215',
+            path: 'transfer/channel-215/inj',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'injectivetestnet',
+            base_denom: 'inj',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/inj.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/inj.svg',
       },
     },
   ],
