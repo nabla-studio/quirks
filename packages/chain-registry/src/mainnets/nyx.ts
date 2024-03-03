@@ -93,7 +93,7 @@ export const nyx: Chain = {
     ],
   },
   logo_URIs: {
-    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nyx.png',
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.png',
   },
   peers: {
     seeds: [
@@ -170,6 +170,10 @@ export const nyx: Chain = {
   apis: {
     rpc: [
       {
+        address: 'https://rpc.nymtech.net/',
+        provider: 'Nym',
+      },
+      {
         address: 'https://rpc.nyx.nodes.guru/',
         provider: 'nodes guru',
       },
@@ -244,7 +248,20 @@ export const nyx: Chain = {
   ],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nyx.png',
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.svg',
+      theme: {
+        dark_mode: false,
+        circle: true,
+      },
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_dark.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_dark.svg',
+      theme: {
+        dark_mode: true,
+        circle: true,
+      },
     },
   ],
 };
@@ -254,7 +271,8 @@ export const nyxAssetList: AssetLists = {
   chain_name: 'nyx',
   assets: [
     {
-      description: "NYX Token (NYX) is the Nym Network's native token.",
+      description:
+        "NYX Token (NYX) is the Nym Network's native staking and governance token.",
       denom_units: [
         {
           denom: 'unyx',
@@ -297,12 +315,25 @@ export const nyxAssetList: AssetLists = {
       display: 'nym',
       symbol: 'NYM',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.png',
       },
       coingecko_id: 'nym',
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.svg',
+          theme: {
+            dark_mode: false,
+            circle: true,
+          },
+        },
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_dark.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_dark.svg',
+          theme: {
+            dark_mode: true,
+            circle: true,
+          },
         },
       ],
     },

@@ -28,19 +28,21 @@ export const okxextension: CosmosWallet = {
   images: [
     {
       png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/okxextension/images/logo.png',
-      theme: {
-        primary_color_hex: '#000000',
-        circle: false,
-        dark_mode: true,
-      },
-      layout: 'logomark',
-    },
-    {
-      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/okxextension/images/logo.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/okxextension/images/logo.svg',
       theme: {
         primary_color_hex: '#000000',
         circle: false,
         dark_mode: false,
+      },
+      layout: 'logomark',
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/okxextension/images/logo-dark.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/wallet-registry/main/wallets/okxextension/images/logo-dark.svg',
+      theme: {
+        primary_color_hex: '#FFFFFF',
+        circle: false,
+        dark_mode: true,
       },
       layout: 'logomark',
     },

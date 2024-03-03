@@ -225,6 +225,11 @@ export const likecoin: Chain = {
         provider: 'like.co',
       },
       {
+        id: 'fd7589625f4ad41bb93f96f4c962ed6638426497',
+        address: 'like.peer.stavr.tech:1006',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: '20afcd5637b2278efc78c54fd523bd331d1820f2',
         address: '78.47.110.110:26656',
         provider: 'moonbeam',
@@ -247,6 +252,10 @@ export const likecoin: Chain = {
         provider: 'Oldcat',
       },
       {
+        address: 'https://like.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://rpc-likecoin-mainnet.pikaser.net',
         provider: 'PikaSer',
       },
@@ -261,6 +270,10 @@ export const likecoin: Chain = {
         provider: 'like.co',
       },
       {
+        address: 'https://like.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://likecoin-node.oldcat.io:443/api/',
         provider: 'Oldcat',
       },
@@ -273,6 +286,10 @@ export const likecoin: Chain = {
       {
         address: 'mainnet-node-grpc.like.co:80',
         provider: 'like.co',
+      },
+      {
+        address: 'like.grpc.m.stavr.tech:2000',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://likecoin-node.oldcat.io:443/grpc/',
@@ -302,6 +319,11 @@ export const likecoin: Chain = {
     {
       kind: 'lunie-ng',
       url: 'https://stake.like.co/',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Likecoin-M',
+      tx_page: 'https://explorer.stavr.tech/Likecoin-M/tx/${txHash}',
     },
     {
       kind: 'ping.pub',

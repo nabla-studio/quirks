@@ -120,10 +120,6 @@ export const canto: Chain = {
         provider: 'Althea',
       },
       {
-        address: 'https://rpc-canto.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://canto-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -142,10 +138,6 @@ export const canto: Chain = {
         provider: 'silent',
       },
       {
-        address: 'https://api-canto.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://canto-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -162,10 +154,6 @@ export const canto: Chain = {
       {
         address: 'https://grpc.canto.silentvalidator.com/',
         provider: 'silent',
-      },
-      {
-        address: 'grpc-canto.cosmos-spaces.cloud:2280',
-        provider: 'Cosmos Spaces',
       },
       {
         address: 'https://canto.gravitychain.io:9090',

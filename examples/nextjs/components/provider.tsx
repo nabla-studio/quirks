@@ -18,6 +18,8 @@ import {
   leapMobile,
   shellExtension,
   leapMetamaskSnapExtension,
+  trustExtension,
+  trustMobile,
 } from '@quirks/wallets';
 import { PropsWithChildren } from 'react';
 
@@ -28,10 +30,12 @@ const config: Config = {
     cosmostationExtension,
     xdefiExtension,
     shellExtension,
+    trustExtension,
     leapMetamaskSnapExtension,
     universalWalletConnect,
     keplrMobile,
     leapMobile,
+    trustMobile,
   ],
   chains: [osmosis, cosmoshub],
   assetsLists: [osmosisAssetList, cosmoshubAssetList],

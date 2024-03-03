@@ -64,6 +64,11 @@ export const odin: Chain = {
         provider: 'AutoStake.net',
       },
       {
+        id: '9a5b281c2d627cdf362f86721ced61a6228b87d1',
+        address: 'odin.seed.stavr.tech:1116',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
@@ -104,6 +109,10 @@ export const odin: Chain = {
         provider: 'Heimdall Gateway',
       },
       {
+        address: 'https://odin.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://odin-rpc.lavenderfive.com/',
         provider: 'Lavender.Five Nodes 🐝',
       },
@@ -116,6 +125,10 @@ export const odin: Chain = {
       {
         address: 'https://api.odinprotocol.io',
         provider: 'Heimdall Gateway',
+      },
+      {
+        address: 'https://odin.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://odin-api.lavenderfive.com/',
@@ -132,6 +145,10 @@ export const odin: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
+        address: 'odin.grpc.m.stavr.tech:122',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'odin-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -142,6 +159,11 @@ export const odin: Chain = {
       kind: 'odin web',
       url: 'https://mainnet.odinprotocol.io/',
       tx_page: 'https://mainnet.odinprotocol.io/transactions/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Odin-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Odin-Mainnet/tx/${txHash}',
     },
     {
       kind: 'ping.pub',

@@ -199,10 +199,6 @@ export const sommelier: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://rpc-sommelier.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://somm-rpc.kleomedes.network',
         provider: 'Kleomedes',
       },
@@ -229,10 +225,6 @@ export const sommelier: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'https://api-sommelier.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'https://sommelier-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -257,10 +249,6 @@ export const sommelier: Chain = {
       {
         address: 'sommelier-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
-      },
-      {
-        address: 'grpc-sommelier.cosmos-spaces.cloud:2310',
-        provider: 'Cosmos Spaces',
       },
       {
         address: 'https://grpc.sommelier.nodexcapital.com',

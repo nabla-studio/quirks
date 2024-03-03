@@ -1,5 +1,7 @@
 export * from './xdefiextension';
 export * from './trustwalletmobile';
+export * from './stationextension';
+export * from './trustwalletextension';
 export * from './shellextension';
 export * from './okxextension';
 export * from './leapmobile';

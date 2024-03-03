@@ -116,6 +116,11 @@ export const celestia: Chain = {
         address: 'seed-celestia.freshstaking.com:34656',
         provider: 'FreshSTAKING',
       },
+      {
+        id: '7e21ee80adda9fc86b74bccb399a110022067e03',
+        address: 'celestia-full.avril14th.org:26656',
+        provider: 'Avril 14th',
+      },
     ],
     persistent_peers: [
       {
@@ -142,6 +147,11 @@ export const celestia: Chain = {
         id: 'c48d92566837d95f1eeae5815ac7e70fb80416f7',
         address: '74.208.94.42:26656',
         provider: 'Cumulo',
+      },
+      {
+        id: '7e21ee80adda9fc86b74bccb399a110022067e03',
+        address: 'celestia-full.avril14th.org:26656',
+        provider: 'Avril 14th',
       },
     ],
   },
@@ -239,6 +249,10 @@ export const celestia: Chain = {
         address: 'https://celestia-rpc.stake-town.com',
         provider: 'StakeTown',
       },
+      {
+        address: 'https://rpc.celestia-app.bronbro.io',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -325,6 +339,10 @@ export const celestia: Chain = {
         address: 'https://celestia-api.stake-town.com',
         provider: 'StakeTown',
       },
+      {
+        address: 'https://lcd.celestia-app.bronbro.io',
+        provider: 'Bro_n_Bro',
+      },
     ],
     grpc: [
       {
@@ -348,7 +366,7 @@ export const celestia: Chain = {
         provider: 'Stakeflow',
       },
       {
-        address: 'grpc-celestia.cosmos-spaces.cloud:5190',
+        address: 'grpc-celestia.cosmos-spaces.cloud:443',
         provider: 'Cosmos Spaces',
       },
       {
@@ -394,6 +412,10 @@ export const celestia: Chain = {
       {
         address: 'https://celestia-grpc.stake-town.com',
         provider: 'StakeTown',
+      },
+      {
+        address: 'grpc.celestia-app.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },
