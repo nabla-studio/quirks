@@ -15,7 +15,7 @@ export interface AssetLists {
 }
 export interface Asset {
   /**
-   * [OPTIONAL] Whether the asset has been deprected for use. For readability, it is best to omit this property unless TRUE.
+   * [OPTIONAL] Whether the asset has been deprecated for use. For readability, it is best to omit this property unless TRUE.
    */
   deprecated?: boolean;
   /**
@@ -97,6 +97,11 @@ export interface Asset {
    */
   coingecko_id?: string;
   keywords?: string[];
+  socials?: {
+    website?: string;
+    twitter?: string;
+    [k: string]: unknown;
+  };
 }
 export interface DenomUnit {
   denom: string;
