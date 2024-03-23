@@ -201,6 +201,12 @@ export const cudos: Chain = {
       tx_page: 'https://atomscan.com/cudos/transactions/${txHash}',
       account_page: 'https://atomscan.com/cudos/accounts/${accountAddress}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/cudos',
+      tx_page: 'https://ezstaking.app/cudos/txs/${txHash}',
+      account_page: 'https://ezstaking.app/cudos/account/${accountAddress}',
+    },
   ],
   images: [
     {

@@ -187,6 +187,12 @@ export const xpla: Chain = {
       tx_page: 'https://www.mintscan.io/xpla/transactions/${txHash}',
       account_page: 'https://www.mintscan.io/xpla/accounts/${accountAddress}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/xpla',
+      tx_page: 'https://ezstaking.app/xpla/txs/${txHash}',
+      account_page: 'https://ezstaking.app/xpla/account/${accountAddress}',
+    },
   ],
   images: [
     {

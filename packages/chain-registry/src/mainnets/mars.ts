@@ -224,6 +224,12 @@ export const mars: Chain = {
   },
   explorers: [
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/mars',
+      tx_page: 'https://ezstaking.app/mars/txs/${txHash}',
+      account_page: 'https://ezstaking.app/mars/account/${accountAddress}',
+    },
+    {
       kind: 'BigDipper',
       url: 'https://explorer.marsprotocol.io',
       tx_page: 'https://explorer.marsprotocol.io/transactions/${txHash}',
@@ -300,6 +306,10 @@ export const marsAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mars/images/mars-token.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.marsprotocol.io/',
+        twitter: 'https://twitter.com/mars_protocol',
+      },
     },
   ],
 };

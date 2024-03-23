@@ -123,6 +123,10 @@ export const canto: Chain = {
         address: 'https://canto-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
+      {
+        address: 'https://rpc-canto.kewrnode.com',
+        provider: 'Kewr Node',
+      },
     ],
     rest: [
       {
@@ -140,6 +144,10 @@ export const canto: Chain = {
       {
         address: 'https://canto-mainnet-lcd.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
+      },
+      {
+        address: 'https://rest-canto.kewrnode.com',
+        provider: 'Kewr Node',
       },
     ],
     grpc: [
@@ -217,6 +225,12 @@ export const canto: Chain = {
       kind: 'TC Network',
       url: 'https://explorer.tcnetwork.io/canto',
       tx_page: 'https://explorer.tcnetwork.io/canto/transaction/${txHash}',
+    },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/canto',
+      tx_page: 'https://ezstaking.app/canto/txs/${txHash}',
+      account_page: 'https://ezstaking.app/canto/account/${accountAddress}',
     },
   ],
   images: [

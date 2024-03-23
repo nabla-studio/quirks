@@ -32,13 +32,13 @@ export const terra2: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/terra-money/core/',
-    recommended_version: 'v2.9.4',
-    compatible_versions: ['v2.9.4'],
+    recommended_version: 'v2.10.5',
+    compatible_versions: ['v2.10.4', 'v2.10.5'],
     binaries: {
       'linux/arm64':
-        'https://github.com/terra-money/core/releases/download/v2.9.4/terra_2.9.4_Linux_arm64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.10.5/terra_2.10.5_Linux_arm64.tar.gz',
       'linux/amd64':
-        'https://github.com/terra-money/core/releases/download/v2.9.4/terra_2.9.4_Linux_x86_64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.10.5/terra_2.10.5_Linux_x86_64.tar.gz',
     },
     genesis: {
       name: 'v2.0',
@@ -215,6 +215,29 @@ export const terra2: Chain = {
           'linux/amd64':
             'https://github.com/terra-money/core/releases/download/v2.9.4/terra_2.9.4_Linux_x86_64.tar.gz',
         },
+        next_version_name: 'v2.10',
+      },
+      {
+        name: 'v2.10',
+        tag: 'v2.10.4',
+        recommended_version: 'v2.10.5',
+        compatible_versions: ['v2.10.4', 'v2.10.5'],
+        proposal: 4805,
+        height: 9444000,
+        cosmos_sdk_version: 'v0.47.5-terra.2',
+        cosmwasm_enabled: true,
+        cosmwasm_version: 'v0.43.0-terra',
+        ibc_go_version: 'v7.3.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        binaries: {
+          'linux/arm64':
+            'https://github.com/terra-money/core/releases/download/v2.10.5/terra_2.10.5_Linux_arm64.tar.gz',
+          'linux/amd64':
+            'https://github.com/terra-money/core/releases/download/v2.10.5/terra_2.10.5_Linux_x86_64.tar.gz',
+        },
         next_version_name: '',
       },
     ],
@@ -318,7 +341,7 @@ export const terra2: Chain = {
         provider: 'Cosmos Spaces',
       },
       {
-        address: 'https://terra-phoenix-rpc.highstakes.ch:26657/',
+        address: 'https://terra-phoenix-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -360,7 +383,7 @@ export const terra2: Chain = {
         provider: 'Stakeflow',
       },
       {
-        address: 'https://terra-phoenix-api.highstakes.ch:1317/',
+        address: 'https://terra-phoenix-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -472,6 +495,10 @@ export const terra2AssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.terra.money/',
+        twitter: 'https://twitter.com/terra_money',
+      },
     },
     {
       description:
@@ -495,14 +522,20 @@ export const terra2AssetList: AssetLists = {
       display: 'astro',
       symbol: 'ASTRO',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/astro.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
       },
       coingecko_id: 'astroport-fi',
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/astro.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
         },
       ],
+      socials: {
+        webiste: 'https://astroport.finance/',
+        twitter: 'https://twitter.com/astroport_fi',
+      },
     },
     {
       description:
@@ -832,8 +865,7 @@ export const terra2AssetList: AssetLists = {
       ],
     },
     {
-      description:
-        'The GraveDigger is the Liquid Staking Product of BackBone Labs. It will have its own platform. Its liquid staking derivative (LSD) is boneLUNA.',
+      description: 'BackBone Labs Liquid Staked LUNA',
       type_asset: 'cw20',
       address:
         'terra17aj4ty4sz4yhgm08na8drc0v03v2jwr3waxcqrwhajj729zhl7zqnpc0ml',
@@ -844,22 +876,23 @@ export const terra2AssetList: AssetLists = {
           exponent: 0,
         },
         {
-          denom: 'bluna',
+          denom: 'bLUNA',
           exponent: 6,
         },
       ],
       base: 'cw20:terra17aj4ty4sz4yhgm08na8drc0v03v2jwr3waxcqrwhajj729zhl7zqnpc0ml',
-      name: 'boneLuna',
-      display: 'bluna',
+      name: 'BackBone Labs Liquid Staked LUNA',
+      display: 'bLUNA',
       symbol: 'bLUNA',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/boneluna.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/bLUNA.png',
       },
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/boneluna.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/bLUNA.png',
         },
       ],
+      coingecko_id: 'backbone-labs-staked-luna',
     },
     {
       description:
@@ -1246,6 +1279,11 @@ export const terra2AssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/drogo.png',
       },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/drogo.png',
+        },
+      ],
     },
     {
       description: 'ado the flower of night',
@@ -1270,6 +1308,11 @@ export const terra2AssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/ADO.png',
       },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/ADO.png',
+        },
+      ],
     },
     {
       description: 'The first memecoin on osmosis.',
@@ -1311,11 +1354,11 @@ export const terra2AssetList: AssetLists = {
             base_denom:
               'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
           },
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
         },
       ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
       },
     },
     {

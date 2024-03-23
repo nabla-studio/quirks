@@ -182,13 +182,23 @@ export const chain4Energy: Chain = {
   peers: {
     seeds: [
       {
+        id: '8ac87f7f8da5c2a901d64f2c1e86f8b6ee39fef1',
+        address: 'seed-m.c4e.apeironnodes.com:41003',
+        provider: 'Apeiron Nodes',
+      },
+      {
+        id: 'edca3b826d61d1e5e7d3dc173954de1324f2e512',
+        address: 'seed-m.c4e.apeironnodes.com:27003',
+        provider: 'Apeiron Nodes',
+      },
+      {
         id: '30e98bbcf5bb29ed4e4ff685fa8fa84fa0ddff51',
         address: 'tenderseed.ccvalidators.com:26008',
         provider: 'CryptoCrew',
       },
       {
         id: '54515079bae4cadae2f9b511cffeb9447d4bc98d',
-        address: 'c4e.seed.bccnodes.com:27656',
+        address: 'c4e.seed.bccnodes.com:30656',
         provider: 'BccNodes',
       },
       {
@@ -210,6 +220,11 @@ export const chain4Energy: Chain = {
         id: '9aa8a73ea9364aa3cf7806d4dd25b6aed88d8152',
         address: 'c4e.seed.mzonder.com:11256',
         provider: 'MZONDER',
+      },
+      {
+        id: 'fbf9a48eca1ba873ad766e2cb72a0562596a248f',
+        address: 'c4e.seed.stavr.tech:17096',
+        provider: '🔥STAVR🔥',
       },
       {
         id: 'a85a651a3cf1746694560c5b6f76d566c04ca581',
@@ -338,6 +353,11 @@ export const chain4Energy: Chain = {
         address: 'c4e.doubletop:30655',
         provider: 'DOUBLETOP',
       },
+      {
+        id: '15ea07bf6211f708eb2966b6c66e3aaa45834137',
+        address: '185.144.99.37:16656',
+        provider: 'CrypTech',
+      },
     ],
   },
   apis: {
@@ -351,11 +371,15 @@ export const chain4Energy: Chain = {
         provider: 'NodeStake',
       },
       {
+        address: 'https://c4e.rpc.bccnodes.com',
+        provider: 'BccNodes',
+      },
+      {
         address: 'https://chain4energy-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'http://c4e.rpc.m.stavr.tech:17097',
+        address: 'https://c4e.rpc.m.stavr.tech:443',
         provider: '🔥STAVR🔥',
       },
       {
@@ -442,6 +466,14 @@ export const chain4Energy: Chain = {
         address: 'https://rpc.c4e.validatus.com:443',
         provider: 'Validatus',
       },
+      {
+        address: 'http://rpc-m.c4e.apeironnodes.com:41001',
+        provider: 'Apeiron Nodes',
+      },
+      {
+        address: 'http://rpc-c4e.cryptech.com.ua:443',
+        provider: 'Cryptech',
+      },
     ],
     rest: [
       {
@@ -451,6 +483,10 @@ export const chain4Energy: Chain = {
       {
         address: 'https://api.c4e.nodestake.top',
         provider: 'NodeStake',
+      },
+      {
+        address: 'https://c4e.lcd.bccnodes.com',
+        provider: 'BccNodes',
       },
       {
         address: 'https://chain4energy-mainnet-lcd.autostake.com:443',
@@ -532,11 +568,19 @@ export const chain4Energy: Chain = {
         address: 'https://api.c4e.validatus.com:443',
         provider: 'Validatus',
       },
+      {
+        address: 'https://api-c4e.cryptech.com.ua:443',
+        provider: 'CrypTech',
+      },
     ],
     grpc: [
       {
         address: 'grpc.c4e.nodestake.top:443',
         provider: 'NodeStake',
+      },
+      {
+        address: 'c4e.grpc.bccnodes.com:443',
+        provider: 'BccNodes',
       },
       {
         address: 'chain4energy-mainnet-grpc.autostake.com:443',
@@ -622,6 +666,10 @@ export const chain4Energy: Chain = {
         address: 'https://grpc.c4e.validatus.com:443',
         provider: 'Validatus',
       },
+      {
+        address: 'https://grpc-c4e.cryptech.com.ua:443',
+        provider: 'Cryptech',
+      },
     ],
   },
   explorers: [
@@ -691,6 +739,11 @@ export const chain4Energy: Chain = {
       url: 'https://scanrun.io/c4e',
       tx_page: 'https://scanrun.io/c4e/transactions/${txHash}',
     },
+    {
+      kind: 'Cryptech',
+      url: 'https://explorers.cryptech.com.ua/chain4energy',
+      tx_page: 'https://explorers.cryptech.com.ua/chain4energy/tx/${txHash}',
+    },
   ],
   images: [
     {
@@ -728,6 +781,10 @@ export const chain4EnergyAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chain4energy/images/c4e.png',
         },
       ],
+      socials: {
+        webiste: 'https://c4e.io/',
+        twitter: 'https://twitter.com/Chain4Energy',
+      },
     },
   ],
 };

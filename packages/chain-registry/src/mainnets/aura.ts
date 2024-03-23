@@ -36,15 +36,15 @@ export const aura: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/aura-nw/aura',
-    recommended_version: 'v0.7.2',
-    compatible_versions: ['v0.7.2'],
-    cosmos_sdk_version: '0.47.4',
-    ibc_go_version: 'v7.2.0',
+    recommended_version: 'v0.7.3',
+    compatible_versions: ['v0.7.3'],
+    cosmos_sdk_version: '0.47.5',
+    ibc_go_version: 'v7.3.0',
     consensus: {
       type: 'cometbft',
       version: '0.37.2',
     },
-    cosmwasm_version: '0.41.0',
+    cosmwasm_version: '0.42.0',
     cosmwasm_enabled: true,
     genesis: {
       genesis_url:
@@ -83,7 +83,7 @@ export const aura: Chain = {
       {
         name: 'v0.7.2',
         proposal: 8,
-        height: 4083908,
+        height: 5329503,
         recommended_version: 'v0.7.2',
         compatible_versions: ['v0.7.2'],
         cosmos_sdk_version: '0.47.4',
@@ -93,6 +93,22 @@ export const aura: Chain = {
           version: '0.37.2',
         },
         cosmwasm_version: '0.41.0',
+        cosmwasm_enabled: true,
+        next_version_name: 'v0.7.3',
+      },
+      {
+        name: 'v0.7.3',
+        proposal: 9,
+        height: 4083908,
+        recommended_version: 'v0.7.3',
+        compatible_versions: ['v0.7.3'],
+        cosmos_sdk_version: '0.47.5',
+        ibc_go_version: 'v7.3.0',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.2',
+        },
+        cosmwasm_version: '0.42.0',
         cosmwasm_enabled: true,
         next_version_name: '',
       },
@@ -184,6 +200,11 @@ export const aura: Chain = {
         address: '138.201.21.197:46656',
         provider: 'StakeTown',
       },
+      {
+        id: 'fc9f3b8771bb7deda71ab179f610cff1edb7534d',
+        address: 'aura.peers.stakr.space:21656',
+        provider: 'STAKR.space',
+      },
     ],
   },
   apis: {
@@ -244,6 +265,14 @@ export const aura: Chain = {
         address: 'https://aura-rpc.palamar.io',
         provider: 'Palamar',
       },
+      {
+        address: 'https://aura.rpc.srv.stakr.space',
+        provider: 'STAKR.space',
+      },
+      {
+        address: 'https://aura-rpc.highstakes.ch',
+        provider: 'High Stakes 🇨🇭',
+      },
     ],
     rest: [
       {
@@ -301,6 +330,14 @@ export const aura: Chain = {
       {
         address: 'https://aura-api.palamar.io',
         provider: 'Palamar',
+      },
+      {
+        address: 'https://aura.api.srv.stakr.space',
+        provider: 'STAKR.space',
+      },
+      {
+        address: 'https://aura-api.highstakes.ch',
+        provider: 'High Stakes 🇨🇭',
       },
     ],
     grpc: [
@@ -364,6 +401,10 @@ export const aura: Chain = {
         address: 'aura-grpc.palamar.io:443',
         provider: 'Palamar',
       },
+      {
+        address: 'aura.grpc.srv.stakr.space:19090',
+        provider: 'STAKR.space',
+      },
     ],
   },
   explorers: [
@@ -413,6 +454,13 @@ export const aura: Chain = {
       tx_page: 'https://explorer.safeblock.space/aura/tx/${txHash}',
       account_page:
         'https://explorer.safeblock.space/aura/account/${accountAddress}',
+    },
+    {
+      kind: 'STAKR.space explorer',
+      url: 'https://explorer.stakr.space/aura/',
+      tx_page: 'https://explorer.stakr.space/aura/tx/${txHash}',
+      account_page:
+        'https://explorer.stakr.space/aura/account/${accountAddress}',
     },
   ],
   images: [

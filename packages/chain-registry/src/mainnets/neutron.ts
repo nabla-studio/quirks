@@ -67,11 +67,11 @@ export const neutron: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/neutron-org/neutron',
-    recommended_version: 'v2.0.1',
-    compatible_versions: ['v2.0.1'],
+    recommended_version: 'v2.0.3',
+    compatible_versions: ['v2.0.3'],
     binaries: {
       'linux/amd64':
-        'https://github.com/neutron-org/neutron/releases/download/v2.0.1/neutrond-linux-amd64',
+        'https://github.com/neutron-org/neutron/releases/download/v2.0.3/neutrond-linux-amd64',
     },
     cosmos_sdk_version: 'v0.47.6',
     consensus: {
@@ -104,11 +104,11 @@ export const neutron: Chain = {
         name: 'v2.0.0',
         proposal: 25,
         height: 5416000,
-        recommended_version: 'v2.0.1',
-        compatible_versions: ['v2.0.1'],
+        recommended_version: 'v2.0.3',
+        compatible_versions: ['v2.0.3'],
         binaries: {
           'linux/amd64':
-            'https://github.com/neutron-org/neutron/releases/download/v2.0.0/neutrond-linux-amd64',
+            'https://github.com/neutron-org/neutron/releases/download/v2.0.3/neutrond-linux-amd64',
         },
         cosmos_sdk_version: 'v0.47.6',
         consensus: {
@@ -276,6 +276,12 @@ export const neutron: Chain = {
       account_page:
         'https://www.mintscan.io/neutron/accounts/${accountAddress}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/neutron',
+      tx_page: 'https://ezstaking.app/neutron/txs/${txHash}',
+      account_page: 'https://ezstaking.app/neutron/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -316,6 +322,10 @@ export const neutronAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ntrn.svg',
         },
       ],
+      socials: {
+        webiste: 'https://neutron.org/',
+        twitter: 'https://twitter.com/Neutron_org',
+      },
     },
     {
       description: 'IBC uatom through cosmoshub-4 transfer/channel-1',

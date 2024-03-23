@@ -508,6 +508,12 @@ export const kujira: Chain = {
       tx_page: 'https://kujira.explorers.guru/transaction/${txHash}',
     },
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/kujira',
+      tx_page: 'https://ezstaking.app/kujira/txs/${txHash}',
+      account_page: 'https://ezstaking.app/kujira/account/${accountAddress}',
+    },
+    {
       kind: 'atomscan',
       url: 'https://atomscan.com/kujira',
       tx_page: 'https://atomscan.com/kujira/transactions/${txHash}',
@@ -558,6 +564,10 @@ export const kujiraAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.svg',
         },
       ],
+      socials: {
+        webiste: 'https://kujira.network/',
+        twitter: 'https://twitter.com/TeamKujira',
+      },
     },
     {
       description:
@@ -1627,6 +1637,32 @@ export const kujiraAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkatom.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkatom.svg',
       },
+    },
+    {
+      description: 'BackBone Labs Liquid Staked KUJI',
+      denom_units: [
+        {
+          denom:
+            'factory/kujira15e8q5wzlk5k38gjxlhse3vu6vqnafysncx2ltexd6y9gx50vuj2qpt7dgv/boneKuji',
+          exponent: 0,
+        },
+        {
+          denom: 'bKUJI',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira15e8q5wzlk5k38gjxlhse3vu6vqnafysncx2ltexd6y9gx50vuj2qpt7dgv/boneKuji',
+      name: 'BackBone Labs Liquid Staked KUJI',
+      display: 'bKUJI',
+      symbol: 'bKUJI',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/bKUJI.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/bKUJI.png',
+        },
+      ],
     },
   ],
 };

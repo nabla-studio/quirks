@@ -10,6 +10,7 @@ export const dymension: Chain = {
   chain_id: 'dymension_1100-1',
   bech32_prefix: 'dym',
   slip44: 60,
+  node_home: '$HOME/.dymension',
   daemon_name: 'dymd',
   fees: {
     fee_tokens: [
@@ -42,6 +43,12 @@ export const dymension: Chain = {
   ],
   codebase: {
     git_repo: 'https://github.com/dymensionxyz/dymension',
+    recommended_version: 'v3.0.0',
+    compatible_versions: ['v3.0.0'],
+    genesis: {
+      genesis_url:
+        'https://github.com/dymensionxyz/networks/raw/main/mainnet/dymension/genesis.json',
+    },
   },
   peers: {
     seeds: [
@@ -110,8 +117,8 @@ export const dymension: Chain = {
         provider: 'AutoStake | Delegate for StakeDrops',
       },
       {
-        id: 'b8d6d233805f3b60c56b0efecda80c50be1a108f',
-        address: '74.208.16.201:26646',
+        id: 'babe3d67aa5570e65953a5253eaf36c7ebfbbb44',
+        address: '82.223.0.229:26646',
         provider: 'Cumulo',
       },
     ],
@@ -211,7 +218,7 @@ export const dymension: Chain = {
         provider: 'Wave',
       },
       {
-        address: 'https://dym.rpc.cumulo.com.es:443',
+        address: 'https://archive.rpc.dym.cumulo.com.es:443',
         provider: 'Cumulo',
       },
       {
@@ -221,6 +228,10 @@ export const dymension: Chain = {
       {
         address: 'https://rpc.dymension.node75.org',
         provider: 'Pro-Nodes75',
+      },
+      {
+        address: 'https://rpc.dymension.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     rest: [
@@ -317,7 +328,7 @@ export const dymension: Chain = {
         provider: 'Wave',
       },
       {
-        address: 'https://dym.api.cumulo.com.es',
+        address: 'https://api.dym.cumulo.com.es',
         provider: 'Cumulo',
       },
       {
@@ -327,6 +338,10 @@ export const dymension: Chain = {
       {
         address: 'https://api.dymension.node75.org',
         provider: 'Pro-Nodes75',
+      },
+      {
+        address: 'https://lcd.dymension.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     grpc: [
@@ -399,12 +414,16 @@ export const dymension: Chain = {
         provider: 'Wave',
       },
       {
-        address: 'dym.grpc.cumulo.com.es:443',
+        address: 'grpc.dym.cumulo.com.es:443',
         provider: 'Cumulo',
       },
       {
         address: 'https://grpc.dymension.posthuman.digital',
         provider: 'posthuman',
+      },
+      {
+        address: 'https://grpc.dymension.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
     'evm-http-jsonrpc': [
@@ -425,7 +444,7 @@ export const dymension: Chain = {
         provider: 'Wave',
       },
       {
-        address: 'https://dym.json-rpc.cumulo.com.es:443',
+        address: 'https://evm-rpc.dym.cumulo.com.es:443',
         provider: 'Cumulo',
       },
       {
@@ -439,6 +458,12 @@ export const dymension: Chain = {
     ],
   },
   explorers: [
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/dymension',
+      tx_page: 'https://ezstaking.app/dymension/txs/${txHash}',
+      account_page: 'https://ezstaking.app/dymension/account/${accountAddress}',
+    },
     {
       kind: 'NodeStake',
       url: 'https://explorer.nodestake.org/dymension',
@@ -514,6 +539,10 @@ export const dymensionAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dymension/images/dymension-logo.svg',
         },
       ],
+      socials: {
+        webiste: 'https://portal.dymension.xyz',
+        twitter: 'https://twitter.com/dymension',
+      },
     },
   ],
 };

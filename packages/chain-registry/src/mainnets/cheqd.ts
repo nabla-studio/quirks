@@ -185,6 +185,10 @@ export const cheqd: Chain = {
         address: 'https://public.stakewolle.com/cosmos/cheqd/rpc',
         provider: 'Stakewolle',
       },
+      {
+        address: 'https://cheq-rpc.kleomedes.network',
+        provider: 'Kleomedes',
+      },
     ],
     rest: [
       {
@@ -222,6 +226,10 @@ export const cheqd: Chain = {
       {
         address: 'https://public.stakewolle.com/cosmos/cheqd/rest',
         provider: 'Stakewolle',
+      },
+      {
+        address: 'https://cheq-api.kleomedes.network',
+        provider: 'Kleomedes',
       },
     ],
     grpc: [
@@ -279,10 +287,10 @@ export const cheqd: Chain = {
       account_page: 'https://atomscan.com/cheqd/accounts/${accountAddress}',
     },
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/cheqd',
-      tx_page: 'https://app.ezstaking.io/cheqd/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/cheqd/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/cheqd',
+      tx_page: 'https://ezstaking.app/cheqd/txs/${txHash}',
+      account_page: 'https://ezstaking.app/cheqd/account/${accountAddress}',
     },
     {
       kind: 'ping.pub',

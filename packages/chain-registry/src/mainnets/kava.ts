@@ -207,6 +207,12 @@ export const kava: Chain = {
       account_page: 'https://www.mintscan.io/kava/accounts/${accountAddress}',
     },
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/kava',
+      tx_page: 'https://ezstaking.app/kava/txs/${txHash}',
+      account_page: 'https://ezstaking.app/kava/account/${accountAddress}',
+    },
+    {
       kind: 'ping.pub',
       url: 'https://ping.pub/kava',
       tx_page: 'https://ping.pub/kava/tx/${txHash}',
@@ -262,6 +268,10 @@ export const kavaAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kava/images/kava.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.kava.io/',
+        twitter: 'https://twitter.com/KAVA_CHAIN',
+      },
     },
     {
       description: 'Governance token of Kava Lend Protocol',

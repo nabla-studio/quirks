@@ -187,6 +187,11 @@ export const kyve: Chain = {
         address: 'peer-kyve.mms.team:27656',
         provider: 'MMS',
       },
+      {
+        id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
+        address: 'kyve.declab.pro:26618',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   apis: {
@@ -227,6 +232,10 @@ export const kyve: Chain = {
         address: 'https://rpc-kyve.mms.team',
         provider: 'MMS',
       },
+      {
+        address: 'https://kyve.declab.pro:26616',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     rest: [
       {
@@ -265,6 +274,10 @@ export const kyve: Chain = {
         address: 'https://api-kyve.mms.team',
         provider: 'MMS',
       },
+      {
+        address: 'https://kyve.declab.pro:443',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     grpc: [
       {
@@ -291,9 +304,19 @@ export const kyve: Chain = {
         address: 'grpc-kyve.mms.team:443',
         provider: 'MMS',
       },
+      {
+        address: 'https://kyve.declab.pro:9011',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   explorers: [
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/kyve',
+      tx_page: 'https://ezstaking.app/kyve/txs/${txHash}',
+      account_page: 'https://ezstaking.app/kyve/account/${accountAddress}',
+    },
     {
       kind: 'mintscan',
       url: 'https://www.mintscan.io/kyve',
@@ -320,6 +343,13 @@ export const kyve: Chain = {
       tx_page: 'https://explorer.stake-take.com/kyve/txs/${txHash}',
       account_page:
         'https://explorer.stake-take.com/kyve/account/${accountAddress}',
+    },
+    {
+      kind: 'Decloud Nodes Lab',
+      url: 'https://explorer.declab.pro/Kyve',
+      tx_page: 'https://explorer.declab.pro/Kyve/txs/${txHash}',
+      account_page:
+        'https://explorer.declab.pro/Kyve/account/${accountAddress}',
     },
   ],
   images: [
@@ -361,6 +391,10 @@ export const kyveAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kyve/images/kyve-token.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.kyve.network/',
+        twitter: 'https://twitter.com/KYVENetwork',
+      },
     },
   ],
 };

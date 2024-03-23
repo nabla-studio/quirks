@@ -174,6 +174,12 @@ export const cronos: Chain = {
       url: 'https://cronos.org/explorer',
       tx_page: 'https://cronos.org/explorer/tx/${txHash}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/cronos',
+      tx_page: 'https://ezstaking.app/cronos/txs/${txHash}',
+      account_page: 'https://ezstaking.app/cronos/account/${accountAddress}',
+    },
   ],
   images: [
     {

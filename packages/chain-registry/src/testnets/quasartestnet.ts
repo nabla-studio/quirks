@@ -6,12 +6,23 @@ export const quasartestnet: Chain = {
   status: 'live',
   network_type: 'testnet',
   pretty_name: 'Quasar Testnet',
-  chain_id: 'qsr-questnet-04',
+  chain_id: 'quasar-test-1',
   bech32_prefix: 'quasar',
   daemon_name: 'quasarnoded',
   node_home: '$HOME/.quasarnoded',
   key_algos: ['secp256k1'],
   slip44: 118,
+  fees: {
+    fee_tokens: [
+      {
+        denom: 'uqsr',
+        fixed_min_gas_price: 0,
+        low_gas_price: 0.0025,
+        average_gas_price: 0.025,
+        high_gas_price: 0.04,
+      },
+    ],
+  },
   staking: {
     staking_tokens: [
       {
@@ -20,14 +31,15 @@ export const quasartestnet: Chain = {
     ],
   },
   codebase: {
-    recommended_version: 'v0.0.2-alpha-11',
-    compatible_versions: ['v0.0.2-alpha-11'],
-    cosmos_sdk_version: '0.46',
+    git_repo: 'https://github.com/quasar-finance/quasar',
+    recommended_version: 'v1.0.1-rc-testnet',
+    compatible_versions: ['v1.0.1-rc-testnet'],
+    cosmos_sdk_version: '0.45.16',
     consensus: {
       type: 'tendermint',
-      version: '0.34',
+      version: '0.34.27',
     },
-    cosmwasm_version: '0.27',
+    cosmwasm_version: '0.31',
     cosmwasm_enabled: true,
     genesis: {
       genesis_url:
@@ -35,15 +47,15 @@ export const quasartestnet: Chain = {
     },
     versions: [
       {
-        name: 'v0.0.2-alpha-11',
-        recommended_version: 'v0.0.2-alpha-11',
-        compatible_versions: ['v0.0.2-alpha-11'],
-        cosmos_sdk_version: '0.46',
+        name: 'v1.0.1-rc-testnet',
+        recommended_version: 'v1.0.1-rc-testnet',
+        compatible_versions: ['v1.0.1-rc-testnet'],
+        cosmos_sdk_version: '0.45.16',
         consensus: {
           type: 'tendermint',
-          version: '0.34',
+          version: '0.34.27',
         },
-        cosmwasm_version: '0.27',
+        cosmwasm_version: '0.31',
         cosmwasm_enabled: true,
       },
     ],
@@ -60,9 +72,9 @@ export const quasartestnet: Chain = {
         provider: 'Polkachu',
       },
       {
-        id: 'babc3f3f7804933265ec9c40ad94f4da8e9e0017',
-        address: 'testnet-seed.rhinostake.com:18256',
-        provider: 'Rhino Stake',
+        id: '58a7ede083714c51efd3f285c16ed613b49b83ee',
+        address: '154.26.158.158:18256',
+        provider: 'Stake and Relax',
       },
     ],
     persistent_peers: [
@@ -140,12 +152,8 @@ export const quasartestnet: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://questnet.quasar-finance.rhinostake.com/',
-        provider: 'Rhino Stake',
-      },
-      {
-        address: 'https://quasar-testnet-rpc.swiss-staking.ch',
-        provider: 'Swiss Staking',
+        address: 'https://quasar-testnet-rpc.stakeandrelax.net/',
+        provider: 'Stake and Relax',
       },
     ],
     rest: [
@@ -154,12 +162,8 @@ export const quasartestnet: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://questnet.quasar-finance.rhinostake.com/',
-        provider: 'Rhino Stake',
-      },
-      {
-        address: 'https://quasar-testnet-api.swiss-staking.ch/',
-        provider: 'Swiss Staking',
+        address: 'https://quasar-testnet-api.stakeandrelax.net/',
+        provider: 'Stake and Relax',
       },
     ],
     grpc: [
@@ -168,8 +172,8 @@ export const quasartestnet: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'quasar-testnet-grpc.swiss-staking.ch:10090',
-        provider: 'Swiss Staking',
+        address: 'http://quasar-testnet-grpc.stakeandrelax.net:18290/',
+        provider: 'Stake and Relax',
       },
     ],
   },

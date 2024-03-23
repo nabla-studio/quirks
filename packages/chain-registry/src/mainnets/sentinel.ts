@@ -246,6 +246,10 @@ export const sentinel: Chain = {
         id: 'f7111587af92ebe3c57c6080d68755dd74e13a3b',
         address: '104.196.120.61:26656',
       },
+      {
+        id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
+        address: 'sentinel.declab.pro:26630',
+      },
     ],
   },
   apis: {
@@ -298,6 +302,14 @@ export const sentinel: Chain = {
         address: 'https://public.stakewolle.com/cosmos/sentinel/rpc',
         provider: 'Stakewolle',
       },
+      {
+        address: 'http://163.197.193.2:26657',
+        provider: 'Tesla Full Node',
+      },
+      {
+        address: 'https://sentinel.declab.pro:26628',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     rest: [
       {
@@ -340,6 +352,14 @@ export const sentinel: Chain = {
         address: 'https://public.stakewolle.com/cosmos/sentinel/rest',
         provider: 'Stakewolle',
       },
+      {
+        address: 'http://163.197.193.2:26657',
+        provider: 'Tesla Full Node',
+      },
+      {
+        address: 'https://sentinel.declab.pro:443',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     grpc: [
       {
@@ -362,6 +382,10 @@ export const sentinel: Chain = {
         address: 'sentinel-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://sentinel.declab.pro:9019',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   explorers: [
@@ -371,6 +395,12 @@ export const sentinel: Chain = {
       tx_page: 'https://www.mintscan.io/sentinel/transactions/${txHash}',
       account_page:
         'https://www.mintscan.io/sentinel/accounts/${accountAddress}',
+    },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/sentinel',
+      tx_page: 'https://ezstaking.app/sentinel/txs/${txHash}',
+      account_page: 'https://ezstaking.app/sentinel/account/${accountAddress}',
     },
     {
       kind: 'atomscan',
@@ -390,6 +420,11 @@ export const sentinel: Chain = {
       kind: 'ValidatorNode',
       url: 'https://explorer.validatornode.com/sentinel',
       tx_page: 'https://explorer.validatornode.com/sentinel/tx/${txHash}',
+    },
+    {
+      kind: 'Decloud Nodes Lab',
+      url: 'https://explorer.declab.pro/Sentinel',
+      tx_page: 'https://explorer.declab.pro/Sentinel/tx/${txHash}',
     },
   ],
   images: [
@@ -431,6 +466,10 @@ export const sentinelAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sentinel/images/dvpn.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.sentinel.co/',
+        twitter: 'https://twitter.com/SentinelVPN',
+      },
     },
   ],
 };

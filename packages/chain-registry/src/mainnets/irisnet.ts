@@ -130,7 +130,7 @@ export const irisnet: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://iris-rpc.highstakes.ch:26657/',
+        address: 'https://iris-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -156,7 +156,7 @@ export const irisnet: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://iris-api.highstakes.ch:1317/',
+        address: 'https://iris-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -211,11 +211,10 @@ export const irisnet: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/irisnet',
-      tx_page: 'https://app.ezstaking.io/irisnet/txs/${txHash}',
-      account_page:
-        'https://app.ezstaking.io/irisnet/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/irisnet',
+      tx_page: 'https://ezstaking.app/irisnet/txs/${txHash}',
+      account_page: 'https://ezstaking.app/irisnet/account/${accountAddress}',
     },
     {
       kind: 'mintscan',

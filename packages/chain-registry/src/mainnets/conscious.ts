@@ -93,6 +93,12 @@ export const conscious: Chain = {
       tx_page: 'https://explore.consciousdao.com/tx/${txHash}',
     },
   ],
+  images: [
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/conscious/images/cvn.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/conscious/images/cvn.svg',
+    },
+  ],
 };
 
 export const consciousAssetList: AssetLists = {
@@ -117,10 +123,16 @@ export const consciousAssetList: AssetLists = {
       display: 'cvnt',
       symbol: 'CVN',
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/conscious/images/cvn.svg',
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/conscious/images/cvn.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/conscious/images/cvn.svg',
       },
       coingecko_id: 'consciousdao',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/conscious/images/cvn.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/conscious/images/cvn.svg',
+        },
+      ],
     },
   ],
 };

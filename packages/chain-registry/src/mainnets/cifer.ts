@@ -34,7 +34,7 @@ export const cifer: Chain = {
     recommended_version: 'v1.0.0',
     compatible_versions: ['v1.0.0'],
     genesis: {
-      genesis_url: 'https://rpc.mainnet.cifer.ai/genesis',
+      genesis_url: 'https://rpcmainnet.cifer.ai/genesis',
     },
     versions: [
       {
@@ -49,11 +49,33 @@ export const cifer: Chain = {
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cifer/images/cif.svg',
   },
   peers: {
+    seeds: [
+      {
+        id: '541fbc9169c7c1ec84babea50cb76c4b991fd0b2',
+        address: '34.128.114.243:26656',
+      },
+    ],
     persistent_peers: [],
   },
   apis: {
-    rpc: [],
-    rest: [],
+    rpc: [
+      {
+        address: 'https://cif_node.cifer.ai/',
+        provider: 'Cifer',
+      },
+    ],
+    rest: [
+      {
+        address: 'https://api.cifer.ai',
+        provider: 'Cifer',
+      },
+    ],
+    grpc: [
+      {
+        address: 'https://grpc.cifer.ai',
+        provider: 'Cifer',
+      },
+    ],
   },
   explorers: [
     {

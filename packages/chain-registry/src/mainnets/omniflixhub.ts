@@ -14,10 +14,10 @@ export const omniflixhub: Chain = {
   slip44: 118,
   codebase: {
     git_repo: 'https://github.com/OmniFlix/omniflixhub',
-    recommended_version: 'v3.1.0',
-    compatible_versions: ['v3.1.0'],
-    cosmos_sdk_version: 'v0.47.9',
-    ibc_go_version: 'v7.3.1',
+    recommended_version: 'v3.3.0',
+    compatible_versions: ['v3.3.0'],
+    cosmos_sdk_version: 'v0.47.10',
+    ibc_go_version: 'v7.3.2',
     consensus: {
       type: 'cometbft',
       version: 'v0.37.4',
@@ -114,10 +114,10 @@ export const omniflixhub: Chain = {
         name: 'v3',
         proposal: 31,
         height: 10872800,
-        recommended_version: 'v3.1.0',
-        compatible_versions: ['v3.1.0'],
-        cosmos_sdk_version: 'v0.47.9',
-        ibc_go_version: 'v7.3.1',
+        recommended_version: 'v3.3.0',
+        compatible_versions: ['v3.3.0'],
+        cosmos_sdk_version: 'v0.47.10',
+        ibc_go_version: 'v7.3.2',
         consensus: {
           type: 'cometbft',
           version: 'v0.37.4',
@@ -199,6 +199,11 @@ export const omniflixhub: Chain = {
         address: '65.21.91.99:26756',
         provider: 'Staketab',
       },
+      {
+        id: '82feb443470ff81afa830e15fea387cac4849aac',
+        address: 'mainnet.omniflix.peers.stakr.space:36656',
+        provider: 'STAKR.space',
+      },
     ],
   },
   apis: {
@@ -263,6 +268,10 @@ export const omniflixhub: Chain = {
         address: 'https://omniflix-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://mainnet.omniflix.rpc.srv.stakr.space',
+        provider: 'STAKR.space',
+      },
     ],
     rest: [
       {
@@ -307,7 +316,7 @@ export const omniflixhub: Chain = {
       },
       {
         address: 'http://omniflix.api.staking-explorer.com',
-        provider: 'Daily $FLIX DROP 💰',
+        provider: 'Daily DROP',
       },
       {
         address: 'https://api.omniflix.stakeup.tech',
@@ -320,6 +329,10 @@ export const omniflixhub: Chain = {
       {
         address: 'https://omniflix-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://mainnet.omniflix.api.srv.stakr.space',
+        provider: 'STAKR.space',
       },
     ],
     grpc: [
@@ -371,15 +384,19 @@ export const omniflixhub: Chain = {
         address: 'omniflix-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'mainnet.omniflix.grpc.stakr.space:39090',
+        provider: 'STAKR.space',
+      },
     ],
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/omniflixhub',
-      tx_page: 'https://app.ezstaking.io/omniflixhub/txs/${txHash}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/omniflixhub',
+      tx_page: 'https://ezstaking.app/omniflixhub/txs/${txHash}',
       account_page:
-        'https://app.ezstaking.io/omniflixhub/account/${accountAddress}',
+        'https://ezstaking.app/omniflixhub/account/${accountAddress}',
     },
     {
       kind: 'mintscan',
@@ -394,6 +411,13 @@ export const omniflixhub: Chain = {
       tx_page: 'https://atomscan.com/omniflixhub/transactions/${txHash}',
       account_page:
         'https://atomscan.com/omniflixhub/accounts/${accountAddress}',
+    },
+    {
+      kind: 'STAKR.space explorer',
+      url: 'https://explorer.stakr.space/omniflix/',
+      tx_page: 'https://explorer.stakr.space/omniflix/tx/${txHash}',
+      account_page:
+        'https://explorer.stakr.space/omniflix/account/${accountAddress}',
     },
   ],
   images: [
@@ -435,6 +459,10 @@ export const omniflixhubAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/omniflixhub/images/flix.svg',
         },
       ],
+      socials: {
+        webiste: 'https://omniflix.network/',
+        twitter: 'https://twitter.com/OmniFlixNetwork',
+      },
     },
     {
       denom_units: [
@@ -664,12 +692,14 @@ export const omniflixhubAssetList: AssetLists = {
               'ibc/2FFE07C4B4EFC0DDA099A16C6AF3C9CCA653CC56077E87217A585D48794B0BC7',
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/baddog.png',
+        },
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/baddog.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/baddog.svg',
         },
       ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/baddog.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/baddog.svg',
       },
     },
   ],

@@ -441,6 +441,10 @@ export const composableAssetList: AssetLists = {
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
       },
+      socials: {
+        webiste: 'https://www.composable.finance/',
+        twitter: 'https://twitter.com/ComposableFin',
+      },
     },
     {
       description:

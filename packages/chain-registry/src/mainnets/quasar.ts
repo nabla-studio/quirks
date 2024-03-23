@@ -23,6 +23,13 @@ export const quasar: Chain = {
   fees: {
     fee_tokens: [
       {
+        denom: 'uqsr',
+        fixed_min_gas_price: 0.01,
+        low_gas_price: 0.01,
+        average_gas_price: 0.025,
+        high_gas_price: 0.03,
+      },
+      {
         denom:
           'ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B',
         fixed_min_gas_price: 0.01,
@@ -50,8 +57,8 @@ export const quasar: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/quasar-finance/quasar-preview',
-    recommended_version: 'v1.0.0',
-    compatible_versions: ['v1.0.0'],
+    recommended_version: 'v1.0.1',
+    compatible_versions: ['v1.0.1'],
     cosmos_sdk_version: 'v0.45.16',
     consensus: {
       type: 'cometbft',
@@ -81,8 +88,8 @@ export const quasar: Chain = {
         name: 'v1',
         proposal: 9,
         height: 2249500,
-        recommended_version: 'v1.0.0',
-        compatible_versions: ['v1.0.0'],
+        recommended_version: 'v1.0.1',
+        compatible_versions: ['v1.0.1'],
         cosmos_sdk_version: 'v0.45.16',
         consensus: {
           type: 'cometbft',
@@ -315,6 +322,12 @@ export const quasar: Chain = {
       tx_page: 'https://bigdipper.live/quasar/transactions/${txHash}',
       account_page: 'https://bigdipper.live/quasar/accounts/${accountAddress}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/quasar',
+      tx_page: 'https://ezstaking.app/quasar/txs/${txHash}',
+      account_page: 'https://ezstaking.app/quasar/account/${accountAddress}',
+    },
   ],
   keywords: ['mainnet'],
   images: [
@@ -356,6 +369,10 @@ export const quasarAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/quasar/images/quasar.png',
         },
       ],
+      socials: {
+        webiste: 'https://www.quasar.fi/',
+        twitter: 'https://twitter.com/QuasarFi',
+      },
     },
     {
       description: 'OSMO from Osmosis',
@@ -499,13 +516,13 @@ export const quasarAssetList: AssetLists = {
             base_denom:
               'ibc/D189335C6E4A68B513C10AB227BF1C1D38C746766278BA3EEB4FB14124F1D858',
           },
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/usdc.axl.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/usdc.axl.svg',
         },
       ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/usdc.axl.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/usdc.axl.svg',
       },
     },
   ],

@@ -85,6 +85,11 @@ export const onomy: Chain = {
         address: '3.210.0.126:26656',
         provider: 'onomy',
       },
+      {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'onomy-mainnet-seed.autostake.com:27556',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
     persistent_peers: [
       {
@@ -97,6 +102,11 @@ export const onomy: Chain = {
         address: '44.195.221.88:26656',
         provider: 'cosmostation',
       },
+      {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'onomy-mainnet-peer.autostake.com:27556',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
   },
   apis: {
@@ -105,11 +115,19 @@ export const onomy: Chain = {
         address: 'https://rpc-mainnet.onomy.io',
         provider: 'onomy',
       },
+      {
+        address: 'https://onomy-mainnet-rpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
     rest: [
       {
         address: 'https://rest-mainnet.onomy.io',
         provider: 'onomy',
+      },
+      {
+        address: 'https://onomy-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
     ],
     grpc: [],
@@ -126,6 +144,12 @@ export const onomy: Chain = {
       tx_page: 'https://www.mintscan.io/onomy-protocol/transactions/${txHash}',
       account_page:
         'https://www.mintscan.io/onomy-protocol/accounts/${accountAddress}',
+    },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/onomy',
+      tx_page: 'https://ezstaking.app/onomy/txs/${txHash}',
+      account_page: 'https://ezstaking.app/onomy/account/${accountAddress}',
     },
   ],
   keywords: ['dex', 'stablecoin', 'bridge', 'staking'],

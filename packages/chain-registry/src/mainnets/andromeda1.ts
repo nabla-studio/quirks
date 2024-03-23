@@ -1,12 +1,11 @@
 import type { Chain, AssetLists, ChainVersions } from '../types';
 
-export const andromeda: Chain = {
+export const andromeda1: Chain = {
   $schema: '../chain.schema.json',
-  chain_name: 'andromeda',
+  chain_name: 'andromeda1',
   chain_id: 'andromeda-1',
-  pre_fork_chain_name: 'andromeda1',
   pretty_name: 'Andromeda',
-  status: 'live',
+  status: 'killed',
   network_type: 'mainnet',
   bech32_prefix: 'andr',
   daemon_name: 'andromedad',
@@ -32,38 +31,10 @@ export const andromeda: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/andromedaprotocol/andromedad',
-    recommended_version: 'andromeda-1-v0.1.0',
-    compatible_versions: ['andromeda-1-v0.1.0'],
-    cosmos_sdk_version: 'v0.47.5',
-    ibc_go_version: 'v7.3.0',
-    consensus: {
-      type: 'cometbft',
-      version: 'v0.37.2',
-    },
-    cosmwasm_version: 'v0.41.0',
-    cosmwasm_enabled: true,
     genesis: {
       genesis_url:
-        'https://snapshots.lavenderfive.com/genesis/andromeda/genesis.json',
+        'https://raw.githubusercontent.com/andromedaprotocol/mainnet/release/genesis.json',
     },
-    versions: [
-      {
-        name: 'andromeda-1-v0.1.0',
-        height: 1696401,
-        tag: 'andromeda-1-v0.1.0',
-        recommended_version: 'andromeda-1-v0.1.0',
-        compatible_versions: ['andromeda-1-v0.1.0'],
-        cosmos_sdk_version: 'v0.47.5',
-        ibc_go_version: 'v7.3.0',
-        consensus: {
-          type: 'cometbft',
-          version: 'v0.37.2',
-        },
-        cosmwasm_version: 'v0.41.0',
-        cosmwasm_enabled: true,
-        next_version_name: '',
-      },
-    ],
   },
   peers: {
     seeds: [
@@ -299,7 +270,7 @@ export const andromeda: Chain = {
   ],
 };
 
-export const andromedaAssetList: AssetLists = {
+export const andromeda1AssetList: AssetLists = {
   $schema: '../assetlist.schema.json',
   chain_name: 'andromeda',
   assets: [

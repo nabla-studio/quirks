@@ -171,7 +171,7 @@ export const dydx: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'dydx-mainnet-seed.autostake.com:27366',
-        provider: 'AutoStake | Delegate for StakeDrops',
+        provider: 'AutoStake | StakeDrops',
       },
       {
         id: '09ba537d6563018b97c502979c3478df4decf426',
@@ -183,16 +183,12 @@ export const dydx: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'dydx-mainnet-peer.autostake.com:27366',
-        provider: 'AutoStake | Delegate for StakeDrops',
+        provider: 'AutoStake | StakeDrops',
       },
     ],
   },
   apis: {
     rpc: [
-      {
-        address: 'https://community.nuxian-node.ch:6797/dydx/trpc',
-        provider: 'PRO Delegators',
-      },
       {
         address: 'https://dydx-dao-rpc.polkachu.com',
         provider: 'Polkachu',
@@ -211,7 +207,7 @@ export const dydx: Chain = {
       },
       {
         address: 'https://dydx-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake | Delegate for StakeDrops',
+        provider: 'AutoStake | StakeDrops',
       },
       {
         address: 'https://rpc-dydx.ecostake.com:443',
@@ -237,6 +233,10 @@ export const dydx: Chain = {
         address: 'https://dydx-rpc.enigma-validator.com',
         provider: 'Enigma',
       },
+      {
+        address: 'https://community.nuxian-node.ch:6797/dydx/trpc',
+        provider: 'PRO Delegators',
+      },
     ],
     rest: [
       {
@@ -261,7 +261,7 @@ export const dydx: Chain = {
       },
       {
         address: 'https://dydx-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake | Delegate for StakeDrops',
+        provider: 'AutoStake | StakeDrops',
       },
       {
         address: 'https://rest-dydx.ecostake.com:443',
@@ -323,7 +323,7 @@ export const dydx: Chain = {
       },
       {
         address: 'dydx-mainnet-grpc.autostake.com:443',
-        provider: 'AutoStake | Delegate for StakeDrops',
+        provider: 'AutoStake | StakeDrops',
       },
       {
         address: 'https://grpc.dydx.nodestake.top',
@@ -349,6 +349,12 @@ export const dydx: Chain = {
       url: 'https://www.mintscan.io/dydx',
       tx_page: 'https://www.mintscan.io/dydx/txs/${txHash}',
       account_page: 'https://www.mintscan.io/dydx/account/${accountAddress}',
+    },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/dydx',
+      tx_page: 'https://ezstaking.app/dydx/txs/${txHash}',
+      account_page: 'https://ezstaking.app/dydx/account/${accountAddress}',
     },
     {
       kind: 'NodeStake',
@@ -410,6 +416,10 @@ export const dydxAssetList: AssetLists = {
           },
         },
       ],
+      socials: {
+        webiste: 'https://dydx.trade/',
+        twitter: 'https://twitter.com/dYdX',
+      },
     },
     {
       description: 'Noble USDC on dYdX Protocol.',

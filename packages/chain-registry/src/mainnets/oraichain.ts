@@ -33,36 +33,33 @@ export const oraichain: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/oraichain/orai',
-    recommended_version: 'v0.41.4',
-    compatible_versions: ['v0.41.3', 'v0.41.4'],
-    binaries: {
-      'linux/amd64':
-        'https://github.com/oraichain/orai/releases/download/v0.41.4/oraid',
-    },
+    recommended_version: 'v0.41.7',
+    compatible_versions: ['v0.41.3', 'v0.41.4', 'v0.41.6', 'v0.41.7'],
+    cosmwasm_version: '0.30.2',
+    cosmwasm_enabled: true,
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/oraichain/oraichain-static-files/master/genesis.json',
     },
     versions: [
       {
-        name: 'v0.40.3',
+        name: 'v0.40',
         recommended_version: 'v0.40.3',
         compatible_versions: ['v0.40.3'],
         binaries: {
           'linux/amd64':
             'https://orai.s3.us-east-2.amazonaws.com/v0.40.3/oraid',
         },
+        next_version_name: 'v0.41',
       },
       {
-        name: 'v0.41.4',
-        height: 13567875,
-        proposal: 197,
-        recommended_version: 'v0.41.4',
-        compatible_versions: ['v0.41.3', 'v0.41.4'],
-        binaries: {
-          'linux/amd64':
-            'https://orai.s3.us-east-2.amazonaws.com/v0.41.4/oraid',
-        },
+        name: 'v0.41',
+        height: 12353514,
+        proposal: 185,
+        recommended_version: 'v0.41.7',
+        compatible_versions: ['v0.41.3', 'v0.41.4', 'v0.41.5', 'v0.41.7'],
+        previous_version_name: 'v0.40',
+        next_version_name: '',
       },
     ],
   },
@@ -73,27 +70,27 @@ export const oraichain: Chain = {
   peers: {
     seeds: [
       {
-        id: '0baa806b3a4dd17be6e06369d899f140c3897d6e',
-        address: '18.223.242.70:26656',
+        id: '8b346750e75fd584645192a65c62c7ab88741791',
+        address: '134.209.106.91:26656',
         provider: 'oraichain-team',
       },
       {
-        id: '9749da4a81526266d7b8fe9a03d260cd3db241ad',
-        address: '18.116.209.76:26656',
+        id: '4d0f2d042405abbcac5193206642e1456fe89963',
+        address: '3.134.19.98:26656',
         provider: 'oraichain-team',
       },
       {
-        id: '35c1f999d67de56736b412a1325370a8e2fdb34a',
-        address: '5.189.169.99:26656',
-        provider: 'ORAI Vanguard',
-      },
-      {
-        id: '5ad3b29bf56b9ba95c67f282aa281b6f0903e921',
-        address: '64.225.53.108:26656',
+        id: 'd088d05d7689905819d4381ae30df4075dbb66e7',
+        address: '34.75.13.200:26656',
         provider: 'oraichain-team',
       },
       {
-        id: 'd091cabe3584cb32043cc0c9199b0c7a5b68ddcb',
+        id: '2c328c41e0ace21c6351265a5a935e1b3f37b62d',
+        address: '35.237.59.125:26656',
+        provider: 'oraichain-team',
+      },
+      {
+        id: '49165f4ef94395897d435f144964bdd14413ea28',
         address: 'seed.orai.synergynodes.com:26656',
         provider: 'synergynodes',
       },
@@ -117,32 +114,41 @@ export const oraichain: Chain = {
         address: 'mainnet-seed.konsortech.xyz:33165',
         provider: 'KonsorTech',
       },
+      {
+        id: 'bdf3f54758e6a712d13fbcda9f49b01f3c1c73b2',
+        address: 'seed.orai.mortysnode.nl:26656',
+        provider: "Morty's Nodes",
+      },
     ],
     persistent_peers: [
       {
-        id: '0baa806b3a4dd17be6e06369d899f140c3897d6e',
-        address: '18.223.242.70:26656',
+        id: '8b346750e75fd584645192a65c62c7ab88741791',
+        address: '134.209.106.91:26656',
+        provider: 'oraichain-team',
       },
       {
-        id: '9749da4a81526266d7b8fe9a03d260cd3db241ad',
-        address: '18.116.209.76:26656',
+        id: '4d0f2d042405abbcac5193206642e1456fe89963',
+        address: '3.134.19.98:26656',
+        provider: 'oraichain-team',
       },
       {
-        id: '35c1f999d67de56736b412a1325370a8e2fdb34a',
-        address: '5.189.169.99:26656',
+        id: 'd088d05d7689905819d4381ae30df4075dbb66e7',
+        address: '34.75.13.200:26656',
+        provider: 'oraichain-team',
       },
       {
-        id: '5ad3b29bf56b9ba95c67f282aa281b6f0903e921',
-        address: '64.225.53.108:26656',
+        id: '2c328c41e0ace21c6351265a5a935e1b3f37b62d',
+        address: '35.237.59.125:26656',
+        provider: 'oraichain-team',
       },
       {
-        id: 'd091cabe3584cb32043cc0c9199b0c7a5b68ddcb',
+        id: '49165f4ef94395897d435f144964bdd14413ea28',
         address: 'seed.orai.synergynodes.com:26656',
         provider: 'synergynodes',
       },
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
-        address: 'oraichain-mainnet-peer.autostake.com:27436',
+        address: 'oraichain-mainnet-seed.autostake.com:27436',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
@@ -154,6 +160,11 @@ export const oraichain: Chain = {
         id: 'efb9d22a6fdf7460f965982ae013d242bbbfd53c',
         address: 'mainnet-orai.konsortech.xyz:33656',
         provider: 'KonsorTech',
+      },
+      {
+        id: 'bdf3f54758e6a712d13fbcda9f49b01f3c1c73b2',
+        address: 'seed.orai.mortysnode.nl:26656',
+        provider: "Morty's Nodes",
       },
     ],
   },
@@ -186,6 +197,10 @@ export const oraichain: Chain = {
       {
         address: 'https://mainnet-orai-rpc.konsortech.xyz',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'https://rpc.orai.mortysnode.nl',
+        provider: "Morty's Nodes",
       },
     ],
     rest: [

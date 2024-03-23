@@ -32,9 +32,10 @@ export const sge: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sge-network/sge',
-    recommended_version: 'v1.3.1',
-    compatible_versions: ['v1.3.1'],
-    cosmos_sdk_version: 'v0.46.17-0.20231114190313-b9164dd660b6',
+    recommended_version: 'v1.5.2',
+    compatible_versions: ['v1.5.2'],
+    cosmos_sdk_version:
+      'sge-network/cosmos-sdk v0.46.17-0.20240223100624-2a2661276cb4',
     ibc_go_version: 'v5.3.1',
     consensus: {
       type: 'cometbft',
@@ -106,6 +107,21 @@ export const sge: Chain = {
         proposal: 5,
         height: 1911750,
         cosmos_sdk_version: 'v0.46.17-0.20231114190313-b9164dd660b6',
+        ibc_go_version: 'v5.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        next_version_name: 'V1.5.2',
+      },
+      {
+        name: 'v1.5.2',
+        recommended_version: 'v1.5.2',
+        compatible_versions: ['v1.5.2'],
+        proposal: 6,
+        height: 2867354,
+        cosmos_sdk_version:
+          'sge-network/cosmos-sdk v0.46.17-0.20240223100624-2a2661276cb4',
         ibc_go_version: 'v5.3.1',
         consensus: {
           type: 'cometbft',

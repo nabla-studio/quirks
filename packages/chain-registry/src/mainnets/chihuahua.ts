@@ -141,6 +141,11 @@ export const chihuahua: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
+        id: 'cd835cfc413755184239a3dcd24a1f9b5a98627b',
+        address: 'chihua.seed.stavr.tech:2016',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: '77cbb35d1df17f48a42e9f157f12f55b691e9f5e',
         address: 'seeds.goldenratiostaking.net:1620',
         provider: 'Golden Ratio Staking',
@@ -188,6 +193,10 @@ export const chihuahua: Chain = {
       {
         address: 'https://rpc-chihuahua.ecostake.com',
         provider: 'ecostake',
+      },
+      {
+        address: 'https://chihua.rpc.m.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://chihuahua-rpc.polkachu.com',
@@ -240,6 +249,10 @@ export const chihuahua: Chain = {
         provider: 'ecostake',
       },
       {
+        address: 'https://chihua.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://api-chihuahua-ia.cosmosia.notional.ventures',
         provider: 'Notional',
       },
@@ -290,6 +303,10 @@ export const chihuahua: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
+        address: 'chihua.grpc.m.stavr.tech:108',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'grpc-chihuahua.cosmos-spaces.cloud:2290',
         provider: 'Cosmos Spaces',
       },
@@ -314,6 +331,11 @@ export const chihuahua: Chain = {
       tx_page: 'https://ping.pub/chihuahua/tx/${txHash}',
     },
     {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Chihua-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Chihua-Mainnet/tx/${txHash}',
+    },
+    {
       kind: 'mintscan',
       url: 'https://mintscan.io/chihuahua',
       tx_page: 'https://mintscan.io/chihuahua/transactions/${txHash}',
@@ -325,6 +347,12 @@ export const chihuahua: Chain = {
       url: 'https://atomscan.com/chihuahua',
       tx_page: 'https://atomscan.com/chihuahua/transactions/${txHash}',
       account_page: 'https://atomscan.com/chihuahua/accounts/${accountAddress}',
+    },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/chihuahua',
+      tx_page: 'https://ezstaking.app/chihuahua/txs/${txHash}',
+      account_page: 'https://ezstaking.app/chihuahua/account/${accountAddress}',
     },
   ],
   images: [
@@ -551,6 +579,36 @@ export const chihuahuaAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/corso.png',
         },
       ],
+    },
+    {
+      description: 'BackBone Labs Liquid Staked HUAHUA',
+      denom_units: [
+        {
+          denom:
+            'cw20:chihuahua1jz5n4aynhpxx7clf2m8hrv9dp5nz83k67fgaxhy4p9dfwl6zssrq3ymr6w',
+          exponent: 0,
+        },
+        {
+          denom: 'bHUAHUA',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'cw20',
+      address:
+        'chihuahua1jz5n4aynhpxx7clf2m8hrv9dp5nz83k67fgaxhy4p9dfwl6zssrq3ymr6w',
+      base: 'cw20:chihuahua1jz5n4aynhpxx7clf2m8hrv9dp5nz83k67fgaxhy4p9dfwl6zssrq3ymr6w',
+      name: 'BackBone Labs Liquid Staked HUAHUA',
+      display: 'bHUAHUA',
+      symbol: 'bHUAHUA',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/bhuahua.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/bhuahua.png',
+      },
+      coingecko_id: 'backbone-labs-staked-huahua',
     },
   ],
 };

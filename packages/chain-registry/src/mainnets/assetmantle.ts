@@ -227,11 +227,11 @@ export const assetmantle: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/assetmantle',
-      tx_page: 'https://app.ezstaking.io/assetmantle/txs/${txHash}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/assetmantle',
+      tx_page: 'https://ezstaking.app/assetmantle/txs/${txHash}',
       account_page:
-        'https://app.ezstaking.io/assetmantle/account/${accountAddress}',
+        'https://ezstaking.app/assetmantle/account/${accountAddress}',
     },
     {
       kind: 'mintscan',
@@ -309,6 +309,10 @@ export const assetmantleAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/assetmantle/images/mntl.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.assetmantle.one/',
+        twitter: 'https://twitter.com/AssetMantle',
+      },
     },
   ],
 };

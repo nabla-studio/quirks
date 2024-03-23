@@ -14,8 +14,16 @@ export const bitsong: Chain = {
   node_home: '$HOME/.bitsongd',
   codebase: {
     git_repo: 'https://github.com/bitsongofficial/go-bitsong',
-    recommended_version: 'v0.14.0',
-    compatible_versions: ['v0.14.0'],
+    recommended_version: 'v0.15.0',
+    compatible_versions: ['v0.15.0'],
+    binaries: {
+      'linux/amd64':
+        'https://github.com/bitsongofficial/go-bitsong/releases/download/v0.15.0/bitsongd',
+    },
+    cosmos_sdk_version: 'v0.45.16',
+    cosmwasm_version: 'v0.33.0',
+    cosmwasm_enabled: true,
+    ibc_go_version: 'v4.4.2',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/bitsongofficial/networks/master/bitsong-2b/genesis.json',
@@ -25,6 +33,23 @@ export const bitsong: Chain = {
         name: 'v0.14.0',
         recommended_version: 'v0.14.0',
         compatible_versions: ['v0.14.0'],
+        cosmos_sdk_version: '0.45.11',
+        cosmwasm_version: '0.29.2',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v3.3.1',
+        next_version_name: 'v0.15.0',
+      },
+      {
+        name: 'v0.15.0',
+        proposal: 34,
+        height: 15947000,
+        recommended_version: 'v0.15.0',
+        compatible_versions: ['v0.15.0'],
+        cosmos_sdk_version: '0.45.16',
+        cosmwasm_version: '0.33.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v4.4.2',
+        next_version_name: '',
       },
     ],
   },
@@ -95,6 +120,11 @@ export const bitsong: Chain = {
         address: 'bitsong-peer.panthea.eu:31656',
         provider: 'Panthea EU',
       },
+      {
+        id: '3ddd0edc57217161fbd5dee9bb40b506e7089d00',
+        address: '167.114.159.157:36656',
+        provider: 'MathNodes',
+      },
     ],
   },
   apis: {
@@ -147,6 +177,10 @@ export const bitsong: Chain = {
         address: 'https://bitsong-rpc.panthea.eu',
         provider: 'Panthea EU',
       },
+      {
+        address: 'https://rpc.bitsong.mathnodes.com',
+        provider: 'MathNodes',
+      },
     ],
     rest: [
       {
@@ -193,6 +227,10 @@ export const bitsong: Chain = {
         address: 'https://bitsong-api.panthea.eu',
         provider: 'Panthea EU',
       },
+      {
+        address: 'https://api.bitsong.mathnodes.com',
+        provider: 'MathNodes',
+      },
     ],
     grpc: [
       {
@@ -215,15 +253,18 @@ export const bitsong: Chain = {
         address: 'bitsong-grpc.panthea.eu:16750',
         provider: 'Panthea EU',
       },
+      {
+        address: 'grpc.bitsong.mathnodes.com:9092',
+        provider: 'MathNodes',
+      },
     ],
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/bitsong',
-      tx_page: 'https://app.ezstaking.io/bitsong/txs/${txHash}',
-      account_page:
-        'https://app.ezstaking.io/bitsong/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/bitsong',
+      tx_page: 'https://ezstaking.app/bitsong/txs/${txHash}',
+      account_page: 'https://ezstaking.app/bitsong/account/${accountAddress}',
     },
     {
       kind: 'ping.pub',
@@ -297,6 +338,10 @@ export const bitsongAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bitsong/images/btsg.svg',
         },
       ],
+      socials: {
+        webiste: 'https://bitsong.io/',
+        twitter: 'https://twitter.com/BitSongOfficial',
+      },
     },
     {
       description: 'Adam Clay a BitSong Music FanToken',

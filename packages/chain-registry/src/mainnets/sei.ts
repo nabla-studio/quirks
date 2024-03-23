@@ -33,15 +33,15 @@ export const sei: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sei-protocol/sei-chain',
-    recommended_version: 'v3.7.0',
-    compatible_versions: ['v3.7.0'],
+    recommended_version: 'v3.8.2',
+    compatible_versions: ['v3.8.0', 'v3.8.2'],
     ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
-    cosmos_sdk_version: 'sei-cosmos v0.2.74',
+    cosmos_sdk_version: 'sei-cosmos v0.2.77',
     consensus: {
       type: 'sei-tendermint',
-      version: 'v0.2.37',
+      version: 'v0.2.39',
     },
-    cosmwasm_version: 'sei-wasmd v0.0.4',
+    cosmwasm_version: 'sei-wasmd v0.0.8',
     cosmwasm_enabled: true,
     cosmwasm_path: '$HOME/.sei/wasm',
     genesis: {
@@ -159,6 +159,23 @@ export const sei: Chain = {
           version: 'v0.2.37',
         },
         cosmwasm_version: 'sei-wasmd v0.0.4',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.sei/wasm',
+        next_version_name: 'v3.8.0',
+      },
+      {
+        name: 'v3.8.0',
+        proposal: 53,
+        height: 64851894,
+        recommended_version: 'v3.8.2',
+        compatible_versions: ['v3.8.0', 'v3.8.2'],
+        ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
+        cosmos_sdk_version: 'sei-cosmos v0.2.77',
+        consensus: {
+          type: 'sei-tendermint',
+          version: 'v0.2.39',
+        },
+        cosmwasm_version: 'sei-wasmd v0.0.8',
         cosmwasm_enabled: true,
         cosmwasm_path: '$HOME/.sei/wasm',
         next_version_name: '',
@@ -319,6 +336,12 @@ export const sei: Chain = {
       account_page: 'https://www.mintscan.io/sei/accounts/${accountAddress}',
     },
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/sei',
+      tx_page: 'https://ezstaking.app/sei/txs/${txHash}',
+      account_page: 'https://ezstaking.app/sei/account/${accountAddress}',
+    },
+    {
       kind: 'seiscan',
       url: 'https://www.seiscan.app/pacific-1',
       tx_page: 'https://www.seiscan.app/pacific-1/txs/${txHash}',
@@ -365,6 +388,10 @@ export const seiAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/sei.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.sei.io/',
+        twitter: 'https://twitter.com/SeiNetwork',
+      },
     },
     {
       description:
@@ -510,12 +537,67 @@ export const seiAssetList: AssetLists = {
             base_denom:
               'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
           },
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
         },
       ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
       },
+    },
+    {
+      description:
+        'OOZARU is a meme token on SEI Network inspired by the iconic transformation in the Dragon Ball series',
+      denom_units: [
+        {
+          denom:
+            'sei1wlf9j5uv50rcg0u5j6xk00px5tflptzprj39keck27eg8g7qd7hqq6kvda',
+          exponent: 0,
+        },
+        {
+          denom: 'oozaru',
+          exponent: 6,
+        },
+      ],
+      base: 'sei1wlf9j5uv50rcg0u5j6xk00px5tflptzprj39keck27eg8g7qd7hqq6kvda',
+      name: 'Oozaru',
+      display: 'oozaru',
+      symbol: 'OOZARU',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/oozaru.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/oozaru.png',
+        },
+      ],
+    },
+    {
+      description: 'The Original Meme Coin of SEI Network',
+      type_asset: 'cw20',
+      address: 'sei1hrndqntlvtmx2kepr0zsfgr7nzjptcc72cr4ppk4yav58vvy7v3s4er8ed',
+      denom_units: [
+        {
+          denom:
+            'cw20:sei1hrndqntlvtmx2kepr0zsfgr7nzjptcc72cr4ppk4yav58vvy7v3s4er8ed',
+          exponent: 0,
+        },
+        {
+          denom: 'SEIYAN',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:sei1hrndqntlvtmx2kepr0zsfgr7nzjptcc72cr4ppk4yav58vvy7v3s4er8ed',
+      name: 'SEIYAN',
+      display: 'SEIYAN',
+      symbol: 'SEIYAN',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/SEIYAN.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sei/images/SEIYAN.png',
+        },
+      ],
     },
   ],
 };

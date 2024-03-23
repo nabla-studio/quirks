@@ -31,11 +31,11 @@ export const sifchain: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Sifchain/sifnode.git',
-    recommended_version: 'v1.0.14-beta',
-    compatible_versions: ['v1.0.14-beta'],
+    recommended_version: 'v1.2.0-beta',
+    compatible_versions: ['v1.2.0-beta'],
     binaries: {
       'linux/amd64':
-        'https://github.com/Sifchain/sifnode/releases/download/v1.0.14-beta/sifnoded-v1.0.14-beta-linux-amd64.zip',
+        'https://github.com/Sifchain/sifnode/releases/download/v1.2.0-beta/sifnoded-v1.2.0-beta-linux-amd64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -44,12 +44,39 @@ export const sifchain: Chain = {
     versions: [
       {
         name: 'v1.0.14-beta',
+        proposal: 132,
+        height: 9263818,
         recommended_version: 'v1.0.14-beta',
         compatible_versions: ['v1.0.14-beta'],
         binaries: {
           'linux/amd64':
             'https://github.com/Sifchain/sifnode/releases/download/v1.0.14-beta/sifnoded-v1.0.14-beta-linux-amd64.zip',
         },
+        next_version_name: 'v1.1.0-beta',
+      },
+      {
+        name: 'v1.1.0-beta',
+        proposal: 141,
+        height: 9663352,
+        recommended_version: 'v1.1.0-beta',
+        compatible_versions: ['v1.1.0-beta'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Sifchain/sifnode/releases/download/v1.1.0-beta/sifnoded-v1.1.0-beta-linux-amd64.zip',
+        },
+        next_version_name: 'v1.2.0-beta',
+      },
+      {
+        name: 'v1.2.0-beta',
+        proposal: 144,
+        height: 14556000,
+        recommended_version: 'v1.2.0-beta',
+        compatible_versions: ['v1.2.0-beta'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Sifchain/sifnode/releases/download/v1.2.0-beta/sifnoded-v1.2.0-beta-linux-amd64.tar.gz',
+        },
+        next_version_name: '',
       },
     ],
   },
@@ -106,10 +133,6 @@ export const sifchain: Chain = {
         provider: 'Polkachu',
       },
       {
-        address: 'https://rpc-sifchain-ia.cosmosia.notional.ventures/',
-        provider: 'Notional',
-      },
-      {
         address: 'https://sifchain-mainnet-rpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -138,10 +161,6 @@ export const sifchain: Chain = {
     ],
     grpc: [
       {
-        address: 'grpc-sifchain-ia.cosmosia.notional.ventures:443',
-        provider: 'Notional',
-      },
-      {
         address: 'sifchain-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -157,21 +176,9 @@ export const sifchain: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/sifchain',
-      tx_page: 'https://app.ezstaking.io/sifchain/txs/${txHash}',
-      account_page:
-        'https://app.ezstaking.io/sifchain/account/${accountAddress}',
-    },
-    {
       kind: 'ping.pub',
       url: 'https://ping.pub/sifchain',
       tx_page: 'https://ping.pub/sifchain/tx/${txHash}',
-    },
-    {
-      kind: 'explorers.guru',
-      url: 'https://sifchain.explorers.guru',
-      tx_page: 'https://sifchain.explorers.guru/transaction/${txHash}',
     },
     {
       kind: 'atomscan',
