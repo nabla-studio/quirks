@@ -330,6 +330,12 @@ export const terra: Chain = {
   },
   explorers: [
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/terra',
+      tx_page: 'https://ezstaking.app/terra/txs/${txHash}',
+      account_page: 'https://ezstaking.app/terra/account/${accountAddress}',
+    },
+    {
       kind: 'ping.pub',
       url: 'https://ping.pub/terra-luna',
       tx_page: 'https://ping.pub/terra-luna/tx/${txHash}',
@@ -2953,14 +2959,32 @@ export const terraAssetList: AssetLists = {
       name: 'Astroport Token',
       display: 'astro',
       symbol: 'ASTRO',
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/astro.png',
-      },
-      images: [
+      traces: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/astro.png',
+          type: 'additional-mintage',
+          counterparty: {
+            chain_name: 'terra2',
+            base_denom:
+              'cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26',
+          },
+          provider: 'Astroport',
         },
       ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'terra2',
+            base_denom:
+              'cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
+      },
     },
     {
       denom_units: [

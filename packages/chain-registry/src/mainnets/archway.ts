@@ -36,17 +36,17 @@ export const archway: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/archway-network/archway',
-    recommended_version: 'v4.0.3',
-    compatible_versions: ['v4.0.3'],
+    recommended_version: 'v6.0.2',
+    compatible_versions: ['v6.0.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_linux_amd64',
+        'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_linux_amd64',
       'linux/arm64':
-        'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_linux_arm64',
+        'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_linux_arm64',
       'darwin/amd64':
-        'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_darwin_amd64',
+        'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_darwin_amd64',
       'darwin/arm64':
-        'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_darwin_arm64',
+        'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_darwin_arm64',
     },
     cosmos_sdk_version: 'v0.45.16',
     consensus: {
@@ -132,6 +132,33 @@ export const archway: Chain = {
             'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_darwin_amd64',
           'darwin/arm64':
             'https://github.com/archway-network/archway/releases/download/v4.0.3/archwayd_darwin_arm64',
+        },
+        next_version_name: 'v6.0.0',
+      },
+      {
+        name: 'v6.0.0',
+        recommended_version: 'v6.0.2',
+        compatible_versions: ['v6.0.2'],
+        proposal: 38,
+        height: 3554500,
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmos_sdk_version: 'v0.47.10',
+        cosmwasm_version: 'archway-network/archway-wasmd v0.45.0-archway',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.3.0',
+        cosmwasm_path: '$HOME/.archway/data/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_linux_amd64',
+          'linux/arm64':
+            'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_linux_arm64',
+          'darwin/amd64':
+            'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_darwin_amd64',
+          'darwin/arm64':
+            'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_darwin_arm64',
         },
         next_version_name: '',
       },
@@ -239,10 +266,6 @@ export const archway: Chain = {
       {
         address: 'https://rpc.mainnet.archway.io',
         provider: 'Archway Foundation',
-      },
-      {
-        address: 'https://rpc-archway.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
       },
       {
         address: 'https://archway-mainnet-archive.allthatnode.com:26657',
@@ -373,10 +396,6 @@ export const archway: Chain = {
       {
         address: 'https://archway.api.kjnodes.com',
         provider: 'kjnodes',
-      },
-      {
-        address: 'https://api-archway.cosmos-spaces.cloud',
-        provider: 'Cosmos Spaces',
       },
       {
         address: 'https://api-archway.cryptech.com.ua',
@@ -525,10 +544,6 @@ export const archway: Chain = {
         provider: 'StakeUp',
       },
       {
-        address: 'grpc-archway.cosmos-spaces.cloud:4820',
-        provider: 'Cosmos Spaces',
-      },
-      {
         address: 'grpc-archway-mainnet.testnet-pride.com:9096',
         provider: 'TestnetPride',
       },
@@ -600,6 +615,12 @@ export const archway: Chain = {
       tx_page: 'https://bigdipper.live/archway/transactions/${txHash}',
       account_page: 'https://bigdipper.live/archway/accounts/${accountAddress}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/archway',
+      tx_page: 'https://ezstaking.app/archway/txs/${txHash}',
+      account_page: 'https://ezstaking.app/archway/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -644,6 +665,10 @@ export const archwayAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/archway.svg',
         },
       ],
+      socials: {
+        webiste: 'https://archway.io/',
+        twitter: 'https://twitter.com/archwayHQ',
+      },
     },
     {
       description: 'ERIS liquid staked ARCH',
@@ -714,11 +739,11 @@ export const archwayAssetList: AssetLists = {
             base_denom:
               'factory/osmo1pfyxruwvtwk00y8z06dh2lqjdj82ldvy74wzm3/WOSMO',
           },
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
         },
       ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/WOSMO.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/wosmo.png',
       },
     },
     {
@@ -768,6 +793,38 @@ export const archwayAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/vidulum/images/vdl.svg',
         },
       ],
+    },
+    {
+      description: 'Astrovault AXV',
+      type_asset: 'cw20',
+      address:
+        'archway1ecjefhcf8r60wtfnhwefrxhj9caeqa90fj58cqsaafqveawn6cjs5znd2n',
+      denom_units: [
+        {
+          denom:
+            'cw20:archway1ecjefhcf8r60wtfnhwefrxhj9caeqa90fj58cqsaafqveawn6cjs5znd2n',
+          exponent: 0,
+        },
+        {
+          denom: 'AXV',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:archway1ecjefhcf8r60wtfnhwefrxhj9caeqa90fj58cqsaafqveawn6cjs5znd2n',
+      name: 'Astrovault AXV',
+      display: 'AXV',
+      symbol: 'AXV',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/axv.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/axv.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/axv.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/archway/images/axv.svg',
+        },
+      ],
+      coingecko_id: 'astrovault',
     },
   ],
 };

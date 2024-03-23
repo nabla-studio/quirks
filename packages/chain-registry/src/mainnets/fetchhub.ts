@@ -156,7 +156,7 @@ export const fetchhub: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://fetch-rpc.highstakes.ch:26657/',
+        address: 'https://fetch-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -210,7 +210,7 @@ export const fetchhub: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://fetch-api.highstakes.ch:1317/',
+        address: 'https://fetch-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -264,6 +264,12 @@ export const fetchhub: Chain = {
       tx_page: 'https://www.mintscan.io/fetchai/transactions/${txHash}',
       account_page:
         'https://www.mintscan.io/fetchai/accounts/${accountAddress}',
+    },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/fetchhub',
+      tx_page: 'https://ezstaking.app/fetchhub/txs/${txHash}',
+      account_page: 'https://ezstaking.app/fetchhub/account/${accountAddress}',
     },
     {
       kind: 'bigdipper',

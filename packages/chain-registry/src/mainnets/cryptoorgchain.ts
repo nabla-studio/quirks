@@ -218,6 +218,12 @@ export const cryptoorgchain: Chain = {
         'https://www.mintscan.io/crypto-org/accounts/${accountAddress}',
     },
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/cronos',
+      tx_page: 'https://ezstaking.app/cronos/txs/${txHash}',
+      account_page: 'https://ezstaking.app/cronos/account/${accountAddress}',
+    },
+    {
       kind: 'cronos.org',
       url: 'https://cronos-pos.org/explorer',
       tx_page: 'https://cronos-pos.org/explorer/tx/${txHash}',
@@ -280,6 +286,10 @@ export const cryptoorgchainAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cronos/images/cronos.png',
         },
       ],
+      socials: {
+        webiste: 'https://cronos.org/',
+        twitter: 'https://twitter.com/cronos_chain',
+      },
     },
   ],
 };

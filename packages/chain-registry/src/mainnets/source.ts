@@ -33,8 +33,8 @@ export const source: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Source-Protocol-Cosmos/source',
-    recommended_version: 'v3.0.0',
-    compatible_versions: ['v3.0.0'],
+    recommended_version: 'v3.0.1',
+    compatible_versions: ['v3.0.1'],
     cosmos_sdk_version: '0.45',
     consensus: {
       type: 'tendermint',
@@ -49,8 +49,8 @@ export const source: Chain = {
     versions: [
       {
         name: 'v3.0.0',
-        recommended_version: 'v3.0.0',
-        compatible_versions: ['v3.0.0'],
+        recommended_version: 'v3.0.1',
+        compatible_versions: ['v3.0.1'],
         cosmos_sdk_version: '0.45',
         consensus: {
           type: 'tendermint',
@@ -144,6 +144,11 @@ export const source: Chain = {
         address: 'p2p-pve01.roomit.xyz:16602',
         provider: 'RoomIT',
       },
+      {
+        id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
+        address: 'source.declab.pro:26606',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   apis: {
@@ -203,6 +208,10 @@ export const source: Chain = {
       {
         address: 'https://rpc.source.posthuman.digital',
         provider: 'posthuman',
+      },
+      {
+        address: 'https://source.declab.pro:26604',
+        provider: 'Decloud Nodes Lab',
       },
     ],
     rest: [
@@ -264,7 +273,11 @@ export const source: Chain = {
       },
       {
         address: 'http://source.api.staking-explorer.com',
-        provider: 'Daily $SOURCE DROP 💰',
+        provider: 'Daily DROP',
+      },
+      {
+        address: 'https://source.declab.pro:443',
+        provider: 'Decloud Nodes Lab',
       },
     ],
     grpc: [
@@ -311,6 +324,10 @@ export const source: Chain = {
       {
         address: 'grpc.source.roomit.xyz:8443',
         provider: 'RoomIT',
+      },
+      {
+        address: 'https://source.declab.pro:9003',
+        provider: 'Decloud Nodes Lab',
       },
     ],
   },
@@ -372,6 +389,13 @@ export const source: Chain = {
       account_page:
         'https://explorer.posthuman.digital/source/account/${accountAddress}',
     },
+    {
+      kind: 'Decloud Nodes Lab',
+      url: 'https://explorer.declab.pro/Source',
+      tx_page: 'https://explorer.declab.pro/Source/tx/${txHash}',
+      account_page:
+        'https://explorer.declab.pro/Source/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -391,6 +415,8 @@ export const sourceAssetList: AssetLists = {
   assets: [
     {
       description: 'The native token of SOURCE Chain',
+      extended_description:
+        "Enterprises, developers, and individuals are empowered to use SOURCE's sustainable and value backed network to easily access, build, and integrate web3 applications and services.",
       denom_units: [
         {
           denom: 'usource',
@@ -416,6 +442,10 @@ export const sourceAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/source/images/source.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.sourceprotocol.io/',
+        twitter: 'https://twitter.com/sourceprotocol_',
+      },
     },
     {
       description:

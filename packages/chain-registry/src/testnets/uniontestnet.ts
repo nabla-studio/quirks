@@ -5,7 +5,7 @@ export const uniontestnet: Chain = {
   chain_name: 'uniontestnet',
   status: 'live',
   network_type: 'testnet',
-  pretty_name: 'union Testnet',
+  pretty_name: 'Union',
   chain_id: 'union-testnet-6',
   bech32_prefix: 'union',
   daemon_name: 'uniond',
@@ -33,18 +33,14 @@ export const uniontestnet: Chain = {
   peers: {
     seeds: [
       {
-        id: 'f1d2674dc111d99dae4638234c502f4a4aaf8270',
-        address: 'union.testnet.4.val.poisonphang.com:2665',
+        id: 'b37de4c50e26f7cde4c7b6ce06046a6693ffef2c',
+        address: 'union.testnet.6.seed.poisonphang.com:26656',
         provider: '',
       },
     ],
   },
   apis: {
     rpc: [
-      {
-        address: 'https://rpc.cryptware.io',
-        provider: 'cryptware',
-      },
       {
         address: 'https://union-testnet-rpc.polkachu.com',
         provider: 'Polkachu',
@@ -60,10 +56,6 @@ export const uniontestnet: Chain = {
     ],
     rest: [
       {
-        address: 'https://api.cryptware.io',
-        provider: 'cryptware',
-      },
-      {
         address: 'https://union-testnet-api.polkachu.com',
         provider: 'Polkachu',
       },
@@ -77,10 +69,6 @@ export const uniontestnet: Chain = {
       },
     ],
     grpc: [
-      {
-        address: 'https://grpc.cryptware.io',
-        provider: 'cryptware',
-      },
       {
         address: 'http://union-testnet-grpc.polkachu.com:24690',
         provider: 'Polkachu',
@@ -96,21 +84,28 @@ export const uniontestnet: Chain = {
     ],
   },
   logo_URIs: {
-    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/union/images/union.png',
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/uniontestnet/images/union.png',
   },
   explorers: [
     {
       kind: 'ping.pub',
-      url: 'https://explorer.cryptware.io/union',
-      tx_page: 'https://explorer.cryptware.io/union/tx/${txHash}',
+      url: 'https://testnet.bonlulu.uno/union',
+      tx_page: 'https://testnet.bonlulu.uno/union/tx/${txHash}',
       account_page:
-        'https://explorer.cryptware.io/union/account/${accountAddress}',
+        'https://testnet.bonlulu.uno/union/account/${accountAddress}',
+    },
+    {
+      kind: 'explorers.guru',
+      url: 'https://testnet.union.explorers.guru',
+      tx_page: 'https://testnet.union.explorers.guru/transaction/${txHash}',
+      account_page:
+        'https://testnet.union.explorers.guru/account/${accountAddress}',
     },
   ],
   keywords: ['testnet'],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/union/images/union.png',
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/uniontestnet/images/union.png',
     },
   ],
 };
@@ -120,7 +115,7 @@ export const uniontestnetAssetList: AssetLists = {
   chain_name: 'uniontestnet',
   assets: [
     {
-      description: 'The native token of union',
+      description: 'Union native token',
       denom_units: [
         {
           denom: 'muno',
@@ -134,17 +129,17 @@ export const uniontestnetAssetList: AssetLists = {
         },
       ],
       base: 'muno',
-      name: 'union',
+      name: 'Union',
       display: 'union',
-      symbol: 'UNION',
+      symbol: 'UNO',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/union/images/union.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/uniontestnet/images/union.png',
       },
-      coingecko_id: 'unionlabs',
+      coingecko_id: '',
       keywords: ['staking'],
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/union/images/union.png',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/uniontestnet/images/union.png',
         },
       ],
     },

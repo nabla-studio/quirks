@@ -1,10 +1,10 @@
 import type { Chain, AssetLists, ChainVersions } from '../types';
 
-export const sgetestnet: Chain = {
-  $schema: '../chain.schema.json',
-  chain_name: 'sgetestnet',
-  chain_id: 'sge-network-3',
-  pretty_name: 'SGE Testnet',
+export const sgetestnet4: Chain = {
+  $schema: '../../chain.schema.json',
+  chain_name: 'sgetestnet4',
+  chain_id: 'sge-network-4',
+  pretty_name: 'SGE Testnet4',
   status: 'live',
   network_type: 'testnet',
   website: 'sgenetwork.io',
@@ -23,7 +23,7 @@ export const sgetestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sge-network/sge',
-    recommended_version: 'v1.0.1',
+    recommended_version: 'v1.1.1',
     compatible_versions: ['v1.0.1'],
   },
   peers: {
@@ -70,11 +70,6 @@ export const sgetestnet: Chain = {
         address: '65.108.15.170:26656',
         provider: 'ramuchi.tech',
       },
-      {
-        id: 'e2c5f2a902b7e6b8c006008e962ab4ddd70cdd78',
-        address: 'sge.peers-t.stavr.tech:1146',
-        provider: '🔥STAVR🔥',
-      },
     ],
   },
   apis: {
@@ -95,10 +90,6 @@ export const sgetestnet: Chain = {
         address: 'https://rpc-t.sge.nodestake.top/',
         provider: 'Nodestake.top',
       },
-      {
-        address: 'https://sge.rpc.t.stavr.tech:443',
-        provider: '🔥STAVR🔥',
-      },
     ],
     rest: [
       {
@@ -113,10 +104,6 @@ export const sgetestnet: Chain = {
         address: 'https://saage-testnet-api.polkachu.com/',
         provider: 'Polkachu',
       },
-      {
-        address: 'https://sge.api.t.stavr.tech',
-        provider: '🔥STAVR🔥',
-      },
     ],
   },
   explorers: [
@@ -125,13 +112,6 @@ export const sgetestnet: Chain = {
       url: 'https://blockexplorer.testnet.sgenetwork.io/',
       tx_page:
         'https://blockexplorer.testnet.sgenetwork.io/sge-network/tx/${txHash}',
-    },
-    {
-      kind: '🔥STAVR🔥',
-      url: 'https://explorer.stavr.tech/Sge-Testnet',
-      tx_page: 'https://explorer.stavr.tech/Sge-Testnet/tx/${txHash}',
-      account_page:
-        'https://explorer.stavr.tech/Sge-Testnet/account/${accountAddress}',
     },
   ],
   images: [
@@ -149,9 +129,9 @@ export const sgetestnet: Chain = {
   },
 };
 
-export const sgetestnetAssetList: AssetLists = {
+export const sgetestnet4AssetList: AssetLists = {
   $schema: '../../assetlist.schema.json',
-  chain_name: 'sgetestnet',
+  chain_name: 'sgetestnet4',
   assets: [
     {
       description:
@@ -160,24 +140,38 @@ export const sgetestnetAssetList: AssetLists = {
         {
           denom: 'usge',
           exponent: 0,
-          aliases: [],
         },
         {
           denom: 'sge',
           exponent: 6,
-          aliases: [],
         },
       ],
       base: 'usge',
-      name: 'SGE Testnet',
+      name: 'SGE Testnet4',
       display: 'sge',
       symbol: 'SGE',
+      traces: [
+        {
+          type: 'additional-mintage',
+          counterparty: {
+            chain_name: 'sgetestnet',
+            base_denom: 'usge',
+          },
+          provider: 'SGE',
+        },
+      ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sgetestnet/images/sge.png',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sge/images/sge.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sge/images/sge.svg',
       },
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sgetestnet/images/sge.png',
+          image_sync: {
+            chain_name: 'sge',
+            base_denom: 'usge',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sge/images/sge.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sge/images/sge.svg',
         },
       ],
     },

@@ -109,10 +109,10 @@ export const scorum: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/scorum',
-      tx_page: 'https://app.ezstaking.io/scorum/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/scorum/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/scorum',
+      tx_page: 'https://ezstaking.app/scorum/txs/${txHash}',
+      account_page: 'https://ezstaking.app/scorum/account/${accountAddress}',
     },
     {
       kind: 'bigdipper',
@@ -160,6 +160,10 @@ export const scorumAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/scorum/images/scr.svg',
         },
       ],
+      socials: {
+        webiste: 'https://scorum.com',
+        twitter: 'https://twitter.com/scorum_en',
+      },
     },
     {
       description: 'Scorum Power used for internal mechanics and staking',

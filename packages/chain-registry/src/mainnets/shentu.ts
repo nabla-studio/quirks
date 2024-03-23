@@ -207,12 +207,16 @@ export const shentu: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://shentu-rpc.highstakes.ch:26657/',
+        address: 'https://shentu-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
         address: 'https://shentu-rpc.panthea.eu',
         provider: 'Panthea EU',
+      },
+      {
+        address: 'https://shentu-rpc.kleomedes.network',
+        provider: 'Kleomedes',
       },
     ],
     rest: [
@@ -245,12 +249,16 @@ export const shentu: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://shentu-api.highstakes.ch:1317/',
+        address: 'https://shentu-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
         address: 'https://shentu-api.panthea.eu',
         provider: 'Panthea EU',
+      },
+      {
+        address: 'https://shentu-api.kleomedes.network',
+        provider: 'Kleomedes',
       },
     ],
     grpc: [
@@ -286,10 +294,10 @@ export const shentu: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/shentu',
-      tx_page: 'https://app.ezstaking.io/shentu/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/shentu/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/shentu',
+      tx_page: 'https://ezstaking.app/shentu/txs/${txHash}',
+      account_page: 'https://ezstaking.app/shentu/account/${accountAddress}',
     },
     {
       kind: '🔥STAVR🔥',

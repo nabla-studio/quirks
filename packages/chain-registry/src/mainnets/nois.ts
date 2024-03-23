@@ -197,6 +197,10 @@ export const nois: Chain = {
         address: 'https://nois-rpc.stakeandrelax.net',
         provider: 'Stake&Relax 🦥',
       },
+      {
+        address: 'https://rpc.nois.cumulo.org.es',
+        provider: 'Cumulo',
+      },
     ],
     grpc: [
       {
@@ -267,6 +271,10 @@ export const nois: Chain = {
         address: 'nois-grpc.stakeandrelax.net:17390',
         provider: 'Stake&Relax 🦥',
       },
+      {
+        address: 'grpc.nois.cumulo.org.es:443',
+        provider: 'Cumulo',
+      },
     ],
     rest: [
       {
@@ -321,14 +329,18 @@ export const nois: Chain = {
         address: 'https://nois-api.stakeandrelax.net',
         provider: 'Stake&Relax 🦥',
       },
+      {
+        address: 'https://api.nois.cumulo.org.es',
+        provider: 'Cumulo',
+      },
     ],
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/nois',
-      tx_page: 'https://app.ezstaking.io/nois/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/nois/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/nois',
+      tx_page: 'https://ezstaking.app/nois/txs/${txHash}',
+      account_page: 'https://ezstaking.app/nois/account/${accountAddress}',
     },
     {
       kind: '🔥STAVR🔥',

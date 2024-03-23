@@ -1,14 +1,13 @@
 import type { Chain, AssetLists, ChainVersions } from '../types';
 
-export const odin: Chain = {
+export const odin1: Chain = {
   $schema: '../chain.schema.json',
   chain_name: 'odin',
-  status: 'live',
+  status: 'killed',
   network_type: 'mainnet',
   website: 'https://odinprotocol.io/',
   pretty_name: 'Odin Protocol',
   chain_id: 'odin-mainnet-freya',
-  pre_fork_chain_name: 'odin1',
   bech32_prefix: 'odin',
   daemon_name: 'odind',
   node_home: '$HOME/.odin',
@@ -34,43 +33,17 @@ export const odin: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/ODIN-PROTOCOL/odin-core',
-    recommended_version: 'v0.7.11',
-    compatible_versions: ['v0.7.11'],
-    cosmos_sdk_version: 'v0.47.7',
-    consensus: {
-      type: 'cometbft',
-      version: 'v0.37.4',
-    },
-    ibc_go_version: 'v7.3.0',
+    recommended_version: 'v0.6.2',
+    compatible_versions: ['v0.6.2'],
     genesis: {
-      genesis_url: 'https://snapshots.polkachu.com/genesis/odin/genesis.json',
+      genesis_url:
+        'https://raw.githubusercontent.com/ODIN-PROTOCOL/networks/master/mainnets/odin-mainnet-freya/genesis.json',
     },
     versions: [
       {
-        name: 'v0.7.9',
-        recommended_version: 'v0.7.9',
-        compatible_versions: ['v0.7.9'],
-        cosmos_sdk_version: 'v0.47.7',
-        consensus: {
-          type: 'cometbft',
-          version: 'v0.37.4',
-        },
-        ibc_go_version: 'v7.3.0',
-        next_version_name: 'v0.7.11',
-      },
-      {
-        name: 'v0.7.11',
-        proposal: 22,
-        height: 13310888,
-        recommended_version: 'v0.7.11',
-        compatible_versions: ['v0.7.11'],
-        cosmos_sdk_version: 'v0.47.7',
-        consensus: {
-          type: 'cometbft',
-          version: 'v0.37.4',
-        },
-        ibc_go_version: 'v7.3.0',
-        next_version_name: '',
+        name: 'v0.6.2',
+        recommended_version: 'v0.6.2',
+        compatible_versions: ['v0.6.2'],
       },
     ],
   },
@@ -89,16 +62,6 @@ export const odin: Chain = {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'odin-mainnet-seed.autostake.com:26766',
         provider: 'AutoStake.net',
-      },
-      {
-        id: '9a5b281c2d627cdf362f86721ced61a6228b87d1',
-        address: 'odin.seed.stavr.tech:1116',
-        provider: '🔥STAVR🔥',
-      },
-      {
-        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
-        address: 'seed.publicnode.com:26656',
-        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     persistent_peers: [
@@ -132,12 +95,8 @@ export const odin: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc.odinprotocol.io',
-        provider: 'Heimdall Gateway',
-      },
-      {
-        address: 'https://odin.rpc.m.stavr.tech:443',
-        provider: '🔥STAVR🔥',
+        address: 'http://34.79.179.216:26657',
+        provider: 'Odin Protocol',
       },
       {
         address: 'https://odin-rpc.lavenderfive.com/',
@@ -150,12 +109,8 @@ export const odin: Chain = {
     ],
     rest: [
       {
-        address: 'https://api.odinprotocol.io',
-        provider: 'Heimdall Gateway',
-      },
-      {
-        address: 'https://odin.api.m.stavr.tech',
-        provider: '🔥STAVR🔥',
+        address: 'http://34.79.179.216:1317/',
+        provider: 'Odin Protocol',
       },
       {
         address: 'https://odin-api.lavenderfive.com/',
@@ -172,10 +127,6 @@ export const odin: Chain = {
         provider: 'Lavender.Five Nodes 🐝',
       },
       {
-        address: 'odin.grpc.m.stavr.tech:122',
-        provider: '🔥STAVR🔥',
-      },
-      {
         address: 'odin-mainnet-grpc.autostake.com:443',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
@@ -188,11 +139,6 @@ export const odin: Chain = {
       tx_page: 'https://mainnet.odinprotocol.io/transactions/${txHash}',
     },
     {
-      kind: '🔥STAVR🔥',
-      url: 'https://explorer.stavr.tech/Odin-Mainnet',
-      tx_page: 'https://explorer.stavr.tech/Odin-Mainnet/tx/${txHash}',
-    },
-    {
       kind: 'ping.pub',
       url: 'https://ping.pub/odin',
       tx_page: 'https://ping.pub/odin/tx/${txHash}',
@@ -200,18 +146,21 @@ export const odin: Chain = {
   ],
   images: [
     {
+      image_sync: {
+        chain_name: 'odin',
+      },
       png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/odin.png',
       svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/odin.svg',
     },
   ],
 };
 
-export const odinAssetList: AssetLists = {
+export const odin1AssetList: AssetLists = {
   $schema: '../assetlist.schema.json',
   chain_name: 'odin',
   assets: [
     {
-      description: 'ODIN is the Staking and governance token for ODIN Protocol',
+      description: 'Staking and governance token for ODIN Protocol',
       denom_units: [
         {
           denom: 'loki',
@@ -233,14 +182,14 @@ export const odinAssetList: AssetLists = {
       coingecko_id: 'odin-protocol',
       images: [
         {
+          image_sync: {
+            chain_name: 'odin',
+            base_denom: 'loki',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/odin.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/odin.svg',
         },
       ],
-      socials: {
-        webiste: 'https://odinprotocol.io/',
-        twitter: 'https://twitter.com/odinprotocol',
-      },
     },
     {
       description: 'GEO token for ODIN Protocol',
@@ -264,68 +213,14 @@ export const odinAssetList: AssetLists = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'odin',
+            base_denom: 'mGeo',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/geo.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/geo.svg',
         },
       ],
-    },
-    {
-      description: 'DOKI the last Dragon',
-      denom_units: [
-        {
-          denom: 'udoki',
-          exponent: 0,
-        },
-        {
-          denom: 'doki',
-          exponent: 6,
-        },
-      ],
-      base: 'udoki',
-      name: 'DOKI',
-      display: 'doki',
-      symbol: 'DOKI',
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/doki_Logo.png',
-      },
-      coingecko_id: 'doki',
-      images: [
-        {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/doki_Logo.png',
-        },
-      ],
-      socials: {
-        webiste: 'https://dokicoin.io/',
-        twitter: 'https://twitter.com/doki_coin',
-      },
-    },
-    {
-      description: 'Myrkur the leader of OLD Order',
-      denom_units: [
-        {
-          denom: 'umyrk',
-          exponent: 0,
-        },
-        {
-          denom: 'myrk',
-          exponent: 6,
-        },
-      ],
-      base: 'umyrk',
-      name: 'MYRK',
-      display: 'myrk',
-      symbol: 'MYRK',
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/MYRK_Logo.png',
-      },
-      images: [
-        {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/MYRK_Logo.png',
-        },
-      ],
-      socials: {
-        twitter: 'https://twitter.com/myrkweilds',
-      },
     },
     {
       description: 'O9W token for ODIN Protocol',
@@ -349,14 +244,14 @@ export const odinAssetList: AssetLists = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'odin',
+            base_denom: 'mO9W',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/o9w.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/odin/images/o9w.svg',
         },
       ],
-      socials: {
-        webiste: 'https://www.odin9worlds.io/',
-        twitter: 'https://twitter.com/odin9worlds',
-      },
     },
   ],
 };

@@ -289,6 +289,11 @@ export const gitopia: Chain = {
         address: 'peer-gitopia.tothemars.network:21156',
         provider: 'ToTheMars',
       },
+      {
+        id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
+        address: 'gitopia.declab.pro:26627',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   apis: {
@@ -408,6 +413,10 @@ export const gitopia: Chain = {
       {
         address: 'https://gitopia-rpc.tothemars.network:443',
         provider: 'ToTheMars',
+      },
+      {
+        address: 'https://gitopia.declab.pro:26625',
+        provider: 'Decloud Nodes Lab',
       },
     ],
     rest: [
@@ -531,6 +540,10 @@ export const gitopia: Chain = {
         address: 'https://gitopia-api.tothemars.network:443',
         provider: 'ToTheMars',
       },
+      {
+        address: 'https://gitopia.declab.pro:443',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     grpc: [
       {
@@ -645,6 +658,10 @@ export const gitopia: Chain = {
         address: 'gitopia-grpc.tothemars.network:21190',
         provider: 'ToTheMars',
       },
+      {
+        address: 'https://gitopia.declab.pro:9017',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   explorers: [
@@ -750,6 +767,13 @@ export const gitopia: Chain = {
       account_page:
         'https://explorer.tothemars.network/gitopia/account/${accountAddress}',
     },
+    {
+      kind: 'Decloud Nodes Lab',
+      url: 'https://explorer.declab.pro/Gitopia',
+      tx_page: 'https://explorer.declab.pro/Gitopia/tx/${txHash}',
+      account_page:
+        'https://explorer.declab.pro/Gitopia/account/${accountAddress}',
+    },
   ],
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gitopia/images/gitopia.png',
@@ -790,6 +814,10 @@ export const gitopiaAssetList: AssetLists = {
         },
       ],
       coingecko_id: 'gitopia',
+      socials: {
+        webiste: 'https://gitopia.com/',
+        twitter: 'https://twitter.com/gitopiaDAO',
+      },
     },
   ],
 };

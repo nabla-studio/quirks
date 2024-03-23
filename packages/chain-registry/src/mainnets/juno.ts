@@ -41,11 +41,11 @@ export const juno: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/CosmosContracts/juno',
-    recommended_version: 'v20.0.0',
-    compatible_versions: ['v20.0.0'],
+    recommended_version: 'v21.0.0',
+    compatible_versions: ['v21.0.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/CosmosContracts/juno/releases/download/v20.0.0/junod',
+        'https://github.com/CosmosContracts/juno/releases/download/v21.0.0/junod',
     },
     cosmos_sdk_version: 'v0.47.6',
     consensus: {
@@ -197,6 +197,26 @@ export const juno: Chain = {
         cosmwasm_version: 'v0.45.0',
         cosmwasm_enabled: true,
         ibc_go_version: 'v7.3.1',
+        next_version_name: 'v21',
+      },
+      {
+        name: 'v21',
+        proposal: 340,
+        height: 14556500,
+        recommended_version: 'v21.0.0',
+        compatible_versions: ['v21.0.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CosmosContracts/juno/releases/download/v21.0.0/junod',
+        },
+        cosmos_sdk_version: 'v0.47.6',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.3.1',
         next_version_name: '',
       },
     ],
@@ -293,6 +313,11 @@ export const juno: Chain = {
         id: '77c33f62d34c20a0e795240f4548ab741ea558d9',
         address: '138.201.21.121:24956',
         provider: 'Validatrium',
+      },
+      {
+        id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
+        address: 'juno.declab.pro:26612',
+        provider: 'Decloud Nodes Lab',
       },
     ],
   },
@@ -406,6 +431,10 @@ export const juno: Chain = {
         address: 'https://juno-rpc.cogwheel.zone',
         provider: 'Cogwheel',
       },
+      {
+        address: 'https://juno.declab.pro:26610',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     rest: [
       {
@@ -504,6 +533,14 @@ export const juno: Chain = {
         address: 'https://juno-api.cogwheel.zone',
         provider: 'Cogwheel',
       },
+      {
+        address: 'https://juno.declab.pro:443',
+        provider: 'Decloud Nodes Lab',
+      },
+      {
+        address: 'http://juno.api.staking-explorer.com',
+        provider: 'Daily DROP',
+      },
     ],
     grpc: [
       {
@@ -582,14 +619,18 @@ export const juno: Chain = {
         address: 'juno-grpc.cogwheel.zone:443',
         provider: 'Cogwheel',
       },
+      {
+        address: 'https://juno.declab.pro:9007',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/juno',
-      tx_page: 'https://app.ezstaking.io/juno/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/juno/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/juno',
+      tx_page: 'https://ezstaking.app/juno/txs/${txHash}',
+      account_page: 'https://ezstaking.app/juno/account/${accountAddress}',
     },
     {
       kind: 'ping.pub',
@@ -629,6 +670,11 @@ export const juno: Chain = {
       kind: 'Stakeflow',
       url: 'https://stakeflow.io/juno',
       account_page: 'https://stakeflow.io/juno/accounts/${accountAddress}',
+    },
+    {
+      kind: 'Decloud Nodes Lab',
+      url: 'https://explorer.declab.pro/Juno',
+      tx_page: 'https://explorer.declab.pro/Juno/tx/${txHash}',
     },
   ],
   images: [
@@ -670,6 +716,10 @@ export const junoAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/juno.svg',
         },
       ],
+      socials: {
+        webiste: 'https://junonetwork.io/',
+        twitter: 'https://twitter.com/JunoNetwork',
+      },
     },
     {
       denom_units: [
@@ -2810,6 +2860,67 @@ export const junoAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hera.png',
         },
       ],
+    },
+    {
+      type_asset: 'sdk.coin',
+      denom_units: [
+        {
+          denom:
+            'factory/juno1vwmnqk0vyxc96qgffrure4nqxupjrql0zut8s02hadgp0n79r8xq5xdsxy/ARENA',
+          exponent: 0,
+        },
+        {
+          denom: 'arena',
+          exponent: 6,
+        },
+      ],
+      address:
+        'juno1vwmnqk0vyxc96qgffrure4nqxupjrql0zut8s02hadgp0n79r8xq5xdsxy',
+      base: 'factory/juno1vwmnqk0vyxc96qgffrure4nqxupjrql0zut8s02hadgp0n79r8xq5xdsxy/ARENA',
+      name: 'Arena Token',
+      description: 'The token for the Arena DAO',
+      display: 'arena',
+      symbol: 'ARENA',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.svg',
+      },
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.png',
+        },
+      ],
+    },
+    {
+      description: 'BackBone Labs Liquid Staked JUNO',
+      type_asset: 'cw20',
+      address:
+        'juno1mvkgcr5uce2rnpzr4qrzf50hx4qreuwzlt7fzsjrhjud3xnjmttq5mkh2m',
+      denom_units: [
+        {
+          denom:
+            'cw20:juno1mvkgcr5uce2rnpzr4qrzf50hx4qreuwzlt7fzsjrhjud3xnjmttq5mkh2m',
+          exponent: 0,
+        },
+        {
+          denom: 'bJUNO',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:juno1mvkgcr5uce2rnpzr4qrzf50hx4qreuwzlt7fzsjrhjud3xnjmttq5mkh2m',
+      name: 'BackBone Labs Liquid Staked JUNO',
+      display: 'bJUNO',
+      symbol: 'bJUNO',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/bJUNO-bbl.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/bJUNO-bbl.png',
+        },
+      ],
+      coingecko_id: 'backbone-labs-staked-juno',
     },
   ],
 };

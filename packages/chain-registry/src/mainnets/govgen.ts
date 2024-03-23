@@ -230,6 +230,10 @@ export const govgen: Chain = {
         address: 'https://govgen-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://rpc.govgen.posthuman.digital:443',
+        provider: 'posthuman',
+      },
     ],
     rest: [
       {
@@ -248,6 +252,10 @@ export const govgen: Chain = {
         address: 'https://govgen-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://rest.govgen.posthuman.digital:443',
+        provider: 'posthuman',
+      },
     ],
     grpc: [
       {
@@ -257,6 +265,10 @@ export const govgen: Chain = {
       {
         address: 'https://govgen.grpc.nodeshub.online:443',
         provider: 'Nodes Hub',
+      },
+      {
+        address: 'https://grpc.govgen.posthuman.digital:443',
+        provider: 'posthuman',
       },
     ],
   },
@@ -288,6 +300,13 @@ export const govgen: Chain = {
       tx_page: 'https://test.explorer.ist/govgen/tx/${txHash}',
       account_page:
         'https://test.explorer.ist/govgen/account/${accountAddress}',
+    },
+    {
+      kind: 'posthuman',
+      url: 'https://explorer.posthuman.digital/govgen',
+      tx_page: 'https://explorer.posthuman.digital/govgen/tx/${txHash}',
+      account_page:
+        'https://explorer.posthuman.digital/govgen/account/${accountAddress}',
     },
   ],
   images: [

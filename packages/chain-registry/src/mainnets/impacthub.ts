@@ -168,10 +168,10 @@ export const impacthub: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/ixo',
-      tx_page: 'https://app.ezstaking.io/ixo/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/ixo/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/ixo',
+      tx_page: 'https://ezstaking.app/ixo/txs/${txHash}',
+      account_page: 'https://ezstaking.app/ixo/account/${accountAddress}',
     },
     {
       kind: '🔥STAVR🔥',

@@ -33,14 +33,23 @@ export const axelar: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/axelarnetwork/axelar-core',
-    recommended_version: 'v0.34.0',
-    compatible_versions: ['v0.34.0'],
+    recommended_version: 'v0.35.5',
+    compatible_versions: ['v0.35.5'],
     binaries: {
       'linux/amd64':
-        'https://github.com/axelarnetwork/axelar-core/releases/download/v0.34.0/axelard-linux-amd64-v0.34.0',
+        'https://github.com/axelarnetwork/axelar-core/releases/download/v0.35.5/axelard-linux-amd64-v0.35.5',
       'darwin/amd64':
-        'https://github.com/axelarnetwork/axelar-core/releases/download/v0.34.0/axelard-darwin-amd64-v0.34.0',
+        'https://github.com/axelarnetwork/axelar-core/releases/download/v0.35.5/axelard-darwin-amd64-v0.35.5',
     },
+    cosmos_sdk_version:
+      'axelarnetwork/cosmos-sdk v0.45.17-0.20230904150332-37fb903a6c62',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.34.31',
+    },
+    ibc_go_version: 'v4.5.1',
+    cosmwasm_version: 'v0.33.0',
+    cosmwasm_enabled: true,
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/resources/mainnet/genesis.json',
@@ -68,6 +77,28 @@ export const axelar: Chain = {
           'darwin/amd64':
             'https://github.com/axelarnetwork/axelar-core/releases/download/v0.34.0/axelard-darwin-amd64-v0.34.0',
         },
+        next_version_name:
+          'v0.35ps://github.com/axelarnetwork/axelar-core/releases/down',
+      },
+      {
+        name: 'v0.35',
+        recommended_version: 'v0.35.5',
+        compatible_versions: ['v0.35.5'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/axelarnetwork/axelar-core/releases/download/v0.35.5/axelard-linux-amd64-v0.35.5',
+          'darwin/amd64':
+            'https://github.com/axelarnetwork/axelar-core/releases/download/v0.35.5/axelard-darwin-amd64-v0.35.5',
+        },
+        cosmos_sdk_version:
+          'axelarnetwork/cosmos-sdk v0.45.17-0.20230904150332-37fb903a6c62',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.31',
+        },
+        ibc_go_version: 'v4.5.1',
+        cosmwasm_version: 'v0.33.0',
+        cosmwasm_enabled: true,
         next_version_name: '',
       },
     ],
@@ -390,6 +421,12 @@ export const axelar: Chain = {
       url: 'https://stakeflow.io/axelar',
       account_page: 'https://stakeflow.io/axelar/accounts/${accountAddress}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/axelar',
+      tx_page: 'https://ezstaking.app/axelar/txs/${txHash}',
+      account_page: 'https://ezstaking.app/axelar/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -430,6 +467,10 @@ export const axelarAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/axl.svg',
         },
       ],
+      socials: {
+        webiste: 'https://axelar.network/',
+        twitter: 'https://twitter.com/axelarnetwork',
+      },
     },
     {
       description: "Circle's stablecoin on Axelar",

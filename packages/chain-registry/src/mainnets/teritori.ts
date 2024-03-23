@@ -309,11 +309,10 @@ export const teritori: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/teritori',
-      tx_page: 'https://app.ezstaking.io/teritori/txs/${txHash}',
-      account_page:
-        'https://app.ezstaking.io/teritori/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/teritori',
+      tx_page: 'https://ezstaking.app/teritori/txs/${txHash}',
+      account_page: 'https://ezstaking.app/teritori/account/${accountAddress}',
     },
     {
       kind: 'ping.pub',
@@ -394,10 +393,6 @@ export const teritoriAssetList: AssetLists = {
       coingecko_id: 'teritori',
       images: [
         {
-          image_sync: {
-            chain_name: 'teritori',
-            base_denom: 'utori',
-          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/teritori/images/utori.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/teritori/images/utori.svg',
         },
@@ -545,6 +540,101 @@ export const teritoriAssetList: AssetLists = {
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.svg',
+        },
+      ],
+    },
+    {
+      description: 'USD Coin',
+      denom_units: [
+        {
+          denom:
+            'ibc/FE98AAD68F02F03565E9FA39A5E627946699B2B07115889ED812D8BA639576A9',
+          exponent: 0,
+        },
+        {
+          denom: 'usdc',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'uusdc',
+      display: 'usdc',
+      name: 'USD Coin',
+      symbol: 'USDC',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'noble',
+            base_denom: 'usdc',
+            channel_id: 'channel-54',
+          },
+          chain: {
+            channel_id: 'channel-62',
+            path: 'transfer/channel-62/uusdc',
+          },
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'noble',
+            base_denom: 'uusdc',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'The native staking and governance token of the Secret chain.',
+      denom_units: [
+        {
+          denom:
+            'ibc/F3F6BDEE1A79664B169D742651107BF4E03FA67E931452E27380B75F5917B7E9',
+          exponent: 0,
+        },
+        {
+          denom: 'scrt',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'uscrt',
+      name: 'Secret Network',
+      display: 'scrt',
+      symbol: 'SCRT',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'secretnetwork',
+            base_denom: 'uscrt',
+            channel_id: 'channel-111',
+          },
+          chain: {
+            channel_id: 'channel-63',
+            path: 'transfer/channel-63/uscrt',
+          },
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'secretnetwork',
+            base_denom: 'uscrt',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.svg',
         },
       ],
     },

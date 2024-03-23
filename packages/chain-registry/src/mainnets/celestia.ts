@@ -33,8 +33,14 @@ export const celestia: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/celestiaorg/celestia-app',
-    recommended_version: 'v1.3.0',
-    compatible_versions: ['v1.3.0'],
+    recommended_version: 'v1.6.0',
+    compatible_versions: ['v1.3.0', 'v1.6.0'],
+    cosmos_sdk_version: 'v0.46.16',
+    ibc_go_version: 'v6.2.1',
+    consensus: {
+      type: 'tendermint',
+      version: 'celestiaorg/celestia-core v1.35.0-tm-v0.34.29',
+    },
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/celestiaorg/networks/master/celestia/genesis.json',
@@ -42,8 +48,15 @@ export const celestia: Chain = {
     versions: [
       {
         name: 'v1.3.0',
-        recommended_version: 'v1.3.0',
-        compatible_versions: ['v1.3.0'],
+        recommended_version: 'v1.6.0',
+        compatible_versions: ['v1.3.0', 'v1.6.0'],
+        cosmos_sdk_version: 'v0.46.16',
+        ibc_go_version: 'v6.2.1',
+        consensus: {
+          type: 'tendermint',
+          version: 'celestiaorg/celestia-core v1.35.0-tm-v0.34.29',
+        },
+        next_version_name: '',
       },
     ],
   },
@@ -80,7 +93,6 @@ export const celestia: Chain = {
         address: 'seed-celestia-01.stakeflow.io:15007',
         provider: 'Stakeflow',
       },
-
       {
         id: 'c809ca6486cd54501ce5291714c892f5dc9cfa93',
         address: 'celestia.seeds.validao.xyz:36656',
@@ -461,6 +473,12 @@ export const celestia: Chain = {
       account_page:
         'https://explorer.theamsolutions.info/celestia-main/account/${accountAddress}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/celestia',
+      tx_page: 'https://ezstaking.app/celestia/txs/${txHash}',
+      account_page: 'https://ezstaking.app/celestia/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -501,6 +519,10 @@ export const celestiaAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png',
         },
       ],
+      socials: {
+        webiste: 'https://celestia.org/',
+        twitter: 'https://twitter.com/CelestiaOrg',
+      },
     },
   ],
 };

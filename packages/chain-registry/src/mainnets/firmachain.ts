@@ -151,11 +151,11 @@ export const firmachain: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/firmachain',
-      tx_page: 'https://app.ezstaking.io/firmachain/txs/${txHash}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/firmachain',
+      tx_page: 'https://ezstaking.app/firmachain/txs/${txHash}',
       account_page:
-        'https://app.ezstaking.io/firmachain/account/${accountAddress}',
+        'https://ezstaking.app/firmachain/account/${accountAddress}',
     },
     {
       kind: '🔥STAVR🔥',

@@ -34,6 +34,8 @@ export const empowerchain: Chain = {
     git_repo: 'https://github.com/EmpowerPlastic/empowerchain',
     recommended_version: 'v1.0.0',
     compatible_versions: ['v1.0.0'],
+    cosmwasm_version: '0.45',
+    cosmwasm_enabled: true,
     genesis: {
       genesis_url:
         'https://github.com/EmpowerPlastic/empowerchain/raw/main/mainnet/empowerchain-1/genesis.tar.gz',
@@ -116,6 +118,11 @@ export const empowerchain: Chain = {
         address: 'empower.peer.stakevillage.net:16856',
         provider: 'Stake Village',
       },
+      {
+        id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
+        address: 'empower.declab.pro:26609',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   apis: {
@@ -168,6 +175,10 @@ export const empowerchain: Chain = {
         address: 'https://rpc.empowerchain.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://empower.declab.pro:26607',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     rest: [
       {
@@ -214,6 +225,10 @@ export const empowerchain: Chain = {
         address: 'https://lcd.empowerchain.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://empower.declab.pro:443',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     grpc: [
       {
@@ -252,6 +267,10 @@ export const empowerchain: Chain = {
         address: 'https://grpc.empowerchain.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://empower.declab.pro:9005',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   explorers: [
@@ -275,6 +294,13 @@ export const empowerchain: Chain = {
       tx_page: 'https://exp.stakevillage.net/empower/tx/${txHash}',
       account_page:
         'https://exp.stakevillage.net/empower/account/${accountAddress}',
+    },
+    {
+      kind: 'Decloud Nodes Lab',
+      url: 'https://explorer.declab.pro/Empower',
+      tx_page: 'https://explorer.declab.pro/Empower/tx/${txHash}',
+      account_page:
+        'https://explorer.declab.pro/Empower/account/{$accountAddress}',
     },
   ],
 };

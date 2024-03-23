@@ -32,13 +32,19 @@ export const akash: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/akash-network/node/',
-    recommended_version: 'v0.30.0',
-    compatible_versions: ['v0.30.0'],
+    recommended_version: 'v0.32.1.',
+    compatible_versions: ['v0.32.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/akash-network/node/releases/download/v0.30.0/akash_linux_amd64.zip',
+        'https://github.com/akash-network/node/releases/download/v0.32.1/akash_linux_amd64.zip',
       'linux/arm64':
-        'https://github.com/akash-network/node/releases/download/v0.30.0/akash_linux_arm64.zip',
+        'https://github.com/akash-network/node/releases/download/v0.32.1/akash_linux_arm64.zip',
+    },
+    cosmos_sdk_version: 'v0.45.16',
+    ibc_go_version: 'v4.4.2',
+    consensus: {
+      type: 'cometbft',
+      version: 'akash-network/cometbft v0.34.27-akash',
     },
     genesis: {
       genesis_url:
@@ -108,6 +114,26 @@ export const akash: Chain = {
             'https://github.com/akash-network/node/releases/download/v0.30.0/akash_linux_amd64.zip',
           'linux/arm64':
             'https://github.com/akash-network/node/releases/download/v0.30.0/akash_linux_arm64.zip',
+        },
+        next_version_name: 'v0.32.0',
+      },
+      {
+        name: 'v0.32.0',
+        recommended_version: 'v0.32.1',
+        compatible_versions: ['v0.32.1'],
+        proposal: 249,
+        height: 15414427,
+        binaries: {
+          'linux/amd64':
+            'https://github.com/akash-network/node/releases/download/v0.32.1/akash_linux_amd64.zip',
+          'linux/arm64':
+            'https://github.com/akash-network/node/releases/download/v0.32.1238/akash_linux_arm64.zip',
+        },
+        cosmos_sdk_version: 'v0.45.16',
+        ibc_go_version: 'v4.4.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'akash-network/cometbft v0.34.27-akash',
         },
         next_version_name: '',
       },
@@ -199,6 +225,11 @@ export const akash: Chain = {
         address: 'peer-akash-01.stakeflow.io:1506',
         provider: 'Stakeflow',
       },
+      {
+        id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
+        address: 'akash.declab.pro:26603',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   apis: {
@@ -267,6 +298,10 @@ export const akash: Chain = {
         address: 'https://public.stakewolle.com/cosmos/akash/rpc',
         provider: 'Stakewolle',
       },
+      {
+        address: 'https://akash.declab.pro:26601',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     rest: [
       {
@@ -333,6 +368,10 @@ export const akash: Chain = {
         address: 'https://public.stakewolle.com/cosmos/akash/rest',
         provider: 'Stakewolle',
       },
+      {
+        address: 'https://akash.declab.pro:443',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     grpc: [
       {
@@ -367,14 +406,18 @@ export const akash: Chain = {
         address: 'akash-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://akash.declab.pro:9001',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/akash',
-      tx_page: 'https://app.ezstaking.io/akash/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/akash/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/akash',
+      tx_page: 'https://ezstaking.app/akash/txs/${txHash}',
+      account_page: 'https://ezstaking.app/akash/account/${accountAddress}',
     },
     {
       kind: 'mintscan',
@@ -412,6 +455,11 @@ export const akash: Chain = {
       kind: 'ValidatorNode',
       url: 'https://explorer.validatornode.com/akash-network',
       tx_page: 'https://explorer.validatornode.com/akash-network/tx/${txHash}',
+    },
+    {
+      kind: 'Decloud Nodes Lab',
+      url: 'https://explorer.declab.pro/Akash',
+      tx_page: 'https://explorer.declab.pro/Akash/tx/${txHash}',
     },
   ],
   images: [
@@ -454,6 +502,10 @@ export const akashAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/akash/images/akt.svg',
         },
       ],
+      socials: {
+        webiste: 'https://akash.network/',
+        twitter: 'https://twitter.com/akashnet_',
+      },
     },
     {
       description: 'Tether USDt on Akash',

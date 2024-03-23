@@ -250,7 +250,7 @@ export const injective: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://injective-rpc.highstakes.ch:26657/',
+        address: 'https://injective-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -296,7 +296,7 @@ export const injective: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://injective-api.highstakes.ch:1317/',
+        address: 'https://injective-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -360,6 +360,12 @@ export const injective: Chain = {
     ],
   },
   explorers: [
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/injective',
+      tx_page: 'https://ezstaking.app/injective/txs/${txHash}',
+      account_page: 'https://ezstaking.app/injective/account/${accountAddress}',
+    },
     {
       kind: 'injectiveprotocol',
       url: 'https://explorer.injective.network/',
@@ -429,6 +435,10 @@ export const injectiveAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/inj.svg',
         },
       ],
+      socials: {
+        webiste: 'https://injective.com/',
+        twitter: 'https://twitter.com/Injective_',
+      },
     },
     {
       description: 'Tether USDt on Injective',
@@ -665,6 +675,10 @@ export const injectiveAssetList: AssetLists = {
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/glto.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/glto.svg',
+      },
+      socials: {
+        webiste: 'https://gelotto.io/',
+        twitter: 'https://twitter.com/Gelotto2',
       },
     },
     {

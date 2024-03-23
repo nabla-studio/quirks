@@ -94,6 +94,7 @@ export const nyx: Chain = {
   },
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.png',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.svg',
   },
   peers: {
     seeds: [
@@ -223,10 +224,10 @@ export const nyx: Chain = {
       account_page: 'https://nym.explorers.guru/account/${accountAddress}',
     },
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/nyx',
-      tx_page: 'https://app.ezstaking.io/nyx/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/nyx/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/nyx',
+      tx_page: 'https://ezstaking.app/nyx/txs/${txHash}',
+      account_page: 'https://ezstaking.app/nyx/account/${accountAddress}',
     },
     {
       kind: 'mintscan',
@@ -262,6 +263,9 @@ export const nyx: Chain = {
         dark_mode: true,
         circle: true,
       },
+    },
+    {
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.png',
     },
   ],
 };
@@ -316,6 +320,7 @@ export const nyxAssetList: AssetLists = {
       symbol: 'NYM',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nyx/images/nym_token_light.svg',
       },
       coingecko_id: 'nym',
       images: [

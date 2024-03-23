@@ -18,10 +18,10 @@ export const aioz: Chain = {
     fee_tokens: [
       {
         denom: 'attoaioz',
-        fixed_min_gas_price: 1000000000,
-        low_gas_price: 1000000000,
-        average_gas_price: 1000000000,
-        high_gas_price: 1500000000,
+        fixed_min_gas_price: 7000000000,
+        low_gas_price: 7000000000,
+        average_gas_price: 7000000000,
+        high_gas_price: 10000000000,
       },
     ],
   },
@@ -37,15 +37,13 @@ export const aioz: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/AIOZNetwork/go-aioz',
-    recommended_version: 'v1.4.1',
-    compatible_versions: ['v1.4.1', 'v1.4.0'],
+    recommended_version: 'v1.5.0',
+    compatible_versions: ['v1.5.0'],
     binaries: {
-      'linux/amd64':
-        'https://archive.aioz.network/aiozd-v1.4.1-linux-amd64.tar.gz',
-      'darwin/amd64':
-        'https://archive.aioz.network/aiozd-v1.4.1-darwin-amd64.tar.gz',
+      'linux/amd64': 'https://archive.aioz.network/aiozd-v1.5.0-linux-amd64',
+      'darwin/amd64': 'https://archive.aioz.network/aiozd-v1.5.0-darwin-amd64',
       'windows/amd64':
-        'https://archive.aioz.network/aiozd-v1.4.1-windows-amd64.zip',
+        'https://archive.aioz.network/aiozd-v1.5.0-windows-amd64.exe',
     },
     genesis: {
       genesis_url: 'https://archive.aioz.network/aioz_168-1/genesis.json',
@@ -104,6 +102,19 @@ export const aioz: Chain = {
             'https://archive.aioz.network/aiozd-v1.4.1-darwin-amd64.tar.gz',
           'windows/amd64':
             'https://archive.aioz.network/aiozd-v1.4.1-windows-amd64.zip',
+        },
+      },
+      {
+        name: 'v1.5',
+        recommended_version: 'v1.5.0',
+        compatible_versions: ['v1.5.0'],
+        binaries: {
+          'linux/amd64':
+            'https://archive.aioz.network/aiozd-v1.5.0-linux-amd64',
+          'darwin/amd64':
+            'https://archive.aioz.network/aiozd-v1.5.0-darwin-amd64',
+          'windows/amd64':
+            'https://archive.aioz.network/aiozd-v1.5.0-windows-amd64.exe',
         },
       },
     ],

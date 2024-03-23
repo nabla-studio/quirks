@@ -33,21 +33,21 @@ export const cosmoshub: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/cosmos/gaia',
-    recommended_version: 'v14.1.0',
-    compatible_versions: ['v14.1.0'],
+    recommended_version: 'v15.1.0',
+    compatible_versions: ['v15.1.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-amd64?checksum=sha256:baed43bd3f523fd587cff4d8f78f395a3bcb6d20d9a671bef69b8fbe101338f6',
+        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-linux-amd64',
       'linux/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-arm64?checksum=sha256:a57822b2a199ca461f8a8baf4e98a46803f8fa5d4ceb130b539ebd0c03c035a8',
+        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-linux-arm64',
       'darwin/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-amd64?checksum=sha256:4edec8b191bbb0bdcd0f89d1fadfc1cfdb720ac943b7c03d584760725547c047',
+        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-amd64',
       'darwin/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-arm64?checksum=sha256:5177c7ca2b0e66daedc506c6fcdab0d8c436dae846de32081556b8edd57027e8',
+        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-arm64',
       'windows/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-amd64.exe?checksum=sha256:d912548fc1c87ca26defce1a60f089910fa55b38d27063870750efeab176db9d',
+        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-amd64',
       'windows/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-arm64.exe?checksum=sha256:b17cc1f1a9a5050b72f99d497fdda6d1d4615b6a42971f556d2777ba838fe7b0',
+        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-windows-arm64.exe',
     },
     genesis: {
       genesis_url:
@@ -196,11 +196,11 @@ export const cosmoshub: Chain = {
       },
       {
         name: 'v14',
-        tag: 'v14.1.0',
+        tag: 'v14.2.0',
         proposal: 854,
         height: 18262000,
-        recommended_version: 'v14.1.0',
-        compatible_versions: ['v14.1.0'],
+        recommended_version: 'v14.2.0',
+        compatible_versions: ['v14.2.0'],
         cosmos_sdk_version: 'v0.45.16-ics-lsm',
         ibc_go_version: 'v4.4.2',
         consensus: {
@@ -209,19 +209,48 @@ export const cosmoshub: Chain = {
         },
         binaries: {
           'linux/amd64':
-            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-amd64?checksum=sha256:baed43bd3f523fd587cff4d8f78f395a3bcb6d20d9a671bef69b8fbe101338f6',
+            'https://github.com/cosmos/gaia/releases/download/v14.2.0/gaiad-v14.2.0-linux-amd64?checksum=sha256:baed43bd3f523fd587cff4d8f78f395a3bcb6d20d9a671bef69b8fbe101338f6',
           'linux/arm64':
-            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-linux-arm64?checksum=sha256:a57822b2a199ca461f8a8baf4e98a46803f8fa5d4ceb130b539ebd0c03c035a8',
+            'https://github.com/cosmos/gaia/releases/download/v14.2.0/gaiad-v14.2.0-linux-arm64?checksum=sha256:a57822b2a199ca461f8a8baf4e98a46803f8fa5d4ceb130b539ebd0c03c035a8',
           'darwin/amd64':
-            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-amd64?checksum=sha256:4edec8b191bbb0bdcd0f89d1fadfc1cfdb720ac943b7c03d584760725547c047',
+            'https://github.com/cosmos/gaia/releases/download/v14.2.0/gaiad-v14.2.0-darwin-amd64?checksum=sha256:4edec8b191bbb0bdcd0f89d1fadfc1cfdb720ac943b7c03d584760725547c047',
           'darwin/arm64':
-            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-darwin-arm64?checksum=sha256:5177c7ca2b0e66daedc506c6fcdab0d8c436dae846de32081556b8edd57027e8',
+            'https://github.com/cosmos/gaia/releases/download/v14.2.0/gaiad-v14.2.0-darwin-arm64?checksum=sha256:5177c7ca2b0e66daedc506c6fcdab0d8c436dae846de32081556b8edd57027e8',
           'windows/amd64':
-            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-amd64.exe?checksum=sha256:d912548fc1c87ca26defce1a60f089910fa55b38d27063870750efeab176db9d',
+            'https://github.com/cosmos/gaia/releases/download/v14.2.0/gaiad-v14.2.0-windows-amd64.exe?checksum=sha256:d912548fc1c87ca26defce1a60f089910fa55b38d27063870750efeab176db9d',
           'windows/arm64':
-            'https://github.com/cosmos/gaia/releases/download/v14.1.0/gaiad-v14.1.0-windows-arm64.exe?checksum=sha256:b17cc1f1a9a5050b72f99d497fdda6d1d4615b6a42971f556d2777ba838fe7b0',
+            'https://github.com/cosmos/gaia/releases/download/v14.2.0/gaiad-v14.2.0-windows-arm64.exe?checksum=sha256:b17cc1f1a9a5050b72f99d497fdda6d1d4615b6a42971f556d2777ba838fe7b0',
         },
         next_version_name: 'v15',
+      },
+      {
+        name: 'v15',
+        tag: 'v15.0.0',
+        proposal: 885,
+        height: 19639600,
+        recommended_version: 'v15.1.0',
+        compatible_versions: ['v15.1.0'],
+        cosmos_sdk_version: 'v0.47.10-ics-lsm',
+        ibc_go_version: 'v7.3.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-linux-amd64',
+          'linux/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-linux-arm64',
+          'darwin/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-amd64',
+          'darwin/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-arm64',
+          'windows/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-amd64',
+          'windows/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-windows-arm64.exe',
+        },
+        next_version_name: '',
       },
     ],
   },
@@ -435,7 +464,7 @@ export const cosmoshub: Chain = {
         provider: 'PRO Delegators',
       },
       {
-        address: 'https://cosmos-rpc.highstakes.ch:26657/',
+        address: 'https://cosmos-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -449,6 +478,10 @@ export const cosmoshub: Chain = {
       {
         address: 'https://public.stakewolle.com/cosmos/cosmoshub/rpc',
         provider: 'Stakewolle',
+      },
+      {
+        address: 'https://rpc-cosmos.kewrnode.com',
+        provider: 'Kewr Node',
       },
     ],
     rest: [
@@ -541,7 +574,7 @@ export const cosmoshub: Chain = {
         provider: 'PRO Delegators',
       },
       {
-        address: 'https://cosmos-api.highstakes.ch:1317/',
+        address: 'https://cosmos-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -555,6 +588,10 @@ export const cosmoshub: Chain = {
       {
         address: 'https://public.stakewolle.com/cosmos/cosmoshub/rest',
         provider: 'Stakewolle',
+      },
+      {
+        address: 'https://rest-cosmos.kewrnode.com',
+        provider: 'Kewr Node',
       },
     ],
     grpc: [
@@ -638,17 +675,16 @@ export const cosmoshub: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/cosmoshub',
-      tx_page: 'https://app.ezstaking.io/cosmoshub/txs/${txHash}',
-      account_page:
-        'https://app.ezstaking.io/cosmoshub/account/${accountAddress}',
-    },
-    {
       kind: 'mintscan',
       url: 'https://www.mintscan.io/cosmos',
       tx_page: 'https://www.mintscan.io/cosmos/transactions/${txHash}',
       account_page: 'https://www.mintscan.io/cosmos/accounts/${accountAddress}',
+    },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/cosmoshub',
+      tx_page: 'https://ezstaking.app/cosmoshub/txs/${txHash}',
+      account_page: 'https://ezstaking.app/cosmoshub/account/${accountAddress}',
     },
     {
       kind: 'ping.pub',
@@ -733,6 +769,10 @@ export const cosmoshubAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
         },
       ],
+      socials: {
+        webiste: 'https://cosmos.network',
+        twitter: 'https://twitter.com/cosmoshub',
+      },
     },
     {
       description: 'Tether USDt on the Cosmos Hub',

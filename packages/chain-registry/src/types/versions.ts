@@ -50,6 +50,7 @@ export interface ChainVersions {
      */
     cosmwasm_path?: string;
     ibc_go_version?: string;
+    go_version?: string;
     /**
      * List of IBC apps (usually corresponding to a ICS standard) which have been enabled on the network.
      */

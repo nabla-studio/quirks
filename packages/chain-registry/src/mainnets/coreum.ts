@@ -328,6 +328,12 @@ export const coreum: Chain = {
       account_page:
         'https://explorer.tcnetwork.io/coreum/account/${accountAddress}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/coreum',
+      tx_page: 'https://ezstaking.app/coreum/txs/${txHash}',
+      account_page: 'https://ezstaking.app/coreum/account/${accountAddress}',
+    },
   ],
   keywords: ['dex', 'staking', 'wasm', 'assets', 'nft'],
 };
@@ -364,6 +370,49 @@ export const coreumAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coreum/images/coreum.svg',
         },
       ],
+    },
+    {
+      description: 'XRP bridged from XRPL',
+      denom_units: [
+        {
+          denom:
+            'drop-core1zhs909jp9yktml6qqx9f0ptcq2xnhhj99cja03j3lfcsp2pgm86studdrz',
+          exponent: 0,
+          aliases: ['drop'],
+        },
+        {
+          denom: 'xrp',
+          exponent: 6,
+        },
+      ],
+      base: 'drop-core1zhs909jp9yktml6qqx9f0ptcq2xnhhj99cja03j3lfcsp2pgm86studdrz',
+      name: 'Ripple',
+      display: 'xrp',
+      symbol: 'XRP',
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'xrpl',
+            base_denom: 'drop',
+          },
+          provider: 'Coreum',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'xrpl',
+            base_denom: 'drop',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/xrpl/images/xrp.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/xrpl/images/xrp.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/xrpl/images/xrp.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/xrpl/images/xrp.svg',
+      },
     },
   ],
 };

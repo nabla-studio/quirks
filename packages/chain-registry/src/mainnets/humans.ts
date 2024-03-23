@@ -58,8 +58,8 @@ export const humans: Chain = {
     ],
   },
   logo_URIs: {
-    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.png',
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.svg',
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.png',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.svg',
   },
   peers: {
     seeds: [
@@ -282,6 +282,12 @@ export const humans: Chain = {
       tx_page: 'https://www.mintscan.io/humans/tx/${txHash}',
     },
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/humans',
+      tx_page: 'https://ezstaking.app/humans/txs/${txHash}',
+      account_page: 'https://ezstaking.app/humans/account/${accountAddress}',
+    },
+    {
       kind: 'bigdipper',
       url: 'https://bigdipper.live/humans',
       tx_page: 'https://bigdipper.live/humans/transactions/${txHash}',
@@ -319,8 +325,8 @@ export const humans: Chain = {
   ],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.svg',
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.svg',
     },
   ],
 };
@@ -346,18 +352,11 @@ export const humansAssetList: AssetLists = {
       display: 'heart',
       symbol: 'HEART',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.svg',
       },
       coingecko_id: 'humans-ai',
       images: [
-        {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/humans_small_light.svg',
-          theme: {
-            dark_mode: false,
-          },
-        },
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/humans/images/heart-dark-mode.svg',
@@ -366,6 +365,10 @@ export const humansAssetList: AssetLists = {
           },
         },
       ],
+      socials: {
+        webiste: 'https://humans.ai/',
+        twitter: 'https://twitter.com/humansdotai',
+      },
     },
   ],
 };

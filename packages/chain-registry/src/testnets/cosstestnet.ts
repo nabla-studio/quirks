@@ -64,21 +64,13 @@ export const cosstestnet: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc-coss-node-1.coss.ink',
-        provider: 'COSS',
-      },
-      {
-        address: 'https://rpc-coss-node-2.coss.ink/',
+        address: 'https://coss-testnet-rpc.coss.ink',
         provider: 'COSS',
       },
     ],
     rest: [
       {
-        address: 'https://rest-coss-node-1.coss.ink',
-        provider: 'COSS',
-      },
-      {
-        address: 'https://rest-coss-node-2.coss.ink',
+        address: 'https://coss-testnet-rest.coss.ink',
         provider: 'COSS',
       },
     ],

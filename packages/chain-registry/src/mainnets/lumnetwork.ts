@@ -33,8 +33,8 @@ export const lumnetwork: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/lum-network/chain',
-    recommended_version: 'v1.6.4',
-    compatible_versions: ['v1.6.4'],
+    recommended_version: 'v1.6.5',
+    compatible_versions: ['v1.6.5'],
     cosmos_sdk_version: 'v0.47.5',
     ibc_go_version: 'v7.2.0',
     consensus: {
@@ -43,17 +43,17 @@ export const lumnetwork: Chain = {
     },
     binaries: {
       'linux/amd64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_ubuntu-latest_amd64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_ubuntu-latest_amd64.zip',
       'linux/arm64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_ubuntu-latest_arm64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_ubuntu-latest_arm64.zip',
       'darwin/amd64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_macos-latest_amd64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_macos-latest_amd64.zip',
       'darwin/arm64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_macos-latest_arm64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_macos-latest_arm64.zip',
       'windows/amd64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_windows-latest_amd64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_windows-latest_amd64.zip',
       'windows/arm64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_windows-latest_arm64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_windows-latest_arm64.zip',
     },
     genesis: {
       genesis_url:
@@ -184,6 +184,34 @@ export const lumnetwork: Chain = {
           'windows/arm64':
             'https://github.com/lum-network/chain/releases/download/v1.6.4/lumd_windows-latest_arm64.zip',
         },
+        next_version_name: 'v1.6.5',
+      },
+      {
+        name: 'v1.6.5',
+        proposal: 101,
+        height: 11992000,
+        recommended_version: 'v1.6.5',
+        compatible_versions: ['v1.6.5'],
+        cosmos_sdk_version: 'v0.47.5',
+        ibc_go_version: 'v7.2.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_ubuntu-latest_amd64.zip',
+          'linux/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_ubuntu-latest_arm64.zip',
+          'darwin/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_macos-latest_amd64.zip',
+          'darwin/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_macos-latest_arm64.zip',
+          'windows/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_windows-latest_amd64.zip',
+          'windows/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_windows-latest_arm64.zip',
+        },
         next_version_name: '',
       },
     ],
@@ -261,7 +289,7 @@ export const lumnetwork: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://node0.mainnet.lum.network/rpc',
+        address: 'https://rpc.node0.mainnet.lum.network',
         provider: 'Lum Foundation',
       },
       {
@@ -287,7 +315,7 @@ export const lumnetwork: Chain = {
     ],
     rest: [
       {
-        address: 'https://node0.mainnet.lum.network/rest',
+        address: 'https://rest.node0.mainnet.lum.network',
         provider: 'Lum Foundation',
       },
       {
@@ -336,11 +364,11 @@ export const lumnetwork: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/lumnetwork',
-      tx_page: 'https://app.ezstaking.io/lumnetwork/txs/${txHash}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/lumnetwork',
+      tx_page: 'https://ezstaking.app/lumnetwork/txs/${txHash}',
       account_page:
-        'https://app.ezstaking.io/lumnetwork/account/${accountAddress}',
+        'https://ezstaking.app/lumnetwork/account/${accountAddress}',
     },
     {
       kind: 'mintscan',

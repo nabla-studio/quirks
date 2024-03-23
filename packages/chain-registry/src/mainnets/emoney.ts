@@ -162,10 +162,10 @@ export const emoney: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/emoney',
-      tx_page: 'https://app.ezstaking.io/emoney/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/emoney/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/emoney',
+      tx_page: 'https://ezstaking.app/emoney/txs/${txHash}',
+      account_page: 'https://ezstaking.app/emoney/account/${accountAddress}',
     },
     {
       kind: 'bigdipper',

@@ -33,13 +33,13 @@ export const jackal: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/JackalLabs/canine-chain',
-    recommended_version: 'v3.1.3',
-    compatible_versions: ['v3.1.1', 'v3.1.3'],
+    recommended_version: 'v3.2.0',
+    compatible_versions: ['v3.2.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.3/canined-Linux',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.0/canined-Linux',
       'darwin/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.3/canined-macOS',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.0/canined-macOS',
     },
     genesis: {
       genesis_url:
@@ -121,6 +121,22 @@ export const jackal: Chain = {
             'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.3/canined-Linux',
           'darwin/amd64':
             'https://github.com/JackalLabs/canine-chain/releases/download/v3.1.3/canined-macOS',
+        },
+        next_version_name: 'v320',
+      },
+      {
+        name: 'v3.2.0',
+        tag: 'V3.2.0',
+        proposal: 12,
+        height: 6835000,
+        recommended_version: 'v3.2.0',
+        compatible_versions: ['v3.2.0'],
+        cosmwasm_enabled: true,
+        binaries: {
+          'linux/amd64':
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.0/canined-Linux',
+          'darwin/amd64':
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.0/canined-macOS',
         },
         next_version_name: '',
       },
@@ -265,6 +281,10 @@ export const jackal: Chain = {
         address: 'https://rpc.jackal.mathnodes.com',
         provider: 'MathNodes',
       },
+      {
+        address: 'https://jackal-rpc.kleomedes.network',
+        provider: 'Kleomedes',
+      },
     ],
     rest: [
       {
@@ -326,6 +346,10 @@ export const jackal: Chain = {
       {
         address: 'https://api.jackal.mathnodes.com',
         provider: 'MathNodes',
+      },
+      {
+        address: 'https://jackal-api.kleomedes.network',
+        provider: 'Kleomedes',
       },
     ],
     grpc: [

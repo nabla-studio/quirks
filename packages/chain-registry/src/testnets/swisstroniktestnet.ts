@@ -95,6 +95,10 @@ export const swisstroniktestnet: Chain = {
         address: 'https://testnet-swisstronik-rpc.genznodes.dev',
         provider: 'genznodes',
       },
+      {
+        address: 'https://rpc.swisstronik.comunitynode.my.id',
+        provider: 'ComunityNode',
+      },
     ],
     rest: [
       {
@@ -104,6 +108,10 @@ export const swisstroniktestnet: Chain = {
       {
         address: 'https://testnet-swisstronik-api.genznodes.dev',
         provider: 'genznodes',
+      },
+      {
+        address: 'https://rest.swisstronik.comunitynode.my.id/',
+        provider: 'Comunitynode',
       },
     ],
     grpc: [
@@ -120,6 +128,10 @@ export const swisstroniktestnet: Chain = {
       {
         address: 'https://testnet-swisstronik-rpc-evm.genznodes.dev',
         provider: 'genznodes',
+      },
+      {
+        address: 'https://evm.swisstronik.comunitynode.my.id',
+        provider: 'comunitynode',
       },
     ],
   },

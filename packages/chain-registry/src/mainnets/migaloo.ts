@@ -37,15 +37,15 @@ export const migaloo: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/White-Whale-Defi-Platform/migaloo-chain',
-    recommended_version: 'v3.0.4',
-    compatible_versions: ['v3.0.4'],
-    cosmos_sdk_version: '0.46.15',
-    ibc_go_version: '6.2.0',
+    recommended_version: 'v4.1.3',
+    compatible_versions: ['v4.1.3'],
+    cosmos_sdk_version: 'v0.47.7',
+    ibc_go_version: 'v7.3.0',
     consensus: {
       type: 'cometbft',
-      version: '0.34.29',
+      version: 'v0.37.4',
     },
-    cosmwasm_version: 'v0.30.1-0.20230320091624-f5072b9b04a6',
+    cosmwasm_version: 'v0.45.0',
     cosmwasm_enabled: true,
     genesis: {
       genesis_url:
@@ -111,6 +111,22 @@ export const migaloo: Chain = {
           version: '0.34.29',
         },
         cosmwasm_version: 'v0.30.1-0.20230320091624-f5072b9b04a6',
+        cosmwasm_enabled: true,
+        next_version_name: 'v4.1.0',
+      },
+      {
+        name: 'v4.1.2',
+        proposal: 31,
+        height: 5962700,
+        recommended_version: 'v4.1.3',
+        compatible_versions: ['v4.1.3'],
+        cosmos_sdk_version: 'v0.47.7',
+        ibc_go_version: 'v7.3.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'v0.45.0',
         cosmwasm_enabled: true,
         next_version_name: '',
       },
@@ -187,6 +203,10 @@ export const migaloo: Chain = {
         address: 'https://migaloo-rpc.cosmosrescue.com',
         provider: 'cosmosrescue',
       },
+      {
+        address: 'https://migaloo-rpc.highstakes.ch',
+        provider: 'High Stakes 🇨🇭',
+      },
     ],
     rest: [
       {
@@ -216,6 +236,10 @@ export const migaloo: Chain = {
       {
         address: 'https://migaloo-api.cosmosrescue.com',
         provider: 'cosmosrescue',
+      },
+      {
+        address: 'https://migaloo-api.highstakes.ch',
+        provider: 'High Stakes 🇨🇭',
       },
     ],
     grpc: [
@@ -342,7 +366,7 @@ export const migalooAssetList: AssetLists = {
       ],
     },
     {
-      description: 'boneWHALE',
+      description: 'BackBone Labs Liquid Staked WHALE',
       denom_units: [
         {
           denom:
@@ -350,24 +374,23 @@ export const migalooAssetList: AssetLists = {
           exponent: 0,
         },
         {
-          denom: 'boneWHALE',
+          denom: 'bWHALE',
           exponent: 6,
         },
       ],
       base: 'factory/migaloo1mf6ptkssddfmxvhdx0ech0k03ktp6kf9yk59renau2gvht3nq2gqdhts4u/boneWhale',
-      name: 'boneWHALE',
-      display: 'boneWHALE',
+      name: 'BackBone Labs Liquid Staked WHALE',
+      display: 'bWHALE',
       symbol: 'bWHALE',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/bWHALE.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/bWHALE.svg',
       },
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/bWHALE.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/bWHALE.svg',
         },
       ],
+      coingecko_id: 'backbone-labs-staked-whale',
     },
     {
       description: 'FABLE',
@@ -642,6 +665,43 @@ export const migalooAssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/shark.png',
+        },
+      ],
+    },
+    {
+      description: 'lsdSHARK is the liquid staking derivative of SHARK.',
+      denom_units: [
+        {
+          denom:
+            'factory/migaloo1p3aj9f09d7c4jxhgue0hpdpw370j6gzc59nxxx6l8d0gc9f9rfwsdwetus/lsdSHARK',
+          exponent: 0,
+        },
+        {
+          denom: 'lsdSHARK',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/migaloo1p3aj9f09d7c4jxhgue0hpdpw370j6gzc59nxxx6l8d0gc9f9rfwsdwetus/lsdSHARK',
+      name: 'lsdSHARK',
+      display: 'lsdSHARK',
+      symbol: 'lsdSHARK',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'migaloo',
+            base_denom:
+              'factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/shark',
+          },
+          provider: 'Shark Protocol',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/lsdshark.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/lsdshark.png',
         },
       ],
     },

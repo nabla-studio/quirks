@@ -162,6 +162,11 @@ export const realio: Chain = {
         address: 'p2p.realio.safeblock.space:26656',
         provider: 'Safe Block',
       },
+      {
+        id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
+        address: 'realio.declab.pro:26624',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   apis: {
@@ -198,6 +203,10 @@ export const realio: Chain = {
         address: 'https://rpc.realio.safeblock.space',
         provider: 'Safe Block',
       },
+      {
+        address: 'https://realio.declab.pro:26622',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     rest: [
       {
@@ -232,6 +241,10 @@ export const realio: Chain = {
         address: 'https://api.realio.safeblock.space',
         provider: 'Safe Block',
       },
+      {
+        address: 'https://realio.declab.pro:443',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     grpc: [
       {
@@ -265,6 +278,10 @@ export const realio: Chain = {
       {
         address: 'realio.grpc.skynodejs.net',
         provider: 'skynodejs',
+      },
+      {
+        address: 'https://realio.declab.pro:9015',
+        provider: 'Decloud Nodes Lab',
       },
     ],
     'evm-http-jsonrpc': [
@@ -321,6 +338,13 @@ export const realio: Chain = {
       tx_page: 'https://explorer.safeblock.space/realio/tx/${txHash}',
       account_page:
         'https://explorer.safeblock.space/realio/account/${accountAddress}',
+    },
+    {
+      kind: 'Decloud Nodes Lab',
+      url: 'https://explorer.declab.pro/realio',
+      tx_page: 'https://explorer.declab.pro/realio/tx/${txHash}',
+      account_page:
+        'https://explorer.declab.pro/realio/account/{$accountAddress}',
     },
   ],
   images: [

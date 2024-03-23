@@ -44,8 +44,8 @@ export const noble: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/strangelove-ventures/noble',
-    recommended_version: 'v4.0.1',
-    compatible_versions: ['v4.0.1'],
+    recommended_version: 'v4.0.3',
+    compatible_versions: ['v4.0.3'],
     cosmos_sdk_version: 'v0.45.16',
     consensus: {
       type: 'cometbft',
@@ -126,10 +126,10 @@ export const noble: Chain = {
       },
       {
         name: 'argon',
-        tag: 'v4.0.1',
+        tag: 'v4.0.3',
         height: 3408600,
-        recommended_version: 'v4.0.1',
-        compatible_versions: ['v4.0.1'],
+        recommended_version: 'v4.0.3',
+        compatible_versions: ['v4.0.3'],
         cosmos_sdk_version: 'v0.45.16',
         consensus: {
           type: 'cometbft',
@@ -195,6 +195,12 @@ export const noble: Chain = {
       url: 'https://www.mintscan.io/noble',
       tx_page: 'https://www.mintscan.io/noble/txs/${txHash}',
       account_page: 'https://www.mintscan.io/noble/account/${accountAddress}',
+    },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/noble',
+      tx_page: 'https://ezstaking.app/noble/txs/${txHash}',
+      account_page: 'https://ezstaking.app/noble/account/${accountAddress}',
     },
     {
       kind: 'ping.pub',

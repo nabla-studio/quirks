@@ -23,25 +23,11 @@ export const stride: Chain = {
         high_gas_price: 0.002,
       },
       {
-        denom: 'uatom',
-        fixed_min_gas_price: 0.0001,
-        low_gas_price: 0.0001,
-        average_gas_price: 0.0002,
-        high_gas_price: 0.0005,
-      },
-      {
         denom: 'stuatom',
         fixed_min_gas_price: 0.0001,
         low_gas_price: 0.0001,
         average_gas_price: 0.0002,
         high_gas_price: 0.0005,
-      },
-      {
-        denom: 'uosmo',
-        fixed_min_gas_price: 0.001,
-        low_gas_price: 0.001,
-        average_gas_price: 0.002,
-        high_gas_price: 0.004,
       },
       {
         denom: 'stuosmo',
@@ -51,25 +37,11 @@ export const stride: Chain = {
         high_gas_price: 0.004,
       },
       {
-        denom: 'ustars',
-        fixed_min_gas_price: 1,
-        low_gas_price: 1,
-        average_gas_price: 1.1,
-        high_gas_price: 1.2,
-      },
-      {
         denom: 'stustars',
         fixed_min_gas_price: 1,
         low_gas_price: 1,
         average_gas_price: 1.1,
         high_gas_price: 1.2,
-      },
-      {
-        denom: 'ujuno',
-        fixed_min_gas_price: 0.075,
-        low_gas_price: 0.075,
-        average_gas_price: 0.1,
-        high_gas_price: 0.125,
       },
       {
         denom: 'stujuno',
@@ -79,25 +51,11 @@ export const stride: Chain = {
         high_gas_price: 0.125,
       },
       {
-        denom: 'uluna',
-        fixed_min_gas_price: 0.0125,
-        low_gas_price: 0.0125,
-        average_gas_price: 0.015,
-        high_gas_price: 0.04,
-      },
-      {
         denom: 'stuluna',
         fixed_min_gas_price: 0.0125,
         low_gas_price: 0.0125,
         average_gas_price: 0.015,
         high_gas_price: 0.04,
-      },
-      {
-        denom: 'aevmos',
-        fixed_min_gas_price: 250000000,
-        low_gas_price: 20000000000,
-        average_gas_price: 25000000000,
-        high_gas_price: 40000000000,
       },
       {
         denom: 'staevmos',
@@ -107,25 +65,11 @@ export const stride: Chain = {
         high_gas_price: 40000000000,
       },
       {
-        denom: 'inj',
-        fixed_min_gas_price: 500000000,
-        low_gas_price: 500000000,
-        average_gas_price: 700000000,
-        high_gas_price: 900000000,
-      },
-      {
         denom: 'stinj',
         fixed_min_gas_price: 500000000,
         low_gas_price: 500000000,
         average_gas_price: 700000000,
         high_gas_price: 900000000,
-      },
-      {
-        denom: 'ucmdx',
-        fixed_min_gas_price: 0.02,
-        low_gas_price: 0.02,
-        average_gas_price: 0.025,
-        high_gas_price: 0.04,
       },
       {
         denom: 'stucmdx',
@@ -135,25 +79,11 @@ export const stride: Chain = {
         high_gas_price: 0.04,
       },
       {
-        denom: 'uumee',
-        fixed_min_gas_price: 0.1,
-        low_gas_price: 0.1,
-        average_gas_price: 0.12,
-        high_gas_price: 0.2,
-      },
-      {
         denom: 'stuumee',
         fixed_min_gas_price: 0.1,
         low_gas_price: 0.1,
         average_gas_price: 0.12,
         high_gas_price: 0.2,
-      },
-      {
-        denom: 'utia',
-        fixed_min_gas_price: 0.002,
-        low_gas_price: 0.01,
-        average_gas_price: 0.02,
-        high_gas_price: 0.1,
       },
       {
         denom: 'stutia',
@@ -163,17 +93,17 @@ export const stride: Chain = {
         high_gas_price: 0.1,
       },
       {
-        denom: 'adydx',
-        fixed_min_gas_price: 12500000000,
-        low_gas_price: 12500000000,
-        average_gas_price: 12500000000,
+        denom: 'stadydx',
+        fixed_min_gas_price: 15000000000,
+        low_gas_price: 15000000000,
+        average_gas_price: 15000000000,
         high_gas_price: 20000000000,
       },
       {
-        denom: 'stadydx',
-        fixed_min_gas_price: 12500000000,
-        low_gas_price: 12500000000,
-        average_gas_price: 12500000000,
+        denom: 'stadym',
+        fixed_min_gas_price: 15000000000,
+        low_gas_price: 15000000000,
+        average_gas_price: 15000000000,
         high_gas_price: 20000000000,
       },
     ],
@@ -187,13 +117,13 @@ export const stride: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Stride-Labs/stride',
-    recommended_version: 'v18.0.0',
-    compatible_versions: ['v18.0.0'],
+    recommended_version: 'v19.0.0',
+    compatible_versions: ['v19.0.0'],
     cosmos_sdk_version:
       'Stride-Labs/cosmos-sdk v0.47.5-stride-distribution-fix-0',
     consensus: {
       type: 'cometbft',
-      version: 'v0.37.2',
+      version: 'v0.37.4',
     },
     ibc_go_version: '7.3.1',
     genesis: {
@@ -342,7 +272,23 @@ export const stride: Chain = {
           version: 'v0.37.2',
         },
         ibc_go_version: '7.3.1',
-        next_version_name: '',
+        next_version_name: 'v19',
+      },
+      {
+        name: 'v19',
+        tag: 'v19.0.0',
+        recommended_version: 'v19.0.0',
+        compatible_versions: ['v19.0.0'],
+        proposal: 233,
+        height: 8064608,
+        cosmos_sdk_version:
+          'Stride-Labs/cosmos-sdk v0.47.5-stride-distribution-fix-0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        ibc_go_version: '7.3.1',
+        next_version_name: 'v19',
       },
     ],
   },
@@ -636,10 +582,10 @@ export const stride: Chain = {
         'https://explorer.bccnodes.com/stride-M/account/${accountAddress}',
     },
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/stride',
-      tx_page: 'https://app.ezstaking.io/stride/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/stride/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/stride',
+      tx_page: 'https://ezstaking.app/stride/txs/${txHash}',
+      account_page: 'https://ezstaking.app/stride/account/${accountAddress}',
     },
     {
       kind: 'Apollo',
@@ -736,6 +682,10 @@ export const strideAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
         },
       ],
+      socials: {
+        webiste: 'https://stride.zone/',
+        twitter: 'https://twitter.com/stride_zone',
+      },
     },
     {
       denom_units: [
@@ -1066,6 +1016,43 @@ export const strideAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/sttia.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/sttia.svg',
+        },
+      ],
+    },
+    {
+      description: "Stride's liquid staked DYM",
+      denom_units: [
+        {
+          denom: 'stadym',
+          exponent: 0,
+        },
+        {
+          denom: 'stDYM',
+          exponent: 18,
+        },
+      ],
+      base: 'stadym',
+      name: 'Stride Staked DYM',
+      display: 'stDYM',
+      symbol: 'stDYM',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'dymension',
+            base_denom: 'adym',
+          },
+          provider: 'Stride',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stdym.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stdym.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stdym.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stdym.svg',
         },
       ],
     },

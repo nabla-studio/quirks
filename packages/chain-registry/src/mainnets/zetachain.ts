@@ -32,21 +32,90 @@ export const zetachain: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/zeta-chain/node',
-    recommended_version: 'v12.2.5',
-    compatible_versions: [],
-    cosmos_sdk_version: '0.46',
+    recommended_version: 'v14.0.0',
+    compatible_versions: ['v14.0.0'],
+    cosmos_sdk_version: 'v0.46.13',
     consensus: {
-      type: 'tendermint',
-      version: '0.34',
+      type: 'cometbft',
+      version: 'v0.34.28',
     },
     ibc_go_version: 'v6.1.0',
     genesis: {
       genesis_url: 'https://zetachain.blockpi.network/rpc/v1/public/genesis',
     },
-    versions: [],
+    versions: [
+      {
+        name: 'v11',
+        recommended_version: 'v11.0.0',
+        compatible_versions: ['v11.0.0'],
+        cosmos_sdk_version: 'v0.46.13',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        ibc_go_version: 'v6.1.0',
+        next_version_name: 'v12',
+      },
+      {
+        name: 'v12',
+        recommended_version: 'v12.0.0',
+        compatible_versions: ['v12.0.0'],
+        cosmos_sdk_version: 'v0.46.13',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        ibc_go_version: 'v6.1.0',
+        next_version_name: 'v12.1.0',
+      },
+      {
+        name: 'v12.1.0',
+        recommended_version: 'v12.1.0',
+        compatible_versions: ['v12.1.0'],
+        cosmos_sdk_version: 'v0.46.13',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        ibc_go_version: 'v6.1.0',
+        next_version_name: 'v12.2.0',
+      },
+      {
+        name: 'v12.2.0',
+        recommended_version: 'v12.2.5',
+        compatible_versions: ['v12.2.5'],
+        cosmos_sdk_version: 'v0.46.13',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        ibc_go_version: 'v6.1.0',
+        next_version_name: 'v14.0.0',
+      },
+      {
+        name: 'v14.0.1',
+        recommended_version: 'v14.0.1',
+        compatible_versions: ['v14.0.1'],
+        proposal: 21,
+        height: 2074730,
+        cosmos_sdk_version: 'v0.46.13',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        ibc_go_version: 'v6.1.0',
+        next_version_name: '',
+      },
+    ],
   },
   peers: {
-    seeds: [],
+    seeds: [
+      {
+        id: '20e1000e88125698264454a884812746c2eb4807',
+        address: 'seeds.lavenderfive.com:22556',
+        provider: 'Lavender.Five Nodes 🐝',
+      },
+    ],
     persistent_peers: [
       {
         id: '8d93468c6022fb3b263963bdea46b0a131d247cd',
@@ -65,6 +134,14 @@ export const zetachain: Chain = {
         address: 'https://zetachain-mainnet-archive.allthatnode.com:26657',
         provider: 'All That Node',
       },
+      {
+        address: 'https://zetachain-rpc.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'https://rpc.zetachain.nodestake.org',
+        provider: 'NodeStake',
+      },
     ],
     rest: [
       {
@@ -75,8 +152,25 @@ export const zetachain: Chain = {
         address: 'https://zetachain-mainnet-archive.allthatnode.com:1317',
         provider: 'All That Node',
       },
+      {
+        address: 'https://zetachain-api.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'https://api.zetachain.nodestake.org',
+        provider: 'NodeStake',
+      },
     ],
-    grpc: [],
+    grpc: [
+      {
+        address: 'https://zetachain-grpc.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'https://grpc.zetachain.nodestake.org:443',
+        provider: 'NodeStake',
+      },
+    ],
   },
   explorers: [
     {
@@ -88,6 +182,11 @@ export const zetachain: Chain = {
       kind: 'BlockScout',
       url: 'https://zetachain.blockscout.com/',
       tx_page: 'https://zetachain.blockscout.com/tx/${txHash}',
+    },
+    {
+      kind: 'NodeStake Explorer',
+      url: 'https://explorer.nodestake.org/zetachain',
+      tx_page: 'https://explorer.nodestake.org/zetachain/tx/${txHash}',
     },
   ],
 };
@@ -112,6 +211,7 @@ export const zetachainAssetList: AssetLists = {
       name: 'ZetaChain',
       display: 'zeta',
       symbol: 'ZETA',
+      coingecko_id: 'zetachain',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/zetachain/images/zetachain.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/zetachain/images/zetachain.svg',

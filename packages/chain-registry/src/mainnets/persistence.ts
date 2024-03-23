@@ -37,8 +37,8 @@ export const persistence: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/persistenceOne/persistenceCore',
-    recommended_version: 'v10.4.0',
-    compatible_versions: ['v10.4.0'],
+    recommended_version: 'v11.8.1',
+    compatible_versions: ['v11.8.1'],
     cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.3-lsm5',
     ibc_go_version: 'persistenceOne/ibc-go/v7 v7.2.0-lsm3',
     ics_enabled: ['ics20-1', 'ics27-1'],
@@ -51,7 +51,7 @@ export const persistence: Chain = {
     cosmwasm_path: '$HOME/.persistenceCore/wasm',
     binaries: {
       'linux/amd64':
-        'https://github.com/persistenceOne/persistenceCore/releases/download/v10.4.0/persistenceCore-v10.4.0-linux-amd64.tar.gz',
+        'https://github.com/persistenceOne/persistenceCore/releases/download/v11.8.1/persistenceCore-v11.8.1-linux-amd64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -171,6 +171,52 @@ export const persistence: Chain = {
         binaries: {
           'linux/amd64':
             'https://github.com/persistenceOne/persistenceCore/releases/download/v10.4.0/persistenceCore-v10.4.0-linux-amd64.tar.gz',
+        },
+        next_version_name: 'v10.4.1',
+      },
+      {
+        name: 'v10.4.1',
+        tag: 'v10.5.0',
+        proposal: 76,
+        height: 15386200,
+        recommended_version: 'v10.5.0',
+        compatible_versions: ['v10.5.0'],
+        cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.3-lsm5',
+        ibc_go_version: 'persistenceOne/ibc-go/v7 v7.2.0-lsm3',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'persistenceOne/wasmd v0.40.2-lsm3',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.persistenceCore/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/persistenceOne/persistenceCore/releases/download/v10.5.0/persistenceCore-v10.5.0-linux-amd64.tar.gz',
+        },
+        next_version_name: 'v11',
+      },
+      {
+        name: 'v11',
+        tag: 'v11.8.1',
+        proposal: 84,
+        height: 15860600,
+        recommended_version: 'v10.5.0',
+        compatible_versions: ['v10.5.0'],
+        cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.3-lsm5',
+        ibc_go_version: 'persistenceOne/ibc-go/v7 v7.2.0-lsm3',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        cosmwasm_version: 'persistenceOne/wasmd v0.40.2-lsm3',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.persistenceCore/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/persistenceOne/persistenceCore/releases/download/v11.8.1/persistenceCore-v11.8.1-linux-amd64.tar.gz',
         },
         next_version_name: '',
       },
@@ -301,7 +347,7 @@ export const persistence: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://persistence-rpc.highstakes.ch:26657/',
+        address: 'https://persistence-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -375,7 +421,7 @@ export const persistence: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
-        address: 'https://persistence-api.highstakes.ch:1317/',
+        address: 'https://persistence-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -451,6 +497,13 @@ export const persistence: Chain = {
         'https://www.mintscan.io/persistence/accounts/${accountAddress}',
     },
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/persistence',
+      tx_page: 'https://ezstaking.app/persistence/txs/${txHash}',
+      account_page:
+        'https://ezstaking.app/persistence/account/${accountAddress}',
+    },
+    {
       kind: 'ping.pub',
       url: 'https://ping.pub/persistence',
       tx_page: 'https://ping.pub/persistence/tx/${txHash}',
@@ -516,6 +569,10 @@ export const persistenceAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/xprt.svg',
         },
       ],
+      socials: {
+        webiste: 'https://persistence.one/',
+        twitter: 'https://twitter.com/PersistenceOne',
+      },
     },
     {
       description: 'PSTAKE Liquid-Staked ATOM',
@@ -535,6 +592,16 @@ export const persistenceAssetList: AssetLists = {
       name: 'PSTAKE staked ATOM',
       display: 'stkatom',
       symbol: 'stkATOM',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+          },
+          provider: 'pSTAKE',
+        },
+      ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkatom.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkatom.svg',
@@ -821,6 +888,16 @@ export const persistenceAssetList: AssetLists = {
       name: 'PSTAKE staked OSMO',
       display: 'stkosmo',
       symbol: 'stkOSMO',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'osmosis',
+            base_denom: 'uosmo',
+          },
+          provider: 'pSTAKE',
+        },
+      ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkosmo.svg',
@@ -851,6 +928,16 @@ export const persistenceAssetList: AssetLists = {
       name: 'PSTAKE staked DYDX',
       display: 'stkdydx',
       symbol: 'stkDYDX',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'dydx',
+            base_denom: 'adydx',
+          },
+          provider: 'pSTAKE',
+        },
+      ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdydx.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdydx.svg',
@@ -859,6 +946,142 @@ export const persistenceAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdydx.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkdydx.svg',
+        },
+      ],
+    },
+    {
+      description: 'PSTAKE Liquid-Staked STARS',
+      denom_units: [
+        {
+          denom: 'stk/ustars',
+          exponent: 0,
+          aliases: [],
+        },
+        {
+          denom: 'stkstars',
+          exponent: 6,
+          aliases: ['stk/stars'],
+        },
+      ],
+      base: 'stk/ustars',
+      name: 'PSTAKE staked STARS',
+      display: 'stkstars',
+      symbol: 'stkSTARS',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'stargaze',
+            base_denom: 'ustars',
+          },
+          provider: 'pSTAKE',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkstars.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkstars.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkstars.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkstars.svg',
+        },
+      ],
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/AD8E1D4AC4EA8FC79CC46E33319A3791477D4DEBFC30D5D874074B993422B41B',
+          exponent: 0,
+          aliases: ['ustars'],
+        },
+        {
+          denom: 'stars',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/AD8E1D4AC4EA8FC79CC46E33319A3791477D4DEBFC30D5D874074B993422B41B',
+      name: 'Stargaze',
+      display: 'stars',
+      symbol: 'STARS',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'stargaze',
+            base_denom: 'ustars',
+            channel_id: 'channel-287',
+          },
+          chain: {
+            channel_id: 'channel-197',
+            path: 'transfer/channel-197/ustars',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'stargaze',
+            base_denom: 'ustars',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.svg',
+      },
+    },
+    {
+      description: 'The native token cw20 for Shade on Secret Network',
+      denom_units: [
+        {
+          denom:
+            'ibc/5D3B6445EA1D7064C4B1CCB588638589529556E1BCBADF13475021B42EA8C73B',
+          exponent: 0,
+          aliases: ['cw20:secret153wu605vvp934xhd4k9dtd640zsep5jkesstdm'],
+        },
+        {
+          denom: 'shd',
+          exponent: 8,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/5D3B6445EA1D7064C4B1CCB588638589529556E1BCBADF13475021B42EA8C73B',
+      name: 'Shade',
+      display: 'shd',
+      symbol: 'SHD',
+      traces: [
+        {
+          type: 'ibc-cw20',
+          counterparty: {
+            chain_name: 'secretnetwork',
+            base_denom: 'cw20:secret153wu605vvp934xhd4k9dtd640zsep5jkesstdm',
+            port: 'wasm.secret1tqmms5awftpuhalcv5h5mg76fa0tkdz4jv9ex4',
+            channel_id: 'channel-132',
+          },
+          chain: {
+            port: 'transfer',
+            channel_id: 'channel-159',
+            path: 'transfer/channel-159/cw20:secret153wu605vvp934xhd4k9dtd640zsep5jkesstdm',
+          },
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/shd.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/shd.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'secretnetwork',
+            base_denom: 'cw20:secret153wu605vvp934xhd4k9dtd640zsep5jkesstdm',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/shd.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/shd.svg',
         },
       ],
     },

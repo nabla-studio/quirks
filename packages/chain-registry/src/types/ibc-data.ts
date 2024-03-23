@@ -20,6 +20,7 @@ export interface IbcData {
      * IBC Version
      */
     version: string;
+    fee_version?: string;
     /**
      * Human readable description of the channel.
      */

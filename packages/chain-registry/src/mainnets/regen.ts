@@ -236,6 +236,12 @@ export const regen: Chain = {
       account_page: 'https://www.mintscan.io/regen/accounts/${accountAddress}',
     },
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/regen',
+      tx_page: 'https://ezstaking.app/regen/txs/${txHash}',
+      account_page: 'https://ezstaking.app/regen/account/${accountAddress}',
+    },
+    {
       kind: '🔥STAVR🔥',
       url: 'https://explorer.stavr.tech/Regen-Mainnet',
       tx_page: 'https://explorer.stavr.tech/Regen-Mainnet/tx/${txHash}',
@@ -302,6 +308,10 @@ export const regenAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/regen/images/regen.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.regen.network/',
+        twitter: 'https://twitter.com/regen_network',
+      },
     },
     {
       description:

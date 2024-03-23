@@ -168,7 +168,7 @@ export const bandchain: Chain = {
         provider: 'w3coins',
       },
       {
-        address: 'https://bandprotocol-rpc.highstakes.ch:26657/',
+        address: 'https://bandprotocol-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -218,7 +218,7 @@ export const bandchain: Chain = {
         provider: 'w3coins',
       },
       {
-        address: 'https://bandprotocol-api.highstakes.ch:1317/',
+        address: 'https://bandprotocol-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -368,6 +368,10 @@ export const bandchainAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bandchain/images/band.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.bandprotocol.com/',
+        twitter: 'https://twitter.com/BandProtocol',
+      },
     },
   ],
 };

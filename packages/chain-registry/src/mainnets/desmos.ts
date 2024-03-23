@@ -33,12 +33,21 @@ export const desmos: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/desmos-labs/desmos',
-    recommended_version: 'v6.2.1',
-    compatible_versions: ['v6.2.1'],
+    recommended_version: 'v7.0.1',
+    compatible_versions: ['v7.0.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/desmos-labs/desmos/releases/download/v6.2.1/desmos-6.2.1-linux-amd64',
+        'https://github.com/desmos-labs/desmos/releases/download/v7.0.1/desmos-7.0.1-linux-amd64',
     },
+    cosmos_sdk_version: 'desmos-labs/cosmos-sdk v0.47.9-desmos',
+    ibc_go_version: 'v7.3.2',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.34.4',
+    },
+    cosmwasm_version: 'v0.45.0',
+    cosmwasm_enabled: true,
+    cosmwasm_path: '$HOME/.desmos/data/wasm',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/desmos-labs/mainnet/main/genesis.json',
@@ -100,6 +109,27 @@ export const desmos: Chain = {
           'linux/amd64':
             'https://github.com/desmos-labs/desmos/releases/download/v6.2.1/desmos-6.2.1-linux-amd64',
         },
+        next_version_name: 'v7',
+      },
+      {
+        name: 'v7',
+        proposal: 42,
+        height: 12745550,
+        recommended_version: 'v7.0.1',
+        compatible_versions: ['v7.0.1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/desmos-labs/desmos/releases/download/v6.2.1/desmos-6.2.1-linux-amd64',
+        },
+        cosmos_sdk_version: 'desmos-labs/cosmos-sdk v0.47.9-desmos',
+        ibc_go_version: 'v7.3.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.4',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.desmos/data/wasm',
         next_version_name: '',
       },
     ],
@@ -167,6 +197,11 @@ export const desmos: Chain = {
         address: 'desmos-peer.panthea.eu:29656',
         provider: 'Panthea EU',
       },
+      {
+        id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
+        address: 'desmos.declab.pro:26615',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   apis: {
@@ -199,6 +234,10 @@ export const desmos: Chain = {
         address: 'https://desmos-rpc.panthea.eu',
         provider: 'Panthea EU',
       },
+      {
+        address: 'https://desmos.declab.pro:26613',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
     rest: [
       {
@@ -228,6 +267,10 @@ export const desmos: Chain = {
       {
         address: 'https://desmos-api.panthea.eu',
         provider: 'Panthea EU',
+      },
+      {
+        address: 'https://vidulum.declab.pro:443',
+        provider: 'Decloud Nodes Lab',
       },
     ],
     grpc: [
@@ -259,14 +302,18 @@ export const desmos: Chain = {
         address: 'desmos-grpc.panthea.eu:16730',
         provider: 'Panthea EU',
       },
+      {
+        address: 'https://vidulum.declab.pro:9009',
+        provider: 'Decloud Nodes Lab',
+      },
     ],
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/desmos',
-      tx_page: 'https://app.ezstaking.io/desmos/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/desmos/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/desmos',
+      tx_page: 'https://ezstaking.app/desmos/txs/${txHash}',
+      account_page: 'https://ezstaking.app/desmos/account/${accountAddress}',
     },
     {
       kind: 'bigdipper',
@@ -294,6 +341,11 @@ export const desmos: Chain = {
       kind: 'TC Network',
       url: 'https://explorer.tcnetwork.io/desmos',
       tx_page: 'https://explorer.tcnetwork.io/desmos/transaction/${txHash}',
+    },
+    {
+      kind: 'Decloud Nodes Lab',
+      url: 'https://explorer.declab.pro/Desmos',
+      tx_page: 'https://explorer.declab.pro/Desmos/tx/${txHash}',
     },
   ],
   images: [

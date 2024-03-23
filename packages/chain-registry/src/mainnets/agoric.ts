@@ -322,6 +322,10 @@ export const agoricAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/agoric/images/bld.svg',
         },
       ],
+      socials: {
+        webiste: 'https://agoric.com/',
+        twitter: 'https://twitter.com/agoric',
+      },
     },
     {
       description:

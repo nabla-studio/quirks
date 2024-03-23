@@ -200,11 +200,10 @@ export const kichain: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/kichain',
-      tx_page: 'https://app.ezstaking.io/kichain/txs/${txHash}',
-      account_page:
-        'https://app.ezstaking.io/kichain/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/kichain',
+      tx_page: 'https://ezstaking.app/kichain/txs/${txHash}',
+      account_page: 'https://ezstaking.app/kichain/account/${accountAddress}',
     },
     {
       kind: 'mintscan',

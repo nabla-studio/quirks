@@ -278,6 +278,12 @@ export const sommelier: Chain = {
         'https://www.mintscan.io/sommelier/accounts/${accountAddress}',
     },
     {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/sommelier',
+      tx_page: 'https://ezstaking.app/sommelier/txs/${txHash}',
+      account_page: 'https://ezstaking.app/sommelier/account/${accountAddress}',
+    },
+    {
       kind: '🔥STAVR🔥',
       url: 'https://explorer.stavr.tech/Sommelier-Mainnet',
       tx_page: 'https://explorer.stavr.tech/Sommelier-Mainnet/tx/${txHash}',
@@ -344,6 +350,10 @@ export const sommelierAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/sommelier/images/somm.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.sommelier.finance/',
+        twitter: 'https://twitter.com/sommfinance',
+      },
     },
   ],
 };

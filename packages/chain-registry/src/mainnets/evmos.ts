@@ -662,10 +662,10 @@ export const evmos: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/evmos',
-      tx_page: 'https://app.ezstaking.io/evmos/txs/${txHash}',
-      account_page: 'https://app.ezstaking.io/evmos/account/${accountAddress}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/evmos',
+      tx_page: 'https://ezstaking.app/evmos/txs/${txHash}',
+      account_page: 'https://ezstaking.app/evmos/account/${accountAddress}',
     },
     {
       kind: 'mintscan',
@@ -758,6 +758,10 @@ export const evmosAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
         },
       ],
+      socials: {
+        webiste: 'https://evmos.org/',
+        twitter: 'https://twitter.com/EvmosOrg',
+      },
     },
     {
       description: 'Tether USDt on Evmos',

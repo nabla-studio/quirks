@@ -227,7 +227,7 @@ export const secretnetwork: Chain = {
         provider: '1RPC - Automata Network',
       },
       {
-        address: 'https://secretnetwork-rpc.highstakes.ch:26657/',
+        address: 'https://secretnetwork-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -257,7 +257,7 @@ export const secretnetwork: Chain = {
         provider: '1RPC - Automata Network',
       },
       {
-        address: 'https://secretnetwork-api.highstakes.ch:1317/',
+        address: 'https://secretnetwork-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
       {
@@ -286,11 +286,11 @@ export const secretnetwork: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/secretnetwork',
-      tx_page: 'https://app.ezstaking.io/secretnetwork/txs/${txHash}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/secretnetwork',
+      tx_page: 'https://ezstaking.app/secretnetwork/txs/${txHash}',
       account_page:
-        'https://app.ezstaking.io/secretnetwork/account/${accountAddress}',
+        'https://ezstaking.app/secretnetwork/account/${accountAddress}',
     },
     {
       kind: 'ping.pub',
@@ -350,6 +350,10 @@ export const secretnetworkAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.svg',
         },
       ],
+      socials: {
+        webiste: 'https://scrt.network/',
+        twitter: 'https://twitter.com/SecretNetwork',
+      },
     },
     {
       description: 'The native token cw20 for SIENNA on Secret Network',

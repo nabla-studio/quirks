@@ -163,6 +163,12 @@ export const finschia: Chain = {
       account_page:
         'https://www.mintscan.io/finschia/address/${accountAddress}',
     },
+    {
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/finschia',
+      tx_page: 'https://ezstaking.app/finschia/txs/${txHash}',
+      account_page: 'https://ezstaking.app/finschia/account/${accountAddress}',
+    },
   ],
   images: [
     {

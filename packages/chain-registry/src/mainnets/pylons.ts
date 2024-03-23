@@ -122,6 +122,10 @@ export const pylonsAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pylons/images/pylons.png',
         },
       ],
+      socials: {
+        webiste: 'https://pylons.tech',
+        twitter: 'https://twitter.com/pylonstech',
+      },
     },
   ],
 };

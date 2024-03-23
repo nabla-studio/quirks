@@ -315,11 +315,11 @@ export const gravitybridge: Chain = {
   },
   explorers: [
     {
-      kind: 'EZ Staking',
-      url: 'https://app.ezstaking.io/gravitybridge',
-      tx_page: 'https://app.ezstaking.io/gravitybridge/txs/${txHash}',
+      kind: 'ezstaking',
+      url: 'https://ezstaking.app/gravitybridge',
+      tx_page: 'https://ezstaking.app/gravitybridge/txs/${txHash}',
       account_page:
-        'https://app.ezstaking.io/gravitybridge/account/${accountAddress}',
+        'https://ezstaking.app/gravitybridge/account/${accountAddress}',
     },
     {
       kind: 'mintscan',
@@ -397,6 +397,10 @@ export const gravitybridgeAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gravitybridge/images/grav.svg',
         },
       ],
+      socials: {
+        webiste: 'https://www.gravitybridge.net/',
+        twitter: 'https://twitter.com/gravity_bridge',
+      },
     },
     {
       description:
