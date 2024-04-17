@@ -307,7 +307,7 @@ export const marsAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.marsprotocol.io/',
+        website: 'https://www.marsprotocol.io/',
         twitter: 'https://twitter.com/mars_protocol',
       },
     },

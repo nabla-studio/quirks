@@ -86,6 +86,10 @@ export const stratos: Chain = {
         address: 'https://rpc-stratos.whispernode.com:443',
         provider: 'WhisperNode 🤐',
       },
+      {
+        address: 'https://stratos-rpc.noders.services:443',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -95,6 +99,10 @@ export const stratos: Chain = {
       {
         address: 'https://lcd-stratos.whispernode.com:443',
         provider: 'WhisperNode 🤐',
+      },
+      {
+        address: 'https://stratos-api.noders.services:443',
+        provider: '[NODERS]TEAM',
       },
     ],
     grpc: [
@@ -110,6 +118,10 @@ export const stratos: Chain = {
         address: 'stratos.grpc.nodersteam.com:9090',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'stratos-grpc.noders.services:29090',
+        provider: '[NODERS]TEAM',
+      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -119,6 +131,10 @@ export const stratos: Chain = {
       {
         address: 'https://jsonrpc.stratos.nodestake.top',
         provider: 'NodeStake',
+      },
+      {
+        address: 'https://stratos-jsonrpc.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
   },

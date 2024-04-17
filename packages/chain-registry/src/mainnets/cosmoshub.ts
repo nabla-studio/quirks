@@ -33,21 +33,21 @@ export const cosmoshub: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/cosmos/gaia',
-    recommended_version: 'v15.1.0',
-    compatible_versions: ['v15.1.0'],
+    recommended_version: 'v15.2.0',
+    compatible_versions: ['v15.2.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-linux-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-linux-amd64',
       'linux/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-linux-arm64',
+        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-linux-arm64',
       'darwin/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-darwin-amd64',
       'darwin/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-arm64',
+        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-darwin-arm64',
       'windows/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-darwin-amd64',
       'windows/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-windows-arm64.exe',
+        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-windows-arm64.exe',
     },
     genesis: {
       genesis_url:
@@ -225,30 +225,30 @@ export const cosmoshub: Chain = {
       },
       {
         name: 'v15',
-        tag: 'v15.0.0',
+        tag: 'v15.2.0',
         proposal: 885,
         height: 19639600,
-        recommended_version: 'v15.1.0',
-        compatible_versions: ['v15.1.0'],
-        cosmos_sdk_version: 'v0.47.10-ics-lsm',
-        ibc_go_version: 'v7.3.2',
+        recommended_version: 'v15.2.0',
+        compatible_versions: ['v15.2.0'],
+        cosmos_sdk_version: 'v0.47.11-ics-lsm',
+        ibc_go_version: 'v7.4.0',
         consensus: {
           type: 'cometbft',
           version: 'v0.37.4',
         },
         binaries: {
           'linux/amd64':
-            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-linux-amd64',
+            'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-linux-amd64',
           'linux/arm64':
-            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-linux-arm64',
+            'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-linux-arm64',
           'darwin/amd64':
-            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-amd64',
+            'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-darwin-amd64',
           'darwin/arm64':
-            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-arm64',
+            'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-darwin-arm64',
           'windows/amd64':
-            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-darwin-amd64',
+            'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-darwin-amd64',
           'windows/arm64':
-            'https://github.com/cosmos/gaia/releases/download/v15.1.0/gaiad-v15.1.0-windows-arm64.exe',
+            'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-windows-arm64.exe',
         },
         next_version_name: '',
       },
@@ -692,12 +692,6 @@ export const cosmoshub: Chain = {
       tx_page: 'https://ping.pub/cosmos/tx/${txHash}',
     },
     {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/cosmos',
-      tx_page: 'https://bigdipper.live/cosmos/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/cosmos/accounts/${accountAddress}',
-    },
-    {
       kind: 'atomscan',
       url: 'https://atomscan.com',
       tx_page: 'https://atomscan.com/transactions/${txHash}',
@@ -770,7 +764,7 @@ export const cosmoshubAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://cosmos.network',
+        website: 'https://cosmos.network',
         twitter: 'https://twitter.com/cosmoshub',
       },
     },

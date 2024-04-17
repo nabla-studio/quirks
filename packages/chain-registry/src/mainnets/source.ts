@@ -79,7 +79,7 @@ export const source: Chain = {
         provider: 'NodeStake',
       },
       {
-        id: '6f6a3a908634b79b6fe7c4988efec2553f188234',
+        id: '637077d431f618181597706810a65c826524fd74',
         address: 'source.rpc.nodeshub.online:15856',
         provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
       },
@@ -213,6 +213,14 @@ export const source: Chain = {
         address: 'https://source.declab.pro:26604',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://rpc.source.stakeup.tech',
+        provider: 'StakeUp',
+      },
+      {
+        address: 'https://source_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
@@ -278,6 +286,14 @@ export const source: Chain = {
       {
         address: 'https://source.declab.pro:443',
         provider: 'Decloud Nodes Lab',
+      },
+      {
+        address: 'https://api.source.stakeup.tech',
+        provider: 'StakeUp',
+      },
+      {
+        address: 'https://source_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
     grpc: [
@@ -396,6 +412,20 @@ export const source: Chain = {
       account_page:
         'https://explorer.declab.pro/Source/account/${accountAddress}',
     },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/source',
+      tx_page: 'https://explorer.whenmoonwhenlambo.money/source/tx/${txHash}',
+      account_page:
+        'https://explorer.whenmoonwhenlambo.money/source/account/${accountAddress}',
+    },
+    {
+      kind: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      url: 'https://explorer.nodeshub.online/source/',
+      tx_page: 'https://explorer.nodeshub.online/source/tx/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/source/accounts/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -443,7 +473,7 @@ export const sourceAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.sourceprotocol.io/',
+        website: 'https://www.sourceprotocol.io/',
         twitter: 'https://twitter.com/sourceprotocol_',
       },
     },

@@ -314,6 +314,10 @@ export const provenance: Chain = {
         address: 'https://provenance-rpc.panthea.eu',
         provider: 'Panthea EU',
       },
+      {
+        address: 'https://provenance_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
@@ -327,6 +331,10 @@ export const provenance: Chain = {
       {
         address: 'https://api.provenance.io',
         provider: 'Figure',
+      },
+      {
+        address: 'https://provenance.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://api-provenance-ia.cosmosia.notional.ventures/',
@@ -347,6 +355,10 @@ export const provenance: Chain = {
       {
         address: 'https://provenance-api.panthea.eu',
         provider: 'Panthea EU',
+      },
+      {
+        address: 'https://provenance_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
     grpc: [
@@ -397,6 +409,13 @@ export const provenance: Chain = {
         'https://www.mintscan.io/provenance/accounts/${accountAddress}',
     },
     {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Provenance',
+      tx_page: 'https://explorer.stavr.tech/Provenance/txs/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Provenance/account/${accountAddress}',
+    },
+    {
       kind: 'ezstaking',
       url: 'https://ezstaking.app/provenance',
       tx_page: 'https://ezstaking.app/provenance/txs/${txHash}',
@@ -411,11 +430,12 @@ export const provenance: Chain = {
         'https://atomscan.com/provenance/accounts/${accountAddress}',
     },
     {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/provenance',
-      tx_page: 'https://bigdipper.live/provenance/transactions/${txHash}',
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/provenance',
+      tx_page:
+        'https://explorer.whenmoonwhenlambo.money/provenance/tx/${txHash}',
       account_page:
-        'https://bigdipper.live/provenance/accounts/${accountAddress}',
+        'https://explorer.whenmoonwhenlambo.money/provenance/account/${accountAddress}',
     },
   ],
   images: [

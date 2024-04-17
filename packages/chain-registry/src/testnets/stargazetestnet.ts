@@ -65,6 +65,11 @@ export const stargazetestnet: Chain = {
         address: '208.73.205.226:26656',
         provider: 'stargaze',
       },
+      {
+        id: '496ac0ba20188f70f41e0a814dfd4d9a617338f8',
+        address: 'stargaze-testnet-seed.ibs.team:16652',
+        provider: 'Inter Blockchain Services',
+      },
     ],
   },
   apis: {
@@ -73,11 +78,19 @@ export const stargazetestnet: Chain = {
         address: 'https://rpc.elgafar-1.stargaze-apis.com',
         provider: 'Stargaze Foundation',
       },
+      {
+        address: 'https://stargaze-testnet-rpc.ibs.team:443',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     rest: [
       {
         address: 'https://rest.elgafar-1.stargaze-apis.com',
         provider: 'Stargaze Foundation',
+      },
+      {
+        address: 'https://stargaze-testnet-api.ibs.team:443',
+        provider: 'Inter Blockchain Services',
       },
     ],
     grpc: [

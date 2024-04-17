@@ -236,6 +236,14 @@ export const kyve: Chain = {
         address: 'https://kyve.declab.pro:26616',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://kyve-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://kyve_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
@@ -278,6 +286,14 @@ export const kyve: Chain = {
         address: 'https://kyve.declab.pro:443',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://kyve-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://kyve_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     grpc: [
       {
@@ -307,6 +323,10 @@ export const kyve: Chain = {
       {
         address: 'https://kyve.declab.pro:9011',
         provider: 'Decloud Nodes Lab',
+      },
+      {
+        address: 'kyve-grpc.noders.services:15090',
+        provider: '[NODERS]TEAM',
       },
     ],
   },
@@ -351,6 +371,13 @@ export const kyve: Chain = {
       account_page:
         'https://explorer.declab.pro/Kyve/account/${accountAddress}',
     },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/kyve',
+      tx_page: 'https://explorer.whenmoonwhenlambo.money/kyve/txs/${txHash}',
+      account_page:
+        'https://explorer.whenmoonwhenlambo.money/kyve/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -392,7 +419,7 @@ export const kyveAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.kyve.network/',
+        website: 'https://www.kyve.network/',
         twitter: 'https://twitter.com/KYVENetwork',
       },
     },

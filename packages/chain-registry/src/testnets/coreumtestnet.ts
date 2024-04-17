@@ -102,6 +102,11 @@ export const coreumtestnet: Chain = {
         address: 'seed-antares.mainnet-1.coreum.dev:26656',
         provider: 'Coreum Foundation',
       },
+      {
+        id: '496ac0ba20188f70f41e0a814dfd4d9a617338f8',
+        address: 'coreum-testnet-seed.ibs.team:16660',
+        provider: 'Inter Blockchain Services',
+      },
     ],
   },
   apis: {
@@ -113,6 +118,10 @@ export const coreumtestnet: Chain = {
       {
         address: 'https://full-node-eris.testnet-1.coreum.dev:26657',
         provider: 'Coreum Foundation',
+      },
+      {
+        address: 'https://coreum-testnet-rpc.ibs.team:443',
+        provider: 'Inter Blockchain Services',
       },
     ],
     grpc: [
@@ -129,6 +138,10 @@ export const coreumtestnet: Chain = {
       {
         address: 'https://full-node.testnet-1.coreum.dev:1317',
         provider: 'Coreum',
+      },
+      {
+        address: 'https://coreum-testnet-api.ibs.team:443',
+        provider: 'Inter Blockchain Services',
       },
     ],
   },

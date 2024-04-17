@@ -78,10 +78,10 @@ export const noble: Chain = {
       },
       {
         name: 'neon',
-        tag: 'v2.0.0',
+        tag: 'v2.0.1',
         height: 119000,
-        recommended_version: 'v2.0.0',
-        compatible_versions: ['v2.0.0'],
+        recommended_version: 'v2.0.1',
+        compatible_versions: ['v2.0.1', 'v2.0.0'],
         cosmos_sdk_version: 'v0.45',
         consensus: {
           type: 'tendermint',

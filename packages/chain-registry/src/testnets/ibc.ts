@@ -452,7 +452,7 @@ export const testnetIbc: IbcData[] = [
   {
     $schema: '../../ibc_data.schema.json',
     chain_1: {
-      chain_name: 'lavatestnet2',
+      chain_name: 'lavatestnet',
       client_id: '07-tendermint-11',
       connection_id: 'connection-11',
     },
@@ -490,6 +490,28 @@ export const testnetIbc: IbcData[] = [
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true, dex: 'osmosis' },
+      },
+    ],
+  },
+  {
+    $schema: '../../ibc_data.schema.json',
+    chain_1: {
+      chain_name: 'kujiratestnet',
+      client_id: '07-tendermint-73',
+      connection_id: 'connection-48',
+    },
+    chain_2: {
+      chain_name: 'terra2testnet',
+      client_id: '7-tendermint-568',
+      connection_id: 'connection-508',
+    },
+    channels: [
+      {
+        chain_1: { channel_id: 'channel-73', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-541', port_id: 'transfer' },
+        ordering: 'unordered',
+        version: 'ics20-1',
+        tags: { status: 'live', preferred: true },
       },
     ],
   },
@@ -900,18 +922,18 @@ export const testnetIbc: IbcData[] = [
     $schema: '../ibc_data.schema.json',
     chain_1: {
       chain_name: 'chain4energytestnet',
-      client_id: '07-tendermint-0',
-      connection_id: 'connection-0',
+      client_id: '07-tendermint-18',
+      connection_id: 'connection-5',
     },
     chain_2: {
       chain_name: 'osmosistestnet',
-      client_id: '07-tendermint-104',
-      connection_id: 'connection-122',
+      client_id: '07-tendermint-3393',
+      connection_id: 'connection-2989',
     },
     channels: [
       {
-        chain_1: { channel_id: 'channel-0', port_id: 'transfer' },
-        chain_2: { channel_id: 'channel-111', port_id: 'transfer' },
+        chain_1: { channel_id: 'channel-5', port_id: 'transfer' },
+        chain_2: { channel_id: 'channel-7735', port_id: 'transfer' },
         ordering: 'unordered',
         version: 'ics20-1',
         tags: { status: 'live', preferred: true, dex: 'osmosis' },
@@ -1124,7 +1146,7 @@ export const testnetIbc: IbcData[] = [
       connection_id: 'connection-659',
     },
     chain_2: {
-      chain_name: 'lavatestnet2',
+      chain_name: 'lavatestnet',
       client_id: '07-tendermint-10',
       connection_id: 'connection-10',
     },

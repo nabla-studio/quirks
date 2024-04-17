@@ -181,6 +181,10 @@ export const bitsong: Chain = {
         address: 'https://rpc.bitsong.mathnodes.com',
         provider: 'MathNodes',
       },
+      {
+        address: 'https://bitsong-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -231,6 +235,14 @@ export const bitsong: Chain = {
         address: 'https://api.bitsong.mathnodes.com',
         provider: 'MathNodes',
       },
+      {
+        address: 'https://bitsong-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://bitsong.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
     ],
     grpc: [
       {
@@ -257,6 +269,10 @@ export const bitsong: Chain = {
         address: 'grpc.bitsong.mathnodes.com:9092',
         provider: 'MathNodes',
       },
+      {
+        address: 'bitsong-grpc.noders.services:20090',
+        provider: '[NODERS]TEAM',
+      },
     ],
   },
   explorers: [
@@ -279,12 +295,6 @@ export const bitsong: Chain = {
         'https://www.mintscan.io/bitsong/accounts/${accountAddress}',
     },
     {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/bitsong',
-      tx_page: 'https://bigdipper.live/bitsong/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/bitsong/accounts/${accountAddress}',
-    },
-    {
       kind: 'atomscan',
       url: 'https://atomscan.com/bitsong',
       tx_page: 'https://atomscan.com/bitsong/transactions/${txHash}',
@@ -296,6 +306,13 @@ export const bitsong: Chain = {
       tx_page: 'https://explorer.safeblock.space/bitsong/tx/${txHash}',
       account_page:
         'https://explorer.safeblock.space/bitsong/account/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Bitsong',
+      tx_page: 'https://explorer.stavr.tech/Bitsong/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Bitsong/account/${accountAddress}',
     },
   ],
   images: [
@@ -339,7 +356,7 @@ export const bitsongAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://bitsong.io/',
+        website: 'https://bitsong.io/',
         twitter: 'https://twitter.com/BitSongOfficial',
       },
     },

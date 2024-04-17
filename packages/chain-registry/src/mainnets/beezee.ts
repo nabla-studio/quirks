@@ -222,6 +222,10 @@ export const beezee: Chain = {
         address: 'https://rpc-2.getbze.com',
         provider: 'AlphaTeam',
       },
+      {
+        address: 'https://beezee_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
@@ -235,6 +239,10 @@ export const beezee: Chain = {
       {
         address: 'https://rest-2.getbze.com',
         provider: 'AlphaTeam',
+      },
+      {
+        address: 'https://beezee_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
     grpc: [
@@ -271,6 +279,13 @@ export const beezee: Chain = {
       url: 'https://atomscan.com/beezee',
       tx_page: 'https://atomscan.com/beezee/transactions/${txHash}',
       account_page: 'https://atomscan.com/beezee/accounts/${accountAddress}',
+    },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/beezee',
+      tx_page: 'https://explorer.whenmoonwhenlambo.money/beezee/tx/${txHash}',
+      account_page:
+        'https://explorer.whenmoonwhenlambo.money/beezee/account/${accountAddress}',
     },
   ],
   images: [

@@ -233,6 +233,10 @@ export const dymension: Chain = {
         address: 'https://rpc.dymension.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://dymension-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -343,6 +347,10 @@ export const dymension: Chain = {
         address: 'https://lcd.dymension.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://dymension-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -425,6 +433,10 @@ export const dymension: Chain = {
         address: 'https://grpc.dymension.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'dymension-grpc.noders.services:12090',
+        provider: '[NODERS]TEAM',
+      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -454,6 +466,10 @@ export const dymension: Chain = {
       {
         address: 'https://evm-rpc.dymension.posthuman.digital',
         provider: 'posthuman',
+      },
+      {
+        address: 'https://dymension-jsonrpc.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
   },
@@ -540,7 +556,7 @@ export const dymensionAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://portal.dymension.xyz',
+        website: 'https://portal.dymension.xyz',
         twitter: 'https://twitter.com/dymension',
       },
     },

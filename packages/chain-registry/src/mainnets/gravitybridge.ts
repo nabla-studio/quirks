@@ -357,6 +357,13 @@ export const gravitybridge: Chain = {
       account_page:
         'https://stakeflow.io/gravity-bridge/accounts/${accountAddress}',
     },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/GravityBridge',
+      tx_page: 'https://explorer.stavr.tech/GravityBridge/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/GravityBridge/accounts/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -398,7 +405,7 @@ export const gravitybridgeAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.gravitybridge.net/',
+        website: 'https://www.gravitybridge.net/',
         twitter: 'https://twitter.com/gravity_bridge',
       },
     },
@@ -788,6 +795,47 @@ export const gravitybridgeAssetList: AssetLists = {
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/page.svg',
+        },
+      ],
+    },
+    {
+      description: 'Gravity Bridge Paxos Gold',
+      denom_units: [
+        {
+          denom: 'gravity0x45804880De22913dAFE09f4980848ECE6EcbAf78',
+          exponent: 0,
+        },
+        {
+          denom: 'gpaxg',
+          exponent: 18,
+        },
+      ],
+      base: 'gravity0x45804880De22913dAFE09f4980848ECE6EcbAf78',
+      name: 'Paxos Gold',
+      display: 'gpaxg',
+      symbol: 'PAXG',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/paxg.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/paxg.svg',
+      },
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x45804880De22913dAFE09f4980848ECE6EcbAf78',
+          },
+          provider: 'Gravity Bridge',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            base_denom: 'ethereum',
+            chain_name: '0x45804880De22913dAFE09f4980848ECE6EcbAf78',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/paxg.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/paxg.svg',
         },
       ],
     },

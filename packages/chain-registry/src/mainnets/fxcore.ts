@@ -193,6 +193,11 @@ export const fxcore: Chain = {
         address: 'fxcore-mainnet-node-5.functionx.io:26656',
         provider: 'Function X',
       },
+      {
+        id: '637077d431f618181597706810a65c826524fd74',
+        address: 'functionx.rpc.nodeshub.online:24256',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
   },
   apis: {
@@ -201,11 +206,19 @@ export const fxcore: Chain = {
         address: 'https://fx-json.functionx.io',
         provider: 'Function X',
       },
+      {
+        address: 'https://functionx.rpc.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     rest: [
       {
         address: 'https://fx-rest.functionx.io',
         provider: 'Function X',
+      },
+      {
+        address: 'https://functionx.api.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
       },
     ],
     grpc: [
@@ -216,6 +229,10 @@ export const fxcore: Chain = {
       {
         address: 'https://fx-grpc.portfolio-x.xyz:9090',
         provider: 'Portfolio X',
+      },
+      {
+        address: 'functionx.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
       },
     ],
     'evm-http-jsonrpc': [
@@ -243,6 +260,13 @@ export const fxcore: Chain = {
       kind: 'ping.pub',
       url: 'https://ping.pub/fxcore',
       tx_page: 'https://ping.pub/fxcore/tx/${txHash}',
+    },
+    {
+      kind: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      url: 'https://explorer.nodeshub.online/fxcore/',
+      tx_page: 'https://explorer.nodeshub.online/fxcore/tx/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/fxcore/accounts/${accountAddress}',
     },
   ],
 };

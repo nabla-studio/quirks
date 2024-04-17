@@ -591,6 +591,10 @@ export const umee: Chain = {
         address: 'https://umee.rpc.stakevillage.net:443',
         provider: 'Stake Village',
       },
+      {
+        address: 'https://umee-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -657,6 +661,10 @@ export const umee: Chain = {
         address: 'https://umee.api.stakevillage.net',
         provider: 'Stake Village',
       },
+      {
+        address: 'https://umee-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -718,6 +726,10 @@ export const umee: Chain = {
       {
         address: 'umee.grpc.stakevillage.net:11090',
         provider: 'Stake Village',
+      },
+      {
+        address: 'umee-grpc.noders.services:32090',
+        provider: '[NODERS]TEAM',
       },
     ],
   },

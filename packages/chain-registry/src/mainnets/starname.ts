@@ -157,7 +157,7 @@ export const starnameAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://app.starname.me/',
+        website: 'https://app.starname.me/',
         twitter: 'https://twitter.com/starname_me',
       },
     },

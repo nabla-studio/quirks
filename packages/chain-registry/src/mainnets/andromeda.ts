@@ -79,7 +79,7 @@ export const andromeda: Chain = {
       },
       {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
-        address: 'nibiru.rpc.kjnodes.com:13959',
+        address: 'andromeda.rpc.kjnodes.com:14759',
         provider: 'kjnodes.com 🦄',
       },
     ],
@@ -169,8 +169,12 @@ export const andromeda: Chain = {
         provider: 'genznodes',
       },
       {
-        address: 'https://nibiru.rpc.kjnodes.comv',
+        address: 'https://andromeda.rpc.kjnodes.com',
         provider: 'kjnodes.com 🦄',
+      },
+      {
+        address: 'andromeda-rpc.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
     rest: [
@@ -215,8 +219,12 @@ export const andromeda: Chain = {
         provider: 'genznodes',
       },
       {
-        address: 'https://nibiru.api.kjnodes.com',
+        address: 'https://andromeda.api.kjnodes.com',
         provider: 'kjnodes.com 🦄',
+      },
+      {
+        address: 'andromeda-api.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
     grpc: [
@@ -257,8 +265,12 @@ export const andromeda: Chain = {
         provider: 'genznodes',
       },
       {
-        address: 'nibiru.grpc.kjnodes.com:443',
+        address: 'andromeda.grpc.kjnodes.com:443',
         provider: 'kjnodes.com 🦄',
+      },
+      {
+        address: 'andromeda-grpc.noders.services:34090',
+        provider: '[NODERS]TEAM',
       },
     ],
   },

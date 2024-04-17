@@ -168,12 +168,6 @@ export const emoney: Chain = {
       account_page: 'https://ezstaking.app/emoney/account/${accountAddress}',
     },
     {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/emoney',
-      tx_page: 'https://bigdipper.live/emoney/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/emoney/accounts/${accountAddress}',
-    },
-    {
       kind: 'mintscan',
       url: 'https://www.mintscan.io/emoney',
       tx_page: 'https://www.mintscan.io/emoney/transactions/${txHash}',

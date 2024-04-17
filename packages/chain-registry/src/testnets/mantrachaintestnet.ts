@@ -1,13 +1,13 @@
 import type { Chain, AssetLists, ChainVersions } from '../types';
 
 export const mantrachaintestnet: Chain = {
-  $schema: '../chain.schema.json',
+  $schema: '../../chain.schema.json',
   chain_name: 'mantrachaintestnet',
   status: 'live',
   network_type: 'testnet',
-  pretty_name: 'MANTRA Chain',
-  chain_id: 'mantrachain-testnet-1',
-  bech32_prefix: 'uaum',
+  pretty_name: 'MANTRA Hongbai Testnet',
+  chain_id: 'mantra-hongbai-1',
+  bech32_prefix: 'uom',
   daemon_name: 'mantrachaind',
   node_home: '$HOME/.mantrachain',
   key_algos: ['secp256k1'],
@@ -15,7 +15,7 @@ export const mantrachaintestnet: Chain = {
   fees: {
     fee_tokens: [
       {
-        denom: 'uaum',
+        denom: 'uom',
         fixed_min_gas_price: 0,
         low_gas_price: 0.001,
         average_gas_price: 0.002,
@@ -26,14 +26,14 @@ export const mantrachaintestnet: Chain = {
   staking: {
     staking_tokens: [
       {
-        denom: 'uaum',
+        denom: 'uom',
       },
     ],
   },
   codebase: {
     git_repo: 'https://github.com/MANTRA-Finance',
-    recommended_version: '1.0.0',
-    compatible_versions: ['1.0.0'],
+    recommended_version: '3.0.0',
+    compatible_versions: ['3.0.0'],
     cosmos_sdk_version: '0.47.3',
     consensus: {
       type: 'cometbft',
@@ -62,20 +62,20 @@ export const mantrachaintestnet: Chain = {
   peers: {
     seeds: [
       {
-        id: '69fa5f7927f2b013f152b6dfc56324156feb1973',
-        address: '34.172.80.207:26656',
+        id: 'd6016af7cb20cf1905bd61468f6a61decb3fd7c0',
+        address: 'seed.hongbai.mantrachain.io:26656',
         provider: 'MANTRACHAIN',
       },
     ],
     persistent_peers: [
       {
-        id: '182a37a556ff0b6733fe58020e7746de3292492d',
-        address: '5.222.198.102:26656',
+        id: 'da061f404690c5b6b19dd85d40fefde1fecf406c',
+        address: '34.68.19.19:26656',
         provider: 'MANTRACHAIN',
       },
       {
-        id: '64691a4202c1ad29a416b21ce21bfc9659783406',
-        address: '34.136.169.18:26656',
+        id: '20db08acbcac9b7114839e63539da2802b848982',
+        address: '34.72.148.3:26656',
         provider: 'MANTRACHAIN',
       },
     ],
@@ -83,19 +83,19 @@ export const mantrachaintestnet: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc.testnet.mantrachain.io',
+        address: 'https://rpc.hongbai.mantrachain.io',
         provider: 'MANTRACHAIN',
       },
     ],
     rest: [
       {
-        address: 'https://api.testnet.mantrachain.io',
+        address: 'https://api.hongbai.mantrachain.io',
         provider: 'MANTRACHAIN',
       },
     ],
     grpc: [
       {
-        address: 'https://grpc.testnet.mantrachain.io',
+        address: 'https://grpc.hongbai.mantrachain.io',
         provider: 'MANTRACHAIN',
       },
     ],
@@ -114,27 +114,27 @@ export const mantrachaintestnet: Chain = {
 };
 
 export const mantrachaintestnetAssetList: AssetLists = {
-  $schema: '../assetlist.schema.json',
+  $schema: '../../assetlist.schema.json',
   chain_name: 'mantrachaintestnet',
   assets: [
     {
-      description: 'The native token of MANTRA Chain',
+      description: 'The native token of MANTRA',
       denom_units: [
         {
-          denom: 'uaum',
+          denom: 'uom',
           exponent: 0,
           aliases: [],
         },
         {
-          denom: 'aum',
+          denom: 'om',
           exponent: 6,
           aliases: [],
         },
       ],
-      base: 'uaum',
+      base: 'uom',
       name: 'MANTRA Chain',
-      display: 'aum',
-      symbol: 'AUM',
+      display: 'om',
+      symbol: 'OM',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.svg',

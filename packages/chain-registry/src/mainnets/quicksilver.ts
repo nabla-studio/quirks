@@ -32,16 +32,16 @@ export const quicksilver: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/ingenuity-build/quicksilver',
-    recommended_version: 'v1.5.2',
-    compatible_versions: ['v1.5.1', 'v1.5.2'],
+    recommended_version: 'v1.5.4',
+    compatible_versions: ['v1.5.4'],
     binaries: {
       'linux/amd64':
-        'https://github.com/ingenuity-build/quicksilver/releases/download/v1.5.2/quicksilverd-v1.5.2-amd64',
+        'https://github.com/ingenuity-build/quicksilver/releases/download/v1.5.4/quicksilverd-v1.5.4-amd64',
     },
     cosmos_sdk_version: 'v0.46.16',
     consensus: {
       type: 'cometbft',
-      version: 'v0.34.31',
+      version: 'v0.34.32',
     },
     cosmwasm_version:
       'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
@@ -243,6 +243,48 @@ export const quicksilver: Chain = {
         consensus: {
           type: 'cometbft',
           version: 'v0.34.29',
+        },
+        cosmwasm_version:
+          'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v5.3.2',
+        next_version_name: 'v1.5.3',
+      },
+      {
+        name: 'v1.5.3',
+        proposal: 34,
+        height: 6556300,
+        recommended_version: 'v1.5.3',
+        compatible_versions: ['v1.5.3'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/ingenuity-build/quicksilver/releases/download/v1.5.3/quicksilverd-v1.5.3-amd64',
+        },
+        cosmos_sdk_version: 'v0.46.16',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.32',
+        },
+        cosmwasm_version:
+          'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v5.3.2',
+        next_version_name: 'v1.5.4',
+      },
+      {
+        name: 'v1.5.4',
+        proposal: 35,
+        height: 6673000,
+        recommended_version: 'v1.5.4',
+        compatible_versions: ['v1.5.4'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/ingenuity-build/quicksilver/releases/download/v1.5.4/quicksilverd-v1.5.4-amd64',
+        },
+        cosmos_sdk_version: 'v0.46.16',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.32',
         },
         cosmwasm_version:
           'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
@@ -455,6 +497,10 @@ export const quicksilver: Chain = {
         address: 'https://rpc.quicksilver.validatus.com',
         provider: 'Validatus',
       },
+      {
+        address: 'https://quicksilver-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -532,6 +578,10 @@ export const quicksilver: Chain = {
       {
         address: 'https://api.quicksilver.validatus.com',
         provider: 'Validatus',
+      },
+      {
+        address: 'https://quicksilver-api.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
     grpc: [
@@ -615,6 +665,10 @@ export const quicksilver: Chain = {
         address: 'grpc.quicksilver.validatus.com',
         provider: 'Validatus',
       },
+      {
+        address: 'quicksilver-grpc.noders.services:16090',
+        provider: '[NODERS]TEAM',
+      },
     ],
   },
   explorers: [
@@ -641,13 +695,6 @@ export const quicksilver: Chain = {
       kind: '🔥STAVR🔥 explorer',
       url: 'https://explorer.stavr.tech/quicksilver-mainnet',
       tx_page: 'https://explorer.stavr.tech/quicksilver-mainnet/tx/${txHash}',
-    },
-    {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/quicksilver',
-      tx_page: 'https://bigdipper.live/quicksilver/transactions/${txHash}',
-      account_page:
-        'https://bigdipper.live/quicksilver/accounts/${accountAddress}',
     },
     {
       kind: 'Stake-Take',
@@ -706,7 +753,7 @@ export const quicksilverAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://quicksilver.zone/',
+        website: 'https://quicksilver.zone/',
         twitter: 'https://twitter.com/quicksilverzone',
       },
     },

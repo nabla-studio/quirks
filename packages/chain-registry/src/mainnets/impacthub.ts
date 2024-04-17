@@ -33,8 +33,14 @@ export const impacthub: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/ixofoundation/ixo-blockchain',
-    recommended_version: 'v2.0.0',
-    compatible_versions: ['v2.0.0'],
+    recommended_version: 'v3.0.0',
+    compatible_versions: ['v3.0.0'],
+    cosmos_sdk_version: 'v0.45.16',
+    ibc_go_version: 'v4.4.1',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.34.27',
+    },
     genesis: {
       genesis_url:
         'https://github.com/ixofoundation/genesis/raw/bc042e1223d551b22d55c155de06e662ca24d2f2/ixo-5/genesis.json.tar.gz',
@@ -42,10 +48,16 @@ export const impacthub: Chain = {
     versions: [
       {
         name: 'v0.20.0',
-        recommended_version: 'v0.20.1',
-        compatible_versions: ['v0.20.0', 'v0.20.1'],
         proposal: 403,
         height: 1254500,
+        recommended_version: 'v0.20.1',
+        compatible_versions: ['v0.20.0', 'v0.20.1'],
+        cosmos_sdk_version: 'v0.45.12',
+        ibc_go_version: 'v4.3.0',
+        consensus: {
+          type: 'tendermint',
+          version: 'v0.34.24',
+        },
         next_version_name: 'v2',
       },
       {
@@ -54,6 +66,26 @@ export const impacthub: Chain = {
         height: 2383000,
         recommended_version: 'v2.0.0',
         compatible_versions: ['v2.0.0'],
+        cosmos_sdk_version: 'v0.45.16',
+        ibc_go_version: 'v4.4.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.27',
+        },
+        next_version_name: 'v3',
+      },
+      {
+        name: 'v3',
+        proposal: 447,
+        height: 6556300,
+        recommended_version: 'v3.0.0',
+        compatible_versions: ['v3.0.0'],
+        cosmos_sdk_version: 'v0.45.16',
+        ibc_go_version: 'v4.4.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.27',
+        },
         next_version_name: '',
       },
     ],

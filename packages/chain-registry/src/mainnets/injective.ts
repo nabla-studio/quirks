@@ -218,6 +218,10 @@ export const injective: Chain = {
   apis: {
     rpc: [
       {
+        address: 'https://injective-1-public-rpc.mesa.ec1-prod.newmetric.xyz',
+        provider: 'NewMetric',
+      },
+      {
         address: 'https://rpc-injective.goldenratiostaking.net',
         provider: 'Golden Ratio Staking',
       },
@@ -261,8 +265,16 @@ export const injective: Chain = {
         address: 'https://rpc.injective.bronbro.io/',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://injective-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
+      {
+        address: 'https://injective-1-public-rest.mesa.ec1-prod.newmetric.xyz',
+        provider: 'NewMetric',
+      },
       {
         address: 'https://api-injective-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
@@ -307,8 +319,17 @@ export const injective: Chain = {
         address: 'https://lcd.injective.bronbro.io/',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://injective-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
+      {
+        address:
+          'k8s-injectiv-publicin-731c880328-0f3d7889b57e31a3.elb.eu-central-1.amazonaws.com:80',
+        provider: 'NewMetric',
+      },
       {
         address: 'grpc-injective-ia.cosmosia.notional.ventures:443',
         provider: 'Notional',
@@ -356,6 +377,10 @@ export const injective: Chain = {
       {
         address: 'grpc.injective.bronbro.io:443',
         provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'injective-grpc.noders.services:33090',
+        provider: '[NODERS]TEAM',
       },
     ],
   },
@@ -436,7 +461,7 @@ export const injectiveAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://injective.com/',
+        website: 'https://injective.com/',
         twitter: 'https://twitter.com/Injective_',
       },
     },
@@ -677,13 +702,13 @@ export const injectiveAssetList: AssetLists = {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/glto.svg',
       },
       socials: {
-        webiste: 'https://gelotto.io/',
+        website: 'https://gelotto.io/',
         twitter: 'https://twitter.com/Gelotto2',
       },
     },
     {
       description:
-        'Hava Coin is the lifeblood of the Cosmos & Injective networks, rewarding builders and welcoming supporters. https://havacoin.xyz/',
+        'Hava Coin is the lifeblood of the Cosmos & Injective networks, rewarding builders and welcoming supporters.',
       denom_units: [
         {
           denom: 'factory/inj1h0ypsdtjfcjynqu3m75z2zwwz5mmrj8rtk2g52/uhava',
@@ -698,6 +723,7 @@ export const injectiveAssetList: AssetLists = {
       name: 'Hava Coin',
       display: 'hava',
       symbol: 'HAVA',
+      coingecko_id: 'hava-coin',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/hava.png',
       },
@@ -706,6 +732,10 @@ export const injectiveAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/hava.png',
         },
       ],
+      socials: {
+        webiste: 'https://havacoin.xyz/',
+        twitter: 'https://twitter.com/Hava_Coin',
+      },
     },
     {
       description:
@@ -804,6 +834,100 @@ export const injectiveAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/injective/images/judo.png',
         },
       ],
+    },
+    {
+      description: 'BEAST-ERC20 on injective',
+      denom_units: [
+        {
+          denom: 'peggy0xA4426666addBE8c4985377d36683D17FB40c31Be',
+          exponent: 0,
+        },
+        {
+          denom: 'beast',
+          exponent: 6,
+        },
+      ],
+      base: 'peggy0xA4426666addBE8c4985377d36683D17FB40c31Be',
+      name: 'Gelotto BEAST',
+      display: 'beast',
+      symbol: 'BEAST',
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0xA4426666addBE8c4985377d36683D17FB40c31Be',
+          },
+          provider: 'Peggy',
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xA4426666addBE8c4985377d36683D17FB40c31Be',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/beast.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/beast.png',
+      },
+      socials: {
+        website: 'https://gelotto.io/',
+        twitter: 'https://twitter.com/Gelotto2',
+      },
+    },
+    {
+      description:
+        'Astroport is a neutral marketplace where anyone, from anywhere in the galaxy, can dock to trade their wares.',
+      denom_units: [
+        {
+          denom:
+            'ibc/063F4461F7317CFF10F50AB044E44932D22AAD84FA7107082744946E6DB7B7A8',
+          exponent: 0,
+          aliases: ['uastro'],
+        },
+        {
+          denom: 'astro',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/063F4461F7317CFF10F50AB044E44932D22AAD84FA7107082744946E6DB7B7A8',
+      name: 'Astroport token',
+      display: 'astro',
+      symbol: 'ASTRO',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'neutron',
+            base_denom:
+              'factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro',
+            channel_id: 'channel-60',
+          },
+          chain: {
+            channel_id: 'channel-177',
+            path: 'transfer/channel-177/factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'neutron',
+            base_denom:
+              'factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.svg',
+      },
     },
   ],
 };

@@ -319,6 +319,11 @@ export const juno: Chain = {
         address: 'juno.declab.pro:26612',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        id: '637077d431f618181597706810a65c826524fd74',
+        address: 'juno.rpc.nodeshub.online:12656',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
   },
   apis: {
@@ -376,7 +381,7 @@ export const juno: Chain = {
         provider: 'BlockHunters 🎯',
       },
       {
-        address: 'https://juno.kingnodes.com',
+        address: 'https://juno-rpc.kingnodes.com',
         provider: 'kingnodes 👑',
       },
       {
@@ -435,6 +440,10 @@ export const juno: Chain = {
         address: 'https://juno.declab.pro:26610',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://juno.rpc.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     rest: [
       {
@@ -482,7 +491,7 @@ export const juno: Chain = {
         provider: 'BlockHunters 🎯',
       },
       {
-        address: 'https://juno.kingnodes.com',
+        address: 'https://juno-rest.kingnodes.com',
         provider: 'kingnodes 👑',
       },
       {
@@ -541,6 +550,10 @@ export const juno: Chain = {
         address: 'http://juno.api.staking-explorer.com',
         provider: 'Daily DROP',
       },
+      {
+        address: 'https://juno.api.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     grpc: [
       {
@@ -560,7 +573,7 @@ export const juno: Chain = {
         provider: '🔥STAVR🔥',
       },
       {
-        address: 'grpc-juno.kingnodes.com:443',
+        address: 'https://juno-grpc.kingnodes.com:443',
         provider: 'kingnodes 👑',
       },
       {
@@ -623,6 +636,10 @@ export const juno: Chain = {
         address: 'https://juno.declab.pro:9007',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://juno.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
+      },
     ],
   },
   explorers: [
@@ -676,6 +693,13 @@ export const juno: Chain = {
       url: 'https://explorer.declab.pro/Juno',
       tx_page: 'https://explorer.declab.pro/Juno/tx/${txHash}',
     },
+    {
+      kind: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      url: 'https://explorer.nodeshub.online/juno/',
+      tx_page: 'https://explorer.nodeshub.online/juno/tx/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/juno/accounts/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -717,7 +741,7 @@ export const junoAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://junonetwork.io/',
+        website: 'https://junonetwork.io/',
         twitter: 'https://twitter.com/JunoNetwork',
       },
     },
@@ -1388,7 +1412,7 @@ export const junoAssetList: AssetLists = {
       ],
     },
     {
-      description: 'The native token cw20 for Fanfury on Juno Chain',
+      description: 'The deprecated cw20 token for Fanfury on Juno Chain',
       type_asset: 'cw20',
       address:
         'juno1cltgm8v842gu54srmejewghnd6uqa26lzkpa635wzra9m9xuudkqa2gtcz',
@@ -1404,9 +1428,9 @@ export const junoAssetList: AssetLists = {
         },
       ],
       base: 'cw20:juno1cltgm8v842gu54srmejewghnd6uqa26lzkpa635wzra9m9xuudkqa2gtcz',
-      name: 'Fanfury',
+      name: 'FURY.legacy',
       display: 'fury',
-      symbol: 'FURY',
+      symbol: 'FURY.legacy',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/fanfury.png',
       },
@@ -1587,7 +1611,7 @@ export const junoAssetList: AssetLists = {
           exponent: 6,
         },
       ],
-      base: 'juno1s2dp05rspeuzzpzyzdchk262szehrtfpz847uvf98cnwh53ulx4qg20qwj',
+      base: 'cw20:juno1s2dp05rspeuzzpzyzdchk262szehrtfpz847uvf98cnwh53ulx4qg20qwj',
       name: 'Banana Token',
       display: 'banana',
       symbol: 'BANANA',
@@ -2921,6 +2945,55 @@ export const junoAssetList: AssetLists = {
         },
       ],
       coingecko_id: 'backbone-labs-staked-juno',
+    },
+    {
+      type_asset: 'ics20',
+      description: 'USD Coin on Juno',
+      denom_units: [
+        {
+          denom:
+            'ibc/4A482FA914A4B9B05801ED81C33713899F322B24F76A06F4B8FE872485EA22FF',
+          exponent: 0,
+          aliases: ['uusdc', 'microusdc'],
+        },
+        {
+          denom: 'usdc',
+          exponent: 6,
+        },
+      ],
+      base: 'ibc/4A482FA914A4B9B05801ED81C33713899F322B24F76A06F4B8FE872485EA22FF',
+      name: 'USD Coin',
+      display: 'usdc',
+      symbol: 'USDC',
+      coingecko_id: 'usd-coin',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'noble',
+            base_denom: 'uusdc',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+        },
+      ],
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            channel_id: 'channel-3',
+            base_denom: 'uusdc',
+            chain_name: 'noble',
+          },
+          chain: {
+            channel_id: 'channel-224',
+            path: 'transfer/channel-224/uusdc',
+          },
+        },
+      ],
     },
   ],
 };

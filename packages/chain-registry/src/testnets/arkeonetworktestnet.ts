@@ -106,6 +106,10 @@ export const arkeonetworktestnetAssetList: AssetLists = {
       denom_units: [
         {
           denom: 'uarkeo',
+          exponent: 0,
+        },
+        {
+          denom: 'arkeo',
           exponent: 6,
         },
       ],

@@ -32,20 +32,20 @@ export const onomy: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/onomyprotocol/onomy',
-    recommended_version: 'v1.0.1',
-    compatible_versions: ['v1.0.1'],
+    recommended_version: 'v1.1.4',
+    compatible_versions: ['v1.1.4'],
     binaries: {
       'linux/amd64':
-        'https://github.com/onomyprotocol/onomy/releases/download/v1.0.1/onomyd',
+        'https://github.com/onomyprotocol/onomy/releases/download/v1.1.4/onomyd',
       'linux/arm64':
-        'https://github.com/onomyprotocol/onomy/releases/download/v1.0.1/onomyd-arm',
+        'https://github.com/onomyprotocol/onomy/releases/download/v1.1.4/onomyd-arm',
     },
-    cosmos_sdk_version: '0.44',
+    cosmos_sdk_version: 'onomyprotocol/onomy-sdk v0.45.16-onomy-dev',
+    ibc_go_version: 'v4.4.2',
     consensus: {
-      type: 'tendermint',
-      version: '0.34',
+      type: 'cometbft',
+      version: 'v0.34.28',
     },
-    ibc_go_version: '2.0.4',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/onomyprotocol/onomy/main/genesis/mainnet/genesis-mainnet-1.json',
@@ -53,20 +53,69 @@ export const onomy: Chain = {
     versions: [
       {
         name: 'v1.0.1',
+        tag: 'v1.0.1',
         recommended_version: 'v1.0.1',
         compatible_versions: ['v1.0.1'],
-        cosmos_sdk_version: '0.44',
+        cosmos_sdk_version:
+          'onomyprotocol/onomy-sdk v0.44.6-0.20221103153534-77ffa1c3fab2',
+        ibc_go_version: 'v2.0.4',
         consensus: {
           type: 'tendermint',
-          version: '0.34',
+          version: 'v0.34.14',
         },
-        ibc_go_version: '2.0.4',
+        next_version_name: 'v1.0.3',
+      },
+      {
+        name: 'v1.0.3',
+        tag: 'v1.0.3',
+        proposal: 8,
+        height: 2377000,
+        recommended_version: 'v1.0.3',
+        compatible_versions: ['v1.0.3'],
+        cosmos_sdk_version:
+          'onomyprotocol/onomy-sdk v0.44.6-0.20230418124728-9c1be80b05bd',
+        ibc_go_version: 'v2.0.4',
+        consensus: {
+          type: 'tendermint',
+          version: 'v0.34.19',
+        },
+        next_version_name: 'v1.0.3',
+      },
+      {
+        name: 'v1.1.2',
+        tag: 'v1.1.2',
+        proposal: 17,
+        height: 4010000,
+        recommended_version: 'v1.1.2',
+        compatible_versions: ['v1.1.2'],
+        cosmos_sdk_version: 'onomyprotocol/onomy-sdk v0.45.16-onomy-dev',
+        ibc_go_version: 'v4.4.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        next_version_name: 'v1.1.4',
+      },
+      {
+        name: 'v1.1.4',
+        tag: 'v1.1.4',
+        proposal: 18,
+        height: 5280000,
+        recommended_version: 'v1.1.4',
+        compatible_versions: ['v1.1.4'],
         binaries: {
           'linux/amd64':
-            'https://github.com/onomyprotocol/onomy/releases/download/v1.0.1/onomyd',
+            'https://github.com/onomyprotocol/onomy/releases/download/v1.1.4/onomyd',
           'linux/arm64':
-            'https://github.com/onomyprotocol/onomy/releases/download/v1.0.1/onomyd-arm',
+            'https://github.com/onomyprotocol/onomy/releases/download/v1.1.4/onomyd-arm',
         },
+        cosmos_sdk_version: 'onomyprotocol/onomy-sdk v0.45.16-onomy-dev',
+        ibc_go_version: 'v4.4.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.28',
+        },
+        next_version_name: '',
       },
     ],
   },
@@ -76,13 +125,13 @@ export const onomy: Chain = {
   peers: {
     seeds: [
       {
-        id: '211535f9b799bcc8d46023fa180f3359afd4c1d3',
-        address: '44.213.44.5:26656',
+        id: '6d17f128057497699677012b558a7eaff98dfc9c',
+        address: 'a.seed.mainnet.onomy.io:26656',
         provider: 'onomy',
       },
       {
-        id: 'cd9a47cebe8eef076a5795e1b8460a8e0b2384e5',
-        address: '3.210.0.126:26656',
+        id: '7e0f0acd32a3c1e85aaebeea56d9b72cece12252',
+        address: 'b.seed.mainnet.onomy.io:26656',
         provider: 'onomy',
       },
       {
@@ -134,11 +183,6 @@ export const onomy: Chain = {
   },
   explorers: [
     {
-      kind: 'Big Dipper',
-      url: 'https://explorer.onomy.io',
-      tx_page: 'https://explorer.onomy.io/transactions/${txHash}',
-    },
-    {
       kind: 'mintscan',
       url: 'https://www.mintscan.io/onomy-protocol',
       tx_page: 'https://www.mintscan.io/onomy-protocol/transactions/${txHash}',
@@ -152,7 +196,7 @@ export const onomy: Chain = {
       account_page: 'https://ezstaking.app/onomy/account/${accountAddress}',
     },
   ],
-  keywords: ['dex', 'stablecoin', 'bridge', 'staking'],
+  keywords: ['dex', 'stablecoin', 'bridge', 'staking', 'ics', 'rwa'],
   images: [
     {
       png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/onomy/images/nom.png',

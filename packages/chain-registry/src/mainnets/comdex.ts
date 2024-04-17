@@ -111,6 +111,11 @@ export const comdex: Chain = {
         provider: 'Polkachu',
       },
       {
+        id: 'c30dacf15e97a30b78792c7fa817fd2ef529b820',
+        address: 'comdex.seed.stavr.tech:2026',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: '20e1000e88125698264454a884812746c2eb4807',
         address: 'seeds.lavenderfive.com:13156',
         provider: 'Lavender.Five Nodes 🐝',
@@ -178,6 +183,10 @@ export const comdex: Chain = {
         provider: 'Polkachu',
       },
       {
+        address: 'https://comdex.rpc.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://rpc.comdex.chaintools.tech/',
         provider: 'ChainTools',
       },
@@ -232,6 +241,10 @@ export const comdex: Chain = {
         provider: 'Polkachu',
       },
       {
+        address: 'https://comdex.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://comdex-api.lavenderfive.com/',
         provider: 'Lavender.Five Nodes 🐝',
       },
@@ -282,6 +295,10 @@ export const comdex: Chain = {
         provider: 'Polkachu',
       },
       {
+        address: 'comdex.grpc.m.stavr.tech:104',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'grpc-comdex.cosmos-spaces.cloud:2300',
         provider: 'Cosmos Spaces',
       },
@@ -325,6 +342,13 @@ export const comdex: Chain = {
       account_page: 'https://www.mintscan.io/comdex/accounts/${accountAddress}',
     },
     {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Comdex-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Comdex-Mainnet/txs/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Comdex-Mainnet/accounts/${accountAddress}',
+    },
+    {
       kind: 'aneka',
       url: 'https://comdex.aneka.io/',
       tx_page: 'https://comdex.aneka.io/txs/${txHash}',
@@ -339,12 +363,6 @@ export const comdex: Chain = {
       url: 'https://atomscan.com/comdex',
       tx_page: 'https://atomscan.com/comdex/transactions/${txHash}',
       account_page: 'https://atomscan.com/comdex/accounts/${accountAddress}',
-    },
-    {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/comdex',
-      tx_page: 'https://bigdipper.live/comdex/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/comdex/accounts/${accountAddress}',
     },
     {
       kind: 'Stakeflow',

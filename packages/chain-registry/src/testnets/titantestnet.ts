@@ -34,8 +34,8 @@ export const titantestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/titantkx/titan',
-    recommended_version: 'v2.0.0',
-    compatible_versions: ['v2.0.0'],
+    recommended_version: 'v2.0.1',
+    compatible_versions: ['v2.0.1'],
     cosmos_sdk_version: '0.47.6-titan.4',
     consensus: {
       type: 'cometbft',
@@ -71,8 +71,25 @@ export const titantestnet: Chain = {
         name: 'v2.0.0',
         tag: 'v2.0.0',
         height: 727408,
+        next_version_name: 'v2.0.1',
         recommended_version: 'v2.0.0',
         compatible_versions: ['v2.0.0'],
+        cosmos_sdk_version: '0.47.6-titan.4',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.4',
+        },
+        ibc_go_version: '7.3.0',
+        cosmwasm_version: '0.45.0',
+        cosmwasm_enabled: true,
+        ics_enabled: ['ics20-1', 'ics27-1'],
+      },
+      {
+        name: 'v2.0.1',
+        tag: 'v2.0.1',
+        height: 967678,
+        recommended_version: 'v2.0.1',
+        compatible_versions: ['v2.0.1'],
         cosmos_sdk_version: '0.47.6-titan.4',
         consensus: {
           type: 'cometbft',

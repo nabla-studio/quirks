@@ -5,6 +5,7 @@ export const scorum: Chain = {
   chain_name: 'scorum',
   status: 'live',
   network_type: 'mainnet',
+  website: 'https://scorum.com/',
   pretty_name: 'Scorum Network',
   chain_id: 'scorum-1',
   bech32_prefix: 'scorum',
@@ -161,7 +162,7 @@ export const scorumAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://scorum.com',
+        website: 'https://scorum.com',
         twitter: 'https://twitter.com/scorum_en',
       },
     },

@@ -107,6 +107,11 @@ export const fetchhub: Chain = {
         address: 'fetchhub-mainnet-peer.autostake.com:27266',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
+      {
+        id: '637077d431f618181597706810a65c826524fd74',
+        address: 'fetch.rpc.nodeshub.online:15256',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
   },
   apis: {
@@ -163,6 +168,10 @@ export const fetchhub: Chain = {
         address: 'https://public.stakewolle.com/cosmos/fetchhub/rpc',
         provider: 'Stakewolle',
       },
+      {
+        address: 'https://fetch.rpc.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     rest: [
       {
@@ -217,6 +226,10 @@ export const fetchhub: Chain = {
         address: 'https://public.stakewolle.com/cosmos/fetchhub/rest',
         provider: 'Stakewolle',
       },
+      {
+        address: 'https://fetch.api.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     grpc: [
       {
@@ -254,6 +267,10 @@ export const fetchhub: Chain = {
       {
         address: 'fetch-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'fetch.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
       },
     ],
   },
@@ -299,6 +316,13 @@ export const fetchhub: Chain = {
         'https://fetchstation.azoyalabs.com/mainnet/explorer/transactions/${txHash}',
       account_page:
         'https://fetchstation.azoyalabs.com/mainnet/explorer/address/${accountAddress}',
+    },
+    {
+      kind: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      url: 'https://explorer.nodeshub.online/fetchhub/',
+      tx_page: 'https://explorer.nodeshub.online/fetchhub/tx/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/fetchhub/accounts/${accountAddress}',
     },
   ],
   images: [

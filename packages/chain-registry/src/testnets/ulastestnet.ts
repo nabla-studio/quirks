@@ -73,7 +73,7 @@ export const ulastestnetAssetList: AssetLists = {
       ],
       base: 'uulas',
       name: 'ULAS Network',
-      display: 'ULAS',
+      display: 'ulas',
       symbol: 'ULAS',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/ulastestnet/images/logo.png',

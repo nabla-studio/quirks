@@ -63,25 +63,59 @@ export const furya: Chain = {
         address: '34.32.247.201:26656',
         provider: 'Furya',
       },
+      {
+        id: '906ba6fd7cc9349d63c26608736ac91fe09437fb',
+        address: '85.215.65.44:26656',
+        provider: 'Starsquid',
+      },
+      {
+        id: '637077d431f618181597706810a65c826524fd74',
+        address: 'furya.rpc.nodeshub.online:26956',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
   },
   apis: {
     rpc: [
       {
         address: 'https://rpc.furya.xyz',
-        provider: 'Furya Genesis Validator 🐝',
+        provider: 'Furya Genesis Validator',
+      },
+      {
+        address: 'https://furya-rpc.synergynodes.com',
+        provider: 'synergynodes',
+      },
+      {
+        address: 'https://furya.rpc.nodeshub.online:443',
+        provider: 'nodeshub',
       },
     ],
     rest: [
       {
         address: 'https://api.furya.xyz',
-        provider: 'Furya Genesis Validator 🐝',
+        provider: 'Furya Genesis Validator',
+      },
+      {
+        address: 'https://furya.api.nodeshub.online',
+        provider: 'synergynodes',
+      },
+      {
+        address: 'https://furya.api.nodeshub.online',
+        provider: 'Furya Genesis Validator',
+      },
+      {
+        address: 'https://furya.api.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
       },
     ],
     grpc: [
       {
         address: 'grpc.furya.xyz:443',
-        provider: 'Lavender.Five Nodes 🐝',
+        provider: 'Furya Genesis Validator',
+      },
+      {
+        address: 'https://furya.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
       },
     ],
   },
@@ -89,8 +123,16 @@ export const furya: Chain = {
     {
       kind: 'Furya Explorer',
       url: 'https://explorer.furya.xyz/',
-      tx_page: 'https://explorer.furya.xyz/txs/${txHash}',
-      account_page: 'https://explorer.furya.xyz/account/${accountAddress}',
+      tx_page: 'https://explorer.furya.xyz/furya/tx/${txHash}',
+      account_page:
+        'https://explorer.furya.xyz/furya/account/${accountAddress}',
+    },
+    {
+      kind: 'Nodeshub Explorer',
+      url: 'https://explorer.nodeshub.online/furya',
+      tx_page: 'https://explorer.nodeshub.online/furya/txs/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/furya/account/${accountAddress}',
     },
   ],
   images: [
@@ -129,8 +171,16 @@ export const furyaAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/furya/images/ufury.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/furya/images/ufury.svg',
+          theme: {
+            primary_color_hex: '#eaf143',
+          },
         },
       ],
+      coingecko_id: 'fanfury',
+      keywords: ['gaming', 'staking'],
+      socials: {
+        twitter: 'https://twitter.com/furyachain',
+      },
     },
   ],
 };

@@ -25,7 +25,7 @@ export const chimba: Chain = {
   staking: {
     staking_tokens: [
       {
-        denom: 'chimba',
+        denom: 'ucmba',
       },
     ],
   },

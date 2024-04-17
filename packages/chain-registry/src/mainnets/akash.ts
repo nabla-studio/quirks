@@ -32,7 +32,7 @@ export const akash: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/akash-network/node/',
-    recommended_version: 'v0.32.1.',
+    recommended_version: 'v0.32.1',
     compatible_versions: ['v0.32.1'],
     binaries: {
       'linux/amd64':
@@ -431,11 +431,6 @@ export const akash: Chain = {
       tx_page: 'https://ping.pub/akash-network/tx/${txHash}',
     },
     {
-      kind: 'bigdipper',
-      url: 'https://akash.bigdipper.live/',
-      tx_page: 'https://akash.bigdipper.live/transactions/${txHash}',
-    },
-    {
       kind: 'atomscan',
       url: 'https://atomscan.com/akash',
       tx_page: 'https://atomscan.com/akash/transactions/${txHash}',
@@ -503,7 +498,7 @@ export const akashAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://akash.network/',
+        website: 'https://akash.network/',
         twitter: 'https://twitter.com/akashnet_',
       },
     },

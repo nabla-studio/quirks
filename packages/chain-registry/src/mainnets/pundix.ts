@@ -102,6 +102,8 @@ export const pundix: Chain = {
       },
     ],
   },
+  description:
+    'Pundi X Chain is a dedicated payment-focused blockchain in the Function X network. It is specially designed to perform high throughput transactions with low latency and low transaction fees. In addition, it provides room for future compliance requirement upgrades, hardware (XPOS) integration, and Point-of-Sales compatibility, with tokenonomics that offer incentives to merchants and payment processors.',
   peers: {
     seeds: [
       {
@@ -146,6 +148,11 @@ export const pundix: Chain = {
         address: 'pundix-mainnet-node-5.pundix.com:26656',
         provider: 'Pundi X',
       },
+      {
+        id: '637077d431f618181597706810a65c826524fd74',
+        address: 'pundix.rpc.nodeshub.online:26156',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
   },
   apis: {
@@ -154,17 +161,29 @@ export const pundix: Chain = {
         address: 'https://px-json.pundix.com',
         provider: 'Pundi X',
       },
+      {
+        address: 'https://pundix.rpc.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     rest: [
       {
         address: 'https://px-rest.pundix.com',
         provider: 'Pundi X',
       },
+      {
+        address: 'https://pundix.api.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     grpc: [
       {
         address: 'https://px-grpc.pundix.com',
         provider: 'Pundi X',
+      },
+      {
+        address: 'https://pundix.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
       },
     ],
   },
@@ -188,6 +207,13 @@ export const pundix: Chain = {
       tx_page: 'https://starscan.io/pundix/tx/${txHash}',
       account_page: 'https://starscan.io/pundix/address/${accountAddress}',
     },
+    {
+      kind: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      url: 'https://explorer.nodeshub.online/pundix/',
+      tx_page: 'https://explorer.nodeshub.online/pundix/tx/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/pundix/accounts/${accountAddress}',
+    },
   ],
 };
 
@@ -196,7 +222,8 @@ export const pundixAssetList: AssetLists = {
   chain_name: 'pundix',
   assets: [
     {
-      description: 'Pundi X Token',
+      description:
+        'PUNDIX token is the native token that functions within the Pundi X ecosystem, including PundiX Chain and XPOS. PUNDIX has several core use cases, including:\n- Payment for goods and services from merchants through XPOS\n- Gas Fee on PundiX Chain\n- Listing tokens in the XPOS\n- Merchant payments for loyalty programs and ads',
       denom_units: [
         {
           denom:
@@ -208,6 +235,7 @@ export const pundixAssetList: AssetLists = {
           exponent: 18,
         },
       ],
+      type_asset: 'ics20',
       base: 'ibc/55367B7B6572631B78A93C66EF9FDFCE87CDE372CC4ED7848DA78C1EB1DCDD78',
       name: 'Pundi X Token',
       display: 'PUNDIX',
@@ -240,9 +268,15 @@ export const pundixAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pundix/images/pundi-x-token-logo.svg',
         },
       ],
+      coingecko_id: 'pundi-x-2',
+      socials: {
+        website: 'https://pundix.com',
+        twitter: 'https://twitter.com/PundiXLabs',
+      },
     },
     {
-      description: 'PURSE Token',
+      description:
+        'Purse is the decentralised loyalty program for physical stores and merchants. PURSE token shall serve as governance token of the PURSE Merchant loyalty point platform, the gas fee as well as the transaction fee on PURSE Merchant platform. To launch any merchant loyalty tokens and do transaction on the merchant platform, users and merchants need Purse tokens.',
       denom_units: [
         {
           denom: 'bsc0x29a63F4B209C29B4DC47f06FFA896F32667DAD2C',
@@ -253,11 +287,13 @@ export const pundixAssetList: AssetLists = {
           exponent: 18,
         },
       ],
+      type_asset: 'sdk.coin',
       base: 'bsc0x29a63F4B209C29B4DC47f06FFA896F32667DAD2C',
       name: 'PURSE Token',
       display: 'PURSE',
       symbol: 'PURSE',
       logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pundix/images/purse-token-logo.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pundix/images/purse-token-logo.svg',
       },
       traces: [
@@ -278,8 +314,14 @@ export const pundixAssetList: AssetLists = {
             base_denom: '0x29a63F4B209C29B4DC47f06FFA896F32667DAD2C',
           },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pundix/images/purse-token-logo.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/pundix/images/purse-token-logo.png',
         },
       ],
+      coingecko_id: 'pundi-x-purse',
+      socials: {
+        website: 'https://purse.land',
+        twitter: 'https://twitter.com/Purse_Land',
+      },
     },
   ],
 };

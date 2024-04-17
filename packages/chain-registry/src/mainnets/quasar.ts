@@ -24,10 +24,10 @@ export const quasar: Chain = {
     fee_tokens: [
       {
         denom: 'uqsr',
-        fixed_min_gas_price: 0.01,
-        low_gas_price: 0.01,
-        average_gas_price: 0.025,
-        high_gas_price: 0.03,
+        fixed_min_gas_price: 0.1,
+        low_gas_price: 0.1,
+        average_gas_price: 0.25,
+        high_gas_price: 0.3,
       },
       {
         denom:
@@ -317,12 +317,6 @@ export const quasar: Chain = {
       account_page: 'https://www.mintscan.io/quasar/accounts/${accountAddress}',
     },
     {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/quasar',
-      tx_page: 'https://bigdipper.live/quasar/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/quasar/accounts/${accountAddress}',
-    },
-    {
       kind: 'ezstaking',
       url: 'https://ezstaking.app/quasar',
       tx_page: 'https://ezstaking.app/quasar/txs/${txHash}',
@@ -370,7 +364,7 @@ export const quasarAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.quasar.fi/',
+        website: 'https://www.quasar.fi/',
         twitter: 'https://twitter.com/QuasarFi',
       },
     },

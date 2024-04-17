@@ -194,6 +194,10 @@ export const agoric: Chain = {
         provider: 'w3coins',
       },
       {
+        address: 'https://agoric.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://api.agoric.stakewith.us',
         provider: 'StakeWithUs',
       },
@@ -259,12 +263,6 @@ export const agoric: Chain = {
   },
   explorers: [
     {
-      kind: 'bigdipper',
-      url: 'https://agoric.bigdipper.live/',
-      tx_page: 'https://agoric.bigdipper.live/transactions/${txHash}',
-      account_page: 'https://agoric.bigdipper.live/accounts/${accountAddress}',
-    },
-    {
       kind: 'explorers.guru',
       url: 'https://agoric.explorers.guru',
       tx_page: 'https://agoric.explorers.guru/transaction/${txHash}',
@@ -280,6 +278,13 @@ export const agoric: Chain = {
       kind: 'Stakeflow',
       url: 'https://stakeflow.io/agoric',
       account_page: 'https://stakeflow.io/agoric/accounts/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Agoric',
+      tx_page: 'https://explorer.stavr.tech/Agoric/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Agoric/account/${accountAddress}',
     },
   ],
   images: [
@@ -323,7 +328,7 @@ export const agoricAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://agoric.com/',
+        website: 'https://agoric.com/',
         twitter: 'https://twitter.com/agoric',
       },
     },

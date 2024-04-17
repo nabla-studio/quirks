@@ -260,7 +260,7 @@ export const likecoin: Chain = {
         provider: 'PikaSer',
       },
       {
-        address: 'http://51.159.223.25:28657',
+        address: 'https://rpc.likecoin.citizenweb3.com:443',
         provider: 'Citizen Web3',
       },
     ],
@@ -314,13 +314,6 @@ export const likecoin: Chain = {
       url: 'https://ezstaking.app/likecoin',
       tx_page: 'https://ezstaking.app/likecoin/txs/${txHash}',
       account_page: 'https://ezstaking.app/likecoin/account/${accountAddress}',
-    },
-    {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/likecoin',
-      tx_page: 'https://bigdipper.live/likecoin/transactions/${txHash}',
-      account_page:
-        'https://bigdipper.live/likecoin/accounts/${accountAddress}',
     },
     {
       kind: 'lunie-ng',

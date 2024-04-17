@@ -250,6 +250,11 @@ export const sentinel: Chain = {
         id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
         address: 'sentinel.declab.pro:26630',
       },
+      {
+        id: '637077d431f618181597706810a65c826524fd74',
+        address: 'sentinel.rpc.nodeshub.online:23956',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
   },
   apis: {
@@ -310,6 +315,10 @@ export const sentinel: Chain = {
         address: 'https://sentinel.declab.pro:26628',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://sentinel.rpc.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     rest: [
       {
@@ -360,6 +369,10 @@ export const sentinel: Chain = {
         address: 'https://sentinel.declab.pro:443',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://sentinel.api.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     grpc: [
       {
@@ -385,6 +398,10 @@ export const sentinel: Chain = {
       {
         address: 'https://sentinel.declab.pro:9019',
         provider: 'Decloud Nodes Lab',
+      },
+      {
+        address: 'https://sentinel.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
       },
     ],
   },
@@ -425,6 +442,13 @@ export const sentinel: Chain = {
       kind: 'Decloud Nodes Lab',
       url: 'https://explorer.declab.pro/Sentinel',
       tx_page: 'https://explorer.declab.pro/Sentinel/tx/${txHash}',
+    },
+    {
+      kind: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      url: 'https://explorer.nodeshub.online/sentinel/',
+      tx_page: 'https://explorer.nodeshub.online/sentinel/tx/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/sentinel/accounts/${accountAddress}',
     },
   ],
   images: [
@@ -467,7 +491,7 @@ export const sentinelAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.sentinel.co/',
+        website: 'https://www.sentinel.co/',
         twitter: 'https://twitter.com/SentinelVPN',
       },
     },

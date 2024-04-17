@@ -3,9 +3,9 @@ import type { Chain, AssetLists, ChainVersions } from '../types';
 export const akiro: Chain = {
   $schema: '../chain.schema.json',
   chain_name: 'akiro',
-  status: 'live',
+  status: 'killed',
   network_type: 'mainnet',
-  pretty_name: 'AKIRO',
+  pretty_name: 'Akiro',
   chain_id: 'akiro-1',
   bech32_prefix: 'akiro',
   daemon_name: 'akirod',
@@ -78,17 +78,29 @@ export const akiro: Chain = {
         address: 'http://213.199.36.82:26657',
         provider: 'AKIRO',
       },
+      {
+        address: 'https://rpc-akiro.d-stake.xyz',
+        provider: 'D-Stake',
+      },
     ],
     rest: [
       {
         address: 'http://213.199.36.82:1317',
         provider: 'AKIRO',
       },
+      {
+        address: 'https://api-akiro.d-stake.xyz',
+        provider: 'D-Stake',
+      },
     ],
     grpc: [
       {
         address: 'http://213.199.36.82:9090',
         provider: 'AKIRO',
+      },
+      {
+        address: 'https://grpc-akiro.d-stake.xyz',
+        provider: 'D-Stake',
       },
     ],
   },

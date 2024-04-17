@@ -32,8 +32,8 @@ export const sge: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sge-network/sge',
-    recommended_version: 'v1.5.2',
-    compatible_versions: ['v1.5.2'],
+    recommended_version: 'v1.5.3',
+    compatible_versions: ['v1.5.3'],
     cosmos_sdk_version:
       'sge-network/cosmos-sdk v0.46.17-0.20240223100624-2a2661276cb4',
     ibc_go_version: 'v5.3.1',
@@ -120,6 +120,21 @@ export const sge: Chain = {
         compatible_versions: ['v1.5.2'],
         proposal: 6,
         height: 2867354,
+        cosmos_sdk_version:
+          'sge-network/cosmos-sdk v0.46.17-0.20240223100624-2a2661276cb4',
+        ibc_go_version: 'v5.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        next_version_name: 'v1.5.3',
+      },
+      {
+        name: 'v1.5.3',
+        recommended_version: 'v1.5.3',
+        compatible_versions: ['v1.5.3'],
+        proposal: 7,
+        height: 2973740,
         cosmos_sdk_version:
           'sge-network/cosmos-sdk v0.46.17-0.20240223100624-2a2661276cb4',
         ibc_go_version: 'v5.3.1',
@@ -285,6 +300,10 @@ export const sge: Chain = {
         address: 'https://sge-rpc.genznodes.dev',
         provider: 'genznodes',
       },
+      {
+        address: 'https://sge_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
@@ -338,6 +357,10 @@ export const sge: Chain = {
       {
         address: 'https://api.sge.roomit.xyz/',
         provider: 'RoomIT',
+      },
+      {
+        address: 'https://sge_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
     grpc: [
@@ -434,6 +457,13 @@ export const sge: Chain = {
         'https://explorer.tendermint.roomit.xyz/sge-mainnet/tx/${txHash}',
       account_page:
         'https://explorer.tendermint.roomit.xyz/sge-mainnet/account/${accountAddress}',
+    },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/sge',
+      tx_page: 'https://explorer.whenmoonwhenlambo.money/sge/tx/${txHash}',
+      account_page:
+        'https://explorer.whenmoonwhenlambo.money/sge/account/${accountAddress}',
     },
   ],
   images: [

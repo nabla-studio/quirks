@@ -106,6 +106,13 @@ export const stride: Chain = {
         average_gas_price: 15000000000,
         high_gas_price: 20000000000,
       },
+      {
+        denom: 'stusaga',
+        fixed_min_gas_price: 0.01,
+        low_gas_price: 0.01,
+        average_gas_price: 0.015,
+        high_gas_price: 0.03,
+      },
     ],
   },
   staking: {
@@ -117,10 +124,10 @@ export const stride: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Stride-Labs/stride',
-    recommended_version: 'v19.0.0',
-    compatible_versions: ['v19.0.0'],
+    recommended_version: 'v21.0.0',
+    compatible_versions: ['v21.0.0'],
     cosmos_sdk_version:
-      'Stride-Labs/cosmos-sdk v0.47.5-stride-distribution-fix-0',
+      'Stride-Labs/cosmos-sdk v0.47.10-stride-distribution-fix-0',
     consensus: {
       type: 'cometbft',
       version: 'v0.37.4',
@@ -288,7 +295,39 @@ export const stride: Chain = {
           version: 'v0.37.2',
         },
         ibc_go_version: '7.3.1',
-        next_version_name: 'v19',
+        next_version_name: 'v20',
+      },
+      {
+        name: 'v20',
+        tag: 'v20.0.0',
+        recommended_version: 'v20.0.0',
+        compatible_versions: ['v20.0.0'],
+        proposal: 235,
+        height: 8269628,
+        cosmos_sdk_version:
+          'Stride-Labs/cosmos-sdk v0.47.10-stride-distribution-fix-0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        ibc_go_version: '7.3.1',
+        next_version_name: 'v21',
+      },
+      {
+        name: 'v21',
+        tag: 'v21.0.0',
+        recommended_version: 'v21.0.0',
+        compatible_versions: ['v21.0.0'],
+        proposal: 236,
+        height: 8370738,
+        cosmos_sdk_version:
+          'Stride-Labs/cosmos-sdk v0.47.10-stride-distribution-fix-0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        ibc_go_version: '7.3.1',
+        next_version_name: '',
       },
     ],
   },
@@ -615,12 +654,6 @@ export const stride: Chain = {
       account_page: 'https://www.mintscan.io/stride/accounts/${accountAddress}',
     },
     {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/stride',
-      tx_page: 'https://bigdipper.live/stride/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/stride/accounts/${accountAddress}',
-    },
-    {
       kind: 'atomscan',
       url: 'https://atomscan.com/stride',
       tx_page: 'https://atomscan.com/stride/transactions/${txHash}',
@@ -683,7 +716,7 @@ export const strideAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://stride.zone/',
+        website: 'https://stride.zone/',
         twitter: 'https://twitter.com/stride_zone',
       },
     },
@@ -1163,6 +1196,43 @@ export const strideAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsomm.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsomm.svg',
+        },
+      ],
+    },
+    {
+      description: "Stride's liquid staked SAGA",
+      denom_units: [
+        {
+          denom: 'stusaga',
+          exponent: 0,
+        },
+        {
+          denom: 'stSAGA',
+          exponent: 6,
+        },
+      ],
+      base: 'stusaga',
+      name: 'Stride Staked SAGA',
+      display: 'stSAGA',
+      symbol: 'stSAGA',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'saga',
+            base_denom: 'usaga',
+          },
+          provider: 'Stride',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsaga.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsaga.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsaga.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stsaga.svg',
         },
       ],
     },

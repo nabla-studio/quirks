@@ -250,6 +250,11 @@ export const persistence: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
+        id: 'ab7fc0b9b3c523dacec0500c9f9f1f7f4699d551',
+        address: 'persis-m.seed.stavr.tech:4056',
+        provider: '🔥STAVR🔥',
+      },
+      {
         id: 'ce9dc9467af943bf35f17f04cfcdf3895914d867',
         address: 'seed-persistence-01.stakeflow.io:33656',
         provider: 'Stakeflow',
@@ -286,6 +291,11 @@ export const persistence: Chain = {
         address: 'peer-persistence-01.stakeflow.io:33656',
         provider: 'Stakeflow',
       },
+      {
+        id: 'aba2148170161c274d2d786bffbe6a692c535dfe',
+        address: '65.108.195.213:53656',
+        provider: 'StakeTown',
+      },
     ],
   },
   apis: {
@@ -297,6 +307,10 @@ export const persistence: Chain = {
       {
         address: 'https://rpc-persistent-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
+      },
+      {
+        address: 'https://persistence.rpc.m.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://persistence-rpc.polkachu.com',
@@ -362,6 +376,14 @@ export const persistence: Chain = {
         address: 'https://public.stakewolle.com/cosmos/persistence/rpc',
         provider: 'Stakewolle',
       },
+      {
+        address: 'https://xprt-rpc.antrixy.org/',
+        provider: 'Antrix Validators',
+      },
+      {
+        address: 'https://persistence-rpc.stake-town.com',
+        provider: 'StakeTown',
+      },
     ],
     rest: [
       {
@@ -371,6 +393,10 @@ export const persistence: Chain = {
       {
         address: 'https://api-persistent-ia.cosmosia.notional.ventures/',
         provider: 'Notional',
+      },
+      {
+        address: 'https://persistence.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://persistence-api.polkachu.com',
@@ -436,6 +462,14 @@ export const persistence: Chain = {
         address: 'https://public.stakewolle.com/cosmos/persistence/rest',
         provider: 'Stakewolle',
       },
+      {
+        address: 'https://xprt-rest.antrixy.org/',
+        provider: 'Antrix Validators',
+      },
+      {
+        address: 'https://persistence-api.stake-town.com',
+        provider: 'StakeTown',
+      },
     ],
     grpc: [
       {
@@ -445,6 +479,10 @@ export const persistence: Chain = {
       {
         address: 'grpc-persistent-ia.cosmosia.notional.ventures:443',
         provider: 'Notional',
+      },
+      {
+        address: 'persistence.grpc.m.stavr.tech:410',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'persistence-grpc.polkachu.com:15490',
@@ -486,6 +524,14 @@ export const persistence: Chain = {
         address: 'grpc.persistence.validatus.com',
         provider: 'Validatus',
       },
+      {
+        address: 'https://xprt-grpc.antrixy.org/',
+        provider: 'Antrix Validators',
+      },
+      {
+        address: 'persistence-grpc.stake-town.com:443',
+        provider: 'StakeTown',
+      },
     ],
   },
   explorers: [
@@ -509,18 +555,16 @@ export const persistence: Chain = {
       tx_page: 'https://ping.pub/persistence/tx/${txHash}',
     },
     {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Persistence-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Persistence-Mainnet/tx/${txHash}',
+    },
+    {
       kind: 'atomscan',
       url: 'https://atomscan.com/persistence',
       tx_page: 'https://atomscan.com/persistence/transactions/${txHash}',
       account_page:
         'https://atomscan.com/persistence/accounts/${accountAddress}',
-    },
-    {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/persistence',
-      tx_page: 'https://bigdipper.live/persistence/transactions/${txHash}',
-      account_page:
-        'https://bigdipper.live/persistence/accounts/${accountAddress}',
     },
     {
       kind: 'Stakeflow',
@@ -570,7 +614,7 @@ export const persistenceAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://persistence.one/',
+        website: 'https://persistence.one/',
         twitter: 'https://twitter.com/PersistenceOne',
       },
     },
@@ -1082,6 +1126,131 @@ export const persistenceAssetList: AssetLists = {
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/shd.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/shd.svg',
+        },
+      ],
+    },
+    {
+      description: 'PSTAKE Liquid-Staked HUAHUA',
+      denom_units: [
+        {
+          denom: 'stk/uhuahua',
+          exponent: 0,
+          aliases: [],
+        },
+        {
+          denom: 'stkhuahua',
+          exponent: 6,
+          aliases: ['stk/huahua'],
+        },
+      ],
+      base: 'stk/uhuahua',
+      name: 'PSTAKE staked HUAHUA',
+      display: 'stkhuahua',
+      symbol: 'stkHUAHUA',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'chihuahua',
+            base_denom: 'uhuahua',
+          },
+          provider: 'pSTAKE',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkhuahua.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkhuahua.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkhuahua.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkhuahua.svg',
+        },
+      ],
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/B597D779FCDD9021263C98A48F1AFA9D2BCCCE980F397CDE5681CCEDE7DEE1A4',
+          exponent: 0,
+          aliases: ['uhuahua'],
+        },
+        {
+          denom: 'huahua',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/B597D779FCDD9021263C98A48F1AFA9D2BCCCE980F397CDE5681CCEDE7DEE1A4',
+      name: 'Chihuahua',
+      display: 'huahua',
+      symbol: 'HUAHUA',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'chihuahua',
+            base_denom: 'uhuahua',
+            channel_id: 'channel-94',
+          },
+          chain: {
+            channel_id: 'channel-203',
+            path: 'transfer/channel-203/uhuahua',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'chihuahua',
+            base_denom: 'uhuahua',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/huahua.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/huahua.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/huahua.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/chihuahua/images/huahua.svg',
+      },
+    },
+    {
+      description: 'PSTAKE Liquid-Staked XPRT',
+      denom_units: [
+        {
+          denom: 'stk/uxprt',
+          exponent: 0,
+          aliases: [],
+        },
+        {
+          denom: 'stkxprt',
+          exponent: 6,
+          aliases: ['stk/xprt'],
+        },
+      ],
+      base: 'stk/uxprt',
+      name: 'PSTAKE staked XPRT',
+      display: 'stkxprt',
+      symbol: 'stkXPRT',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'persistence',
+            base_denom: 'uxprt',
+          },
+          provider: 'pSTAKE',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkxprt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkxprt.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkxprt.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/stkxprt.svg',
         },
       ],
     },

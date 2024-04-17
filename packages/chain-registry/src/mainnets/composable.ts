@@ -33,8 +33,16 @@ export const composable: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/notional-labs/composable-centauri',
-    recommended_version: 'v6.4.3',
-    compatible_versions: ['v6.4.3'],
+    recommended_version: 'v6.5.3',
+    compatible_versions: ['v6.5.3'],
+    cosmos_sdk_version:
+      'rust-ninja/cosmos-sdk v0.47.5-patch-validators-trim-tag',
+    ibc_go_version:
+      'notional-labs/ibc-go/v7 v7.2.1-0.20231010040541-6cf43006971f',
+    consensus: {
+      type: 'cometbft',
+      version: 'composablefi/cometbft v0.37.2-fixed-len-vote-time-tag',
+    },
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/notional-labs/composable-networks/main/mainnet/genesis.json',
@@ -151,6 +159,39 @@ export const composable: Chain = {
         },
         height: 3486739,
         proposal: 14,
+        next_version_name: '',
+      },
+      {
+        name: 'v6_5_0',
+        proposal: 16,
+        height: 4446786,
+        tag: 'v6.5.1',
+        recommended_version: 'v6.5.2',
+        compatible_versions: ['v6.5.2'],
+        cosmos_sdk_version: 'v0.47.6',
+        ibc_go_version:
+          'notional-labs/ibc-go/v7 v7.2.1-0.20231010040541-6cf43006971f',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        next_version_name: 'v6_5_3',
+      },
+      {
+        name: 'v6_5_3',
+        proposal: 18,
+        height: 4576500,
+        tag: 'v6.5.3',
+        recommended_version: 'v6.5.3',
+        compatible_versions: ['v6.5.3'],
+        cosmos_sdk_version:
+          'rust-ninja/cosmos-sdk v0.47.5-patch-validators-trim-tag',
+        ibc_go_version:
+          'notional-labs/ibc-go/v7 v7.2.1-0.20231010040541-6cf43006971f',
+        consensus: {
+          type: 'cometbft',
+          version: 'composablefi/cometbft v0.37.2-fixed-len-vote-time-tag',
+        },
         next_version_name: '',
       },
     ],
@@ -308,6 +349,10 @@ export const composable: Chain = {
         address: 'https://composable.api.moonbridge.team',
         provider: 'Moonbridge',
       },
+      {
+        address: 'https://composable.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
     ],
     grpc: [
       {
@@ -390,6 +435,11 @@ export const composable: Chain = {
       account_page:
         'https://exp.stakevillage.net/composable/account/${accountAddress}',
     },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Composable-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Composable-Mainnet/tx/${txHash}',
+    },
   ],
   images: [
     {
@@ -442,7 +492,7 @@ export const composableAssetList: AssetLists = {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
       },
       socials: {
-        webiste: 'https://www.composable.finance/',
+        website: 'https://www.composable.finance/',
         twitter: 'https://twitter.com/ComposableFin',
       },
     },
@@ -582,6 +632,53 @@ export const composableAssetList: AssetLists = {
           },
         },
       ],
+    },
+    {
+      description:
+        'The native fee, staking and governance token of the Tinkernet Parachain.',
+      denom_units: [
+        {
+          denom:
+            'ibc/C58E5D2571042137CB68B1B9851C4E7211C05F7C2C79E21E0966AF0F063961F8',
+          exponent: 0,
+          aliases: ['2125'],
+        },
+        {
+          denom: 'tnkr',
+          exponent: 12,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/C58E5D2571042137CB68B1B9851C4E7211C05F7C2C79E21E0966AF0F063961F8',
+      name: 'TNKR',
+      display: 'tnkr',
+      symbol: 'TNKR',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'picasso',
+            base_denom: '2125',
+            channel_id: 'channel-17',
+          },
+          chain: {
+            channel_id: 'channel-2',
+            path: 'transfer/channel-2/2125',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'picasso',
+            base_denom: '2125',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tinkernet/images/tnkr.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tinkernet/images/tnkr.svg',
+      },
     },
   ],
 };

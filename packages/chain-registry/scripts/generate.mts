@@ -12,6 +12,7 @@ const testnetsPath = `${__dirname}src/testnets`;
 const pathsToIgnore: string[] = [
   '*.schema.json',
   'package.json',
+  '*-lock.json',
   '_IBC/**/*.json',
   '_memo_keys/**/*.json',
   '_non-cosmos/**/*.json',
@@ -60,7 +61,7 @@ await writeFile(
   `import type { IbcData } from '../types'
 
   export const mainnetIbc: IbcData[] = ${JSON.stringify(ibcInfos)};
-`
+`,
 );
 
 mainnetChainFiles.add('ibc');
@@ -68,7 +69,7 @@ mainnetChainFiles.add('ibc');
 const memoKeysPath = memoKeys[0];
 const memoKeysData = await readFile(
   `${memoKeysPath.path}/${memoKeysPath.name}`,
-  'utf-8'
+  'utf-8',
 );
 
 await writeFile(
@@ -76,7 +77,7 @@ await writeFile(
   `import type { MemoKeys } from '../types'
 
   export const memoKeys: MemoKeys = ${memoKeysData};
-`
+`,
 );
 
 mainnetChainFiles.add('memo-keys');
@@ -85,7 +86,7 @@ await writeFile(
   `${mainnetsPath}/index.ts`,
   Array.from(mainnetChainFiles.keys())
     .map((chain) => `export * from './${chain}'`)
-    .join('\n')
+    .join('\n'),
 );
 
 await rm(testnetsPath, { recursive: true, force: true });
@@ -106,7 +107,7 @@ await writeFile(
   `import type { IbcData } from '../types'
 
   export const testnetIbc: IbcData[] = ${JSON.stringify(testnetIbcInfos)};
-`
+`,
 );
 
 testnetChainFiles.add('ibc');
@@ -115,5 +116,5 @@ await writeFile(
   `${testnetsPath}/index.ts`,
   Array.from(testnetChainFiles.keys())
     .map((chain) => `export * from './${chain}'`)
-    .join('\n')
+    .join('\n'),
 );

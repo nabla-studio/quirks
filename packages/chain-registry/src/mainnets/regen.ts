@@ -252,12 +252,6 @@ export const regen: Chain = {
       tx_page: 'https://ping.pub/regen/tx/${txHash}',
     },
     {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/regen',
-      tx_page: 'https://bigdipper.live/regen/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/regen/accounts/${accountAddress}',
-    },
-    {
       kind: 'atomscan',
       url: 'https://atomscan.com/regen-network',
       tx_page: 'https://atomscan.com/regen-network/transactions/${txHash}',
@@ -309,7 +303,7 @@ export const regenAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.regen.network/',
+        website: 'https://www.regen.network/',
         twitter: 'https://twitter.com/regen_network',
       },
     },

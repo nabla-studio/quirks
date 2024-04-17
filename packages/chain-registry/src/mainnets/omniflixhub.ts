@@ -209,8 +209,8 @@ export const omniflixhub: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://omniflix.kingnodes.com',
-        provider: 'kingnodes',
+        address: 'https://omniflix-rpc.kingnodes.com',
+        provider: 'kingnodes 👑',
       },
       {
         address: 'https://rpc.omniflix.nodestake.top',
@@ -295,8 +295,8 @@ export const omniflixhub: Chain = {
         provider: 'silent',
       },
       {
-        address: 'https://omniflix.kingnodes.com',
-        provider: 'kingnodes',
+        address: 'https://omniflix-rest.kingnodes.com',
+        provider: 'kingnodes 👑',
       },
       {
         address: 'https://omniflixhub-mainnet-lcd.autostake.com:443',
@@ -337,8 +337,8 @@ export const omniflixhub: Chain = {
     ],
     grpc: [
       {
-        address: 'grpc-omniflix.kingnodes.com:443',
-        provider: 'kingnodes',
+        address: 'https://omniflix-grpc.kingnodes.com:443',
+        provider: 'kingnodes 👑',
       },
       {
         address: 'grpc.omniflix.nodestake.top:443',
@@ -460,7 +460,7 @@ export const omniflixhubAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://omniflix.network/',
+        website: 'https://omniflix.network/',
         twitter: 'https://twitter.com/OmniFlixNetwork',
       },
     },
@@ -651,6 +651,55 @@ export const omniflixhubAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/usdc.svg',
       },
+    },
+    {
+      description:
+        "Akash Token (AKT) is the Akash Network's native utility token",
+      denom_units: [
+        {
+          denom:
+            'ibc/6901B45BC2C5418ED8B3C3C9F9A641A3DAF2D234230AFA9DF32D8F9F9434721C',
+          exponent: 0,
+          aliases: ['uakt'],
+        },
+        {
+          denom: 'akt',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/6901B45BC2C5418ED8B3C3C9F9A641A3DAF2D234230AFA9DF32D8F9F9434721C',
+      name: 'Akash',
+      display: 'akt',
+      symbol: 'AKT',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'akash',
+            base_denom: 'uakt',
+            channel_id: 'channel-61',
+          },
+          chain: {
+            channel_id: 'channel-25',
+            path: 'transfer/channel-25/uakt',
+          },
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/akash/images/akt.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/akash/images/akt.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'akash',
+            base_denom: 'uakt',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/akash/images/akt.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/akash/images/akt.svg',
+        },
+      ],
     },
     {
       denom_units: [

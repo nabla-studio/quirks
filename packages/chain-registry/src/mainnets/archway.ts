@@ -36,17 +36,17 @@ export const archway: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/archway-network/archway',
-    recommended_version: 'v6.0.2',
-    compatible_versions: ['v6.0.2'],
+    recommended_version: 'v6.0.3',
+    compatible_versions: ['v6.0.3'],
     binaries: {
       'linux/amd64':
-        'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_linux_amd64',
+        'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_linux_amd64',
       'linux/arm64':
-        'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_linux_arm64',
+        'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_linux_arm64',
       'darwin/amd64':
-        'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_darwin_amd64',
+        'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_darwin_amd64',
       'darwin/arm64':
-        'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_darwin_arm64',
+        'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_darwin_arm64',
     },
     cosmos_sdk_version: 'v0.45.16',
     consensus: {
@@ -55,7 +55,7 @@ export const archway: Chain = {
     },
     cosmwasm_version: 'v0.33.0',
     cosmwasm_enabled: true,
-    ibc_go_version: 'v4.3.1',
+    ibc_go_version: 'v7.4.0',
     genesis: {
       genesis_url:
         'https://github.com/archway-network/networks/raw/main/archway/genesis/genesis.json.gz',
@@ -137,8 +137,8 @@ export const archway: Chain = {
       },
       {
         name: 'v6.0.0',
-        recommended_version: 'v6.0.2',
-        compatible_versions: ['v6.0.2'],
+        recommended_version: 'v6.0.3',
+        compatible_versions: ['v6.0.3'],
         proposal: 38,
         height: 3554500,
         consensus: {
@@ -148,17 +148,17 @@ export const archway: Chain = {
         cosmos_sdk_version: 'v0.47.10',
         cosmwasm_version: 'archway-network/archway-wasmd v0.45.0-archway',
         cosmwasm_enabled: true,
-        ibc_go_version: 'v7.3.0',
+        ibc_go_version: 'v7.4.0',
         cosmwasm_path: '$HOME/.archway/data/wasm',
         binaries: {
           'linux/amd64':
-            'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_linux_amd64',
+            'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_linux_amd64',
           'linux/arm64':
-            'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_linux_arm64',
+            'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_linux_arm64',
           'darwin/amd64':
-            'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_darwin_amd64',
+            'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_darwin_amd64',
           'darwin/arm64':
-            'https://github.com/archway-network/archway/releases/download/v6.0.2/archwayd_darwin_arm64',
+            'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_darwin_arm64',
         },
         next_version_name: '',
       },
@@ -371,6 +371,10 @@ export const archway: Chain = {
         address: 'https://rpc.archway.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://archway-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -473,6 +477,10 @@ export const archway: Chain = {
         address: 'https://lcd.archway.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://archway-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -563,6 +571,10 @@ export const archway: Chain = {
         address: 'https://grpc.archway.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'archway-grpc.noders.services:13090',
+        provider: '[NODERS]TEAM',
+      },
     ],
   },
   explorers: [
@@ -608,12 +620,6 @@ export const archway: Chain = {
       kind: 'ping.pub',
       url: 'https://ping.pub/archway',
       tx_page: 'https://ping.pub/archway/tx/${txHash}',
-    },
-    {
-      kind: 'Big Dipper',
-      url: 'https://bigdipper.live/archway',
-      tx_page: 'https://bigdipper.live/archway/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/archway/accounts/${accountAddress}',
     },
     {
       kind: 'ezstaking',
@@ -666,7 +672,7 @@ export const archwayAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://archway.io/',
+        website: 'https://archway.io/',
         twitter: 'https://twitter.com/archwayHQ',
       },
     },

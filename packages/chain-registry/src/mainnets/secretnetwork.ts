@@ -351,7 +351,7 @@ export const secretnetworkAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://scrt.network/',
+        website: 'https://scrt.network/',
         twitter: 'https://twitter.com/SecretNetwork',
       },
     },
