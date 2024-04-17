@@ -122,6 +122,11 @@ export const zetachain: Chain = {
         address: '34.28.196.79:26656',
         provider: 'ZetaChain',
       },
+      {
+        id: '637077d431f618181597706810a65c826524fd74',
+        address: 'zetachain.rpc.nodeshub.online:22556',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
   },
   apis: {
@@ -142,6 +147,14 @@ export const zetachain: Chain = {
         address: 'https://rpc.zetachain.nodestake.org',
         provider: 'NodeStake',
       },
+      {
+        address: 'https://zetachain-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://zetachain.rpc.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     rest: [
       {
@@ -160,6 +173,14 @@ export const zetachain: Chain = {
         address: 'https://api.zetachain.nodestake.org',
         provider: 'NodeStake',
       },
+      {
+        address: 'https://zetachain-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://zetachain.api.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     grpc: [
       {
@@ -169,6 +190,14 @@ export const zetachain: Chain = {
       {
         address: 'https://grpc.zetachain.nodestake.org:443',
         provider: 'NodeStake',
+      },
+      {
+        address: 'zetachain-grpc.noders.services:28090',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://zetachain.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
       },
     ],
   },
@@ -187,6 +216,13 @@ export const zetachain: Chain = {
       kind: 'NodeStake Explorer',
       url: 'https://explorer.nodestake.org/zetachain',
       tx_page: 'https://explorer.nodestake.org/zetachain/tx/${txHash}',
+    },
+    {
+      kind: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      url: 'https://explorer.nodeshub.online/zetachain/',
+      tx_page: 'https://explorer.nodeshub.online/zetachain/tx/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/zetachain/accounts/${accountAddress}',
     },
   ],
 };

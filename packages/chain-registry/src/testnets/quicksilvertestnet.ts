@@ -71,6 +71,11 @@ export const quicksilvertestnet: Chain = {
         address: 'testnet-seeds.polkachu.com:11156',
         provider: 'Polkachu',
       },
+      {
+        id: '496ac0ba20188f70f41e0a814dfd4d9a617338f8',
+        address: 'quicksilver-testnet-seed.ibs.team:16652',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     persistent_peers: [
       {
@@ -101,6 +106,10 @@ export const quicksilvertestnet: Chain = {
         address: 'https://quicksilver-testnet-rpc.polkachu.com/',
         provider: 'polkachu',
       },
+      {
+        address: 'https://quicksilver-testnet-rpc.ibs.team:443',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     rest: [
       {
@@ -110,6 +119,10 @@ export const quicksilvertestnet: Chain = {
       {
         address: 'https://quicksilver-testnet-api.polkachu.com/',
         provider: 'polkachu',
+      },
+      {
+        address: 'https://quicksilver-testnet-api.ibs.team:443',
+        provider: 'Inter Blockchain Services',
       },
     ],
     grpc: [

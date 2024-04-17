@@ -59,6 +59,11 @@ export const bitcannadevnet: Chain = {
         id: '471341f9befeab582e845d5e9987b7a4889c202f',
         address: '144.91.89.66:26656',
       },
+      {
+        id: '496ac0ba20188f70f41e0a814dfd4d9a617338f8',
+        address: 'bcnadev-seed.ibs.team:16656',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     persistent_peers: [
       {
@@ -97,6 +102,10 @@ export const bitcannadevnet: Chain = {
         address: 'https://bitcanna-testnet.nodejumper.io:443',
         provider: 'NODEJUMPER',
       },
+      {
+        address: 'https://bcna-testnet-rpc.ibs.team:443',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     rest: [
       {
@@ -122,6 +131,10 @@ export const bitcannadevnet: Chain = {
       {
         address: 'https://bitcanna-testnet.nodejumper.io:1317',
         provider: 'NODEJUMPER',
+      },
+      {
+        address: 'https://bcna-testnet-api.ibs.team:443',
+        provider: 'Inter Blockchain Services',
       },
     ],
     grpc: [

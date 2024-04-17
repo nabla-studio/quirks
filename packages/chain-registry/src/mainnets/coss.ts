@@ -174,7 +174,7 @@ export const cossAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coss/images/coss.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coss/images/coss.svg',
       },
-      coingecko_id: '',
+      coingecko_id: 'coss-2',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coss/images/coss.png',

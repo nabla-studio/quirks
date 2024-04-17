@@ -151,6 +151,10 @@ export const tenet: Chain = {
         address: 'https://tenet-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://tenet_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
@@ -160,6 +164,10 @@ export const tenet: Chain = {
       {
         address: 'https://tenet-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'https://tenet_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
     grpc: [
@@ -200,6 +208,13 @@ export const tenet: Chain = {
       tx_page: 'https://explorer.tcnetwork.io/tenet/transaction/${txHash}',
       account_page:
         'https://explorer.tcnetwork.io/tenet/account/${accountAddress}',
+    },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/tenet',
+      tx_page: 'https://explorer.whenmoonwhenlambo.money/tenet/tx/${txHash}',
+      account_page:
+        'https://explorer.whenmoonwhenlambo.money/tenet/account/${accountAddress}',
     },
   ],
   images: [

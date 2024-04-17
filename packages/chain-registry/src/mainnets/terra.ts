@@ -470,7 +470,6 @@ export const terraAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/krt.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/krt.svg',
       },
-      coingecko_id: 'terrakrw',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/krt.png',
@@ -2993,7 +2992,7 @@ export const terraAssetList: AssetLists = {
           exponent: 0,
         },
         {
-          denom: 'xastro',
+          denom: 'xastro.cw20',
           exponent: 6,
         },
       ],
@@ -3001,14 +3000,14 @@ export const terraAssetList: AssetLists = {
       address: 'terra14lpnyzc9z4g3ugr4lhm8s4nle0tq8vcltkhzh7',
       base: 'cw20:terra14lpnyzc9z4g3ugr4lhm8s4nle0tq8vcltkhzh7',
       name: 'Staked Astroport Token',
-      display: 'xastro',
-      symbol: 'xASTRO',
+      display: 'xastro.cw20',
+      symbol: 'xASTRO.cw20',
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/xastro.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/xastro-cw20.svg',
       },
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/xastro.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/xastro-cw20.svg',
         },
       ],
     },
@@ -3150,7 +3149,7 @@ export const terraAssetList: AssetLists = {
         },
         {
           denom: 'alot',
-          exponent: 0,
+          exponent: 6,
         },
       ],
       type_asset: 'cw20',
@@ -4802,7 +4801,7 @@ export const terraAssetList: AssetLists = {
         },
         {
           denom: 'lctfancard',
-          exponent: 0,
+          exponent: 6,
         },
       ],
       type_asset: 'cw20',
@@ -4932,7 +4931,7 @@ export const terraAssetList: AssetLists = {
         },
         {
           denom: 'cstfancard',
-          exponent: 0,
+          exponent: 6,
         },
       ],
       type_asset: 'cw20',
@@ -5967,6 +5966,35 @@ export const terraAssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/trit.png',
+        },
+      ],
+    },
+    {
+      description: 'Rakoff Token is the Meme Token for Terra Classic',
+      type_asset: 'cw20',
+      address:
+        'terra1vhgq25vwuhdhn9xjll0rhl2s67jzw78a4g2t78y5kz89q9lsdskq2pxcj2',
+      denom_units: [
+        {
+          denom:
+            'cw20:terra1vhgq25vwuhdhn9xjll0rhl2s67jzw78a4g2t78y5kz89q9lsdskq2pxcj2',
+          exponent: 0,
+        },
+        {
+          denom: 'rakoff',
+          exponent: 6,
+        },
+      ],
+      base: 'cw20:terra1vhgq25vwuhdhn9xjll0rhl2s67jzw78a4g2t78y5kz89q9lsdskq2pxcj2',
+      name: 'Rakoff Token',
+      display: 'rakoff',
+      symbol: 'RAKOFF',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/rakoff.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra/images/rakoff.png',
         },
       ],
     },

@@ -33,13 +33,13 @@ export const jackal: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/JackalLabs/canine-chain',
-    recommended_version: 'v3.2.0',
-    compatible_versions: ['v3.2.0'],
+    recommended_version: 'v3.2.1',
+    compatible_versions: ['v3.2.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.0/canined-Linux',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.1/canined-Linux',
       'darwin/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.0/canined-macOS',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.1/canined-macOS',
     },
     genesis: {
       genesis_url:
@@ -126,17 +126,17 @@ export const jackal: Chain = {
       },
       {
         name: 'v3.2.0',
-        tag: 'V3.2.0',
+        tag: 'V3.2.1',
         proposal: 12,
         height: 6835000,
-        recommended_version: 'v3.2.0',
-        compatible_versions: ['v3.2.0'],
+        recommended_version: 'v3.2.1',
+        compatible_versions: ['v3.2.1'],
         cosmwasm_enabled: true,
         binaries: {
           'linux/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.0/canined-Linux',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.1/canined-Linux',
           'darwin/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.0/canined-macOS',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.1/canined-macOS',
         },
         next_version_name: '',
       },
@@ -285,6 +285,10 @@ export const jackal: Chain = {
         address: 'https://jackal-rpc.kleomedes.network',
         provider: 'Kleomedes',
       },
+      {
+        address: 'https://jackal-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -351,6 +355,10 @@ export const jackal: Chain = {
         address: 'https://jackal-api.kleomedes.network',
         provider: 'Kleomedes',
       },
+      {
+        address: 'https://jackal-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -396,6 +404,10 @@ export const jackal: Chain = {
       {
         address: 'grpc.jackal.silentvalidator.com:443',
         provider: 'silent',
+      },
+      {
+        address: 'jackal-grpc.noders.services:26090',
+        provider: '[NODERS]TEAM',
       },
     ],
   },

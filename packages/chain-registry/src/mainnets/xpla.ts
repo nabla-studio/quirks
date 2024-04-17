@@ -33,14 +33,15 @@ export const xpla: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/xpladev/xpla',
-    recommended_version: 'v1.3.0',
-    compatible_versions: ['v1.3.0'],
-    cosmos_sdk_version: '0.45.16',
+    recommended_version: 'v1.4.0',
+    compatible_versions: ['v1.4.0'],
+    cosmos_sdk_version: 'xpladev/cosmos-sdk v0.45.20-xpla',
     consensus: {
       type: 'cometbft',
-      version: '0.34.27',
+      version: '0.34.29',
     },
-    cosmwasm_version: '0.33.0',
+    ibc_go_version: 'v4.5.1',
+    cosmwasm_version: 'v0.33.0',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/xpladev/mainnet/main/dimension_37-1/genesis.json',
@@ -68,6 +69,19 @@ export const xpla: Chain = {
           version: '0.34.27',
         },
         cosmwasm_version: '0.33.0',
+        next_version_name: 'v1_4',
+      },
+      {
+        name: 'v1_4',
+        recommended_version: 'v1.4.0',
+        compatible_versions: ['v1.4.0'],
+        cosmos_sdk_version: 'xpladev/cosmos-sdk v0.45.20-xpla',
+        consensus: {
+          type: 'cometbft',
+          version: '0.34.29',
+        },
+        ibc_go_version: 'v4.5.1',
+        cosmwasm_version: 'v0.33.0',
         next_version_name: '',
       },
     ],
@@ -87,6 +101,11 @@ export const xpla: Chain = {
         id: '20e1000e88125698264454a884812746c2eb4807',
         address: 'seeds.lavenderfive.com:20157',
         provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        id: '466c9c2e8b128389059bf4e7e68888fdde8cbebc',
+        address: 'xpla.seed.stavr.tech:2066',
+        provider: '🔥STAVR🔥',
       },
       {
         id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
@@ -144,6 +163,10 @@ export const xpla: Chain = {
         provider: 'Holdings',
       },
       {
+        address: 'https://xpla.rpc.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
         address: 'https://xpla-rpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
       },
@@ -156,6 +179,10 @@ export const xpla: Chain = {
       {
         address: 'https://dimension-lcd.xpla.dev',
         provider: 'Holdings',
+      },
+      {
+        address: 'https://xpla.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
       },
       {
         address: 'https://xpla-api.lavenderfive.com:443',
@@ -180,6 +207,11 @@ export const xpla: Chain = {
       kind: 'finder',
       url: 'https://finder.xpla.io',
       tx_page: 'https://finder.xpla.io/mainnet/tx/${txHash}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Xpla-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Xpla-Mainnet/tx/${txHash}',
     },
     {
       kind: 'mintscan',

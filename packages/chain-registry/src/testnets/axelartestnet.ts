@@ -43,6 +43,10 @@ export const axelartestnet: Chain = {
         address: 'https://axelartest-rpc.quickapi.com/',
         provider: 'Quickapi',
       },
+      {
+        address: 'https://axelar-testnet-rpc.ibs.team:443',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     rest: [
       {
@@ -52,6 +56,19 @@ export const axelartestnet: Chain = {
       {
         address: 'https://axelartest-lcd.quickapi.com/',
         provider: 'Quickapi',
+      },
+      {
+        address: 'https://axelar-testnet-api.ibs.team:443',
+        provider: 'Inter Blockchain Services',
+      },
+    ],
+  },
+  peers: {
+    seeds: [
+      {
+        id: '496ac0ba20188f70f41e0a814dfd4d9a617338f8',
+        address: 'axelar-testnet-seed.ibs.team:16654',
+        provider: 'Inter Blockchain Services',
       },
     ],
   },

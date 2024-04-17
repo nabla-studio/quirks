@@ -418,6 +418,10 @@ export const gitopia: Chain = {
         address: 'https://gitopia.declab.pro:26625',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://gitopia-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -544,6 +548,10 @@ export const gitopia: Chain = {
         address: 'https://gitopia.declab.pro:443',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://gitopia-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -661,6 +669,10 @@ export const gitopia: Chain = {
       {
         address: 'https://gitopia.declab.pro:9017',
         provider: 'Decloud Nodes Lab',
+      },
+      {
+        address: 'gitopia-grpc.noders.services:19090',
+        provider: '[NODERS]TEAM',
       },
     ],
   },
@@ -815,7 +827,7 @@ export const gitopiaAssetList: AssetLists = {
       ],
       coingecko_id: 'gitopia',
       socials: {
-        webiste: 'https://gitopia.com/',
+        website: 'https://gitopia.com/',
         twitter: 'https://twitter.com/gitopiaDAO',
       },
     },

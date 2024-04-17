@@ -41,20 +41,20 @@ export const dydx: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/dydxprotocol/v4-chain/',
-    recommended_version: 'protocol/v3.0.0',
-    compatible_versions: ['protocol/v3.0.0'],
+    recommended_version: 'protocol/v4.0.2',
+    compatible_versions: ['protocol/v4.0.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv3.0.0/dydxprotocold-v3.0.0-linux-amd64.tar.gz',
+        'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.2/dydxprotocold-v4.0.2-linux-amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv3.0.0/dydxprotocold-v3.0.0-linux-arm64.tar.gz',
+        'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.2/dydxprotocold-v4.0.2-linux-arm64.tar.gz',
     },
     cosmos_sdk_version:
-      'dydxprotocol/cosmos-sdk v0.47.5-0.20240111163003-128eb0a555af',
-    ibc_go_version: 'v7.3.0',
+      'dydxprotocol/cosmos-sdk v0.50.6-0.20240326192503-dd116391188d',
+    ibc_go_version: 'v8.0.0',
     consensus: {
       type: 'cometbft',
-      version: 'dydxprotocol/cometbft v0.37.3-0.20230908230338-65f7a2f25c18',
+      version: 'dydxprotocol/cometbft v0.38.6-0.20240229050000-3b085f30b462',
     },
     genesis: {
       genesis_url:
@@ -100,6 +100,28 @@ export const dydx: Chain = {
           type: 'cometbft',
           version:
             'dydxprotocol/cometbft v0.37.3-0.20230908230338-65f7a2f25c18',
+        },
+        next_version_name: 'protocol/v4.0.0',
+      },
+      {
+        name: 'v4.0.0',
+        proposal: 46,
+        height: 12791712,
+        recommended_version: 'protocol/v4.0.2',
+        compatible_versions: ['protocol/v4.0.2'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.2/dydxprotocold-v4.0.2-linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.2/dydxprotocold-v4.0.2-linux-arm64.tar.gz',
+        },
+        cosmos_sdk_version:
+          'dydxprotocol/cosmos-sdk v0.50.6-0.20240326192503-dd116391188d',
+        ibc_go_version: 'v8.0.0',
+        consensus: {
+          type: 'cometbft',
+          version:
+            'dydxprotocol/cometbft v0.38.6-0.20240229050000-3b085f30b462',
         },
         next_version_name: '',
       },
@@ -190,16 +212,16 @@ export const dydx: Chain = {
   apis: {
     rpc: [
       {
+        address: 'https://dydx-rpc.kingnodes.com:443',
+        provider: 'Kingnodes 👑',
+      },
+      {
         address: 'https://dydx-dao-rpc.polkachu.com',
         provider: 'Polkachu',
       },
       {
         address: 'https://dydx-mainnet-full-rpc.public.blastapi.io',
         provider: 'Bware Labs',
-      },
-      {
-        address: 'https://dydx-rpc.kingnodes.com:443',
-        provider: 'Kingnodes',
       },
       {
         address: 'https://dydx-rpc.lavenderfive.com:443',
@@ -253,7 +275,7 @@ export const dydx: Chain = {
       },
       {
         address: 'https://dydx-rest.kingnodes.com:443',
-        provider: 'Kingnodes',
+        provider: 'Kingnodes 👑',
       },
       {
         address: 'https://dydx-api.lavenderfive.com:443',
@@ -315,7 +337,7 @@ export const dydx: Chain = {
       },
       {
         address: 'https://dydx-grpc.kingnodes.com:443',
-        provider: 'Kingnodes',
+        provider: 'Kingnodes 👑',
       },
       {
         address: 'https://dydx-grpc.lavenderfive.com',
@@ -417,7 +439,7 @@ export const dydxAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://dydx.trade/',
+        website: 'https://dydx.trade/',
         twitter: 'https://twitter.com/dYdX',
       },
     },

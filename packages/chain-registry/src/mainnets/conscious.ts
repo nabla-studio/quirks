@@ -5,7 +5,7 @@ export const conscious: Chain = {
   chain_name: 'conscious',
   status: 'live',
   network_type: 'mainnet',
-  website: 'https://www.consciousdao.com/',
+  website: 'https://cvn.io/',
   pretty_name: 'ConsciousDAO',
   chain_id: 'cvn_2032-1',
   bech32_prefix: 'cvn',
@@ -68,11 +68,20 @@ export const conscious: Chain = {
         provider: 'cvn.io',
       },
     ],
-    rest: [],
+    rest: [
+      {
+        address: 'https://api.cvn.io',
+        provider: 'cvn.io',
+      },
+    ],
     grpc: [
       {
         address: 'https://rest.consciousdao.com',
         provider: 'consciousdao.com',
+      },
+      {
+        address: 'https://grpc.cvn.io',
+        provider: 'cvn.io',
       },
     ],
     'evm-http-jsonrpc': [

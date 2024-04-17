@@ -782,7 +782,7 @@ export const chain4EnergyAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://c4e.io/',
+        website: 'https://c4e.io/',
         twitter: 'https://twitter.com/Chain4Energy',
       },
     },

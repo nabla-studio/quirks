@@ -351,7 +351,7 @@ export const sommelierAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.sommelier.finance/',
+        website: 'https://www.sommelier.finance/',
         twitter: 'https://twitter.com/sommfinance',
       },
     },

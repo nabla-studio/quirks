@@ -541,6 +541,10 @@ export const haqq: Chain = {
         address: 'https://haqq-rpc.palamar.io',
         provider: 'Palamar',
       },
+      {
+        address: 'https://haqq-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -574,6 +578,10 @@ export const haqq: Chain = {
       {
         address: 'https://haqq-api.palamar.io',
         provider: 'Palamar',
+      },
+      {
+        address: 'https://haqq-api.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
     grpc: [
@@ -613,6 +621,10 @@ export const haqq: Chain = {
         address: 'haqq-grpc.palamar.io:443',
         provider: 'Palamar',
       },
+      {
+        address: 'haqq-grpc.noders.services:14090',
+        provider: '[NODERS]TEAM',
+      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -642,6 +654,10 @@ export const haqq: Chain = {
       {
         address: 'https://evm-haqq.sr20de.xyz',
         provider: 'Sr20de',
+      },
+      {
+        address: 'https://haqq-jsonrpc.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
   },

@@ -33,8 +33,8 @@ export const celestia: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/celestiaorg/celestia-app',
-    recommended_version: 'v1.6.0',
-    compatible_versions: ['v1.3.0', 'v1.6.0'],
+    recommended_version: 'v1.7.0',
+    compatible_versions: ['v1.3.0', 'v1.6.0', 'v1.7.0'],
     cosmos_sdk_version: 'v0.46.16',
     ibc_go_version: 'v6.2.1',
     consensus: {
@@ -48,8 +48,8 @@ export const celestia: Chain = {
     versions: [
       {
         name: 'v1.3.0',
-        recommended_version: 'v1.6.0',
-        compatible_versions: ['v1.3.0', 'v1.6.0'],
+        recommended_version: 'v1.7.0',
+        compatible_versions: ['v1.3.0', 'v1.6.0', 'v1.7.0'],
         cosmos_sdk_version: 'v0.46.16',
         ibc_go_version: 'v6.2.1',
         consensus: {
@@ -265,6 +265,10 @@ export const celestia: Chain = {
         address: 'https://rpc.celestia-app.bronbro.io',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://celestia-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -355,6 +359,10 @@ export const celestia: Chain = {
         address: 'https://lcd.celestia-app.bronbro.io',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://celestia-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -429,6 +437,10 @@ export const celestia: Chain = {
         address: 'grpc.celestia-app.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'celestia-grpc.noders.services:11090',
+        provider: '[NODERS]TEAM',
+      },
     ],
   },
   explorers: [
@@ -493,7 +505,9 @@ export const celestiaAssetList: AssetLists = {
   chain_name: 'celestia',
   assets: [
     {
-      description: '',
+      description: 'The native token of the Celestia blockchain.',
+      extended_description:
+        'Celestia is a modular data availability network. It simplifies the process of launching blockchains, making blockchain technology more accessible and user-friendly. Unlike traditional blockchains that handle multiple functions, Celestia specializes in specific roles, which leads to enhanced scalability, flexibility, and interoperability. This specialization enables developers to create blockchain applications for mass adoption​.',
       denom_units: [
         {
           denom: 'utia',
@@ -515,12 +529,12 @@ export const celestiaAssetList: AssetLists = {
       },
       images: [
         {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg',
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg',
         },
       ],
       socials: {
-        webiste: 'https://celestia.org/',
+        website: 'https://celestia.org/',
         twitter: 'https://twitter.com/CelestiaOrg',
       },
     },

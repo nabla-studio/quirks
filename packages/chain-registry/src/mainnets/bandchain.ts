@@ -12,10 +12,12 @@ export const bandchain: Chain = {
   node_home: '$HOME/.band',
   bech32_prefix: 'band',
   slip44: 494,
+  key_algos: ['secp256k1'],
   fees: {
     fee_tokens: [
       {
         denom: 'uband',
+        fixed_min_gas_price: 0.0025,
         low_gas_price: 0.0025,
         average_gas_price: 0.003,
         high_gas_price: 0.005,
@@ -28,30 +30,54 @@ export const bandchain: Chain = {
         denom: 'uband',
       },
     ],
+    lock_duration: {
+      time: '1814400s',
+    },
   },
   codebase: {
     git_repo: 'https://github.com/bandprotocol/chain',
-    recommended_version: 'v2.5.3',
-    compatible_versions: ['v2.5.3'],
+    recommended_version: 'v2.5.4',
+    compatible_versions: ['v2.5.2', 'v2.5.3', 'v2.5.4'],
+    cosmos_sdk_version: '0.45.16',
+    ibc_go_version: 'v4.3.1',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.34.29',
+    },
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/bandprotocol/launch/master/laozi-mainnet/genesis.json',
     },
     versions: [
       {
-        name: 'v2.4.1',
+        name: 'v2_4',
+        tag: 'v2.4.1',
+        proposal: 9,
+        height: 11525000,
         recommended_version: 'v2.4.1',
-        compatible_versions: ['v2.4.1'],
+        compatible_versions: ['v2.4.0', 'v2.4.1'],
+        cosmos_sdk_version: 'v0.45.10',
+        ibc_go_version: 'v3.3.1',
+        consensus: {
+          type: 'tendermint',
+          version: 'v0.34.22',
+        },
+        next_version_name: 'v2_5',
       },
       {
-        name: 'v2.5.2',
-        recommended_version: 'v2.5.2',
-        compatible_versions: ['v2.5.2'],
-      },
-      {
-        name: 'v2.5.3',
-        recommended_version: 'v2.5.3',
-        compatible_versions: ['v2.5.3'],
+        name: 'v2_5',
+        tag: 'v2.5.4',
+        proposal: 11,
+        height: 16562500,
+        recommended_version: 'v2.5.4',
+        compatible_versions: ['v2.5.2', 'v2.5.3', 'v2.5.4'],
+        cosmos_sdk_version: '0.45.16',
+        ibc_go_version: 'v4.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.29',
+        },
+        next_version_name: '',
       },
     ],
   },
@@ -183,6 +209,10 @@ export const bandchain: Chain = {
         address: 'https://rpc.band.bronbro.io/',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://band-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -233,6 +263,10 @@ export const bandchain: Chain = {
         address: 'https://lcd.band.bronbro.io/',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://band-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -275,6 +309,10 @@ export const bandchain: Chain = {
         address: 'grpc.band.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'band-grpc.noders.services:30090',
+        provider: '[NODERS]TEAM',
+      },
     ],
   },
   explorers: [
@@ -310,12 +348,6 @@ export const bandchain: Chain = {
       tx_page: 'https://atomscan.com/band-protocol/transactions/${txHash}',
       account_page:
         'https://atomscan.com/band-protocol/accounts/${accountAddress}',
-    },
-    {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/band',
-      tx_page: 'https://bigdipper.live/band/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/band/accounts/${accountAddress}',
     },
     {
       kind: 'Stakeflow',
@@ -369,7 +401,7 @@ export const bandchainAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.bandprotocol.com/',
+        website: 'https://www.bandprotocol.com/',
         twitter: 'https://twitter.com/BandProtocol',
       },
     },

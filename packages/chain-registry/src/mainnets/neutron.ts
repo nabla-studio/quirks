@@ -67,20 +67,20 @@ export const neutron: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/neutron-org/neutron',
-    recommended_version: 'v2.0.3',
-    compatible_versions: ['v2.0.3'],
+    recommended_version: 'v3.0.2',
+    compatible_versions: ['v3.0.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/neutron-org/neutron/releases/download/v2.0.3/neutrond-linux-amd64',
+        'https://github.com/neutron-org/neutron/releases/download/v3.0.2/neutrond-linux-amd64',
     },
-    cosmos_sdk_version: 'v0.47.6',
+    cosmos_sdk_version: 'neutron-org/cosmos-sdk v0.47.10-neutron',
     consensus: {
       type: 'cometbft',
-      version: 'v0.37.2',
+      version: 'v0.37.4',
     },
-    cosmwasm_version: 'v0.45.0',
+    cosmwasm_version: 'neutron-org/wasmd v0.45.0',
     cosmwasm_enabled: true,
-    ibc_go_version: 'v7.3.1',
+    ibc_go_version: 'v7.3.2',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/neutron-org/mainnet-assets/main/neutron-1-genesis.json',
@@ -104,11 +104,11 @@ export const neutron: Chain = {
         name: 'v2.0.0',
         proposal: 25,
         height: 5416000,
-        recommended_version: 'v2.0.3',
-        compatible_versions: ['v2.0.3'],
+        recommended_version: 'v2.0.4',
+        compatible_versions: ['v2.0.4'],
         binaries: {
           'linux/amd64':
-            'https://github.com/neutron-org/neutron/releases/download/v2.0.3/neutrond-linux-amd64',
+            'https://github.com/neutron-org/neutron/releases/download/v2.0.4/neutrond-linux-amd64',
         },
         cosmos_sdk_version: 'v0.47.6',
         consensus: {
@@ -118,6 +118,26 @@ export const neutron: Chain = {
         cosmwasm_version: 'v0.45.0',
         cosmwasm_enabled: true,
         ibc_go_version: 'v7.3.1',
+        next_version_name: 'v3.0.1',
+      },
+      {
+        name: 'v3.0.1',
+        proposal: 35,
+        height: 9034900,
+        recommended_version: 'v3.0.2',
+        compatible_versions: ['v3.0.2'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/neutron-org/neutron/releases/download/v3.0.2/neutrond-linux-amd64',
+        },
+        cosmos_sdk_version: 'neutron-org/cosmos-sdk v0.47.10-neutron',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'neutron-org/wasmd v0.45.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.3.2',
         next_version_name: '',
       },
     ],
@@ -323,7 +343,7 @@ export const neutronAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://neutron.org/',
+        website: 'https://neutron.org/',
         twitter: 'https://twitter.com/Neutron_org',
       },
     },
@@ -661,11 +681,12 @@ export const neutronAssetList: AssetLists = {
       ],
     },
     {
-      description: 'ASTRO on Neutron',
+      description:
+        'Astroport is a neutral marketplace where anyone, from anywhere in the galaxy, can dock to trade their wares.',
       denom_units: [
         {
           denom:
-            'ibc/5751B8BCDA688FD0A8EC0B292EEF1CDEAB4B766B63EC632778B196D317C40C3A',
+            'factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro',
           exponent: 0,
           aliases: ['uastro'],
         },
@@ -674,11 +695,88 @@ export const neutronAssetList: AssetLists = {
           exponent: 6,
         },
       ],
-      type_asset: 'ics20',
-      base: 'ibc/5751B8BCDA688FD0A8EC0B292EEF1CDEAB4B766B63EC632778B196D317C40C3A',
+      base: 'factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro',
       name: 'Astroport token',
       display: 'astro',
       symbol: 'ASTRO',
+      coingecko_id: 'astroport-fi',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.svg',
+      },
+      socials: {
+        website: 'https://astroport.fi/',
+        twitter: 'https://twitter.com/astroport_fi',
+      },
+    },
+    {
+      description:
+        'Astroport is a neutral marketplace where anyone, from anywhere in the galaxy, can dock to trade their wares.',
+      denom_units: [
+        {
+          denom:
+            'factory/neutron1zlf3hutsa4qnmue53lz2tfxrutp8y2e3rj4nkghg3rupgl4mqy8s5jgxsn/xASTRO',
+          exponent: 0,
+          aliases: ['uxastro'],
+        },
+        {
+          denom: 'xASTRO',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron1zlf3hutsa4qnmue53lz2tfxrutp8y2e3rj4nkghg3rupgl4mqy8s5jgxsn/xASTRO',
+      name: 'Staked Astroport Token',
+      display: 'xASTRO',
+      symbol: 'xASTRO',
+      traces: [
+        {
+          type: 'liquid-stake',
+          counterparty: {
+            chain_name: 'neutron',
+            base_denom:
+              'factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro',
+          },
+          provider: 'Astroport',
+        },
+      ],
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/xAstro.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/xAstro.svg',
+      },
+      socials: {
+        website: 'https://astroport.fi/',
+        twitter: 'https://twitter.com/astroport_fi',
+      },
+    },
+    {
+      description: 'ASTRO.cw20 on Neutron',
+      denom_units: [
+        {
+          denom:
+            'ibc/5751B8BCDA688FD0A8EC0B292EEF1CDEAB4B766B63EC632778B196D317C40C3A',
+          exponent: 0,
+          aliases: ['uastro'],
+        },
+        {
+          denom: 'astro.cw20',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/5751B8BCDA688FD0A8EC0B292EEF1CDEAB4B766B63EC632778B196D317C40C3A',
+      name: 'Astroport CW20 token',
+      display: 'astro.cw20',
+      symbol: 'ASTRO.cw20',
       traces: [
         {
           type: 'ibc-cw20',
@@ -703,13 +801,11 @@ export const neutronAssetList: AssetLists = {
             base_denom:
               'cw20:terra1nsuqsk6kh58ulczatwev87ttq2z6r3pusulg9r24mfj2fvtzd4uq3exn26',
           },
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro-cw20.svg',
         },
       ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro-cw20.svg',
       },
     },
     {
@@ -1200,6 +1296,33 @@ export const neutronAssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/cartel.png',
+        },
+      ],
+    },
+    {
+      description: '$ATOM to $1,000 LFG!!',
+      denom_units: [
+        {
+          denom:
+            'factory/neutron13lkh47msw28yynspc5rnmty3yktk43wc3dsv0l/ATOM1KLFG',
+          exponent: 0,
+          aliases: ['uatom1klfg'],
+        },
+        {
+          denom: 'ATOM1KLFG',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron13lkh47msw28yynspc5rnmty3yktk43wc3dsv0l/ATOM1KLFG',
+      name: 'ATOM1KLFG',
+      display: 'ATOM1KLFG',
+      symbol: 'ATOM1KLFG',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ATOM1KLFGc.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ATOM1KLFGc.png',
         },
       ],
     },

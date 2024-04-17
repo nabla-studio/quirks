@@ -444,7 +444,7 @@ export const stargazeAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.stargaze.zone/',
+        website: 'https://www.stargaze.zone/',
         twitter: 'https://twitter.com/StargazeZone',
       },
     },

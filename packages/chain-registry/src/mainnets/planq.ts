@@ -127,6 +127,11 @@ export const planq: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: '66b66bd2d97649da2062deb102d4ff195e2f2d39',
+        address: 'mainnet-seed.konsortech.xyz:10165',
+        provider: 'KonsorTech',
+      },
     ],
     persistent_peers: [
       {
@@ -173,6 +178,11 @@ export const planq: Chain = {
         id: 'e755cbe005d920e5bca555f14251abae464b6a54',
         address: 'p2p.planq.safeblock.space:26656',
         provider: 'Safe Block',
+      },
+      {
+        id: 'a3b8955aa523285d0aed51c7bfaf19eb20264ef5',
+        address: 'mainnet-planq.konsortech.xyz:10656',
+        provider: 'KonsorTech',
       },
     ],
   },
@@ -222,6 +232,14 @@ export const planq: Chain = {
         address: 'https://planq-rpc.stake-town.com',
         provider: 'StakeTown',
       },
+      {
+        address: 'https://mainnet-planq-rpc.konsortech.xyz',
+        provider: 'KonsorTech',
+      },
+      {
+        address: 'https://planq_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
@@ -263,6 +281,14 @@ export const planq: Chain = {
       {
         address: 'https://planq-api.stake-town.com',
         provider: 'StakeTown',
+      },
+      {
+        address: 'https://mainnet-planq-api.konsortech.xyz',
+        provider: 'KonsorTech',
+      },
+      {
+        address: 'https://planq_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
     grpc: [
@@ -318,6 +344,10 @@ export const planq: Chain = {
         address: 'planq-grpc.stake-town.com:443',
         provider: 'StakeTown',
       },
+      {
+        address: 'mainnet-planq.konsortech.xyz:10090',
+        provider: 'KonsorTech',
+      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -347,6 +377,14 @@ export const planq: Chain = {
       {
         address: 'https://planq-jsonrpc.stake-town.com',
         provider: 'StakeTown',
+      },
+      {
+        address: 'https://mainnet-planq-evmrpc.konsortech.xyz',
+        provider: 'KonsorTech',
+      },
+      {
+        address: 'https://planq_mainnet_evm.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
   },
@@ -413,6 +451,16 @@ export const planq: Chain = {
       url: 'https://explorer.safeblock.space/planq',
       tx_page: 'https://explorer.safeblock.space/planq/tx/${txHash}',
     },
+    {
+      kind: 'KonsorTech',
+      url: 'https://explorer.konsortech.xyz/planq',
+      tx_page: 'https://explorer.konsortech.xyz/planq/tx/${txHash}',
+    },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/planq',
+      tx_page: 'https://explorer.whenmoonwhenlambo.money/tx/${txHash}',
+    },
   ],
   images: [
     {
@@ -429,6 +477,8 @@ export const planqAssetList: AssetLists = {
     {
       description:
         'The native EVM, governance and staking token of the Planq Network',
+      extended_description:
+        'Planq is the very first cryptocurrency project to keep mobile platform usability at heart, taking a step away from dependency on desktop services. By focusing on easy accessibility and close integration of other blockchains via easy to use bridges, Planq will push Web 3 adoption in the mobile space to the next level.',
       denom_units: [
         {
           denom: 'aplanq',
@@ -454,6 +504,10 @@ export const planqAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/planq/images/planq.svg',
         },
       ],
+      socials: {
+        website: 'https://planq.network',
+        twitter: 'https://twitter.com/planqfoundation',
+      },
     },
     {
       description: 'The token of Source Protocol bridged from BSC.',

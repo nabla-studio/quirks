@@ -240,12 +240,6 @@ export const nyx: Chain = {
       url: 'https://ping.pub/nyx',
       tx_page: 'https://ping.pub/nyx/tx/${txHash}',
     },
-    {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/nym',
-      tx_page: 'https://bigdipper.live/nym/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/nym/accounts/${accountAddress}',
-    },
   ],
   images: [
     {

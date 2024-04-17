@@ -36,26 +36,26 @@ export const realio: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/realiotech/realio-network',
-    recommended_version: 'v0.8.3',
-    compatible_versions: ['v0.8.2', 'v0.8.3'],
+    recommended_version: 'v0.9.0',
+    compatible_versions: ['v0.9.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.8.3/realio-network_Linux_x86_64.tar.gz',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Linux_x86_64.tar.gz',
       'linux/arm64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.8.3/realio-network_Linux_arm64.tar.gz',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.8.3/realio-network_Darwin_x86_64.tar.gz',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Darwin_x86_64.tar.gz',
       'darwin/arm64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.8.3/realio-network_Darwin_arm64.tar.gz',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.8.3/realio-network_Windows_x86_64.zip',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Windows_x86_64.zip',
     },
-    cosmos_sdk_version: '0.46',
+    cosmos_sdk_version: 'v0.46.12',
     consensus: {
       type: 'cometbft',
-      version: '0.34.27',
+      version: 'v0.34.27',
     },
-    ibc_go_version: '6.1.1',
+    ibc_go_version: 'v6.1.1',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/realiotech/mainnet/main/realionetwork_3301-1/genesis.json',
@@ -107,6 +107,33 @@ export const realio: Chain = {
           'windows/amd64':
             'https://github.com/realiotech/realio-network/releases/download/v0.8.3/realio-network_Windows_x86_64.zip',
         },
+        next_version_name: 'multistaking',
+      },
+      {
+        name: 'multistaking',
+        proposal: 7,
+        height: 5989000,
+        recommended_version: 'v0.9.0',
+        compatible_versions: ['v0.9.0'],
+        cosmos_sdk_version: 'v0.46.12',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.27',
+        },
+        ibc_go_version: 'v6.1.1',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Linux_x86_64.tar.gz',
+          'linux/arm64':
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Darwin_x86_64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Darwin_arm64.tar.gz',
+          'windows/amd64':
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Windows_x86_64.zip',
+        },
+        next_version_name: '',
       },
     ],
   },
@@ -207,6 +234,10 @@ export const realio: Chain = {
         address: 'https://realio.declab.pro:26622',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://realio-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -244,6 +275,10 @@ export const realio: Chain = {
       {
         address: 'https://realio.declab.pro:443',
         provider: 'Decloud Nodes Lab',
+      },
+      {
+        address: 'https://realio-api.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
     grpc: [
@@ -283,6 +318,10 @@ export const realio: Chain = {
         address: 'https://realio.declab.pro:9015',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'realio-grpc.noders.services:22090',
+        provider: '[NODERS]TEAM',
+      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -300,6 +339,10 @@ export const realio: Chain = {
       {
         address: 'https://evm.realio.safeblock.space',
         provider: 'Safe Block',
+      },
+      {
+        address: 'https://realio-jsonrpc.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
   },

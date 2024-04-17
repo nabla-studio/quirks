@@ -179,6 +179,10 @@ export const empowerchain: Chain = {
         address: 'https://empower.declab.pro:26607',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://empower-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -229,6 +233,10 @@ export const empowerchain: Chain = {
         address: 'https://empower.declab.pro:443',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://empower-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -270,6 +278,10 @@ export const empowerchain: Chain = {
       {
         address: 'https://empower.declab.pro:9005',
         provider: 'Decloud Nodes Lab',
+      },
+      {
+        address: 'empower-grpc.noders.services:25090',
+        provider: '[NODERS]TEAM',
       },
     ],
   },

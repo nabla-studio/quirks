@@ -34,25 +34,25 @@ export const evmos: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/evmos/evmos',
-    recommended_version: 'v16.0.3',
-    compatible_versions: ['v16.0.0', 'v16.0.1', 'v16.0.2', 'v16.0.3'],
-    cosmos_sdk_version: 'v0.47.5-evmos.2',
+    recommended_version: 'v17.0.0',
+    compatible_versions: ['v17.0.0'],
+    cosmos_sdk_version: 'evmos/cosmos-sdk v0.47.5-evmos.2',
     consensus: {
       type: 'cometbft',
-      version: 'v0.37.3-0.20230920093934-46df7b597e3c',
+      version: 'v0.37.4',
     },
-    ibc_go_version: '7.3.1',
+    ibc_go_version: '7.4.0',
     binaries: {
       'linux/amd64':
-        'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Linux_amd64.tar.gz',
+        'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Linux_arm64.tar.gz',
+        'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Darwin_amd64.tar.gz',
+        'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Darwin_amd64.tar.gz',
       'darwin/arm64':
-        'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Darwin_arm64.tar.gz',
+        'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Windows_amd64.zip',
+        'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Windows_amd64.zip',
     },
     genesis: {
       genesis_url: 'https://archive.evmos.org/mainnet/genesis.json',
@@ -174,11 +174,11 @@ export const evmos: Chain = {
       },
       {
         name: 'v16.0.0',
-        tag: 'v16.0.3',
+        tag: 'v16.0.4',
         proposal: 265,
         height: 18295000,
-        recommended_version: 'v16.0.3',
-        compatible_versions: ['v16.0.0', 'v16.0.1', 'v16.0.2', 'v16.0.3'],
+        recommended_version: 'v16.0.4',
+        compatible_versions: ['v16.0.4'],
         cosmos_sdk_version: 'v0.47.5-evmos.2',
         consensus: {
           type: 'cometbft',
@@ -187,15 +187,41 @@ export const evmos: Chain = {
         ibc_go_version: 'v7.3.1',
         binaries: {
           'linux/amd64':
-            'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Linux_amd64.tar.gz',
+            'https://github.com/evmos/evmos/releases/download/v16.0.4/evmos_16.0.4_Linux_amd64.tar.gz',
           'linux/arm64':
-            'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Linux_arm64.tar.gz',
+            'https://github.com/evmos/evmos/releases/download/v16.0.4/evmos_16.0.4_Linux_arm64.tar.gz',
           'darwin/amd64':
-            'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Darwin_amd64.tar.gz',
+            'https://github.com/evmos/evmos/releases/download/v16.0.4/evmos_16.0.4_Darwin_amd64.tar.gz',
           'darwin/arm64':
-            'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Darwin_arm64.tar.gz',
+            'https://github.com/evmos/evmos/releases/download/v16.0.4/evmos_16.0.4_Darwin_arm64.tar.gz',
           'windows/amd64':
-            'https://github.com/evmos/evmos/releases/download/v16.0.3/evmos_16.0.3_Windows_amd64.zip',
+            'https://github.com/evmos/evmos/releases/download/v16.0.4/evmos_16.0.4_Windows_amd64.zip',
+        },
+        next_version_name: 'v17.0.0',
+      },
+      {
+        name: 'v17.0.0',
+        tag: 'v17.0.0',
+        height: 20101000,
+        recommended_version: 'v17.0.0',
+        compatible_versions: ['v17.0.0'],
+        cosmos_sdk_version: 'evmos/cosmos-sdk v0.47.5-evmos.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        ibc_go_version: '7.4.0',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Linux_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Darwin_amd64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Darwin_arm64.tar.gz',
+          'windows/amd64':
+            'https://github.com/evmos/evmos/releases/download/v17.0.0/evmos_17.0.0_Windows_amd64.zip',
         },
         next_version_name: '',
       },
@@ -674,12 +700,6 @@ export const evmos: Chain = {
       account_page: 'https://www.mintscan.io/evmos/accounts/${accountAddress}',
     },
     {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/evmos',
-      tx_page: 'https://bigdipper.live/evmos/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/evmos/accounts/${accountAddress}',
-    },
-    {
       kind: 'blockscout',
       url: 'https://evm.evmos.org',
       tx_page: 'https://evm.evmos.org/tx/${txHash}',
@@ -716,6 +736,13 @@ export const evmos: Chain = {
       tx_page: 'https://exp.stakevillage.net/evmos/tx/${txHash}',
       account_page:
         'https://exp.stakevillage.net/evmos/accounts/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/evmos',
+      tx_page: 'https://explorer.stavr.tech/evmos/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/evmos/accounts/${accountAddress}',
     },
   ],
   images: [
@@ -759,7 +786,7 @@ export const evmosAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://evmos.org/',
+        website: 'https://evmos.org/',
         twitter: 'https://twitter.com/EvmosOrg',
       },
     },
@@ -861,6 +888,35 @@ export const evmosAssetList: AssetLists = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/berlin.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/berlin.svg',
+        },
+      ],
+    },
+    {
+      description: 'The token of Crowdpunk DAO',
+      denom_units: [
+        {
+          denom: 'erc20/0xfbf4318d24a93753f11d365a6dcf8b830e98ab0f',
+          exponent: 0,
+        },
+        {
+          denom: 'crowdp',
+          exponent: 18,
+        },
+      ],
+      base: 'erc20/0xfbf4318d24a93753f11d365a6dcf8b830e98ab0f',
+      name: 'Crowdpunk DAO',
+      display: 'crowdp',
+      address: '0xfbf4318d24a93753f11d365a6dcf8b830e98ab0f',
+      symbol: 'CROWDP',
+      type_asset: 'erc20',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/crowdp.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/crowdp.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/crowdp.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/crowdp.svg',
         },
       ],
     },

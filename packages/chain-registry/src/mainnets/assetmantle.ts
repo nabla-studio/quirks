@@ -262,13 +262,6 @@ export const assetmantle: Chain = {
       account_page:
         'https://atomscan.com/assetmantle/accounts/${accountAddress}',
     },
-    {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/assetmantle',
-      tx_page: 'https://bigdipper.live/assetmantle/transactions/${txHash}',
-      account_page:
-        'https://bigdipper.live/assetmantle/accounts/${accountAddress}',
-    },
   ],
   images: [
     {
@@ -310,7 +303,7 @@ export const assetmantleAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.assetmantle.one/',
+        website: 'https://www.assetmantle.one/',
         twitter: 'https://twitter.com/AssetMantle',
       },
     },

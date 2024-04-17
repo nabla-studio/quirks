@@ -36,26 +36,26 @@ export const nibiru: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/NibiruChain/nibiru',
-    recommended_version: 'v1.0.3',
-    compatible_versions: ['v1.0.3'],
+    recommended_version: 'v1.2.0',
+    compatible_versions: ['v1.2.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.3/nibid_1.0.3_linux_amd64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.3/nibid_1.0.3_linux_arm64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.3/nibid_1.0.3_darwin_amd64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_darwin_amd64.tar.gz',
       'darwin/arm64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.0.3/nibid_1.0.3_darwin_arm64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_darwin_arm64.tar.gz',
     },
     cosmos_sdk_version: 'v0.47.10',
     consensus: {
       type: 'cometbft',
       version: 'v0.37.4',
     },
+    ibc_go_version: 'v7.3.2',
     cosmwasm_version: 'v0.44.0',
     cosmwasm_enabled: true,
-    ibc_go_version: 'v7.3.2',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/NibiruChain/Networks/main/Mainnet/cataclysm-1/genesis.json',
@@ -163,6 +163,60 @@ export const nibiru: Chain = {
         cosmwasm_version: 'v0.44.0',
         cosmwasm_enabled: true,
         ibc_go_version: 'v7.3.2',
+        next_version_name: 'v1.1.0',
+      },
+      {
+        name: 'v1.1.0',
+        recommended_version: 'v1.1.0',
+        compatible_versions: ['v1.1.0'],
+        tag: 'v1.1.0',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.1.0/nibid_1.1.0_linux_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.1.0/nibid_1.1.0_linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.1.0/nibid_1.1.0_darwin_amd64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.1.0/nibid_1.1.0_darwin_arm64.tar.gz',
+        },
+        proposal: 9,
+        height: 4447094,
+        cosmos_sdk_version: 'v0.47.10',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        ibc_go_version: 'v7.3.2',
+        cosmwasm_version: 'v0.44.0',
+        cosmwasm_enabled: true,
+        next_version_name: 'v1.2.0',
+      },
+      {
+        name: 'v1.2.0',
+        recommended_version: 'v1.2.0',
+        compatible_versions: ['v1.2.0'],
+        tag: 'v1.2.0',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_linux_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_darwin_amd64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_darwin_arm64.tar.gz',
+        },
+        proposal: 10,
+        height: 4804662,
+        cosmos_sdk_version: 'v0.47.10',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        ibc_go_version: 'v7.3.2',
+        cosmwasm_version: 'v0.44.0',
+        cosmwasm_enabled: true,
         next_version_name: '',
       },
     ],
@@ -199,6 +253,11 @@ export const nibiru: Chain = {
         address: 'nibiru.rpc.kjnodes.com:13959',
         provider: 'kjnodes.com 🦄',
       },
+      {
+        id: 'c416d67c3dbb2d30b803611469e6d2634099292d',
+        address: 'nibiru.seed.stavr.tech:11036',
+        provider: '🔥STAVR🔥',
+      },
     ],
     persistent_peers: [
       {
@@ -210,6 +269,11 @@ export const nibiru: Chain = {
         id: 'e7af24b15365bff9537e2776c2a5fdf01b933dc5',
         address: '34.76.178.49:26656',
         provider: 'Nibiru Foundation',
+      },
+      {
+        id: '637077d431f618181597706810a65c826524fd74',
+        address: 'nibiru.rpc.nodeshub.online:19856',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
       },
     ],
   },
@@ -239,6 +303,18 @@ export const nibiru: Chain = {
         address: 'https://nibiru.rpc.liveraven.net',
         provider: 'LiveRaveN',
       },
+      {
+        address: 'https://nibiru-rpc.cogwheel.zone',
+        provider: 'Cogwheel ⚙️',
+      },
+      {
+        address: 'https://nibiru.rpc.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
+      {
+        address: 'https://nibiru.rpc.m.stavr.tech:443',
+        provider: '🔥STAVR🔥',
+      },
     ],
     rest: [
       {
@@ -264,6 +340,22 @@ export const nibiru: Chain = {
       {
         address: 'https://nibiru.api.liveraven.net',
         provider: 'LiveRaveN',
+      },
+      {
+        address: 'https://nibiru-api.cogwheel.zone',
+        provider: 'Cogwheel ⚙️',
+      },
+      {
+        address: 'https://nibiru.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'https://nibiru.api.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
+      {
+        address: 'https://nibiru.api.staking-explorer.com',
+        provider: 'Daily DROP',
       },
     ],
     grpc: [
@@ -291,6 +383,18 @@ export const nibiru: Chain = {
         address: 'nibiru.grpc.liveraven.net:443',
         provider: 'LiveRaveN',
       },
+      {
+        address: 'nibiru-grpc.cogwheel.zone:443',
+        provider: 'Cogwheel ⚙️',
+      },
+      {
+        address: 'https://nibiru.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
+      },
+      {
+        address: 'nibiru.grpc.m.stavr.tech:5023',
+        provider: '🔥STAVR🔥',
+      },
     ],
   },
   explorers: [
@@ -313,6 +417,20 @@ export const nibiru: Chain = {
       tx_page: 'https://mainnet.explorer.liveraven.net/nibiru/tx/${txHash}',
       account_page:
         'https://mainnet.explorer.liveraven.net/nibiru/account/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥',
+      url: 'https://explorer.stavr.tech/Nibiru-Mainnet',
+      tx_page: 'https://explorer.stavr.tech/Nibiru-Mainnet/tx/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Nibiru-Mainnet/account/${accountAddress}',
+    },
+    {
+      kind: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      url: 'https://explorer.nodeshub.online/nibiru/',
+      tx_page: 'https://explorer.nodeshub.online/nibiru/tx/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/nibiru/accounts/${accountAddress}',
     },
   ],
   images: [

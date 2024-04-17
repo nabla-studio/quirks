@@ -87,6 +87,11 @@ export const firmachain: Chain = {
         address: 'firma.peer.stavr.tech:1036',
         provider: '🔥STAVR🔥',
       },
+      {
+        id: '637077d431f618181597706810a65c826524fd74',
+        address: 'firmachain.rpc.nodeshub.online:16456',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
   },
   apis: {
@@ -111,6 +116,10 @@ export const firmachain: Chain = {
         address: 'https://firmachain-rpc.ramuchi.tech',
         provider: 'ramuchi.tech',
       },
+      {
+        address: 'https://firmachain.rpc.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     rest: [
       {
@@ -133,6 +142,10 @@ export const firmachain: Chain = {
         address: 'https://firmachain-api.ramuchi.tech',
         provider: 'ramuchi.tech',
       },
+      {
+        address: 'https://firmachain.api.nodeshub.online:443',
+        provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      },
     ],
     grpc: [
       {
@@ -146,6 +159,10 @@ export const firmachain: Chain = {
       {
         address: 'https://firmachain-grpc.ramuchi.tech:1390',
         provider: 'ramuchi.tech',
+      },
+      {
+        address: 'firmachain.grpc.nodeshub.online',
+        provider: 'Nodes Hub',
       },
     ],
   },
@@ -180,6 +197,13 @@ export const firmachain: Chain = {
       tx_page: 'https://atomscan.com/firmachain/transactions/${txHash}',
       account_page:
         'https://atomscan.com/firmachain/accounts/${accountAddress}',
+    },
+    {
+      kind: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
+      url: 'https://explorer.nodeshub.online/firmachain/',
+      tx_page: 'https://explorer.nodeshub.online/firmachain/tx/${txHash}',
+      account_page:
+        'https://explorer.nodeshub.online/firmachain/accounts/${accountAddress}',
     },
   ],
   images: [

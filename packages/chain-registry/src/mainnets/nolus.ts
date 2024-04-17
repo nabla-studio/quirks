@@ -17,7 +17,8 @@ export const nolus: Chain = {
     fee_tokens: [
       {
         denom: 'unls',
-        low_gas_price: 0,
+        fixed_min_gas_price: 0.025,
+        low_gas_price: 0.025,
         average_gas_price: 0.025,
         high_gas_price: 0.05,
       },
@@ -411,7 +412,7 @@ export const nolusAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://nolus.io/',
+        website: 'https://nolus.io/',
         twitter: 'https://twitter.com/NolusProtocol',
       },
     },

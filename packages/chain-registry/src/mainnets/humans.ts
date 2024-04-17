@@ -80,7 +80,7 @@ export const humans: Chain = {
       },
       {
         id: '0e959a22dfdd34ac16f9af82d76ec6ae5f0e8e73',
-        address: '46.4.14.172:10256',
+        address: '135.181.75.235:10256',
         provider: 'PPNV Service',
       },
       {
@@ -101,8 +101,8 @@ export const humans: Chain = {
         provider: 'Nodes Hub',
       },
       {
-        id: 'fd66247c122117190c9f2e7a09797e4039a05ba2',
-        address: '46.4.14.172:16656',
+        id: '2ad3cae310d94b7795a248ca2137577a5d26797a',
+        address: '135.181.75.235:13656',
         provider: 'PPNV Service',
       },
       {
@@ -156,7 +156,7 @@ export const humans: Chain = {
         provider: 'KonsorTech',
       },
       {
-        address: 'http://46.4.14.172:16657',
+        address: 'http://135.181.75.235:13657',
         provider: 'PPNV Service',
       },
       {
@@ -166,6 +166,10 @@ export const humans: Chain = {
       {
         address: 'https://rpc.humans.posthuman.digital',
         provider: 'posthuman',
+      },
+      {
+        address: 'https://humans-rpc.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
     rest: [
@@ -202,7 +206,7 @@ export const humans: Chain = {
         provider: 'KonsorTech',
       },
       {
-        address: 'http://46.4.14.172:16317',
+        address: 'http://135.181.75.235:13317',
         provider: 'PPNV Service',
       },
       {
@@ -212,6 +216,10 @@ export const humans: Chain = {
       {
         address: 'https://rest.humans.posthuman.digital',
         provider: 'posthuman',
+      },
+      {
+        address: 'https://humans-api.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
     grpc: [
@@ -240,12 +248,16 @@ export const humans: Chain = {
         provider: '[NODERS]TEAM',
       },
       {
-        address: '46.4.14.172:16090',
+        address: 'http://135.181.75.235:13090',
         provider: 'PPNV Service',
       },
       {
         address: 'https://grpc-humans.cosmos-spaces.cloud:1190',
         provider: 'StakePool',
+      },
+      {
+        address: 'humans-grpc.noders.services:21090',
+        provider: '[NODERS]TEAM',
       },
     ],
     'evm-http-jsonrpc': [
@@ -273,6 +285,10 @@ export const humans: Chain = {
         address: 'https://evm.humans.posthuman.digital',
         provider: 'posthuman',
       },
+      {
+        address: 'https://humans-jsonrpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
   },
   explorers: [
@@ -286,12 +302,6 @@ export const humans: Chain = {
       url: 'https://ezstaking.app/humans',
       tx_page: 'https://ezstaking.app/humans/txs/${txHash}',
       account_page: 'https://ezstaking.app/humans/account/${accountAddress}',
-    },
-    {
-      kind: 'bigdipper',
-      url: 'https://bigdipper.live/humans',
-      tx_page: 'https://bigdipper.live/humans/transactions/${txHash}',
-      account_page: 'https://bigdipper.live/humans/accounts/${accountAddress}',
     },
     {
       kind: 'ping.pub',
@@ -366,7 +376,7 @@ export const humansAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://humans.ai/',
+        website: 'https://humans.ai/',
         twitter: 'https://twitter.com/humansdotai',
       },
     },

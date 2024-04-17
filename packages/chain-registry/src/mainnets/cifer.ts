@@ -7,10 +7,11 @@ export const cifer: Chain = {
   network_type: 'mainnet',
   website: 'https://cifer.ai/',
   pretty_name: 'Cifer',
-  chain_id: 'cifer',
+  chain_id: 'cifer-2',
   bech32_prefix: 'cife',
   daemon_name: 'ciferd',
   node_home: '$HOME/.ciferd',
+  slip44: 118,
   fees: {
     fee_tokens: [
       {
@@ -31,16 +32,16 @@ export const cifer: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/cifer-ai/cifer',
-    recommended_version: 'v1.0.0',
-    compatible_versions: ['v1.0.0'],
+    recommended_version: 'v2.0.0',
+    compatible_versions: ['v2.0.0'],
     genesis: {
       genesis_url: 'https://rpcmainnet.cifer.ai/genesis',
     },
     versions: [
       {
-        name: 'v1.0.0',
-        recommended_version: 'v1.0.0',
-        compatible_versions: ['v1.0.0'],
+        name: 'v2.0.0',
+        recommended_version: 'v2.0.0',
+        compatible_versions: ['v2.0.0'],
       },
     ],
   },
@@ -72,7 +73,7 @@ export const cifer: Chain = {
     ],
     grpc: [
       {
-        address: 'https://grpc.cifer.ai',
+        address: 'http://grpc.cifer.ai',
         provider: 'Cifer',
       },
     ],
@@ -97,7 +98,7 @@ export const ciferAssetList: AssetLists = {
   chain_name: 'cifer',
   assets: [
     {
-      description: 'Decentralized Federated Learning',
+      description: 'Decentralized Machine Learning',
       denom_units: [
         {
           denom: 'ucif',

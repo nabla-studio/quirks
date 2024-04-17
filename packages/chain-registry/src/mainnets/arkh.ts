@@ -72,11 +72,19 @@ export const arkh: Chain = {
         address: 'https://asc-dataseed.arkhadian.com/',
         provider: 'arkhnetwork',
       },
+      {
+        address: 'https://arkh_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
         address: 'https://asc-blockchain-api.arkhadian.com/',
         provider: 'arkhnetwork',
+      },
+      {
+        address: 'https://arkh_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
     grpc: [
@@ -105,6 +113,14 @@ export const arkh: Chain = {
       kind: 'NODEXPLORER',
       url: 'https://explorer.nodexcapital.com/arkhadian',
       tx_page: 'https://explorer.nodexcapital.com/arkhadian/tx/${txHash}',
+    },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/arkhadian',
+      tx_page:
+        'https://explorer.whenmoonwhenlambo.money/arkhadian/tx/${txHash}',
+      account_page:
+        'https://explorer.whenmoonwhenlambo.money/arkhadian/account/${accountAddress}',
     },
   ],
   images: [

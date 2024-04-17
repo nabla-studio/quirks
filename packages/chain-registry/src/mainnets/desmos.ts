@@ -33,11 +33,11 @@ export const desmos: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/desmos-labs/desmos',
-    recommended_version: 'v7.0.1',
-    compatible_versions: ['v7.0.1'],
+    recommended_version: 'v7.0.2',
+    compatible_versions: ['v7.0.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/desmos-labs/desmos/releases/download/v7.0.1/desmos-7.0.1-linux-amd64',
+        'https://github.com/desmos-labs/desmos/releases/download/v7.0.2/desmos-7.0.2-linux-amd64',
     },
     cosmos_sdk_version: 'desmos-labs/cosmos-sdk v0.47.9-desmos',
     ibc_go_version: 'v7.3.2',
@@ -115,11 +115,11 @@ export const desmos: Chain = {
         name: 'v7',
         proposal: 42,
         height: 12745550,
-        recommended_version: 'v7.0.1',
-        compatible_versions: ['v7.0.1'],
+        recommended_version: 'v7.0.2',
+        compatible_versions: ['v7.0.2'],
         binaries: {
           'linux/amd64':
-            'https://github.com/desmos-labs/desmos/releases/download/v6.2.1/desmos-6.2.1-linux-amd64',
+            'https://github.com/desmos-labs/desmos/releases/download/v7.0.2/desmos-7.0.2-linux-amd64',
         },
         cosmos_sdk_version: 'desmos-labs/cosmos-sdk v0.47.9-desmos',
         ibc_go_version: 'v7.3.2',
@@ -238,6 +238,10 @@ export const desmos: Chain = {
         address: 'https://desmos.declab.pro:26613',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://desmos-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -272,6 +276,10 @@ export const desmos: Chain = {
         address: 'https://vidulum.declab.pro:443',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'https://desmos-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -305,6 +313,10 @@ export const desmos: Chain = {
       {
         address: 'https://vidulum.declab.pro:9009',
         provider: 'Decloud Nodes Lab',
+      },
+      {
+        address: 'desmos-grpc.noders.services:27090',
+        provider: '[NODERS]TEAM',
       },
     ],
   },

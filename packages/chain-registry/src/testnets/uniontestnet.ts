@@ -37,6 +37,11 @@ export const uniontestnet: Chain = {
         address: 'union.testnet.6.seed.poisonphang.com:26656',
         provider: '',
       },
+      {
+        id: '2812a4ae3ebfba02973535d05d2bbcc80b7d215f',
+        address: 'union-testnet-seed.itrocket.net:23656',
+        provider: '',
+      },
     ],
   },
   apis: {
@@ -53,6 +58,10 @@ export const uniontestnet: Chain = {
         address: 'https://rpc.testnet.bonlulu.uno',
         provider: 'bonlulu',
       },
+      {
+        address: 'https://union-testnet-rpc.itrocket.net',
+        provider: 'ITRocket',
+      },
     ],
     rest: [
       {
@@ -67,6 +76,10 @@ export const uniontestnet: Chain = {
         address: 'https://api.testnet.bonlulu.uno',
         provider: 'bonlulu',
       },
+      {
+        address: 'https://union-testnet-api.itrocket.net',
+        provider: 'ITRocket',
+      },
     ],
     grpc: [
       {
@@ -80,6 +93,10 @@ export const uniontestnet: Chain = {
       {
         address: 'https://grpc.testnet.bonlulu.uno',
         provider: 'bonlulu',
+      },
+      {
+        address: 'http://union-testnet-grpc.itrocket.net:23090',
+        provider: 'ITRocket',
       },
     ],
   },
@@ -130,7 +147,7 @@ export const uniontestnetAssetList: AssetLists = {
       ],
       base: 'muno',
       name: 'Union',
-      display: 'union',
+      display: 'uno',
       symbol: 'UNO',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/uniontestnet/images/union.png',

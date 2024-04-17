@@ -238,7 +238,7 @@ export const odinAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://odinprotocol.io/',
+        website: 'https://odinprotocol.io/',
         twitter: 'https://twitter.com/odinprotocol',
       },
     },
@@ -295,7 +295,7 @@ export const odinAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://dokicoin.io/',
+        website: 'https://dokicoin.io/',
         twitter: 'https://twitter.com/doki_coin',
       },
     },
@@ -354,7 +354,7 @@ export const odinAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.odin9worlds.io/',
+        website: 'https://www.odin9worlds.io/',
         twitter: 'https://twitter.com/odin9worlds',
       },
     },

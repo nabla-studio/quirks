@@ -273,6 +273,10 @@ export const aura: Chain = {
         address: 'https://aura-rpc.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
+      {
+        address: 'https://aura-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -339,6 +343,10 @@ export const aura: Chain = {
         address: 'https://aura-api.highstakes.ch',
         provider: 'High Stakes 🇨🇭',
       },
+      {
+        address: 'https://aura-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     grpc: [
       {
@@ -404,6 +412,10 @@ export const aura: Chain = {
       {
         address: 'aura.grpc.srv.stakr.space:19090',
         provider: 'STAKR.space',
+      },
+      {
+        address: 'aura-grpc.noders.services:17090',
+        provider: '[NODERS]TEAM',
       },
     ],
   },

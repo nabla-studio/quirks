@@ -85,6 +85,13 @@ export const kyvetestnet: Chain = {
         address: '52.59.65.9:26656',
       },
     ],
+    seeds: [
+      {
+        id: '496ac0ba20188f70f41e0a814dfd4d9a617338f8',
+        address: 'kyve-testnet-seed.ibs.team:16659',
+        provider: 'Inter Blockchain Services',
+      },
+    ],
   },
   apis: {
     rpc: [
@@ -96,6 +103,10 @@ export const kyvetestnet: Chain = {
         address: 'https://rpc-kyve-test.ecostake.com',
         provider: 'ecostake',
       },
+      {
+        address: 'https://kyve-testnet-rpc.ibs.team:443',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     rest: [
       {
@@ -105,6 +116,10 @@ export const kyvetestnet: Chain = {
       {
         address: 'https://rest-kyve-test.ecostake.com',
         provider: 'ecostake',
+      },
+      {
+        address: 'https://kyve-testnet-api.ibs.team:443',
+        provider: 'Inter Blockchain Services',
       },
     ],
   },
