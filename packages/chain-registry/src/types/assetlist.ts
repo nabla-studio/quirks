@@ -30,7 +30,17 @@ export interface Asset {
   /**
    * [OPTIONAL] The potential options for type of asset. By default, assumes sdk.coin
    */
-  type_asset?: 'sdk.coin' | 'cw20' | 'erc20' | 'ics20' | 'snip20' | 'snip25';
+  type_asset?:
+    | 'sdk.coin'
+    | 'cw20'
+    | 'erc20'
+    | 'ics20'
+    | 'snip20'
+    | 'snip25'
+    | 'bitcoin-like'
+    | 'evm-base'
+    | 'svm-base'
+    | 'substrate';
   /**
    * [OPTIONAL] The address of the asset. Only required for type_asset : cw20, snip20
    */
