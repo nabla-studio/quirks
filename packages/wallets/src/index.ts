@@ -7,6 +7,7 @@ export * from './okx';
 export * from './shell';
 export * from './leap-metamask-snap';
 export * from './trust';
+export * from './cosmiframe';
 export * from './wallet-connect';
 export * from './keplr-mobile';
 export * from './leap-mobile';
