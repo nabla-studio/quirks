@@ -6,7 +6,7 @@
  */
 
 /**
- * Cosmos Chain.json is a metadata file that contains information about a cosmos sdk based chain.
+ * Chain.json is a metadata file that contains information about a blockchain.
  */
 export interface Chain {
   $schema?: string;

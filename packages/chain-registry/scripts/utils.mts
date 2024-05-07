@@ -25,7 +25,7 @@ export async function processChains(chains: Path[], outputPath: string) {
     if (!chainDataMap.has(chainName)) {
       await writeFile(
         filename,
-        `import type { Chain, AssetLists, ChainVersions } from '../types'\n\n`,
+        `import type { Chain, AssetLists, Versions } from '../types'\n\n`,
       );
     }
 
@@ -36,7 +36,7 @@ export async function processChains(chains: Path[], outputPath: string) {
     }
 
     if (chain.isNamed('versions.json')) {
-      suffix = 'Versions: ChainVersions';
+      suffix = 'Versions: Versions';
     }
 
     await appendFile(
