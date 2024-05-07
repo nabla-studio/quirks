@@ -1,20 +1,16 @@
-import { type WalletOptions, assertIsDefined } from '@quirks/core';
+import { type WalletOptions } from '@quirks/core';
 import { Cosmiframe } from '@dao-dao/cosmiframe';
 import { KeplrWalletExtension } from '../keplr/extension';
 import type { Keplr } from '@keplr-wallet/types';
 
 export class CosmiframeWalletExtension extends KeplrWalletExtension {
-  cosmiframe: Cosmiframe;
+  cosmiframe!: Cosmiframe;
 
   constructor(options: WalletOptions) {
     super(options);
-
-    this.cosmiframe = new Cosmiframe();
   }
 
   override async init(): Promise<Keplr | undefined> {
-    assertIsDefined(this.options.windowKey);
-
     if (typeof window === 'undefined') {
       return undefined;
     }
@@ -26,7 +22,10 @@ export class CosmiframeWalletExtension extends KeplrWalletExtension {
         );
       }
 
+      this.cosmiframe = new Cosmiframe();
+
       this.client = this.cosmiframe.getKeplrClient() as Keplr;
+
       this.injected = true;
 
       if (this.client) {
