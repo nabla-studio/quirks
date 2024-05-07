@@ -25,14 +25,14 @@ export async function processChains(chains: Path[], outputPath: string) {
     if (!chainDataMap.has(chainName)) {
       await writeFile(
         filename,
-        `import type { Chain, AssetLists, Versions } from '../types'\n\n`,
+        `import type { Chain, AssetList, Versions } from '../types'\n\n`,
       );
     }
 
     let suffix = ': Chain';
 
     if (chain.isNamed('assetlist.json') || chain.isNamed('assetslist.json')) {
-      suffix = 'AssetList: AssetLists';
+      suffix = 'AssetList: AssetList';
     }
 
     if (chain.isNamed('versions.json')) {
