@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const vincechaintestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -32,33 +32,10 @@ export const vincechaintestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/AyrisDev/vinceChain_Blockchain',
-    recommended_version: '',
-    compatible_versions: ['', ''],
-    binaries: {
-      'linux/amd64': '',
-      'linux/arm64': '',
-      'darwin/amd64': '',
-      'darwin/arm64': '',
-      'windows/amd64': '',
-    },
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/AyrisDev/vinceChain_Blockchain/master/genesis.json',
     },
-    versions: [
-      {
-        name: '',
-        recommended_version: '',
-        compatible_versions: ['', ''],
-        binaries: {
-          'linux/amd64': '',
-          'linux/arm64': '',
-          'darwin/amd64': '',
-          'darwin/arm64': '',
-          'windows/amd64': '',
-        },
-      },
-    ],
   },
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/vincechaintestnet/images/vince.png',
@@ -108,7 +85,7 @@ export const vincechaintestnet: Chain = {
   ],
 };
 
-export const vincechaintestnetAssetList: AssetLists = {
+export const vincechaintestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'vincechaintestnet',
   assets: [

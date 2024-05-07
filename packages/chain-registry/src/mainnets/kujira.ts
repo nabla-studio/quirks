@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const kujira: Chain = {
   $schema: '../chain.schema.json',
@@ -152,12 +152,12 @@ export const kujira: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Team-Kujira/core',
-    recommended_version: 'v0.9.3-1',
-    compatible_versions: ['v0.9.3-1'],
-    cosmos_sdk_version: 'v0.47.5',
+    recommended_version: 'v1.0.2',
+    compatible_versions: ['v1.0.2'],
+    cosmos_sdk_version: 'v0.47.8',
     consensus: {
       type: 'cometbft',
-      version: 'v0.37.2',
+      version: 'v0.37.4',
     },
     cosmwasm_version: 'v0.45.0',
     cosmwasm_enabled: true,
@@ -228,6 +228,21 @@ export const kujira: Chain = {
         },
         cosmwasm_version: 'v0.45.0',
         cosmwasm_enabled: true,
+        next_version_name: 'v1.0.2',
+      },
+      {
+        name: 'v1.0.2',
+        proposal: 618,
+        height: 18700000,
+        recommended_version: 'v1.0.2',
+        compatible_versions: ['v1.0.2'],
+        cosmos_sdk_version: 'v0.47.8',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
         next_version_name: '',
       },
     ],
@@ -259,7 +274,7 @@ export const kujira: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'kujira-mainnet-seed.autostake.com:26796',
-        provider: 'AutoStake ⚡️ 0% fee',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
@@ -291,7 +306,7 @@ export const kujira: Chain = {
       {
         id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
         address: 'kujira-mainnet-peer.autostake.com:26796',
-        provider: 'AutoStake ⚡️ 0% fee',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         id: 'c1a740841a6dc0b56730e975b1a4aa2d8c73b204',
@@ -352,7 +367,7 @@ export const kujira: Chain = {
       },
       {
         address: 'https://kujira-mainnet-rpc.autostake.com:443',
-        provider: 'AutoStake ⚡️ 0% fee',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://rpc.kujira.rektdao.club',
@@ -426,7 +441,7 @@ export const kujira: Chain = {
       },
       {
         address: 'https://kujira-mainnet-lcd.autostake.com:443',
-        provider: 'AutoStake ⚡️ 0% fee',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'https://api.kujira.rektdao.club',
@@ -472,7 +487,7 @@ export const kujira: Chain = {
       },
       {
         address: 'kujira-mainnet-grpc.autostake.com:443',
-        provider: 'AutoStake ⚡️ 0% fee',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
         address: 'kujira.grpc.kjnodes.com:11390',
@@ -532,7 +547,7 @@ export const kujira: Chain = {
   ],
 };
 
-export const kujiraAssetList: AssetLists = {
+export const kujiraAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'kujira',
   assets: [
@@ -2858,6 +2873,34 @@ export const kujiraAssetList: AssetLists = {
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/bow.svg',
+        },
+      ],
+    },
+    {
+      description: 'The token of NAMI',
+      denom_units: [
+        {
+          denom:
+            'factory/kujira13x2l25mpkhwnwcwdzzd34cr8fyht9jlj7xu9g4uffe36g3fmln8qkvm3qn/unami',
+          exponent: 0,
+        },
+        {
+          denom: 'nami',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/kujira13x2l25mpkhwnwcwdzzd34cr8fyht9jlj7xu9g4uffe36g3fmln8qkvm3qn/unami',
+      name: 'NAMI',
+      display: 'nami',
+      symbol: 'NAMI',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nami.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nami.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nami.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nami.svg',
         },
       ],
     },

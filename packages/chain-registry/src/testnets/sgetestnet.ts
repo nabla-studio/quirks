@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const sgetestnet: Chain = {
   $schema: '../chain.schema.json',
@@ -7,7 +7,7 @@ export const sgetestnet: Chain = {
   pretty_name: 'SGE Testnet',
   status: 'live',
   network_type: 'testnet',
-  website: 'sgenetwork.io',
+  website: 'https://sgenetwork.io',
   bech32_prefix: 'sge',
   daemon_name: 'usge',
   node_home: '$HOME/.sged',
@@ -149,7 +149,7 @@ export const sgetestnet: Chain = {
   },
 };
 
-export const sgetestnetAssetList: AssetLists = {
+export const sgetestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'sgetestnet',
   assets: [

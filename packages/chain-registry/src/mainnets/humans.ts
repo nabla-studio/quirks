@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const humans: Chain = {
   $schema: '../chain.schema.json',
@@ -88,6 +88,11 @@ export const humans: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'humans-mainnet-seed.autostake.com:27536',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
     persistent_peers: [
       {
@@ -114,6 +119,11 @@ export const humans: Chain = {
         id: '9193e655f0581b4acf2e87976ac0b55795359742',
         address: '167.235.177.226:26656',
         provider: '[NODERS]TEAM',
+      },
+      {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'humans-mainnet-peer.autostake.com:27536',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
     ],
   },
@@ -171,6 +181,10 @@ export const humans: Chain = {
         address: 'https://humans-rpc.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://humans-mainnet-rpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
     rest: [
       {
@@ -221,6 +235,10 @@ export const humans: Chain = {
         address: 'https://humans-api.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://humans-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
     grpc: [
       {
@@ -258,6 +276,10 @@ export const humans: Chain = {
       {
         address: 'humans-grpc.noders.services:21090',
         provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'humans-mainnet-grpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
     ],
     'evm-http-jsonrpc': [
@@ -341,7 +363,7 @@ export const humans: Chain = {
   ],
 };
 
-export const humansAssetList: AssetLists = {
+export const humansAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'humans',
   assets: [

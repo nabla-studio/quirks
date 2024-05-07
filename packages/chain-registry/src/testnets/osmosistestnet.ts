@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const osmosistestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -115,10 +115,6 @@ export const osmosistestnet: Chain = {
         address: 'https://rpc.osmotest5.osmosis.zone/',
         provider: 'Osmosis',
       },
-      {
-        address: 'https://rpc.testnet.osl.zone/',
-        provider: 'OSL',
-      },
     ],
     rest: [
       {
@@ -161,7 +157,7 @@ export const osmosistestnet: Chain = {
   ],
 };
 
-export const osmosistestnetAssetList: AssetLists = {
+export const osmosistestnetAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'osmosistestnet',
   assets: [

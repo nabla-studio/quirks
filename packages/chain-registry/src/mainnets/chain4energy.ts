@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const chain4Energy: Chain = {
   $schema: '../chain.schema.json',
@@ -467,7 +467,7 @@ export const chain4Energy: Chain = {
         provider: 'Validatus',
       },
       {
-        address: 'http://rpc-m.c4e.apeironnodes.com:41001',
+        address: 'https://rpc-m-c4e.apeironnodes.com:443',
         provider: 'Apeiron Nodes',
       },
       {
@@ -571,6 +571,10 @@ export const chain4Energy: Chain = {
       {
         address: 'https://api-c4e.cryptech.com.ua:443',
         provider: 'CrypTech',
+      },
+      {
+        address: 'https://lcd-m-c4e.apeironnodes.com',
+        provider: 'Apeiron Nodes',
       },
     ],
     grpc: [
@@ -752,7 +756,7 @@ export const chain4Energy: Chain = {
   ],
 };
 
-export const chain4EnergyAssetList: AssetLists = {
+export const chain4EnergyAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'chain4energy',
   assets: [

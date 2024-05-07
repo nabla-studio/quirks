@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const tgrade: Chain = {
   $schema: '../chain.schema.json',
@@ -113,7 +113,7 @@ export const tgrade: Chain = {
   ],
 };
 
-export const tgradeAssetList: AssetLists = {
+export const tgradeAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'tgrade',
   assets: [

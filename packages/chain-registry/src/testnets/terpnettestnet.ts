@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const terpnettestnet: Chain = {
   $schema: '../chain.schema.json',
@@ -32,7 +32,7 @@ export const terpnettestnet: Chain = {
   },
 
   codebase: {
-    git_repo: 'github.com/terpnetwork/terp-core.git',
+    git_repo: 'https://github.com/terpnetwork/terp-core',
     recommended_version: 'v4.2.0',
     consensus: {
       type: 'cometbft',
@@ -122,7 +122,7 @@ export const terpnettestnet: Chain = {
   ],
 };
 
-export const terpnettestnetAssetList: AssetLists = {
+export const terpnettestnetAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'terpnettestnet',
   assets: [

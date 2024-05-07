@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const quicksilver: Chain = {
   $schema: '../chain.schema.json',
@@ -32,11 +32,11 @@ export const quicksilver: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/ingenuity-build/quicksilver',
-    recommended_version: 'v1.5.4',
-    compatible_versions: ['v1.5.4'],
+    recommended_version: 'v1.5.5',
+    compatible_versions: ['v1.5.5', 'v1.5.5-hotfix.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/ingenuity-build/quicksilver/releases/download/v1.5.4/quicksilverd-v1.5.4-amd64',
+        'https://github.com/ingenuity-build/quicksilver/releases/download/v1.5.5/quicksilverd-v1.5.5-amd64',
     },
     cosmos_sdk_version: 'v0.46.16',
     consensus: {
@@ -46,7 +46,7 @@ export const quicksilver: Chain = {
     cosmwasm_version:
       'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
     cosmwasm_enabled: true,
-    ibc_go_version: 'v5.3.2',
+    ibc_go_version: 'v5.4.0',
     genesis: {
       genesis_url:
         'https://github.com/ingenuity-build/mainnet/raw/main/genesis.json',
@@ -290,6 +290,27 @@ export const quicksilver: Chain = {
           'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
         cosmwasm_enabled: true,
         ibc_go_version: 'v5.3.2',
+        next_version_name: 'v1.5.5',
+      },
+      {
+        name: 'v1.5.5',
+        proposal: 37,
+        height: 6926000,
+        recommended_version: 'v1.5.5',
+        compatible_versions: ['v1.5.5', 'v1.5.5-hotfix.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/ingenuity-build/quicksilver/releases/download/v1.5.5/quicksilverd-v1.5.5-amd64',
+        },
+        cosmos_sdk_version: 'v0.46.16',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.32',
+        },
+        cosmwasm_version:
+          'notional-labs/wasmd v0.29.0-sdk46.0.20221114145317-d6e67fd50956',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v5.4.0',
         next_version_name: '',
       },
     ],
@@ -721,7 +742,7 @@ export const quicksilver: Chain = {
   ],
 };
 
-export const quicksilverAssetList: AssetLists = {
+export const quicksilverAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'quicksilver',
   assets: [

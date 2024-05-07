@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const kichain: Chain = {
   $schema: '../chain.schema.json',
@@ -237,7 +237,7 @@ export const kichain: Chain = {
   ],
 };
 
-export const kichainAssetList: AssetLists = {
+export const kichainAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'kichain',
   assets: [

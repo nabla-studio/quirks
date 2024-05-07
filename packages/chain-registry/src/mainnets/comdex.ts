@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const comdex: Chain = {
   $schema: '../chain.schema.json',
@@ -170,6 +170,11 @@ export const comdex: Chain = {
         address: 'peer-comdex-01.stakeflow.io:10007',
         provider: 'Stakeflow',
       },
+      {
+        id: '5092d03f63852a7712ac5061bcfcbd96f00a4e0c',
+        address: 'peer-comdex.blockval.io:33656',
+        provider: 'Blockval',
+      },
     ],
   },
   apis: {
@@ -226,6 +231,10 @@ export const comdex: Chain = {
         address: 'https://comdex-rpc.validatornode.com',
         provider: 'ValidatorNode',
       },
+      {
+        address: 'https://rpc-comdex.blockval.io',
+        provider: 'Blockval',
+      },
     ],
     rest: [
       {
@@ -280,6 +289,10 @@ export const comdex: Chain = {
         address: 'https://comdex-api.validatornode.com',
         provider: 'ValidatorNode',
       },
+      {
+        address: 'https://api-comdex.blockval.io',
+        provider: 'Blockval',
+      },
     ],
     grpc: [
       {
@@ -325,6 +338,10 @@ export const comdex: Chain = {
       {
         address: 'comdex-grpc.stakerhouse.com:443',
         provider: 'StakerHouse',
+      },
+      {
+        address: 'https://grpc-comdex.blockval.io:443',
+        provider: 'Blockval',
       },
     ],
   },
@@ -383,7 +400,7 @@ export const comdex: Chain = {
   ],
 };
 
-export const comdexAssetList: AssetLists = {
+export const comdexAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'comdex',
   assets: [

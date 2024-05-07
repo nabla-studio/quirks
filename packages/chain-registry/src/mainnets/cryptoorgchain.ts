@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const cryptoorgchain: Chain = {
   $schema: '../chain.schema.json',
@@ -32,19 +32,19 @@ export const cryptoorgchain: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/crypto-org-chain/chain-main',
-    recommended_version: 'v4.2.2',
-    compatible_versions: ['v4.2.2'],
+    recommended_version: 'v4.2.9',
+    compatible_versions: ['v4.2.9'],
     binaries: {
       'linux/amd64':
-        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Linux_x86_64.tar.gz',
+        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Linux_x86_64.tar.gz',
       'linux/arm64':
-        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Linux_arm64.tar.gz',
+        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Darwin_x86_64.tar.gz',
+        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Darwin_x86_64.tar.gz',
       'darwin/arm64':
-        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Darwin_arm64.tar.gz',
+        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Windows_x86_64.zip',
+        'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Windows_x86_64.zip',
     },
     genesis: {
       genesis_url:
@@ -52,20 +52,20 @@ export const cryptoorgchain: Chain = {
     },
     versions: [
       {
-        name: 'v4.2.2',
-        recommended_version: 'v4.2.2',
-        compatible_versions: ['v4.2.2'],
+        name: 'v4.2.9',
+        recommended_version: 'v4.2.9',
+        compatible_versions: ['v4.2.9'],
         binaries: {
           'linux/amd64':
-            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Linux_x86_64.tar.gz',
+            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Linux_x86_64.tar.gz',
           'linux/arm64':
-            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Linux_arm64.tar.gz',
+            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Linux_arm64.tar.gz',
           'darwin/amd64':
-            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Darwin_x86_64.tar.gz',
+            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Darwin_x86_64.tar.gz',
           'darwin/arm64':
-            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Darwin_arm64.tar.gz',
+            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Darwin_arm64.tar.gz',
           'windows/amd64':
-            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.2/chain-main_4.2.2_Windows_x86_64.zip',
+            'https://github.com/crypto-org-chain/chain-main/releases/download/v4.2.9/chain-main_4.2.9_Windows_x86_64.zip',
         },
       },
     ],
@@ -253,7 +253,7 @@ export const cryptoorgchain: Chain = {
   ],
 };
 
-export const cryptoorgchainAssetList: AssetLists = {
+export const cryptoorgchainAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'cryptoorgchain',
   assets: [

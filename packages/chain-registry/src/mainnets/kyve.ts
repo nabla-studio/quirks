@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const kyve: Chain = {
   $schema: '../chain.schema.json',
@@ -387,7 +387,7 @@ export const kyve: Chain = {
   ],
 };
 
-export const kyveAssetList: AssetLists = {
+export const kyveAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'kyve',
   assets: [

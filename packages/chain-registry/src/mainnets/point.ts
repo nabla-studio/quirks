@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const point: Chain = {
   $schema: '../chain.schema.json',
@@ -32,13 +32,6 @@ export const point: Chain = {
     git_repo: 'https://github.com/pointnetwork/point-chain',
     recommended_version: 'v8.0.0',
     compatible_versions: ['v8.0.0'],
-    binaries: {
-      'linux/amd64': '',
-      'linux/arm64': '',
-      'darwin/amd64': '',
-      'darwin/arm64': '',
-      'windows/amd64': '',
-    },
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/pointnetwork/point-chain-config/main/mainnet-1/genesis.json',
@@ -48,13 +41,6 @@ export const point: Chain = {
         name: 'v8.0.0',
         recommended_version: 'v8.0.0',
         compatible_versions: ['v8.0.0'],
-        binaries: {
-          'linux/amd64': '',
-          'linux/arm64': '',
-          'darwin/amd64': '',
-          'darwin/arm64': '',
-          'windows/amd64': '',
-        },
       },
     ],
   },
@@ -195,7 +181,7 @@ export const point: Chain = {
   ],
 };
 
-export const pointAssetList: AssetLists = {
+export const pointAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'point',
   assets: [

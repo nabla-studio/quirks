@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const mantrachaintestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -41,9 +41,6 @@ export const mantrachaintestnet: Chain = {
     },
     cosmwasm_version: '0.41',
     cosmwasm_enabled: true,
-    genesis: {
-      genesis_url: '',
-    },
     versions: [
       {
         name: '1.0.0',
@@ -113,7 +110,7 @@ export const mantrachaintestnet: Chain = {
   ],
 };
 
-export const mantrachaintestnetAssetList: AssetLists = {
+export const mantrachaintestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'mantrachaintestnet',
   assets: [

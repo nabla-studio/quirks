@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const bluzelle: Chain = {
   $schema: '../chain.schema.json',
@@ -210,7 +210,7 @@ export const bluzelle: Chain = {
   ],
 };
 
-export const bluzelleAssetList: AssetLists = {
+export const bluzelleAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'bluzelle',
   assets: [
@@ -243,6 +243,10 @@ export const bluzelleAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bluzelle/images/bluzelle.svg',
         },
       ],
+      socials: {
+        website: 'http://bluzelle.com/',
+        twitter: 'https://twitter.com/BluzelleHQ',
+      },
     },
     {
       description: "The ELT token of Bluzelle's Gamma 4 Gaming Ecosystem",

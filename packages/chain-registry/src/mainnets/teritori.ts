@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const teritori: Chain = {
   $schema: '../chain.schema.json',
@@ -366,7 +366,7 @@ export const teritori: Chain = {
   ],
 };
 
-export const teritoriAssetList: AssetLists = {
+export const teritoriAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'teritori',
   assets: [

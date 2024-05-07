@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const sei: Chain = {
   $schema: '../chain.schema.json',
@@ -33,15 +33,15 @@ export const sei: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sei-protocol/sei-chain',
-    recommended_version: 'v3.8.2',
-    compatible_versions: ['v3.8.0', 'v3.8.2'],
+    recommended_version: 'v3.9.0',
+    compatible_versions: ['v3.9.0'],
     ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
-    cosmos_sdk_version: 'sei-cosmos v0.2.77',
+    cosmos_sdk_version: 'sei-cosmos v0.2.83',
     consensus: {
       type: 'sei-tendermint',
-      version: 'v0.2.39',
+      version: 'v0.2.40',
     },
-    cosmwasm_version: 'sei-wasmd v0.0.8',
+    cosmwasm_version: 'sei-wasmd v0.1.1',
     cosmwasm_enabled: true,
     cosmwasm_path: '$HOME/.sei/wasm',
     genesis: {
@@ -176,6 +176,23 @@ export const sei: Chain = {
           version: 'v0.2.39',
         },
         cosmwasm_version: 'sei-wasmd v0.0.8',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.sei/wasm',
+        next_version_name: 'v3.9.0',
+      },
+      {
+        name: 'v3.9.0',
+        proposal: 54,
+        height: 73290488,
+        recommended_version: 'v3.9.0',
+        compatible_versions: ['v3.9.0'],
+        ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
+        cosmos_sdk_version: 'sei-cosmos v0.2.83',
+        consensus: {
+          type: 'sei-tendermint',
+          version: 'v0.2.40',
+        },
+        cosmwasm_version: 'sei-wasmd v0.1.1',
         cosmwasm_enabled: true,
         cosmwasm_path: '$HOME/.sei/wasm',
         next_version_name: '',
@@ -357,7 +374,7 @@ export const sei: Chain = {
   ],
 };
 
-export const seiAssetList: AssetLists = {
+export const seiAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'sei',
   assets: [

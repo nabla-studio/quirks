@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const mayachain: Chain = {
   $schema: '../chain.schema.json',
@@ -83,7 +83,7 @@ export const mayachain: Chain = {
   ],
 };
 
-export const mayachainAssetList: AssetLists = {
+export const mayachainAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'mayachain',
   assets: [

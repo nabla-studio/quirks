@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const saga: Chain = {
   $schema: '../chain.schema.json',
@@ -76,6 +76,11 @@ export const saga: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: '400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc',
+        address: 'saga.rpc.kjnodes.com:17659',
+        provider: 'kjnodes',
+      },
     ],
   },
   apis: {
@@ -92,6 +97,18 @@ export const saga: Chain = {
         address: 'https://saga-rpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://rpc.saga.nodestake.org',
+        provider: 'NodeStake',
+      },
+      {
+        address: 'https://saga.rpc.kjnodes.com',
+        provider: 'kjnodes',
+      },
+      {
+        address: 'https://rpc.saga.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     rest: [
       {
@@ -102,6 +119,18 @@ export const saga: Chain = {
         address: 'https://saga-rest.publicnode.com',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'https://api.saga.nodestake.org',
+        provider: 'NodeStake',
+      },
+      {
+        address: 'https://saga.api.kjnodes.com',
+        provider: 'kjnodes',
+      },
+      {
+        address: 'https://lcd.saga.bronbro.io:443',
+        provider: 'Bro_n_Bro',
+      },
     ],
     grpc: [
       {
@@ -111,6 +140,18 @@ export const saga: Chain = {
       {
         address: 'saga-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+      {
+        address: 'grpc.saga.nodestake.org:443',
+        provider: 'NodeStake',
+      },
+      {
+        address: 'saga.grpc.kjnodes.com:443',
+        provider: 'kjnodes',
+      },
+      {
+        address: 'grpc.saga.bronbro.io:443',
+        provider: 'Bro_n_Bro',
       },
     ],
   },
@@ -133,6 +174,13 @@ export const saga: Chain = {
       tx_page: 'https://ezstaking.app/saga/txs/${txHash}',
       account_page: 'https://ezstaking.app/saga/account/${accountAddress}',
     },
+    {
+      kind: 'NodeStake',
+      url: 'https://explorer.nodestake.org/saga',
+      tx_page: 'https://explorer.nodestake.org/saga/tx/${txHash}',
+      account_page:
+        'https://explorer.nodestake.org/saga/account/${accountAddress}',
+    },
   ],
   keywords: [],
   images: [
@@ -143,7 +191,7 @@ export const saga: Chain = {
   ],
 };
 
-export const sagaAssetList: AssetLists = {
+export const sagaAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'saga',
   assets: [
@@ -189,7 +237,7 @@ export const sagaAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://www.saga.xyz/',
+        website: 'https://www.saga.xyz/',
         twitter: 'https://twitter.com/Sagaxyz__',
       },
     },

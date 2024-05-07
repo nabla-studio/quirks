@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const kava: Chain = {
   $schema: '../chain.schema.json',
@@ -32,8 +32,8 @@ export const kava: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/kava-Labs/kava/',
-    recommended_version: 'v0.21.0',
-    compatible_versions: ['v0.21.0'],
+    recommended_version: 'v0.26.0',
+    compatible_versions: ['v0.26.0'],
     genesis: {
       genesis_url:
         'https://kava-genesis-files.s3.us-east-1.amazonaws.com/kava_2222-10/genesis.json',
@@ -41,8 +41,43 @@ export const kava: Chain = {
     versions: [
       {
         name: 'v0.21.0',
+        proposal: 124,
+        height: 3607200,
         recommended_version: 'v0.21.0',
         compatible_versions: ['v0.21.0'],
+        next_version_name: 'v0.23.0',
+      },
+      {
+        name: 'v0.23.0',
+        proposal: 139,
+        height: 4832500,
+        recommended_version: 'v0.23.0',
+        compatible_versions: ['v0.23.0'],
+        next_version_name: 'v0.24.0',
+      },
+      {
+        name: 'v0.24.0',
+        proposal: 146,
+        height: 5597000,
+        recommended_version: 'v0.24.0',
+        compatible_versions: ['v0.24.0'],
+        next_version_name: 'v0.25.0',
+      },
+      {
+        name: 'v0.25.0',
+        proposal: 163,
+        height: 7638000,
+        recommended_version: 'v0.25.0',
+        compatible_versions: ['v0.25.0'],
+        next_version_name: 'v0.26.0',
+      },
+      {
+        name: 'v0.26.0',
+        proposal: 178,
+        height: 9561866,
+        recommended_version: 'v0.26.0',
+        compatible_versions: ['v0.26.0'],
+        next_version_name: '',
       },
     ],
   },
@@ -237,7 +272,7 @@ export const kava: Chain = {
   ],
 };
 
-export const kavaAssetList: AssetLists = {
+export const kavaAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'kava',
   assets: [

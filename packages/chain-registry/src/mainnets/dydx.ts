@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const dydx: Chain = {
   $schema: '../chain.schema.json',
@@ -41,20 +41,20 @@ export const dydx: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/dydxprotocol/v4-chain/',
-    recommended_version: 'protocol/v4.0.2',
-    compatible_versions: ['protocol/v4.0.2'],
+    recommended_version: 'protocol/v4.1.0',
+    compatible_versions: ['protocol/v4.1.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.2/dydxprotocold-v4.0.2-linux-amd64.tar.gz',
+        'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.1.0/dydxprotocold-v4.1.0-linux-amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.2/dydxprotocold-v4.0.2-linux-arm64.tar.gz',
+        'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.1.0/dydxprotocold-v4.1.0-linux-arm64.tar.gz',
     },
     cosmos_sdk_version:
-      'dydxprotocol/cosmos-sdk v0.50.6-0.20240326192503-dd116391188d',
+      'dydxprotocol/cosmos-sdk v0.50.5-0.20240220212824-35f31482370c',
     ibc_go_version: 'v8.0.0',
     consensus: {
       type: 'cometbft',
-      version: 'dydxprotocol/cometbft v0.38.6-0.20240229050000-3b085f30b462',
+      version: 'dydxprotocol/cometbft v0.38.6-0.20240409171441-6d0767b72c06',
     },
     genesis: {
       genesis_url:
@@ -63,8 +63,8 @@ export const dydx: Chain = {
     versions: [
       {
         name: 'v2',
-        recommended_version: 'protocol/v2.0.0',
-        compatible_versions: ['protocol/v2.0.0'],
+        recommended_version: 'protocol/v2.0.1',
+        compatible_versions: ['protocol/v2.0.0', 'protocol/v2.0.1'],
         binaries: {
           'linux/amd64':
             'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv2.0.0/dydxprotocold-v2.0.0-linux-amd64.tar.gz',
@@ -85,8 +85,8 @@ export const dydx: Chain = {
         name: 'v3.0.0',
         proposal: 7,
         height: 7147832,
-        recommended_version: 'protocol/v3.0.0',
-        compatible_versions: ['protocol/v3.0.0'],
+        recommended_version: 'protocol/v3.0.2',
+        compatible_versions: ['protocol/v3.0.0', 'protocol/v3.0.2'],
         binaries: {
           'linux/amd64':
             'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv3.0.0/dydxprotocold-v3.0.0-linux-amd64.tar.gz',
@@ -101,27 +101,49 @@ export const dydx: Chain = {
           version:
             'dydxprotocol/cometbft v0.37.3-0.20230908230338-65f7a2f25c18',
         },
-        next_version_name: 'protocol/v4.0.0',
+        next_version_name: 'v4.0.0',
       },
       {
         name: 'v4.0.0',
         proposal: 46,
         height: 12791712,
-        recommended_version: 'protocol/v4.0.2',
-        compatible_versions: ['protocol/v4.0.2'],
+        recommended_version: 'protocol/v4.0.5',
+        compatible_versions: ['protocol/v4.0.5'],
         binaries: {
           'linux/amd64':
-            'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.2/dydxprotocold-v4.0.2-linux-amd64.tar.gz',
+            'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.5/dydxprotocold-v4.0.5-linux-amd64.tar.gz',
           'linux/arm64':
-            'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.2/dydxprotocold-v4.0.2-linux-arm64.tar.gz',
+            'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.0.5/dydxprotocold-v4.0.5-linux-arm64.tar.gz',
         },
         cosmos_sdk_version:
-          'dydxprotocol/cosmos-sdk v0.50.6-0.20240326192503-dd116391188d',
+          'dydxprotocol/cosmos-sdk v0.50.5-0.20240220212824-35f31482370c',
         ibc_go_version: 'v8.0.0',
         consensus: {
           type: 'cometbft',
           version:
-            'dydxprotocol/cometbft v0.38.6-0.20240229050000-3b085f30b462',
+            'dydxprotocol/cometbft v0.38.6-0.20240409171441-6d0767b72c06',
+        },
+        next_version_name: 'v4.1.0',
+      },
+      {
+        name: 'v4.1.0',
+        proposal: 53,
+        height: 14404200,
+        recommended_version: 'protocol/v4.1.0',
+        compatible_versions: ['protocol/v4.1.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.1.0/dydxprotocold-v4.1.0-linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.1.0/dydxprotocold-v4.1.0-linux-arm64.tar.gz',
+        },
+        cosmos_sdk_version:
+          'dydxprotocol/cosmos-sdk v0.50.5-0.20240220212824-35f31482370c',
+        ibc_go_version: 'v8.0.0',
+        consensus: {
+          type: 'cometbft',
+          version:
+            'dydxprotocol/cometbft v0.38.6-0.20240409171441-6d0767b72c06',
         },
         next_version_name: '',
       },
@@ -259,6 +281,10 @@ export const dydx: Chain = {
         address: 'https://community.nuxian-node.ch:6797/dydx/trpc',
         provider: 'PRO Delegators',
       },
+      {
+        address: 'https://dydx-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
     ],
     rest: [
       {
@@ -308,6 +334,10 @@ export const dydx: Chain = {
       {
         address: 'https://dydx-lcd.enigma-validator.com',
         provider: 'Enigma',
+      },
+      {
+        address: 'https://dydx-api.noders.services',
+        provider: '[NODERS]TEAM',
       },
     ],
     grpc: [
@@ -363,6 +393,10 @@ export const dydx: Chain = {
         address: 'dydx-grpc.publicnode.com:443',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        address: 'dydx-grpc.noders.services:37090',
+        provider: '[NODERS]TEAM',
+      },
     ],
   },
   explorers: [
@@ -401,7 +435,7 @@ export const dydx: Chain = {
   ],
 };
 
-export const dydxAssetList: AssetLists = {
+export const dydxAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'dydx',
   assets: [
@@ -425,7 +459,7 @@ export const dydxAssetList: AssetLists = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.svg',
       },
-      coingecko_id: 'dydx',
+      coingecko_id: 'dydx-chain',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/dydx/images/dydx.png',

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const andromeda: Chain = {
   $schema: '../chain.schema.json',
@@ -32,13 +32,13 @@ export const andromeda: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/andromedaprotocol/andromedad',
-    recommended_version: 'andromeda-1-v0.1.0',
-    compatible_versions: ['andromeda-1-v0.1.0'],
-    cosmos_sdk_version: 'v0.47.5',
-    ibc_go_version: 'v7.3.0',
+    recommended_version: 'v0.1.1-patch',
+    compatible_versions: ['v0.1.1-patch'],
+    cosmos_sdk_version: 'v0.47.8',
+    ibc_go_version: 'v7.4.0',
     consensus: {
       type: 'cometbft',
-      version: 'v0.37.2',
+      version: 'v0.37.4',
     },
     cosmwasm_version: 'v0.41.0',
     cosmwasm_enabled: true,
@@ -58,6 +58,23 @@ export const andromeda: Chain = {
         consensus: {
           type: 'cometbft',
           version: 'v0.37.2',
+        },
+        cosmwasm_version: 'v0.41.0',
+        cosmwasm_enabled: true,
+        next_version_name: 'v0.1.1',
+      },
+      {
+        name: 'v0.1.1',
+        proposal: 5,
+        height: 2363000,
+        tag: 'v0.1.1-patch',
+        recommended_version: 'v0.1.1-patch',
+        compatible_versions: ['v0.1.1-patch'],
+        cosmos_sdk_version: 'v0.47.8',
+        ibc_go_version: 'v7.4.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
         },
         cosmwasm_version: 'v0.41.0',
         cosmwasm_enabled: true,
@@ -124,6 +141,11 @@ export const andromeda: Chain = {
         address: '138.201.21.197:39656',
         provider: 'StakeTown',
       },
+      {
+        id: '1652b0e25ac00834292624db10fef408155686e5',
+        address: 'peer-comdex.blockval.io:39656',
+        provider: 'StakeTown',
+      },
     ],
   },
   apis: {
@@ -176,6 +198,14 @@ export const andromeda: Chain = {
         address: 'andromeda-rpc.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'rpc-andromeda.blockval.io',
+        provider: 'Blockval',
+      },
+      {
+        address: 'https://andromeda.rpc.liveraven.net',
+        provider: 'LiveRaveN',
+      },
     ],
     rest: [
       {
@@ -226,6 +256,14 @@ export const andromeda: Chain = {
         address: 'andromeda-api.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'api-andromeda.blockval.io',
+        provider: 'Blockval',
+      },
+      {
+        address: 'https://andromeda.api.liveraven.net',
+        provider: 'LiveRaveN',
+      },
     ],
     grpc: [
       {
@@ -272,6 +310,14 @@ export const andromeda: Chain = {
         address: 'andromeda-grpc.noders.services:34090',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'grpc-andromeda.blockval.io:443',
+        provider: 'Blockval',
+      },
+      {
+        address: 'andromeda.grpc.liveraven.net:443',
+        provider: 'LiveRaveN',
+      },
     ],
   },
   explorers: [
@@ -311,7 +357,7 @@ export const andromeda: Chain = {
   ],
 };
 
-export const andromedaAssetList: AssetLists = {
+export const andromedaAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'andromeda',
   assets: [

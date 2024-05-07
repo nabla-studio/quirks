@@ -1,6 +1,6 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
-export const ojotestnetAssetList: AssetLists = {
+export const ojotestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'ojotestnet',
   assets: [

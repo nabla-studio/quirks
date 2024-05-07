@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const lambda: Chain = {
   $schema: '../chain.schema.json',
@@ -76,6 +76,10 @@ export const lambda: Chain = {
         address: 'https://lambda-rpc.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://lambda_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
@@ -93,6 +97,10 @@ export const lambda: Chain = {
       {
         address: 'https://lambda-api.noders.services',
         provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://lambda_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
     grpc: [
@@ -118,6 +126,10 @@ export const lambda: Chain = {
         address: 'https://lambda-jsonrpc.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://lambda_mainnet_evm.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
   },
   explorers: [
@@ -142,6 +154,13 @@ export const lambda: Chain = {
       tx_page: 'https://atomscan.com/lambda/transactions/${txHash}',
       account_page: 'https://atomscan.com/lambda/accounts/${accountAddress}',
     },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/lambda',
+      tx_page: 'https://explorer.whenmoonwhenlambo.money/lambda/tx/${txHash}',
+      account_page:
+        'https://explorer.whenmoonwhenlambo.money/lambda/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -151,7 +170,7 @@ export const lambda: Chain = {
   ],
 };
 
-export const lambdaAssetList: AssetLists = {
+export const lambdaAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'lambda',
   assets: [

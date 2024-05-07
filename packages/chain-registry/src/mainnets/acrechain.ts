@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const acrechain: Chain = {
   $schema: '../chain.schema.json',
@@ -261,7 +261,7 @@ export const acrechain: Chain = {
   ],
 };
 
-export const acrechainAssetList: AssetLists = {
+export const acrechainAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'acrechain',
   assets: [
@@ -293,6 +293,10 @@ export const acrechainAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/acrechain/images/acre.svg',
         },
       ],
+      socials: {
+        website: 'https://arable.finance/',
+        twitter: 'https://twitter.com/ArableProtocol',
+      },
     },
     {
       description: 'Overcollateralized stable coin for Arable derivatives v1',
@@ -321,6 +325,10 @@ export const acrechainAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/acrechain/images/arusd.svg',
         },
       ],
+      socials: {
+        website: 'https://arable.finance/',
+        twitter: 'https://twitter.com/ArableProtocol',
+      },
     },
     {
       description: 'Ciento Exchange Token',

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const osmosistestnet4: Chain = {
   $schema: '../../chain.schema.json',
@@ -140,7 +140,7 @@ export const osmosistestnet4: Chain = {
   ],
 };
 
-export const osmosistestnet4AssetList: AssetLists = {
+export const osmosistestnet4AssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'osmosistestnet4',
   assets: [

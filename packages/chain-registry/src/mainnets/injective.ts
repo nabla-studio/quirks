@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const injective: Chain = {
   $schema: '../chain.schema.json',
@@ -428,7 +428,7 @@ export const injective: Chain = {
   ],
 };
 
-export const injectiveAssetList: AssetLists = {
+export const injectiveAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'injective',
   assets: [
@@ -733,7 +733,7 @@ export const injectiveAssetList: AssetLists = {
         },
       ],
       socials: {
-        webiste: 'https://havacoin.xyz/',
+        website: 'https://havacoin.xyz/',
         twitter: 'https://twitter.com/Hava_Coin',
       },
     },

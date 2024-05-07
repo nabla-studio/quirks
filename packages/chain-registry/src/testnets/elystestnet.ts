@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const elystestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -332,7 +332,7 @@ export const elystestnet: Chain = {
   ],
 };
 
-export const elystestnetAssetList: AssetLists = {
+export const elystestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'elystestnet',
   assets: [

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const cosmoshub: Chain = {
   $schema: '../chain.schema.json',
@@ -483,6 +483,10 @@ export const cosmoshub: Chain = {
         address: 'https://rpc-cosmos.kewrnode.com',
         provider: 'Kewr Node',
       },
+      {
+        address: 'https://rpc.cosmoshub-4.citizenweb3.com',
+        provider: 'Citizen Web3',
+      },
     ],
     rest: [
       {
@@ -732,7 +736,7 @@ export const cosmoshub: Chain = {
   ],
 };
 
-export const cosmoshubAssetList: AssetLists = {
+export const cosmoshubAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'cosmoshub',
   assets: [

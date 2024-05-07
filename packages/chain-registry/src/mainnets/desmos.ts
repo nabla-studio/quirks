@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const desmos: Chain = {
   $schema: '../chain.schema.json',
@@ -33,17 +33,17 @@ export const desmos: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/desmos-labs/desmos',
-    recommended_version: 'v7.0.2',
-    compatible_versions: ['v7.0.2'],
+    recommended_version: 'v7.1.0',
+    compatible_versions: ['v7.1.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/desmos-labs/desmos/releases/download/v7.0.2/desmos-7.0.2-linux-amd64',
+        'https://github.com/desmos-labs/desmos/releases/download/v7.1.0/desmos-v7.1.0-linux-amd64',
     },
-    cosmos_sdk_version: 'desmos-labs/cosmos-sdk v0.47.9-desmos',
-    ibc_go_version: 'v7.3.2',
+    cosmos_sdk_version: 'desmos-labs/cosmos-sdk v0.47.10-desmos',
+    ibc_go_version: 'v7.4.0',
     consensus: {
       type: 'cometbft',
-      version: 'v0.34.4',
+      version: 'v0.37.4',
     },
     cosmwasm_version: 'v0.45.0',
     cosmwasm_enabled: true,
@@ -130,6 +130,27 @@ export const desmos: Chain = {
         cosmwasm_version: 'v0.45.0',
         cosmwasm_enabled: true,
         cosmwasm_path: '$HOME/.desmos/data/wasm',
+        next_version_name: 'v7.1.0',
+      },
+      {
+        name: 'v7.1.0',
+        proposal: 48,
+        height: 13775361,
+        recommended_version: 'v7.1.0',
+        compatible_versions: ['v7.1.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/desmos-labs/desmos/releases/download/v7.1.0/desmos-v7.1.0-linux-amd64',
+        },
+        cosmos_sdk_version: 'desmos-labs/cosmos-sdk v0.47.10-desmos',
+        ibc_go_version: 'v7.4.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.desmos/data/wasm',
         next_version_name: '',
       },
     ],
@@ -175,11 +196,6 @@ export const desmos: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
-      {
-        id: '73fc6b8b41aada42306b2f149619cc0ff935a868',
-        address: 'desmos-seed.panthea.eu:39656',
-        provider: 'Panthea EU',
-      },
     ],
     persistent_peers: [
       {
@@ -191,11 +207,6 @@ export const desmos: Chain = {
         id: '311cfd5691f11ec0cb0f0b8e5303016d86fb4789',
         address: '148.251.19.41:26656',
         provider: '[NODERS]TEAM',
-      },
-      {
-        id: '7c506d9e32cfc486ea714ee0c0307022398b8c20',
-        address: 'desmos-peer.panthea.eu:29656',
-        provider: 'Panthea EU',
       },
       {
         id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
@@ -229,10 +240,6 @@ export const desmos: Chain = {
       {
         address: 'https://rpc.desmos.bronbro.io:443',
         provider: 'Bro_n_Bro',
-      },
-      {
-        address: 'https://desmos-rpc.panthea.eu',
-        provider: 'Panthea EU',
       },
       {
         address: 'https://desmos.declab.pro:26613',
@@ -269,10 +276,6 @@ export const desmos: Chain = {
         provider: 'Bro_n_Bro',
       },
       {
-        address: 'https://desmos-api.panthea.eu',
-        provider: 'Panthea EU',
-      },
-      {
         address: 'https://vidulum.declab.pro:443',
         provider: 'Decloud Nodes Lab',
       },
@@ -305,10 +308,6 @@ export const desmos: Chain = {
       {
         address: 'https://grpc.desmos.bronbro.io:443',
         provider: 'Bro_n_Bro',
-      },
-      {
-        address: 'desmos-grpc.panthea.eu:16730',
-        provider: 'Panthea EU',
       },
       {
         address: 'https://vidulum.declab.pro:9009',
@@ -368,7 +367,7 @@ export const desmos: Chain = {
   ],
 };
 
-export const desmosAssetList: AssetLists = {
+export const desmosAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'desmos',
   assets: [

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const realio: Chain = {
   $schema: '../chain.schema.json',
@@ -36,19 +36,19 @@ export const realio: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/realiotech/realio-network',
-    recommended_version: 'v0.9.0',
-    compatible_versions: ['v0.9.0'],
+    recommended_version: 'v0.9.2',
+    compatible_versions: ['v0.9.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Linux_x86_64.tar.gz',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Linux_x86_64.tar.gz',
       'linux/arm64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Linux_arm64.tar.gz',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Darwin_x86_64.tar.gz',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Darwin_x86_64.tar.gz',
       'darwin/arm64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Darwin_arm64.tar.gz',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Windows_x86_64.zip',
+        'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Windows_x86_64.zip',
     },
     cosmos_sdk_version: 'v0.46.12',
     consensus: {
@@ -113,8 +113,8 @@ export const realio: Chain = {
         name: 'multistaking',
         proposal: 7,
         height: 5989000,
-        recommended_version: 'v0.9.0',
-        compatible_versions: ['v0.9.0'],
+        recommended_version: 'v0.9.2',
+        compatible_versions: ['v0.9.2'],
         cosmos_sdk_version: 'v0.46.12',
         consensus: {
           type: 'cometbft',
@@ -123,15 +123,15 @@ export const realio: Chain = {
         ibc_go_version: 'v6.1.1',
         binaries: {
           'linux/amd64':
-            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Linux_x86_64.tar.gz',
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Linux_x86_64.tar.gz',
           'linux/arm64':
-            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Linux_arm64.tar.gz',
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Linux_arm64.tar.gz',
           'darwin/amd64':
-            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Darwin_x86_64.tar.gz',
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Darwin_x86_64.tar.gz',
           'darwin/arm64':
-            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Darwin_arm64.tar.gz',
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Darwin_arm64.tar.gz',
           'windows/amd64':
-            'https://github.com/realiotech/realio-network/releases/download/v0.9.0/realio-network_Windows_x86_64.zip',
+            'https://github.com/realiotech/realio-network/releases/download/v0.9.2/realio-network_Windows_x86_64.zip',
         },
         next_version_name: '',
       },
@@ -238,6 +238,10 @@ export const realio: Chain = {
         address: 'https://realio-rpc.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://rpc-realio.blockval.io',
+        provider: 'Blockval',
+      },
     ],
     rest: [
       {
@@ -280,6 +284,10 @@ export const realio: Chain = {
         address: 'https://realio-api.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://api-realio.blockval.io',
+        provider: 'Blockval',
+      },
     ],
     grpc: [
       {
@@ -321,6 +329,10 @@ export const realio: Chain = {
       {
         address: 'realio-grpc.noders.services:22090',
         provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://grpc-realio.blockval.io',
+        provider: 'Blockval',
       },
     ],
     'evm-http-jsonrpc': [
@@ -397,7 +409,7 @@ export const realio: Chain = {
   ],
 };
 
-export const realioAssetList: AssetLists = {
+export const realioAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'realio',
   assets: [

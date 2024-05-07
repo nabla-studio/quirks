@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const coreumtestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -158,7 +158,7 @@ export const coreumtestnet: Chain = {
   keywords: ['dex', 'staking', 'wasm', 'assets', 'nft'],
 };
 
-export const coreumtestnetAssetList: AssetLists = {
+export const coreumtestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'coreumtestnet',
   assets: [

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const dhealth: Chain = {
   $schema: '../chain.schema.json',
@@ -153,7 +153,7 @@ export const dhealth: Chain = {
   ],
 };
 
-export const dhealthAssetList: AssetLists = {
+export const dhealthAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'dhealth',
   assets: [

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const ununifi: Chain = {
   $schema: '../chain.schema.json',
@@ -424,7 +424,7 @@ export const ununifi: Chain = {
   ],
 };
 
-export const ununifiAssetList: AssetLists = {
+export const ununifiAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'ununifi',
   assets: [

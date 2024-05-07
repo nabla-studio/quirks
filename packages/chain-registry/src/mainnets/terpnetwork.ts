@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const terpnetwork: Chain = {
   $schema: '../chain.schema.json',
@@ -235,7 +235,7 @@ export const terpnetwork: Chain = {
   ],
 };
 
-export const terpnetworkAssetList: AssetLists = {
+export const terpnetworkAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'terpnetwork',
   assets: [

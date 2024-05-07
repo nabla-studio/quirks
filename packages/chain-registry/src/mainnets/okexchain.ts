@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const okexchain: Chain = {
   $schema: '../chain.schema.json',
@@ -86,7 +86,7 @@ export const okexchain: Chain = {
   ],
 };
 
-export const okexchainAssetList: AssetLists = {
+export const okexchainAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'okexchain',
   assets: [

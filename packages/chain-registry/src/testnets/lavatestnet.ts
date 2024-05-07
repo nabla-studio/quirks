@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const lavatestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -272,7 +272,7 @@ export const lavatestnet: Chain = {
   keywords: ['rpc', 'api', 'modular', 'data'],
 };
 
-export const lavatestnetAssetList: AssetLists = {
+export const lavatestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'lavatestnet',
   assets: [

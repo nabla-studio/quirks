@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const junotestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -93,23 +93,11 @@ export const junotestnet: Chain = {
   apis: {
     rpc: [
       {
-        address: 'https://rpc.uni.junonetwork.io',
-        provider: 'Juno',
-      },
-      {
         address: 'https://juno-testnet-rpc.polkachu.com',
         provider: 'Polkachu',
       },
-      {
-        address: 'https://uni-rpc.reece.sh',
-        provider: 'Reecepbcups',
-      },
     ],
     rest: [
-      {
-        address: 'https://api.uni.junonetwork.io',
-        provider: 'Juno',
-      },
       {
         address: 'https://juno-testnet-api.polkachu.com',
         provider: 'Polkachu',
@@ -117,10 +105,6 @@ export const junotestnet: Chain = {
       {
         address: 'https://juno.api.t.stavr.tech',
         provider: '🔥STAVR🔥',
-      },
-      {
-        address: 'https://uni-api.reece.sh',
-        provider: 'Reecepbcups',
       },
     ],
     grpc: [
@@ -132,33 +116,16 @@ export const junotestnet: Chain = {
   },
   explorers: [
     {
-      kind: 'ezstaking',
-      url: 'https://testnet.app.ezstaking.io/juno-testnet',
-      tx_page: 'https://testnet.app.ezstaking.io/juno-testnet/txs/${txHash}',
-      account_page:
-        'https://testnet.app.ezstaking.io/juno-testnet/account/${accountAddress}',
-    },
-    {
       kind: '🔥STAVR🔥',
       url: 'https://explorer.stavr.tech/Juno-Testnet',
       tx_page: 'https://explorer.stavr.tech/Juno-Testnet/txs/${txHash}',
       account_page:
         'https://explorer.stavr.tech/Juno-Testnet/account/${accountAddress}',
     },
-    {
-      kind: 'Mintscan',
-      url: 'https://testnet.mintscan.io/juno-testnet',
-      tx_page: 'https://testnet.mintscan.io/juno-testnet/txs/${txHash}',
-    },
-    {
-      kind: 'NodesGuru',
-      url: 'https://testnet.juno.explorers.guru/',
-      tx_page: 'https://testnet.juno.explorers.guru/transaction/${txHash}',
-    },
   ],
 };
 
-export const junotestnetAssetList: AssetLists = {
+export const junotestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'junotestnet',
   assets: [
@@ -247,18 +214,13 @@ export const junotestnetAssetList: AssetLists = {
         },
       ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena.svg',
       },
       images: [
         {
-          image_sync: {
-            chain_name: 'juno',
-            base_denom:
-              'factory/juno1vwmnqk0vyxc96qgffrure4nqxupjrql0zut8s02hadgp0n79r8xq5xdsxy/ARENA',
-          },
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.svg',
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena.png',
         },
       ],
     },

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const bitcanna: Chain = {
   $schema: '../chain.schema.json',
@@ -713,7 +713,7 @@ export const bitcanna: Chain = {
   ],
 };
 
-export const bitcannaAssetList: AssetLists = {
+export const bitcannaAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'bitcanna',
   assets: [
@@ -745,6 +745,10 @@ export const bitcannaAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/bitcanna/images/bcna.svg',
         },
       ],
+      socials: {
+        website: 'http://www.bitcanna.io/',
+        twitter: 'https://twitter.com/BitCannaGlobal',
+      },
     },
   ],
 };

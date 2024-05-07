@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const logos: Chain = {
   $schema: '../chain.schema.json',
@@ -55,11 +55,7 @@ export const logos: Chain = {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/logos/images/logos.png',
     svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/logos/images/logos.svg',
   },
-  codebase: {
-    genesis: {
-      genesis_url: '',
-    },
-  },
+  codebase: {},
   images: [
     {
       png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/logos/images/logos.png',
@@ -68,7 +64,7 @@ export const logos: Chain = {
   ],
 };
 
-export const logosAssetList: AssetLists = {
+export const logosAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'logos',
   assets: [

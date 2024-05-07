@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const akashtestnet: Chain = {
   $schema: '../chain.schema.json',
@@ -31,7 +31,7 @@ export const akashtestnet: Chain = {
     ],
   },
   codebase: {
-    git_repo: 'github.com/ovrclk/akash',
+    git_repo: 'https://github.com/akash-network/node',
     recommended_version: 'v0.22.0',
     compatible_versions: ['v0.22.0'],
     binaries: {
@@ -105,7 +105,7 @@ export const akashtestnet: Chain = {
   ],
 };
 
-export const akashtestnetAssetList: AssetLists = {
+export const akashtestnetAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'akashtestnet',
   assets: [

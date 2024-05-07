@@ -1,15 +1,15 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const composable: Chain = {
   $schema: '../chain.schema.json',
   chain_name: 'composable',
   chain_id: 'centauri-1',
-  website: 'https://www.composable.finance/',
-  pretty_name: 'Composable',
+  website: 'https://www.picasso.xyz/',
+  pretty_name: 'Picasso',
   status: 'live',
   network_type: 'mainnet',
-  bech32_prefix: 'centauri',
-  daemon_name: 'centaurid',
+  bech32_prefix: 'pica',
+  daemon_name: 'picad',
   node_home: '$HOME/.banksy',
   key_algos: ['secp256k1'],
   slip44: 118,
@@ -32,7 +32,7 @@ export const composable: Chain = {
     ],
   },
   codebase: {
-    git_repo: 'https://github.com/notional-labs/composable-centauri',
+    git_repo: 'https://github.com/composable/composable-cosmos',
     recommended_version: 'v6.5.3',
     compatible_versions: ['v6.5.3'],
     cosmos_sdk_version:
@@ -197,10 +197,10 @@ export const composable: Chain = {
     ],
   },
   logo_URIs: {
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/composable.svg',
+    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
   },
   description:
-    'Composable is the base layer connecting L1s and L2s. We are scaling IBC to other ecosystems, pushing the boundaries of trust-minimized interoperability. We abstract the cross-chain experience for users, delivering seamless chain-agnostic execution of user intentions.',
+    'Picasso is a DeFi infrastructure-focused Layer 1 protocol that leads the industry in building the trust-minimized interoperability solution -Cross-Ecosystem IBC. Complementary to the interoperability work, Picasso is building the first Generalized Restaking Layer starting with deployment on Solana, and expand support for all IBC connected ecosystems.',
   peers: {
     seeds: [
       {
@@ -302,6 +302,10 @@ export const composable: Chain = {
       {
         address: 'https://composable.rpc.moonbridge.team',
         provider: 'Moonbridge',
+      },
+      {
+        address: 'https://rpc.composable.citizenweb3.com:443',
+        provider: 'Citizen Web3',
       },
     ],
     rest: [
@@ -420,8 +424,8 @@ export const composable: Chain = {
   explorers: [
     {
       kind: 'ping.pub',
-      url: 'https://ping.pub/centauri',
-      tx_page: 'https://ping.pub/centauri/tx/${txHash}',
+      url: 'https://ping.pub/composable',
+      tx_page: 'https://ping.pub/composable/tx/${txHash}',
     },
     {
       kind: 'NodeStake Explorer',
@@ -443,17 +447,18 @@ export const composable: Chain = {
   ],
   images: [
     {
-      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/composable.svg',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
     },
   ],
 };
 
-export const composableAssetList: AssetLists = {
+export const composableAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'composable',
   assets: [
     {
-      description: 'The native staking and governance token of Composable.',
+      description:
+        'The native staking, governance and revenue sharing token of Picasso.',
       denom_units: [
         {
           denom: 'ppica',
@@ -476,7 +481,7 @@ export const composableAssetList: AssetLists = {
             chain_name: 'picasso',
             base_denom: 'ppica',
           },
-          provider: 'Composable Finance',
+          provider: 'Picasso',
         },
       ],
       images: [
@@ -485,15 +490,15 @@ export const composableAssetList: AssetLists = {
             chain_name: 'picasso',
             base_denom: 'ppica',
           },
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/picasso/images/pica.svg',
         },
       ],
       logo_URIs: {
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/composable/images/pica.svg',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/picasso/images/pica.svg',
       },
       socials: {
-        website: 'https://www.composable.finance/',
-        twitter: 'https://twitter.com/ComposableFin',
+        website: 'https://picasso.xyz/',
+        twitter: 'https://twitter.com/picasso_network',
       },
     },
     {
@@ -591,8 +596,7 @@ export const composableAssetList: AssetLists = {
       },
     },
     {
-      description:
-        'The native staking and governance token of Statemine parachain.',
+      description: 'USDT issued by the Kusama Asset Hub.',
       denom_units: [
         {
           denom:
@@ -679,6 +683,378 @@ export const composableAssetList: AssetLists = {
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/tinkernet/images/tnkr.svg',
       },
+    },
+    {
+      description: 'The native token of Ethereum, bridged via IBC.',
+      denom_units: [
+        {
+          denom:
+            'ibc/F9D075D4079FC56A9C49B601E54A45292C319D8B0E8CC0F8439041130AA7166C',
+          exponent: 0,
+          aliases: ['wei'],
+        },
+        {
+          denom: 'eth',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/F9D075D4079FC56A9C49B601E54A45292C319D8B0E8CC0F8439041130AA7166C',
+      name: 'Ethereum',
+      display: 'eth',
+      symbol: 'ETH',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: 'wei',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-52',
+            path: 'transfer/channel-52/wei',
+          },
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: 'wei',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg',
+        },
+      ],
+    },
+    {
+      description: 'A stablecoin issued by Maker Protocol.',
+      denom_units: [
+        {
+          denom:
+            'ibc/A342F6F8D1CDE1D934C50E8EAFF91E813D971E1BFEED7E557F1674E01004A533',
+          exponent: 0,
+          aliases: ['dai-wei'],
+        },
+        {
+          denom: 'dai',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/A342F6F8D1CDE1D934C50E8EAFF91E813D971E1BFEED7E557F1674E01004A533',
+      name: 'Dai',
+      display: 'dai',
+      symbol: 'DAI',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x6b175474e89094c44da98b954eedeac495271d0f',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-52',
+            path: 'transfer/channel-52/0x6b175474e89094c44da98b954eedeac495271d0f',
+          },
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/dai.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x6b175474e89094c44da98b954eedeac495271d0f',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/dai.svg',
+        },
+      ],
+    },
+    {
+      description: 'The governance token of the Frax ecosystem.',
+      denom_units: [
+        {
+          denom:
+            'ibc/5F9BE030FC355733EC79307409FA98398BBFC747C9430B326C144A74F6808B29',
+          exponent: 0,
+          aliases: ['fxs-wei'],
+        },
+        {
+          denom: 'fxs',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/5F9BE030FC355733EC79307409FA98398BBFC747C9430B326C144A74F6808B29',
+      name: 'Frax Shares',
+      display: 'fxs',
+      symbol: 'FXS',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-52',
+            path: 'transfer/channel-52/0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0',
+          },
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/fxs.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/fxs.svg',
+        },
+      ],
+    },
+    {
+      description: 'The first fractional-algorithmic stablecoin.',
+      denom_units: [
+        {
+          denom:
+            'ibc/4F20D68B51ED559F99C3CD658383E91F45486D884BF546E7B25337A058562CDB',
+          exponent: 0,
+          aliases: ['frax-wei'],
+        },
+        {
+          denom: 'frax',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/4F20D68B51ED559F99C3CD658383E91F45486D884BF546E7B25337A058562CDB',
+      name: 'Frax',
+      display: 'frax',
+      symbol: 'FRAX',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x853d955acef822db058eb8505911ed77f175b99e',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-52',
+            path: 'transfer/channel-52/0x853d955acef822db058eb8505911ed77f175b99e',
+          },
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/frax.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x853d955acef822db058eb8505911ed77f175b99e',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/frax.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'A liquid ETH staking derivative designed to leverage the Frax ecosystem.',
+      denom_units: [
+        {
+          denom:
+            'ibc/458032E654E41DB91EF98F13E2CE4F9E0FE86BA3E0CDBEC074A854E9F5229A90',
+          exponent: 0,
+          aliases: ['frxeth-wei'],
+        },
+        {
+          denom: 'frxeth',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/458032E654E41DB91EF98F13E2CE4F9E0FE86BA3E0CDBEC074A854E9F5229A90',
+      name: 'Frax Ether',
+      display: 'frxeth',
+      symbol: 'frxETH',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0x5e8422345238f34275888049021821e8e08caa1f',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-52',
+            path: 'transfer/channel-52/0x5e8422345238f34275888049021821e8e08caa1f',
+          },
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/frxeth.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x5e8422345238f34275888049021821e8e08caa1f',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/frxeth.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'A Liquid Staking Derivative designed to accrue the staking yield of the Frax ETH validators.',
+      denom_units: [
+        {
+          denom:
+            'ibc/4E0ECE7819D77B0F2B49F5C34B5E594A02D2BA8B1B0F103208F847B53EBFB69A',
+          exponent: 0,
+          aliases: ['sfrxeth-wei'],
+        },
+        {
+          denom: 'sfrxeth',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/4E0ECE7819D77B0F2B49F5C34B5E594A02D2BA8B1B0F103208F847B53EBFB69A',
+      name: 'Frax Staked Ether',
+      display: 'sfrxeth',
+      symbol: 'sfrxETH',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0xac3e018457b222d93114458476f3e3416abbe38f',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-52',
+            path: 'transfer/channel-52/0xac3e018457b222d93114458476f3e3416abbe38f',
+          },
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sfrxeth.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xac3e018457b222d93114458476f3e3416abbe38f',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sfrxeth.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'An ERC4626 staking vault that distributes part of the Frax Protocol yield weekly to stakers denominated in FRAX stablecoins. ',
+      denom_units: [
+        {
+          denom:
+            'ibc/5BD7F23FE150D9CF3BCC944DB829380BCC51A4022A131151C4D13B3AFAC2D1D9',
+          exponent: 0,
+          aliases: ['sfrax-wei'],
+        },
+        {
+          denom: 'sfrax',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/5BD7F23FE150D9CF3BCC944DB829380BCC51A4022A131151C4D13B3AFAC2D1D9',
+      name: 'Staked FRAX',
+      display: 'sfrax',
+      symbol: 'sFRAX',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0xa663b02cf0a4b149d2ad41910cb81e23e1c41c32',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-52',
+            path: 'transfer/channel-52/0xa663b02cf0a4b149d2ad41910cb81e23e1c41c32',
+          },
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sfrax.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xa663b02cf0a4b149d2ad41910cb81e23e1c41c32',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sfrax.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'A stablecoin issued by Tether that is pegged 1:1 to the USD.',
+      denom_units: [
+        {
+          denom:
+            'ibc/37CC704EA53E96AB09A9C31D79142DE7DB252420F3AB18015F9870AE219947BD',
+          exponent: 0,
+          aliases: ['uusdt'],
+        },
+        {
+          denom: 'usdt',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/37CC704EA53E96AB09A9C31D79142DE7DB252420F3AB18015F9870AE219947BD',
+      name: 'Tether',
+      display: 'usdt',
+      symbol: 'USDT',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'ethereum',
+            base_denom: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-52',
+            path: 'transfer/channel-52/0xdac17f958d2ee523a2206206994597c13d831ec7',
+          },
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+        },
+      ],
     },
   ],
 };

@@ -1,12 +1,12 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const wardenprotocoltestnet: Chain = {
   $schema: '../../chain.schema.json',
   chain_name: 'wardenprotocoltestnet',
   status: 'live',
   network_type: 'testnet',
-  pretty_name: 'Warden Protocol Alfama Testnet',
-  chain_id: 'alfama',
+  pretty_name: 'Warden Protocol Buenavista',
+  chain_id: 'buenavista-1',
   bech32_prefix: 'warden',
   daemon_name: 'wardend',
   node_home: '$HOME/.warden',
@@ -32,8 +32,8 @@ export const wardenprotocoltestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/warden-protocol/wardenprotocol',
-    recommended_version: 'v0.1.0',
-    compatible_versions: ['v0.1.0'],
+    recommended_version: 'v0.3.0',
+    compatible_versions: ['v0.3.0'],
     cosmos_sdk_version: '0.50',
     consensus: {
       type: 'cometbft',
@@ -42,13 +42,13 @@ export const wardenprotocoltestnet: Chain = {
     cosmwasm_enabled: false,
     genesis: {
       genesis_url:
-        'https://raw.githubusercontent.com/warden-protocol/networks/main/testnet-alfama/genesis.json',
+        'https://raw.githubusercontent.com/warden-protocol/networks/main/testnets/buenavista/genesis.json',
     },
     versions: [
       {
-        name: 'v0.1.0',
-        recommended_version: 'v0.1.0',
-        compatible_versions: ['v0.1.0'],
+        name: 'v0.3.0',
+        recommended_version: 'v0.3.0',
+        compatible_versions: ['v0.3.0'],
         cosmos_sdk_version: '0.50',
         consensus: {
           type: 'cometbft',
@@ -60,51 +60,32 @@ export const wardenprotocoltestnet: Chain = {
   },
   peers: {
     seeds: [],
-    persistent_peers: [
-      {
-        id: '6a8de92a3bb422c10f764fe8b0ab32e1e334d0bd',
-        address: 'sentry-1.alfama.wardenprotocol.org:26656',
-        provider: 'Warden Protocol',
-      },
-      {
-        id: '7560460b016ee0867cae5642adace5d011c6c0ae',
-        address: 'sentry-2.alfama.wardenprotocol.org:26656',
-        provider: 'Warden Protocol',
-      },
-      {
-        id: '24ad598e2f3fc82630554d98418d26cc3edf28b9',
-        address: 'sentry-3.alfama.wardenprotocol.org:26656',
-        provider: 'Warden Protocol',
-      },
-    ],
+    persistent_peers: [],
   },
   apis: {
     rpc: [
       {
-        address: 'https://rpc.alfama.wardenprotocol.org/',
+        address: 'https://rpc.buenavista.wardenprotocol.org/',
         provider: 'Warden Protocol',
       },
     ],
     rest: [
       {
-        address: 'https://rest.alfama.wardenprotocol.org/',
+        address: 'https://api.buenavista.wardenprotocol.org/',
         provider: 'Warden Protocol',
       },
     ],
-    grpc: [],
+    grpc: [
+      {
+        address: 'https://grpc.buenavista.wardenprotocol.org/',
+        provider: 'Warden Protocol',
+      },
+    ],
   },
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/wardenprotocol/images/ward.png',
   },
-  explorers: [
-    {
-      kind: 'ping.pub',
-      url: 'https://warden-explorer.paranorm.pro/warden',
-      tx_page: 'https://warden-explorer.paranorm.pro/warden/tx/${txHash}',
-      account_page:
-        'https://warden-explorer.paranorm.pro/warden/account/${accountAddress}',
-    },
-  ],
+  explorers: [],
   keywords: ['testnet'],
   images: [
     {
@@ -113,7 +94,7 @@ export const wardenprotocoltestnet: Chain = {
   ],
 };
 
-export const wardenprotocoltestnetAssetList: AssetLists = {
+export const wardenprotocoltestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'wardenprotocoltestnet',
   assets: [

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const aioz: Chain = {
   $schema: '../chain.schema.json',
@@ -204,7 +204,7 @@ export const aioz: Chain = {
   ],
 };
 
-export const aiozAssetList: AssetLists = {
+export const aiozAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'aioz',
   assets: [
@@ -240,6 +240,10 @@ export const aiozAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/aioz/images/aioz.svg',
         },
       ],
+      socials: {
+        website: 'https://aioz.network/',
+        twitter: 'https://twitter.com/AIOZNetwork',
+      },
     },
   ],
 };

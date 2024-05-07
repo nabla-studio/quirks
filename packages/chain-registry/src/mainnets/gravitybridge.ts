@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const gravitybridge: Chain = {
   $schema: '../chain.schema.json',
@@ -373,7 +373,7 @@ export const gravitybridge: Chain = {
   ],
 };
 
-export const gravitybridgeAssetList: AssetLists = {
+export const gravitybridgeAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'gravitybridge',
   assets: [

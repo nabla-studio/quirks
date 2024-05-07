@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const jackal: Chain = {
   $schema: '../chain.schema.json',
@@ -33,13 +33,13 @@ export const jackal: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/JackalLabs/canine-chain',
-    recommended_version: 'v3.2.1',
-    compatible_versions: ['v3.2.1'],
+    recommended_version: 'v3.2.2',
+    compatible_versions: ['v3.2.1', 'v3.2.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.1/canined-Linux',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.2/canined-Linux',
       'darwin/amd64':
-        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.1/canined-macOS',
+        'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.2/canined-macOS',
     },
     genesis: {
       genesis_url:
@@ -126,17 +126,17 @@ export const jackal: Chain = {
       },
       {
         name: 'v3.2.0',
-        tag: 'V3.2.1',
+        tag: 'V3.2.2',
         proposal: 12,
         height: 6835000,
-        recommended_version: 'v3.2.1',
-        compatible_versions: ['v3.2.1'],
+        recommended_version: 'v3.2.2',
+        compatible_versions: ['v3.2.1', 'v3.2.2'],
         cosmwasm_enabled: true,
         binaries: {
           'linux/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.1/canined-Linux',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.2/canined-Linux',
           'darwin/amd64':
-            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.1/canined-macOS',
+            'https://github.com/JackalLabs/canine-chain/releases/download/v3.2.2/canined-macOS',
         },
         next_version_name: '',
       },
@@ -456,7 +456,7 @@ export const jackal: Chain = {
   ],
 };
 
-export const jackalAssetList: AssetLists = {
+export const jackalAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'jackal',
   assets: [
