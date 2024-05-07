@@ -20,6 +20,7 @@
     "@nabla-studio/wallet-registry": "*",
     "@keplr-wallet/types": "^0.12.38",
     "@cosmostation/extension-client": "^0.1.15",
+    "@dao-dao/cosmiframe": "^0.0.4",
     "base64-js": "^1.5.1"
   },
   "peerDependencies": {

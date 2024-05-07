@@ -29,7 +29,8 @@
               "@cosmjs/proto-signing",
               "long",
               "cosmjs-types",
-              "@leapwallet/cosmos-snap-provider"
+              "@leapwallet/cosmos-snap-provider",
+              "@dao-dao/cosmiframe"
             ],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts}"]
           }
