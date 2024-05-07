@@ -21,6 +21,16 @@
         "@nx/dependency-checks": [
           "error",
           {
+            "ignoredDependencies": [
+              "@keplr-wallet/types",
+              "@cosmostation/extension-client",
+              "base64-js",
+              "@cosmjs/amino",
+              "@cosmjs/proto-signing",
+              "long",
+              "cosmjs-types",
+              "@leapwallet/cosmos-snap-provider"
+            ],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts}"]
           }
         ]
