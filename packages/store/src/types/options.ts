@@ -1,5 +1,5 @@
 import type { OpenDeeplinkCallback, SignOptions, Wallet } from '@quirks/core';
-import type { AssetLists, Chain } from '@nabla-studio/chain-registry';
+import type { AssetList, Chain } from '@nabla-studio/chain-registry';
 import type {
   SigningStargateClientOptions,
   StargateClientOptions,
@@ -26,7 +26,7 @@ export interface SignerOptions {
 export interface Config {
   wallets: Wallet[];
   chains: Chain[];
-  assetsLists: AssetLists[];
+  assetsLists: AssetList[];
   /**
    * State manager persister
    */
