@@ -27,7 +27,13 @@
               "react-native-quick-crypto",
               "@react-native-community/netinfo",
               "fast-text-encoding",
-              "stream-browserify"
+              "stream-browserify",
+              "babel-plugin-module-resolver",
+              "react-native",
+              "react-native-mmkv",
+              "zustand",
+              "@ethersproject/shims",
+              "@walletconnect/react-native-compat"
             ],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts}"]
           }
