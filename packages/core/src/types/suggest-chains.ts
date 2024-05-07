@@ -1,7 +1,7 @@
-import type { AssetLists, Chain } from '@nabla-studio/chain-registry';
+import type { AssetList, Chain } from '@nabla-studio/chain-registry';
 
 export interface SuggestChain {
   name: string;
   chain: Chain;
-  assetList: AssetLists;
+  assetList: AssetList;
 }
