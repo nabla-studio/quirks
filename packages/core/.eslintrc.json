@@ -21,7 +21,17 @@
         "@nx/dependency-checks": [
           "error",
           {
-            "ignoredDependencies": ["pino-pretty"],
+            "ignoredDependencies": [
+              "pino-pretty",
+              "cosmjs-types",
+              "@cosmjs/amino",
+              "@cosmjs/stargate",
+              "@cosmjs/proto-signing",
+              "eventemitter3",
+              "@walletconnect/universal-provider",
+              "@walletconnect/types",
+              "base64-js"
+            ],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts}"]
           }
         ]
