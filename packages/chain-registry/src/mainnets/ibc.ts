@@ -1,6 +1,6 @@
-import type { IbcData } from '../types';
+import type { IBCData } from '../types';
 
-export const mainnetIbc: IbcData[] = [
+export const mainnetIbc: IBCData[] = [
   {
     $schema: '../ibc_data.schema.json',
     chain_1: {
