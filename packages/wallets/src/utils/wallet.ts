@@ -1,4 +1,4 @@
-import type { Asset, AssetLists, Chain } from '@nabla-studio/chain-registry';
+import type { Asset, AssetList, Chain } from '@nabla-studio/chain-registry';
 import type { ChainInfo, Currency, FeeCurrency } from '@keplr-wallet/types';
 import type { ChainInfoOptions } from '../types';
 import { getBech32Config, getExplr, getRest, getRpc } from './chain';
@@ -39,7 +39,7 @@ export const cosmwasmFeatures = {
  */
 export const getChainInfo = (
   chain: Chain,
-  assetsLists: AssetLists,
+  assetsLists: AssetList,
   options: ChainInfoOptions = defaultChainInfoOptions,
 ): ChainInfo => {
   const features = ['ibc-transfer'];

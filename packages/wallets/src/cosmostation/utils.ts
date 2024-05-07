@@ -1,5 +1,5 @@
 import type { AddChainParams } from '@cosmostation/extension-client/types/message';
-import type { AssetLists, Chain } from '@nabla-studio/chain-registry';
+import type { AssetList, Chain } from '@nabla-studio/chain-registry';
 import {
   defaultChainInfoOptions,
   getChainInfo,
@@ -9,7 +9,7 @@ import type { ChainInfoOptions } from '../types';
 
 export const getChainInfoCosmostation = (
   chain: Chain,
-  assets: AssetLists,
+  assets: AssetList,
   options: ChainInfoOptions = defaultChainInfoOptions,
 ): AddChainParams => {
   const chainInfo = getChainInfo(chain, assets);
