@@ -5,7 +5,7 @@ export const daodaoCosmiframeOptions: WalletOptions = {
   ...keplrextension,
   wallet_name: 'dao-dao-cosmiframe',
   pretty_name: 'DAO DAO',
-  connection_type: 'browser_extension',
+  connection_type: 'cosmiframe',
   website: 'https://github.com/DA0-DA0/cosmiframe',
   git_repo: 'https://github.com/DA0-DA0/cosmiframe',
   platforms: [],

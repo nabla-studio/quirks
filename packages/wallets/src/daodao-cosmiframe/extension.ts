@@ -18,7 +18,7 @@ export class DAODAOCosmiframe extends KeplrWalletExtension {
     try {
       if (window.parent === window.self) {
         throw new Error(
-          "[Quirks]: Can'init Cosmiframe because the dapp is not in an iframe",
+          `[Quirks]: Can'init ${this.options.pretty_name} because the dapp is not in an iframe`,
         );
       }
 
@@ -54,9 +54,5 @@ export class DAODAOCosmiframe extends KeplrWalletExtension {
     return undefined;
   }
 
-  override async enable(): Promise<void> {}
-
-  override async suggestChains(): Promise<void> {
-    console.log('suggestChains');
-  }
+  override async suggestChains(): Promise<void> {}
 }
