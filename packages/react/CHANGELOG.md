@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.13.6](https://github.com/nabla-studio/quirks/compare/react@0.13.5...react@0.13.6) (2024-05-09)
+
+### Dependency Updates
+
+* `store` updated to version `0.13.5`
+* `core` updated to version `0.13.5`
 ## [0.13.5](https://github.com/nabla-studio/quirks/compare/react@0.13.4...react@0.13.5) (2024-04-17)
 
 ### Dependency Updates
