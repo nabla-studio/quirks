@@ -1,10 +1,10 @@
 import type { WalletOptions } from '@quirks/core';
 import { keplrextension } from '@nabla-studio/wallet-registry';
 
-export const cosmiframeExtensionOptions: WalletOptions = {
+export const daodaoCosmiframeOptions: WalletOptions = {
   ...keplrextension,
-  wallet_name: 'cosmiframe',
-  pretty_name: 'Cosmiframe',
+  wallet_name: 'dao-dao-cosmiframe',
+  pretty_name: 'DAO DAO',
   connection_type: 'browser_extension',
   website: 'https://github.com/DA0-DA0/cosmiframe',
   git_repo: 'https://github.com/DA0-DA0/cosmiframe',
