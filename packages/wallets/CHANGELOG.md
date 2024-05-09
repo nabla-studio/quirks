@@ -2,6 +2,29 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.17.0](https://github.com/nabla-studio/quirks/compare/wallets@0.16.2...wallets@0.17.0) (2024-05-09)
+
+### Dependency Updates
+
+* `core` updated to version `0.16.2`
+* `chain-registry` updated to version `0.16.2`
+* `wallet-registry` updated to version `0.16.2`
+
+### Features
+
+* **wallets:** :arrow_up: upgrade @dao-dao/cosmiframe ([5e9fc27](https://github.com/nabla-studio/quirks/commit/5e9fc270da5993b178fe64bf76537e12d511795c))
+* **wallets:** :arrow_up: upgrade @keplr-wallet/types ([7e75061](https://github.com/nabla-studio/quirks/commit/7e75061e54dcd627baff262c60f540a4c3bc684a))
+* **wallets:** :label: add new chain-registry types ([a8fb06c](https://github.com/nabla-studio/quirks/commit/a8fb06c738b2a743dd314c568d99eef1a32ca272))
+* **wallets:** :sparkles: add better cosmiframe log ([b60c514](https://github.com/nabla-studio/quirks/commit/b60c5142afcf87767903e6fa1c1be1d80da53e49))
+* **wallets:** :sparkles: add cosmiframe support ([e08911d](https://github.com/nabla-studio/quirks/commit/e08911dc7fe902f3bf67cbe62e818ace343a1c9b))
+* **wallets:** :sparkles: rename cosmiframe to daodaocosmiframe ([f0c8a80](https://github.com/nabla-studio/quirks/commit/f0c8a80736399d4e023011bf5c8132bb310775fb))
+
+
+### Bug Fixes
+
+* **wallets:** :bug: fix cosmiframe assert ([943cd9b](https://github.com/nabla-studio/quirks/commit/943cd9bc887f166fcca757c53d474c7c9fe75ac0))
+* **wallets:** :bug: fix cosmiframe signer account ([56abe2a](https://github.com/nabla-studio/quirks/commit/56abe2a14259057703d06bd4299b4b17f729c6a9))
+
 ## [0.16.2](https://github.com/nabla-studio/quirks/compare/wallets@0.16.1...wallets@0.16.2) (2024-04-17)
 
 ### Dependency Updates
