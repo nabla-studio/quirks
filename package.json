@@ -89,7 +89,7 @@
     "@cosmjs/stargate": "^0.32.2",
     "@cosmostation/extension-client": "^0.1.15",
     "@craftzdog/react-native-buffer": "^6.0.5",
-    "@dao-dao/cosmiframe": "^0.0.4",
+    "@dao-dao/cosmiframe": "^0.1.0",
     "@ethersproject/shims": "^5.7.0",
     "@keplr-wallet/types": "^0.12.86",
     "@leapwallet/cosmos-snap-provider": "^0.1.25",
