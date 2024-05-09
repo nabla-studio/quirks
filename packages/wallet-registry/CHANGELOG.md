@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.0](https://github.com/nabla-studio/quirks/compare/wallet-registry@0.5.0...wallet-registry@0.6.0) (2024-05-09)
+
+
+### Features
+
+* **wallet-registry:** :label: add connection_type for iframes ([228b3fa](https://github.com/nabla-studio/quirks/commit/228b3fa477be72f6a567295360f1aab641494859))
+
 ## [0.5.0](https://github.com/nabla-studio/quirks/compare/wallet-registry@0.4.0...wallet-registry@0.5.0) (2024-03-03)
 
 
