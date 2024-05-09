@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const coreum: Chain = {
   $schema: '../chain.schema.json',
@@ -338,7 +338,7 @@ export const coreum: Chain = {
   keywords: ['dex', 'staking', 'wasm', 'assets', 'nft'],
 };
 
-export const coreumAssetList: AssetLists = {
+export const coreumAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'coreum',
   assets: [
@@ -370,6 +370,10 @@ export const coreumAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coreum/images/coreum.svg',
         },
       ],
+      socials: {
+        website: 'https://www.coreum.com/',
+        twitter: 'https://twitter.com/CoreumOfficial',
+      },
     },
     {
       description: 'XRP bridged from XRPL',

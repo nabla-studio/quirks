@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const nibiru: Chain = {
   $schema: '../chain.schema.json',
@@ -275,6 +275,11 @@ export const nibiru: Chain = {
         address: 'nibiru.rpc.nodeshub.online:19856',
         provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
       },
+      {
+        id: 'c2f97c34c7df4ed57fcaf088ef59dd568dd19f01',
+        address: 'nibiru-mainnet.peer.stakevillage.net:16156',
+        provider: 'Stake Village',
+      },
     ],
   },
   apis: {
@@ -314,6 +319,14 @@ export const nibiru: Chain = {
       {
         address: 'https://nibiru.rpc.m.stavr.tech:443',
         provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'https://nibiru-rpc.noders.services',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://nibiru-mainnet.rpc.stakevillage.net:443',
+        provider: 'Stake Village',
       },
     ],
     rest: [
@@ -355,7 +368,15 @@ export const nibiru: Chain = {
       },
       {
         address: 'https://nibiru.api.staking-explorer.com',
-        provider: 'Daily DROP',
+        provider: 'Daily DROP | 2% Fee',
+      },
+      {
+        address: 'https://nibiru-api.noders.services',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://nibiru-mainnet.api.stakevillage.net',
+        provider: 'Stake Village',
       },
     ],
     grpc: [
@@ -395,6 +416,14 @@ export const nibiru: Chain = {
         address: 'nibiru.grpc.m.stavr.tech:5023',
         provider: '🔥STAVR🔥',
       },
+      {
+        address: 'nibiru-grpc.noders.services:35090',
+        provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'nibiru-mainnet.grpc.stakevillage.net:443',
+        provider: 'Stake Village',
+      },
     ],
   },
   explorers: [
@@ -432,6 +461,13 @@ export const nibiru: Chain = {
       account_page:
         'https://explorer.nodeshub.online/nibiru/accounts/${accountAddress}',
     },
+    {
+      kind: 'Stake Village',
+      url: 'https://exp.stakevillage.net/nibiru-mainnet',
+      tx_page: 'https://exp.stakevillage.net/nibiru-mainnet/tx/${txHash}',
+      account_page:
+        'https://exp.stakevillage.net/nibiru-mainnet/accounts/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -441,7 +477,7 @@ export const nibiru: Chain = {
   ],
 };
 
-export const nibiruAssetList: AssetLists = {
+export const nibiruAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'nibiru',
   assets: [

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const cifer: Chain = {
   $schema: '../chain.schema.json',
@@ -93,7 +93,7 @@ export const cifer: Chain = {
   ],
 };
 
-export const ciferAssetList: AssetLists = {
+export const ciferAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'cifer',
   assets: [
@@ -124,6 +124,10 @@ export const ciferAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cifer/images/cif.svg',
         },
       ],
+      socials: {
+        website: 'http://cifer.ai/',
+        twitter: 'https://twitter.com/cifer_ai',
+      },
     },
   ],
 };

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const neutron: Chain = {
   $schema: '../chain.schema.json',
@@ -311,7 +311,7 @@ export const neutron: Chain = {
   ],
 };
 
-export const neutronAssetList: AssetLists = {
+export const neutronAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'neutron',
   assets: [
@@ -405,15 +405,15 @@ export const neutronAssetList: AssetLists = {
           aliases: ['uusdc'],
         },
         {
-          denom: 'usdc',
+          denom: 'axlusdc',
           exponent: 6,
         },
       ],
       type_asset: 'ics20',
       base: 'ibc/F082B65C88E4B6D5EF1DB243CDA1D331D002759E938A0F5CD3FFDC5D53B3E349',
-      name: 'IBC usdc',
-      display: 'usdc',
-      symbol: 'USDC',
+      name: 'USD Coin (Axelar)',
+      display: 'axlusdc',
+      symbol: 'axlUSDC',
       traces: [
         {
           type: 'ibc',
@@ -1068,6 +1068,10 @@ export const neutronAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/apollo.svg',
         },
       ],
+      socials: {
+        website: 'https://apollo.farm/',
+        twitter: 'https://twitter.com/ApolloDAO',
+      },
     },
     {
       description: 'NEWTROLL',
@@ -1323,6 +1327,55 @@ export const neutronAssetList: AssetLists = {
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/ATOM1KLFGc.png',
+        },
+      ],
+    },
+    {
+      type_asset: 'ics20',
+      description: 'USD Coin on Neutron',
+      denom_units: [
+        {
+          denom:
+            'ibc/B559A80D62249C8AA07A380E2A2BEA6E5CA9A6F079C912C3A9E9B494105E4F81',
+          exponent: 0,
+          aliases: ['uusdc', 'microusdc'],
+        },
+        {
+          denom: 'usdc',
+          exponent: 6,
+        },
+      ],
+      base: 'ibc/B559A80D62249C8AA07A380E2A2BEA6E5CA9A6F079C912C3A9E9B494105E4F81',
+      name: 'USD Coin',
+      display: 'usdc',
+      symbol: 'USDC',
+      coingecko_id: 'usd-coin',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'noble',
+            base_denom: 'uusdc',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+        },
+      ],
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            channel_id: 'channel-18',
+            base_denom: 'uusdc',
+            chain_name: 'noble',
+          },
+          chain: {
+            channel_id: 'channel-30',
+            path: 'transfer/channel-30/uusdc',
+          },
         },
       ],
     },

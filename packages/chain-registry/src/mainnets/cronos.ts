@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const cronos: Chain = {
   $schema: '../chain.schema.json',
@@ -23,19 +23,19 @@ export const cronos: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/crypto-org-chain/cronos',
-    recommended_version: 'v1.0.4',
-    compatible_versions: ['v1.0.2', 'v1.0.3', 'v1.0.4'],
+    recommended_version: 'v1.2.1',
+    compatible_versions: ['v1.2.0', 'v1.2.1'],
     binaries: {
       'linux/amd64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Linux_x86_64.tar.gz',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Linux_x86_64.tar.gz',
       'linux/arm64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Linux_arm64.tar.gz',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Darwin_x86_64.tar.gz',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Darwin_x86_64.tar.gz',
       'darwin/arm64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Darwin_arm64.tar.gz',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Windows_x86_64.zip',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Windows_x86_64.zip',
     },
     genesis: {
       genesis_url:
@@ -43,20 +43,20 @@ export const cronos: Chain = {
     },
     versions: [
       {
-        name: 'v1.0.4',
-        recommended_version: 'v1.0.4',
-        compatible_versions: ['v1.0.2', 'v1.0.3', 'v1.0.4'],
+        name: 'v1.2.1',
+        recommended_version: 'v1.2.1',
+        compatible_versions: ['v1.2.0', 'v1.2.1'],
         binaries: {
           'linux/amd64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Linux_x86_64.tar.gz',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Linux_x86_64.tar.gz',
           'linux/arm64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Linux_arm64.tar.gz',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Linux_arm64.tar.gz',
           'darwin/amd64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Darwin_x86_64.tar.gz',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Darwin_x86_64.tar.gz',
           'darwin/arm64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Darwin_arm64.tar.gz',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Darwin_arm64.tar.gz',
           'windows/amd64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.0.4/cronos_1.0.4_Windows_x86_64.zip',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Windows_x86_64.zip',
         },
       },
     ],
@@ -189,7 +189,7 @@ export const cronos: Chain = {
   ],
 };
 
-export const cronosAssetList: AssetLists = {
+export const cronosAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'cronos',
   assets: [

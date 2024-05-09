@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const persistence: Chain = {
   $schema: '../chain.schema.json',
@@ -37,21 +37,21 @@ export const persistence: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/persistenceOne/persistenceCore',
-    recommended_version: 'v11.8.1',
-    compatible_versions: ['v11.8.1'],
-    cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.3-lsm5',
-    ibc_go_version: 'persistenceOne/ibc-go/v7 v7.2.0-lsm3',
+    recommended_version: 'v11.9.0',
+    compatible_versions: ['v11.9.0'],
+    cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.10-lsm-rc0',
+    ibc_go_version: 'v7.4.0',
     ics_enabled: ['ics20-1', 'ics27-1'],
     consensus: {
       type: 'cometbft',
-      version: 'v0.37.2',
+      version: 'v0.37.4',
     },
-    cosmwasm_version: 'persistenceOne/wasmd v0.40.2-lsm3',
+    cosmwasm_version: 'v0.45.0',
     cosmwasm_enabled: true,
     cosmwasm_path: '$HOME/.persistenceCore/wasm',
     binaries: {
       'linux/amd64':
-        'https://github.com/persistenceOne/persistenceCore/releases/download/v11.8.1/persistenceCore-v11.8.1-linux-amd64.tar.gz',
+        'https://github.com/persistenceOne/persistenceCore/releases/download/v11.9.0/persistenceCore-v11.9.0-linux-amd64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -202,8 +202,8 @@ export const persistence: Chain = {
         tag: 'v11.8.1',
         proposal: 84,
         height: 15860600,
-        recommended_version: 'v10.5.0',
-        compatible_versions: ['v10.5.0'],
+        recommended_version: 'v11.8.1',
+        compatible_versions: ['v11.8.1'],
         cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.3-lsm5',
         ibc_go_version: 'persistenceOne/ibc-go/v7 v7.2.0-lsm3',
         ics_enabled: ['ics20-1', 'ics27-1'],
@@ -217,6 +217,29 @@ export const persistence: Chain = {
         binaries: {
           'linux/amd64':
             'https://github.com/persistenceOne/persistenceCore/releases/download/v11.8.1/persistenceCore-v11.8.1-linux-amd64.tar.gz',
+        },
+        next_version_name: 'v11.9.0',
+      },
+      {
+        name: 'v11.9.0',
+        tag: 'v11.9.0',
+        proposal: 90,
+        height: 16250000,
+        recommended_version: 'v11.9.0',
+        compatible_versions: ['v11.9.0'],
+        cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.10-lsm-rc0',
+        ibc_go_version: 'v7.4.0',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.persistenceCore/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/persistenceOne/persistenceCore/releases/download/v11.9.0/persistenceCore-v11.9.0-linux-amd64.tar.gz',
         },
         next_version_name: '',
       },
@@ -581,7 +604,7 @@ export const persistence: Chain = {
   ],
 };
 
-export const persistenceAssetList: AssetLists = {
+export const persistenceAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'persistence',
   assets: [

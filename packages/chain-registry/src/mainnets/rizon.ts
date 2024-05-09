@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const rizon: Chain = {
   $schema: '../chain.schema.json',
@@ -186,7 +186,7 @@ export const rizon: Chain = {
   ],
 };
 
-export const rizonAssetList: AssetLists = {
+export const rizonAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'rizon',
   assets: [
@@ -217,6 +217,10 @@ export const rizonAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/rizon/images/atolo.svg',
         },
       ],
+      socials: {
+        website: 'https://rizon.world/',
+        twitter: 'https://twitter.com/hdac_rizon',
+      },
     },
   ],
 };

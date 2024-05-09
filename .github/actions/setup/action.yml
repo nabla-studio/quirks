@@ -9,7 +9,7 @@ inputs:
   node_version:
     description: Node.js version
     required: false
-    default: '18'
+    default: '20.12.0'
   pnpm_version:
     description: pnpm version
     required: false
@@ -41,11 +41,12 @@ runs:
         # It actually creates a .npmrc in a temporary folder
         # and sets the NPM_CONFIG_USERCONFIG environment variable.
         registry-url: https://registry.npmjs.org
+        cache: 'pnpm'
 
     - name: Install pnpm
-      uses: pnpm/action-setup@v2
+      uses: pnpm/action-setup@v3
       with:
-        version: 8
+        version: 9
         run_install: false
 
     - name: Get pnpm store directory

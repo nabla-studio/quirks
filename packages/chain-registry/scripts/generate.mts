@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile, rm } from 'fs/promises';
 import { glob } from 'glob';
 import { URL } from 'url';
-import type { IbcData } from '../src';
+import type { IBCData } from '../src';
 import { processChains } from './utils.mjs';
 
 const __dirname = new URL('../', import.meta.url).pathname;
@@ -48,7 +48,7 @@ await mkdir(mainnetsPath);
 
 const mainnetChainFiles = await processChains(mainnetChains, mainnetsPath);
 
-const ibcInfos: IbcData[] = [];
+const ibcInfos: IBCData[] = [];
 
 for (const ibcInfo of mainnetIBCData) {
   const data = await readFile(`${ibcInfo.path}/${ibcInfo.name}`, 'utf-8');
@@ -58,9 +58,9 @@ for (const ibcInfo of mainnetIBCData) {
 
 await writeFile(
   `${mainnetsPath}/ibc.ts`,
-  `import type { IbcData } from '../types'
+  `import type { IBCData } from '../types'
 
-  export const mainnetIbc: IbcData[] = ${JSON.stringify(ibcInfos)};
+  export const mainnetIbc: IBCData[] = ${JSON.stringify(ibcInfos)};
 `,
 );
 
@@ -94,7 +94,7 @@ await mkdir(testnetsPath);
 
 const testnetChainFiles = await processChains(testnetChains, testnetsPath);
 
-const testnetIbcInfos: IbcData[] = [];
+const testnetIbcInfos: IBCData[] = [];
 
 for (const ibcInfo of testnetIBCData) {
   const data = await readFile(`${ibcInfo.path}/${ibcInfo.name}`, 'utf-8');
@@ -104,9 +104,9 @@ for (const ibcInfo of testnetIBCData) {
 
 await writeFile(
   `${testnetsPath}/ibc.ts`,
-  `import type { IbcData } from '../types'
+  `import type { IBCData } from '../types'
 
-  export const testnetIbc: IbcData[] = ${JSON.stringify(testnetIbcInfos)};
+  export const testnetIbc: IBCData[] = ${JSON.stringify(testnetIbcInfos)};
 `,
 );
 

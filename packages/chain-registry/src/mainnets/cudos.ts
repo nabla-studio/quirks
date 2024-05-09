@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const cudos: Chain = {
   $schema: '../chain.schema.json',
@@ -216,7 +216,7 @@ export const cudos: Chain = {
   ],
 };
 
-export const cudosAssetList: AssetLists = {
+export const cudosAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'cudos',
   assets: [
@@ -248,6 +248,10 @@ export const cudosAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cudos/images/cudos.svg',
         },
       ],
+      socials: {
+        website: 'http://www.cudos.org',
+        twitter: 'https://twitter.com/CUDOS_',
+      },
     },
   ],
 };

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const secretnetwork: Chain = {
   $schema: '../chain.schema.json',
@@ -319,7 +319,7 @@ export const secretnetwork: Chain = {
   ],
 };
 
-export const secretnetworkAssetList: AssetLists = {
+export const secretnetworkAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'secretnetwork',
   assets: [
@@ -560,6 +560,10 @@ export const secretnetworkAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/alter.svg',
         },
       ],
+      socials: {
+        website: 'http://alter.network/',
+        twitter: 'https://twitter.com/AlterDapp',
+      },
     },
     {
       description: 'The native token cw20 for Amber on Secret Network',
@@ -589,6 +593,10 @@ export const secretnetworkAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/amber.svg',
         },
       ],
+      socials: {
+        website: 'http://amber.money/',
+        twitter: 'https://twitter.com/AmberDAO_',
+      },
     },
     {
       description: 'The native token cw20 for Shill on Secret Network',

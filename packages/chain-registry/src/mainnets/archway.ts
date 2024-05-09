@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const archway: Chain = {
   $schema: '../chain.schema.json',
@@ -36,26 +36,26 @@ export const archway: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/archway-network/archway',
-    recommended_version: 'v6.0.3',
-    compatible_versions: ['v6.0.3'],
+    recommended_version: 'v7.0.0',
+    compatible_versions: ['v7.0.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_linux_amd64',
+        'https://github.com/archway-network/archway/releases/download/v7.0.0/archwayd_linux_amd64',
       'linux/arm64':
-        'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_linux_arm64',
+        'https://github.com/archway-network/archway/releases/download/v7.0.0/archwayd_linux_arm64',
       'darwin/amd64':
-        'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_darwin_amd64',
+        'https://github.com/archway-network/archway/releases/download/v7.0.0/archwayd_darwin_amd64',
       'darwin/arm64':
-        'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_darwin_arm64',
+        'https://github.com/archway-network/archway/releases/download/v7.0.0/archwayd_darwin_arm64',
     },
-    cosmos_sdk_version: 'v0.45.16',
-    consensus: {
-      type: 'tendermint',
-      version: 'v0.34.27',
-    },
-    cosmwasm_version: 'v0.33.0',
-    cosmwasm_enabled: true,
+    cosmos_sdk_version: 'v0.47.11',
     ibc_go_version: 'v7.4.0',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.37.5',
+    },
+    cosmwasm_version: 'v0.45.0',
+    cosmwasm_enabled: true,
     genesis: {
       genesis_url:
         'https://github.com/archway-network/networks/raw/main/archway/genesis/genesis.json.gz',
@@ -160,6 +160,32 @@ export const archway: Chain = {
           'darwin/arm64':
             'https://github.com/archway-network/archway/releases/download/v6.0.3/archwayd_darwin_arm64',
         },
+        next_version_name: 'v7.0.0',
+      },
+      {
+        name: 'v7.0.0',
+        proposal: 43,
+        height: 4473000,
+        recommended_version: 'v7.0.0',
+        compatible_versions: ['v7.0.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/archway-network/archway/releases/download/v7.0.0/archwayd_linux_amd64',
+          'linux/arm64':
+            'https://github.com/archway-network/archway/releases/download/v7.0.0/archwayd_linux_arm64',
+          'darwin/amd64':
+            'https://github.com/archway-network/archway/releases/download/v7.0.0/archwayd_darwin_amd64',
+          'darwin/arm64':
+            'https://github.com/archway-network/archway/releases/download/v7.0.0/archwayd_darwin_arm64',
+        },
+        cosmos_sdk_version: 'v0.47.11',
+        ibc_go_version: 'v7.4.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.5',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
         next_version_name: '',
       },
     ],
@@ -636,7 +662,7 @@ export const archway: Chain = {
   ],
 };
 
-export const archwayAssetList: AssetLists = {
+export const archwayAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'archway',
   assets: [

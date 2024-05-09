@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const neutaro: Chain = {
   $schema: '../chain.schema.json',
@@ -75,17 +75,29 @@ export const neutaro: Chain = {
         address: 'https://rpc2.neutaro.tech:443',
         provider: 'Neutaro',
       },
+      {
+        address: 'https://rpc-neutaro.blockval.io',
+        provider: 'Blockval',
+      },
     ],
     rest: [
       {
         address: 'https://api2.neutaro.tech:443',
         provider: 'Neutaro',
       },
+      {
+        address: 'https://api-neutaro.blockval.io',
+        provider: 'Blockval',
+      },
     ],
     grpc: [
       {
         address: 'https://grpc2.neutaro.tech:443',
         provider: 'Neutaro',
+      },
+      {
+        address: 'https://grpc-neutaro.blockval.io',
+        provider: 'Blockval',
       },
     ],
   },
@@ -106,7 +118,7 @@ export const neutaro: Chain = {
   ],
 };
 
-export const neutaroAssetList: AssetLists = {
+export const neutaroAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'neutaro',
   assets: [

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const conscious: Chain = {
   $schema: '../chain.schema.json',
@@ -11,6 +11,7 @@ export const conscious: Chain = {
   bech32_prefix: 'cvn',
   node_home: '$HOME/.cvnd',
   daemon_name: 'cvnd',
+  key_algos: ['ethsecp256k1'],
   slip44: 60,
   fees: {
     fee_tokens: [
@@ -67,18 +68,22 @@ export const conscious: Chain = {
         address: 'https://rpc.cvn.io/',
         provider: 'cvn.io',
       },
+      {
+        address: 'https://conscious_mainnet_rpc.chain.whenmoonwhenlambo.money/',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
         address: 'https://api.cvn.io',
         provider: 'cvn.io',
       },
+      {
+        address: 'https://conscious_mainnet_api.chain.whenmoonwhenlambo.money/',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     grpc: [
-      {
-        address: 'https://rest.consciousdao.com',
-        provider: 'consciousdao.com',
-      },
       {
         address: 'https://grpc.cvn.io',
         provider: 'cvn.io',
@@ -93,6 +98,10 @@ export const conscious: Chain = {
         address: 'https://node.consciousdao.io/',
         provider: 'consciousdao',
       },
+      {
+        address: 'https://conscious_mainnet_evm.chain.whenmoonwhenlambo.money/',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
   },
   explorers: [
@@ -100,6 +109,14 @@ export const conscious: Chain = {
       kind: 'blockscout',
       url: 'https://explore.consciousdao.com/',
       tx_page: 'https://explore.consciousdao.com/tx/${txHash}',
+    },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/conscious',
+      tx_page:
+        'https://explorer.whenmoonwhenlambo.money/conscious/tx/${txHash}',
+      account_page:
+        'https://explorer.whenmoonwhenlambo.money/conscious/account/${accountAddress}',
     },
   ],
   images: [
@@ -110,7 +127,7 @@ export const conscious: Chain = {
   ],
 };
 
-export const consciousAssetList: AssetLists = {
+export const consciousAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'conscious',
   assets: [
@@ -142,6 +159,10 @@ export const consciousAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/conscious/images/cvn.svg',
         },
       ],
+      socials: {
+        website: 'https://cvn.io',
+        twitter: 'https://twitter.com/conscious_chain',
+      },
     },
   ],
 };

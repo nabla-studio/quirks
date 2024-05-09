@@ -6,9 +6,9 @@
  */
 
 /**
- * Cosmos Chain Versions.json is a metadata file that contains information about a cosmos sdk based chain's current and historical versions.
+ * Versions.json is a metadata file that contains information about a cosmos sdk based chain's current and historical versions.
  */
-export interface ChainVersions {
+export interface Versions {
   $schema?: string;
   chain_name: string;
   versions: {

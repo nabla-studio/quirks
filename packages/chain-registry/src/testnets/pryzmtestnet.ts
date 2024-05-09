@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const pryzmtestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -133,7 +133,7 @@ export const pryzmtestnet: Chain = {
   ],
 };
 
-export const pryzmtestnetAssetList: AssetLists = {
+export const pryzmtestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'pryzmtestnet',
   assets: [

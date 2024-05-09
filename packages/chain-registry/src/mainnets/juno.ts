@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const juno: Chain = {
   $schema: '../chain.schema.json',
@@ -41,20 +41,20 @@ export const juno: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/CosmosContracts/juno',
-    recommended_version: 'v21.0.0',
-    compatible_versions: ['v21.0.0'],
+    recommended_version: 'v22.0.0',
+    compatible_versions: ['v22.0.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/CosmosContracts/juno/releases/download/v21.0.0/junod',
+        'https://github.com/CosmosContracts/juno/releases/download/v22.0.0/junod',
     },
-    cosmos_sdk_version: 'v0.47.6',
+    cosmos_sdk_version: 'v0.47.11-0.20240417094812-f556fd956fb1',
     consensus: {
       type: 'cometbft',
-      version: 'v0.37.2',
+      version: 'v0.37.5',
     },
     cosmwasm_version: 'v0.45.0',
     cosmwasm_enabled: true,
-    ibc_go_version: 'v7.3.1',
+    ibc_go_version: 'v7.4.0',
     genesis: {
       genesis_url: 'https://download.dimi.sh/juno-phoenix2-genesis.tar.gz',
     },
@@ -203,11 +203,11 @@ export const juno: Chain = {
         name: 'v21',
         proposal: 340,
         height: 14556500,
-        recommended_version: 'v21.0.0',
-        compatible_versions: ['v21.0.0'],
+        recommended_version: 'v21.0.1',
+        compatible_versions: ['v21.0.1'],
         binaries: {
           'linux/amd64':
-            'https://github.com/CosmosContracts/juno/releases/download/v21.0.0/junod',
+            'https://github.com/kintsugi-tech/juno/releases/download/v21.0.1/junod',
         },
         cosmos_sdk_version: 'v0.47.6',
         consensus: {
@@ -217,6 +217,26 @@ export const juno: Chain = {
         cosmwasm_version: 'v0.45.0',
         cosmwasm_enabled: true,
         ibc_go_version: 'v7.3.1',
+        next_version_name: 'v22',
+      },
+      {
+        name: 'v22',
+        proposal: 347,
+        height: 15873890,
+        recommended_version: 'v22.0.0',
+        compatible_versions: ['v22.0.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/CosmosContracts/juno/releases/download/v22.0.0/junod',
+        },
+        cosmos_sdk_version: 'v0.47.11-0.20240417094812-f556fd956fb1',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.5',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.4.0',
         next_version_name: '',
       },
     ],
@@ -547,10 +567,6 @@ export const juno: Chain = {
         provider: 'Decloud Nodes Lab',
       },
       {
-        address: 'http://juno.api.staking-explorer.com',
-        provider: 'Daily DROP',
-      },
-      {
         address: 'https://juno.api.nodeshub.online:443',
         provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
       },
@@ -709,7 +725,7 @@ export const juno: Chain = {
   ],
 };
 
-export const junoAssetList: AssetLists = {
+export const junoAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'juno',
   assets: [
@@ -2886,37 +2902,6 @@ export const junoAssetList: AssetLists = {
       ],
     },
     {
-      type_asset: 'sdk.coin',
-      denom_units: [
-        {
-          denom:
-            'factory/juno1vwmnqk0vyxc96qgffrure4nqxupjrql0zut8s02hadgp0n79r8xq5xdsxy/ARENA',
-          exponent: 0,
-        },
-        {
-          denom: 'arena',
-          exponent: 6,
-        },
-      ],
-      address:
-        'juno1vwmnqk0vyxc96qgffrure4nqxupjrql0zut8s02hadgp0n79r8xq5xdsxy',
-      base: 'factory/juno1vwmnqk0vyxc96qgffrure4nqxupjrql0zut8s02hadgp0n79r8xq5xdsxy/ARENA',
-      name: 'Arena Token',
-      description: 'The token for the Arena DAO',
-      display: 'arena',
-      symbol: 'ARENA',
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.svg',
-      },
-      images: [
-        {
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.svg',
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/arena.png',
-        },
-      ],
-    },
-    {
       description: 'BackBone Labs Liquid Staked JUNO',
       type_asset: 'cw20',
       address:
@@ -2992,6 +2977,82 @@ export const junoAssetList: AssetLists = {
             channel_id: 'channel-224',
             path: 'transfer/channel-224/uusdc',
           },
+        },
+      ],
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'ibc/F0C440C8040E2FCCAC621D32D3A00D9B347C989D52CE869A91CB34D07B0021D2',
+          exponent: 0,
+          aliases: [
+            'factory/migaloo1d0uma9qzcts4fzt7ml39xp44aut5k6qyjfzz4asalnecppppr3rsl52vvv/rstk',
+          ],
+        },
+        {
+          denom: 'rstk',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/F0C440C8040E2FCCAC621D32D3A00D9B347C989D52CE869A91CB34D07B0021D2',
+      name: 'Restake DAO Token',
+      display: 'rstk',
+      symbol: 'RSTK',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'migaloo',
+            base_denom:
+              'factory/migaloo1d0uma9qzcts4fzt7ml39xp44aut5k6qyjfzz4asalnecppppr3rsl52vvv/rstk',
+            channel_id: 'channel-1',
+          },
+          chain: {
+            channel_id: 'channel-210',
+            path: 'transfer/channel-210/factory/migaloo1d0uma9qzcts4fzt7ml39xp44aut5k6qyjfzz4asalnecppppr3rsl52vvv/rstk',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'migaloo',
+            base_denom:
+              'factory/migaloo1d0uma9qzcts4fzt7ml39xp44aut5k6qyjfzz4asalnecppppr3rsl52vvv/rstk',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/rstk.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/rstk.svg',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/rstk.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/rstk.svg',
+      },
+    },
+    {
+      denom_units: [
+        {
+          denom: 'factory/juno1h6y8tkceau4d8zyv5aa0fwdj2pa2y0gz2hx0tq/uwind',
+          exponent: 0,
+        },
+        {
+          denom: 'wind',
+          exponent: 6,
+        },
+      ],
+      address: 'juno1h6y8tkceau4d8zyv5aa0fwdj2pa2y0gz2hx0tq',
+      base: 'factory/juno1h6y8tkceau4d8zyv5aa0fwdj2pa2y0gz2hx0tq/uwind',
+      name: 'Wind Token',
+      display: 'wind',
+      symbol: 'WIND',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/wind.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/wind.png',
         },
       ],
     },

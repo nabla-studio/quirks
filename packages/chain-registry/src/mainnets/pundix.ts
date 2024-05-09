@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const pundix: Chain = {
   $schema: '../chain.schema.json',
@@ -217,7 +217,7 @@ export const pundix: Chain = {
   ],
 };
 
-export const pundixAssetList: AssetLists = {
+export const pundixAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'pundix',
   assets: [

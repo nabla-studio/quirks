@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const arkh: Chain = {
   $schema: '../chain.schema.json',
@@ -131,7 +131,7 @@ export const arkh: Chain = {
   ],
 };
 
-export const arkhAssetList: AssetLists = {
+export const arkhAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'arkh',
   assets: [
@@ -161,6 +161,10 @@ export const arkhAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/arkh/images/arkh.svg',
         },
       ],
+      socials: {
+        website: 'https://arkhadian.io/',
+        twitter: 'https://twitter.com/ArkhadianSas',
+      },
     },
   ],
 };

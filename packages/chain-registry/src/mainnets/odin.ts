@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const odin: Chain = {
   $schema: '../chain.schema.json',
@@ -34,8 +34,8 @@ export const odin: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/ODIN-PROTOCOL/odin-core',
-    recommended_version: 'v0.7.11',
-    compatible_versions: ['v0.7.11'],
+    recommended_version: 'v0.7.12',
+    compatible_versions: ['v0.7.12'],
     cosmos_sdk_version: 'v0.47.7',
     consensus: {
       type: 'cometbft',
@@ -64,6 +64,20 @@ export const odin: Chain = {
         height: 13310888,
         recommended_version: 'v0.7.11',
         compatible_versions: ['v0.7.11'],
+        cosmos_sdk_version: 'v0.47.7',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        ibc_go_version: 'v7.3.0',
+        next_version_name: 'v0.7.12',
+      },
+      {
+        name: 'v0.7.12',
+        proposal: 24,
+        height: 14129800,
+        recommended_version: 'v0.7.12',
+        compatible_versions: ['v0.7.12'],
         cosmos_sdk_version: 'v0.47.7',
         consensus: {
           type: 'cometbft',
@@ -206,7 +220,7 @@ export const odin: Chain = {
   ],
 };
 
-export const odinAssetList: AssetLists = {
+export const odinAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'odin',
   assets: [

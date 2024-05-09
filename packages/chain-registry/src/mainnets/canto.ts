@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const canto: Chain = {
   $schema: '../chain.schema.json',
@@ -248,7 +248,7 @@ export const canto: Chain = {
   ],
 };
 
-export const cantoAssetList: AssetLists = {
+export const cantoAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'canto',
   assets: [
@@ -280,6 +280,10 @@ export const cantoAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/canto/images/canto.svg',
         },
       ],
+      socials: {
+        website: 'https://canto.io/',
+        twitter: 'https://twitter.com/CantoPublic',
+      },
     },
     {
       description: 'Tether USDt on Canto',

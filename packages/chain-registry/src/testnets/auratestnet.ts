@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const auratestnet: Chain = {
   $schema: '../chain.schema.json',
@@ -7,7 +7,7 @@ export const auratestnet: Chain = {
   network_type: 'testnet',
   website: 'https://aura.network/',
   pretty_name: 'Aura Euphoria Network',
-  chain_id: 'euphoria-2',
+  chain_id: 'aura_6321-3',
   bech32_prefix: 'aura',
   daemon_name: 'aurad',
   node_home: '$HOME/.aura',
@@ -36,34 +36,31 @@ export const auratestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/aura-nw/aura',
-    recommended_version: 'v0.7.2-euphoria',
-    compatible_versions: ['v0.7.2-euphoria'],
-    cosmos_sdk_version: '0.47.4',
-    ibc_go_version: 'v7.2.0',
+    recommended_version: 'v0.8.0-euphoria',
+    compatible_versions: ['v0.8.0-euphoria'],
+    cosmos_sdk_version: 'v0.47.8',
+    ibc_go_version: 'v7.3.1',
     consensus: {
       type: 'cometbft',
-      version: '0.37.2',
+      version: '0.37.4',
     },
-    cosmwasm_version: '0.41.0',
+    cosmwasm_version: '0.42.0',
     cosmwasm_enabled: true,
     genesis: {
-      genesis_url:
-        'https://github.com/aura-nw/testnets/raw/main/euphoria-2/euphoria-2-genesis.tar.gz',
+      genesis_url: 'https://images.aura.network/aura_6321-3-genesis.tar.gz',
     },
     versions: [
       {
-        name: 'v0.7.2-euphoria',
-        proposal: 25,
-        height: 7655365,
-        recommended_version: 'v0.7.2-euphoria',
-        compatible_versions: ['v0.7.2-euphoria'],
-        cosmos_sdk_version: '0.47.4',
-        ibc_go_version: 'v7.2.0',
+        name: 'v0.8.0-euphoria',
+        recommended_version: 'v0.8.0-euphoria',
+        compatible_versions: ['v0.8.0-euphoria'],
+        cosmos_sdk_version: 'v0.47.8',
+        ibc_go_version: 'v7.3.1',
         consensus: {
           type: 'cometbft',
-          version: '0.37.2',
+          version: '0.37.4',
         },
-        cosmwasm_version: '0.41.0',
+        cosmwasm_version: '0.42.0',
         cosmwasm_enabled: true,
         next_version_name: '',
       },
@@ -106,8 +103,8 @@ export const auratestnet: Chain = {
     {
       kind: 'aurascan',
       url: 'https://euphoria.aurascan.io',
-      tx_page: 'https://euphoria.aurascan.io/transaction/${txHash}',
-      account_page: 'https://euphoria.aurascan.io/account/${accountAddress}',
+      tx_page: 'https://euphoria.aurascan.io/tx/${txHash}',
+      account_page: 'https://euphoria.aurascan.io/address/${accountAddress}',
     },
   ],
   images: [
@@ -118,7 +115,7 @@ export const auratestnet: Chain = {
   ],
 };
 
-export const auratestnetAssetList: AssetLists = {
+export const auratestnetAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'auratestnet',
   assets: [

@@ -21,6 +21,13 @@
         "@nx/dependency-checks": [
           "error",
           {
+            "ignoredDependencies": [
+              "zustand",
+              "react",
+              "cosmjs-types",
+              "@cosmjs/amino",
+              "eventemitter3"
+            ],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts}"]
           }
         ]

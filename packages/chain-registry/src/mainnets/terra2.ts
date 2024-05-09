@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const terra2: Chain = {
   $schema: '../chain.schema.json',
@@ -32,13 +32,13 @@ export const terra2: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/terra-money/core/',
-    recommended_version: 'v2.10.5',
-    compatible_versions: ['v2.10.4', 'v2.10.5'],
+    recommended_version: 'v2.11.1',
+    compatible_versions: ['v2.11.1'],
     binaries: {
       'linux/arm64':
-        'https://github.com/terra-money/core/releases/download/v2.10.5/terra_2.10.5_Linux_arm64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.11.1/terra_2.11.1_Linux_arm64.tar.gz',
       'linux/amd64':
-        'https://github.com/terra-money/core/releases/download/v2.10.5/terra_2.10.5_Linux_x86_64.tar.gz',
+        'https://github.com/terra-money/core/releases/download/v2.11.1/terra_2.11.1_Linux_x86_64.tar.gz',
     },
     genesis: {
       name: 'v2.0',
@@ -237,6 +237,29 @@ export const terra2: Chain = {
             'https://github.com/terra-money/core/releases/download/v2.10.5/terra_2.10.5_Linux_arm64.tar.gz',
           'linux/amd64':
             'https://github.com/terra-money/core/releases/download/v2.10.5/terra_2.10.5_Linux_x86_64.tar.gz',
+        },
+        next_version_name: 'v2.11',
+      },
+      {
+        name: 'v2.11',
+        tag: 'v2.11.1',
+        recommended_version: 'v2.11.1',
+        compatible_versions: ['v2.11.1'],
+        proposal: 4807,
+        height: 10136000,
+        cosmos_sdk_version: 'terra-money/cosmos-sdk v0.47.6-terra.0',
+        cosmwasm_enabled: true,
+        cosmwasm_version: 'v0.45.0',
+        ibc_go_version: 'terra-money/ibc-go/v7 v7.3.1-terra.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.2',
+        },
+        binaries: {
+          'linux/arm64':
+            'https://github.com/terra-money/core/releases/download/v2.11.0/terra_2.11.1_Linux_arm64.tar.gz',
+          'linux/amd64':
+            'https://github.com/terra-money/core/releases/download/v2.11.0/terra_2.11.1_Linux_x86_64.tar.gz',
         },
         next_version_name: '',
       },
@@ -464,7 +487,7 @@ export const terra2: Chain = {
   ],
 };
 
-export const terra2AssetList: AssetLists = {
+export const terra2AssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'terra2',
   assets: [
@@ -1575,6 +1598,77 @@ export const terra2AssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/clon1.png',
         },
       ],
+    },
+    {
+      description: 'ERIS Liquid Alliance Staked ampROAR',
+      denom_units: [
+        {
+          denom:
+            'factory/terra1dndhtdr2v7ca8rrn67chlqw3cl3xhm3m2uxls62vghcg3fsh5tpss5xmcu/MOAR',
+          exponent: 0,
+        },
+        {
+          denom: 'MOAR',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/terra1dndhtdr2v7ca8rrn67chlqw3cl3xhm3m2uxls62vghcg3fsh5tpss5xmcu/MOAR',
+      name: 'ERIS MOAR',
+      display: 'MOAR',
+      symbol: 'MOAR',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/moar.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/moar.png',
+        },
+      ],
+    },
+    {
+      description: 'Tether USDt on Terra',
+      denom_units: [
+        {
+          denom:
+            'ibc/9B19062D46CAB50361CE9B0A3E6D0A7A53AC9E7CB361F32A73CC733144A9A9E5',
+          exponent: 0,
+        },
+        {
+          denom: 'usdt',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/9B19062D46CAB50361CE9B0A3E6D0A7A53AC9E7CB361F32A73CC733144A9A9E5',
+      name: 'Tether USDt',
+      display: 'usdt',
+      symbol: 'USDt',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'kava',
+            base_denom: 'erc20/tether/usdt',
+            channel_id: 'channel-138',
+          },
+          chain: {
+            channel_id: 'channel-272',
+            path: 'transfer/channel-272/erc20/tether/usdt',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'kava',
+            base_denom: 'erc20/tether/usdt',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
+      },
     },
   ],
 };

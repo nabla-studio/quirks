@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const likecoin: Chain = {
   $schema: '../chain.schema.json',
@@ -36,19 +36,19 @@ export const likecoin: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/likecoin/likecoin-chain',
-    recommended_version: 'v4.1.1',
-    compatible_versions: ['v4.1.1'],
+    recommended_version: 'v4.2.0',
+    compatible_versions: ['v4.2.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/likecoin/likecoin-chain/releases/download/v4.1.1/likecoin-chain_4.1.1_Linux_x86_64.tar.gz',
+        'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Linux_x86_64.tar.gz',
       'linux/arm64':
-        'https://github.com/likecoin/likecoin-chain/releases/download/v4.1.1/likecoin-chain_4.1.1_Linux_arm64.tar.gz',
+        'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/likecoin/likecoin-chain/releases/download/v4.1.1/likecoin-chain_4.1.1_Darwin_x86_64.tar.gz',
+        'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Darwin_x86_64.tar.gz',
       'darwin/arm64':
-        'https://github.com/likecoin/likecoin-chain/releases/download/v4.1.1/likecoin-chain_4.1.1_Darwin_arm64.tar.gz',
+        'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/likecoin/likecoin-chain/releases/download/v4.1.1/likecoin-chain_4.1.1_Windows_x86_64.zip',
+        'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Windows_x86_64.zip',
     },
     cosmos_sdk_version: '0.46',
     consensus: {
@@ -56,7 +56,7 @@ export const likecoin: Chain = {
       version: '0.34',
     },
     cosmwasm_enabled: false,
-    ibc_go_version: '6.2.1',
+    ibc_go_version: '6.3.0',
     ics_enabled: ['ics20-1'],
     genesis: {
       name: 'fotan-1.0',
@@ -190,6 +190,32 @@ export const likecoin: Chain = {
             'https://github.com/likecoin/likecoin-chain/releases/download/v4.1.1/likecoin-chain_4.1.1_Darwin_arm64.tar.gz',
           'windows/amd64':
             'https://github.com/likecoin/likecoin-chain/releases/download/v4.1.1/likecoin-chain_4.1.1_Windows_x86_64.zip',
+        },
+        next_version_name: 'v4.2.0',
+      },
+      {
+        name: 'v4.2.0',
+        tag: 'v4.2.0',
+        height: 14103500,
+        recommended_version: 'v4.2.0',
+        compatible_versions: ['v4.2.0'],
+        cosmos_sdk_version: '0.46',
+        ibc_go_version: '6.3.0',
+        consensus: {
+          type: 'tendermint',
+          version: '0.34',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Linux_x86_64.tar.gz',
+          'linux/arm64':
+            'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Darwin_x86_64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Darwin_arm64.tar.gz',
+          'windows/amd64':
+            'https://github.com/likecoin/likecoin-chain/releases/download/v4.2.0/likecoin-chain_4.2.0_Windows_x86_64.zip',
         },
         next_version_name: '',
       },
@@ -349,7 +375,7 @@ export const likecoin: Chain = {
   ],
 };
 
-export const likecoinAssetList: AssetLists = {
+export const likecoinAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'likecoin',
   assets: [

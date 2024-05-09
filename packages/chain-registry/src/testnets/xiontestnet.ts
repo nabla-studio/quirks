@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const xiontestnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -32,14 +32,14 @@ export const xiontestnet: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/burnt-labs/xion',
-    recommended_version: 'v0.3.4',
-    compatible_versions: ['v0.3.4'],
-    cosmos_sdk_version: '0.47.5',
+    recommended_version: 'v0.3.9',
+    compatible_versions: ['v0.3.9'],
+    cosmos_sdk_version: '0.47.10',
     consensus: {
       type: 'cometbft',
-      version: '0.37.2',
+      version: '0.37.4',
     },
-    cosmwasm_version: '0.43.0',
+    cosmwasm_version: '0.45.1',
     cosmwasm_enabled: true,
     genesis: {
       genesis_url:
@@ -49,6 +49,7 @@ export const xiontestnet: Chain = {
       {
         name: 'v0.1.0',
         tag: 'v0.1.0',
+        height: 0,
         recommended_version: 'v0.1.0',
         cosmos_sdk_version: '0.47.0',
         cosmwasm_enabled: true,
@@ -76,7 +77,7 @@ export const xiontestnet: Chain = {
       {
         name: 'v0.3.3',
         tag: 'v0.3.3',
-        height: 1929544,
+        height: 2147030,
         recommended_version: 'v0.3.3',
         cosmos_sdk_version: '0.47.3',
         cosmwasm_enabled: true,
@@ -90,7 +91,7 @@ export const xiontestnet: Chain = {
       {
         name: 'v0.3.4',
         tag: 'v0.3.4',
-        height: 1929544,
+        height: 3278095,
         recommended_version: 'v0.3.4',
         cosmos_sdk_version: '0.47.5',
         cosmwasm_enabled: true,
@@ -99,6 +100,48 @@ export const xiontestnet: Chain = {
         consensus: {
           type: 'cometbft',
           version: '0.37.2',
+        },
+      },
+      {
+        name: 'v0.3.7',
+        tag: 'v0.3.7',
+        height: 6887750,
+        recommended_version: 'v0.3.7',
+        cosmos_sdk_version: '0.47.10',
+        cosmwasm_enabled: true,
+        cosmwasm_version: '0.45.0',
+        ibc_go_version: 'v7.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.4',
+        },
+      },
+      {
+        name: 'v0.3.8',
+        tag: 'v0.3.8',
+        height: 7130100,
+        recommended_version: 'v0.3.8',
+        cosmos_sdk_version: '0.47.10',
+        cosmwasm_enabled: true,
+        cosmwasm_version: '0.45.0',
+        ibc_go_version: 'v7.3.1',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.4',
+        },
+      },
+      {
+        name: 'v0.3.9',
+        tag: 'v0.3.9',
+        height: 7438800,
+        recommended_version: 'v0.3.9',
+        cosmos_sdk_version: '0.47.10',
+        cosmwasm_enabled: true,
+        cosmwasm_version: '0.45.1',
+        ibc_go_version: 'v7.4.0',
+        consensus: {
+          type: 'cometbft',
+          version: '0.37.4',
         },
       },
     ],
@@ -172,7 +215,7 @@ export const xiontestnet: Chain = {
   ],
 };
 
-export const xiontestnetAssetList: AssetLists = {
+export const xiontestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'xiontestnet',
   assets: [
@@ -207,7 +250,7 @@ export const xiontestnetAssetList: AssetLists = {
       denom_units: [
         {
           denom:
-            'ibc/D934516FBE457F3A98AFABD87E0EFF7F95A15325C191EA8CDD7763C702FDDEC2',
+            'ibc/05007A23A23D8B3D286EC4A541189D86C0B76FD769008E4C85EBE977DDA437D3',
           exponent: 0,
           aliases: ['uaxl'],
         },
@@ -217,7 +260,7 @@ export const xiontestnetAssetList: AssetLists = {
         },
       ],
       type_asset: 'ics20',
-      base: 'ibc/D934516FBE457F3A98AFABD87E0EFF7F95A15325C191EA8CDD7763C702FDDEC2',
+      base: 'ibc/05007A23A23D8B3D286EC4A541189D86C0B76FD769008E4C85EBE977DDA437D3',
       name: 'Axelar AXL Token',
       display: 'axl',
       symbol: 'AXL',
@@ -227,11 +270,11 @@ export const xiontestnetAssetList: AssetLists = {
           counterparty: {
             chain_name: 'axelartestnet',
             base_denom: 'uaxl',
-            channel_id: 'channel-283',
+            channel_id: 'channel-462',
           },
           chain: {
-            channel_id: 'channel-5',
-            path: 'transfer/channel-5/uaxl',
+            channel_id: 'channel-486',
+            path: 'transfer/channel-486/uaxl',
           },
         },
       ],
@@ -254,7 +297,7 @@ export const xiontestnetAssetList: AssetLists = {
       denom_units: [
         {
           denom:
-            'ibc/92E0120F15D037353CFB73C14651FC8930ADC05B93100FD7754D3A689E53B333',
+            'ibc/484532EB74866F3FB8A71F909F7B1B470FE2E66313DA0A1F9EE5B7C5C046D195',
           exponent: 0,
           aliases: ['uosmo'],
         },
@@ -264,7 +307,7 @@ export const xiontestnetAssetList: AssetLists = {
         },
       ],
       type_asset: 'ics20',
-      base: 'ibc/92E0120F15D037353CFB73C14651FC8930ADC05B93100FD7754D3A689E53B333',
+      base: 'ibc/484532EB74866F3FB8A71F909F7B1B470FE2E66313DA0A1F9EE5B7C5C046D195',
       name: 'Osmosis OSMO Token',
       display: 'osmo',
       symbol: 'OSMO',
@@ -274,11 +317,11 @@ export const xiontestnetAssetList: AssetLists = {
           counterparty: {
             chain_name: 'osmosistestnet',
             base_denom: 'uosmo',
-            channel_id: 'channel-1299',
+            channel_id: 'channel-6668',
           },
           chain: {
-            channel_id: 'channel-8',
-            path: 'transfer/channel-8/uosmo',
+            channel_id: 'channel-490',
+            path: 'transfer/channel-490/uosmo',
           },
         },
       ],
@@ -301,7 +344,7 @@ export const xiontestnetAssetList: AssetLists = {
       denom_units: [
         {
           denom:
-            'ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F',
+            'ibc/57097251ED81A232CE3C9D899E7C8096D6D87EF84BA203E12E424AA4C9B57A64',
           exponent: 0,
           aliases: ['uusdc'],
         },
@@ -311,7 +354,7 @@ export const xiontestnetAssetList: AssetLists = {
         },
       ],
       type_asset: 'ics20',
-      base: 'ibc/295548A78785A1007F232DE286149A6FF512F180AF5657780FC89C009E2C348F',
+      base: 'ibc/57097251ED81A232CE3C9D899E7C8096D6D87EF84BA203E12E424AA4C9B57A64',
       name: 'Noble USDC Token',
       display: 'usdc',
       symbol: 'USDC',
@@ -321,11 +364,11 @@ export const xiontestnetAssetList: AssetLists = {
           counterparty: {
             chain_name: 'nobletestnet',
             base_denom: 'uusdc',
-            channel_id: 'channel-17',
+            channel_id: 'channel-147',
           },
           chain: {
-            channel_id: 'channel-9',
-            path: 'transfer/channel-9/uusdc',
+            channel_id: 'channel-489',
+            path: 'transfer/channel-489/uusdc',
           },
         },
       ],
@@ -346,7 +389,7 @@ export const xiontestnetAssetList: AssetLists = {
       denom_units: [
         {
           denom:
-            'ibc/0166AE2224341A3F70943E315DAC6EDF012A638D0F9358794FF7525BA1DFC191',
+            'ibc/05314A48723E06A1B1B666066B6BEC89F3708E8854DF2E5E9193387AA9653036',
           exponent: 0,
           aliases: ['inj'],
         },
@@ -356,7 +399,7 @@ export const xiontestnetAssetList: AssetLists = {
         },
       ],
       type_asset: 'ics20',
-      base: 'ibc/0166AE2224341A3F70943E315DAC6EDF012A638D0F9358794FF7525BA1DFC191',
+      base: 'ibc/05314A48723E06A1B1B666066B6BEC89F3708E8854DF2E5E9193387AA9653036',
       name: 'Injective INJ token',
       display: 'INJ',
       symbol: 'INJ',
@@ -366,11 +409,11 @@ export const xiontestnetAssetList: AssetLists = {
           counterparty: {
             chain_name: 'injectivetestnet',
             base_denom: 'inj',
-            channel_id: 'channel-324',
+            channel_id: 'channel-489',
           },
           chain: {
-            channel_id: 'channel-215',
-            path: 'transfer/channel-215/inj',
+            channel_id: 'channel-487',
+            path: 'transfer/channel-487/inj',
           },
         },
       ],

@@ -1,6 +1,6 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
-export const lavaVersions: ChainVersions = {
+export const lavaVersions: Versions = {
   $schema: '../versions.schema.json',
   chain_name: 'lava',
   versions: [
@@ -101,6 +101,11 @@ export const lava: Chain = {
         address: 'lava-seed.finteh.org:26656',
         provider: 'finteh',
       },
+      {
+        id: 'cec848e7d4c5a7ae305b27cda133d213435c110f',
+        address: 'seed-lava.ibs.team:16680',
+        provider: 'Inter Blockchain Services',
+      },
     ],
   },
   apis: {
@@ -117,15 +122,23 @@ export const lava: Chain = {
         address: 'https://lava-rpc.y2.finance:443',
         provider: 'YTWOFUND',
       },
+      {
+        address: 'https://lava-rpc.ibs.team:443',
+        provider: 'Inter Blockchain Services',
+      },
     ],
     rest: [
       {
-        address: ' https://lava-api.w3coins.io:443',
+        address: 'https://lava-api.w3coins.io:443',
         provider: 'w3coins',
       },
       {
         address: 'https://lava.api.staking-explorer.com',
         provider: 'Daily DROP',
+      },
+      {
+        address: 'https://lava-api.ibs.team:443',
+        provider: 'Inter Blockchain Services',
       },
     ],
   },
@@ -150,7 +163,7 @@ export const lava: Chain = {
   ],
 };
 
-export const lavaAssetList: AssetLists = {
+export const lavaAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'lava',
   assets: [

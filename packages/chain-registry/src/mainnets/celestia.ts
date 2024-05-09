@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const celestia: Chain = {
   $schema: '../chain.schema.json',
@@ -269,6 +269,10 @@ export const celestia: Chain = {
         address: 'https://celestia-rpc.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://rpc.celestia.citizenweb3.com',
+        provider: 'Citizen Web3',
+      },
     ],
     rest: [
       {
@@ -500,7 +504,7 @@ export const celestia: Chain = {
   ],
 };
 
-export const celestiaAssetList: AssetLists = {
+export const celestiaAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'celestia',
   assets: [

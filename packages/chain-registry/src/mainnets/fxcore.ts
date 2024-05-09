@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const fxcore: Chain = {
   $schema: '../chain.schema.json',
@@ -271,7 +271,7 @@ export const fxcore: Chain = {
   ],
 };
 
-export const fxcoreAssetList: AssetLists = {
+export const fxcoreAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'fxcore',
   assets: [

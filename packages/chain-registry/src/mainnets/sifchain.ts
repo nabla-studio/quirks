@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const sifchain: Chain = {
   $schema: '../chain.schema.json',
@@ -206,7 +206,7 @@ export const sifchain: Chain = {
   ],
 };
 
-export const sifchainAssetList: AssetLists = {
+export const sifchainAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'sifchain',
   assets: [

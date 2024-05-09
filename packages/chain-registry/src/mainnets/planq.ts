@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const planq: Chain = {
   $schema: '../chain.schema.json',
@@ -240,6 +240,10 @@ export const planq: Chain = {
         address: 'https://planq_mainnet_rpc.chain.whenmoonwhenlambo.money',
         provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
+      {
+        address: 'https://rpc-planq.blockval.io',
+        provider: 'Blockval',
+      },
     ],
     rest: [
       {
@@ -289,6 +293,10 @@ export const planq: Chain = {
       {
         address: 'https://planq_mainnet_api.chain.whenmoonwhenlambo.money',
         provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
+      {
+        address: 'https://api-planq.blockval.io',
+        provider: 'Blockval',
       },
     ],
     grpc: [
@@ -347,6 +355,10 @@ export const planq: Chain = {
       {
         address: 'mainnet-planq.konsortech.xyz:10090',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'https://grpc-planq.blockval.io',
+        provider: 'Blockval',
       },
     ],
     'evm-http-jsonrpc': [
@@ -470,7 +482,7 @@ export const planq: Chain = {
   ],
 };
 
-export const planqAssetList: AssetLists = {
+export const planqAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'planq',
   assets: [

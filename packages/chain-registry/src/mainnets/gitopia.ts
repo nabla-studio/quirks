@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const gitopia: Chain = {
   $schema: '../chain.schema.json',
@@ -792,7 +792,7 @@ export const gitopia: Chain = {
   },
 };
 
-export const gitopiaAssetList: AssetLists = {
+export const gitopiaAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'gitopia',
   assets: [

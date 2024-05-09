@@ -20,6 +20,7 @@ import {
   leapMetamaskSnapExtension,
   trustExtension,
   trustMobile,
+  daodaoCosmiframe,
 } from '@quirks/wallets';
 import { PropsWithChildren } from 'react';
 
@@ -36,6 +37,7 @@ const config: Config = {
     keplrMobile,
     leapMobile,
     trustMobile,
+    daodaoCosmiframe,
   ],
   chains: [osmosis, cosmoshub],
   assetsLists: [osmosisAssetList, cosmoshubAssetList],

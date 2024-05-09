@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const terra2Testnet: Chain = {
   $schema: '../../chain.schema.json',
@@ -194,7 +194,7 @@ export const terra2Testnet: Chain = {
   ],
 };
 
-export const terra2TestnetAssetList: AssetLists = {
+export const terra2TestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'terra2testnet',
   assets: [

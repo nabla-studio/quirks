@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const shido: Chain = {
   $schema: '../chain.schema.json',
@@ -80,45 +80,45 @@ export const shido: Chain = {
   peers: {
     seeds: [
       {
-        id: 'a887f17c46702e8d7317ad20a07d0cfc483c7dff',
-        address: '18.153.251.152:26656',
+        id: '181fcc5672fee87751eb369491744e85ba0651f5',
+        address: '18.153.233.126:26656',
         provider: 'SHIDO',
       },
       {
-        id: '628de9fd0fde3f96fd1435d844a0e55b0000dd99',
-        address: '18.199.116.165:26656',
+        id: '8d46e292347951d651486611abac77825a0c83f8',
+        address: '18.199.25.117:26656',
         provider: 'SHIDO',
       },
       {
-        id: 'b4166cdc7d1f92c54b9d39fe5a94af9e54e04726',
-        address: '15.223.62.181:26656',
+        id: 'cdf19a7234ee8ec12519f6ad066408f09e1b73e0',
+        address: '15.157.50.94:26656',
         provider: 'SHIDO',
       },
       {
-        id: '98e1d5375a38b0b410b00f5459f81341069b14ad',
-        address: '52.60.59.80:26656',
+        id: '8793ad6de6efdb6919d31e74e61a1be57a6d6d32',
+        address: '3.97.121.236:26656',
         provider: 'SHIDO',
       },
     ],
     persistent_peers: [
       {
-        id: 'a887f17c46702e8d7317ad20a07d0cfc483c7dff',
-        address: '18.153.251.152:26656',
+        id: '181fcc5672fee87751eb369491744e85ba0651f5',
+        address: '18.153.233.126:26656',
         provider: 'SHIDO',
       },
       {
-        id: '628de9fd0fde3f96fd1435d844a0e55b0000dd99',
-        address: '18.199.116.165:26656',
+        id: '8d46e292347951d651486611abac77825a0c83f8',
+        address: '18.199.25.117:26656',
         provider: 'SHIDO',
       },
       {
-        id: 'b4166cdc7d1f92c54b9d39fe5a94af9e54e04726',
-        address: '15.223.62.181:26656',
+        id: 'cdf19a7234ee8ec12519f6ad066408f09e1b73e0',
+        address: '15.157.50.94:26656',
         provider: 'SHIDO',
       },
       {
-        id: '98e1d5375a38b0b410b00f5459f81341069b14ad',
-        address: '52.60.59.80:26656',
+        id: '8793ad6de6efdb6919d31e74e61a1be57a6d6d32',
+        address: '3.97.121.236:26656',
         provider: 'SHIDO',
       },
     ],
@@ -129,11 +129,19 @@ export const shido: Chain = {
         address: 'https://tendermint.shidoscan.com',
         provider: 'Shido',
       },
+      {
+        address: 'https://shidochain_mainnet_rpc.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
     rest: [
       {
         address: 'https://swagger.shidoscan.com',
         provider: 'Shido',
+      },
+      {
+        address: 'https://shidochain_mainnet_api.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
     ],
     grpc: [
@@ -155,6 +163,10 @@ export const shido: Chain = {
         address: 'https://rpc-delta-nodes.shidoscan.com',
         provider: 'Shido',
       },
+      {
+        address: 'https://shidochain_mainnet_evm.chain.whenmoonwhenlambo.money',
+        provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
     ],
   },
   explorers: [
@@ -163,6 +175,13 @@ export const shido: Chain = {
       url: 'https://shidoscan.com',
       tx_page: 'https://shidoscan.com/tx/${txHash}',
       account_page: 'https://shidoscan.com/address/${accountAddress}',
+    },
+    {
+      kind: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      url: 'https://explorer.whenmoonwhenlambo.money/shido',
+      tx_page: 'https://explorer.whenmoonwhenlambo.money/shido/tx/${txHash}',
+      account_page:
+        'https://explorer.whenmoonwhenlambo.money/shido/account/${accountAddress}',
     },
   ],
   images: [
@@ -173,7 +192,7 @@ export const shido: Chain = {
   ],
 };
 
-export const shidoAssetList: AssetLists = {
+export const shidoAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'shido',
   assets: [

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const source: Chain = {
   $schema: '../chain.schema.json',
@@ -281,7 +281,7 @@ export const source: Chain = {
       },
       {
         address: 'http://source.api.staking-explorer.com',
-        provider: 'Daily DROP',
+        provider: 'Daily DROP | 2% Fee',
       },
       {
         address: 'https://source.declab.pro:443',
@@ -439,7 +439,7 @@ export const source: Chain = {
   },
 };
 
-export const sourceAssetList: AssetLists = {
+export const sourceAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'source',
   assets: [

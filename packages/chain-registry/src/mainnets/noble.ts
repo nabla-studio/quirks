@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const noble: Chain = {
   $schema: '../chain.schema.json',
@@ -44,8 +44,8 @@ export const noble: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/strangelove-ventures/noble',
-    recommended_version: 'v4.0.3',
-    compatible_versions: ['v4.0.3'],
+    recommended_version: 'v4.1.2',
+    compatible_versions: ['v4.1.2'],
     cosmos_sdk_version: 'v0.45.16',
     consensus: {
       type: 'cometbft',
@@ -138,6 +138,22 @@ export const noble: Chain = {
         cosmwasm_enabled: false,
         ibc_go_version: 'v4.5.1',
         ics_enabled: ['ics20-1'],
+        next_version_name: 'fusion',
+      },
+      {
+        name: 'fusion',
+        tag: 'v4.1.2',
+        height: 5797500,
+        recommended_version: 'v4.1.2',
+        compatible_versions: ['v4.1.2'],
+        cosmos_sdk_version: 'v0.45.16',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.34.27',
+        },
+        cosmwasm_enabled: false,
+        ibc_go_version: 'v4.5.1',
+        ics_enabled: ['ics20-1'],
         next_version_name: '',
       },
     ],
@@ -221,7 +237,7 @@ export const noble: Chain = {
   ],
 };
 
-export const nobleAssetList: AssetLists = {
+export const nobleAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'noble',
   assets: [

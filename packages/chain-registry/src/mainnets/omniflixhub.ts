@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const omniflixhub: Chain = {
   $schema: '../chain.schema.json',
@@ -14,10 +14,10 @@ export const omniflixhub: Chain = {
   slip44: 118,
   codebase: {
     git_repo: 'https://github.com/OmniFlix/omniflixhub',
-    recommended_version: 'v3.3.0',
-    compatible_versions: ['v3.3.0'],
+    recommended_version: '4.0.0',
+    compatible_versions: ['v4.0.0'],
     cosmos_sdk_version: 'v0.47.10',
-    ibc_go_version: 'v7.3.2',
+    ibc_go_version: 'v7.4.0',
     consensus: {
       type: 'cometbft',
       version: 'v0.37.4',
@@ -118,6 +118,21 @@ export const omniflixhub: Chain = {
         compatible_versions: ['v3.3.0'],
         cosmos_sdk_version: 'v0.47.10',
         ibc_go_version: 'v7.3.2',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'v0.45.0',
+        next_version_name: 'v4',
+      },
+      {
+        name: 'v4',
+        proposal: 36,
+        height: 11914000,
+        recommended_version: 'v4.0.0',
+        compatible_versions: ['v4.0.0'],
+        cosmos_sdk_version: 'v0.47.10',
+        ibc_go_version: 'v7.3.4',
         consensus: {
           type: 'cometbft',
           version: 'v0.37.4',
@@ -315,8 +330,8 @@ export const omniflixhub: Chain = {
         provider: 'Daksha Validator',
       },
       {
-        address: 'http://omniflix.api.staking-explorer.com',
-        provider: 'Daily DROP',
+        address: 'https://omniflix.api.staking-explorer.com',
+        provider: 'Daily DROP | 1% Fee',
       },
       {
         address: 'https://api.omniflix.stakeup.tech',
@@ -428,7 +443,7 @@ export const omniflixhub: Chain = {
   ],
 };
 
-export const omniflixhubAssetList: AssetLists = {
+export const omniflixhubAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'omniflixhub',
   assets: [

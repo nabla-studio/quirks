@@ -15,7 +15,7 @@ export interface CosmosWallet {
   website?: string;
   git_repo?: string;
   supported_chains: string[];
-  connection_type?: 'browser_extension' | 'wallet_connect';
+  connection_type?: 'browser_extension' | 'wallet_connect' | 'cosmiframe';
   features?: ('suggest_chain' | 'get_supported_chains' | 'icns')[];
   platforms: {
     device: 'mobile' | 'tablet' | 'desktop' | 'other';

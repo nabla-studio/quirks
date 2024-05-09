@@ -1,6 +1,6 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
-export const osmosisVersions: ChainVersions = {
+export const osmosisVersions: Versions = {
   $schema: '../versions.schema.json',
   chain_name: 'osmosis',
   versions: [
@@ -921,7 +921,7 @@ export const osmosis: Chain = {
   keywords: ['dex'],
 };
 
-export const osmosisAssetList: AssetLists = {
+export const osmosisAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'osmosis',
   assets: [
@@ -11241,6 +11241,10 @@ export const osmosisAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/amposmo.png',
         },
       ],
+      socials: {
+        website: 'https://www.erisprotocol.com/',
+        twitter: 'https://twitter.com/eris_protocol',
+      },
     },
     {
       description: 'The native staking token of Sei.',
@@ -15704,6 +15708,7 @@ export const osmosisAssetList: AssetLists = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/sail.png',
         },
       ],
+      coingecko_id: 'sail-dao',
       socials: {
         website:
           'https://daodao.zone/dao/osmo106tvcj58rvdn9k36m9m3xcmcwk2c3fgft3ldcst9lgy05gcmjanqexru3h/home',
@@ -15969,7 +15974,7 @@ export const osmosisAssetList: AssetLists = {
       denom_units: [
         {
           denom:
-            'ibc/D3FAF77F5DE21C18413B164751239BA7D521A9D8EA53BFE553AADF338A721480',
+            'ibc/044B7B28AFE93CEC769CF529ADC626DA09EA0EFA3E0E3284D540E9E00E01E24A',
           exponent: 0,
           aliases: ['acvnt'],
         },
@@ -15979,7 +15984,7 @@ export const osmosisAssetList: AssetLists = {
         },
       ],
       type_asset: 'ics20',
-      base: 'ibc/D3FAF77F5DE21C18413B164751239BA7D521A9D8EA53BFE553AADF338A721480',
+      base: 'ibc/044B7B28AFE93CEC769CF529ADC626DA09EA0EFA3E0E3284D540E9E00E01E24A',
       name: 'ConsciousDAO',
       display: 'cvnt',
       symbol: 'CVN',
@@ -15989,11 +15994,11 @@ export const osmosisAssetList: AssetLists = {
           counterparty: {
             chain_name: 'conscious',
             base_denom: 'acvnt',
-            channel_id: 'channel-5',
+            channel_id: 'channel-6',
           },
           chain: {
-            channel_id: 'channel-35264',
-            path: 'transfer/channel-35264/acvnt',
+            channel_id: 'channel-73971',
+            path: 'transfer/channel-73971/acvnt',
           },
         },
       ],
@@ -16686,7 +16691,7 @@ export const osmosisAssetList: AssetLists = {
       ],
       keywords: ['memecoin', 'osmosis_unlisted'],
       socials: {
-        webiste: 'https://www.ibcmeme.wtf',
+        website: 'https://www.ibcmeme.wtf',
         twitter: 'https://twitter.com/IBCmemecoin',
       },
     },
@@ -17103,6 +17108,276 @@ export const osmosisAssetList: AssetLists = {
       images: [
         {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/BRNZ.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'Bernese Mountain Dog. Thematic dog token to have fun and be friends with all other dog tokens. Fixed supply 132M',
+      denom_units: [
+        {
+          denom: 'factory/osmo1s6ht8qrm8x0eg8xag5x3ckx9mse9g4se248yss/BERNESE',
+          exponent: 0,
+        },
+        {
+          denom: 'BERNESE',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'sdk.coin',
+      address: 'osmo1s6ht8qrm8x0eg8xag5x3ckx9mse9g4se248yss',
+      base: 'factory/osmo1s6ht8qrm8x0eg8xag5x3ckx9mse9g4se248yss/BERNESE',
+      name: 'BERNESE',
+      display: 'BERNESE',
+      symbol: 'BERNESE',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/bernese.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/bernese.png',
+        },
+      ],
+    },
+    {
+      description:
+        'wLibra is a bridged version of Libra Coin from 0L Network via LibraBridge.',
+      extended_description:
+        "Libra Coin is a fork from Facebook's Diem (Libra) blockchain that was announced in 2019. Libra Coin operates on its own high-performance Layer 1 blockchain, known as the 0L Network. In October 2021, Libra Coin began mining.\n\n Like Bitcoin, there were no pre-mined coins or dedicated token allocation to any parties; all coins were minted through a mining process. Unlike Bitcoin, which undergoes continuous issuance, Libra Coin has a fixed supply. By December 2023, all the Libra Coin had been issued, establishing a capped supply and making the coin permanently deflationary.\n\n Fiercely independent, the project has a long-term view because it is unburdened by venture capital funding, labs entities, a foundation, and the influence of other blockchain ecosystems. Carpe diem.",
+      denom_units: [
+        {
+          denom: 'factory/osmo19hdqma2mj0vnmgcxag6ytswjnr8a3y07q7e70p/wLIBRA',
+          exponent: 0,
+        },
+        {
+          denom: 'wLIBRA',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'sdk.coin',
+      address: 'osmo19hdqma2mj0vnmgcxag6ytswjnr8a3y07q7e70p',
+      base: 'factory/osmo19hdqma2mj0vnmgcxag6ytswjnr8a3y07q7e70p/wLIBRA',
+      name: 'Wrapped Libra Coin',
+      display: 'wLIBRA',
+      symbol: 'wLIBRA',
+      traces: [
+        {
+          type: 'bridge',
+          counterparty: {
+            chain_name: '0l',
+            base_denom: 'microlibra',
+          },
+          provider: 'LibraBridge',
+        },
+      ],
+      logo_URIs: {
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/0l/images/libra.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/0l/images/libra.png',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: '0l',
+            base_denom: 'microlibra',
+          },
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/0l/images/libra.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/0l/images/libra.png',
+        },
+      ],
+      socials: {
+        website: 'https://0l.network/',
+        twitter: 'https://twitter.com/0LNetwork',
+      },
+    },
+    {
+      description: 'ashLAB - Burned LAB',
+      extended_description:
+        'ashLAB - reciept token recieved when burning LAB via ASH DAOs Furnace',
+      denom_units: [
+        {
+          denom:
+            'factory/osmo1svj5kd8kzj7xxtrd6ftjk0856ffpyj4egz7f9pd9dge5wr4kwansmefq07/lab.ash',
+          exponent: 0,
+        },
+        {
+          denom: 'ashLAB',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'sdk.coin',
+      address:
+        'osmo1svj5kd8kzj7xxtrd6ftjk0856ffpyj4egz7f9pd9dge5wr4kwansmefq07',
+      base: 'factory/osmo1svj5kd8kzj7xxtrd6ftjk0856ffpyj4egz7f9pd9dge5wr4kwansmefq07/lab.ash',
+      name: 'Burned LAB',
+      display: 'ashLAB',
+      symbol: 'ashLAB',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ashLAB.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/ashLAB.png',
+        },
+      ],
+    },
+    {
+      description: 'The native token of Nim Network.',
+      extended_description:
+        'Nim Network is a highly-adoptable AI Gaming chain that will provide the ultimate ecosystem for exploration and development of games at the intersection of Web3 and AI.',
+      denom_units: [
+        {
+          denom:
+            'ibc/279D69A6EF8E37456C8D2DC7A7C1C50F7A566EC4758F6DE17472A9FDE36C4426',
+          exponent: 0,
+          aliases: [
+            'anim',
+            'ibc/FB53D1684F155CBB86D9CE917807E42B59209EBE3AD3A92E15EF66586C073942',
+          ],
+        },
+        {
+          denom: 'nim',
+          exponent: 18,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/279D69A6EF8E37456C8D2DC7A7C1C50F7A566EC4758F6DE17472A9FDE36C4426',
+      name: 'NIM Network',
+      display: 'nim',
+      symbol: 'NIM',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'dymension',
+            base_denom:
+              'ibc/FB53D1684F155CBB86D9CE917807E42B59209EBE3AD3A92E15EF66586C073942',
+            channel_id: 'channel-2',
+          },
+          chain: {
+            channel_id: 'channel-19774',
+            path: 'transfer/channel-19774/transfer/channel-49/anim',
+          },
+        },
+      ],
+      images: [
+        {
+          image_sync: {
+            chain_name: 'dymension',
+            base_denom:
+              'ibc/FB53D1684F155CBB86D9CE917807E42B59209EBE3AD3A92E15EF66586C073942',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nim/images/nim.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nim/images/nim.svg',
+        },
+      ],
+      socials: {
+        website: 'https://ai.nim.network/',
+        twitter: 'https://twitter.com/nim_network',
+      },
+      keywords: ['gaming', 'AI'],
+    },
+    {
+      description: 'Beer Is Good for You!',
+      denom_units: [
+        {
+          denom:
+            'factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/bwh',
+          exponent: 0,
+        },
+        {
+          denom: 'bwh',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'sdk.coin',
+      address:
+        'osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8',
+      base: 'factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/bwh',
+      name: 'BeerWifHat',
+      display: 'bwh',
+      symbol: 'BWH',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/bwh.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/bwh.png',
+        },
+      ],
+    },
+    {
+      description: 'Cosmos Airdrop Chat',
+      extended_description: 'Official Token of the Cosmos Airdrop community',
+      denom_units: [
+        {
+          denom:
+            'factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/cac',
+          exponent: 0,
+        },
+        {
+          denom: 'CAC',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'sdk.coin',
+      address:
+        'osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8',
+      base: 'factory/osmo1q77cw0mmlluxu0wr29fcdd0tdnh78gzhkvhe4n6ulal9qvrtu43qtd0nh8/cac',
+      name: 'Cosmos Airdrop Chat',
+      display: 'CAC',
+      symbol: 'CAC',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CAC.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/CAC.png',
+        },
+      ],
+    },
+    {
+      description:
+        "GRAC is the official token of Racoon.Bet's gaming platform.",
+      denom_units: [
+        {
+          denom:
+            'ibc/58E4261D2E21FE3A459C290A9F97F3DCD257B28F48AAE828298B38E048804829',
+          exponent: 0,
+          aliases: [
+            'factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/ugrac',
+          ],
+        },
+        {
+          denom: 'grac',
+          exponent: 6,
+        },
+      ],
+      type_asset: 'ics20',
+      base: 'ibc/58E4261D2E21FE3A459C290A9F97F3DCD257B28F48AAE828298B38E048804829',
+      name: 'Gaming RAC Token',
+      display: 'grac',
+      symbol: 'GRAC',
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'migaloo',
+            base_denom:
+              'factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/ugrac',
+            channel_id: 'channel-5',
+          },
+          chain: {
+            channel_id: 'channel-642',
+            path: 'transfer/channel-642/factory/migaloo1eqntnl6tzcj9h86psg4y4h6hh05g2h9nj8e09l/ugrac',
+          },
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/grac.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/migaloo/images/grac.png',
         },
       ],
     },

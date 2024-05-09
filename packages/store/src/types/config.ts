@@ -1,16 +1,16 @@
-import type { AssetLists, Chain } from '@nabla-studio/chain-registry';
+import type { AssetList, Chain } from '@nabla-studio/chain-registry';
 import type { Wallet } from '@quirks/core';
 
 export interface ConfigState {
   wallets: Wallet[];
   chains: Chain[];
-  assetsLists: AssetLists[];
+  assetsLists: AssetList[];
 }
 
 export interface ConfigActions {
   getChain: (chainName: string) => Chain | undefined;
   setChains: (chains: Chain[]) => void;
-  setAssetsLists: (assetsLists: AssetLists[]) => void;
+  setAssetsLists: (assetsLists: AssetList[]) => void;
   setWallets: (wallets: Wallet[]) => void;
 }
 

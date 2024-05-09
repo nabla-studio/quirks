@@ -18,8 +18,9 @@
     "@quirks/core": "*",
     "@nabla-studio/chain-registry": "*",
     "@nabla-studio/wallet-registry": "*",
-    "@keplr-wallet/types": "^0.12.38",
+    "@keplr-wallet/types": "^0.12.86",
     "@cosmostation/extension-client": "^0.1.15",
+    "@dao-dao/cosmiframe": "^0.1.0",
     "base64-js": "^1.5.1"
   },
   "peerDependencies": {

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const evmos: Chain = {
   $schema: '../chain.schema.json',
@@ -442,6 +442,10 @@ export const evmos: Chain = {
         address: 'https://rpc.evmos.bronbro.io:443',
         provider: 'Bro_n_Bro',
       },
+      {
+        address: 'https://rpc.evmos.citizenweb3.com:443',
+        provider: 'Citizen Web3',
+      },
     ],
     rest: [
       {
@@ -753,7 +757,7 @@ export const evmos: Chain = {
   ],
 };
 
-export const evmosAssetList: AssetLists = {
+export const evmosAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'evmos',
   assets: [
@@ -837,6 +841,8 @@ export const evmosAssetList: AssetLists = {
     },
     {
       description: 'The token of Neokingdom DAO.',
+      extended_description:
+        'Neokingdom DAO wants to make employment fairer, by facilitating both web3 and real-world businesses to operate as Decentralized Autonomous Organizations (DAOs).',
       denom_units: [
         {
           denom: 'erc20/0x655ecB57432CC1370f65e5dc2309588b71b473A9',
@@ -861,6 +867,10 @@ export const evmosAssetList: AssetLists = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/neok.svg',
         },
       ],
+      socials: {
+        website: 'https://www.neokingdom.org/',
+        twitter: 'https://twitter.com/NEOKingdomDAO',
+      },
     },
     {
       description: 'The token of Teledisko DAO.',

@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const nobletestnet: Chain = {
   $schema: '../chain.schema.json',
@@ -173,8 +173,8 @@ export const nobletestnet: Chain = {
   explorers: [
     {
       kind: 'mintscan',
-      url: 'https://testnet.mintscan.io/noble-testnet',
-      tx_page: 'https://testnet.mintscan.io/noble-testnet/txs/${txHash}',
+      url: 'https://mintscan.io/noble-testnet',
+      tx_page: 'https://mintscan.io/noble-testnet/txs/${txHash}',
     },
     {
       kind: 'ping.pub',
@@ -184,7 +184,7 @@ export const nobletestnet: Chain = {
   ],
 };
 
-export const nobletestnetAssetList: AssetLists = {
+export const nobletestnetAssetList: AssetList = {
   $schema: '../../assetlist.schema.json',
   chain_name: 'nobletestnet',
   assets: [

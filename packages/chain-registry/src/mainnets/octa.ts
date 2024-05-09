@@ -1,4 +1,4 @@
-import type { Chain, AssetLists, ChainVersions } from '../types';
+import type { Chain, AssetList, Versions } from '../types';
 
 export const octa: Chain = {
   $schema: '../chain.schema.json',
@@ -21,15 +21,7 @@ export const octa: Chain = {
     ],
   },
   codebase: {
-    git_repo: '',
-    recommended_version: '',
     compatible_versions: [],
-    binaries: {
-      'linux/amd64': '',
-      'linux/arm64': '',
-      'darwin/amd64': '',
-      'windows/amd64': '',
-    },
     genesis: {
       genesis_url:
         'https://octa-coin-assets.s3.eu-central-1.amazonaws.com/genesis.json',
@@ -62,7 +54,7 @@ export const octa: Chain = {
   ],
 };
 
-export const octaAssetList: AssetLists = {
+export const octaAssetList: AssetList = {
   $schema: '../assetlist.schema.json',
   chain_name: 'octa',
   assets: [

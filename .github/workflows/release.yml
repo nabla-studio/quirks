@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   test:
@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node_version: [18]
+        node_version: [20.12.0]
 
     steps:
       - uses: actions/checkout@v4
