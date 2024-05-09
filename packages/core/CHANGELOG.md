@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.16.0](https://github.com/nabla-studio/quirks/compare/core@0.15.3...core@0.16.0) (2024-05-09)
+
+### Dependency Updates
+
+* `chain-registry` updated to version `0.15.3`
+* `wallet-registry` updated to version `0.15.3`
+
+### Features
+
+* **core:** :label: add new chain-registry types ([6a0e8a7](https://github.com/nabla-studio/quirks/commit/6a0e8a752442ae48d3af3853a7e930c458dc2ef5))
+
 ## [0.15.3](https://github.com/nabla-studio/quirks/compare/core@0.15.2...core@0.15.3) (2024-04-17)
 
 ### Dependency Updates
