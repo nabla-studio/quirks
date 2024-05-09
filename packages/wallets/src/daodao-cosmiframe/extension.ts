@@ -2,6 +2,7 @@ import { type WalletOptions } from '@quirks/core';
 import { Cosmiframe } from '@dao-dao/cosmiframe';
 import { KeplrWalletExtension } from '../keplr/extension';
 import type { Keplr } from '@keplr-wallet/types';
+import type { AccountData, Algo } from '@cosmjs/amino';
 
 export class DAODAOCosmiframe extends KeplrWalletExtension {
   cosmiframe!: Cosmiframe;
@@ -54,5 +55,22 @@ export class DAODAOCosmiframe extends KeplrWalletExtension {
     return undefined;
   }
 
+  override async getSignerAccount(chainId: string): Promise<AccountData> {
+    const key = (await this.getAccount(chainId)) as Awaited<
+      ReturnType<typeof this.getAccount>
+    > & { pubkey: Uint8Array };
+
+    return {
+      address: key.bech32Address,
+      algo: key.algo as Algo,
+      /**
+       * Seems like that cosmiframe use a lowercase pubkey instead of a camelCase
+       */
+      pubkey: key.pubkey,
+    };
+  }
+
   override async suggestChains(): Promise<void> {}
+
+  override async disable(): Promise<void> {}
 }
