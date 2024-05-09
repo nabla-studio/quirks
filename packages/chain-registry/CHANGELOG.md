@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.14.0](https://github.com/nabla-studio/quirks/compare/chain-registry@0.13.0...chain-registry@0.14.0) (2024-05-09)
+
+
+### Features
+
+* **chain-registry:** :label: update registry types ([01544b9](https://github.com/nabla-studio/quirks/commit/01544b9d6b2dd37a40378986c6e8508ef08d805a))
+* **chain-registry:** :sparkles: add new ibc data exports ([d1ed0bb](https://github.com/nabla-studio/quirks/commit/d1ed0bb909ba1f5ccc25d89ca27fd0058e8d1fc1))
+* **chain-registry:** :sparkles: add new ibc data generation ([68ad3e4](https://github.com/nabla-studio/quirks/commit/68ad3e4422c88fe399c8ad06e3b0e399cba50196))
+* **chain-registry:** :sparkles: bump registry data ([a851952](https://github.com/nabla-studio/quirks/commit/a851952d25ef5aea3a38f45eb53101e303f29d31))
+* **chain-registry:** :sparkles: change generation script types ([bdbb54a](https://github.com/nabla-studio/quirks/commit/bdbb54a2571fbeb45de5d1596aa3db304138c7ea))
+
 ## [0.13.0](https://github.com/nabla-studio/quirks/compare/chain-registry@0.12.0...chain-registry@0.13.0) (2024-04-17)
 
 
