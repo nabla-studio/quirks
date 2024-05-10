@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.24.0](https://github.com/nabla-studio/quirks/compare/store@0.23.0...store@0.24.0) (2024-05-10)
+
+
+### Features
+
+* **store:** add fee multiplier param to sign and signCW ([bcf6725](https://github.com/nabla-studio/quirks/commit/bcf672579a9dddedb32af9458cd95592a4bcb67b))
+
 ## [0.23.0](https://github.com/nabla-studio/quirks/compare/store@0.22.3...store@0.23.0) (2024-05-09)
 
 ### Dependency Updates
