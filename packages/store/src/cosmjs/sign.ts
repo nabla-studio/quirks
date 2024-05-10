@@ -180,6 +180,7 @@ export const sign = async (
   memo?: string,
   explicitSignerData?: SignerData,
   timeoutHeight?: bigint,
+  feeMultiplier: number = 1.4,
 ): Promise<TxRaw> => {
   const state = store.getState();
   assertIsDefined(state.wallet, 'wallet is undefined');
@@ -218,7 +219,14 @@ export const sign = async (
       gasPrice = await getGasPrice(chain);
     }
 
-    fee = await estimateFee(client, sender, messages, gasPrice, memo);
+    fee = await estimateFee(
+      client,
+      sender,
+      messages,
+      gasPrice,
+      memo,
+      feeMultiplier,
+    );
   }
 
   openWCDeeplink(state.wallet, state.openDeeplink);
@@ -250,6 +258,7 @@ export const signCW = async (
   memo?: string,
   explicitSignerData?: SignerData,
   timeoutHeight?: bigint,
+  feeMultiplier: number = 1.4,
 ): Promise<TxRaw> => {
   const state = store.getState();
   assertIsDefined(state.wallet);
@@ -290,7 +299,14 @@ export const signCW = async (
       gasPrice = await getGasPrice(chain);
     }
 
-    fee = await estimateFee(client, sender, messages, gasPrice, memo);
+    fee = await estimateFee(
+      client,
+      sender,
+      messages,
+      gasPrice,
+      memo,
+      feeMultiplier,
+    );
   }
 
   openWCDeeplink(state.wallet, state.openDeeplink);
