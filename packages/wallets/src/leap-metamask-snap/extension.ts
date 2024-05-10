@@ -22,7 +22,6 @@ import type {
 } from '@cosmjs/proto-signing';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { LeapMetamaskSnap } from './types';
-import Long from 'long';
 import { getChainInfo } from '../utils';
 
 export class LeapMetamaskSnapWalletExtension extends ExtensionWallet<LeapMetamaskSnap> {
@@ -184,18 +183,7 @@ export class LeapMetamaskSnapWalletExtension extends ExtensionWallet<LeapMetamas
       cosmosSnapProvider.requestSignature ??
       cosmosSnapProvider.default.requestSignature;
 
-    const signResponse = await requestSignature(chainId, signer, {
-      ...signDoc,
-      accountNumber: Long.fromString(signDoc.accountNumber.toString()),
-    });
-
-    return {
-      ...signResponse,
-      signed: {
-        ...signResponse.signed,
-        accountNumber: BigInt(signResponse.signed.accountNumber.toString()),
-      },
-    };
+    return requestSignature(chainId, signer, signDoc);
   }
 
   override async signArbitrary(
