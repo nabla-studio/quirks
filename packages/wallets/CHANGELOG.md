@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.18.0](https://github.com/nabla-studio/quirks/compare/wallets@0.17.0...wallets@0.18.0) (2024-05-10)
+
+
+### Features
+
+* **wallets:** :sparkles: remove long dep ([95edd48](https://github.com/nabla-studio/quirks/commit/95edd4849f26b945070bc42bd1d057641d7530fe))
+
 ## [0.17.0](https://github.com/nabla-studio/quirks/compare/wallets@0.16.2...wallets@0.17.0) (2024-05-09)
 
 ### Dependency Updates
