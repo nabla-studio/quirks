@@ -100,4 +100,4 @@ Thanks to the creators and contributors of the following projects, whose work ha
 
 - [Cosmos Kit](https://github.com/cosmology-tech/cosmos-kit) by [Cosmology Tech](https://github.com/cosmology-tech)
 
-Copyright © 2023 [nabla](https://github.com/nabla-studio).
+Copyright © 2024 [nabla](https://github.com/nabla-studio).
