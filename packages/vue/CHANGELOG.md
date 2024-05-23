@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.12.0](https://github.com/nabla-studio/quirks/compare/vue@0.11.9...vue@0.12.0) (2024-05-23)
+
+
+### Features
+
+* **vue:** :sparkles: add MaybeRefOrGetter support ([dd8f01b](https://github.com/nabla-studio/quirks/commit/dd8f01b94d03fb22a9b69e00863b82483c665109))
+
 ## [0.11.9](https://github.com/nabla-studio/quirks/compare/vue@0.11.8...vue@0.11.9) (2024-05-10)
 
 ### Dependency Updates
