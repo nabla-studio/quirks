@@ -1,7 +1,7 @@
 import { useQuirks } from './quirks';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { StdSignDoc } from '@cosmjs/amino';
-import { computed } from 'vue';
+import { computed, toValue, type MaybeRefOrGetter } from 'vue';
 
 export const useChains = () => {
   const state = useQuirks()((state) => state);
@@ -20,12 +20,12 @@ export const useChains = () => {
   };
 };
 
-export const useChain = (chainName: string) => {
+export const useChain = (chainName: MaybeRefOrGetter<string>) => {
   const state = useQuirks()((state) => state);
   const chains = computed(() => state.chains.value);
   const assetsList = computed(() =>
     state.assetsLists.value.find(
-      (assetList) => assetList.chain_name === chainName,
+      (assetList) => assetList.chain_name === toValue(chainName),
     ),
   );
   const accounts = computed(() => state.accounts.value);
@@ -41,7 +41,7 @@ export const useChain = (chainName: string) => {
   const signDirect = useQuirks()((state) => state.signDirect);
 
   const chain = computed(() =>
-    chains.value.find((c) => c.chain_name === chainName),
+    chains.value.find((c) => c.chain_name === toValue(chainName)),
   );
 
   const account = computed(() =>

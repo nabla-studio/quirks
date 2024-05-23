@@ -1,52 +1,17 @@
 <script setup lang="ts">
-import {
-  useConnect,
-  useConfig,
-  useChains,
-  useChain,
-  useWalletConnect,
-} from '@quirks/vue';
-import VueQrcode from 'vue-qrcode';
+import { useConnect, useConfig, useChains, useChain } from '@quirks/vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
 
 const { wallets } = useConfig();
 const { accounts } = useChains();
-const { address } = useChain('osmosis');
+const { address } = useChain((route.params.chain as string) ?? 'osmosis');
 const { connect, disconnect, connected, status, walletName, connecting } =
   useConnect();
-const { pairingURI } = useWalletConnect();
 
 const open = async (chainName: string) => {
   await connect(chainName);
-};
-
-const send = async () => {
-  const cosmos = (await import('stargazejs')).cosmos;
-  const sign = (await import('@quirks/store')).sign;
-  const getAddress = (await import('@quirks/store')).getAddress;
-  const { send } = cosmos.bank.v1beta1.MessageComposer.withTypeUrl;
-
-  const address = getAddress('osmosis');
-
-  const msg = send({
-    amount: [
-      {
-        denom: 'uosmo',
-        amount: '1',
-      },
-    ],
-    toAddress: address,
-    fromAddress: address,
-  });
-
-  console.log(msg);
-
-  const txRaw = await sign('osmosis', [msg]);
-
-  const broadcast = (await import('@quirks/store')).broadcast;
-
-  const res = await broadcast('osmosis', txRaw);
-
-  console.log(res);
 };
 </script>
 
@@ -56,12 +21,6 @@ const send = async () => {
     {{ connecting }}
     <button @click="disconnect" v-if="connected">DISCONNECT</button>
     <div v-else>
-      <VueQrcode
-        v-if="pairingURI"
-        :value="pairingURI.value ?? ''"
-        type="image/png"
-        :color="{ dark: '#000000ff', light: '#ffffffff' }"
-      />
       <div v-for="wallet in wallets" :key="wallet.options.wallet_name">
         <button @click="open(wallet.options.wallet_name)">
           <img
@@ -91,7 +50,6 @@ const send = async () => {
       STATUS: {{ status }} ADDRESS: {{ address }}
       <div v-if="connected">
         Addresses:
-        <button @click="send">SIGN</button>
         <div v-for="account in accounts" :key="account.chainId">
           <div>Chain ID: {{ account.chainId }}</div>
 
