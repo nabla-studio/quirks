@@ -135,10 +135,10 @@ export const osmosistestnet: Chain = {
   explorers: [
     {
       kind: 'mintscan',
-      url: 'https://testnet.mintscan.io/osmosis-testnet',
-      tx_page: 'https://testnet.mintscan.io/osmosis-testnet/txs/${txHash}',
+      url: 'https://mintscan.io/osmosis-testnet',
+      tx_page: 'https://mintscan.io/osmosis-testnet/txs/${txHash}',
       account_page:
-        'https://testnet.mintscan.io/osmosis-testnet/account/${accountAddress}',
+        'https://mintscan.io/osmosis-testnet/account/${accountAddress}',
     },
     {
       kind: 'ping.pub',
@@ -262,6 +262,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'cosmoshubtestnet',
+            base_denom: 'uatom',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
         },
@@ -429,6 +433,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'junotestnet',
+            base_denom: 'ujunox',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/junotestnet/images/juno.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/junotestnet/images/juno.svg',
         },
@@ -473,6 +481,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'marstestnet',
+            base_denom: 'umars',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mars/images/mars-token.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mars/images/mars-token.svg',
         },
@@ -540,6 +552,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'nobletestnet',
+            base_denom: 'uusdc',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
         },
       ],
@@ -584,6 +600,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'akashtestnet',
+            base_denom: 'uakt',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/akash/images/akt.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/akash/images/akt.svg',
         },
@@ -685,6 +705,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'quicksilvertestnet',
+            base_denom: 'uqck',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/quicksilver/images/qck.png',
         },
       ],
@@ -727,6 +751,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'chain4energytestnet',
+            base_denom: 'uc4e',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/chain4energytestnet/images/c4e.png',
         },
       ],
@@ -771,6 +799,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'persistencetestnet2',
+            base_denom: 'uxprt',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/xprt.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/persistence/images/xprt.svg',
         },
@@ -815,6 +847,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'xiontestnet',
+            base_denom: 'uxion',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/xion/images/burnt-round.png',
         },
       ],
@@ -859,6 +895,10 @@ export const osmosistestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'sagatestnet',
+            base_denom: 'utsaga',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/saga/images/saga.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/saga/images/saga.svg',
         },
@@ -944,6 +984,56 @@ export const osmosistestnetAssetList: AssetList = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/osmosistestnet/images/willyz.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'The yield token for ATOM denominated vaults on Amulet Protocol',
+      denom_units: [
+        {
+          denom:
+            'ibc/E972F89F57AF6BDE0CCC97CABFF4DD8D99408B8A741570E1E3D1C35465C98E5E',
+          exponent: 0,
+        },
+        {
+          denom: 'amATOM',
+          exponent: 6,
+        },
+      ],
+      base: 'ibc/E972F89F57AF6BDE0CCC97CABFF4DD8D99408B8A741570E1E3D1C35465C98E5E',
+      name: 'amATOM (Testnet)',
+      display: 'amATOM',
+      symbol: 'amATOM',
+      type_asset: 'ics20',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/amATOM.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/amATOM.svg',
+      },
+      images: [
+        {
+          image_sync: {
+            chain_name: 'neutrontestnet',
+            base_denom:
+              'factory/neutron15lku24mqhvy4v4gryrqs4662n9v9q4ux9tayn89cmdzldjcgawushxvm76/amatom',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/amATOM.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/amATOM.svg',
+        },
+      ],
+      traces: [
+        {
+          type: 'ibc',
+          counterparty: {
+            chain_name: 'neutrontestnet',
+            base_denom:
+              'factory/neutron15lku24mqhvy4v4gryrqs4662n9v9q4ux9tayn89cmdzldjcgawushxvm76/amatom',
+            channel_id: 'channel-787',
+          },
+          chain: {
+            channel_id: 'channel-7884',
+            path: 'transfer/channel-7884/factory/neutron15lku24mqhvy4v4gryrqs4662n9v9q4ux9tayn89cmdzldjcgawushxvm76/amatom',
+          },
         },
       ],
     },

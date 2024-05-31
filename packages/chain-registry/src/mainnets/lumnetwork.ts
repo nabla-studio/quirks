@@ -33,27 +33,27 @@ export const lumnetwork: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/lum-network/chain',
-    recommended_version: 'v1.6.5',
-    compatible_versions: ['v1.6.5'],
-    cosmos_sdk_version: 'v0.47.5',
-    ibc_go_version: 'v7.2.0',
+    recommended_version: 'v1.6.6',
+    compatible_versions: ['v1.6.6'],
+    cosmos_sdk_version: 'v0.47.11',
+    ibc_go_version: 'v7.4.0',
     consensus: {
       type: 'cometbft',
-      version: 'v0.37.2',
+      version: 'v0.37.5',
     },
     binaries: {
       'linux/amd64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_ubuntu-latest_amd64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_ubuntu-latest_amd64.zip',
       'linux/arm64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_ubuntu-latest_arm64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_ubuntu-latest_arm64.zip',
       'darwin/amd64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_macos-latest_amd64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_macos-latest_amd64.zip',
       'darwin/arm64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_macos-latest_arm64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_macos-latest_arm64.zip',
       'windows/amd64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_windows-latest_amd64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_windows-latest_amd64.zip',
       'windows/arm64':
-        'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_windows-latest_arm64.zip',
+        'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_windows-latest_arm64.zip',
     },
     genesis: {
       genesis_url:
@@ -211,6 +211,34 @@ export const lumnetwork: Chain = {
             'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_windows-latest_amd64.zip',
           'windows/arm64':
             'https://github.com/lum-network/chain/releases/download/v1.6.5/lumd_windows-latest_arm64.zip',
+        },
+        next_version_name: 'v1.6.6',
+      },
+      {
+        name: 'v1.6.6',
+        proposal: 106,
+        height: 12969000,
+        recommended_version: 'v1.6.6',
+        compatible_versions: ['v1.6.6'],
+        cosmos_sdk_version: 'v0.47.11',
+        ibc_go_version: 'v7.4.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.5',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_ubuntu-latest_amd64.zip',
+          'linux/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_ubuntu-latest_arm64.zip',
+          'darwin/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_macos-latest_amd64.zip',
+          'darwin/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_macos-latest_arm64.zip',
+          'windows/amd64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_windows-latest_amd64.zip',
+          'windows/arm64':
+            'https://github.com/lum-network/chain/releases/download/v1.6.6/lumd_windows-latest_arm64.zip',
         },
         next_version_name: '',
       },

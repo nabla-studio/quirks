@@ -144,6 +144,13 @@ export const nomic: Chain = {
         'https://nomic.zenscan.io/address.php?address=${accountAddress}',
       tx_page: 'https://nomic.zenscan.io/transaction.php?hash=${txHash}',
     },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/nomic',
+      tx_page: 'https://mainnet.whispernode.com/nomic/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/nomic/account/${accountAddress}',
+    },
   ],
   images: [
     {

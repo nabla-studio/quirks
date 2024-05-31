@@ -381,7 +381,7 @@ export const akash: Chain = {
         provider: 'ValidatorNode',
       },
       {
-        address: 'https://lcd-akash.whispernode.com:443',
+        address: 'https://api-akash.whispernode.com:443',
         provider: 'WhisperNode 🤐',
       },
       {
@@ -430,6 +430,10 @@ export const akash: Chain = {
         address: 'https://akash.declab.pro:9001',
         provider: 'Decloud Nodes Lab',
       },
+      {
+        address: 'grpc-akash.whispernode.com:443',
+        provider: 'WhisperNode 🤐',
+      },
     ],
   },
   explorers: [
@@ -475,6 +479,13 @@ export const akash: Chain = {
       kind: 'Decloud Nodes Lab',
       url: 'https://explorer.declab.pro/Akash',
       tx_page: 'https://explorer.declab.pro/Akash/tx/${txHash}',
+    },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/akash',
+      tx_page: 'https://mainnet.whispernode.com/akash/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/akash/account/${accountAddress}',
     },
   ],
   images: [

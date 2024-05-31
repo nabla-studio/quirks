@@ -534,6 +534,13 @@ export const kujira: Chain = {
       tx_page: 'https://atomscan.com/kujira/transactions/${txHash}',
       account_page: 'https://atomscan.com/kujira/accounts/${accountAddress}',
     },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/kujira',
+      tx_page: 'https://mainnet.whispernode.com/kujira/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/kujira/account/${accountAddress}',
+    },
   ],
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kujira-chain-logo.png',
@@ -1136,7 +1143,7 @@ export const kujiraAssetList: AssetList = {
           type: 'ibc',
           counterparty: {
             chain_name: 'axelar',
-            base_denom: 'wawax-wei',
+            base_denom: 'wavax-wei',
             channel_id: 'channel-14',
           },
           chain: {
@@ -1147,6 +1154,10 @@ export const kujiraAssetList: AssetList = {
       ],
       images: [
         {
+          image_sync: {
+            chain_name: 'axelar',
+            base_denom: 'wavax-wei',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/avalanche/images/wavax.svg',
         },
       ],
@@ -1416,6 +1427,10 @@ export const kujiraAssetList: AssetList = {
       ],
       images: [
         {
+          image_sync: {
+            chain_name: 'axelar',
+            base_denom: 'weth-wei',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/axelar/images/weth.png',
         },
       ],
@@ -1502,7 +1517,7 @@ export const kujiraAssetList: AssetList = {
       images: [
         {
           image_sync: {
-            chain_name: 'luna',
+            chain_name: 'terra2',
             base_denom: 'uluna',
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.png',
@@ -1593,7 +1608,7 @@ export const kujiraAssetList: AssetList = {
       images: [
         {
           image_sync: {
-            chain_name: 'scrt',
+            chain_name: 'secretnetwork',
             base_denom: 'uscrt',
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/scrt.png',
@@ -1809,7 +1824,7 @@ export const kujiraAssetList: AssetList = {
           },
           chain: {
             channel_id: 'channel-32',
-            path: 'transfer/channel-32/uatom',
+            path: 'transfer/channel-32/stuatom',
           },
         },
       ],
@@ -1821,7 +1836,7 @@ export const kujiraAssetList: AssetList = {
         {
           image_sync: {
             chain_name: 'stride',
-            base_denom: 'statom',
+            base_denom: 'stuatom',
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.svg',
@@ -1909,6 +1924,10 @@ export const kujiraAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'stride',
+            base_denom: 'stuosmo',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stosmo.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stosmo.svg',
         },
@@ -2893,6 +2912,7 @@ export const kujiraAssetList: AssetList = {
       name: 'NAMI',
       display: 'nami',
       symbol: 'NAMI',
+      coingecko_id: 'nami-protocol',
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nami.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/nami.svg',

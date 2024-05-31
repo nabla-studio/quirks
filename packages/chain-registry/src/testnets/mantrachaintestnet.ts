@@ -63,6 +63,11 @@ export const mantrachaintestnet: Chain = {
         address: 'seed.hongbai.mantrachain.io:26656',
         provider: 'MANTRACHAIN',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -83,11 +88,19 @@ export const mantrachaintestnet: Chain = {
         address: 'https://rpc.hongbai.mantrachain.io',
         provider: 'MANTRACHAIN',
       },
+      {
+        address: 'https://mantra-testnet-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
         address: 'https://api.hongbai.mantrachain.io',
         provider: 'MANTRACHAIN',
+      },
+      {
+        address: 'https://mantra-testnet-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     grpc: [
@@ -95,17 +108,22 @@ export const mantrachaintestnet: Chain = {
         address: 'https://grpc.hongbai.mantrachain.io',
         provider: 'MANTRACHAIN',
       },
+      {
+        address: 'mantra-testnet-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
-  },
-  logo_URIs: {
-    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.png',
-    svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.svg',
   },
   keywords: ['dex', 'testnet'],
   images: [
     {
-      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.png',
-      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.svg',
+      image_sync: {
+        chain_name: 'mantrachain',
+        base_denom: 'uom',
+      },
+      png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mantrachain/images/OM-Prim-Col.png',
+      svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mantrachain/images/OM-Prim-Col.svg',
+      layout: 'logomark',
     },
   ],
 };
@@ -120,23 +138,16 @@ export const mantrachaintestnetAssetList: AssetList = {
         {
           denom: 'uom',
           exponent: 0,
-          aliases: [],
         },
         {
           denom: 'om',
           exponent: 6,
-          aliases: [],
         },
       ],
       base: 'uom',
       name: 'MANTRA Chain',
       display: 'om',
       symbol: 'OM',
-      logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.svg',
-      },
-      coingecko_id: '',
       keywords: [
         'mantra',
         'staking',
@@ -145,10 +156,27 @@ export const mantrachaintestnetAssetList: AssetList = {
         'regulation',
         'defi',
       ],
+      traces: [
+        {
+          type: 'test-mintage',
+          counterparty: {
+            chain_name: 'mantrachain',
+            base_denom: 'uom',
+          },
+          provider: 'MANTRA Chain',
+        },
+      ],
       images: [
         {
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/mantrachaintestnet/images/mantra.svg',
+          image_sync: {
+            chain_name: 'mantrachain',
+            base_denom: 'uom',
+          },
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mantrachain/images/OM-Prim-Col.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/mantrachain/images/OM-Prim-Col.svg',
+          theme: {
+            circle: true,
+          },
         },
       ],
     },

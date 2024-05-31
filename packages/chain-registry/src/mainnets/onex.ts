@@ -124,6 +124,9 @@ export const onex: Chain = {
     },
   ],
   keywords: ['dex'],
+  logo_URIs: {
+    png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/onex/images/onex.png',
+  },
 };
 
 export const onexAssetList: AssetList = {

@@ -133,8 +133,8 @@ export const evmostestnet: Chain = {
   explorers: [
     {
       kind: 'Mintscan',
-      url: 'https://testnet.mintscan.io/evmos-testnet',
-      tx_page: 'https://testnet.mintscan.io/evmos-testnet/txs/${txHash}',
+      url: 'https://mintscan.io/evmos-testnet',
+      tx_page: 'https://mintscan.io/evmos-testnet/txs/${txHash}',
     },
     {
       kind: 'NodesGuru',

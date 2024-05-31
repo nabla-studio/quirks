@@ -716,6 +716,13 @@ export const juno: Chain = {
       account_page:
         'https://explorer.nodeshub.online/juno/accounts/${accountAddress}',
     },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/juno',
+      tx_page: 'https://mainnet.whispernode.com/juno/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/juno/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -863,7 +870,6 @@ export const junoAssetList: AssetList = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/marble.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/marble.svg',
       },
-      coingecko_id: 'marble',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/marble.png',
@@ -896,7 +902,6 @@ export const junoAssetList: AssetList = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hope.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hope.svg',
       },
-      coingecko_id: 'hope-galaxy',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hope.png',
@@ -1020,7 +1025,6 @@ export const junoAssetList: AssetList = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/raw.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/raw.svg',
       },
-      coingecko_id: 'junoswap-raw-dao',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/raw.png',
@@ -1265,7 +1269,6 @@ export const junoAssetList: AssetList = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/sejuno.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/sejuno.svg',
       },
-      coingecko_id: 'stakeeasy-juno-derivative',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/sejuno.png',
@@ -1297,7 +1300,6 @@ export const junoAssetList: AssetList = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/bjuno.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/bjuno.svg',
       },
-      coingecko_id: 'stakeeasy-bjuno',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/bjuno.png',
@@ -1459,6 +1461,8 @@ export const junoAssetList: AssetList = {
     },
     {
       description: 'The native token cw20 for PHMN on Juno Chain',
+      extended_description:
+        "$PHMN is the governance token of a distributed validator. Similar to PoS chains, each holder possesses voting rights proportionate to the number of locked tokens. PHMN holders can govern the POSTHUMAN validator via DAODAO. For instance, decisions such as diversifying the treasury, updating the validator's commission rate, or exiting the network are determined by the PHMN community.",
       type_asset: 'cw20',
       address:
         'juno1rws84uz7969aaa7pej303udhlkt3j9ca0l3egpcae98jwak9quzq8szn2l',
@@ -1488,6 +1492,10 @@ export const junoAssetList: AssetList = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/phmn.svg',
         },
       ],
+      socials: {
+        website: 'https://posthuman.digital/',
+        twitter: 'https://twitter.com/POSTHUMAN_DVS',
+      },
     },
     {
       description: 'The native token cw20 for Hopers on Juno Chain',
@@ -1513,7 +1521,6 @@ export const junoAssetList: AssetList = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hopers.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hopers.svg',
       },
-      coingecko_id: 'hopers-io',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/hopers.png',
@@ -3055,6 +3062,64 @@ export const junoAssetList: AssetList = {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/wind.png',
         },
       ],
+    },
+    {
+      description:
+        'Airdrop For All [AFA - New Name on Cosmos Ecosystem, A4A - Old Name on TurtleNetwork] is a token from turtleNetwork towards cosmos ecosystem.',
+      type_asset: 'cw20',
+      address:
+        'juno1spjes0smg5yp40dl7gqyw0h8rn03tnmve06dd2m5acwgh6tlx86swha3xg',
+      denom_units: [
+        {
+          denom:
+            'cw20:juno1spjes0smg5yp40dl7gqyw0h8rn03tnmve06dd2m5acwgh6tlx86swha3xg',
+          exponent: 0,
+        },
+      ],
+      base: 'cw20:juno1spjes0smg5yp40dl7gqyw0h8rn03tnmve06dd2m5acwgh6tlx86swha3xg',
+      name: 'Airdrop For All',
+      display:
+        'cw20:juno1spjes0smg5yp40dl7gqyw0h8rn03tnmve06dd2m5acwgh6tlx86swha3xg',
+      symbol: 'AFA',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/afa.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/afa.png',
+      },
+    },
+    {
+      description: 'The token for the Arena DAO',
+      type_asset: 'sdk.coin',
+      address:
+        'juno12dgadj3wwv5jn0ec7tw5cgvq526nn4gnt2tujlmd57p2ra6k87esl36r9k',
+      denom_units: [
+        {
+          denom:
+            'factory/juno1vwmnqk0vyxc96qgffrure4nqxupjrql0zut8s02hadgp0n79r8xq5xdsxy/ARENA',
+          exponent: 0,
+        },
+        {
+          denom: 'arena',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/juno1vwmnqk0vyxc96qgffrure4nqxupjrql0zut8s02hadgp0n79r8xq5xdsxy/ARENA',
+      name: 'Arena Token',
+      display: 'arena',
+      symbol: 'ARENA',
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena.png',
+        },
+      ],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/arena.svg',
+      },
     },
   ],
 };

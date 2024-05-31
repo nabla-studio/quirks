@@ -122,6 +122,11 @@ export const tenet: Chain = {
         address: 'tenet-mainnet-seed.autostake.com:27386',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {

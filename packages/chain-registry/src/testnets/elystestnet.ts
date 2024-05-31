@@ -243,6 +243,11 @@ export const elystestnet: Chain = {
         address: 'elys-testnet-seed.itrocket.net:54656',
         provider: 'itrocket',
       },
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     persistent_peers: [
       {
@@ -275,6 +280,10 @@ export const elystestnet: Chain = {
         address: 'https://elys-rpc.kleomedes.network:443',
         provider: 'Kleomedes',
       },
+      {
+        address: 'https://elys-testnet-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -297,6 +306,10 @@ export const elystestnet: Chain = {
         address: 'https://elys-api.kleomedes.network:443',
         provider: 'Kleomedes',
       },
+      {
+        address: 'https://elys-testnet-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -306,6 +319,10 @@ export const elystestnet: Chain = {
       {
         address: 'elys-testnet-grpc.itrocket.net:38090',
         provider: 'itrocket',
+      },
+      {
+        address: 'elys-testnet-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

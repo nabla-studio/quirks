@@ -36,17 +36,17 @@ export const nibiru: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/NibiruChain/nibiru',
-    recommended_version: 'v1.2.0',
-    compatible_versions: ['v1.2.0'],
+    recommended_version: 'v1.3.0',
+    compatible_versions: ['v1.3.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_linux_amd64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.3.0/nibid_1.3.0_linux_amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_linux_arm64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.3.0/nibid_1.3.0_linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_darwin_amd64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.3.0/nibid_1.3.0_darwin_amd64.tar.gz',
       'darwin/arm64':
-        'https://github.com/NibiruChain/nibiru/releases/download/v1.2.0/nibid_1.2.0_darwin_arm64.tar.gz',
+        'https://github.com/NibiruChain/nibiru/releases/download/v1.3.0/nibid_1.3.0_darwin_arm64.tar.gz',
     },
     cosmos_sdk_version: 'v0.47.10',
     consensus: {
@@ -217,6 +217,33 @@ export const nibiru: Chain = {
         ibc_go_version: 'v7.3.2',
         cosmwasm_version: 'v0.44.0',
         cosmwasm_enabled: true,
+        next_version_name: 'v1.3.0',
+      },
+      {
+        name: 'v1.3.0',
+        recommended_version: 'v1.3.0',
+        compatible_versions: ['v1.3.0'],
+        tag: 'v1.3.0',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.3.0/nibid_1.3.0_linux_amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.3.0/nibid_1.3.0_linux_arm64.tar.gz',
+          'darwin/amd64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.3.0/nibid_1.3.0_darwin_amd64.tar.gz',
+          'darwin/arm64':
+            'https://github.com/NibiruChain/nibiru/releases/download/v1.3.0/nibid_1.3.0_darwin_arm64.tar.gz',
+        },
+        proposal: 12,
+        height: 6281429,
+        cosmos_sdk_version: 'v0.47.10',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        ibc_go_version: 'v7.3.2',
+        cosmwasm_version: 'v0.44.0',
+        cosmwasm_enabled: true,
         next_version_name: '',
       },
     ],
@@ -283,6 +310,12 @@ export const nibiru: Chain = {
     ],
   },
   apis: {
+    wss: [
+      {
+        address: 'wss://hm-graphql.nibiru.fi/query',
+        provider: 'Nibiru Foundation',
+      },
+    ],
     rpc: [
       {
         address: 'https://rpc.nibiru.fi',
@@ -327,6 +360,10 @@ export const nibiru: Chain = {
       {
         address: 'https://nibiru-mainnet.rpc.stakevillage.net:443',
         provider: 'Stake Village',
+      },
+      {
+        address: 'https://nibiru-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
     rest: [
@@ -378,6 +415,10 @@ export const nibiru: Chain = {
         address: 'https://nibiru-mainnet.api.stakevillage.net',
         provider: 'Stake Village',
       },
+      {
+        address: 'https://nibiru-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -423,6 +464,10 @@ export const nibiru: Chain = {
       {
         address: 'nibiru-mainnet.grpc.stakevillage.net:443',
         provider: 'Stake Village',
+      },
+      {
+        address: 'nibiru-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -508,6 +553,51 @@ export const nibiruAssetList: AssetList = {
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nibiru/images/nibiru.svg',
         },
       ],
+    },
+    {
+      description: 'uoprek',
+      denom_units: [
+        {
+          denom:
+            'tf/nibi149m52kn7nvsg5nftvv4fh85scsavpdfxp5nr7zasz97dum89dp5qkyhy0t/uoprek',
+          exponent: 0,
+        },
+      ],
+      base: 'tf/nibi149m52kn7nvsg5nftvv4fh85scsavpdfxp5nr7zasz97dum89dp5qkyhy0t/uoprek',
+      name: 'uoprek',
+      display:
+        'tf/nibi149m52kn7nvsg5nftvv4fh85scsavpdfxp5nr7zasz97dum89dp5qkyhy0t/uoprek',
+      symbol: 'UOPREK',
+    },
+    {
+      description: 'utestate',
+      denom_units: [
+        {
+          denom:
+            'tf/nibi1lp28kx3gz0prsztl024z730ufkg3alahaq3e7a6gae22nk0dqdvsyrrgqw/utestate',
+          exponent: 0,
+        },
+      ],
+      base: 'tf/nibi1lp28kx3gz0prsztl024z730ufkg3alahaq3e7a6gae22nk0dqdvsyrrgqw/utestate',
+      name: 'utestate',
+      display:
+        'tf/nibi1lp28kx3gz0prsztl024z730ufkg3alahaq3e7a6gae22nk0dqdvsyrrgqw/utestate',
+      symbol: 'UTESTATE',
+    },
+    {
+      description: 'npp',
+      denom_units: [
+        {
+          denom:
+            'tf/nibi1xpp7yn0tce62ffattws3gpd6v0tah0mlevef3ej3r4pnfvsehcgqk3jvxq/NPP',
+          exponent: 0,
+        },
+      ],
+      base: 'tf/nibi1xpp7yn0tce62ffattws3gpd6v0tah0mlevef3ej3r4pnfvsehcgqk3jvxq/NPP',
+      name: 'npp',
+      display:
+        'tf/nibi1xpp7yn0tce62ffattws3gpd6v0tah0mlevef3ej3r4pnfvsehcgqk3jvxq/NPP',
+      symbol: 'NPP',
     },
   ],
 };

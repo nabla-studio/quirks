@@ -37,8 +37,8 @@ export const persistence: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/persistenceOne/persistenceCore',
-    recommended_version: 'v11.9.0',
-    compatible_versions: ['v11.9.0'],
+    recommended_version: 'v11.12.0',
+    compatible_versions: ['v11.12.0'],
     cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.10-lsm-rc0',
     ibc_go_version: 'v7.4.0',
     ics_enabled: ['ics20-1', 'ics27-1'],
@@ -51,7 +51,7 @@ export const persistence: Chain = {
     cosmwasm_path: '$HOME/.persistenceCore/wasm',
     binaries: {
       'linux/amd64':
-        'https://github.com/persistenceOne/persistenceCore/releases/download/v11.9.0/persistenceCore-v11.9.0-linux-amd64.tar.gz',
+        'https://github.com/persistenceOne/persistenceCore/releases/download/v11.12.0/persistenceCore-v11.12.0-linux-amd64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -240,6 +240,75 @@ export const persistence: Chain = {
         binaries: {
           'linux/amd64':
             'https://github.com/persistenceOne/persistenceCore/releases/download/v11.9.0/persistenceCore-v11.9.0-linux-amd64.tar.gz',
+        },
+        next_version_name: 'v11.10.0',
+      },
+      {
+        name: 'v11.10.0',
+        tag: 'v11.10.0',
+        proposal: 96,
+        height: 16392000,
+        recommended_version: 'v11.10.0',
+        compatible_versions: ['v11.10.0'],
+        cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.10-lsm-rc0',
+        ibc_go_version: 'v7.4.0',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.persistenceCore/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/persistenceOne/persistenceCore/releases/download/v11.10.0/persistenceCore-v11.10.0-linux-amd64.tar.gz',
+        },
+        next_version_name: 'v11.11.0',
+      },
+      {
+        name: 'v11.11.0',
+        tag: 'v11.11.0',
+        proposal: 100,
+        height: 16578000,
+        recommended_version: 'v11.11.0',
+        compatible_versions: ['v11.11.0'],
+        cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.10-lsm-rc0',
+        ibc_go_version: 'v7.4.0',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.persistenceCore/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/persistenceOne/persistenceCore/releases/download/v11.11.0/persistenceCore-v11.11.0-linux-amd64.tar.gz',
+        },
+        next_version_name: 'v11.12.0',
+      },
+      {
+        name: 'v11.12.0',
+        tag: 'v11.12.0',
+        proposal: 105,
+        height: 16851000,
+        recommended_version: 'v11.12.0',
+        compatible_versions: ['v11.12.0'],
+        cosmos_sdk_version: 'persistenceOne/cosmos-sdk v0.47.10-lsm-rc0',
+        ibc_go_version: 'v7.4.0',
+        ics_enabled: ['ics20-1', 'ics27-1'],
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'v0.45.0',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.persistenceCore/wasm',
+        binaries: {
+          'linux/amd64':
+            'https://github.com/persistenceOne/persistenceCore/releases/download/v11.12.0/persistenceCore-v11.12.0-linux-amd64.tar.gz',
         },
         next_version_name: '',
       },

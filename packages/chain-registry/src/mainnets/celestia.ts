@@ -33,9 +33,9 @@ export const celestia: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/celestiaorg/celestia-app',
-    recommended_version: 'v1.7.0',
-    compatible_versions: ['v1.3.0', 'v1.6.0', 'v1.7.0'],
-    cosmos_sdk_version: 'v0.46.16',
+    recommended_version: 'v1.9.0',
+    compatible_versions: ['v1.3.0', 'v1.6.0', 'v1.7.0', 'v1.9.0'],
+    cosmos_sdk_version: 'celestiaorg/cosmos-sdk v1.20.1-sdk-v0.46.16',
     ibc_go_version: 'v6.2.1',
     consensus: {
       type: 'tendermint',
@@ -48,9 +48,9 @@ export const celestia: Chain = {
     versions: [
       {
         name: 'v1.3.0',
-        recommended_version: 'v1.7.0',
-        compatible_versions: ['v1.3.0', 'v1.6.0', 'v1.7.0'],
-        cosmos_sdk_version: 'v0.46.16',
+        recommended_version: 'v1.9.0',
+        compatible_versions: ['v1.3.0', 'v1.6.0', 'v1.7.0', 'v1.9.0'],
+        cosmos_sdk_version: 'celestiaorg/cosmos-sdk v1.20.1-sdk-v0.46.16',
         ibc_go_version: 'v6.2.1',
         consensus: {
           type: 'tendermint',
@@ -129,9 +129,14 @@ export const celestia: Chain = {
         provider: 'FreshSTAKING',
       },
       {
-        id: '7e21ee80adda9fc86b74bccb399a110022067e03',
+        id: '8de3b1534abc9d565f232982c0fb7933c0038ead',
         address: 'celestia-full.avril14th.org:26656',
         provider: 'Avril 14th',
+      },
+      {
+        id: '12ad7c73c7e1f2460941326937a039139aa78884',
+        address: 'celestia-mainnet-seed.itrocket.net:40656',
+        provider: '🚀 itrocket 🚀',
       },
     ],
     persistent_peers: [
@@ -161,9 +166,14 @@ export const celestia: Chain = {
         provider: 'Cumulo',
       },
       {
-        id: '7e21ee80adda9fc86b74bccb399a110022067e03',
+        id: '8de3b1534abc9d565f232982c0fb7933c0038ead',
         address: 'celestia-full.avril14th.org:26656',
         provider: 'Avril 14th',
+      },
+      {
+        id: 'd535cbf8d0efd9100649aa3f53cb5cbab33ef2d6',
+        address: 'celestia-mainnet-peer.itrocket.net:40656',
+        provider: '🚀 itrocket 🚀',
       },
     ],
   },
@@ -273,6 +283,10 @@ export const celestia: Chain = {
         address: 'https://rpc.celestia.citizenweb3.com',
         provider: 'Citizen Web3',
       },
+      {
+        address: 'https://celestia-mainnet-rpc.itrocket.net',
+        provider: '🚀 itrocket 🚀',
+      },
     ],
     rest: [
       {
@@ -367,6 +381,10 @@ export const celestia: Chain = {
         address: 'https://celestia-api.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://celestia-mainnet-api.itrocket.net',
+        provider: '🚀 itrocket 🚀',
+      },
     ],
     grpc: [
       {
@@ -445,6 +463,10 @@ export const celestia: Chain = {
         address: 'celestia-grpc.noders.services:11090',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'celestia-mainnet-grpc.itrocket.net:40090',
+        provider: '🚀 itrocket 🚀',
+      },
     ],
   },
   explorers: [
@@ -494,6 +516,13 @@ export const celestia: Chain = {
       url: 'https://ezstaking.app/celestia',
       tx_page: 'https://ezstaking.app/celestia/txs/${txHash}',
       account_page: 'https://ezstaking.app/celestia/account/${accountAddress}',
+    },
+    {
+      kind: '🚀 itrocket 🚀',
+      url: 'https://mainnet.itrocket.net/celestia',
+      tx_page: 'https://mainnet.itrocket.net/celestia/transaction/${txHash}',
+      account_page:
+        'https://mainnet.itrocket.net/celestia/account/${accountAddress}',
     },
   ],
   images: [

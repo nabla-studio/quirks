@@ -36,20 +36,20 @@ export const coreum: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/CoreumFoundation/coreum',
-    recommended_version: 'v3.0.2',
-    compatible_versions: ['v3.0.2'],
+    recommended_version: 'v3.0.3',
+    compatible_versions: ['v3.0.3'],
     binaries: {
       'linux/amd64':
-        'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.2/cored-linux-amd64',
+        'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.3/cored-linux-amd64?checksum=sha256:1719a32e6f8e8813d00cd86e1d8d02e893324d4f59fa7a1b8cedc5836140ecef',
       'linux/arm64':
-        'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.2/cored-linux-arm64',
+        'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.3/cored-linux-arm64?checksum=sha256:cfbbad6803c0327407e4dd222a108505e6ff9e294d7c86e34b6b895b96b61bbd',
     },
     cosmos_sdk_version: '0.47',
     consensus: {
       type: 'cometbft',
       version: '0.37',
     },
-    cosmwasm_version: '0.30',
+    cosmwasm_version: '0.44',
     cosmwasm_enabled: true,
     genesis: {
       name: 'v1',
@@ -102,23 +102,23 @@ export const coreum: Chain = {
       },
       {
         name: 'v3',
-        tag: 'v3.0.2',
+        tag: 'v3.0.3',
         proposal: 8,
         height: 13480000,
-        recommended_version: 'v3.0.2',
-        compatible_versions: ['v3.0.2'],
+        recommended_version: 'v3.0.3',
+        compatible_versions: ['v3.0.3'],
         cosmos_sdk_version: '0.47',
         consensus: {
           type: 'cometbft',
           version: '0.37',
         },
-        cosmwasm_version: '0.30',
+        cosmwasm_version: '0.44',
         cosmwasm_enabled: true,
         binaries: {
           'linux/amd64':
-            'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.2/cored-linux-amd64',
+            'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.3/cored-linux-amd64?checksum=sha256:1719a32e6f8e8813d00cd86e1d8d02e893324d4f59fa7a1b8cedc5836140ecef',
           'linux/arm64':
-            'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.2/cored-linux-arm64',
+            'https://github.com/CoreumFoundation/coreum/releases/download/v3.0.3/cored-linux-arm64?checksum=sha256:cfbbad6803c0327407e4dd222a108505e6ff9e294d7c86e34b6b895b96b61bbd',
         },
       },
     ],
@@ -335,7 +335,7 @@ export const coreum: Chain = {
       account_page: 'https://ezstaking.app/coreum/account/${accountAddress}',
     },
   ],
-  keywords: ['dex', 'staking', 'wasm', 'assets', 'nft'],
+  keywords: ['dex', 'staking', 'wasm', 'assets', 'nft', 'XRPL'],
 };
 
 export const coreumAssetList: AssetList = {
@@ -363,7 +363,7 @@ export const coreumAssetList: AssetList = {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coreum/images/coreum.svg',
       },
       coingecko_id: 'coreum',
-      keywords: ['dex', 'staking', 'wasm', 'assets', 'nft'],
+      keywords: ['dex', 'staking', 'wasm', 'assets', 'nft', 'XRPL'],
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/coreum/images/coreum.png',

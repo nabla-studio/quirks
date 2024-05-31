@@ -33,15 +33,15 @@ export const sei: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/sei-protocol/sei-chain',
-    recommended_version: 'v3.9.0',
-    compatible_versions: ['v3.9.0'],
+    recommended_version: 'v5.5.2',
+    compatible_versions: ['v5.5.2'],
     ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
-    cosmos_sdk_version: 'sei-cosmos v0.2.83',
+    cosmos_sdk_version: 'sei-cosmos v0.3.13',
     consensus: {
       type: 'sei-tendermint',
-      version: 'v0.2.40',
+      version: 'v0.3.3',
     },
-    cosmwasm_version: 'sei-wasmd v0.1.1',
+    cosmwasm_version: 'sei-wasmd v0.1.5',
     cosmwasm_enabled: true,
     cosmwasm_path: '$HOME/.sei/wasm',
     genesis: {
@@ -183,9 +183,9 @@ export const sei: Chain = {
       {
         name: 'v3.9.0',
         proposal: 54,
-        height: 73290488,
-        recommended_version: 'v3.9.0',
-        compatible_versions: ['v3.9.0'],
+        height: 79123881,
+        recommended_version: 'v5.5.2',
+        compatible_versions: ['v5.5.2'],
         ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
         cosmos_sdk_version: 'sei-cosmos v0.2.83',
         consensus: {
@@ -193,6 +193,23 @@ export const sei: Chain = {
           version: 'v0.2.40',
         },
         cosmwasm_version: 'sei-wasmd v0.1.1',
+        cosmwasm_enabled: true,
+        cosmwasm_path: '$HOME/.sei/wasm',
+        next_version_name: 'v5.5.2',
+      },
+      {
+        name: 'v5.5.2',
+        proposal: 55,
+        height: 73290488,
+        recommended_version: 'v3.9.0',
+        compatible_versions: ['v3.9.0'],
+        ibc_go_version: 'sei-ibc-go/v3 v3.3.0',
+        cosmos_sdk_version: 'sei-cosmos v0.3.13',
+        consensus: {
+          type: 'sei-tendermint',
+          version: 'v0.3.3',
+        },
+        cosmwasm_version: 'sei-wasmd v0.1.5',
         cosmwasm_enabled: true,
         cosmwasm_path: '$HOME/.sei/wasm',
         next_version_name: '',
@@ -326,7 +343,7 @@ export const sei: Chain = {
         provider: 'AutoStake 🛡️ Slash Protected',
       },
       {
-        address: 'https://grpc-sei.whispernode.com:443',
+        address: 'grpc-sei.whispernode.com:443',
         provider: 'WhisperNode 🤐',
       },
       {
@@ -364,6 +381,13 @@ export const sei: Chain = {
       tx_page: 'https://www.seiscan.app/pacific-1/txs/${txHash}',
       account_page:
         'https://www.seiscan.app/pacific-1/accounts/${accountAddress}',
+    },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/sei',
+      tx_page: 'https://mainnet.whispernode.com/sei/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/sei/account/${accountAddress}',
     },
   ],
   images: [

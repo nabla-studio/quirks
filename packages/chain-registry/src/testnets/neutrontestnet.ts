@@ -168,10 +168,10 @@ export const neutrontestnet: Chain = {
     },
     {
       kind: 'Mintscan',
-      url: 'https://testnet.mintscan.io/neutron-testnet',
-      tx_page: 'https://testnet.mintscan.io/neutron-testnet/txs/${txHash}',
+      url: 'https://mintscan.io/neutron-testnet',
+      tx_page: 'https://mintscan.io/neutron-testnet/txs/${txHash}',
       account_page:
-        'https://testnet.mintscan.io/neutron-testnet/account/${accountAddress}',
+        'https://mintscan.io/neutron-testnet/account/${accountAddress}',
     },
   ],
   images: [
@@ -210,6 +210,35 @@ export const neutrontestnetAssetList: AssetList = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/ntrn.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/ntrn.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'The yield token for ATOM denominated vaults on Amulet Protocol',
+      denom_units: [
+        {
+          denom:
+            'factory/neutron15lku24mqhvy4v4gryrqs4662n9v9q4ux9tayn89cmdzldjcgawushxvm76/amatom',
+          exponent: 0,
+        },
+        {
+          denom: 'amATOM',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron15lku24mqhvy4v4gryrqs4662n9v9q4ux9tayn89cmdzldjcgawushxvm76/amatom',
+      name: 'amATOM (Testnet)',
+      display: 'amATOM',
+      symbol: 'amATOM',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/amATOM.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/amATOM.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/amATOM.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/neutrontestnet/images/amATOM.svg',
         },
       ],
     },

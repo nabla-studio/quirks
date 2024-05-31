@@ -262,6 +262,13 @@ export const assetmantle: Chain = {
       account_page:
         'https://atomscan.com/assetmantle/accounts/${accountAddress}',
     },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/assetmantle',
+      tx_page: 'https://mainnet.whispernode.com/assetmantle/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/assetmantle/account/${accountAddress}',
+    },
   ],
   images: [
     {

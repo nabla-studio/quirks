@@ -362,7 +362,7 @@ export const stafihubAssetList: AssetList = {
           type: 'liquid-stake',
           counterparty: {
             chain_name: 'carbon',
-            base_denom: 'uswth',
+            base_denom: 'swth',
           },
           provider: 'StaFiHub',
         },

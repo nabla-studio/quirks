@@ -23,19 +23,19 @@ export const cronos: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/crypto-org-chain/cronos',
-    recommended_version: 'v1.2.1',
-    compatible_versions: ['v1.2.0', 'v1.2.1'],
+    recommended_version: 'v1.2.2',
+    compatible_versions: ['v1.2.0', 'v1.2.1', 'v1.2.2'],
     binaries: {
       'linux/amd64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Linux_x86_64.tar.gz',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Linux_x86_64.tar.gz',
       'linux/arm64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Linux_arm64.tar.gz',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Linux_arm64.tar.gz',
       'darwin/amd64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Darwin_x86_64.tar.gz',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Darwin_x86_64.tar.gz',
       'darwin/arm64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Darwin_arm64.tar.gz',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Darwin_arm64.tar.gz',
       'windows/amd64':
-        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Windows_x86_64.zip',
+        'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Windows_x86_64.zip',
     },
     genesis: {
       genesis_url:
@@ -43,20 +43,20 @@ export const cronos: Chain = {
     },
     versions: [
       {
-        name: 'v1.2.1',
-        recommended_version: 'v1.2.1',
-        compatible_versions: ['v1.2.0', 'v1.2.1'],
+        name: 'v1.2.2',
+        recommended_version: 'v1.2.2',
+        compatible_versions: ['v1.2.0', 'v1.2.1', 'v1.2.2'],
         binaries: {
           'linux/amd64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Linux_x86_64.tar.gz',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Linux_x86_64.tar.gz',
           'linux/arm64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Linux_arm64.tar.gz',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Linux_arm64.tar.gz',
           'darwin/amd64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Darwin_x86_64.tar.gz',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Darwin_x86_64.tar.gz',
           'darwin/arm64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Darwin_arm64.tar.gz',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Darwin_arm64.tar.gz',
           'windows/amd64':
-            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.1/cronos_1.2.1_Windows_x86_64.zip',
+            'https://github.com/crypto-org-chain/cronos/releases/download/v1.2.2/cronos_1.2.2_Windows_x86_64.zip',
         },
       },
     ],

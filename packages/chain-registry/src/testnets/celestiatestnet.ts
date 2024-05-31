@@ -62,9 +62,9 @@ export const celestiatestnet: Chain = {
   explorers: [
     {
       kind: 'Mintscan',
-      url: 'https://testnet.mintscan.io/celestia-incentivized-testnet',
+      url: 'https://mintscan.io/celestia-incentivized-testnet',
       tx_page:
-        'https://testnet.mintscan.io/celestia-incentivized-testnet/txs/${txHash}',
+        'https://mintscan.io/celestia-incentivized-testnet/txs/${txHash}',
     },
   ],
 };

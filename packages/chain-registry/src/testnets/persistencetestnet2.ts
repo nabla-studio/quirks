@@ -229,10 +229,10 @@ export const persistencetestnet2: Chain = {
   explorers: [
     {
       kind: 'mintscan',
-      url: 'https://testnet.mintscan.io/persistence-testnet',
-      tx_page: 'https://testnet.mintscan.io/persistence-testnet/txs/${txHash}',
+      url: 'https://mintscan.io/persistence-testnet',
+      tx_page: 'https://mintscan.io/persistence-testnet/txs/${txHash}',
       account_page:
-        'https://testnet.mintscan.io/persistence-testnet/account/${accountAddress}',
+        'https://mintscan.io/persistence-testnet/account/${accountAddress}',
     },
     {
       kind: 'StakeFlow',

@@ -150,6 +150,11 @@ export const kyve: Chain = {
         address: 'seed.publicnode.com:26656',
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
+      {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'kyve-mainnet-seed.autostake.com:27106',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
     persistent_peers: [
       {
@@ -191,6 +196,11 @@ export const kyve: Chain = {
         id: '73ef1c0f9bc77fd925decf7fa41f22a35b5dc76d',
         address: 'kyve.declab.pro:26618',
         provider: 'Decloud Nodes Lab',
+      },
+      {
+        id: 'ebc272824924ea1a27ea3183dd0b9ba713494f83',
+        address: 'kyve-mainnet-peer.autostake.com:27106',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
     ],
   },
@@ -244,6 +254,10 @@ export const kyve: Chain = {
         address: 'https://kyve_mainnet_rpc.chain.whenmoonwhenlambo.money',
         provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
+      {
+        address: 'https://kyve-mainnet-rpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
     rest: [
       {
@@ -294,6 +308,10 @@ export const kyve: Chain = {
         address: 'https://kyve_mainnet_api.chain.whenmoonwhenlambo.money',
         provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
+      {
+        address: 'https://kyve-mainnet-lcd.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
+      },
     ],
     grpc: [
       {
@@ -327,6 +345,10 @@ export const kyve: Chain = {
       {
         address: 'kyve-grpc.noders.services:15090',
         provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'kyve-mainnet-grpc.autostake.com:443',
+        provider: 'AutoStake 🛡️ Slash Protected',
       },
     ],
   },
