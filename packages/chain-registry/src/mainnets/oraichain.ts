@@ -119,6 +119,11 @@ export const oraichain: Chain = {
         address: 'seed.orai.mortysnode.nl:26656',
         provider: "Morty's Nodes",
       },
+      {
+        id: '4babdcd4c81d589e789db3b294eebcd779f2227c',
+        address: 'orai.seed.stavr.tech:2056',
+        provider: '🔥STAVR🔥',
+      },
     ],
     persistent_peers: [
       {
@@ -202,6 +207,14 @@ export const oraichain: Chain = {
         address: 'https://rpc.orai.mortysnode.nl',
         provider: "Morty's Nodes",
       },
+      {
+        address: 'https://orai.rpc.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'https://oraichain-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -224,6 +237,14 @@ export const oraichain: Chain = {
         address: 'https://mainnet-orai-api.konsortech.xyz',
         provider: 'KonsorTech',
       },
+      {
+        address: 'https://orai.api.m.stavr.tech',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'https://oraichain-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -245,6 +266,14 @@ export const oraichain: Chain = {
       {
         address: 'mainnet-orai.konsortech.xyz:33090',
         provider: 'KonsorTech',
+      },
+      {
+        address: 'orai.grpc.m.stavr.tech:110',
+        provider: '🔥STAVR🔥',
+      },
+      {
+        address: 'oraichain-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },
@@ -277,6 +306,14 @@ export const oraichain: Chain = {
         'https://explorer.konsortech.xyz/oraichain/transactions/${txHash}',
       account_page:
         'https://explorer.konsortech.xyz/oraichain/accounts/${accountAddress}',
+    },
+    {
+      kind: '🔥STAVR🔥 Explorer',
+      url: 'https://explorer.stavr.tech/Orai-Mainnet',
+      tx_page:
+        'https://explorer.stavr.tech/Orai-Mainnet/transactions/${txHash}',
+      account_page:
+        'https://explorer.stavr.tech/Orai-Mainnet/accounts/${accountAddress}',
     },
   ],
   images: [

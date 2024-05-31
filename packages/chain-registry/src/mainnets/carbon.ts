@@ -314,13 +314,13 @@ export const carbon: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/Switcheo/carbon-bootstrap',
-    recommended_version: 'v2.38.1',
-    compatible_versions: ['v2.38.1'],
+    recommended_version: 'v2.43.0',
+    compatible_versions: ['v2.43.0'],
     binaries: {
       'linux/amd64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.38.1/carbond2.38.1-mainnet.linux-amd64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.43.0/carbond-mainnet.linux-amd64.tar.gz',
       'linux/arm64':
-        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.38.1/carbond2.38.1-mainnet.linux-arm64.tar.gz',
+        'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.43.0/carbond-mainnet.linux-arm64.tar.gz',
     },
     genesis: {
       genesis_url:
@@ -538,6 +538,76 @@ export const carbon: Chain = {
             'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.38.1/carbond2.38.1-mainnet.linux-amd64.tar.gz',
           'linux/arm64':
             'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.38.1/carbond2.38.1-mainnet.linux-arm64.tar.gz',
+        },
+        next_version_name: 'v2.39.0',
+      },
+      {
+        name: 'v2.39.0',
+        proposal: 349,
+        height: 56495871,
+        recommended_version: 'v2.39.0',
+        compatible_versions: ['v2.39.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.39.0/carbond2.39.0-mainnet.linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.39.0/carbond2.39.0-mainnet.linux-arm64.tar.gz',
+        },
+        next_version_name: 'v2.40.0',
+      },
+      {
+        name: 'v2.40.0',
+        proposal: 352,
+        height: 56635731,
+        recommended_version: 'v2.40.0',
+        compatible_versions: ['v2.40.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.40.0/carbond2.40.0-mainnet.linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.40.0/carbond2.40.0-mainnet.linux-arm64.tar.gz',
+        },
+        next_version_name: 'v2.41.0',
+      },
+      {
+        name: 'v2.41.0',
+        proposal: 353,
+        height: 57169241,
+        recommended_version: 'v2.41.1',
+        compatible_versions: ['v2.41.1'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.41.1/carbond2.41.1-mainnet.linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.41.1/carbond2.41.1-mainnet.linux-arm64.tar.gz',
+        },
+        next_version_name: 'v2.42.0',
+      },
+      {
+        name: 'v2.42.0',
+        proposal: 355,
+        height: 57602151,
+        recommended_version: 'v2.42.0',
+        compatible_versions: ['v2.42.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.42.0/carbond2.42.0-mainnet.linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.42.0/carbond2.42.0-mainnet.linux-arm64.tar.gz',
+        },
+        next_version_name: 'v2.43.0',
+      },
+      {
+        name: 'v2.43.0',
+        proposal: 356,
+        height: 57636191,
+        recommended_version: 'v2.43.0',
+        compatible_versions: ['v2.43.0'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.43.0/carbond-mainnet.linux-amd64.tar.gz',
+          'linux/arm64':
+            'https://github.com/Switcheo/carbon-bootstrap/releases/download/v2.43.0/carbond-mainnet.linux-arm64.tar.gz',
         },
         next_version_name: '',
       },
@@ -763,6 +833,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'binancesmartchain',
+            base_denom: 'wei',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/bnb.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/bnb.svg',
         },
@@ -846,6 +920,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'binancesmartchain',
+            base_denom: '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/busd.png',
         },
       ],
@@ -1035,10 +1113,16 @@ export const carbonAssetList: AssetList = {
       ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.svg',
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'stargaze',
+            base_denom: 'ustars',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stargaze/images/stars.svg',
         },
       ],
     },
@@ -1077,10 +1161,16 @@ export const carbonAssetList: AssetList = {
       ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg',
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'terra2',
+            base_denom: 'uluna',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg',
         },
       ],
     },
@@ -1170,6 +1260,11 @@ export const carbonAssetList: AssetList = {
       coingecko_id: 'milkyway-staked-tia',
       images: [
         {
+          image_sync: {
+            chain_name: 'osmosis',
+            base_denom:
+              'factory/osmo1f5vfcph2dvfeqcqkhetwv75fda69z7e5c2dldm3kvgj23crkv6wqcn47a0/umilkTIA',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/milktia.svg',
         },
@@ -1214,6 +1309,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'stride',
+            base_denom: 'ustrd',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/strd.svg',
         },
@@ -1258,6 +1357,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'evmos',
+            base_denom: 'aevmos',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/evmos/images/evmos.svg',
         },
@@ -1302,6 +1405,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'irisnet',
+            base_denom: 'uiris',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/irisnet/images/iris.svg',
         },
@@ -1342,10 +1449,16 @@ export const carbonAssetList: AssetList = {
       ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.svg',
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'kujira',
+            base_denom: 'ukuji',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/kujira/images/kuji.svg',
         },
       ],
     },
@@ -1388,6 +1501,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'stride',
+            base_denom: 'stuosmo',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stosmo.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stosmo.svg',
         },
@@ -1428,10 +1545,16 @@ export const carbonAssetList: AssetList = {
       ],
       logo_URIs: {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/canto/images/canto.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/canto/images/canto.svg',
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'canto',
+            base_denom: 'acanto',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/canto/images/canto.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/canto/images/canto.svg',
         },
       ],
     },
@@ -1474,6 +1597,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
         },
@@ -1518,6 +1645,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'stride',
+            base_denom: 'stuatom',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/statom.svg',
         },
@@ -1562,6 +1693,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'osmosis',
+            base_denom: 'uosmo',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.svg',
         },
@@ -1589,7 +1724,7 @@ export const carbonAssetList: AssetList = {
           type: 'bridge',
           counterparty: {
             chain_name: 'ethereum',
-            base_denom: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
+            base_denom: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
             contract: '0x9a016ce184a22dbf6c17daa59eb7d3140dbd1c54',
           },
           chain: {
@@ -1603,6 +1738,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
         },
       ],
@@ -1643,6 +1782,10 @@ export const carbonAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'binancesmartchain',
+            base_denom: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
         },
       ],

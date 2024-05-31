@@ -61,7 +61,13 @@ export const doravota: Chain = {
     ],
   },
   peers: {
-    seeds: [],
+    seeds: [
+      {
+        id: '8542cd7e6bf9d260fef543bc49e59be5a3fa9074',
+        address: 'seed.publicnode.com:26656',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
+    ],
     persistent_peers: [],
   },
   apis: {
@@ -74,6 +80,10 @@ export const doravota: Chain = {
         address: 'https://m-dora.rpc.utsa.tech',
         provider: 'lesnik | UTSA',
       },
+      {
+        address: 'https://dora-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -84,11 +94,19 @@ export const doravota: Chain = {
         address: 'https://m-dora.api.utsa.tech',
         provider: 'lesnik | UTSA',
       },
+      {
+        address: 'https://dora-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
         address: 'vota-grpc.dorafactory.org:443',
         provider: 'dorafactory',
+      },
+      {
+        address: 'dora-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

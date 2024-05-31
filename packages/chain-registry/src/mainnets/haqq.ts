@@ -545,7 +545,7 @@ export const haqq: Chain = {
         provider: 'Haqq',
       },
       {
-        address: 'https://m-s1-tm.haqq.sh',
+        address: 'https://rpc.haqq.sh',
         provider: 'kioqq',
       },
       {
@@ -579,7 +579,7 @@ export const haqq: Chain = {
         provider: 'Haqq',
       },
       {
-        address: 'https://m-s1-sdk.haqq.sh',
+        address: 'https://sdk.haqq.sh',
         provider: 'kioqq',
       },
       {
@@ -617,7 +617,7 @@ export const haqq: Chain = {
         provider: 'Haqq',
       },
       {
-        address: 'grpc://m-s1-grpc.haqq.sh:1337',
+        address: 'grpc.haqq.sh:443',
         provider: 'kioqq',
       },
       {
@@ -659,7 +659,7 @@ export const haqq: Chain = {
         provider: 'Haqq',
       },
       {
-        address: 'https://m-s1-evm-rpc.haqq.sh',
+        address: 'https://evm.haqq.sh',
         provider: 'kioqq',
       },
       {

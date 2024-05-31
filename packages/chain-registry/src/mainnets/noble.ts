@@ -44,8 +44,8 @@ export const noble: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/strangelove-ventures/noble',
-    recommended_version: 'v4.1.2',
-    compatible_versions: ['v4.1.2'],
+    recommended_version: 'v4.1.3',
+    compatible_versions: ['v4.1.3'],
     cosmos_sdk_version: 'v0.45.16',
     consensus: {
       type: 'cometbft',
@@ -142,10 +142,10 @@ export const noble: Chain = {
       },
       {
         name: 'fusion',
-        tag: 'v4.1.2',
+        tag: 'v4.1.3',
         height: 5797500,
-        recommended_version: 'v4.1.2',
-        compatible_versions: ['v4.1.2'],
+        recommended_version: 'v4.1.3',
+        compatible_versions: ['v4.1.3'],
         cosmos_sdk_version: 'v0.45.16',
         consensus: {
           type: 'cometbft',
@@ -337,6 +337,10 @@ export const nobleAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'cosmoshub',
+            base_denom: 'uatom',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
         },
@@ -357,7 +361,7 @@ export const nobleAssetList: AssetList = {
       ],
       base: 'uusdc',
       display: 'usdc',
-      name: 'USD Coin',
+      name: 'USDC',
       symbol: 'USDC',
       coingecko_id: 'usd-coin',
       traces: [
@@ -378,6 +382,35 @@ export const nobleAssetList: AssetList = {
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/noble/images/USDCoin.svg',
+        },
+      ],
+    },
+    {
+      description:
+        'USDLR is a fiat-backed stablecoin issued by Stable. Stable pays DeFi protocols who distribute USDLR.',
+      denom_units: [
+        {
+          denom: 'uusdlr',
+          exponent: 0,
+          aliases: ['microusdlr'],
+        },
+        {
+          denom: 'usdlr',
+          exponent: 6,
+        },
+      ],
+      base: 'uusdlr',
+      display: 'usdlr',
+      name: 'USDLR by Stable',
+      symbol: 'USDLR',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg',
         },
       ],
     },

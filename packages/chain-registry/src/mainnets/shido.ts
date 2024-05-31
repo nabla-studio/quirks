@@ -121,6 +121,11 @@ export const shido: Chain = {
         address: '3.97.121.236:26656',
         provider: 'SHIDO',
       },
+      {
+        id: 'ecfa8fecb479d1e30be4cac20dc8b0f3ef8b761d',
+        address: 'rpc.shido.indonode.net:23657',
+        provider: 'Indonode',
+      },
     ],
   },
   apis: {
@@ -133,6 +138,14 @@ export const shido: Chain = {
         address: 'https://shidochain_mainnet_rpc.chain.whenmoonwhenlambo.money',
         provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
+      {
+        address: 'https://shido-rpc.applejuice.256x25.tech:443',
+        provider: 'Apple juice 🧃',
+      },
+      {
+        address: 'https://rpc.shido.indonode.net:443',
+        provider: 'Indonode',
+      },
     ],
     rest: [
       {
@@ -142,6 +155,14 @@ export const shido: Chain = {
       {
         address: 'https://shidochain_mainnet_api.chain.whenmoonwhenlambo.money',
         provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
+      },
+      {
+        address: 'https://shido-api.applejuice.256x25.tech:443',
+        provider: 'Apple juice 🧃',
+      },
+      {
+        address: 'https://api.shido.indonode.net',
+        provider: 'Indonode',
       },
     ],
     grpc: [
@@ -167,6 +188,10 @@ export const shido: Chain = {
         address: 'https://shidochain_mainnet_evm.chain.whenmoonwhenlambo.money',
         provider: '🚀 WHEN MOON 🌕 WHEN LAMBO 🔥',
       },
+      {
+        address: 'https://shido-evm.applejuice.256x25.tech:443',
+        provider: 'Apple juice 🧃',
+      },
     ],
   },
   explorers: [
@@ -182,6 +207,27 @@ export const shido: Chain = {
       tx_page: 'https://explorer.whenmoonwhenlambo.money/shido/tx/${txHash}',
       account_page:
         'https://explorer.whenmoonwhenlambo.money/shido/account/${accountAddress}',
+    },
+    {
+      kind: 'Apple juice 🧃',
+      url: 'https://explorer.256x25.tech/shido',
+      tx_page: 'https://explorer.256x25.tech/shido/tx/${txHash}',
+      account_page:
+        'https://explorer.256x25.tech//shido/account/${accountAddress}',
+    },
+    {
+      kind: 'MavNode',
+      url: 'https://explorer.mavnode.io/shido',
+      tx_page: 'https://explorer.mavnode.io/shido/tx/${txHash}',
+      account_page:
+        'https://explorer.mavnode.io/shido/account/${accountAddress}',
+    },
+    {
+      kind: 'Indonode',
+      url: 'https://explorer.indonode.net/shido',
+      tx_page: 'https://explorer.indonode.net/shido/tx/${txHash}',
+      account_page:
+        'https://explorer.indonode.net/shido/account/${accountAddress}',
     },
   ],
   images: [

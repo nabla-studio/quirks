@@ -583,7 +583,7 @@ export const terra2AssetList: AssetList = {
           counterparty: {
             chain_name: 'neutron',
             base_denom:
-              'ibc/8D8A7F7253615E5F76CB6252A1E1BD921D5EDB7BBAAF8913FB1C77FF125D9995',
+              'factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro',
             channel_id: 'channel-25',
           },
           chain: {
@@ -599,13 +599,13 @@ export const terra2AssetList: AssetList = {
             base_denom:
               'factory/neutron1ffus553eet978k024lmssw0czsxwr97mggyv85lpcsdkft8v9ufsz3sa07/astro',
           },
-          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
-          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.png',
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.svg',
         },
       ],
       logo_URIs: {
-        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.png',
-        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/astro.svg',
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/astro.svg',
       },
     },
     {
@@ -668,7 +668,7 @@ export const terra2AssetList: AssetList = {
     },
     {
       description:
-        'Escudos is the everyday currency of dioalma.protocol, good to send money back and foward.',
+        'Escudos is the everyday currency of dioalma.protocol, good to send money back and forward.',
       denom_units: [
         {
           denom:
@@ -1669,6 +1669,75 @@ export const terra2AssetList: AssetList = {
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
       },
+    },
+    {
+      description: 'ATOM-LUNA liquidity pool token on URA',
+      denom_units: [
+        {
+          denom:
+            'factory/terra1djk2zl83dspt696ex5crhfacu8vm6934576t4zdd2592fzyahr2qma6guq/ULUN-IBC/-LP',
+          exponent: 0,
+        },
+        {
+          denom: 'atom-luna-lp',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/terra1djk2zl83dspt696ex5crhfacu8vm6934576t4zdd2592fzyahr2qma6guq/ULUN-IBC/-LP',
+      name: 'ATOM-LUNA LP Token URA',
+      display: 'atom-luna-lp',
+      symbol: 'ATOM-LUNA-LP',
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/ura.svg',
+        },
+      ],
+    },
+    {
+      description: 'LUNA-USDC liquidity pool token on URA',
+      denom_units: [
+        {
+          denom:
+            'factory/terra12jxfw2vg4cu6mxlgf39dp5ccxtuwm468w8eh9cnh2qsxc9t0sffs7ekhft/ULUN-IBC/-LP',
+          exponent: 0,
+        },
+        {
+          denom: 'luna-usdc-lp',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/terra12jxfw2vg4cu6mxlgf39dp5ccxtuwm468w8eh9cnh2qsxc9t0sffs7ekhft/ULUN-IBC/-LP',
+      name: 'LUNA-USDC LP Token URA',
+      display: 'luna-usdc-lp',
+      symbol: 'LUNA-USDC-LP',
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/ura.svg',
+        },
+      ],
+    },
+    {
+      description: 'LUNA-USDT liquidity pool token on URA',
+      denom_units: [
+        {
+          denom:
+            'factory/terra1w9spejtuac5dt0gympq576uhwde39exhh7hdxwl99rjvaphfukkq6y4cv7/ULUN-IBC/-LP',
+          exponent: 0,
+        },
+        {
+          denom: 'luna-usdt-lp',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/terra1w9spejtuac5dt0gympq576uhwde39exhh7hdxwl99rjvaphfukkq6y4cv7/ULUN-IBC/-LP',
+      name: 'LUNA-USDT LP Token URA',
+      display: 'luna-usdt-lp',
+      symbol: 'LUNA-USDT-LP',
+      images: [
+        {
+          svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/ura.svg',
+        },
+      ],
     },
   ],
 };

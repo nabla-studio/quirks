@@ -671,6 +671,13 @@ export const stride: Chain = {
       account_page:
         'https://explorer.stake-take.com/stride/account/${accountAddress}',
     },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/stride',
+      tx_page: 'https://mainnet.whispernode.com/stride/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/stride/account/${accountAddress}',
+    },
   ],
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/stride/images/stride-chain-logo.png',
@@ -961,7 +968,7 @@ export const strideAssetList: AssetList = {
           type: 'liquid-stake',
           counterparty: {
             chain_name: 'evmos',
-            base_denom: 'uaevmos',
+            base_denom: 'aevmos',
           },
           provider: 'Stride',
         },

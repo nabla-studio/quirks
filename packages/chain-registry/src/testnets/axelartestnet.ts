@@ -80,10 +80,10 @@ export const axelartestnet: Chain = {
     },
     {
       kind: 'mintscan',
-      url: 'https://testnet.mintscan.io/axelar-testnet',
-      tx_page: 'https://testnet.mintscan.io/axelar-testnet/txs/${txHash}',
+      url: 'https://mintscan.io/axelar-testnet',
+      tx_page: 'https://mintscan.io/axelar-testnet/txs/${txHash}',
       account_page:
-        'https://testnet.mintscan.io/axelar-testnet/account/${accountAddress}',
+        'https://mintscan.io/axelar-testnet/account/${accountAddress}',
     },
   ],
 };

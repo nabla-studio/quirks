@@ -786,6 +786,13 @@ export const gitopia: Chain = {
       account_page:
         'https://explorer.declab.pro/Gitopia/account/${accountAddress}',
     },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/gitopia',
+      tx_page: 'https://mainnet.whispernode.com/gitopia/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/gitopia/account/${accountAddress}',
+    },
   ],
   logo_URIs: {
     png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/gitopia/images/gitopia.png',

@@ -498,6 +498,10 @@ export const gravitybridgeAssetList: AssetList = {
       ],
       images: [
         {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/weth.svg',
         },
       ],
@@ -518,6 +522,7 @@ export const gravitybridgeAssetList: AssetList = {
       name: 'USD Coin',
       display: 'gusdc',
       symbol: 'USDC',
+      coingecko_id: 'gravity-bridge-usdc',
       logo_URIs: {
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
       },
@@ -541,6 +546,10 @@ export const gravitybridgeAssetList: AssetList = {
       ],
       images: [
         {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdc.svg',
         },
       ],
@@ -584,6 +593,10 @@ export const gravitybridgeAssetList: AssetList = {
       ],
       images: [
         {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0xdac17f958d2ee523a2206206994597c13d831ec7',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/usdt.svg',
         },
       ],
@@ -628,6 +641,10 @@ export const gravitybridgeAssetList: AssetList = {
       ],
       images: [
         {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x2260fac5e5542a773aa44fbcfedf7c193bc2c599',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/wbtc.svg',
         },
@@ -672,6 +689,10 @@ export const gravitybridgeAssetList: AssetList = {
       ],
       images: [
         {
+          image_sync: {
+            chain_name: 'ethereum',
+            base_denom: '0x6b175474e89094c44da98b954eedeac495271d0f',
+          },
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/dai.svg',
         },
       ],
@@ -709,8 +730,8 @@ export const gravitybridgeAssetList: AssetList = {
       images: [
         {
           image_sync: {
-            base_denom: 'ethereum',
-            chain_name: '0x83F20F44975D03b1b09e64809B757c47f942BEeA',
+            chain_name: 'ethereum',
+            base_denom: '0x83F20F44975D03b1b09e64809B757c47f942BEeA',
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sdai.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/sdai.svg',
@@ -831,8 +852,8 @@ export const gravitybridgeAssetList: AssetList = {
       images: [
         {
           image_sync: {
-            base_denom: 'ethereum',
-            chain_name: '0x45804880De22913dAFE09f4980848ECE6EcbAf78',
+            chain_name: 'ethereum',
+            base_denom: '0x45804880De22913dAFE09f4980848ECE6EcbAf78',
           },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/paxg.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/paxg.svg',

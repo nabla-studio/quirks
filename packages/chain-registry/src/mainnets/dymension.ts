@@ -97,6 +97,11 @@ export const dymension: Chain = {
         address: 'seed.dymension.node75.org:10956',
         provider: 'Pro-Nodes75',
       },
+      {
+        id: '258f523c96efde50d5fe0a9faeea8a3e83be22ca',
+        address: 'seed.mainnet.dymension.aviaone.com:10290',
+        provider: 'AVIAONE 🟢',
+      },
     ],
     persistent_peers: [
       {
@@ -237,6 +242,10 @@ export const dymension: Chain = {
         address: 'https://dymension-rpc.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://rpc.mainnet.dymension.aviaone.com',
+        provider: 'AVIAONE 🟢',
+      },
     ],
     rest: [
       {
@@ -351,6 +360,10 @@ export const dymension: Chain = {
         address: 'https://dymension-api.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://api.mainnet.dymension.aviaone.com',
+        provider: 'AVIAONE 🟢',
+      },
     ],
     grpc: [
       {
@@ -437,6 +450,10 @@ export const dymension: Chain = {
         address: 'dymension-grpc.noders.services:12090',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://grpc.mainnet.dymension.aviaone.com:9092',
+        provider: 'AVIAONE 🟢',
+      },
     ],
     'evm-http-jsonrpc': [
       {
@@ -474,6 +491,13 @@ export const dymension: Chain = {
     ],
   },
   explorers: [
+    {
+      kind: 'mintscan',
+      url: 'https://www.mintscan.io/dymension',
+      tx_page: 'https://www.mintscan.io/dymension/tx/${txHash}',
+      account_page:
+        'https://www.mintscan.io/dymension/account/${accountAddress}',
+    },
     {
       kind: 'ezstaking',
       url: 'https://ezstaking.app/dymension',
@@ -519,6 +543,20 @@ export const dymension: Chain = {
       tx_page: 'https://explorer.posthuman.digital/dymension/tx/${txHash}',
       account_page:
         'https://explorer.posthuman.digital/dymension/account/${accountAddress}',
+    },
+    {
+      kind: 'AVIAONE 🟢',
+      url: 'https://mainnet.explorer.aviaone.com/dymension',
+      tx_page: 'https://mainnet.explorer.aviaone.com/dymension/tx/${txHash}',
+      account_page:
+        'https://mainnet.explorer.aviaone.com/dymension/account/${accountAddress}',
+    },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/dymension',
+      tx_page: 'https://mainnet.whispernode.com/dymension/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/dymension/account/${accountAddress}',
     },
   ],
 };
@@ -611,6 +649,10 @@ export const dymensionAssetList: AssetList = {
         twitter: 'https://twitter.com/nim_network',
       },
       keywords: ['gaming', 'AI'],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nim/images/nim.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nim/images/nim.svg',
+      },
     },
   ],
 };

@@ -310,6 +310,13 @@ export const secretnetwork: Chain = {
       account_page:
         'https://atomscan.com/secret-network/accounts/${accountAddress}',
     },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/secret',
+      tx_page: 'https://mainnet.whispernode.com/secret/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/secret/account/${accountAddress}',
+    },
   ],
   images: [
     {
@@ -525,7 +532,6 @@ export const secretnetworkAssetList: AssetList = {
         png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/butt.png',
         svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/butt.svg',
       },
-      coingecko_id: 'buttcoin-2',
       images: [
         {
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/secretnetwork/images/butt.png',

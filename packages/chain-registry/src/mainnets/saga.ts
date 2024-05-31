@@ -59,6 +59,11 @@ export const saga: Chain = {
         address: 'saga-mainnet-seed.autostake.com:27426',
         provider: 'AutoStake 🛡️ Slash Protected',
       },
+      {
+        id: '20e1000e88125698264454a884812746c2eb4807',
+        address: 'seeds.lavenderfive.com:24956',
+        provider: 'Lavender.Five Nodes 🐝',
+      },
     ],
     persistent_peers: [
       {
@@ -106,8 +111,16 @@ export const saga: Chain = {
         provider: 'kjnodes',
       },
       {
+        address: 'https://rpc.saga.goldenratiostaking.net',
+        provider: 'Golden Ratio Staking',
+      },
+      {
         address: 'https://rpc.saga.bronbro.io:443',
         provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'https://saga-rpc.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
       },
     ],
     rest: [
@@ -120,6 +133,10 @@ export const saga: Chain = {
         provider: 'Allnodes ⚡️ Nodes & Staking',
       },
       {
+        address: 'https://rest.saga.goldenratiostaking.net',
+        provider: 'Golden Ratio Staking',
+      },
+      {
         address: 'https://api.saga.nodestake.org',
         provider: 'NodeStake',
       },
@@ -130,6 +147,10 @@ export const saga: Chain = {
       {
         address: 'https://lcd.saga.bronbro.io:443',
         provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'https://saga-api.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
       },
     ],
     grpc: [
@@ -152,6 +173,10 @@ export const saga: Chain = {
       {
         address: 'grpc.saga.bronbro.io:443',
         provider: 'Bro_n_Bro',
+      },
+      {
+        address: 'https://saga-grpc.lavenderfive.com:443',
+        provider: 'Lavender.Five Nodes 🐝',
       },
     ],
   },

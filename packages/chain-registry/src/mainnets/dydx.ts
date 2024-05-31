@@ -129,8 +129,8 @@ export const dydx: Chain = {
         name: 'v4.1.0',
         proposal: 53,
         height: 14404200,
-        recommended_version: 'protocol/v4.1.0',
-        compatible_versions: ['protocol/v4.1.0'],
+        recommended_version: 'protocol/v4.1.2',
+        compatible_versions: ['protocol/v4.1.0', 'protocol/v4.1.2'],
         binaries: {
           'linux/amd64':
             'https://github.com/dydxprotocol/v4-chain/releases/download/protocol%2Fv4.1.0/dydxprotocold-v4.1.0-linux-amd64.tar.gz',
@@ -285,6 +285,10 @@ export const dydx: Chain = {
         address: 'https://dydx-rpc.noders.services',
         provider: '[NODERS]TEAM',
       },
+      {
+        address: 'https://dydx.interstellar-lounge.org',
+        provider: 'Interstellar Lounge 🍸',
+      },
     ],
     rest: [
       {
@@ -338,6 +342,10 @@ export const dydx: Chain = {
       {
         address: 'https://dydx-api.noders.services',
         provider: '[NODERS]TEAM',
+      },
+      {
+        address: 'https://dydx-rest.interstellar-lounge.org',
+        provider: 'Interstellar Lounge 🍸',
       },
     ],
     grpc: [

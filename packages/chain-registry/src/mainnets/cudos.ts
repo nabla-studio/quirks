@@ -138,6 +138,10 @@ export const cudos: Chain = {
         address: 'https://cudos-rpc.lavenderfive.com',
         provider: 'Lavender.Five Nodes 🐝',
       },
+      {
+        address: 'https://cudos-rpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     rest: [
       {
@@ -160,6 +164,10 @@ export const cudos: Chain = {
         address: 'https://cudos-api.lavenderfive.com/',
         provider: 'Lavender.Five Nodes 🐝',
       },
+      {
+        address: 'https://cudos-rest.publicnode.com',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
+      },
     ],
     grpc: [
       {
@@ -173,6 +181,10 @@ export const cudos: Chain = {
       {
         address: 'cudos-grpc.lavenderfive.com:443',
         provider: 'Lavender.Five Nodes 🐝',
+      },
+      {
+        address: 'cudos-grpc.publicnode.com:443',
+        provider: 'Allnodes ⚡️ Nodes & Staking',
       },
     ],
   },

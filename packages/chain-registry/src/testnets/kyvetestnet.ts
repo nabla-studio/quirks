@@ -126,10 +126,10 @@ export const kyvetestnet: Chain = {
   explorers: [
     {
       kind: 'mintscan',
-      url: 'https://testnet.mintscan.io/kyve-testnet',
-      tx_page: 'https://testnet.mintscan.io/kyve-testnet/txs/${txHash}',
+      url: 'https://mintscan.io/kyve-testnet',
+      tx_page: 'https://mintscan.io/kyve-testnet/txs/${txHash}',
       account_page:
-        'https://testnet.mintscan.io/kyve-testnet/account/${accountAddress}',
+        'https://mintscan.io/kyve-testnet/account/${accountAddress}',
     },
   ],
 };

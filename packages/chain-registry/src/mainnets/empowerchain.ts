@@ -314,6 +314,13 @@ export const empowerchain: Chain = {
       account_page:
         'https://explorer.declab.pro/Empower/account/{$accountAddress}',
     },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/empowerchain',
+      tx_page: 'https://mainnet.whispernode.com/empowerchain/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/empowerchain/account/${accountAddress}',
+    },
   ],
 };
 

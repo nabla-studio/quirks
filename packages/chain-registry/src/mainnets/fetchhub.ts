@@ -85,6 +85,11 @@ export const fetchhub: Chain = {
         address: 'seed-fetch.ibs.team:16659',
         provider: 'Inter Blockchain Services',
       },
+      {
+        id: '258f523c96efde50d5fe0a9faeea8a3e83be22ca',
+        address: 'seed.fetchhub-4.fetch.aviaone.com:10265',
+        provider: 'AVIAONE 🟢',
+      },
     ],
     persistent_peers: [
       {
@@ -172,6 +177,10 @@ export const fetchhub: Chain = {
         address: 'https://fetch.rpc.nodeshub.online:443',
         provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
       },
+      {
+        address: 'https://rpc.fetchhub-4.fetch.aviaone.com',
+        provider: 'AVIAONE 🟢',
+      },
     ],
     rest: [
       {
@@ -230,6 +239,10 @@ export const fetchhub: Chain = {
         address: 'https://fetch.api.nodeshub.online:443',
         provider: 'Nodes Hub 🛡️ 100% Slash Protected 🛡️ | Restake ✅',
       },
+      {
+        address: 'https://api.fetchhub-4.fetch.aviaone.com/',
+        provider: 'AVIAONE 🟢',
+      },
     ],
     grpc: [
       {
@@ -271,6 +284,10 @@ export const fetchhub: Chain = {
       {
         address: 'fetch.grpc.nodeshub.online',
         provider: 'Nodes Hub',
+      },
+      {
+        address: 'grpc.fetchhub-4.fetch.aviaone.com:9094',
+        provider: 'AVIAONE 🟢',
       },
     ],
   },
@@ -323,6 +340,13 @@ export const fetchhub: Chain = {
       tx_page: 'https://explorer.nodeshub.online/fetchhub/tx/${txHash}',
       account_page:
         'https://explorer.nodeshub.online/fetchhub/accounts/${accountAddress}',
+    },
+    {
+      kind: 'Blockchain Explorer by AVIAONE 🟢',
+      url: 'https://mainnet.explorer.aviaone.com/fetchhub',
+      tx_page: 'https://mainnet.explorer.aviaone.com/fetchhub/tx/${txHash}',
+      account_page:
+        'https://mainnet.explorer.aviaone.com/fetchhub/accounts/${accountAddress}',
     },
   ],
   images: [

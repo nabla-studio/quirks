@@ -43,6 +43,11 @@ export const nim: Chain = {
     },
   ],
   codebase: {
+    git_repo: 'https://github.com/Nim-Network-Foundation/mainnet',
+    genesis: {
+      genesis_url:
+        'https://github.com/Nim-Network-Foundation/mainnet/raw/main/genesis.json',
+    },
     recommended_version: 'v2.1.3-rc02',
     compatible_versions: ['v2.1.3-rc02'],
     versions: [
@@ -117,6 +122,10 @@ export const nimAssetList: AssetList = {
         twitter: 'https://twitter.com/nim_network',
       },
       keywords: ['gaming', 'AI'],
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nim/images/nim.png',
+        svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/nim/images/nim.svg',
+      },
     },
   ],
 };

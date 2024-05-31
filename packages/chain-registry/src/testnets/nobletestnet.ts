@@ -295,6 +295,10 @@ export const nobletestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'noble',
+            base_denom: 'uusdlr',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/testnets/nobletestnet/images/usdlr.svg',
         },

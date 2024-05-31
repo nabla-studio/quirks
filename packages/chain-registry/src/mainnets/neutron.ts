@@ -67,11 +67,11 @@ export const neutron: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/neutron-org/neutron',
-    recommended_version: 'v3.0.2',
-    compatible_versions: ['v3.0.2'],
+    recommended_version: 'v3.0.5',
+    compatible_versions: ['v3.0.5'],
     binaries: {
       'linux/amd64':
-        'https://github.com/neutron-org/neutron/releases/download/v3.0.2/neutrond-linux-amd64',
+        'https://github.com/neutron-org/neutron/releases/download/v3.0.5/neutrond-linux-amd64',
     },
     cosmos_sdk_version: 'neutron-org/cosmos-sdk v0.47.10-neutron',
     consensus: {
@@ -80,7 +80,7 @@ export const neutron: Chain = {
     },
     cosmwasm_version: 'neutron-org/wasmd v0.45.0',
     cosmwasm_enabled: true,
-    ibc_go_version: 'v7.3.2',
+    ibc_go_version: 'v7.4.0',
     genesis: {
       genesis_url:
         'https://raw.githubusercontent.com/neutron-org/mainnet-assets/main/neutron-1-genesis.json',
@@ -138,6 +138,26 @@ export const neutron: Chain = {
         cosmwasm_version: 'neutron-org/wasmd v0.45.0',
         cosmwasm_enabled: true,
         ibc_go_version: 'v7.3.2',
+        next_version_name: 'v3.0.5',
+      },
+      {
+        name: 'v3.0.5',
+        proposal: 37,
+        height: 10525000,
+        recommended_version: 'v3.0.5',
+        compatible_versions: ['v3.0.5'],
+        binaries: {
+          'linux/amd64':
+            'https://github.com/neutron-org/neutron/releases/download/v3.0.5/neutrond-linux-amd64',
+        },
+        cosmos_sdk_version: 'neutron-org/cosmos-sdk v0.47.10-neutron',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.4',
+        },
+        cosmwasm_version: 'neutron-org/wasmd v0.45.0',
+        cosmwasm_enabled: true,
+        ibc_go_version: 'v7.4.0',
         next_version_name: '',
       },
     ],
@@ -301,6 +321,13 @@ export const neutron: Chain = {
       url: 'https://ezstaking.app/neutron',
       tx_page: 'https://ezstaking.app/neutron/txs/${txHash}',
       account_page: 'https://ezstaking.app/neutron/account/${accountAddress}',
+    },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/neutron',
+      tx_page: 'https://mainnet.whispernode.com/neutron/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/neutron/account/${accountAddress}',
     },
   ],
   images: [
@@ -1376,6 +1403,82 @@ export const neutronAssetList: AssetList = {
             channel_id: 'channel-30',
             path: 'transfer/channel-30/uusdc',
           },
+        },
+      ],
+    },
+    {
+      description: 'WEIRD FRIENDS token',
+      denom_units: [
+        {
+          denom: 'factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/WEIRD',
+          exponent: 0,
+          aliases: ['uWEIRD'],
+        },
+        {
+          denom: 'WEIRD',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron133xakkrfksq39wxy575unve2nyehg5npx75nph/WEIRD',
+      name: 'WEIRD',
+      display: 'WEIRD',
+      symbol: 'WEIRD',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/WEIRD.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/WEIRD.png',
+        },
+      ],
+    },
+    {
+      denom_units: [
+        {
+          denom:
+            'factory/neutron19tynwawkm2rgefqxy7weupu4hdamyhg890zep2/TAKUMI',
+          exponent: 0,
+          aliases: ['utakumi'],
+        },
+        {
+          denom: 'takumi',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron19tynwawkm2rgefqxy7weupu4hdamyhg890zep2/TAKUMI',
+      name: 'Takumi Asano',
+      display: 'takumi',
+      symbol: 'TAKUMI',
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/TAKUMI.png',
+        },
+      ],
+    },
+    {
+      name: 'Ninja Blaze Token',
+      description: 'Ninja Blaze Token',
+      denom_units: [
+        {
+          denom:
+            'factory/neutron1a6ydq8urdj0gkvjw9e9e5y9r5ce2qegm9m4xufpt96kcm60kmuass0mqq4/nbz',
+          exponent: 0,
+          aliases: ['uNBZ'],
+        },
+        {
+          denom: 'NBZ',
+          exponent: 6,
+        },
+      ],
+      base: 'factory/neutron1a6ydq8urdj0gkvjw9e9e5y9r5ce2qegm9m4xufpt96kcm60kmuass0mqq4/nbz',
+      display: 'NBZ',
+      symbol: 'NBZ',
+      logo_URIs: {
+        png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/NBZ.png',
+      },
+      images: [
+        {
+          png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/neutron/images/NBZ.png',
         },
       ],
     },

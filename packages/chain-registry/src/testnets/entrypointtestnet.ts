@@ -176,9 +176,9 @@ export const entrypointtestnetAssetList: AssetList = {
         {
           type: 'ibc',
           counterparty: {
-            chain_name: 'osmosis',
+            chain_name: 'osmosistestnet',
             base_denom:
-              'ibc/B28CFD38D84A480EF2A03AC575DCB05004D934A603A5A642888847BCDA6340C0',
+              'ibc/9FF2B7A5F55038A7EE61F4FD6749D9A648B48E89830F2682B67B5DC158E2753C',
             channel_id: 'channel-4156',
           },
           chain: {
@@ -193,6 +193,11 @@ export const entrypointtestnetAssetList: AssetList = {
       },
       images: [
         {
+          image_sync: {
+            chain_name: 'osmosistestnet',
+            base_denom:
+              'ibc/9FF2B7A5F55038A7EE61F4FD6749D9A648B48E89830F2682B67B5DC158E2753C',
+          },
           png: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.png',
           svg: 'https://raw.githubusercontent.com/cosmos/chain-registry/master/cosmoshub/images/atom.svg',
         },

@@ -33,21 +33,27 @@ export const cosmoshub: Chain = {
   },
   codebase: {
     git_repo: 'https://github.com/cosmos/gaia',
-    recommended_version: 'v15.2.0',
-    compatible_versions: ['v15.2.0'],
+    recommended_version: 'v16.0.0',
+    compatible_versions: ['v16.0.0'],
+    cosmos_sdk_version: 'v0.47.13-ics-lsm',
+    ibc_go_version: 'v7.4.0',
+    consensus: {
+      type: 'cometbft',
+      version: 'v0.37.5',
+    },
     binaries: {
       'linux/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-linux-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-linux-amd64',
       'linux/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-linux-arm64',
+        'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-linux-arm64',
       'darwin/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-darwin-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-darwin-amd64',
       'darwin/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-darwin-arm64',
+        'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-darwin-arm64',
       'windows/amd64':
-        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-darwin-amd64',
+        'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-darwin-amd64',
       'windows/arm64':
-        'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-windows-arm64.exe',
+        'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-windows-arm64.exe',
     },
     genesis: {
       genesis_url:
@@ -250,6 +256,35 @@ export const cosmoshub: Chain = {
           'windows/arm64':
             'https://github.com/cosmos/gaia/releases/download/v15.2.0/gaiad-v15.2.0-windows-arm64.exe',
         },
+        next_version_name: 'v16',
+      },
+      {
+        name: 'v16',
+        tag: 'v16.0.0',
+        proposal: 914,
+        height: 20440500,
+        recommended_version: 'v16.0.0',
+        compatible_versions: ['v16.0.0'],
+        cosmos_sdk_version: 'v0.47.13-ics-lsm',
+        ibc_go_version: 'v7.4.0',
+        consensus: {
+          type: 'cometbft',
+          version: 'v0.37.5',
+        },
+        binaries: {
+          'linux/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-linux-amd64',
+          'linux/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-linux-arm64',
+          'darwin/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-darwin-amd64',
+          'darwin/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-darwin-arm64',
+          'windows/amd64':
+            'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-darwin-amd64',
+          'windows/arm64':
+            'https://github.com/cosmos/gaia/releases/download/v16.0.0/gaiad-v16.0.0-windows-arm64.exe',
+        },
         next_version_name: '',
       },
     ],
@@ -376,6 +411,10 @@ export const cosmoshub: Chain = {
         provider: 'ecostake',
       },
       {
+        address: 'https://go.getblock.io/17515cb3ec0e43b7817f182e5de6066a',
+        provider: 'GetBlock RPC Nodes',
+      },
+      {
         address: 'https://rpc-cosmoshub.pupmos.network',
         provider: 'PUPMØS',
       },
@@ -440,7 +479,7 @@ export const cosmoshub: Chain = {
         provider: 'kjnodes',
       },
       {
-        address: 'https://rpc-cosmoshub.goldenratiostaking.net',
+        address: 'https://rpc.cosmoshub.goldenratiostaking.net',
         provider: 'Golden Ratio Staking',
       },
       {
@@ -494,7 +533,7 @@ export const cosmoshub: Chain = {
         provider: 'Chainlayer',
       },
       {
-        address: 'https://rest-cosmoshub.goldenratiostaking.net',
+        address: 'https://rest.cosmoshub.goldenratiostaking.net',
         provider: 'Golden Ratio Staking',
       },
       {
@@ -726,6 +765,13 @@ export const cosmoshub: Chain = {
       url: 'https://inbloc.org',
       tx_page: 'https://inbloc.org/transactions/${txHash}',
       account_page: 'https://inbloc.org/account/${accountAddress}',
+    },
+    {
+      kind: 'WhisperNode 🤐',
+      url: 'https://mainnet.whispernode.com/cosmos',
+      tx_page: 'https://mainnet.whispernode.com/cosmos/tx/${txHash}',
+      account_page:
+        'https://mainnet.whispernode.com/cosmos/account/${accountAddress}',
     },
   ],
   images: [
