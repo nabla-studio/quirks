@@ -5,7 +5,7 @@ import type {
   StargateClientOptions,
 } from '@cosmjs/stargate';
 import type { SigningCosmWasmClientOptions } from '@cosmjs/cosmwasm-stargate';
-import type { PersistOptions } from 'zustand/middleware';
+import type { PersistOptions as ZustandPersistOptions } from 'zustand/middleware';
 import type { AppState } from './store';
 import type { SharedOptions } from '../middlewares';
 import type {
@@ -22,6 +22,13 @@ export interface SignerOptions {
     chain: Chain,
   ) => Promise<SigningCosmWasmClientOptions | undefined>;
 }
+
+export type PersistOptions<S, PersistedState = S> = ZustandPersistOptions<
+  S,
+  PersistedState
+> & {
+  getInitialState?: () => S;
+};
 
 export interface Config {
   wallets: Wallet[];

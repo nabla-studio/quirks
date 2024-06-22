@@ -104,6 +104,8 @@ export const createConfig = (config: Config) => {
     namespaces: overridedNamespaces,
   };
 
+  const persistInitialState = persistOptions.getInitialState?.();
+
   store = createStore(
     subscribeWithSelector(
       persist(
@@ -132,6 +134,7 @@ export const createConfig = (config: Config) => {
                 assetsLists,
               });
             },
+            ...persistInitialState,
           }),
           {
             ...defaultSharedOptions,
