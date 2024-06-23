@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.17.0](https://github.com/nabla-studio/quirks/compare/core@0.16.1...core@0.17.0) (2024-06-23)
+
+
+### Features
+
+* **core:** :label: expose ethereumHexAddress type ([a901e35](https://github.com/nabla-studio/quirks/commit/a901e358657f7360eb68401e6557f74366d895ef))
+
 ## [0.16.1](https://github.com/nabla-studio/quirks/compare/core@0.16.0...core@0.16.1) (2024-05-31)
 
 ### Dependency Updates
