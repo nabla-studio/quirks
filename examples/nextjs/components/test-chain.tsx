@@ -1,10 +1,8 @@
-'use client';
-
-import { useChain, useConnect } from '@quirks/react';
+import { getChain, getConnect } from '@quirks/next';
 
 export const TestChain = () => {
-  const { connected } = useConnect();
-  const { address, chain, assetsList } = useChain('osmosis');
+  const { connected } = getConnect();
+  const { address } = getChain('osmosis');
 
   if (!connected) {
     return false;
@@ -12,11 +10,8 @@ export const TestChain = () => {
 
   return (
     <div>
-      <div>Chain ID: {chain.chain_id}</div>
-      <div>Assets List: {assetsList?.assets.length}</div>
-
+      Server Component
       <div>Chain Name: Osmosis</div>
-
       <div>Address: {address}</div>
     </div>
   );
