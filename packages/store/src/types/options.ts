@@ -27,7 +27,7 @@ export type PersistOptions<S, PersistedState = S> = ZustandPersistOptions<
   S,
   PersistedState
 > & {
-  getInitialState?: () => S;
+  getInitialState?: () => Partial<S> | undefined;
 };
 
 export interface Config {
