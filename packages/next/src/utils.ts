@@ -1,4 +1,5 @@
 import { getCookie } from 'cookies-next';
+import type { OptionsType } from 'cookies-next/lib/types';
 import type { ReadonlyRequestCookies } from 'next/dist/server/web/spec-extension/adapters/request-cookies';
 
 /**
@@ -7,8 +8,7 @@ import type { ReadonlyRequestCookies } from 'next/dist/server/web/spec-extension
  * but we have to make sure that this code is only executed server-side,
  * client-side you cannot call the `cookies` function
  */
-export const getCrossCookie = (...args: Parameters<typeof getCookie>) => {
-  const [name, options] = args;
+export const getCrossCookie = (name: string, options: OptionsType) => {
   let cookies: (() => ReadonlyRequestCookies) | undefined = undefined;
 
   if (typeof window === 'undefined') {

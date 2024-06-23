@@ -41,6 +41,7 @@ export default defineConfig({
       external: [
         'next',
         'cookies-next',
+        'cookies-next/lib/types',
         'superjson',
         'zustand',
         'zustand/middleware',
