@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.25.0](https://github.com/nabla-studio/quirks/compare/store@0.24.1...store@0.25.0) (2024-06-23)
+
+### Dependency Updates
+
+* `core` updated to version `0.24.1`
+
+### Features
+
+* **store:** :sparkles: add support for persist initial state ([4207313](https://github.com/nabla-studio/quirks/commit/42073135e76627f5b1099dbbfd099fe8f8ff40cb))
+
+
+### Bug Fixes
+
+* **store:** :bug: fix initial state type ([3f4d087](https://github.com/nabla-studio/quirks/commit/3f4d0877b443de894a94b9dcdb9d3fb0289df966))
+
 ## [0.24.1](https://github.com/nabla-studio/quirks/compare/store@0.24.0...store@0.24.1) (2024-05-31)
 
 ### Dependency Updates
