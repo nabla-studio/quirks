@@ -1,0 +1,29 @@
+{
+  "name": "@quirks/next",
+  "repository": "nabla-studio/quirks",
+  "keywords": [
+    "blockchain",
+    "cosmos",
+    "cosmos-sdk",
+    "registry",
+    "osmosis",
+    "juno",
+    "desmos",
+    "evmos"
+  ],
+  "version": "0.0.0",
+  "sideEffects": false,
+  "type": "module",
+  "dependencies": {
+    "cookies-next": "^4.2.1",
+    "superjson": "^2.2.1",
+    "@quirks/store": "*"
+  },
+  "peerDependencies": {
+    "next": "^13",
+    "zustand": "^4.5.0"
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "typings": "./index.d.ts"
+}
