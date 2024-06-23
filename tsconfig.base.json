@@ -20,6 +20,7 @@
         "packages/wallet-registry/src/index.ts"
       ],
       "@quirks/core": ["packages/core/src/index.ts"],
+      "@quirks/next": ["packages/next/src/index.ts"],
       "@quirks/nuxt": ["packages/nuxt/src/index.ts"],
       "@quirks/react": ["packages/react/src/index.ts"],
       "@quirks/react-native": ["packages/react-native/src/index.ts"],

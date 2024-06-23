@@ -1,15 +1,31 @@
 'use client';
 
-import { useConfig, useConnect, useWalletConnect } from '@quirks/react';
+import {
+  ClientOnly,
+  useConfig,
+  useConnect,
+  useWalletConnect,
+} from '@quirks/react';
+import { useRouter } from 'next/navigation';
 import QRCode from 'react-qr-code';
 
 export const Button = () => {
   const { wallets } = useConfig();
   const { connect, disconnect, connected } = useConnect();
   const { pairingURI } = useWalletConnect();
+  const router = useRouter();
 
   if (connected) {
-    return <button onClick={disconnect}>Disconnect</button>;
+    return (
+      <button
+        onClick={() => {
+          disconnect();
+          router.refresh();
+        }}
+      >
+        Disconnect
+      </button>
+    );
   }
 
   return (
@@ -38,6 +54,7 @@ export const Button = () => {
           <button
             onClick={async () => {
               await connect(wallet.options.wallet_name);
+              router.refresh();
             }}
           >
             <img
@@ -48,18 +65,25 @@ export const Button = () => {
             />
           </button>
 
-          {!wallet.injected ? (
-            <a
-              href={
-                wallet.options.platforms && wallet.options.platforms.length > 0
-                  ? wallet.options.platforms[0].install_link
-                  : '#'
-              }
-              target="_blank"
-            >
-              Install
-            </a>
-          ) : null}
+          {/**
+           * Inject state can't be determinated on server side, so this code must be
+           * execute only on client side to avoid hydration errors.
+           */}
+          <ClientOnly>
+            {!wallet.injected ? (
+              <a
+                href={
+                  wallet.options.platforms &&
+                  wallet.options.platforms.length > 0
+                    ? wallet.options.platforms[0].install_link
+                    : '#'
+                }
+                target="_blank"
+              >
+                Install
+              </a>
+            ) : null}
+          </ClientOnly>
         </div>
       ))}
     </div>

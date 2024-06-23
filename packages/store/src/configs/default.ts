@@ -1,5 +1,5 @@
-import type { AppState } from '../types';
-import { createJSONStorage, type PersistOptions } from 'zustand/middleware';
+import type { AppState, PersistOptions } from '../types';
+import { createJSONStorage } from 'zustand/middleware';
 
 export const excludedKeys: (keyof AppState)[] = [
   'wallet',
