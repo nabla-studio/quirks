@@ -119,6 +119,7 @@
     "react-qr-code": "^2.0.12",
     "stargazejs": "^0.14.1",
     "stream-browserify": "^3.0.0",
+    "superjson": "^2.2.1",
     "utf-8-validate": "^6.0.3",
     "vue": "^3.3.4",
     "vue-qrcode": "^2.2.2",
