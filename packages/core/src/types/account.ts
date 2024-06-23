@@ -4,6 +4,7 @@ export interface Key {
   readonly pubKey: Uint8Array | null;
   readonly address: Uint8Array | null;
   readonly bech32Address: string;
+  readonly ethereumHexAddress?: string;
   readonly isNanoLedger: boolean | null;
   readonly isKeystone: boolean | null;
 }
