@@ -13,3 +13,9 @@ export const QuirksNextProvider = ({
 
   return isServer ? null : children;
 };
+
+/**
+ * Utility to ensure that the code of a jsx component is only executed client-side, e.g. web extension
+ * information is not data that may reside on the server (e.g. whether it has been injected into the browser window)
+ */
+export const ClientOnly = QuirksNextProvider;
