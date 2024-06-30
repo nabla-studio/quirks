@@ -17,11 +17,11 @@
   "dependencies": {
     "cookies-next": "^4.2.1",
     "superjson": "^2.2.1",
+    "zustand": "^4.5.0",
     "@quirks/store": "*"
   },
   "peerDependencies": {
-    "next": "^13",
-    "zustand": "^4.5.0"
+    "next": "^13"
   },
   "main": "./index.js",
   "module": "./index.js",

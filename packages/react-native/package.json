@@ -18,11 +18,8 @@
   "dependencies": {
     "@quirks/store": "*",
     "@quirks/core": "*",
-    "babel-plugin-module-resolver": "^5.0.0"
-  },
-  "peerDependencies": {
+    "babel-plugin-module-resolver": "^5.0.0",
     "@craftzdog/react-native-buffer": "^6.0.5",
-    "react-native": "^0.73.2",
     "react-native-get-random-values": "^1.10.0",
     "react-native-mmkv": "^2.11.0",
     "react-native-quick-crypto": "^0.6.1",
@@ -32,6 +29,9 @@
     "fast-text-encoding": "^1.0.6",
     "stream-browserify": "^3.0.0",
     "zustand": "^4.5.0"
+  },
+  "peerDependencies": {
+    "react-native": "^0.73.2"
   },
   "main": "./index.js",
   "module": "./index.js",
