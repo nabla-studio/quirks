@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.22](https://github.com/nabla-studio/quirks/compare/react-native@0.2.21...react-native@0.2.22) (2024-06-30)
+
+### Dependency Updates
+
+* `store` updated to version `0.2.21`
+* `core` updated to version `0.2.21`
+
+### Bug Fixes
+
+* **react-native:** :bug: fix peer deps ([df0f3b0](https://github.com/nabla-studio/quirks/commit/df0f3b079945552778429e3b609efee469c93c25))
+
 ## [0.2.21](https://github.com/nabla-studio/quirks/compare/react-native@0.2.20...react-native@0.2.21) (2024-06-23)
 
 ### Dependency Updates
