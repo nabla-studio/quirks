@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.14.1](https://github.com/nabla-studio/quirks/compare/react@0.14.0...react@0.14.1) (2024-06-30)
+
+### Dependency Updates
+
+* `store` updated to version `0.14.0`
+* `core` updated to version `0.14.0`
+
+### Bug Fixes
+
+* **react:** :bug: fix peer deps ([7764fc6](https://github.com/nabla-studio/quirks/commit/7764fc64ff9fbb8efb6017b3bbf630ba66d42b8a))
+
 ## [0.14.0](https://github.com/nabla-studio/quirks/compare/react@0.13.8...react@0.14.0) (2024-06-23)
 
 ### Dependency Updates
