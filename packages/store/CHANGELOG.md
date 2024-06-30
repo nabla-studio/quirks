@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.25.1](https://github.com/nabla-studio/quirks/compare/store@0.25.0...store@0.25.1) (2024-06-30)
+
+### Dependency Updates
+
+* `core` updated to version `0.25.0`
+
+### Bug Fixes
+
+* **store:** :bug: fix peer deps ([1c5f983](https://github.com/nabla-studio/quirks/commit/1c5f983b1cc79c0c6d3597a86db8798472e12ba1))
+
 ## [0.25.0](https://github.com/nabla-studio/quirks/compare/store@0.24.1...store@0.25.0) (2024-06-23)
 
 ### Dependency Updates
