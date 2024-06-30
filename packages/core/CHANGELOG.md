@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.17.1](https://github.com/nabla-studio/quirks/compare/core@0.17.0...core@0.17.1) (2024-06-30)
+
+
+### Bug Fixes
+
+* **core:** :bug: fix peer deps ([3666bfd](https://github.com/nabla-studio/quirks/commit/3666bfd1feaa3942689e33272416c21ef67b343b))
+
 ## [0.17.0](https://github.com/nabla-studio/quirks/compare/core@0.16.1...core@0.17.0) (2024-06-23)
 
 
