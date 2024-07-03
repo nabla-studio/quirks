@@ -103,11 +103,18 @@ export class KeplrWalletExtension<
     options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner | OfflineDirectSigner> {
     assertIsDefined(this.client);
+    const key = await this.getAccount(chainId);
+
+    if (key?.isNanoLedger) {
+      return {
+        getAccounts: async () => [await this.getSignerAccount(chainId)],
+        signAmino: (signerAddress, signDoc) =>
+          this.signAmino(chainId, signerAddress, signDoc, options),
+      };
+    }
 
     return {
       getAccounts: async () => [await this.getSignerAccount(chainId)],
-      signAmino: (signerAddress, signDoc) =>
-        this.signAmino(chainId, signerAddress, signDoc, options),
       signDirect: (signerAddress, signDoc) =>
         this.signDirect(chainId, signerAddress, signDoc, options),
     };
