@@ -124,11 +124,18 @@ export class CosmostationWalletExtension extends ExtensionWallet<Cosmostation> {
     options?: SignOptions | undefined,
   ): Promise<OfflineAminoSigner | OfflineDirectSigner> {
     assertIsDefined(this.ikeplr, 'ikeplr is not defined');
+    const key = await this.getAccount(chainId);
+
+    if (key?.isNanoLedger) {
+      return {
+        getAccounts: async () => [await this.getSignerAccount(chainId)],
+        signAmino: (signerAddress, signDoc) =>
+          this.signAmino(chainId, signerAddress, signDoc, options),
+      };
+    }
 
     return {
       getAccounts: async () => [await this.getSignerAccount(chainId)],
-      signAmino: (signerAddress, signDoc) =>
-        this.signAmino(chainId, signerAddress, signDoc, options),
       signDirect: (signerAddress, signDoc) =>
         this.signDirect(chainId, signerAddress, signDoc, options),
     };
