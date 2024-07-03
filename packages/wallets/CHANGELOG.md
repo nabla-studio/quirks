@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.18.4](https://github.com/nabla-studio/quirks/compare/wallets@0.18.3...wallets@0.18.4) (2024-07-03)
+
+
+### Bug Fixes
+
+* **wallets:** :bug: fix getOfflineSignerAuto ([449b043](https://github.com/nabla-studio/quirks/commit/449b043fd21b4c37ef85a0b68d44b19f591a7b9c))
+
 ## [0.18.3](https://github.com/nabla-studio/quirks/compare/wallets@0.18.2...wallets@0.18.3) (2024-06-30)
 
 ### Dependency Updates
