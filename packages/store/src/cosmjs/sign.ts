@@ -42,8 +42,8 @@ export function getOfflineSigner(
 export async function sign(
   chainOrName: string,
   messages: EncodeObject[],
-  fee: StdFee | 'auto',
-  signerType: SignerType,
+  fee?: StdFee | 'auto',
+  signerType?: SignerType,
   memo?: string,
   explicitSignerData?: SignerData,
   timeoutHeight?: bigint,
@@ -57,8 +57,8 @@ export async function sign(
 export async function sign(
   chainOrName: Chain,
   messages: EncodeObject[],
-  fee: StdFee | 'auto',
-  signerType: SignerType,
+  fee?: StdFee | 'auto',
+  signerType?: SignerType,
   memo?: string,
   explicitSignerData?: SignerData,
   timeoutHeight?: bigint,
@@ -154,8 +154,8 @@ export async function sign(
 export async function signCW(
   chainOrName: string,
   messages: EncodeObject[],
-  fee: StdFee | 'auto',
-  signerType: SignerType,
+  fee?: StdFee | 'auto',
+  signerType?: SignerType,
   memo?: string,
   explicitSignerData?: SignerData,
   timeoutHeight?: bigint,
@@ -165,8 +165,8 @@ export async function signCW(
 export async function signCW(
   chainOrName: Chain,
   messages: EncodeObject[],
-  fee: StdFee | 'auto',
-  signerType: SignerType,
+  fee?: StdFee | 'auto',
+  signerType?: SignerType,
   memo?: string,
   explicitSignerData?: SignerData,
   timeoutHeight?: bigint,

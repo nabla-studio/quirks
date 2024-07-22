@@ -11,15 +11,15 @@ import { getChain } from './utils';
 export async function broadcast(
   chainOrName: string,
   txRaw: TxRaw,
-  timeoutMs: number,
-  pollIntervalMs: number,
+  timeoutMs?: number,
+  pollIntervalMs?: number,
 ): Promise<DeliverTxResponse>;
 
 export async function broadcast(
   chainOrName: Chain,
   txRaw: TxRaw,
-  timeoutMs: number,
-  pollIntervalMs: number,
+  timeoutMs?: number,
+  pollIntervalMs?: number,
 ): Promise<DeliverTxResponse>;
 
 /**
@@ -76,15 +76,11 @@ export async function broadcast(
 export async function broadcastSync(
   chainOrName: string,
   txRaw: TxRaw,
-  timeoutMs: number,
-  pollIntervalMs: number,
 ): Promise<string>;
 
 export async function broadcastSync(
   chainOrName: Chain,
   txRaw: TxRaw,
-  timeoutMs: number,
-  pollIntervalMs: number,
 ): Promise<string>;
 
 /**
