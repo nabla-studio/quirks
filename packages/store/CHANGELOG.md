@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.26.0](https://github.com/nabla-studio/quirks/compare/store@0.25.1...store@0.26.0) (2024-07-22)
+
+### Dependency Updates
+
+* `core` updated to version `0.25.1`
+
+### Features
+
+* **store:** :label: improve optional types ([94622ff](https://github.com/nabla-studio/quirks/commit/94622ff93610a4fa182e13f8125f492adf42a6f7))
+* **store:** :sparkles: add getWallet utility ([e984ffd](https://github.com/nabla-studio/quirks/commit/e984ffdb222216a9ee7f2e0c97dd72b316df232b))
+* **store:** :sparkles: add support for chain object utils ([5e488a5](https://github.com/nabla-studio/quirks/commit/5e488a582623a9f964e9e5301e804e101a4d336e))
+
 ## [0.25.1](https://github.com/nabla-studio/quirks/compare/store@0.25.0...store@0.25.1) (2024-06-30)
 
 ### Dependency Updates
