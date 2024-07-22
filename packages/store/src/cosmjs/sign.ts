@@ -29,6 +29,17 @@ import type { SignerType } from '../types';
  */
 
 /**
+ * Return the current wallet instance
+ *
+ * @returns Wallet<unknown, unknown>
+ */
+export const getWallet = () => {
+  const state = store.getState();
+
+  return state.wallet;
+};
+
+/**
  * Get current account address by chainName
  *
  * @param chainName
