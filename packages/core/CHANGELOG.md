@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.18.0](https://github.com/nabla-studio/quirks/compare/core@0.17.1...core@0.18.0) (2024-07-22)
+
+
+### Features
+
+* **core:** :sparkles: add support for chain object utils ([6d6eb80](https://github.com/nabla-studio/quirks/commit/6d6eb807324712d4c87190398c26c1e06cf692be))
+
 ## [0.17.1](https://github.com/nabla-studio/quirks/compare/core@0.17.0...core@0.17.1) (2024-06-30)
 
 
