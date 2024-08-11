@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.27.0](https://github.com/nabla-studio/quirks/compare/store@0.26.0...store@0.27.0) (2024-08-11)
+
+### Dependency Updates
+
+* `core` updated to version `0.26.0`
+
+### Features
+
+* **store:** :sparkles: add support for chain registry ([97102ab](https://github.com/nabla-studio/quirks/commit/97102ab764336cf9a1ffc4e2874725160c9bdbfe))
+
 ## [0.26.0](https://github.com/nabla-studio/quirks/compare/store@0.25.1...store@0.26.0) (2024-07-22)
 
 ### Dependency Updates
