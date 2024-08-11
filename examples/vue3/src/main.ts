@@ -7,11 +7,13 @@ import { quirksPlugin } from '@quirks/vue';
 const app = createApp(App);
 
 import {
-  cosmoshub,
-  cosmoshubAssetList,
-  osmosis,
-  osmosisAssetList,
-} from '@nabla-studio/chain-registry';
+  chain as osmosis,
+  assets as osmosisAssetList,
+} from 'chain-registry/mainnet/osmosis';
+import {
+  chain as cosmoshub,
+  assets as cosmoshubAssetList,
+} from 'chain-registry/mainnet/cosmoshub';
 import type { Config } from '@quirks/store';
 import {
   cosmostationMobile,
