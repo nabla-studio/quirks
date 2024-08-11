@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.19.0](https://github.com/nabla-studio/quirks/compare/wallets@0.18.5...wallets@0.19.0) (2024-08-11)
+
+### Dependency Updates
+
+* `core` updated to version `0.18.5`
+
+### Features
+
+* **wallets:** :sparkles: add support for chain registry ([9dee2fa](https://github.com/nabla-studio/quirks/commit/9dee2fa950bcc9bc19529280f95ea5cefc4cfebf))
+
 ## [0.18.5](https://github.com/nabla-studio/quirks/compare/wallets@0.18.4...wallets@0.18.5) (2024-07-22)
 
 ### Dependency Updates
