@@ -45,7 +45,7 @@ export default defineConfig({
         '@cosmjs/amino',
         '@cosmjs/stargate',
         'eventemitter3',
-        '@nabla-studio/chain-registry',
+        '@chain-registry/types',
         '@nabla-studio/wallet-registry',
         '@walletconnect/universal-provider',
         '@walletconnect/types',
