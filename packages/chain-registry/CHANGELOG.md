@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.15.1](https://github.com/nabla-studio/quirks/compare/chain-registry@0.15.0...chain-registry@0.15.1) (2024-08-11)
+
 ## [0.15.0](https://github.com/nabla-studio/quirks/compare/chain-registry@0.14.0...chain-registry@0.15.0) (2024-05-31)
 
 
