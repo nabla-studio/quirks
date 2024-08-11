@@ -11,6 +11,9 @@ importers:
 
   .:
     dependencies:
+      '@chain-registry/types':
+        specifier: ^0.45.46
+        version: 0.45.46
       '@cosmjs/amino':
         specifier: ^0.32.2
         version: 0.32.3
@@ -65,6 +68,9 @@ importers:
       bufferutil:
         specifier: ^4.0.8
         version: 4.0.8
+      chain-registry:
+        specifier: ^1.63.56
+        version: 1.63.56
       cookies-next:
         specifier: ^4.2.1
         version: 4.2.1
@@ -1113,6 +1119,9 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  '@chain-registry/types@0.45.46':
+    resolution: {integrity: sha512-IsajdG7UYxflCC4abwCw0G91nW/nnNJGgnfeScFhGyvXBlCHRqUd7LLDrlfgJ5ag0px1ONZ3lBPX2+LcR57bJQ==}
 
   '@cloudflare/kv-asset-handler@0.3.2':
     resolution: {integrity: sha512-EeEjMobfuJrwoctj7FA1y1KEbM0+Q1xSjobIEyie9k4haVEBB7vkDvsasw1pM3rO39mL2akxIAzLMUAtrMHZhA==}
@@ -4487,6 +4496,9 @@ packages:
   chai@4.4.1:
     resolution: {integrity: sha512-13sOfMv2+DWduEU+/xbun3LScLoqN17nBeTLUsmDfKdoiC1fr0n9PU4guu4AhRcOVFk/sW8LyZWHuhWtQZiF+g==}
     engines: {node: '>=4'}
+
+  chain-registry@1.63.56:
+    resolution: {integrity: sha512-dJXvcDeoya584+kHn6TdkmJq5Fsg/6gd3GIWNd+nOVEjYaj/BoF9n+J2HzM5kY63mRm5/LOsxT9EFM+yPXAIIw==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -11394,6 +11406,8 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
+  '@chain-registry/types@0.45.46': {}
+
   '@cloudflare/kv-asset-handler@0.3.2':
     dependencies:
       mime: 3.0.0
@@ -16722,6 +16736,10 @@ snapshots:
       loupe: 2.3.7
       pathval: 1.1.1
       type-detect: 4.0.8
+
+  chain-registry@1.63.56:
+    dependencies:
+      '@chain-registry/types': 0.45.46
 
   chalk@2.4.2:
     dependencies:
