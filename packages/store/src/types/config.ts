@@ -1,4 +1,4 @@
-import type { AssetList, Chain } from '@nabla-studio/chain-registry';
+import type { AssetList, Chain } from '@chain-registry/types';
 import type { Wallet } from '@quirks/core';
 
 export interface ConfigState {

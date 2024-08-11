@@ -5,7 +5,7 @@ import type {
   SigningStargateClientOptions,
 } from '@cosmjs/stargate';
 import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
-import type { Chain } from '@nabla-studio/chain-registry';
+import type { Chain } from '@chain-registry/types';
 import { getChain } from './utils';
 
 export async function broadcast(
