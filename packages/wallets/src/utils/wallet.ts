@@ -1,4 +1,4 @@
-import type { Asset, AssetList, Chain } from '@nabla-studio/chain-registry';
+import type { Asset, AssetList, Chain } from '@chain-registry/types';
 import type { ChainInfo, Currency, FeeCurrency } from '@keplr-wallet/types';
 import type { ChainInfoOptions } from '../types';
 import { getBech32Config, getExplr, getRest, getRpc } from './chain';
@@ -32,7 +32,7 @@ export const cosmwasmFeatures = {
 /**
  * The first version of the following utility is derived by a code which lays under an [MIT license](./Cosmology-LICENSE).
  *
- * @param chain An object that contains the chain configuration, can be retrieved from the chain-registry (@nabla-studio/chain-registry)
+ * @param chain An object that contains the chain configuration, can be retrieved from the chain-registry (chain-registry)
  * @param assets An array containing objects represented the token information of the chain passed before can be retrieved from the chain-registry
  * @param options An object to configure and customize some setup behaviors, particularly how endpoints are derived
  * @returns Returns a `ChainInfo` object compatible with the data types exposed by keplr and other wallets

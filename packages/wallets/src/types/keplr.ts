@@ -1,4 +1,4 @@
-import type { Chain } from '@nabla-studio/chain-registry';
+import type { Chain } from '@chain-registry/types';
 
 export interface ChainInfoOptions {
   getRpcEndpoint: (chain: Chain) => string;

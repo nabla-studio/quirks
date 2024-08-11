@@ -30,7 +30,8 @@
               "long",
               "cosmjs-types",
               "@leapwallet/cosmos-snap-provider",
-              "@dao-dao/cosmiframe"
+              "@dao-dao/cosmiframe",
+              "@chain-registry/types"
             ],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts}"]
           }
