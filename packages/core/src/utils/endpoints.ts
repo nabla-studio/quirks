@@ -1,17 +1,33 @@
-import type { Chain, Endpoint } from '@nabla-studio/chain-registry';
+import type { Chain } from '@chain-registry/types';
 import { assertIsDefined } from './asserts';
 
 export function getEndpoint(
   chainName: string,
   chains: Chain[],
 ): {
-  rpc: Endpoint;
-  rest: Endpoint;
+  rpc: {
+    address: string;
+    provider?: string;
+    archive?: boolean;
+  };
+  rest: {
+    address: string;
+    provider?: string;
+    archive?: boolean;
+  };
 };
 
 export function getEndpoint(chain: Chain): {
-  rpc: Endpoint;
-  rest: Endpoint;
+  rpc: {
+    address: string;
+    provider?: string;
+    archive?: boolean;
+  };
+  rest: {
+    address: string;
+    provider?: string;
+    archive?: boolean;
+  };
 };
 
 export function getEndpoint(chainOrName: string | Chain, chains: Chain[] = []) {

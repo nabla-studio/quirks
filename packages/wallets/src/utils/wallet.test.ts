@@ -1,9 +1,11 @@
 import {
-  osmosis,
-  osmosisAssetList,
-  bitsong,
-  bitsongAssetList,
-} from '@nabla-studio/chain-registry';
+  chain as osmosis,
+  assets as osmosisAssetList,
+} from 'chain-registry/mainnet/osmosis';
+import {
+  chain as bitsong,
+  assets as bitsongAssetList,
+} from 'chain-registry/mainnet/bitsong';
 import { getChainInfo } from './wallet';
 import type { ChainInfo } from '@keplr-wallet/types';
 

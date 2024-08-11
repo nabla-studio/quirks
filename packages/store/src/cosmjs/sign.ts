@@ -20,7 +20,7 @@ import type {
 import type { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { SignerType } from '../types';
 import { getAddress, getChain } from './utils';
-import { Chain } from '@nabla-studio/chain-registry';
+import type { Chain } from '@chain-registry/types';
 
 export function getOfflineSigner(
   chainId: string,

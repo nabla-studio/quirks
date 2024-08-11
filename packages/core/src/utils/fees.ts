@@ -2,7 +2,7 @@ import type { EncodeObject } from '@cosmjs/proto-signing';
 import { assertIsDefined } from './asserts';
 import type { GasPrice } from '@cosmjs/stargate';
 import type { SigningSimulatorClient } from '../types';
-import type { Chain } from '@nabla-studio/chain-registry';
+import type { Chain } from '@chain-registry/types';
 
 /**
  * Retrieve chain gas price so we can use fee auto.

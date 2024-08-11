@@ -1,5 +1,5 @@
 import type { Bech32Config } from '@keplr-wallet/types';
-import type { Chain } from '@nabla-studio/chain-registry';
+import type { Chain } from '@chain-registry/types';
 
 export const getRpc = (chain: Chain): string =>
   chain.apis?.rpc?.[0]?.address ?? '';

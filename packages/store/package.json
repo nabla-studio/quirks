@@ -16,13 +16,13 @@
   "type": "module",
   "dependencies": {
     "zustand": "^4.5.0",
+    "@chain-registry/types": "^0.45.46",
     "@cosmjs/amino": "^0.32.2",
     "@cosmjs/proto-signing": "^0.32.2",
     "@cosmjs/stargate": "^0.32.2",
     "@cosmjs/cosmwasm-stargate": "^0.32.2",
     "@walletconnect/universal-provider": "^2.11.2",
     "cosmjs-types": "^0.9.0",
-    "@nabla-studio/chain-registry": "*",
     "@quirks/core": "*"
   },
   "main": "./index.js",

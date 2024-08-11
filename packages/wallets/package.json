@@ -15,8 +15,8 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
+    "@chain-registry/types": "^0.45.46",
     "@quirks/core": "*",
-    "@nabla-studio/chain-registry": "*",
     "@nabla-studio/wallet-registry": "*",
     "@keplr-wallet/types": "^0.12.86",
     "@cosmostation/extension-client": "^0.1.15",

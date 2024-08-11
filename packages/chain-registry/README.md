@@ -1,6 +1,8 @@
-# chain-registry
+# [DEPRECATED] chain-registry
 
 This library exports all cosmos chain configuration, both testnet and mainnet
+
+NOTE: **This library is deprecated, we only mantain it for older version of quirks.**
 
 ## Building
 

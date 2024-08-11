@@ -30,7 +30,8 @@
               "eventemitter3",
               "@walletconnect/universal-provider",
               "@walletconnect/types",
-              "base64-js"
+              "base64-js",
+              "@chain-registry/types"
             ],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts}"]
           }
