@@ -83,6 +83,7 @@
     }
   },
   "dependencies": {
+    "@chain-registry/keplr": "^1.68.88",
     "@chain-registry/types": "^0.45.46",
     "@cosmjs/amino": "^0.32.2",
     "@cosmjs/cosmwasm-stargate": "^0.32.2",
