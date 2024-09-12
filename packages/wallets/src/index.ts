@@ -13,5 +13,4 @@ export * from './keplr-mobile';
 export * from './leap-mobile';
 export * from './cosmostation-mobile';
 export * from './trust-mobile';
-export * from './utils';
 export * from './types';

@@ -1,29 +1,34 @@
 import type { AddChainParams } from '@cosmostation/extension-client/types/message';
 import type { AssetList, Chain } from '@chain-registry/types';
-import {
-  defaultChainInfoOptions,
-  getChainInfo,
-  defaultGasPriceStep,
-} from '../utils';
-import type { ChainInfoOptions } from '../types';
+import { chainRegistryChainToKeplr } from '@chain-registry/keplr';
+import { ChainInfoOptions } from '../types';
 
 export const getChainInfoCosmostation = (
   chain: Chain,
   assets: AssetList,
-  options: ChainInfoOptions = defaultChainInfoOptions,
+  options?: ChainInfoOptions,
 ): AddChainParams => {
-  const chainInfo = getChainInfo(chain, assets);
+  const chainInfo = chainRegistryChainToKeplr(chain, [assets], options);
   const [feeCurrency] = chainInfo.feeCurrencies;
 
+  const getRestEndpoint = options?.getRestEndpoint
+    ? options.getRestEndpoint
+    : // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
+      (chain: Chain) => chain.apis?.rest?.[0]?.address!;
+
   const gasPriceStep = {
-    ...defaultGasPriceStep,
+    ...{
+      low: 0.01,
+      average: 0.025,
+      high: 0.04,
+    },
     ...feeCurrency.gasPriceStep,
   };
 
   return {
     chainId: chain.chain_id,
     chainName: chain.pretty_name ?? '',
-    restURL: options.getRestEndpoint(chain),
+    restURL: getRestEndpoint(chain),
     imageURL: chainInfo.stakeCurrency?.coinImageUrl,
     baseDenom: chainInfo.stakeCurrency!.coinMinimalDenom,
     displayDenom: chainInfo.stakeCurrency!.coinDenom,

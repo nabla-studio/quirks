@@ -46,6 +46,7 @@ export default defineConfig({
         '@cosmjs/amino',
         'long',
         '@quirks/core',
+        '@chain-registry/keplr',
         '@chain-registry/types',
         '@nabla-studio/wallet-registry',
         '@cosmostation/extension-client',

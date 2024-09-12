@@ -22,7 +22,7 @@ import type {
 } from '@cosmjs/proto-signing';
 import type { SignDoc } from 'cosmjs-types/cosmos/tx/v1beta1/tx';
 import type { LeapMetamaskSnap } from './types';
-import { getChainInfo } from '../utils';
+import { chainRegistryChainToKeplr } from '@chain-registry/keplr';
 
 export class LeapMetamaskSnapWalletExtension extends ExtensionWallet<LeapMetamaskSnap> {
   snap?: Snap;
@@ -222,7 +222,9 @@ export class LeapMetamaskSnapWalletExtension extends ExtensionWallet<LeapMetamas
       cosmosSnapProvider.default.suggestChain;
 
     for (const suggestion of suggestions) {
-      const chainInfo = getChainInfo(suggestion.chain, suggestion.assetList);
+      const chainInfo = chainRegistryChainToKeplr(suggestion.chain, [
+        suggestion.assetList,
+      ]);
 
       await suggestChain(chainInfo, {});
     }
