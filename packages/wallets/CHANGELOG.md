@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.20.0](https://github.com/nabla-studio/quirks/compare/wallets@0.19.0...wallets@0.20.0) (2024-09-12)
+
+
+### Features
+
+* **wallets:** :sparkles: implement chainRegistryChainToKeplr ([e8e14bb](https://github.com/nabla-studio/quirks/commit/e8e14bb4dc91ac16cfa1228e0ac38cfda0be8ada))
+
 ## [0.19.0](https://github.com/nabla-studio/quirks/compare/wallets@0.18.5...wallets@0.19.0) (2024-08-11)
 
 ### Dependency Updates
