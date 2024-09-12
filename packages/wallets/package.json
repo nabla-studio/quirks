@@ -15,6 +15,7 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
+    "@chain-registry/keplr": "^1.68.88",
     "@chain-registry/types": "^0.45.46",
     "@quirks/core": "*",
     "@nabla-studio/wallet-registry": "*",
