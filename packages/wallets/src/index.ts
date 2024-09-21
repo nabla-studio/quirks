@@ -14,3 +14,4 @@ export * from './leap-mobile';
 export * from './cosmostation-mobile';
 export * from './trust-mobile';
 export * from './types';
+export * from './utils';
