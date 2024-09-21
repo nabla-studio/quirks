@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.20.1](https://github.com/nabla-studio/quirks/compare/wallets@0.20.0...wallets@0.20.1) (2024-09-21)
+
+
+### Bug Fixes
+
+* **wallets:** :bug: fix buffer undefined error ([cbb0fbc](https://github.com/nabla-studio/quirks/commit/cbb0fbce0561c5e56341b9d759bd4309a8322bbc))
+
 ## [0.20.0](https://github.com/nabla-studio/quirks/compare/wallets@0.19.0...wallets@0.20.0) (2024-09-12)
 
 
