@@ -7,6 +7,12 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/wallets',
 
+  resolve: {
+    alias: {
+      '@keplr-wallet/cosmos': '@quirks/wallets',
+    },
+  },
+
   plugins: [
     nxViteTsPaths(),
     dts({
@@ -46,7 +52,6 @@ export default defineConfig({
         '@cosmjs/amino',
         'long',
         '@quirks/core',
-        '@chain-registry/keplr',
         '@chain-registry/types',
         '@nabla-studio/wallet-registry',
         '@cosmostation/extension-client',
