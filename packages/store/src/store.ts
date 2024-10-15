@@ -99,8 +99,7 @@ export const createConfig = (config: Config) => {
 
   const walletConnectOverrideInitialState: WalletConnectState = {
     ...walletConnectInitialState,
-    openDeeplink: walletConnectOptions?.openDeeplink,
-    providerOpts: walletConnectOptions?.providerOpts,
+    ...walletConnectOptions,
     namespaces: overridedNamespaces,
   };
 
