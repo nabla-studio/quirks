@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.27.1](https://github.com/nabla-studio/quirks/compare/store@0.27.0...store@0.27.1) (2024-10-15)
+
+
+### Bug Fixes
+
+* **store:** :bug: fix walletConnectOptions merge ([795f064](https://github.com/nabla-studio/quirks/commit/795f0649162e84b88c4b283a21be42a7551b7cf2))
+
 ## [0.27.0](https://github.com/nabla-studio/quirks/compare/store@0.26.0...store@0.27.0) (2024-08-11)
 
 ### Dependency Updates
