@@ -11,7 +11,7 @@
     "desmos",
     "evmos"
   ],
-  "version": "0.14.3",
+  "version": "0.14.4",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
