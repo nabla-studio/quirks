@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/chain-registry/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
     "ts-gen": {
       "command": "node tools/scripts/schema.mjs"
@@ -26,14 +27,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "packages/chain-registry/**/*.ts",
-          "packages/chain-registry/package.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "version": {
       "executor": "@jscutlery/semver:version",
@@ -60,6 +54,5 @@
         "access": "public"
       }
     }
-  },
-  "tags": []
+  }
 }
