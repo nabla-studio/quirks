@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nabla-studio/chain-registry": ["packages/chain-registry/src/index.ts"],
       "@nabla-studio/wallet-registry": [
         "packages/wallet-registry/src/index.ts"
       ],
