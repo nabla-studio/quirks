@@ -21,6 +21,12 @@
         "@nx/dependency-checks": [
           "error",
           {
+            "ignoredDependencies": [
+              "@quirks/vue",
+              "@quirks/store",
+              "nuxt",
+              "@nuxt/schema"
+            ],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts,vue}"]
           }
         ]
