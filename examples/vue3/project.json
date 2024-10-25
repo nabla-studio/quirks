@@ -5,11 +5,7 @@
   "sourceRoot": "examples/vue3/src",
   "targets": {
     "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["examples/vue3/**/*.{ts,tsx,js,jsx,vue}"]
-      }
+      "executor": "@nx/eslint:lint"
     },
     "build": {
       "executor": "@nx/vite:build",
@@ -58,7 +54,8 @@
         "production": {
           "buildTarget": "vue3:build:production"
         }
-      }
+      },
+      "dependsOn": ["build"]
     },
     "test": {
       "executor": "@nx/vite:test",

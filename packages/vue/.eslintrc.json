@@ -21,6 +21,12 @@
         "@nx/dependency-checks": [
           "error",
           {
+            "ignoredDependencies": [
+              "zustand",
+              "@cosmjs/stargate",
+              "@cosmjs/cosmwasm-stargate",
+              "@walletconnect/universal-provider"
+            ],
             "ignoredFiles": ["{projectRoot}/vite.config.{js,ts,mjs,mts,vue}"]
           }
         ]
