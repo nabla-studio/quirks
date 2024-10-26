@@ -61,7 +61,10 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
-        run: bunx nx release publish --verbose --dry-run
+        # Use npx instead of yarn because yarn automagically sets NPM_* environment variables
+        # like NPM_CONFIG_REGISTRY so npm publish ends up ignoring the .npmrc file
+        # which is set up by `setup-node` action.
+        run: npx nx release publish --verbose --dry-run
 
       # Step 10: Clean up dist directory
       - name: Cleanup dist directory
