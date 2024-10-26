@@ -66,7 +66,11 @@ jobs:
       - name: Run Nx release version
         run: pnpm release -d false
 
-      # Step 10: Run publish
+      # Step 10: Run the build for the affected changes
+      - name: Run build
+        run: pnpm build
+
+      # Step 11: Run publish
       - name: Publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -76,12 +80,12 @@ jobs:
         # which is set up by `setup-node` action.
         run: pnpx nx release publish --verbose
 
-      # Step 11: Upload artifacts
+      # Step 12: Upload artifacts
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           path: './dist'
 
-      # Step 12: Clean up dist directory
+      # Step 13: Clean up dist directory
       - name: Cleanup dist directory
         run: rm -rf ./dist # Remove the dist directory to start fresh
