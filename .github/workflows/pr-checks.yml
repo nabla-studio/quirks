@@ -56,6 +56,13 @@ jobs:
       - name: Run Nx release version (dry-run)
         run: bun run tools/scripts/release.ts
 
-      # Step 9: Clean up dist directory
+      # Step 9: Run publish in dry-run mode
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+        run: bunx nx release publish --verbose --dry-run
+
+      # Step 10: Clean up dist directory
       - name: Cleanup dist directory
         run: rm -rf ./dist  # Remove the dist directory to start fresh
