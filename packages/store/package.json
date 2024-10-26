@@ -23,7 +23,7 @@
     "@cosmjs/cosmwasm-stargate": "^0.32.2",
     "@walletconnect/universal-provider": "^2.11.2",
     "cosmjs-types": "^0.9.0",
-    "@quirks/core": "0.19.1-next.4"
+    "@quirks/core": "workspace:*"
   },
   "main": "./index.js",
   "module": "./index.js",

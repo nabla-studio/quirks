@@ -51,13 +51,13 @@ git submodule init
 
 ```bash
 cd quirks
-bun i
+pnpm i
 ```
 
 4. Build the packages:
 
 ```bash
-bun run build
+pnpm build
 ```
 
 ### Understand this workspace

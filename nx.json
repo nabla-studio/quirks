@@ -47,6 +47,11 @@
     ],
     "sharedGlobals": []
   },
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": true
+    }
+  },
   "generators": {
     "@nx/react": {
       "application": {

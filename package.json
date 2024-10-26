@@ -1,11 +1,12 @@
 {
-  "name": "quirks",
-  "version": "0.1.1-next.0",
+  "name": "@quirks/source",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "build": "nx run-many --target=build --exclude nextjs,vue3 --parallel=6",
     "test": "nx run-many --target=test --exclude nextjs,vue3 --parallel=6",
     "lint": "nx run-many --target=lint --exclude nextjs,vue3 --parallel=6",
+    "release": "node tools/scripts/release.js",
     "prepare": "husky install"
   },
   "private": true,
