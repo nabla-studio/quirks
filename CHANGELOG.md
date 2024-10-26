@@ -1,3 +1,14 @@
+## 0.1.1-next.1 (2024-10-26)
+
+### 🩹 Fixes
+
+- :bug: remove bunx for husky ([5b7b8c6](https://github.com/nabla-studio/quirks/commit/5b7b8c6))
+- **vue:** :rotating_light: fix lint ([a2931eb](https://github.com/nabla-studio/quirks/commit/a2931eb))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.1-next.0 (2024-10-26)
 
 ### 🚀 Features

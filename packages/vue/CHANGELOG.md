@@ -1,3 +1,19 @@
+## 0.12.7-next.6 (2024-10-26)
+
+### 🩹 Fixes
+
+- **vue:** :rotating_light: fix lint ([a2931eb](https://github.com/nabla-studio/quirks/commit/a2931eb))
+- **vue:** :rotating_light: fix lint config ([24a67c9](https://github.com/nabla-studio/quirks/commit/24a67c9))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.6
+- Updated core to 0.19.1-next.6
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.12.7-next.5 (2024-10-26)
 
 ### 🩹 Fixes

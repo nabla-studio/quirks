@@ -1,3 +1,18 @@
+## 0.2.26-next.6 (2024-10-26)
+
+### 🩹 Fixes
+
+- **react-native:** :memo: update readme ([220e267](https://github.com/nabla-studio/quirks/commit/220e267))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.6
+- Updated core to 0.19.1-next.6
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.2.26-next.5 (2024-10-26)
 
 ### 🩹 Fixes

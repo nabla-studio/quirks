@@ -1,3 +1,10 @@
+## 0.2.29-next.6 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.6
+- Updated vue to 0.12.7-next.6
+
 ## 0.2.29-next.5 (2024-10-26)
 
 This was a version bump only for nuxt to align it with other projects, there were no code changes.
