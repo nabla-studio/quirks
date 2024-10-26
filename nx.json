@@ -68,5 +68,22 @@
     "libsDir": "packages"
   },
   "useInferencePlugins": false,
-  "useLegacyCache": true
+  "useLegacyCache": true,
+  "release": {
+    "projects": ["*", "!nextjs", "!vue3", "!@quirks/source"],
+    "projectsRelationship": "independent",
+    "version": {
+      "generatorOptions": {
+        "currentVersionResolver": "git-tag",
+        "specifierSource": "conventional-commits",
+        "fallbackCurrentVersionResolver": "disk"
+      }
+    },
+    "changelog": {
+      "projectChangelogs": {
+        "createRelease": "github"
+      },
+      "automaticFromRef": true
+    }
+  }
 }

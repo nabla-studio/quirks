@@ -1,0 +1,61 @@
+name: PR Checks (Dry-Run)
+
+on:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name == 'main' && 'production' || github.ref_name == 'v1' && 'production' || 'preview' }}
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      RELEASE_PREID: ${{ vars.RELEASE_PREID }}
+      RELEASE_SPECIFIER: ${{ vars.RELEASE_SPECIFIER }}
+      RELEASE_TAG: ${{ vars.RELEASE_TAG }}
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch the entire history to allow proper versioning
+
+      # Step 2: Set up bun package manager
+      - name: Install bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      # Step 3: Set up Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.OS }}-20.x-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-20.x-
+
+      # Step 5: Install dependencies
+      - name: Install dependencies
+        run: bun i --frozen-lockfile
+
+      # Step 6: Set SHAs for nx workspace
+      - name: Set SHAs for Nx workspace
+        uses: nrwl/nx-set-shas@v4
+
+      # Step 7: Run the build for the affected changes
+      - name: Run Nx lint, test and build
+        run: bunx nx affected -t lint test build --exclude nextjs,vue3
+
+      # Step 8: Run the release in dry-run mode
+      - name: Run Nx release version (dry-run)
+        run: bun run tools/scripts/release.ts
+
+      # Step 9: Clean up dist directory
+      - name: Cleanup dist directory
+        run: rm -rf ./dist  # Remove the dist directory to start fresh
