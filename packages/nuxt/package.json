@@ -15,8 +15,8 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@quirks/vue": "0.12.7-next.0",
-    "@quirks/store": "0.27.2-next.0"
+    "@quirks/vue": "workspace:*",
+    "@quirks/store": "workspace:*"
   },
   "peerDependencies": {
     "nuxt": "^3.8.1",
