@@ -1,3 +1,13 @@
+## 0.2.29-next.1 (2024-10-26)
+
+### 🩹 Fixes
+
+- **nuxt:** :memo: add missing link ([90b3c55](https://github.com/nabla-studio/quirks/commit/90b3c55))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.2.29-next.0 (2024-10-26)
 
 ### 🚀 Features

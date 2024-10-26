@@ -1,3 +1,13 @@
+## 0.1.5-next.1 (2024-10-26)
+
+### 🩹 Fixes
+
+- **next:** :memo: add missing link ([f52778e](https://github.com/nabla-studio/quirks/commit/f52778e))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.5-next.0 (2024-10-26)
 
 ### 🚀 Features
