@@ -1,17 +1,20 @@
-name: PR Checks (Dry-Run)
+name: Release
 
 on:
-  pull_request:
+  push:
+    branches:
+      - next
 
 jobs:
-  checks:
+  release:
     runs-on: ubuntu-latest
-    environment: ${{ github.ref_name == 'main' && 'production' || github.ref_name == 'v1' && 'production' || 'preview' }}
+    environment: preview
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       RELEASE_PREID: ${{ vars.RELEASE_PREID }}
       RELEASE_SPECIFIER: ${{ vars.RELEASE_SPECIFIER }}
       RELEASE_TAG: ${{ vars.RELEASE_TAG }}
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
       # Step 1: Check out the repository code
@@ -54,7 +57,7 @@ jobs:
 
       # Step 8: Run the release in dry-run mode
       - name: Run Nx release version (dry-run)
-        run: bun run tools/scripts/release.ts
+        run: bun run tools/scripts/release.ts -d false
 
       # Step 9: Clean up dist directory
       - name: Cleanup dist directory
