@@ -88,9 +88,7 @@
         "currentVersionResolver": "git-tag",
         "specifierSource": "conventional-commits",
         "fallbackCurrentVersionResolver": "disk",
-        "updateDependents": "auto",
-        "skipLockFileUpdate": true,
-        "installIgnoreScripts": true
+        "updateDependents": "auto"
       }
     },
     "changelog": {
