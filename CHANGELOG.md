@@ -1,3 +1,7 @@
+## 0.1.1-next.2 (2024-10-26)
+
+This was a version bump only for quirks to align it with other projects, there were no code changes.
+
 ## 0.1.1-next.1 (2024-10-26)
 
 ### 🩹 Fixes
