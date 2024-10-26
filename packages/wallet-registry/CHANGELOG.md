@@ -1,3 +1,13 @@
+## 0.6.1-next.10 (2024-10-26)
+
+### 🩹 Fixes
+
+- :green_heart: revert version remove ([f1b80d2](https://github.com/nabla-studio/quirks/commit/f1b80d2))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.6.1-next.9 (2024-10-26)
 
 This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
