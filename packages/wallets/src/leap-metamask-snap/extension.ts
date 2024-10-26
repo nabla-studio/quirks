@@ -7,7 +7,7 @@ import {
   createClientNotExistError,
   getClientFromExtension,
 } from '@quirks/core';
-import type { Snap } from '@leapwallet/cosmos-snap-provider';
+import type { ChainInfo, Snap } from '@leapwallet/cosmos-snap-provider';
 import type {
   OfflineAminoSigner,
   StdSignDoc,
@@ -226,7 +226,9 @@ export class LeapMetamaskSnapWalletExtension extends ExtensionWallet<LeapMetamas
         suggestion.assetList,
       ]);
 
-      await suggestChain(chainInfo, {});
+      if (chainInfo.bech32Config) {
+        await suggestChain(chainInfo as ChainInfo, {});
+      }
     }
   }
 }

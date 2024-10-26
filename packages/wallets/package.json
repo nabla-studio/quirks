@@ -15,8 +15,8 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@chain-registry/keplr": "^1.68.88",
-    "@chain-registry/types": "^0.45.46",
+    "@chain-registry/keplr": "^1.74.12",
+    "@chain-registry/types": "^0.50.1",
     "@quirks/core": "*",
     "@nabla-studio/wallet-registry": "*",
     "@keplr-wallet/types": "^0.12.86",
@@ -27,7 +27,7 @@
     "@cosmjs/proto-signing": "^0.32.2",
     "cosmjs-types": "^0.9.0",
     "long": "^5.2.3",
-    "@leapwallet/cosmos-snap-provider": "^0.1.25"
+    "@leapwallet/cosmos-snap-provider": "^0.1.26"
   },
   "main": "./index.js",
   "module": "./index.js",
