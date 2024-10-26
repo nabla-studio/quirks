@@ -39,19 +39,6 @@ const release = async () => {
       dryRun: options.dryRun,
       verbose: options.verbose,
     });
-  
-    // The returned number value from releasePublish will be zero if all projects are published successfully, non-zero if not
-    if (!options.dryRun) {
-        const publishStatus = await releasePublish({
-            dryRun: options.dryRun,
-            verbose: options.verbose,
-            tag,
-        });
-
-        const code = Math.max(...Object.values(publishStatus).map(({ code }) => code))
-
-        process.exit(code);
-    }
 
     process.exit();
 }
