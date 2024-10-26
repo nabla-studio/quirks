@@ -23,32 +23,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch the entire history to allow proper versioning
+          fetch-depth: 0 # Fetch the entire history to allow proper versioning
 
-      # Step 2: Set up bun package manager
-      - name: Install bun
-        uses: oven-sh/setup-bun@v1
+      # Step 2: Setup pnpm package manager
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          bun-version: latest
+          version: 9
+          run_install: false
 
       # Step 3: Set up Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: "https://registry.npmjs.org"
+          cache: 'pnpm'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Cache dependencies
         uses: actions/cache@v4
         with:
-          path: "**/node_modules"
+          path: '**/node_modules'
           key: ${{ runner.OS }}-20.x-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.OS }}-20.x-
 
       # Step 5: Install dependencies
       - name: Install dependencies
-        run: bun i --frozen-lockfile
+        run: pnpm i --frozen-lockfile
 
       # Step 6: Set SHAs for nx workspace
       - name: Set SHAs for Nx workspace
@@ -56,7 +58,7 @@ jobs:
 
       # Step 7: Run the build for the affected changes
       - name: Run Nx lint, test and build
-        run: bunx nx affected -t lint test build --exclude nextjs,vue3
+        run: pnpx nx affected -t lint test build --exclude nextjs,vue3
 
       # Step 8: Set github authour
       - name: Setup git user to "🤖 nabla bot"
@@ -64,7 +66,7 @@ jobs:
 
       # Step 9: Run the release
       - name: Run Nx release version
-        run: bun run tools/scripts/release.ts -d false
+        run: pnpm release -d false
 
       # Step 10: Run publish
       - name: Publish
@@ -78,4 +80,4 @@ jobs:
 
       # Step 11: Clean up dist directory
       - name: Cleanup dist directory
-        run: rm -rf ./dist  # Remove the dist directory to start fresh
+        run: rm -rf ./dist # Remove the dist directory to start fresh
