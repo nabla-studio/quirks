@@ -9,12 +9,16 @@ jobs:
   release:
     runs-on: ubuntu-latest
     environment: preview
+    permissions:
+      contents: read
+      id-token: write # needed for provenance data generation
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       RELEASE_PREID: ${{ vars.RELEASE_PREID }}
       RELEASE_SPECIFIER: ${{ vars.RELEASE_SPECIFIER }}
       RELEASE_TAG: ${{ vars.RELEASE_TAG }}
       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NPM_CONFIG_PROVENANCE: true
 
     steps:
       # Step 1: Check out the repository code
