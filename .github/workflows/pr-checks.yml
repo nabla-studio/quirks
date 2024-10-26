@@ -12,7 +12,6 @@ jobs:
       RELEASE_PREID: ${{ vars.RELEASE_PREID }}
       RELEASE_SPECIFIER: ${{ vars.RELEASE_SPECIFIER }}
       RELEASE_TAG: ${{ vars.RELEASE_TAG }}
-      RELEASE_ENVIRONMENT: ${{ inputs.environment }}
 
     steps:
       - name: Debug
