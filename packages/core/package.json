@@ -25,7 +25,7 @@
     "@walletconnect/types": "^2.11.2",
     "base64-js": "^1.5.1",
     "pino-pretty": "^10.2.3",
-    "@nabla-studio/wallet-registry": "0.6.1-next.12"
+    "@nabla-studio/wallet-registry": "workspace:*"
   },
   "main": "./index.js",
   "module": "./index.js",

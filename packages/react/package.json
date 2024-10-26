@@ -15,8 +15,8 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@quirks/store": "0.27.2-next.11",
-    "@quirks/core": "0.19.1-next.12",
+    "@quirks/store": "workspace:*",
+    "@quirks/core": "workspace:*",
     "cosmjs-types": "^0.9.0",
     "@cosmjs/amino": "^0.32.2",
     "eventemitter3": "^5.0.1",

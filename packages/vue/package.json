@@ -15,8 +15,8 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@quirks/store": "0.27.2-next.11",
-    "@quirks/core": "0.19.1-next.12",
+    "@quirks/store": "workspace:*",
+    "@quirks/core": "workspace:*",
     "vue-zustand": "^0.6.0",
     "eventemitter3": "^5.0.1",
     "zustand": "^4.5.0",
