@@ -1,4 +1,8 @@
-const { releaseChangelog, releaseVersion } = require('nx/release');
+const {
+  releaseChangelog,
+  releaseVersion,
+  releasePublish,
+} = require('nx/release');
 const yargsBuilder = require('yargs');
 const { hideBin } = require('yargs/helpers');
 

@@ -32,7 +32,7 @@
         "{workspaceRoot}/eslint.config.js"
       ]
     },
-    "nx-release-publish": {
+    "@nx/js:release-publish": {
       "options": { "packageRoot": "dist/packages/{projectName}" }
     }
   },
@@ -85,7 +85,6 @@
         "commit": true
       },
       "generatorOptions": {
-        "packageRoot": "dist/packages/{projectName}",
         "currentVersionResolver": "git-tag",
         "specifierSource": "conventional-commits",
         "fallbackCurrentVersionResolver": "disk",
