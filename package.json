@@ -1,6 +1,5 @@
 {
-  "name": "@quirks/source",
-  "version": "0.1.1-next.2",
+  "name": "quirks",
   "license": "MIT",
   "scripts": {
     "build": "nx run-many --target=build --exclude nextjs,vue3 --parallel=6",

@@ -12,7 +12,6 @@
     "evmos",
     "react-native"
   ],
-  "version": "0.2.26-next.4",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
