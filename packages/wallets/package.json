@@ -11,14 +11,14 @@
     "desmos",
     "evmos"
   ],
-  "version": "0.20.2-next.12",
+  "version": "0.20.2-next.14",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
     "@chain-registry/keplr": "^1.74.12",
     "@chain-registry/types": "^0.50.1",
-    "@quirks/core": "workspace:*",
-    "@nabla-studio/wallet-registry": "workspace:*",
+    "@quirks/core": "0.19.1-next.14",
+    "@nabla-studio/wallet-registry": "0.6.1-next.14",
     "@keplr-wallet/types": "^0.12.86",
     "@cosmostation/extension-client": "^0.1.15",
     "@dao-dao/cosmiframe": "^0.1.0",
