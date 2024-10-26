@@ -70,7 +70,7 @@
   "useInferencePlugins": false,
   "useLegacyCache": true,
   "release": {
-    "projects": ["*", "!nextjs", "!vue3"],
+    "projects": ["*", "!nextjs", "!vue3", "!@quirks/source"],
     "projectsRelationship": "independent",
     "version": {
       "generatorOptions": {

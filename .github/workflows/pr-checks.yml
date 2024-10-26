@@ -52,7 +52,7 @@ jobs:
 
       # Step 8: Run the release in dry-run mode
       - name: Run Nx release version (dry-run)
-        run: bunx nx release version --dry-run
+        run: bun run tools/scripts/release.ts
 
       # Step 9: Clean up dist directory
       - name: Cleanup dist directory
