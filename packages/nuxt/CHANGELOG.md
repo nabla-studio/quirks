@@ -1,3 +1,13 @@
+## 0.2.29-next.4 (2024-10-26)
+
+### 🩹 Fixes
+
+- **nuxt:** :memo: update readme ([441d76a](https://github.com/nabla-studio/quirks/commit/441d76a))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.2.29-next.3 (2024-10-26)
 
 This was a version bump only for nuxt to align it with other projects, there were no code changes.
