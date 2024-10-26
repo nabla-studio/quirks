@@ -356,7 +356,7 @@ importers:
         version: 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
       '@nabla-studio/wallet-registry':
         specifier: 0.6.1-next.10
-        version: 0.6.1-next.10
+        version: link:../wallet-registry
       '@walletconnect/types':
         specifier: ^2.11.2
         version: 2.17.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(ioredis@5.4.1)
@@ -380,7 +380,7 @@ importers:
     dependencies:
       '@quirks/store':
         specifier: 0.27.2-next.10
-        version: 0.27.2-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)
+        version: link:../store
       cookies-next:
         specifier: ^4.2.1
         version: 4.3.0
@@ -404,10 +404,10 @@ importers:
         version: 3.13.2(rollup@4.24.0)(webpack-sources@3.2.3)
       '@quirks/store':
         specifier: 0.27.2-next.10
-        version: 0.27.2-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)
+        version: link:../store
       '@quirks/vue':
         specifier: 0.12.7-next.10
-        version: 0.12.7-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)(vue@3.5.12(typescript@5.5.4))
+        version: link:../vue
       nuxt:
         specifier: ^3.8.1
         version: 3.13.2(@parcel/watcher@2.4.1)(@types/node@20.5.1)(bufferutil@4.0.8)(eslint@8.57.1)(idb-keyval@6.2.1)(ioredis@5.4.1)(less@4.1.3)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.24.0)(sass@1.80.4)(stylus@0.59.0)(terser@5.36.0)(typescript@5.5.4)(utf-8-validate@6.0.4)(vite@5.4.9(@types/node@20.5.1)(less@4.1.3)(sass@1.80.4)(stylus@0.59.0)(terser@5.36.0))(vue-tsc@2.1.6(typescript@5.5.4))(webpack-sources@3.2.3)
@@ -419,10 +419,10 @@ importers:
         version: 0.32.4
       '@quirks/core':
         specifier: 0.19.1-next.10
-        version: 0.19.1-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
+        version: link:../core
       '@quirks/store':
         specifier: 0.27.2-next.10
-        version: 0.27.2-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.2.0)(utf-8-validate@6.0.4)
+        version: link:../store
       cosmjs-types:
         specifier: ^0.9.0
         version: 0.9.0
@@ -446,10 +446,10 @@ importers:
         version: 5.7.0
       '@quirks/core':
         specifier: 0.19.1-next.10
-        version: 0.19.1-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
+        version: link:../core
       '@quirks/store':
         specifier: 0.27.2-next.10
-        version: 0.27.2-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)
+        version: link:../store
       '@react-native-community/netinfo':
         specifier: ^11.2.1
         version: 11.4.1(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4))
@@ -500,7 +500,7 @@ importers:
         version: 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
       '@quirks/core':
         specifier: 0.19.1-next.10
-        version: 0.19.1-next.10(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
+        version: link:../core
       '@walletconnect/universal-provider':
         specifier: ^2.11.2
         version: 2.17.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
@@ -524,10 +524,10 @@ importers:
         version: 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
       '@quirks/core':
         specifier: 0.19.1-next.10
-        version: 0.19.1-next.10(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
+        version: link:../core
       '@quirks/store':
         specifier: 0.27.2-next.10
-        version: 0.27.2-next.10(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)
+        version: link:../store
       '@walletconnect/universal-provider':
         specifier: ^2.11.2
         version: 2.17.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
@@ -577,10 +577,10 @@ importers:
         version: 0.1.26
       '@nabla-studio/wallet-registry':
         specifier: 0.6.1-next.10
-        version: 0.6.1-next.10
+        version: link:../wallet-registry
       '@quirks/core':
         specifier: 0.19.1-next.10
-        version: 0.19.1-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
+        version: link:../core
       base64-js:
         specifier: ^1.5.1
         version: 1.5.1
@@ -2383,9 +2383,6 @@ packages:
   '@module-federation/webpack-bundler-runtime@0.6.6':
     resolution: {integrity: sha512-0UnY9m1fBgHwTpacYWbht1jB5X4Iqspiu1q8kfjUrv6y+R224//ydUFYYO8xfWx4V9SGQFKlU8XFH0FP/r0Hng==}
 
-  '@nabla-studio/wallet-registry@0.6.1-next.10':
-    resolution: {integrity: sha512-y3Oii4d3UqdoBU+/SC+Zq5aQKW6I4XIh/H+LO3FSkMDaeRRwRM4vUZXHcyp//zLu3XoZTPqhqUDzb+mVYYmslQ==}
-
   '@napi-rs/wasm-runtime@0.2.4':
     resolution: {integrity: sha512-9zESzOO5aDByvhIAsOy9TbpZ0Ur2AJbUI7UT73kcUTS2mxAMHOBaa1st/jAymNoCtvrit99kkzT1FZuXVcgfIQ==}
 
@@ -2834,17 +2831,6 @@ packages:
 
   '@protobufjs/utf8@1.1.0':
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
-
-  '@quirks/core@0.19.1-next.10':
-    resolution: {integrity: sha512-jXRh6Z4AaoQIGZ4JiCXqjqmxnn8XAeyGHkR0qOIRsbvRKIaLtMPeeWLl2pm9JTQe/F/SUaDBk1ddzjvCLgHFaw==}
-
-  '@quirks/store@0.27.2-next.10':
-    resolution: {integrity: sha512-uG00gV96QW1HFJC6Ep7f8INFU+2jcQn0NmjPpzdZraeOY10XJqFNjMn8nFdImhN6Z0lL6rRLOdApDZ7CZzligQ==}
-
-  '@quirks/vue@0.12.7-next.10':
-    resolution: {integrity: sha512-C5v5YnpHdzSQMlXb8EvN1Zy2x7GECMRKz2GcDG1dCaFlZMPfdl32cYR/eYh2GAP24SjajQi28VI4pw6AvkOR9Q==}
-    peerDependencies:
-      vue: ^3.3.4
 
   '@react-native-async-storage/async-storage@1.24.0':
     resolution: {integrity: sha512-W4/vbwUOYOjco0x3toB8QCr7EjIP6nE9G7o8PMguvvjYT5Awg09lyV4enACRx4s++PPulBiBSjL0KTFx2u0Z/g==}
@@ -13637,8 +13623,6 @@ snapshots:
       '@module-federation/runtime': 0.6.6
       '@module-federation/sdk': 0.6.6
 
-  '@nabla-studio/wallet-registry@0.6.1-next.10': {}
-
   '@napi-rs/wasm-runtime@0.2.4':
     dependencies:
       '@emnapi/core': 1.3.1
@@ -14625,211 +14609,6 @@ snapshots:
   '@protobufjs/pool@1.1.0': {}
 
   '@protobufjs/utf8@1.1.0': {}
-
-  '@quirks/core@0.19.1-next.10(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)':
-    dependencies:
-      '@chain-registry/types': 0.50.1
-      '@cosmjs/amino': 0.32.4
-      '@cosmjs/proto-signing': 0.32.4
-      '@cosmjs/stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@nabla-studio/wallet-registry': 0.6.1-next.10
-      '@walletconnect/types': 2.17.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(ioredis@5.4.1)
-      '@walletconnect/universal-provider': 2.17.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      base64-js: 1.5.1
-      cosmjs-types: 0.9.0
-      eventemitter3: 5.0.1
-      pino-pretty: 10.3.1
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - debug
-      - encoding
-      - ioredis
-      - uWebSockets.js
-      - utf-8-validate
-
-  '@quirks/core@0.19.1-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)':
-    dependencies:
-      '@chain-registry/types': 0.50.1
-      '@cosmjs/amino': 0.32.4
-      '@cosmjs/proto-signing': 0.32.4
-      '@cosmjs/stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@nabla-studio/wallet-registry': 0.6.1-next.10
-      '@walletconnect/types': 2.17.1(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(ioredis@5.4.1)
-      '@walletconnect/universal-provider': 2.17.1(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      base64-js: 1.5.1
-      cosmjs-types: 0.9.0
-      eventemitter3: 5.0.1
-      pino-pretty: 10.3.1
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - debug
-      - encoding
-      - ioredis
-      - uWebSockets.js
-      - utf-8-validate
-
-  '@quirks/store@0.27.2-next.10(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)':
-    dependencies:
-      '@chain-registry/types': 0.50.1
-      '@cosmjs/amino': 0.32.4
-      '@cosmjs/cosmwasm-stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@cosmjs/proto-signing': 0.32.4
-      '@cosmjs/stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@quirks/core': 0.19.1-next.10(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      '@walletconnect/universal-provider': 2.17.1(@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      cosmjs-types: 0.9.0
-      zustand: 4.5.5(@types/react@18.3.1)(react@18.3.1)
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - debug
-      - encoding
-      - immer
-      - ioredis
-      - react
-      - uWebSockets.js
-      - utf-8-validate
-
-  '@quirks/store@0.27.2-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.2.0)(utf-8-validate@6.0.4)':
-    dependencies:
-      '@chain-registry/types': 0.50.1
-      '@cosmjs/amino': 0.32.4
-      '@cosmjs/cosmwasm-stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@cosmjs/proto-signing': 0.32.4
-      '@cosmjs/stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@quirks/core': 0.19.1-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      '@walletconnect/universal-provider': 2.17.1(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      cosmjs-types: 0.9.0
-      zustand: 4.5.5(@types/react@18.3.1)(react@18.2.0)
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - debug
-      - encoding
-      - immer
-      - ioredis
-      - react
-      - uWebSockets.js
-      - utf-8-validate
-
-  '@quirks/store@0.27.2-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)':
-    dependencies:
-      '@chain-registry/types': 0.50.1
-      '@cosmjs/amino': 0.32.4
-      '@cosmjs/cosmwasm-stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@cosmjs/proto-signing': 0.32.4
-      '@cosmjs/stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@quirks/core': 0.19.1-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      '@walletconnect/universal-provider': 2.17.1(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      cosmjs-types: 0.9.0
-      zustand: 4.5.5(@types/react@18.3.1)(react@18.3.1)
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - bufferutil
-      - debug
-      - encoding
-      - immer
-      - ioredis
-      - react
-      - uWebSockets.js
-      - utf-8-validate
-
-  '@quirks/vue@0.12.7-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)(vue@3.5.12(typescript@5.5.4))':
-    dependencies:
-      '@cosmjs/amino': 0.32.4
-      '@cosmjs/cosmwasm-stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@cosmjs/stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
-      '@quirks/core': 0.19.1-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      '@quirks/store': 0.27.2-next.10(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)
-      '@walletconnect/universal-provider': 2.17.1(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)
-      cosmjs-types: 0.9.0
-      eventemitter3: 5.0.1
-      vue: 3.5.12(typescript@5.5.4)
-      vue-zustand: 0.6.0(vue@3.5.12(typescript@5.5.4))(zustand@4.5.5(@types/react@18.3.1)(react@18.3.1))
-      zustand: 4.5.5(@types/react@18.3.1)(react@18.3.1)
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@react-native-async-storage/async-storage'
-      - '@types/react'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - '@vue/composition-api'
-      - bufferutil
-      - debug
-      - encoding
-      - immer
-      - ioredis
-      - react
-      - uWebSockets.js
-      - utf-8-validate
 
   '@react-native-async-storage/async-storage@1.24.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4))':
     dependencies:
