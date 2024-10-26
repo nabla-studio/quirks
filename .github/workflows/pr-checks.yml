@@ -10,6 +10,8 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
+      - name: Debug
+        run: echo "$RELEASE_SPECIFIER"
       # Step 1: Check out the repository code
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -49,8 +51,8 @@ jobs:
         run: bunx nx affected -t lint test build --exclude nextjs,vue3
 
       # Step 8: Run the release in dry-run mode
-      - name: Run Nx release (dry-run)
-        run: bunx nx release --dry-run
+      - name: Run Nx release version (dry-run)
+        run: bunx nx release version --dry-run
 
       # Step 9: Clean up dist directory
       - name: Cleanup dist directory
