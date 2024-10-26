@@ -6,7 +6,10 @@
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nx/eslint:lint"
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["src/**/*.{ts,tsx,js,jsx}", "package.json"]
+      }
     },
     "build": {
       "executor": "@nx/vite:build",
