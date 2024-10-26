@@ -1,3 +1,7 @@
+## 0.6.1-next.5 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
 ## 0.6.1-next.4 (2024-10-26)
 
 This was a version bump only for wallet-registry to align it with other projects, there were no code changes.

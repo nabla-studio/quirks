@@ -1,3 +1,13 @@
+## 0.1.5-next.5 (2024-10-26)
+
+### 🩹 Fixes
+
+- :wrench: fix correlated deps update ([03fee38](https://github.com/nabla-studio/quirks/commit/03fee38))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.5-next.4 (2024-10-26)
 
 This was a version bump only for next to align it with other projects, there were no code changes.
