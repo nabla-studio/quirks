@@ -69,6 +69,8 @@ jobs:
       # Step 10: Upload artifacts
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
+        with:
+          path: "./dist"
 
       # Step 11: Clean up dist directory
       - name: Cleanup dist directory
