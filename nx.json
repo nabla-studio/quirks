@@ -31,6 +31,9 @@
         "{workspaceRoot}/.eslintignore",
         "{workspaceRoot}/eslint.config.js"
       ]
+    },
+    "nx-release-publish": {
+      "options": { "packageRoot": "dist/packages/{projectName}" }
     }
   },
   "namedInputs": {
@@ -80,7 +83,6 @@
     "version": {
       "conventionalCommits": true,
       "generatorOptions": {
-        "packageRoot": "dist/packages/{projectName}",
         "updateDependents": "auto"
       }
     },
