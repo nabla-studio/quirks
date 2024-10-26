@@ -1,3 +1,17 @@
+## 0.2.26-next.3 (2024-10-26)
+
+### 🩹 Fixes
+
+- :rotating_light: fix lint errors ([11b642c](https://github.com/nabla-studio/quirks/commit/11b642c))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.1-next.3
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.2.26-next.2 (2024-10-26)
 
 ### 🩹 Fixes
