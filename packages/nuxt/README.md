@@ -1,3 +1,3 @@
 # nuxt
 
-This package defines nuxt utility for quirks.
+This package defines [nuxt](https://nuxt.com/) utility for quirks.
