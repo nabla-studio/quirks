@@ -1,3 +1,9 @@
+## 0.12.7-next.11 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.1-next.11
+
 ## 0.12.7-next.10 (2024-10-26)
 
 ### 🩹 Fixes

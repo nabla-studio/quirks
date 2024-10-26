@@ -1,3 +1,7 @@
+## 0.1.5-next.11 (2024-10-26)
+
+This was a version bump only for next to align it with other projects, there were no code changes.
+
 ## 0.1.5-next.10 (2024-10-26)
 
 ### 🩹 Fixes

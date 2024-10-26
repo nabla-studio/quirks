@@ -1,3 +1,9 @@
+## 0.19.1-next.11 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.11
+
 ## 0.19.1-next.10 (2024-10-26)
 
 ### 🩹 Fixes
