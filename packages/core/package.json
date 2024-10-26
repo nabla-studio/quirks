@@ -15,7 +15,7 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@chain-registry/types": "^0.45.46",
+    "@chain-registry/types": "^0.50.1",
     "@cosmjs/stargate": "^0.32.2",
     "@cosmjs/proto-signing": "^0.32.2",
     "cosmjs-types": "^0.9.0",

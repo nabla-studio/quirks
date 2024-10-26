@@ -33,7 +33,7 @@ export const getChainInfoCosmostation = (
     baseDenom: chainInfo.stakeCurrency!.coinMinimalDenom,
     displayDenom: chainInfo.stakeCurrency!.coinDenom,
     coinType: chain.slip44 ? chain.slip44.toString() : '',
-    addressPrefix: chain.bech32_prefix,
+    addressPrefix: chain.bech32_prefix!,
     coinGeckoId: chainInfo.currencies[0].coinGeckoId,
     gasRate: {
       average: gasPriceStep.average.toString(),
