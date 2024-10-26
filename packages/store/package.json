@@ -11,7 +11,7 @@
     "desmos",
     "evmos"
   ],
-  "version": "0.27.2-next.10",
+  "version": "0.27.2-next.11",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
@@ -23,7 +23,7 @@
     "@cosmjs/cosmwasm-stargate": "^0.32.2",
     "@walletconnect/universal-provider": "^2.11.2",
     "cosmjs-types": "^0.9.0",
-    "@quirks/core": "0.19.1-next.10"
+    "@quirks/core": "0.19.1-next.11"
   },
   "main": "./index.js",
   "module": "./index.js",

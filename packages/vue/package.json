@@ -11,12 +11,12 @@
     "desmos",
     "evmos"
   ],
-  "version": "0.12.7-next.10",
+  "version": "0.12.7-next.11",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
     "@quirks/store": "0.27.2-next.10",
-    "@quirks/core": "0.19.1-next.10",
+    "@quirks/core": "0.19.1-next.11",
     "vue-zustand": "^0.6.0",
     "eventemitter3": "^5.0.1",
     "zustand": "^4.5.0",
