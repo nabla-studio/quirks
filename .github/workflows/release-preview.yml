@@ -17,8 +17,6 @@ jobs:
       RELEASE_PREID: ${{ vars.RELEASE_PREID }}
       RELEASE_SPECIFIER: ${{ vars.RELEASE_SPECIFIER }}
       RELEASE_TAG: ${{ vars.RELEASE_TAG }}
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      NPM_CONFIG_PROVENANCE: true
 
     steps:
       # Step 1: Check out the repository code
@@ -65,6 +63,9 @@ jobs:
 
       # Step 9: Run the release
       - name: Run Nx release version
+        env: 
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
         run: bun run tools/scripts/release.ts -d false
 
       # Step 10: Clean up dist directory
