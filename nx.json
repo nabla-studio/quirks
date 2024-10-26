@@ -70,10 +70,11 @@
   "useInferencePlugins": false,
   "useLegacyCache": true,
   "release": {
-    "projects": ["*", "!nextjs", "!vue3", "!@quirks/source"],
+    "projects": ["*", "!nextjs", "!vue3"],
     "projectsRelationship": "independent",
     "version": {
       "generatorOptions": {
+        "packageRoot": "dist/packages/{projectName}",
         "currentVersionResolver": "git-tag",
         "specifierSource": "conventional-commits",
         "fallbackCurrentVersionResolver": "disk"
