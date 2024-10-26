@@ -18,7 +18,7 @@
     "cookies-next": "^4.2.1",
     "superjson": "^2.2.1",
     "zustand": "^4.5.0",
-    "@quirks/store": "0.27.2-next.1"
+    "@quirks/store": "0.27.2-next.2"
   },
   "peerDependencies": {
     "next": "^13"
