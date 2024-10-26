@@ -5,7 +5,7 @@ import { hideBin } from 'yargs/helpers'
 const yargs = yargsBuilder(hideBin(process.argv))
 
 const release = async () => {
-    console.log("ENV: ", process.argv)
+    console.log("ENV: ", process.argv, process.env)
     const options = await yargs
       .version(false) // don't use the default meaning of version in yargs
       .option('version', {
