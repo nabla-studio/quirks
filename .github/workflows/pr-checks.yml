@@ -6,7 +6,7 @@ on:
 jobs:
   checks:
     runs-on: ubuntu-latest
-    environment: ${{ github.ref_name == 'main' && 'production' || github.ref_name == 'v1' && 'production' || preview' }}
+    environment: ${{ github.ref_name == 'main' && 'production' || github.ref_name == 'v1' && 'production' ||'preview' }}
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
