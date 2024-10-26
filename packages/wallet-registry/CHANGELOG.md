@@ -1,3 +1,13 @@
+## 0.6.1-next.2 (2024-10-26)
+
+### 🩹 Fixes
+
+- **wallet-registry:** :memo: update readme ([c98d495](https://github.com/nabla-studio/quirks/commit/c98d495))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.6.1-next.1 (2024-10-26)
 
 This was a version bump only for wallet-registry to align it with other projects, there were no code changes.

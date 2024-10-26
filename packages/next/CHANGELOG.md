@@ -1,3 +1,13 @@
+## 0.1.5-next.2 (2024-10-26)
+
+### 🩹 Fixes
+
+- :rotating_light: fix linter error ([31b674f](https://github.com/nabla-studio/quirks/commit/31b674f))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.5-next.1 (2024-10-26)
 
 ### 🩹 Fixes
