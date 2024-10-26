@@ -1,3 +1,22 @@
+## 0.2.29-next.0 (2024-10-26)
+
+### 🚀 Features
+
+- :arrow_up: upgrade to nx 20 ([bb7660e](https://github.com/nabla-studio/quirks/commit/bb7660e))
+
+### 🩹 Fixes
+
+- :rotating_light: fix lint errors ([ce90e00](https://github.com/nabla-studio/quirks/commit/ce90e00))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.0
+- Updated vue to 0.12.7-next.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).

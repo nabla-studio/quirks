@@ -11,12 +11,12 @@
     "desmos",
     "evmos"
   ],
-  "version": "0.2.28",
+  "version": "0.2.29-next.0",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@quirks/vue": "*",
-    "@quirks/store": "*"
+    "@quirks/vue": "0.12.7-next.0",
+    "@quirks/store": "0.27.2-next.0"
   },
   "peerDependencies": {
     "nuxt": "^3.8.1",

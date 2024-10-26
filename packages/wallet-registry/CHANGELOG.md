@@ -1,3 +1,13 @@
+## 0.6.1-next.0 (2024-10-26)
+
+### 🚀 Features
+
+- :arrow_up: upgrade to nx 20 ([bb7660e](https://github.com/nabla-studio/quirks/commit/bb7660e))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).

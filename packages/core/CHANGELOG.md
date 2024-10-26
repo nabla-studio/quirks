@@ -1,3 +1,18 @@
+## 0.19.1-next.0 (2024-10-26)
+
+### 🚀 Features
+
+- :wrench: replace pnpm with bun ([e2aaa58](https://github.com/nabla-studio/quirks/commit/e2aaa58))
+- :arrow_up: upgrade to nx 20 ([bb7660e](https://github.com/nabla-studio/quirks/commit/bb7660e))
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
