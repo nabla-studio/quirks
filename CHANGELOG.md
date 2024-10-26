@@ -1,3 +1,13 @@
+## 0.1.1-next.4 (2024-10-26)
+
+### 🩹 Fixes
+
+- :green_heart: better build ([feeb819](https://github.com/nabla-studio/quirks/commit/feeb819))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.1-next.3 (2024-10-26)
 
 ### 🩹 Fixes
