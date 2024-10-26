@@ -85,6 +85,7 @@
         "commit": true
       },
       "generatorOptions": {
+        "packageRoot": "dist/packages/{projectName}",
         "currentVersionResolver": "git-tag",
         "specifierSource": "conventional-commits",
         "fallbackCurrentVersionResolver": "disk",
