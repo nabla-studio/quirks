@@ -76,6 +76,12 @@ jobs:
         # which is set up by `setup-node` action.
         run: pnpx nx release publish --verbose
 
-      # Step 11: Clean up dist directory
+      # Step 11: Upload artifacts
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: './dist'
+
+      # Step 12: Clean up dist directory
       - name: Cleanup dist directory
         run: rm -rf ./dist # Remove the dist directory to start fresh
