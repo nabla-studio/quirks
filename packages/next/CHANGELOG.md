@@ -1,3 +1,13 @@
+## 0.1.5-next.8 (2024-10-26)
+
+### 🩹 Fixes
+
+- :wrench: remove version from package.json ([b105167](https://github.com/nabla-studio/quirks/commit/b105167))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.5-next.7 (2024-10-26)
 
 ### 🧱 Updated Dependencies
