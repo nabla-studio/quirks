@@ -55,10 +55,14 @@ jobs:
       - name: Run Nx lint, test and build
         run: bunx nx affected -t lint test build --exclude nextjs,vue3
 
-      # Step 8: Run the release in dry-run mode
-      - name: Run Nx release version (dry-run)
+      # Step 8: Set github authour
+      - name: Setup git user to "🤖 nabla bot"
+        run: git config user.email "-" && git config user.name "🤖 nabla bot"
+
+      # Step 9: Run the release
+      - name: Run Nx release version
         run: bun run tools/scripts/release.ts -d false
 
-      # Step 9: Clean up dist directory
+      # Step 10: Clean up dist directory
       - name: Cleanup dist directory
         run: rm -rf ./dist  # Remove the dist directory to start fresh
