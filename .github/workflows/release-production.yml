@@ -15,6 +15,9 @@ jobs:
       id-token: write # needed for provenance data generation
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      RELEASE_PREID: ${{ vars.RELEASE_PREID }}
+      RELEASE_SPECIFIER: ${{ vars.RELEASE_SPECIFIER }}
+      RELEASE_TAG: ${{ vars.RELEASE_TAG }}
 
     steps:
       # Step 1: Check out the repository code
