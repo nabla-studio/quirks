@@ -1,0 +1,82 @@
+name: PR Checks (Dry-Run)
+
+on:
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    environment: ${{ github.base_ref == 'main' && 'production' || github.base_ref == 'v1' && 'production' || 'preview' }}
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      RELEASE_PREID: ${{ vars.RELEASE_PREID }}
+      CUSTOM_BASE_REF: ${{ github.base_ref }}
+      CUSTOM_REF_NAME: ${{ github.ref_name }}
+      CUSTOM_HEAD_REF: ${{ github.head_ref }}
+      RELEASE_SPECIFIER: ${{ vars.RELEASE_SPECIFIER }}
+      RELEASE_TAG: ${{ vars.RELEASE_TAG }}
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch the entire history to allow proper versioning
+
+      # Step 2: Setup pnpm package manager
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
+
+      # Step 3: Set up Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.OS }}-20.x-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-20.x-
+
+      # Step 5: Install dependencies
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+
+      # Step 6: Set SHAs for nx workspace
+      - name: Set SHAs for Nx workspace
+        uses: nrwl/nx-set-shas@v4
+
+      # Step 7: Run the build for the affected changes
+      - name: Run Nx lint, test and build
+        run: pnpx nx affected -t lint test build --exclude nextjs,vue3
+
+      # Step 8: Run the release in dry-run mode
+      - name: Run Nx release version (dry-run)
+        run: pnpm release
+
+      # Step 9: Run publish in dry-run mode
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
+        # Use npx instead of yarn because yarn automagically sets NPM_* environment variables
+        # like NPM_CONFIG_REGISTRY so npm publish ends up ignoring the .npmrc file
+        # which is set up by `setup-node` action.
+        run: pnpx nx release publish --verbose --dry-run
+
+      # Step 10: Upload artifacts
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          path: './dist'
+
+      # Step 11: Clean up dist directory
+      - name: Cleanup dist directory
+        run: rm -rf ./dist # Remove the dist directory to start fresh

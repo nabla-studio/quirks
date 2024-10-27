@@ -1,3 +1,87 @@
+## 0.6.1-next.14 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.13 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.12 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.11 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.10 (2024-10-26)
+
+### 🩹 Fixes
+
+- :green_heart: revert version remove ([f1b80d2](https://github.com/nabla-studio/quirks/commit/f1b80d2))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.6.1-next.9 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.8 (2024-10-26)
+
+### 🩹 Fixes
+
+- :wrench: remove version from package.json ([b105167](https://github.com/nabla-studio/quirks/commit/b105167))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.6.1-next.7 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.6 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.5 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.4 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.3 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.2 (2024-10-26)
+
+### 🩹 Fixes
+
+- **wallet-registry:** :memo: update readme ([c98d495](https://github.com/nabla-studio/quirks/commit/c98d495))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.6.1-next.1 (2024-10-26)
+
+This was a version bump only for wallet-registry to align it with other projects, there were no code changes.
+
+## 0.6.1-next.0 (2024-10-26)
+
+### 🚀 Features
+
+- :arrow_up: upgrade to nx 20 ([bb7660e](https://github.com/nabla-studio/quirks/commit/bb7660e))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).

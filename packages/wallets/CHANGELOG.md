@@ -1,3 +1,125 @@
+## 0.20.2-next.14 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.14
+- Updated core to 0.19.1-next.14
+
+## 0.20.2-next.13 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.13
+- Updated core to 0.19.1-next.13
+
+## 0.20.2-next.12 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.12
+- Updated core to 0.19.1-next.12
+
+## 0.20.2-next.11 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.11
+- Updated core to 0.19.1-next.11
+
+## 0.20.2-next.10 (2024-10-26)
+
+### 🩹 Fixes
+
+- :green_heart: revert version remove ([f1b80d2](https://github.com/nabla-studio/quirks/commit/f1b80d2))
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.10
+- Updated core to 0.19.1-next.10
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.20.2-next.9 (2024-10-26)
+
+This was a version bump only for wallets to align it with other projects, there were no code changes.
+
+## 0.20.2-next.8 (2024-10-26)
+
+### 🩹 Fixes
+
+- :wrench: remove version from package.json ([b105167](https://github.com/nabla-studio/quirks/commit/b105167))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.20.2-next.7 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.7
+- Updated core to 0.19.1-next.7
+
+## 0.20.2-next.6 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.6
+- Updated core to 0.19.1-next.6
+
+## 0.20.2-next.5 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.5
+- Updated core to 0.19.1-next.5
+
+## 0.20.2-next.4 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.4
+- Updated core to 0.19.1-next.4
+
+## 0.20.2-next.3 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.3
+- Updated core to 0.19.1-next.3
+
+## 0.20.2-next.2 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.2
+- Updated core to 0.19.1-next.2
+
+## 0.20.2-next.1 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.1
+- Updated core to 0.19.1-next.1
+
+## 0.20.2-next.0 (2024-10-26)
+
+### 🚀 Features
+
+- :wrench: replace pnpm with bun ([e2aaa58](https://github.com/nabla-studio/quirks/commit/e2aaa58))
+- :arrow_up: upgrade to nx 20 ([bb7660e](https://github.com/nabla-studio/quirks/commit/bb7660e))
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1-next.0
+- Updated core to 0.19.1-next.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).

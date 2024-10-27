@@ -39,6 +39,7 @@ testem.log
 Thumbs.db
 
 .nx/cache
+.nx/workspace-data
 
 # local env files
 .env.local
@@ -55,3 +56,4 @@ Thumbs.db
 .nitro
 .cache
 dist
+**/vite.config.{js,ts,mjs,mts,cjs,cts}.timestamp*

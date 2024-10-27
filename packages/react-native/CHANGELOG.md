@@ -1,3 +1,157 @@
+## 0.2.26-next.14 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.14
+- Updated core to 0.19.1-next.14
+
+## 0.2.26-next.13 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.13
+- Updated core to 0.19.1-next.13
+
+## 0.2.26-next.12 (2024-10-26)
+
+### 🩹 Fixes
+
+- :rotating_light: fix build and lint ([e128d32](https://github.com/nabla-studio/quirks/commit/e128d32))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.1-next.12
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.26-next.11 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.1-next.11
+
+## 0.2.26-next.10 (2024-10-26)
+
+### 🩹 Fixes
+
+- :green_heart: revert version remove ([f1b80d2](https://github.com/nabla-studio/quirks/commit/f1b80d2))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.10
+- Updated core to 0.19.1-next.10
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.26-next.9 (2024-10-26)
+
+This was a version bump only for react-native to align it with other projects, there were no code changes.
+
+## 0.2.26-next.8 (2024-10-26)
+
+### 🩹 Fixes
+
+- :wrench: remove version from package.json ([b105167](https://github.com/nabla-studio/quirks/commit/b105167))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.26-next.7 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.7
+- Updated core to 0.19.1-next.7
+
+## 0.2.26-next.6 (2024-10-26)
+
+### 🩹 Fixes
+
+- **react-native:** :memo: update readme ([220e267](https://github.com/nabla-studio/quirks/commit/220e267))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.6
+- Updated core to 0.19.1-next.6
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.26-next.5 (2024-10-26)
+
+### 🩹 Fixes
+
+- :wrench: fix correlated deps update ([03fee38](https://github.com/nabla-studio/quirks/commit/03fee38))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.1-next.5
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.26-next.4 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.1-next.4
+
+## 0.2.26-next.3 (2024-10-26)
+
+### 🩹 Fixes
+
+- :rotating_light: fix lint errors ([11b642c](https://github.com/nabla-studio/quirks/commit/11b642c))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.1-next.3
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.26-next.2 (2024-10-26)
+
+### 🩹 Fixes
+
+- :rotating_light: fix linter error ([31b674f](https://github.com/nabla-studio/quirks/commit/31b674f))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.1-next.2
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.26-next.1 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.1-next.1
+
+## 0.2.26-next.0 (2024-10-26)
+
+### 🚀 Features
+
+- :arrow_up: upgrade to nx 20 ([bb7660e](https://github.com/nabla-studio/quirks/commit/bb7660e))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.0
+- Updated core to 0.19.1-next.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).

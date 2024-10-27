@@ -1,5 +1,5 @@
 {
-  "name": "@quirks/source",
+  "name": "quirks",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "targets": {
     "local-registry": {

@@ -1,3 +1,119 @@
+## 0.2.29-next.14 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.14
+- Updated vue to 0.12.7-next.14
+
+## 0.2.29-next.13 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.13
+- Updated vue to 0.12.7-next.13
+
+## 0.2.29-next.12 (2024-10-26)
+
+This was a version bump only for nuxt to align it with other projects, there were no code changes.
+
+## 0.2.29-next.11 (2024-10-26)
+
+This was a version bump only for nuxt to align it with other projects, there were no code changes.
+
+## 0.2.29-next.10 (2024-10-26)
+
+### 🩹 Fixes
+
+- :green_heart: revert version remove ([f1b80d2](https://github.com/nabla-studio/quirks/commit/f1b80d2))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.10
+- Updated vue to 0.12.7-next.10
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.29-next.9 (2024-10-26)
+
+This was a version bump only for nuxt to align it with other projects, there were no code changes.
+
+## 0.2.29-next.8 (2024-10-26)
+
+### 🩹 Fixes
+
+- :wrench: remove version from package.json ([b105167](https://github.com/nabla-studio/quirks/commit/b105167))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.29-next.7 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.7
+- Updated vue to 0.12.7-next.7
+
+## 0.2.29-next.6 (2024-10-26)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.6
+- Updated vue to 0.12.7-next.6
+
+## 0.2.29-next.5 (2024-10-26)
+
+This was a version bump only for nuxt to align it with other projects, there were no code changes.
+
+## 0.2.29-next.4 (2024-10-26)
+
+### 🩹 Fixes
+
+- **nuxt:** :memo: update readme ([441d76a](https://github.com/nabla-studio/quirks/commit/441d76a))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.29-next.3 (2024-10-26)
+
+This was a version bump only for nuxt to align it with other projects, there were no code changes.
+
+## 0.2.29-next.2 (2024-10-26)
+
+This was a version bump only for nuxt to align it with other projects, there were no code changes.
+
+## 0.2.29-next.1 (2024-10-26)
+
+### 🩹 Fixes
+
+- **nuxt:** :memo: add missing link ([90b3c55](https://github.com/nabla-studio/quirks/commit/90b3c55))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
+## 0.2.29-next.0 (2024-10-26)
+
+### 🚀 Features
+
+- :arrow_up: upgrade to nx 20 ([bb7660e](https://github.com/nabla-studio/quirks/commit/bb7660e))
+
+### 🩹 Fixes
+
+- :rotating_light: fix lint errors ([ce90e00](https://github.com/nabla-studio/quirks/commit/ce90e00))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.27.2-next.0
+- Updated vue to 0.12.7-next.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 # Changelog
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).

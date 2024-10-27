@@ -11,11 +11,11 @@
     "desmos",
     "evmos"
   ],
-  "version": "0.19.0",
+  "version": "0.19.1-next.14",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@chain-registry/types": "^0.45.46",
+    "@chain-registry/types": "^0.50.1",
     "@cosmjs/stargate": "^0.32.2",
     "@cosmjs/proto-signing": "^0.32.2",
     "cosmjs-types": "^0.9.0",
@@ -25,7 +25,7 @@
     "@walletconnect/types": "^2.11.2",
     "base64-js": "^1.5.1",
     "pino-pretty": "^10.2.3",
-    "@nabla-studio/wallet-registry": "*"
+    "@nabla-studio/wallet-registry": "0.6.1-next.14"
   },
   "main": "./index.js",
   "module": "./index.js",
