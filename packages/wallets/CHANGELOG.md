@@ -1,3 +1,10 @@
+## 0.20.2 (2024-10-27)
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.1
+- Updated core to 0.19.1
+
 ## 0.20.2-next.14 (2024-10-26)
 
 ### 🧱 Updated Dependencies

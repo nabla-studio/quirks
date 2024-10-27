@@ -1,3 +1,7 @@
+## 0.2.29 (2024-10-27)
+
+This was a version bump only for nuxt to align it with other projects, there were no code changes.
+
 ## 0.2.29-next.14 (2024-10-26)
 
 ### 🧱 Updated Dependencies
