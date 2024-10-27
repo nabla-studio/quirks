@@ -10,6 +10,9 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       RELEASE_PREID: ${{ vars.RELEASE_PREID }}
+      CUSTOM_BASE_REF: ${{ github.base_ref }}
+      CUSTOM_REF_NAME: ${{ github.ref_name }}
+      CUSTOM_HEAD_REF: ${{ github.head_ref }}
       RELEASE_SPECIFIER: ${{ vars.RELEASE_SPECIFIER }}
       RELEASE_TAG: ${{ vars.RELEASE_TAG }}
 
