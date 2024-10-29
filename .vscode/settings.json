@@ -19,6 +19,7 @@
     "nuxt",
     "wallet-registry",
     "react-native",
-    "next"
+    "next",
+    "ssr"
   ]
 }

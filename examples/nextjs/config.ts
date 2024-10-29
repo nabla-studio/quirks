@@ -8,7 +8,7 @@ import {
   chain as cosmoshub,
   assets as cosmoshubAssetList,
 } from 'chain-registry/mainnet/cosmoshub';
-import { generateConfig } from '@quirks/next';
+import { generateConfig } from '@quirks/ssr';
 import {
   xdefiExtension,
   keplrExtension,

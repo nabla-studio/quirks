@@ -1,8 +1,15 @@
-import { getChain, getConnect } from '@quirks/next';
+import { getChain, getConnect } from '@quirks/ssr';
+import { cookies } from 'next/headers';
 
 export const TestChain = () => {
-  const { connected } = getConnect();
-  const { address } = getChain('osmosis');
+  const quirks = cookies().get('quirks');
+
+  if (!quirks) {
+    return null;
+  }
+
+  const { connected } = getConnect(quirks.value);
+  const { address } = getChain(quirks.value, 'osmosis');
 
   if (!connected) {
     return false;

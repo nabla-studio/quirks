@@ -1,5 +1,5 @@
 {
-  "name": "@quirks/next",
+  "name": "@quirks/ssr",
   "repository": "nabla-studio/quirks",
   "keywords": [
     "blockchain",
@@ -11,17 +11,17 @@
     "desmos",
     "evmos"
   ],
-  "version": "0.1.5",
+  "version": "0.0.0",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "cookies-next": "^4.2.1",
     "superjson": "^2.2.1",
     "zustand": "^4.5.0",
+    "js-cookie": "^3.0.5",
     "@quirks/store": "0.27.2"
   },
-  "peerDependencies": {
-    "next": "^13"
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6"
   },
   "main": "./index.js",
   "module": "./index.js",
