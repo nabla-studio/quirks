@@ -80,21 +80,13 @@
   "release": {
     "projects": ["packages/*"],
     "projectsRelationship": "independent",
+    "git": {
+      "commit": true
+    },
     "version": {
-      "git": {
-        "commit": true
-      },
-      "generatorOptions": {
-        "currentVersionResolver": "git-tag",
-        "specifierSource": "conventional-commits",
-        "fallbackCurrentVersionResolver": "disk",
-        "updateDependents": "auto"
-      }
+      "conventionalCommits": true
     },
     "changelog": {
-      "git": {
-        "commit": true
-      },
       "projectChangelogs": {
         "createRelease": "github"
       },
