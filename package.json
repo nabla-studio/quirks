@@ -5,7 +5,6 @@
     "build": "nx run-many --target=build --exclude nextjs,vue3 --parallel=6",
     "test": "nx run-many --target=test --exclude nextjs,vue3 --parallel=6",
     "lint": "nx run-many --target=lint --exclude nextjs,vue3 --parallel=6",
-    "release": "node tools/scripts/release.js",
     "prepare": "husky install"
   },
   "private": true,
