@@ -1,3 +1,4 @@
+import { cookies } from 'next/headers';
 import { Provider } from '../components/provider';
 
 export const metadata = {
@@ -10,10 +11,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const cookie = cookies().get('quirks');
+
   return (
     <html lang="en">
       <body>
-        <Provider>{children}</Provider>
+        <Provider cookie={cookie?.value}>{children}</Provider>
       </body>
     </html>
   );
