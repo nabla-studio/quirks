@@ -20,10 +20,10 @@
       ],
       "@quirks/core": ["packages/core/src/index.ts"],
       "@quirks/next": ["packages/next/src/index.ts"],
-      "@quirks/ssr": ["packages/ssr/src/index.ts"],
       "@quirks/nuxt": ["packages/nuxt/src/index.ts"],
       "@quirks/react": ["packages/react/src/index.ts"],
       "@quirks/react-native": ["packages/react-native/src/index.ts"],
+      "@quirks/ssr": ["packages/ssr/src/index.ts"],
       "@quirks/store": ["packages/store/src/index.ts"],
       "@quirks/vue": ["packages/vue/src/index.ts"],
       "@quirks/wallets": ["packages/wallets/src/index.ts"]
