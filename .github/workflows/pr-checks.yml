@@ -56,7 +56,7 @@ jobs:
 
       # Step 9: Run the release in dry-run mode
       - name: Run Nx release version (dry-run)
-        run: pnpm exec nx release --dry-run
+        run: pnpm exec nx release --first-release --skip-publish --dry-run
 
       # Step 10: Run publish in dry-run mode
       - name: Publish
@@ -66,7 +66,7 @@ jobs:
         # Use npx instead of yarn because yarn automagically sets NPM_* environment variables
         # like NPM_CONFIG_REGISTRY so npm publish ends up ignoring the .npmrc file
         # which is set up by `setup-node` action.
-        run: pnpx nx release publish --verbose --dry-run
+        run: pnpx nx release publish --first-release --verbose --dry-run
 
       # Step 11: Upload artifacts
       - name: Upload artifacts
