@@ -342,9 +342,6 @@ importers:
       vue-tsc:
         specifier: 2.1.6
         version: 2.1.6(typescript@5.5.4)
-      yargs:
-        specifier: ^17.7.2
-        version: 17.7.2
 
   packages/core:
     dependencies:
