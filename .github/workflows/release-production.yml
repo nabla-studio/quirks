@@ -67,7 +67,7 @@ jobs:
 
       # Step 10: Run the release
       - name: Run Nx release version
-        run: pnpm exec nx release --first-release --skip-publish
+        run: pnpm exec nx release --skip-publish
 
       # Step 11: Run the build for the affected changes
       - name: Run build
