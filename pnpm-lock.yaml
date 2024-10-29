@@ -495,15 +495,16 @@ importers:
       js-cookie:
         specifier: ^3.0.5
         version: 3.0.5
-      next:
-        specifier: ^13
-        version: 13.5.7(@babel/core@7.26.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.80.4)
       superjson:
         specifier: ^2.2.1
         version: 2.2.1
       zustand:
         specifier: ^4.5.0
         version: 4.5.5(@types/react@18.3.1)(react@18.3.1)
+    devDependencies:
+      '@types/js-cookie':
+        specifier: ^3.0.6
+        version: 3.0.6
 
   packages/store:
     dependencies:
