@@ -16,7 +16,7 @@
   "type": "module",
   "dependencies": {
     "@quirks/vue": "0.12.7",
-    "@quirks/store": "0.27.2"
+    "@quirks/store": "0.27.3"
   },
   "peerDependencies": {
     "nuxt": "^3.8.1",

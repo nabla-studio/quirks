@@ -10,7 +10,9 @@ export default defineConfig({
   cacheDir: '../../node_modules/.vite/react',
 
   plugins: [
-    react(),
+    react({
+      jsxRuntime: 'classic',
+    }),
     nxViteTsPaths(),
     dts({
       entryRoot: 'src',
