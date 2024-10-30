@@ -1,3 +1,17 @@
+## 0.2.27 (2024-10-30)
+
+### 🩹 Fixes
+
+- **react-native:** :wrench: fix dts build ([7ca8b62](https://github.com/nabla-studio/quirks/commit/7ca8b62))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.2
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.2.26 (2024-10-27)
 
 ### 🧱 Updated Dependencies

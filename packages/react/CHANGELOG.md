@@ -1,3 +1,17 @@
+## 0.14.6 (2024-10-30)
+
+### 🩹 Fixes
+
+- **react:** :wrench: fix dts build ([a1d6439](https://github.com/nabla-studio/quirks/commit/a1d6439))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.2
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.14.5 (2024-10-27)
 
 ### 🧱 Updated Dependencies

@@ -1,3 +1,18 @@
+## 0.20.3 (2024-10-30)
+
+### 🩹 Fixes
+
+- **wallets:** :wrench: fix dts build ([98b3773](https://github.com/nabla-studio/quirks/commit/98b3773))
+
+### 🧱 Updated Dependencies
+
+- Updated wallet-registry to 0.6.2
+- Updated core to 0.19.2
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.20.2 (2024-10-27)
 
 ### 🧱 Updated Dependencies

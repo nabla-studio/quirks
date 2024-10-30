@@ -1,3 +1,17 @@
+## 0.12.8 (2024-10-30)
+
+### 🩹 Fixes
+
+- **vue:** :wrench: fix dts build ([d58b6a7](https://github.com/nabla-studio/quirks/commit/d58b6a7))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.2
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.12.7 (2024-10-27)
 
 ### 🧱 Updated Dependencies

@@ -1,3 +1,17 @@
+## 0.27.3 (2024-10-30)
+
+### 🩹 Fixes
+
+- **store:** :wrench: fix dts build ([e17f0bc](https://github.com/nabla-studio/quirks/commit/e17f0bc))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.19.2
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.27.2 (2024-10-27)
 
 ### 🧱 Updated Dependencies

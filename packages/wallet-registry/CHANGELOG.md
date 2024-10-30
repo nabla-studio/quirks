@@ -1,3 +1,13 @@
+## 0.6.2 (2024-10-30)
+
+### 🩹 Fixes
+
+- **wallet-registry:** :wrench: fix dts build ([389856f](https://github.com/nabla-studio/quirks/commit/389856f))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.6.1 (2024-10-27)
 
 This was a version bump only for wallet-registry to align it with other projects, there were no code changes.

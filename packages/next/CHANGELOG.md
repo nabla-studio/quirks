@@ -1,3 +1,13 @@
+## 0.1.6 (2024-10-30)
+
+### 🩹 Fixes
+
+- **next:** :wrench: fix dts build ([9619d19](https://github.com/nabla-studio/quirks/commit/9619d19))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.5 (2024-10-27)
 
 This was a version bump only for next to align it with other projects, there were no code changes.
