@@ -10,9 +10,7 @@ export default defineConfig({
   cacheDir: '../../node_modules/.vite/react',
 
   plugins: [
-    react({
-      jsxRuntime: 'classic',
-    }),
+    react(),
     nxViteTsPaths(),
     dts({
       entryRoot: 'src',
@@ -28,6 +26,9 @@ export default defineConfig({
 
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
+  esbuild: {
+    jsxDev: false,
+  },
   build: {
     outDir: '../../dist/packages/react',
     emptyOutDir: true,
