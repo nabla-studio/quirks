@@ -1,3 +1,13 @@
+## 0.1.7 (2024-10-30)
+
+### 🩹 Fixes
+
+- :rotating_light: fix lint error ([c4930ff](https://github.com/nabla-studio/quirks/commit/c4930ff))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.6 (2024-10-30)
 
 ### 🩹 Fixes

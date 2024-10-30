@@ -1,3 +1,14 @@
+## 0.14.7 (2024-10-30)
+
+### 🩹 Fixes
+
+- :rotating_light: fix lint error ([c4930ff](https://github.com/nabla-studio/quirks/commit/c4930ff))
+- **react:** :bug: fix react jsxRuntime classic ([5eb31e7](https://github.com/nabla-studio/quirks/commit/5eb31e7))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.14.6 (2024-10-30)
 
 ### 🩹 Fixes
