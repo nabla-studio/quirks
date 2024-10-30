@@ -12,8 +12,7 @@ export default defineConfig({
     nxViteTsPaths(),
     dts({
       entryRoot: 'src',
-      tsConfigFilePath: path.join(__dirname, 'tsconfig.lib.json'),
-      skipDiagnostics: true,
+      tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
     }),
   ],
 
@@ -42,7 +41,13 @@ export default defineConfig({
         preserveModules: true,
       },
       // External packages that should not be bundled into your library.
-      external: ['superjson', 'zustand', 'zustand/middleware', '@quirks/store'],
+      external: [
+        'superjson',
+        'zustand',
+        'zustand/middleware',
+        '@quirks/store',
+        'js-cookie',
+      ],
     },
   },
 
