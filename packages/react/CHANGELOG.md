@@ -1,3 +1,13 @@
+## 0.14.8 (2024-10-30)
+
+### 🩹 Fixes
+
+- **react:** :bug: fix next 15 runtime error ([dbf14d3](https://github.com/nabla-studio/quirks/commit/dbf14d3))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.14.7 (2024-10-30)
 
 ### 🩹 Fixes
