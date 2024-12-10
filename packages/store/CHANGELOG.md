@@ -1,3 +1,17 @@
+## 0.28.0 (2024-12-10)
+
+### 🚀 Features
+
+- **store:** :sparkles: ad @chain-registry/types as peer dep ([f26b34e](https://github.com/nabla-studio/quirks/commit/f26b34e))
+
+### 🧱 Updated Dependencies
+
+- Updated core to 0.20.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.27.3 (2024-10-30)
 
 ### 🩹 Fixes

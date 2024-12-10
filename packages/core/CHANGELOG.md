@@ -1,3 +1,13 @@
+## 0.20.0 (2024-12-10)
+
+### 🚀 Features
+
+- **core:** :sparkles: ad @chain-registry/types as peer dep ([79c2b86](https://github.com/nabla-studio/quirks/commit/79c2b86))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.19.2 (2024-10-30)
 
 ### 🩹 Fixes

@@ -11,12 +11,12 @@
     "desmos",
     "evmos"
   ],
-  "version": "0.14.8",
+  "version": "0.14.9",
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@quirks/store": "0.27.3",
-    "@quirks/core": "0.19.2",
+    "@quirks/store": "0.28.0",
+    "@quirks/core": "0.20.0",
     "cosmjs-types": "^0.9.0",
     "@cosmjs/amino": "^0.32.2",
     "eventemitter3": "^5.0.1",

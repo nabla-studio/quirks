@@ -1,3 +1,10 @@
+## 0.14.9 (2024-12-10)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.28.0
+- Updated core to 0.20.0
+
 ## 0.14.8 (2024-10-30)
 
 ### 🩹 Fixes

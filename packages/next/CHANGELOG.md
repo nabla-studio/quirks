@@ -1,3 +1,9 @@
+## 0.1.8 (2024-12-10)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.28.0
+
 ## 0.1.7 (2024-10-30)
 
 ### 🩹 Fixes
