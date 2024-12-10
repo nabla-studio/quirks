@@ -15,7 +15,6 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@chain-registry/types": "^0.50.1",
     "@cosmjs/stargate": "^0.32.2",
     "@cosmjs/proto-signing": "^0.32.2",
     "cosmjs-types": "^0.9.0",
@@ -26,6 +25,9 @@
     "base64-js": "^1.5.1",
     "pino-pretty": "^10.2.3",
     "@nabla-studio/wallet-registry": "0.6.2"
+  },
+  "peerDependencies": {
+    "@chain-registry/types": "^0.50.32"
   },
   "main": "./index.js",
   "module": "./index.js",
