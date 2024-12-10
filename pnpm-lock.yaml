@@ -12,8 +12,8 @@ importers:
         specifier: ^1.74.12
         version: 1.74.12
       '@chain-registry/types':
-        specifier: ^0.50.1
-        version: 0.50.1
+        specifier: ^0.50.32
+        version: 0.50.32
       '@cosmjs/amino':
         specifier: ^0.32.2
         version: 0.32.4
@@ -346,8 +346,8 @@ importers:
   packages/core:
     dependencies:
       '@chain-registry/types':
-        specifier: ^0.50.1
-        version: 0.50.1
+        specifier: ^0.50.32
+        version: 0.50.32
       '@cosmjs/amino':
         specifier: ^0.32.2
         version: 0.32.4
@@ -506,8 +506,8 @@ importers:
   packages/store:
     dependencies:
       '@chain-registry/types':
-        specifier: ^0.50.1
-        version: 0.50.1
+        specifier: ^0.50.32
+        version: 0.50.32
       '@cosmjs/amino':
         specifier: ^0.32.2
         version: 0.32.4
@@ -577,8 +577,8 @@ importers:
         specifier: ^1.74.12
         version: 1.74.12
       '@chain-registry/types':
-        specifier: ^0.50.1
-        version: 0.50.1
+        specifier: ^0.50.32
+        version: 0.50.32
       '@cosmjs/amino':
         specifier: ^0.32.2
         version: 0.32.4
@@ -1389,8 +1389,8 @@ packages:
   '@chain-registry/keplr@1.74.12':
     resolution: {integrity: sha512-5PUa2vQ9DRumTq0EF0RGXMDgUPTDwleaOEN9hUFoVnq7FwFYBzHD8ucpkxfhSnmhi9/CXk0D2RQoTUi2Ae/oEA==}
 
-  '@chain-registry/types@0.50.1':
-    resolution: {integrity: sha512-HPPN4NPYXW9i7TRHNLJOdKK84z9m0mByy4mY+jHE3t9zIvOz0nK0qEG00uAlgakJvPeoh2ge7gWUAUOTNcbd6A==}
+  '@chain-registry/types@0.50.32':
+    resolution: {integrity: sha512-Tztb8Ih021Ip/5B7QhpOShZJliDu18OMK1S8y1U2GoqQn0wNGwwW6wDYn2cgl6c2Pj6J0OEZVsCpmH4fglzXtg==}
 
   '@cloudflare/kv-asset-handler@0.3.4':
     resolution: {integrity: sha512-YLPHc8yASwjNkmcDMQMY35yiWjoKAKnhUbPRszBRS0YgH+IXtsMp61j+yTcnCE3oO2DgP0U3iejLC8FTtKDC8Q==}
@@ -12314,12 +12314,12 @@ snapshots:
 
   '@chain-registry/keplr@1.74.12':
     dependencies:
-      '@chain-registry/types': 0.50.1
+      '@chain-registry/types': 0.50.32
       '@keplr-wallet/cosmos': 0.12.28
       '@keplr-wallet/crypto': 0.12.28
       semver: 7.6.3
 
-  '@chain-registry/types@0.50.1': {}
+  '@chain-registry/types@0.50.32': {}
 
   '@cloudflare/kv-asset-handler@0.3.4':
     dependencies:
@@ -14709,7 +14709,7 @@ snapshots:
 
   '@quirks/core@0.19.1(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)':
     dependencies:
-      '@chain-registry/types': 0.50.1
+      '@chain-registry/types': 0.50.32
       '@cosmjs/amino': 0.32.4
       '@cosmjs/proto-signing': 0.32.4
       '@cosmjs/stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
@@ -14742,7 +14742,7 @@ snapshots:
 
   '@quirks/core@0.19.1-next.14(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(bufferutil@4.0.8)(ioredis@5.4.1)(utf-8-validate@6.0.4)':
     dependencies:
-      '@chain-registry/types': 0.50.1
+      '@chain-registry/types': 0.50.32
       '@cosmjs/amino': 0.32.4
       '@cosmjs/proto-signing': 0.32.4
       '@cosmjs/stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
@@ -14775,7 +14775,7 @@ snapshots:
 
   '@quirks/store@0.27.2-next.14(@react-native-async-storage/async-storage@2.0.0(react-native@0.73.10(@babel/core@7.26.0)(@babel/preset-env@7.26.0(@babel/core@7.26.0))(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@6.0.4)))(@types/react@18.3.1)(bufferutil@4.0.8)(ioredis@5.4.1)(react@18.3.1)(utf-8-validate@6.0.4)':
     dependencies:
-      '@chain-registry/types': 0.50.1
+      '@chain-registry/types': 0.50.32
       '@cosmjs/amino': 0.32.4
       '@cosmjs/cosmwasm-stargate': 0.32.4(bufferutil@4.0.8)(utf-8-validate@6.0.4)
       '@cosmjs/proto-signing': 0.32.4
@@ -17935,7 +17935,7 @@ snapshots:
 
   chain-registry@1.69.12:
     dependencies:
-      '@chain-registry/types': 0.50.1
+      '@chain-registry/types': 0.50.32
 
   chalk@3.0.0:
     dependencies:
