@@ -7,6 +7,8 @@ export const useConnect = () => {
   return {
     connect: store.use.connect(),
     disconnect: store.use.disconnect(),
+    enable: store.use.enable(),
+    suggestChains: store.use.suggestChains(),
     status: store.use.status(),
     setupStatus: store.use.setupStatus(),
     connected: store.use.status() === ConnectionStates.CONNECTED,
