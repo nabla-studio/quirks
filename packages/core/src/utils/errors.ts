@@ -7,3 +7,7 @@ export const createInvalidWalletName = (name: string) => {
     `[Quirks]: Invalid wallet name, ${name} doesn't exist inside the config.`,
   );
 };
+
+export const createInvalidWallet = () => {
+  return new Error(`[Quirks]: Invalid wallet, wallet is not initialized.`);
+};

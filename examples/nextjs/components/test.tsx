@@ -1,11 +1,19 @@
 'use client';
 
-import { sign, getAddress, broadcast, signArbitrary } from '@quirks/store';
+import {
+  sign,
+  getAddress,
+  broadcast,
+  signArbitrary,
+  enable,
+} from '@quirks/store';
 import { useChains, useConnect, useWalletEvents } from '@quirks/react';
 
 const send = async () => {
   const cosmos = (await import('osmojs')).cosmos;
   const { send } = cosmos.bank.v1beta1.MessageComposer.withTypeUrl;
+
+  await enable({ chainIds: ['osmosis'] });
 
   const address = getAddress('osmosis');
 
@@ -30,9 +38,11 @@ const send = async () => {
 };
 
 const signJWT = async () => {
-  const sender = getAddress('osmosis');
+  await enable({ chainIds: ['bitsong-2b'] });
+  const sender = getAddress('bitsong');
+
   const result = await signArbitrary(
-    'osmosis-1',
+    'bitsong-2b',
     sender,
     new TextEncoder().encode('Bearer TOKEN test '),
   );

@@ -7,6 +7,8 @@ export const useConnect = () => {
   return {
     connect: store.use.connect(),
     disconnect: store.use.disconnect(),
+    enable: store.use.enable(),
+    suggestChains: store.use.suggestChains(),
     status: store.use.status(),
     setupStatus: store.use.setupStatus(),
     connected: store.use.status() === ConnectionStates.CONNECTED,
@@ -18,5 +20,8 @@ export const useConnect = () => {
     rejected: store.use.status() === ConnectionStates.REJECTED,
     wallet: store.use.wallet ? store.use.wallet() : undefined,
     walletName: store.use.walletName ? store.use.walletName() : undefined,
+    connectedChains: store.use.connectedChains
+      ? store.use.connectedChains()
+      : undefined,
   };
 };

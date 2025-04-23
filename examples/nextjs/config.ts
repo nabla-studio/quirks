@@ -5,6 +5,10 @@ import {
   assets as osmosisAssetList,
 } from 'chain-registry/mainnet/osmosis';
 import {
+  chain as bitsong,
+  assets as bitsongAssetList,
+} from 'chain-registry/mainnet/bitsong';
+import {
   chain as cosmoshub,
   assets as cosmoshubAssetList,
 } from 'chain-registry/mainnet/cosmoshub';
@@ -39,8 +43,9 @@ const config = generateConfig({
     trustMobile,
     daodaoCosmiframe,
   ],
-  chains: [osmosis, cosmoshub],
-  assetsLists: [osmosisAssetList, cosmoshubAssetList],
+  chains: [osmosis, cosmoshub, bitsong],
+  enabledChains: [cosmoshub],
+  assetsLists: [osmosisAssetList, cosmoshubAssetList, bitsongAssetList],
   walletConnectOptions: {
     providerOpts: {
       logger: 'info',

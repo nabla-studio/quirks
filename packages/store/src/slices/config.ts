@@ -5,6 +5,7 @@ export const configInitialState: ConfigState = {
   wallets: [],
   chains: [],
   assetsLists: [],
+  enabledChains: undefined,
 };
 
 export const createConfigSlice: StateCreator<AppState, [], [], ConfigSlice> = (
@@ -13,6 +14,7 @@ export const createConfigSlice: StateCreator<AppState, [], [], ConfigSlice> = (
 ) => ({
   ...configInitialState,
   setChains: (chains) => set(() => ({ chains })),
+  setEnabledChains: (enabledChains) => set(() => ({ enabledChains })),
   setAssetsLists: (assetsLists) => set(() => ({ assetsLists })),
   setWallets: (wallets) => set(() => ({ wallets })),
   getChain: (chainName) =>

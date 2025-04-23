@@ -3,6 +3,7 @@ import {
   createInvalidWalletName,
   type WCWallet,
   openWCDeeplink,
+  createInvalidWallet,
 } from '@quirks/core';
 import {
   ConnectionStates,
@@ -20,6 +21,7 @@ export const connectInitialState: ConnectState = {
   status: ConnectionStates.DISCONNECTED,
   setupStatus: SetupStates.DEINITIALIZED,
   connectionError: undefined,
+  connectedChains: undefined,
   connecting: false,
   options: {
     autoSuggestions: true,
@@ -34,6 +36,33 @@ export const createConnectSlice: StateCreator<
   ConnectSlice
 > = (set, get) => ({
   ...connectInitialState,
+  setConnectedChains: (chainIds) => {
+    set(() => ({ connectedChains: chainIds }));
+  },
+  enable: async (props) => {
+    const wallet = props?.wallet ?? get().wallet;
+    const chainIds = props?.chainIds;
+
+    if (!wallet) {
+      throw createInvalidWallet();
+    }
+
+    if (get().options.autoSuggestions) {
+      await get().suggestChains(wallet.options.wallet_name);
+    }
+
+    const chains = chainIds
+      ? get().chains.filter((chain) => chainIds.includes(chain.chain_id))
+      : (get().enabledChains ?? get().chains);
+
+    const ids = chains.map((el) => el.chain_id);
+
+    await wallet.enable(ids);
+
+    get().setConnectedChains(ids);
+
+    await get().setWallet(wallet);
+  },
   setWallet: async (wallet) => {
     set(() => ({ wallet, setupStatus: SetupStates.DEINITIALIZED }));
 
@@ -63,10 +92,17 @@ export const createConnectSlice: StateCreator<
     const wallet = get().wallet;
 
     if (wallet) {
+      const connectedChains = get().connectedChains;
+      const chains = !connectedChains
+        ? get().chains
+        : get().chains.filter((chain) =>
+            connectedChains.includes(chain.chain_id),
+          );
+
       const accounts: AddressWithChain[] = [];
       let accountName = '';
 
-      for (const chain of get().chains) {
+      for (const chain of chains) {
         const account = await wallet.getAccount(chain.chain_id);
 
         if (account) {
@@ -92,7 +128,9 @@ export const createConnectSlice: StateCreator<
     );
 
     if (wallet) {
-      const chains: SuggestChain[] = get().chains.map((chain) => ({
+      const enabledChains = get().enabledChains ?? get().chains;
+
+      const chains: SuggestChain[] = enabledChains.map((chain) => ({
         chain,
         name: chain.chain_name,
         assetList: get().assetsLists.find(
@@ -145,13 +183,7 @@ export const createConnectSlice: StateCreator<
         });
       }
 
-      if (get().options.autoSuggestions) {
-        await get().suggestChains(walletName);
-      }
-
-      await wallet.enable(get().chains.map((el) => el.chain_id));
-
-      await get().setWallet(wallet);
+      await get().enable({ wallet });
       set(() => ({ status: ConnectionStates.CONNECTED }));
     } catch (error) {
       const connectionError =
@@ -188,13 +220,7 @@ export const createConnectSlice: StateCreator<
 
       set(() => ({ connecting: true }));
 
-      if (get().options.autoSuggestions) {
-        await get().suggestChains(walletName);
-      }
-
-      await wallet.enable(get().chains.map((el) => el.chain_id));
-
-      await get().setWallet(wallet);
+      await get().enable({ wallet });
     } catch (error) {
       console.error(error);
 

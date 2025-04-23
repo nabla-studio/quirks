@@ -5,6 +5,7 @@ export const excludedKeys: (keyof AppState)[] = [
   'wallet',
   'wallets',
   'chains',
+  'enabledChains',
   'assetsLists',
   'setupStatus',
   'providerOpts',
