@@ -35,6 +35,10 @@ export interface ConnectState {
 export interface ConnectActions {
   setWallet: (wallet?: Wallet) => Promise<void>;
   setConnectedChains: (chainIds?: string[]) => void;
+  /**
+   * Enable chains, if `chainIds` is not provided, it will use the chains from the store, if enabledChains is provided we'll use them instead of chains list.
+   */
+  enable: (props?: { wallet?: Wallet; chainIds?: string[] }) => Promise<void>;
   getWalletData: () => Promise<void>;
   connect: (walletName: string) => Promise<void>;
   reconnect: (walletName: string) => Promise<void>;

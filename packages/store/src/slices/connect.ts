@@ -3,6 +3,7 @@ import {
   createInvalidWalletName,
   type WCWallet,
   openWCDeeplink,
+  createInvalidWallet,
 } from '@quirks/core';
 import {
   ConnectionStates,
@@ -37,6 +38,30 @@ export const createConnectSlice: StateCreator<
   ...connectInitialState,
   setConnectedChains: (chainIds) => {
     set(() => ({ connectedChains: chainIds }));
+  },
+  enable: async (props) => {
+    const wallet = props?.wallet ?? get().wallet;
+    const chainIds = props?.chainIds;
+
+    if (!wallet) {
+      throw createInvalidWallet();
+    }
+
+    if (get().options.autoSuggestions) {
+      await get().suggestChains(wallet?.options.wallet_name);
+    }
+
+    const chains = chainIds
+      ? get().chains
+      : (get().enabledChains ?? get().chains);
+
+    const ids = chains.map((el) => el.chain_id);
+
+    await wallet.enable(ids);
+
+    get().setConnectedChains(ids);
+
+    await get().setWallet(wallet);
   },
   setWallet: async (wallet) => {
     set(() => ({ wallet, setupStatus: SetupStates.DEINITIALIZED }));
@@ -158,19 +183,7 @@ export const createConnectSlice: StateCreator<
         });
       }
 
-      if (get().options.autoSuggestions) {
-        await get().suggestChains(walletName);
-      }
-
-      const enabledChains = get().enabledChains ?? get().chains;
-
-      const chainIds = enabledChains.map((el) => el.chain_id);
-
-      await wallet.enable(chainIds);
-
-      get().setConnectedChains(chainIds);
-
-      await get().setWallet(wallet);
+      await get().enable({ wallet });
       set(() => ({ status: ConnectionStates.CONNECTED }));
     } catch (error) {
       const connectionError =
@@ -207,19 +220,7 @@ export const createConnectSlice: StateCreator<
 
       set(() => ({ connecting: true }));
 
-      if (get().options.autoSuggestions) {
-        await get().suggestChains(walletName);
-      }
-
-      const enabledChains = get().enabledChains ?? get().chains;
-
-      const chainIds = enabledChains.map((el) => el.chain_id);
-
-      await wallet.enable(chainIds);
-
-      get().setConnectedChains(chainIds);
-
-      await get().setWallet(wallet);
+      await get().enable({ wallet });
     } catch (error) {
       console.error(error);
 

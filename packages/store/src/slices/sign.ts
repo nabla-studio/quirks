@@ -16,23 +16,31 @@ export const createSignSlice: StateCreator<AppState, [], [], SignSlice> = (
   get,
 ) => ({
   ...signInitialState,
-  getOfflineSigner: (chainId) => {
+  getOfflineSigner: async (chainId) => {
     assertIsDefined(get().wallet);
+
+    await get().enable({ chainIds: [chainId] });
 
     return get().wallet!.getOfflineSigner(chainId, get().signOptions);
   },
-  getOfflineSignerOnlyAmino: (chainId) => {
+  getOfflineSignerOnlyAmino: async (chainId) => {
     assertIsDefined(get().wallet);
+
+    await get().enable({ chainIds: [chainId] });
 
     return get().wallet!.getOfflineSignerOnlyAmino(chainId, get().signOptions);
   },
-  getOfflineSignerAuto: (chainId) => {
+  getOfflineSignerAuto: async (chainId) => {
     assertIsDefined(get().wallet);
+
+    await get().enable({ chainIds: [chainId] });
 
     return get().wallet!.getOfflineSignerAuto(chainId, get().signOptions);
   },
-  signAmino: (chainId, signDoc) => {
+  signAmino: async (chainId, signDoc) => {
     assertIsDefined(get().wallet);
+
+    await get().enable({ chainIds: [chainId] });
 
     const address = get().getAddress(chainId);
 
@@ -45,8 +53,10 @@ export const createSignSlice: StateCreator<AppState, [], [], SignSlice> = (
       get().signOptions,
     );
   },
-  signDirect: (chainId, signDoc) => {
+  signDirect: async (chainId, signDoc) => {
     assertIsDefined(get().wallet);
+
+    await get().enable({ chainIds: [chainId] });
 
     const address = get().getAddress(chainId);
 
