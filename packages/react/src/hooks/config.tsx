@@ -6,6 +6,7 @@ export const useConfig = () => {
   return {
     wallets: store.use.wallets(),
     chains: store.use.chains(),
+    enabledChains: store.use.enabledChains(),
     assetsLists: store.use.assetsLists(),
   };
 };

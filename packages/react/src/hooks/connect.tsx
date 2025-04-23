@@ -18,5 +18,8 @@ export const useConnect = () => {
     rejected: store.use.status() === ConnectionStates.REJECTED,
     wallet: store.use.wallet ? store.use.wallet() : undefined,
     walletName: store.use.walletName ? store.use.walletName() : undefined,
+    connectedChains: store.use.connectedChains
+      ? store.use.connectedChains()
+      : undefined,
   };
 };
