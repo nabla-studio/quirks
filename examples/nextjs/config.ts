@@ -40,6 +40,7 @@ const config = generateConfig({
     daodaoCosmiframe,
   ],
   chains: [osmosis, cosmoshub],
+  enabledChains: [cosmoshub],
   assetsLists: [osmosisAssetList, cosmoshubAssetList],
   walletConnectOptions: {
     providerOpts: {
