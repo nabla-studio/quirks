@@ -5,11 +5,13 @@ export const useConfig = () => {
   const state = useQuirks()((state) => state);
   const wallets = computed(() => state.wallets.value);
   const chains = computed(() => state.chains.value);
+  const enabledChains = computed(() => state.enabledChains.value);
   const assetsLists = computed(() => state.assetsLists.value);
 
   return {
     wallets,
     chains,
+    enabledChains,
     assetsLists,
   };
 };

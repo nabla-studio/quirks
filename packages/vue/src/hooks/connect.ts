@@ -10,6 +10,7 @@ export const useConnect = () => {
   const setupStatus = computed(() => state.setupStatus.value);
   const wallet = computed(() => state.wallet?.value);
   const walletName = computed(() => state.walletName?.value);
+  const connectedChains = computed(() => state.connectedChains?.value);
   const connected = computed(() => status.value === ConnectionStates.CONNECTED);
   const connecting = computed(() => state.connecting.value);
   const connectionError = computed(() => state.connectionError?.value?.value);
@@ -30,5 +31,6 @@ export const useConnect = () => {
     wallet,
     walletName,
     setupStatus,
+    connectedChains,
   };
 };
