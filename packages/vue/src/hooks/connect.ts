@@ -6,6 +6,8 @@ export const useConnect = () => {
   const state = useQuirks()((state) => state);
   const connect = useQuirks()((state) => state.connect);
   const disconnect = useQuirks()((state) => state.disconnect);
+  const enable = useQuirks()((state) => state.enable);
+  const suggestChains = useQuirks()((state) => state.suggestChains);
   const status = computed(() => state.status.value);
   const setupStatus = computed(() => state.setupStatus.value);
   const wallet = computed(() => state.wallet?.value);
@@ -22,6 +24,8 @@ export const useConnect = () => {
   return {
     connect,
     disconnect,
+    enable,
+    suggestChains,
     status,
     connectionError,
     connected,
