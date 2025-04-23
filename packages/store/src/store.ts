@@ -43,6 +43,7 @@ export const createConfig = (config: Config) => {
   const {
     wallets,
     chains,
+    enabledChains = undefined,
     assetsLists,
     autoConnect = true,
     autoSuggestions = true,
@@ -113,6 +114,7 @@ export const createConfig = (config: Config) => {
             ...createConfigSlice(...props),
             wallets,
             chains,
+            enabledChains,
             assetsLists,
             ...createConnectSlice(...props),
             ...createAccountSlice(...props),
@@ -130,6 +132,7 @@ export const createConfig = (config: Config) => {
                 ...walletConnectOverrideInitialState,
                 wallets,
                 chains,
+                enabledChains,
                 assetsLists,
               });
             },

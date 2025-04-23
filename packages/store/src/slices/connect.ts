@@ -20,6 +20,7 @@ export const connectInitialState: ConnectState = {
   status: ConnectionStates.DISCONNECTED,
   setupStatus: SetupStates.DEINITIALIZED,
   connectionError: undefined,
+  connectedChains: undefined,
   connecting: false,
   options: {
     autoSuggestions: true,
@@ -34,6 +35,9 @@ export const createConnectSlice: StateCreator<
   ConnectSlice
 > = (set, get) => ({
   ...connectInitialState,
+  setConnectedChains: (chainIds) => {
+    set(() => ({ connectedChains: chainIds }));
+  },
   setWallet: async (wallet) => {
     set(() => ({ wallet, setupStatus: SetupStates.DEINITIALIZED }));
 
@@ -63,10 +67,17 @@ export const createConnectSlice: StateCreator<
     const wallet = get().wallet;
 
     if (wallet) {
+      const connectedChains = get().connectedChains;
+      const chains = !connectedChains
+        ? get().chains
+        : get().chains.filter((chain) =>
+            connectedChains.includes(chain.chain_id),
+          );
+
       const accounts: AddressWithChain[] = [];
       let accountName = '';
 
-      for (const chain of get().chains) {
+      for (const chain of chains) {
         const account = await wallet.getAccount(chain.chain_id);
 
         if (account) {
@@ -92,7 +103,9 @@ export const createConnectSlice: StateCreator<
     );
 
     if (wallet) {
-      const chains: SuggestChain[] = get().chains.map((chain) => ({
+      const enabledChains = get().enabledChains ?? get().chains;
+
+      const chains: SuggestChain[] = enabledChains.map((chain) => ({
         chain,
         name: chain.chain_name,
         assetList: get().assetsLists.find(
@@ -149,7 +162,13 @@ export const createConnectSlice: StateCreator<
         await get().suggestChains(walletName);
       }
 
-      await wallet.enable(get().chains.map((el) => el.chain_id));
+      const enabledChains = get().enabledChains ?? get().chains;
+
+      const chainIds = enabledChains.map((el) => el.chain_id);
+
+      await wallet.enable(chainIds);
+
+      get().setConnectedChains(chainIds);
 
       await get().setWallet(wallet);
       set(() => ({ status: ConnectionStates.CONNECTED }));
@@ -192,7 +211,13 @@ export const createConnectSlice: StateCreator<
         await get().suggestChains(walletName);
       }
 
-      await wallet.enable(get().chains.map((el) => el.chain_id));
+      const enabledChains = get().enabledChains ?? get().chains;
+
+      const chainIds = enabledChains.map((el) => el.chain_id);
+
+      await wallet.enable(chainIds);
+
+      get().setConnectedChains(chainIds);
 
       await get().setWallet(wallet);
     } catch (error) {

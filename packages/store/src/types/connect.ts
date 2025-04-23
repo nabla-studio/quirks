@@ -24,6 +24,7 @@ export interface ConnectOptions {
 export interface ConnectState {
   walletName?: string;
   wallet?: Wallet;
+  connectedChains: string[] | undefined;
   status: ConnectionState;
   connecting: boolean;
   connectionError?: Error;
@@ -33,6 +34,7 @@ export interface ConnectState {
 
 export interface ConnectActions {
   setWallet: (wallet?: Wallet) => Promise<void>;
+  setConnectedChains: (chainIds?: string[]) => void;
   getWalletData: () => Promise<void>;
   connect: (walletName: string) => Promise<void>;
   reconnect: (walletName: string) => Promise<void>;

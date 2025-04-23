@@ -33,6 +33,11 @@ export type PersistOptions<S, PersistedState = S> = ZustandPersistOptions<
 export interface Config {
   wallets: Wallet[];
   chains: Chain[];
+  /**
+   * enable specific chains so you don't need to connect all of them from the beginning,
+   * this is useful for example when you want to connect to a specific chain but not the others
+   */
+  enabledChains?: Chain[];
   assetsLists: AssetList[];
   /**
    * State manager persister
