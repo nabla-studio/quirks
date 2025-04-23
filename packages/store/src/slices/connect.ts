@@ -48,11 +48,11 @@ export const createConnectSlice: StateCreator<
     }
 
     if (get().options.autoSuggestions) {
-      await get().suggestChains(wallet?.options.wallet_name);
+      await get().suggestChains(wallet.options.wallet_name);
     }
 
     const chains = chainIds
-      ? get().chains
+      ? get().chains.filter((chain) => chainIds.includes(chain.chain_id))
       : (get().enabledChains ?? get().chains);
 
     const ids = chains.map((el) => el.chain_id);
