@@ -7,6 +7,7 @@ import {
   useWalletConnect,
 } from '@quirks/vue';
 import VueQrcode from 'vue-qrcode';
+import { store } from '../config';
 
 const { wallets } = useConfig();
 const { accounts } = useChains();
@@ -25,7 +26,7 @@ const send = async () => {
   const getAddress = (await import('@quirks/store')).getAddress;
   const { send } = cosmos.bank.v1beta1.MessageComposer.withTypeUrl;
 
-  const address = getAddress('osmosis');
+  const address = getAddress(store, 'osmosis');
 
   const msg = send({
     amount: [
@@ -40,11 +41,11 @@ const send = async () => {
 
   console.log(msg);
 
-  const txRaw = await sign('osmosis', [msg]);
+  const txRaw = await sign(store, 'osmosis', [msg]);
 
   const broadcast = (await import('@quirks/store')).broadcast;
 
-  const res = await broadcast('osmosis', txRaw);
+  const res = await broadcast(store, 'osmosis', txRaw);
 
   console.log(res);
 };
