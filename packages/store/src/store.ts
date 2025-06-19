@@ -13,31 +13,8 @@ import {
 } from './slices';
 import { createStore } from 'zustand/vanilla';
 import type { Config, WalletConnectState } from './types';
-import { defaultPersistOptions, emptyPersistOptions } from './configs';
+import { defaultPersistOptions } from './configs';
 import { shared, defaultSharedOptions } from './middlewares';
-
-export let store = createStore(
-  subscribeWithSelector(
-    persist(
-      shared((...props) => ({
-        ...createConfigSlice(...props),
-        ...createConnectSlice(...props),
-        ...createAccountSlice(...props),
-        ...createSignSlice(...props),
-        ...createWalletConnectSlice(...props),
-        reset: () => {
-          props[0]({
-            ...configInitialState,
-            ...connectInitialState,
-            ...accountInitialState,
-            ...walletConnectInitialState,
-          });
-        },
-      })),
-      emptyPersistOptions,
-    ),
-  ),
-);
 
 export const createConfig = (config: Config) => {
   const {
@@ -105,7 +82,7 @@ export const createConfig = (config: Config) => {
 
   const persistInitialState = persistOptions.getInitialState?.();
 
-  store = createStore(
+  const store = createStore(
     subscribeWithSelector(
       persist(
         shared(
@@ -180,3 +157,5 @@ export const createConfig = (config: Config) => {
 
   return store;
 };
+
+export type QuirksConfigState = ReturnType<typeof createConfig>;
