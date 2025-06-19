@@ -24,7 +24,7 @@ import {
   daodaoCosmiframe,
 } from '@quirks/wallets';
 
-const config = generateConfig({
+const store = generateConfig({
   wallets: [
     keplrExtension,
     leapExtension,
@@ -55,4 +55,4 @@ const config = generateConfig({
   },
 });
 
-export { config };
+export { store };
