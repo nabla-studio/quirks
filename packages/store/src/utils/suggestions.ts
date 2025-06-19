@@ -3,10 +3,10 @@ import {
   type SuggestToken,
   assertIsDefined,
 } from '@quirks/core';
-import type { QuirksConfigState } from '../store';
+import type { QuirksConfigStore } from '../store';
 
 export const suggestChains = (
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   walletName: string,
   chains: SuggestChain[],
 ) => {
@@ -22,7 +22,7 @@ export const suggestChains = (
 };
 
 export const suggestTokens = (
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   walletName: string,
   tokens: SuggestToken[],
 ) => {

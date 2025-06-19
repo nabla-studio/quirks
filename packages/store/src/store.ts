@@ -158,4 +158,4 @@ export const createConfig = (config: Config) => {
   return store;
 };
 
-export type QuirksConfigState = ReturnType<typeof createConfig>;
+export type QuirksConfigStore = ReturnType<typeof createConfig>;

@@ -1,6 +1,6 @@
 import type { StdFee } from '@cosmjs/amino';
 import type { EncodeObject } from '@cosmjs/proto-signing';
-import type { QuirksConfigState } from '../store';
+import type { QuirksConfigStore } from '../store';
 import {
   assertIsDefined,
   estimateFee,
@@ -23,7 +23,7 @@ import { getAddress, getChain } from './utils';
 import type { Chain } from '@chain-registry/types';
 
 export function getOfflineSigner(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainId: string,
   signerType: SignerType = 'auto',
 ) {
@@ -41,7 +41,7 @@ export function getOfflineSigner(
 }
 
 export async function sign(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string,
   messages: EncodeObject[],
   fee?: StdFee | 'auto',
@@ -57,7 +57,7 @@ export async function sign(
  * where you don't have all the chains array from the beginning.
  */
 export async function sign(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: Chain,
   messages: EncodeObject[],
   fee?: StdFee | 'auto',
@@ -79,7 +79,7 @@ export async function sign(
  * @returns TxRaw
  */
 export async function sign(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string | Chain,
   messages: EncodeObject[],
   fee: StdFee | 'auto' = 'auto',
@@ -164,7 +164,7 @@ export async function sign(
 }
 
 export async function signCW(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string,
   messages: EncodeObject[],
   fee?: StdFee | 'auto',
@@ -176,7 +176,7 @@ export async function signCW(
 ): Promise<TxRaw>;
 
 export async function signCW(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: Chain,
   messages: EncodeObject[],
   fee?: StdFee | 'auto',
@@ -198,7 +198,7 @@ export async function signCW(
  * @returns TxRaw
  */
 export async function signCW(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string | Chain,
   messages: EncodeObject[],
   fee: StdFee | 'auto' = 'auto',
@@ -283,7 +283,7 @@ export async function signCW(
 }
 
 export function signArbitrary(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainId: string,
   signer: string,
   data: string | Uint8Array,
@@ -298,13 +298,13 @@ export function signArbitrary(
 }
 
 export async function getSigningStargateClient(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string,
   signerType: SignerType,
 ): Promise<SigningStargateClient>;
 
 export async function getSigningStargateClient(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: Chain,
   signerType: SignerType,
 ): Promise<SigningStargateClient>;
@@ -317,7 +317,7 @@ export async function getSigningStargateClient(
  * @returns SigningStargateClient
  */
 export async function getSigningStargateClient(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string | Chain,
   signerType: SignerType = 'auto',
 ): Promise<SigningStargateClient> {
@@ -363,13 +363,13 @@ export async function getSigningStargateClient(
 }
 
 export async function getSigningCosmWasmClient(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string,
   signerType: SignerType,
 ): Promise<SigningCosmWasmClient>;
 
 export async function getSigningCosmWasmClient(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: Chain,
   signerType: SignerType,
 ): Promise<SigningCosmWasmClient>;
@@ -382,7 +382,7 @@ export async function getSigningCosmWasmClient(
  * @returns SigningStargateClient
  */
 export async function getSigningCosmWasmClient(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string | Chain,
   signerType: SignerType = 'auto',
 ): Promise<SigningCosmWasmClient> {

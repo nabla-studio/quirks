@@ -1,4 +1,4 @@
-import type { QuirksConfigState } from '../store';
+import type { QuirksConfigStore } from '../store';
 import { assertIsDefined, getEndpoint } from '@quirks/core';
 import type {
   DeliverTxResponse,
@@ -9,7 +9,7 @@ import type { Chain } from '@chain-registry/types';
 import { getChain } from './utils';
 
 export async function broadcast(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string,
   txRaw: TxRaw,
   timeoutMs?: number,
@@ -17,7 +17,7 @@ export async function broadcast(
 ): Promise<DeliverTxResponse>;
 
 export async function broadcast(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: Chain,
   txRaw: TxRaw,
   timeoutMs?: number,
@@ -34,7 +34,7 @@ export async function broadcast(
  * @returns Promise<DeliverTxResponse>
  */
 export async function broadcast(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string | Chain,
   txRaw: TxRaw,
   timeoutMs = 60_000,
@@ -79,13 +79,13 @@ export async function broadcast(
 }
 
 export async function broadcastSync(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string,
   txRaw: TxRaw,
 ): Promise<string>;
 
 export async function broadcastSync(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: Chain,
   txRaw: TxRaw,
 ): Promise<string>;
@@ -101,7 +101,7 @@ export async function broadcastSync(
  * @returns string
  */
 export async function broadcastSync(
-  store: QuirksConfigState,
+  store: QuirksConfigStore,
   chainOrName: string | Chain,
   txRaw: TxRaw,
 ) {
