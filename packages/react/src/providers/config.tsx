@@ -1,4 +1,4 @@
-import { createConfig, type Config } from '@quirks/store';
+import type { QuirksConfigState } from '@quirks/store';
 import { createSelectors } from '../utils';
 import {
   type PropsWithChildren,
@@ -7,28 +7,26 @@ import {
   useRef,
 } from 'react';
 
-export type QuirksConfigState = ReturnType<typeof createConfig>;
-
 export const QuirksConfigContext = createContext<QuirksConfigState | undefined>(
   undefined,
 );
 
 export interface QuirksConfigProps {
-  config: Config;
+  state: QuirksConfigState;
 }
 
 export const QuirksConfig = (props: PropsWithChildren<QuirksConfigProps>) => {
-  const { children, config: configOptions } = props;
+  const { children, state } = props;
   const storeRef = useRef<QuirksConfigState>();
 
-  if (!configOptions) {
+  if (!state) {
     throw new Error(
-      ['[Quirks]: `config` must be setup within `QuirksConfig`.'].join('\n'),
+      ['[Quirks]: `state` must be setup within `QuirksConfig`.'].join('\n'),
     );
   }
 
   if (!storeRef.current) {
-    storeRef.current = createConfig(configOptions);
+    storeRef.current = state;
   }
 
   return (
