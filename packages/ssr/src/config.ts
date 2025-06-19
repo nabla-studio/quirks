@@ -3,7 +3,6 @@ import {
   type Config,
   createConfig,
   defaultPersistOptions,
-  QuirksConfigState,
 } from '@quirks/store';
 import { parse, stringify } from 'superjson';
 import { defaultCookiesOptions } from './options';
@@ -14,12 +13,16 @@ import { getState } from './state';
 export const generateConfig = (
   config: Config,
   cookiesOptions = defaultCookiesOptions,
+  cookie?: string | undefined | null,
 ) => {
   const cookies = Cookies.withAttributes(cookiesOptions);
 
   const ssrConfig: Config = {
     persistOptions: {
       ...defaultPersistOptions,
+      getInitialState() {
+        return cookie ? getState(cookie).state : undefined;
+      },
       storage: {
         getItem: (name) => {
           const state = cookies.get(name);
@@ -50,15 +53,4 @@ export const generateConfig = (
   };
 
   return createConfig(ssrConfig);
-};
-
-export const initialStateWithCookie = (
-  state: QuirksConfigState,
-  cookie: string | undefined | null,
-) => {
-  if (cookie) {
-    state.setState(getState(cookie).state);
-  }
-
-  return state;
 };
