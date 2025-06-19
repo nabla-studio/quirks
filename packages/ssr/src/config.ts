@@ -1,7 +1,9 @@
 import {
   type AppState,
   type Config,
+  createConfig,
   defaultPersistOptions,
+  QuirksConfigState,
 } from '@quirks/store';
 import { parse, stringify } from 'superjson';
 import { defaultCookiesOptions } from './options';
@@ -47,19 +49,16 @@ export const generateConfig = (
     ...config,
   };
 
-  return ssrConfig;
+  return createConfig(ssrConfig);
 };
 
 export const initialStateWithCookie = (
-  config: Config,
+  state: QuirksConfigState,
   cookie: string | undefined | null,
-): Config => {
-  return {
-    ...config,
-    persistOptions: {
-      ...defaultPersistOptions,
-      ...config.persistOptions,
-      getInitialState: () => (cookie ? getState(cookie).state : undefined),
-    },
-  };
+) => {
+  if (cookie) {
+    state.setState(getState(cookie).state);
+  }
+
+  return state;
 };
