@@ -1,3 +1,17 @@
+## 0.2.0 (2025-06-24)
+
+### 🚀 Features
+
+- **next:** :sparkles: add new store managing ([52ad41b](https://github.com/nabla-studio/quirks/commit/52ad41b))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.29.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.8 (2024-12-10)
 
 ### 🧱 Updated Dependencies

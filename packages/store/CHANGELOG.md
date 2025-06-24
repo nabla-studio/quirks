@@ -1,3 +1,13 @@
+## 0.29.0 (2025-06-24)
+
+### 🚀 Features
+
+- **store:** :sparkles: deprecate global store ([0c6a027](https://github.com/nabla-studio/quirks/commit/0c6a027))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.28.0 (2024-12-10)
 
 ### 🚀 Features

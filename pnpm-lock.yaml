@@ -385,7 +385,7 @@ importers:
   packages/next:
     dependencies:
       '@quirks/store':
-        specifier: 0.28.0
+        specifier: 0.29.0
         version: link:../store
       cookies-next:
         specifier: ^4.2.1
@@ -409,7 +409,7 @@ importers:
         specifier: ^3.8.1
         version: 3.13.2(rollup@4.24.0)(webpack-sources@3.2.3)
       '@quirks/store':
-        specifier: 0.28.0
+        specifier: 0.29.0
         version: link:../store
       '@quirks/vue':
         specifier: 0.12.7
@@ -427,7 +427,7 @@ importers:
         specifier: 0.20.0
         version: link:../core
       '@quirks/store':
-        specifier: 0.28.0
+        specifier: 0.29.0
         version: link:../store
       cosmjs-types:
         specifier: ^0.9.0
@@ -454,7 +454,7 @@ importers:
         specifier: 0.20.0
         version: link:../core
       '@quirks/store':
-        specifier: 0.28.0
+        specifier: 0.29.0
         version: link:../store
       '@react-native-community/netinfo':
         specifier: ^11.2.1
@@ -490,7 +490,7 @@ importers:
   packages/ssr:
     dependencies:
       '@quirks/store':
-        specifier: 0.28.0
+        specifier: 0.29.0
         version: link:../store
       js-cookie:
         specifier: ^3.0.5
@@ -551,7 +551,7 @@ importers:
         specifier: 0.20.0
         version: link:../core
       '@quirks/store':
-        specifier: 0.28.0
+        specifier: 0.29.0
         version: link:../store
       '@walletconnect/universal-provider':
         specifier: ^2.11.2

@@ -1,3 +1,17 @@
+## 0.15.0 (2025-06-24)
+
+### 🚀 Features
+
+- **react:** :sparkles: add new store managing ([29fe718](https://github.com/nabla-studio/quirks/commit/29fe718))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.29.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.14.9 (2024-12-10)
 
 ### 🧱 Updated Dependencies

@@ -1,3 +1,17 @@
+## 0.13.0 (2025-06-24)
+
+### 🚀 Features
+
+- **vue:** :sparkles: add new store managing ([3ceaf98](https://github.com/nabla-studio/quirks/commit/3ceaf98))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.29.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.12.10 (2024-12-10)
 
 ### 🧱 Updated Dependencies

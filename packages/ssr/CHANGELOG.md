@@ -1,3 +1,18 @@
+## 0.2.0 (2025-06-24)
+
+### 🚀 Features
+
+- **ssr:** :sparkles: remove initialStateWithCookie ([84acdfd](https://github.com/nabla-studio/quirks/commit/84acdfd))
+- **ssr:** :sparkles: add new store managing ([631dc45](https://github.com/nabla-studio/quirks/commit/631dc45))
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.29.0
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.1.3 (2024-12-10)
 
 ### 🧱 Updated Dependencies

@@ -1,3 +1,9 @@
+## 0.2.33 (2025-06-24)
+
+### 🧱 Updated Dependencies
+
+- Updated store to 0.29.0
+
 ## 0.2.32 (2024-12-10)
 
 ### 🧱 Updated Dependencies
