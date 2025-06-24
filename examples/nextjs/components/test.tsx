@@ -2,12 +2,13 @@
 
 import { sign, getAddress, broadcast, signArbitrary } from '@quirks/store';
 import { useChains, useConnect, useWalletEvents } from '@quirks/react';
+import { store } from '../config';
 
 const send = async () => {
   const cosmos = (await import('osmojs')).cosmos;
   const { send } = cosmos.bank.v1beta1.MessageComposer.withTypeUrl;
 
-  const address = getAddress('osmosis');
+  const address = getAddress(store, 'osmosis');
 
   const msg = send({
     amount: [
@@ -22,16 +23,17 @@ const send = async () => {
 
   console.log(msg);
 
-  const txRaw = await sign('osmosis', [msg]);
+  const txRaw = await sign(store, 'osmosis', [msg]);
 
-  const res = await broadcast('osmosis', txRaw);
+  const res = await broadcast(store, 'osmosis', txRaw);
 
   console.log(res);
 };
 
 const signJWT = async () => {
-  const sender = getAddress('osmosis');
+  const sender = getAddress(store, 'osmosis');
   const result = await signArbitrary(
+    store,
     'osmosis-1',
     sender,
     new TextEncoder().encode('Bearer TOKEN test '),
@@ -43,6 +45,8 @@ const signJWT = async () => {
 export const Test = ({ iframe = false }: { iframe?: boolean }) => {
   const { status, connected } = useConnect();
   const { accounts } = useChains();
+
+  console.log('STATUS TEST: ', status);
 
   useWalletEvents('keystorechange', () => {
     console.log('Changed');

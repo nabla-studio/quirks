@@ -3,9 +3,13 @@ import {
   type SuggestToken,
   assertIsDefined,
 } from '@quirks/core';
-import { store } from '../store';
+import type { QuirksConfigStore } from '../store';
 
-export const suggestChains = (walletName: string, chains: SuggestChain[]) => {
+export const suggestChains = (
+  store: QuirksConfigStore,
+  walletName: string,
+  chains: SuggestChain[],
+) => {
   const state = store.getState();
 
   const wallet = state.wallets.find(
@@ -17,7 +21,11 @@ export const suggestChains = (walletName: string, chains: SuggestChain[]) => {
   return wallet.suggestChains(chains);
 };
 
-export const suggestTokens = (walletName: string, tokens: SuggestToken[]) => {
+export const suggestTokens = (
+  store: QuirksConfigStore,
+  walletName: string,
+  tokens: SuggestToken[],
+) => {
   const state = store.getState();
 
   const wallet = state.wallets.find(

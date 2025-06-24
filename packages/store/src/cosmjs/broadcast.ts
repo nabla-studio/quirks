@@ -1,4 +1,4 @@
-import { store } from '../store';
+import type { QuirksConfigStore } from '../store';
 import { assertIsDefined, getEndpoint } from '@quirks/core';
 import type {
   DeliverTxResponse,
@@ -9,6 +9,7 @@ import type { Chain } from '@chain-registry/types';
 import { getChain } from './utils';
 
 export async function broadcast(
+  store: QuirksConfigStore,
   chainOrName: string,
   txRaw: TxRaw,
   timeoutMs?: number,
@@ -16,6 +17,7 @@ export async function broadcast(
 ): Promise<DeliverTxResponse>;
 
 export async function broadcast(
+  store: QuirksConfigStore,
   chainOrName: Chain,
   txRaw: TxRaw,
   timeoutMs?: number,
@@ -32,6 +34,7 @@ export async function broadcast(
  * @returns Promise<DeliverTxResponse>
  */
 export async function broadcast(
+  store: QuirksConfigStore,
   chainOrName: string | Chain,
   txRaw: TxRaw,
   timeoutMs = 60_000,
@@ -40,7 +43,9 @@ export async function broadcast(
   const state = store.getState();
 
   const chain =
-    typeof chainOrName === 'string' ? getChain(chainOrName) : chainOrName;
+    typeof chainOrName === 'string'
+      ? getChain(store, chainOrName)
+      : chainOrName;
   assertIsDefined(chain);
 
   const endpoint =
@@ -74,11 +79,13 @@ export async function broadcast(
 }
 
 export async function broadcastSync(
+  store: QuirksConfigStore,
   chainOrName: string,
   txRaw: TxRaw,
 ): Promise<string>;
 
 export async function broadcastSync(
+  store: QuirksConfigStore,
   chainOrName: Chain,
   txRaw: TxRaw,
 ): Promise<string>;
@@ -93,11 +100,17 @@ export async function broadcastSync(
  * @param pollIntervalMs
  * @returns string
  */
-export async function broadcastSync(chainOrName: string | Chain, txRaw: TxRaw) {
+export async function broadcastSync(
+  store: QuirksConfigStore,
+  chainOrName: string | Chain,
+  txRaw: TxRaw,
+) {
   const state = store.getState();
 
   const chain =
-    typeof chainOrName === 'string' ? getChain(chainOrName) : chainOrName;
+    typeof chainOrName === 'string'
+      ? getChain(store, chainOrName)
+      : chainOrName;
   assertIsDefined(chain);
 
   const endpoint =

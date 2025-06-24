@@ -1,4 +1,8 @@
-import { type Config, defaultPersistOptions } from '@quirks/store';
+import {
+  type Config,
+  createConfig,
+  defaultPersistOptions,
+} from '@quirks/store';
 import { stringify } from 'superjson';
 import { deleteCookie, setCookie } from 'cookies-next';
 import { defaultCookiesOptions } from './options';
@@ -41,5 +45,5 @@ export const generateConfig = (
     ...config,
   };
 
-  return nextConfig;
+  return createConfig(nextConfig);
 };

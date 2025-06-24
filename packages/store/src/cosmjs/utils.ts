@@ -1,12 +1,12 @@
 import { assertIsDefined } from '@quirks/core';
-import { store } from '../store';
+import type { QuirksConfigStore } from '../store';
 
 /**
  * Return the current wallet instance
  *
  * @returns Wallet<unknown, unknown>
  */
-export function getWallet() {
+export function getWallet(store: QuirksConfigStore) {
   const state = store.getState();
 
   return state.wallet;
@@ -18,7 +18,7 @@ export function getWallet() {
  * @param chainName
  * @returns string
  */
-export function getAddress(chainName: string) {
+export function getAddress(store: QuirksConfigStore, chainName: string) {
   const state = store.getState();
 
   const chain = state.chains.find((el) => el.chain_name === chainName);
@@ -30,7 +30,7 @@ export function getAddress(chainName: string) {
   return sender;
 }
 
-export function getChain(chainName: string) {
+export function getChain(store: QuirksConfigStore, chainName: string) {
   const chain = store
     .getState()
     .chains.find((el) => el.chain_name === chainName);
