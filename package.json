@@ -106,7 +106,7 @@
     "fast-text-encoding": "^1.0.6",
     "js-cookie": "^3.0.5",
     "long": "^5.2.3",
-    "next": "14.2.10",
+    "next": "14.2.21",
     "nuxt": "^3.8.1",
     "osmojs": "^16.5.1",
     "pino-pretty": "^10.2.3",
