@@ -15,15 +15,18 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@quirks/vue": "0.12.7",
-    "@quirks/store": "0.29.0"
+    "@quirks/store": "0.29.0",
+    "@quirks/vue": "0.12.7"
   },
   "peerDependencies": {
-    "nuxt": "^4.1.3",
     "@nuxt/kit": "^4.1.3",
-    "@nuxt/schema": "^4.1.3"
+    "@nuxt/schema": "^4.1.3",
+    "nuxt": "^4.1.3"
   },
   "main": "./index.js",
   "module": "./index.js",
-  "typings": "./index.d.ts"
+  "typings": "./index.d.ts",
+  "devDependencies": {
+    "pkg-pr-new": "^0.0.60"
+  }
 }
