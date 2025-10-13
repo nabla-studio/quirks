@@ -21,7 +21,7 @@ export default defineNuxtModule<QuirksNuxtOptions>({
     name: packageName,
     configKey: packageName,
     compatibility: {
-      nuxt: '^3.0.0',
+      nuxt: '>=3.1.0',
     },
   },
   defaults: {
