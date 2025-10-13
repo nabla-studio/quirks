@@ -21,6 +21,6 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm builds
+        run: pnpm build
 
       - run: pnpm dlx pkg-pr-new publish './packages/nuxt' './packages/ssr' './packages/store' './packages/vue' './packages/wallets'
