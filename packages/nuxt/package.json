@@ -25,8 +25,5 @@
   },
   "main": "./index.js",
   "module": "./index.js",
-  "typings": "./index.d.ts",
-  "devDependencies": {
-    "pkg-pr-new": "^0.0.60"
-  }
+  "typings": "./index.d.ts"
 }
