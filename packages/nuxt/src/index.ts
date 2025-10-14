@@ -21,6 +21,7 @@ export default defineNuxtModule<QuirksNuxtOptions>({
     name: packageName,
     configKey: packageName,
     compatibility: {
+      // If you use nuxt < 3.1.0, you should use @quirks/nuxt@0.2.33
       nuxt: '>=3.1.0',
     },
   },
