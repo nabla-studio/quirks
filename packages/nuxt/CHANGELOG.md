@@ -1,3 +1,13 @@
+## 0.2.34 (2025-10-14)
+
+### 🩹 Fixes
+
+- **nuxt:** :bug: add comment in code ([6dc3373](https://github.com/nabla-studio/quirks/commit/6dc3373))
+
+### ❤️  Thank You
+
+- Davide Segullo @DavideSegullo
+
 ## 0.2.33 (2025-06-24)
 
 ### 🧱 Updated Dependencies
