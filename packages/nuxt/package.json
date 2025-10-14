@@ -15,13 +15,13 @@
   "sideEffects": false,
   "type": "module",
   "dependencies": {
-    "@quirks/vue": "0.12.7",
-    "@quirks/store": "0.29.0"
+    "@quirks/store": "0.29.0",
+    "@quirks/vue": "0.12.7"
   },
   "peerDependencies": {
-    "nuxt": "^3.8.1",
-    "@nuxt/kit": "^3.8.1",
-    "@nuxt/schema": "^3.8.1"
+    "@nuxt/kit": "^4.1.3",
+    "@nuxt/schema": "^4.1.3",
+    "nuxt": "^4.1.3"
   },
   "main": "./index.js",
   "module": "./index.js",
